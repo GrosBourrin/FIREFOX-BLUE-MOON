@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings
+    xmlns="http://www.mozilla.org/xbl">
+    <binding id="urlbar" extends="chrome://browser/content/urlbarBindings.xml#urlbar">
+        <handlers>
+            <handler event="mouseenter">
+                <![CDATA[
+                if (!this.focused) {
+                    const textNode = this.editor.rootElement.firstChild;
+                   textNode.textContent = this._value;
+                }
+            ]]>
+            </handler>
+
+            <handler event="mouseleave">
+                <![CDATA[
+                if (!this.focused) {
+                     this.formatValue();
+                 }
+             ]]>
+            </handler>
+
+        </handlers>
+
+        <implementation>
+
+            <constructor>
+                <![CDATA[ const self = this;
+                 gBrowser.addProgressListener({
+                     QueryInterface: XPCOMUtils.generateQI([
+                             "nsIWebProgressListener"
+                           , "nsISupportsWeakReference" ])
+
+                   , onStatusChange () {
+                         self.formatValue();
+                     }
+                 });
+             ]]>
+            </constructor>
+
+            <method name="formatValue">
+
+                <body>
+                    <![CDATA[
+                     const textNode = this.editor.rootElement.firstChild;
+
+                     if (this.focused) {
+                         textNode.textContent = this._value;
+                     return;
+                     }
+                     try {
+                         textNode.textContent = gBrowser.selectedBrowser.contentTitle;
+                     } catch (err) {}
+                 ]]>
+                </body>
+
+            </method>
+
+        </implementation>
+
+    </binding>
+
+</bindings>
