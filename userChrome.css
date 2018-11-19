@@ -1,7 +1,3 @@
-.browserContainer {
-	background-color: #000000 !important;
-}
-
 /*--------------------About firefox ---------------------------------*/
 @-moz-document url("chrome://browser/content/aboutDialog.xul") {
 	#leftBox {
@@ -22,6 +18,10 @@
 	#bottomBox {
 		background: transparent !important;
 	}
+}
+/*--------- no page flashing ---------------*/
+.browserContainer {
+	background-color: #000000 !important;
 }
 
 /*----------------------------------------------------------------------------*/
