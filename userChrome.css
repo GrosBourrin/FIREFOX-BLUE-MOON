@@ -1,3 +1,7 @@
+.browserContainer {
+	background-color: #000000 !important;
+}
+
 /*--------------------About firefox ---------------------------------*/
 @-moz-document url("chrome://browser/content/aboutDialog.xul") {
 	#leftBox {
@@ -18,10 +22,6 @@
 	#bottomBox {
 		background: transparent !important;
 	}
-}
-/*--------- no page flashing ---------------*/
-.browserContainer {
-	background-color: #000000 !important;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -205,11 +205,11 @@ statuspanel #statuspanel-label {
 }
 
 /*-----------------------------------*/
-/*
+
 .pageActionSeparator {
 	display: none !important;
 }
-*/
+
 /* url bar text decoration */
 * #urlbar input.textbox-input::-moz-selection {
 	font-family: Fira Sans !important;
@@ -230,7 +230,7 @@ statuspanel #statuspanel-label {
 menupopup {
 	-moz-appearance: none !important;
 	padding: 8px 2px 8px 2px !important;
-	background-color: #1f1f1f !important;
+	background-color: #1f1f1f !important; color: white !important;
 	border: 0px solid !important;
 	min-width: 280px !important;
 	/*width: 280px !important;*/
@@ -268,7 +268,7 @@ menuitem[_moz-menuactive="true"] {
 
 menugroup {
 	padding: 0px !important;
-	background-color: transparent !important;
+	background-color: transparent !important; color: white !important;
 }
 
 menuitem>.menu-text,
@@ -877,6 +877,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	border: 0px solid !important;
 }
 
+
 /*
 #sidebar{
 	margin: 0 0 0 0 !important;
@@ -955,7 +956,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	opacity: 1 !important;
 }
 
-/*--------RSS ITEM -----------*/
+/*--------RSS ITEM ----------- deprecated at FF 64
 
 [livemark] menuitem {
 	list-style-image: url("rss3.svg") !important;
@@ -966,7 +967,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	list-style-image: url("rsssvg5.svg") !important;
 	opacity: 0.45 !important;
 }
-
+*/
 /*----------*/
 
 .bookmark-item[container][query],
@@ -985,6 +986,8 @@ treechildren::-moz-tree-image(query) {
 #urlbar #star-button-animatable-box,
 #urlbar .urlbar-icon,
 #searchbar .search-go-button {
+
+	fill-opacity: 1.0 !important;
 	opacity: 1 !important;
 	background: unset !important;
 	box-shadow: unset !important;
@@ -997,7 +1000,7 @@ treechildren::-moz-tree-image(query) {
 	filter: brightness(100%) !important;
 }
 
-/* This change the color of the bottombar to dark, 
+/* This change the color of the bottombar to dark,
 don't use this if you want default color (#ffffff) */
 
 #bottom-toolbar-vbox {
@@ -1035,10 +1038,10 @@ This technically transforms the flexible spaces to separators whenever they are 
 #BMB_bookmarksPopup menu[container="true"] .menu-iconic-icon,
 #bookmarksMenu menu[container="true"] .menu-iconic-icon,
 .bookmark-item[container] {
-	list-style-image: url("folder4.svg") !important;
+	list-style-image: url("folder5.svg") !important;
 }
 
-/* Live Bookmark (RSS Feed) */
+/* Live Bookmark (RSS Feed) deprecated in FF 64 
 #bookmarks-view treechildren::-moz-tree-image(livemark),
 #PlacesToolbarItems toolbarbutton[container="true"][livemark="true"],
 #PlacesToolbarItems menu[container="true"][livemark="true"] .menu-iconic-left,
@@ -1046,7 +1049,7 @@ This technically transforms the flexible spaces to separators whenever they are 
 #bookmarksMenu menu[container="true"][livemark="true"] .menu-iconic-icon {
 	list-style-image: url("rsssvg4.svg") !important;
 	opacity: 1 !important;
-}
+}*/
 
 /* Avoid overriding classic Bookmarks Toolbar and Other Bookmarks icons in menus*/
 #BMB_bookmarksPopup #BMB_bookmarksToolbar.menu-iconic-icon,
@@ -1222,7 +1225,7 @@ panel #editBookmarkPanel,
 }
 
 .tab-icon-sound[muted] {
-	color: #1e90ff !important;
+	color: rgb(30, 144, 255) !important;
 	transform: rotate(-90deg);
 	animation: none;
 }
@@ -1313,6 +1316,18 @@ hbox#sidebar-search-container textbox#search-box {
 	border-left: none !important;
 }
 
+/* Remove add search section */
+#search-add-engines {
+	display: none !important;
+}
+
+​
+/* Hide the green mark displayed on the magnifying glass icon */
+
+#searchbar-search-icon-overlay {
+	display: none !important;
+}
+
 /*-------------librairie **********/
 
 :root {
@@ -1366,7 +1381,7 @@ hbox#sidebar-search-container textbox#search-box {
 	--grey-70: #38383d;
 	--grey-80: #2a2a2e;
 	--grey-90: #0c0c0d;
-	--code-green: #86de74 !important;
+	--code-green: #86de74;
 	--warning-color: #fce19f;
 	--warning-background-color: #44391f;
 	--theme-highlight-green: #86de74;
@@ -1390,24 +1405,24 @@ hbox#sidebar-search-container textbox#search-box {
 	--accent-1: var(--blue-40);
 	--accent-2: var(--blue-50);
 	--accent-3: var(--blue-60);
-	--in-content-page-color: var(--tone-1) !important;
-	--in-content-page-background: var(--tone-8) !important;
-	--in-content-text-color: var(--tone-1) !important;
-	--in-content-selected-text: var(--tone-1) !important;
-	--in-content-box-background: var(--tone-7) !important;
+	--in-content-page-color: var(--tone-1);
+	--in-content-page-background: var(--tone-8);
+	--in-content-text-color: var(--tone-1);
+	--in-content-selected-text: var(--tone-1);
+	--in-content-box-background: var(--tone-7);
 	--in-content-box-background-odd: #f3f6fa;
-	--in-content-box-background-hover: var(--tone-9) !important;
-	--in-content-box-background-active: var(--tone-8) !important;
-	--in-content-box-border-color: var(--tone-5) !important;
+	--in-content-box-background-hover: var(--tone-9);
+	--in-content-box-background-active: var(--tone-8);
+	--in-content-box-border-color: var(--tone-5);
 	--in-content-item-hover: rgba(0, 149, 221, 0.25);
-	--in-content-item-selected: var(--tone-7) !important;
-	--in-content-border-highlight: var(--accent-1) !important;
-	--in-content-border-focus: var(--accent-1) !important;
-	--in-content-border-color: var(--tone-9) !important;
+	--in-content-item-selected: var(--tone-7);
+	--in-content-border-highlight: var(--accent-1);
+	--in-content-border-focus: var(--accent-1);
+	--in-content-border-color: var(--tone-9);
 	--in-content-category-outline-focus: 1px dotted #0a84ff;
-	--in-content-category-text: var(--tone-1) !important;
-	--in-content-category-text-active: #ffffff !important;
-	--in-content-category-text-selected: var(--accent-5) !important;
+	--in-content-category-text: var(--tone-1);
+	--in-content-category-text-active: #ffffff;
+	--in-content-category-text-selected: var(--accent-5);
 	--in-content-category-text-selected-active: #1e90ff;
 	--in-content-category-background-hover: #1e90ff;
 	/*rgba(12, 12, 13, 0.1);*/
@@ -1418,36 +1433,36 @@ hbox#sidebar-search-container textbox#search-box {
 	--in-content-category-background-selected-active: #1e90ff;
 	/*rgba(12, 12, 13, 0.2);*/
 	--in-content-tab-color: #424f5a;
-	--in-content-link-color: var(--accent-1) !important;
-	--in-content-link-color-hover: #1e90ff !important;
+	--in-content-link-color: var(--accent-1);
+	--in-content-link-color-hover: #1e90ff;
 	/*var(--accent-2) !important;*/
 	--in-content-link-color-active: #003eaa;
 	--in-content-link-color-visited: #0a8dff;
-	--in-content-primary-button-background: var(--accent-2) !important;
-	--in-content-primary-button-background-hover: var(--accent-3) !important;
-	--in-content-primary-button-background-active: var(--accent-3) !important;
-	--in-content-table-border-dark-color: var(--tone-8) !important;
-	--in-content-table-header-background: var(--accent-1) !important;
-	--theme-selection-background: #1e90ff !important;
+	--in-content-primary-button-background: var(--accent-2);
+	--in-content-primary-button-background-hover: var(--accent-3);
+	--in-content-primary-button-background-active: var(--accent-3);
+	--in-content-table-border-dark-color: var(--tone-8);
+	--in-content-table-header-background: var(--accent-1);
+	--theme-selection-background: #1e90ff;
 	/*var(--accent-1) !important;*/
-	--theme-selection-background-hover: var(--accent-1) !important;
-	--in-content-category-header-background: var(--tone-8) !important;
-	--selected-icon-fill-color: var(--tone-1) !important;
-	--in-content-dark-header-background: var(--tone-9) !important;
-	--secure-connection-color: var(--accent-1) !important;
-	--theme-sidebar-background: #1f1f1f !important;
-	--cm-background: var(--tone-9) !important;
-	--cm-selection: #cfcfcf !important;
-	--cm-marker: #555 !important;
-	--cm-linenumber: #58575c !important;
-	--cm-cursor: #fff !important;
-	--cm-active-line-background: rgba(185, 215, 253, .15) !important;
-	--cm-matching-bracket: #ffffff !important;
-	--cm-search-background: rgba(24, 29, 32, 1) !important;
+	--theme-selection-background-hover: var(--accent-1);
+	--in-content-category-header-background: var(--tone-8);
+	--selected-icon-fill-color: var(--tone-1);
+	--in-content-dark-header-background: var(--tone-9);
+	--secure-connection-color: var(--accent-1);
+	--theme-sidebar-background: #1f1f1f;
+	--cm-background: var(--tone-9);
+	--cm-selection: #cfcfcf;
+	--cm-marker: #555;
+	--cm-linenumber: #58575c;
+	--cm-cursor: #fff;
+	--cm-active-line-background: rgba(185, 215, 253, .15);
+	--cm-matching-bracket: #ffffff;
+	--cm-search-background: rgba(24, 29, 32, 1);
 	--cm-red: red !important;
-	--start-indicator-for-updater-scripts: black !important;
-	--end-indicator-for-updater-scripts: black !important;
-	--dummy-variable-for-updater-scripts: black !important;
+	--start-indicator-for-updater-scripts: black;
+	--end-indicator-for-updater-scripts: black;
+	--dummy-variable-for-updater-scripts: black;
 }
 
 /*---------------------------------library ----------------------------------*/
@@ -1638,6 +1653,12 @@ hbox#sidebar-search-container textbox#search-box {
 		}
 	}
 }
+/* white text in star menu */
+#editBMPanel_folderMenuList {
+	-moz-appearance: none !important;
+	background: #1f1f1f !important;
+	color: white !important;
+}
 
 
 /*-------------------anims hover ------------------------------------------------------------*/
@@ -1659,8 +1680,8 @@ hbox#sidebar-search-container textbox#search-box {
 	pointer-events: auto !important;
 }
 
-/* auto collapse nav bar height when in stealth mode (not active), 
-kinda jumpy and annoying after a while so let's just comment it for now*/
+/* auto collapse nav bar height when in stealth mode (not active),
+kinda jumpy and annoying after a while so let's just comment it for now
 
 #nav-bar {
 	height: 30px !important;
@@ -1671,7 +1692,7 @@ kinda jumpy and annoying after a while so let's just comment it for now*/
 :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar {
 	height: 30px !important;
 }
-
+*/
 :root {
 	--tabs-border: transparent !important;
 }
@@ -1828,6 +1849,10 @@ toolbarspring {
 	max-width: 8px !important;
 }
 
+.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"]) {
+	background-color: #1e8fff46 !important;
+}
+
 /*
 @-moz-document url("chrome://browser/content/sanitize.xul") {
 	#SanitizeDialog {
@@ -1839,7 +1864,7 @@ toolbarspring {
 	}
 }*/
 
-/* personalbar slide */
+/* personalbar slide
 :root {
 	--hptb-height: -30px;
 	--hptb-transition: margin 0.3s linear;
@@ -1866,11 +1891,43 @@ toolbarspring {
 #nav-bar {
 	z-index: 1;
 }
+*/
+/* tab icons for dark mode -----------*/
+.tab-icon-image {
+	background-color: white !important;
+	border-radius: 15px;
+	padding: 1px;
+	transform: scale(1);
+}
 
+/*
+.tab-icon-image {
+	filter: invert(40%) contrast(250%) saturate(250%) !important;
+}
+*/
+/*-------------------------------------*/
+
+#nav-bar {
+	z-index: 1 !important;
+}
+
+#PersonalToolbar {
+	margin-top: -28px !important;
+	transition: all 0.4s ease 0s !important;
+}
+
+#navigator-toolbox:hover>#PersonalToolbar {
+	margin-top: 0px !important;
+	transition: all 0.4s ease 0s !important;
+}
+
+/* all icons get full brightness */
 .toolbarbutton-animatable-box,
 .toolbarbutton-1 {
 	fill-opacity: 1.0 !important;
 }
+
+/*-------------------------------*/
 
 /*---------download button coloring ------*/
 #downloads-button[attention="success"]>#downloads-indicator-anchor>#downloads-indicator-icon,
@@ -1888,7 +1945,45 @@ toolbarspring {
 }
 
 
+/* Effect */
+.toolbarbutton-icon {
+	transition: transform 82ms linear !important;
+}
 
+toolbarbutton:not([disabled]):active>.toolbarbutton-icon,
+toolbarbutton:not([disabled]):active>.toolbarbutton-badge-stack>.toolbarbutton-icon {
+	transform: scale(0.6)
+}
+
+/* Restyle hover state - remove everything below if you want the scale effect to also apply to background-color */
+toolbar .toolbarbutton-1 {
+	clip-path: inset(3px)
+}
+
+toolbar .toolbarbutton-1:not([disabled]):hover,
+toolbar .toolbarbutton-1[open],
+toolbar .toolbarbutton-1[checked] {
+	background-color: var(--toolbarbutton-hover-background);
+}
+
+toolbar .toolbarbutton-1>.toolbarbutton-icon,
+toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
+	background-color: transparent !important;
+}
+
+/* Back button override 
+:root:not([uidensity="compact"]) #back-button {
+	clip-path: none;
+	background-color: transparent;
+}
+
+:root:not([uidensity="compact"]) #back-button>.toolbarbutton-icon {
+	background-color: var(--backbutton-background) !important;
+}
+
+:root:not([uidensity="compact"]) .toolbarbutton-1:not(#back-button) {
+	margin: var(--toolbarbutton-outer-padding) 0 !important;
+}*/
 
 /*
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);*/
