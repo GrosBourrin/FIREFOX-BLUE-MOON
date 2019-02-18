@@ -1,4 +1,18 @@
-/*----------ublock origin --------------*/
+@-moz-document url("about:home"),
+url("about:blank"),
+url("about:newtab"),
+url("about:privatebrowsing") {
+    body {
+        background-color: #1f1f1f !important;
+    }
+}
+
+#browserContainer {
+    background-color: black !important;
+}
+
+/*---------------------------------UBLOCK ORIGIN ---------------------*/
+
 
 @-moz-document url-prefix("moz-extension://b3539271-70a5-4558-b421-81fa8a87e7ba/") {
     body {
@@ -21,7 +35,7 @@
     }
 
     #switch .fa {
-        color: #1e90ff !important;
+        fill: #1e90ff !important;
     }
 
     body.off #switch .fa {
@@ -33,7 +47,7 @@
     }
 
     .tool.enabled:hover {
-        color: #1e90ff !important;
+        fill: #1e90ff !important;
     }
 
     .permatoolbar {
@@ -76,7 +90,7 @@
     }
 
     #extraTools>span:hover {
-        color: #1e90ff !important;
+        fill: #1e90ff !important;
     }
 
     #dashboard-nav-widgets {
@@ -110,10 +124,10 @@
     }
 }
 
-
 /*-------------download sidebar webext tweaks dark ------------------*/
 
 @-moz-document url("moz-extension://0b69c22c-7b59-466f-a19f-efafc2db85e4/sidebar/panel.html") {
+
     html,
     body {
         font-family: Fira Sans !important;
@@ -130,7 +144,7 @@
 
     .progress {
         border: 0px solid #777 !important;
-        background-color: #1e8fff3d !important;
+        background-color: dodgerblue !important;
     }
 
     .toolbar-bottom {
@@ -138,58 +152,218 @@
     }
 
     .item:hover {
-        background-image: linear-gradient(to top, #1e8fff7a, #1f1f1f) !important;
+        background-image: linear-gradient(to top, dodgerblue, #1f1f1f) !important;
         border-radius: 0px !important;
-        /*box-shadow    : 0 0 0px 0px black !important;*/
+        box-shadow: 0 0 0px 0px black !important;
     }
 
     .item:selected {
-        background-image: linear-gradient(to top, #1e8fff7a, #1f1f1f) !important;
+        background-image: linear-gradient(to top, dodgerblue, #1f1f1f) !important;
         border-radius: 0px !important;
-        /* box-shadow: 0 0 0px 0px black !important;*/
+        box-shadow: 0 0 0px 0px black !important;
+    }
+}
+
+/* Wider about:addons "addon card" width + tweaks */
+
+@-moz-document url(about:addons) {
+    .addon.card {
+        max-width: 1000px !important;
+        color: white !important;
+        background-color: #2f2f2f !important;
+        font-family: Fira Sans !important;
+        border-radius: 0px !important;
+        fill-opacity: 1.0 !important;
+    }
+
+    #header-inner {
+        width: 1028px !important;
+    }
+
+    .heading-inner {
+        width: 1000px !important;
+    }
+
+    #header-utils-btn .toolbarbutton-icon {
+        padding: 2px 5px !important;
+    }
+
+    .detail-view-container {
+        width: 1000px !important;
+    }
+}
+
+richlistbox.list>richlistitem.addon {
+    border-color: #1e90ff !important;
+    border: 2px !important;
+}
+
+
+
+
+:root {
+
+    --in-content-page-background: #1f1f1f !important;
+
+    --in-content-page-color: #a4a4a4 !important;
+    --in-content-text-color: white !important;
+
+    --in-content-box-border-color: dodgerblue !important;
+
+    --in-content-category-text: white !important;
+
+    --in-content-category-text-selected: dodgerblue !important;
+
+    --in-content-box-background: #1f1f1f !important;
+    --in-content-box-background-odd: #1f1f1f !important;
+    --in-content-item-selected: dodgerblue !important;
+
+    --in-content-selected-text: white !important;
+    --in-content-box-background-hover: black !important;
+    --in-content-box-background-active: rgb(184, 184, 184) !important;
+}
+
+
+/*text color for addon descriptions*/
+.detail-view-container {
+    font-family: Fira Sans !important;
+    fill-opacity: 1 !important;
+    color: #ffffff !important;
+}
+
+
+
+/*Text for bottom text of addon descriptions (with the checkboxes *and stuff.*/
+.detail-row,
+.detail-row-complex {
+    text-shadow: none !important;
+    font-family: Fira Sans !important;
+    fill: white !important;
+    fill-opacity: 1 !important;
+}
+
+/*
+@-moz-document url(about:addons) {
+    .addon.card {
+        max-width: 1000px !important;
+        font-family: Fira Sans !important;
+        box-shadow: 1 1 #1e90ff !important;
+        border-radius: 0px !important;
+        border: 1px !important;
+        border-color: dodgerblue !important;
+    }
+
+    #header-inner {
+        width: 1030px !important;
+    }
+
+    .heading-inner {
+        width: 2155px !important;
+        margin-left: -1125px !important;
+        margin-top: -18px !important;
+    }
+
+    #header-utils-btn .toolbarbutton-icon {
+        padding: 2px 5px !important;
+    }
+
+    .detail-view-container {
+        width: 1000px !important;
+    }
+
+    .content-container {
+        width: 100% !important;
+    }
+
+    .toolbarbutton-icon {
+        padding: 0px 2px !important;
+        margin-left: -8px !important;
+        margin-right: 0px !important;
+        margin-top: -2px !important;
+        padding-top: 2px !important;
     }
 }
 
 
-/*
-Name: Firefox Transparent Images
-Version: 1.1.0
-Description: Removes the white background when viewing images with transparency directly.
-Copyright: hyperfekt
-License: CC0 Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/)
 */
-/*
-@-moz-document regexp("(data:image/.*|.*\\.(png|gif|webp|bmp|tiff?|jp2|jpx)") {
-    img.transparent {
-        background: none !important;
-        color: #ffffff !important;
+
+@-moz-document url-prefix("about:") {
+
+    * {
+        font-family: Fira Sans !important;
+        font-weight: inherit !important;
+        fill-opacity: 1 !important;
+
     }
-}*/
-/* for svg 
-@-moz-document regexp("data:image/(svg).*|.*\\.(svg)") {
-    :root {
-        background: url("chrome://global/skin/media/imagedoc-darknoise.png") !important;
-        color: #ffffff !important;
+
+}
+
+@-moz-document url("about:addons") {
+    #header-search {
+        border: 1px solid dodgerblue !important;
+    }
+
+    #header-search:-moz-any(:hover, :focus-within) {
+        border: 1px solid dodgerblue !important;
+        box-shadow: 0 0 10px white !important;
+    }
+
+    .addon.card:hover {
+        box-shadow: 0 0 10px dodgerblue !important;
+        border-bottom: none !important;
+    }
+
+    /* Options */
+    button[label="Options"] {
+        background-color: black !important;
+        border-color: dodgerblue !important;
+    }
+
+    /* Enable */
+    button[label="Activer"] {
+        background-color: black !important;
+        border-color: dodgerblue !important;
+    }
+
+    /* Disable */
+    button[label="Désactiver"] {
+        background-color: black !important;
+        border-color: dodgerblue !important;
+    }
+
+    /* Remove */
+    button[label="Supprimer"] {
+        background-color: black !important;
+        border-color: dodgerblue !important;
     }
 }
-*/
 
-/*
-.popup-notification-button[default][highlight="true"]:not([disabled]) {
-  background-color: #1e90ff !important;
+/* Find In Options */
+@-moz-document url("about:preferences") {
+    #searchInput {
+        border: 1px solid dodgerblue !important;
+    }
+
+    #searchInput:-moz-any(:hover, :focus-within) {
+        border: 1px solid dodgerblue !important;
+        box-shadow: 0 0 7px white !important;
+    }
+
 }
 
-.popup-notification-button[default][highlight="true"]:hover:not([disabled]) {
-  background-color: #1e8eff80 !important;
+/* Firefox Quantum userChrome.css tweaks *********************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************/
+
+/* 'Unknown' tag gets hidden for English, German, Russian, Spanish (es-SP), Portuguese (pt-PT), French, Italian locales */
+
+@-moz-document url-prefix(about:addons) {
+
+    .addon:not([pending="uninstall"])[status="installed"] .date-updated:not(:-moz-any([value="Unknown"], [value="Unbekannt"], [value="Неизвестно"], [value="Desconocido"], [value="Desconhecido"], [value="Inconnue"], [value="Sconosciuto"])) {
+        display: block !important;
+        padding-top: 15px !important;
+        color: dodgerblue !important;
+    }
 }
 
-.popup-notification-button:hover:not([disabled]) {
-  background-color: #80808080 !important;
-}
-
-*/
-/* google */
-/*
-@-moz-document url-prefix("https://www.google.fr/search") { b > b { font-weight: 100 !important; } } 
-@-moz-document url-prefix("https://www.google.com/search") { b > b { font-weight: 100 !important; } } 
-*/
+/*---------------------------------------------------------------------*/
