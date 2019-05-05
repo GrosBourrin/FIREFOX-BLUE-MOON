@@ -6,6 +6,7 @@
 	background-color: #1f1f1f !important;
 }
 
+
 /*--------------------About firefox ---------------------------------*/
 @-moz-document url("chrome://browser/content/aboutDialog.xul") {
 	#leftBox {
@@ -130,19 +131,19 @@
 
 #statuspanel #statuspanel-label {
 	-moz-appearance: none !important;
-	background-color: #1f1f1fb0 !important;
+	background-color: #1f1f1f !important;
 	font-family: "Fira Sans" !important;
 	font-size-adjust: inherit !important;
 	font-weight: thin !important;
-	color: yellow !important;
+	color: dodgerblue !important;
 	border: 0px solid black !important;
 }
 
 #statuspanel {
 	/*background-color: transparent !important;*/
 	border: none !important;
-	bottom: 17px !important;
-	height: 19px !important;
+	bottom: 20px !important;
+	height: 20px !important;
 	max-width: 45% !important;
 	transition: none !important;
 }
@@ -152,35 +153,18 @@
 statuspanel #statuspanel-inner {
 	background: transparent !important;
 	border: none !important;
-	height: 19px !important;
+	height: 20px !important;
 }
 
 /* If you're not on the latest Nightly,change the #statuspanel-label
 to .statuspanel-label */
 
 statuspanel #statuspanel-label {
-	background-color: #1f1f1fb0 !important;
+	background-color: transparent !important;
 	border: none !important;
 }
 
-/* forward buttons 
-#forward-button {
-	transform: scale(1, 1) !important;
-	transition: margin-left 250ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 250ms var(--animation-easing-function) !important;
-}
 
-#forward-button[disabled='true'] {
-	margin-left: -28px !important;
-	opacity: 1 !important;
-	transform: scale(.85, .85) !important;
-	pointer-events: none !important;
-}*/
-/*
-.tab-throbber[busy]::before {
-	animation: unset !important;
-	background-image: url("") !important;
-}
-*/
 /* Revert tab throbber */
 
 .tab-throbber[busy]::before {
@@ -204,11 +188,6 @@ statuspanel #statuspanel-label {
 	-moz-binding: url("data:text/xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8IS0tIENvcHlyaWdodCAoYykgMjAxNyBIYWdnYWkgTnVjaGkNCkF2YWlsYWJsZSBmb3IgdXNlIHVuZGVyIHRoZSBNSVQgTGljZW5zZToNCmh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUDQogLS0+DQoNCjwhLS0gUnVuIHVzZXJDaHJvbWUuanMvdXNlckNocm9tZS54dWwgYW5kIC51Yy5qcy8udWMueHVsLy5jc3MgZmlsZXMgIC0tPg0KPGJpbmRpbmdzIHhtbG5zPSJodHRwOi8vd3d3Lm1vemlsbGEub3JnL3hibCI+DQogICAgPGJpbmRpbmcgaWQ9ImpzIiBleHRlbmRzPSJjaHJvbWU6Ly9nbG9iYWwvY29udGVudC9iaW5kaW5ncy90b29sYmFyYnV0dG9uLnhtbCNtZW51Ij4NCiAgICAgICAgPGltcGxlbWVudGF0aW9uPg0KICAgICAgICAgICAgPGNvbnN0cnVjdG9yPjwhW0NEQVRBWw0KICAgICAgICAgICAgICAgIGlmKHdpbmRvdy51c2VyQ2hyb21lSnNNb2QpIHJldHVybjsNCiAgICAgICAgICAgICAgICB3aW5kb3cudXNlckNocm9tZUpzTW9kID0gdHJ1ZTsNCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICB2YXIgY2hyb21lRmlsZXMgPSBGaWxlVXRpbHMuZ2V0RGlyKCJVQ2hybSIsIFtdKS5kaXJlY3RvcnlFbnRyaWVzOw0KICAgICAgICAgICAgICAgIHZhciB4dWxGaWxlcyA9IFtdOw0KICAgICAgICAgICAgICAgIHZhciBzc3MgPSBDY1snQG1vemlsbGEub3JnL2NvbnRlbnQvc3R5bGUtc2hlZXQtc2VydmljZTsxJ10uZ2V0U2VydmljZShDaS5uc0lTdHlsZVNoZWV0U2VydmljZSk7DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgd2hpbGUoY2hyb21lRmlsZXMuaGFzTW9yZUVsZW1lbnRzKCkpIHsNCiAgICAgICAgICAgICAgICAgICAgdmFyIGZpbGUgPSBjaHJvbWVGaWxlcy5nZXROZXh0KCkuUXVlcnlJbnRlcmZhY2UoQ2kubnNJRmlsZSk7DQogICAgICAgICAgICAgICAgICAgIHZhciBmaWxlVVJJID0gU2VydmljZXMuaW8ubmV3RmlsZVVSSShmaWxlKTsNCiAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgICAgIGlmKGZpbGUuaXNGaWxlKCkpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIGlmKC8oXnVzZXJDaHJvbWV8XC51YylcLmpzJC9pLnRlc3QoZmlsZS5sZWFmTmFtZSkpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBTZXJ2aWNlcy5zY3JpcHRsb2FkZXIubG9hZFN1YlNjcmlwdFdpdGhPcHRpb25zKGZpbGVVUkkuc3BlYywge3RhcmdldDogd2luZG93LCBpZ25vcmVDYWNoZTogdHJ1ZX0pOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgZWxzZSBpZigvKF51c2VyQ2hyb21lfFwudWMpXC54dWwkL2kudGVzdChmaWxlLmxlYWZOYW1lKSkgew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHh1bEZpbGVzLnB1c2goZmlsZVVSSS5zcGVjKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYoL1wuYXNcLmNzcyQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYoIXNzcy5zaGVldFJlZ2lzdGVyZWQoZmlsZVVSSSwgc3NzLkFHRU5UX1NIRUVUKSkNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3NzLmxvYWRBbmRSZWdpc3RlclNoZWV0KGZpbGVVUkksIHNzcy5BR0VOVF9TSEVFVCk7DQogICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgICAgICBlbHNlIGlmKC9eKD8hKHVzZXJDaHJvbWV8dXNlckNvbnRlbnQpXC5jc3MkKS4rXC5jc3MkL2kudGVzdChmaWxlLmxlYWZOYW1lKSkgew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmKCFzc3Muc2hlZXRSZWdpc3RlcmVkKGZpbGVVUkksIHNzcy5VU0VSX1NIRUVUKSkNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3NzLmxvYWRBbmRSZWdpc3RlclNoZWV0KGZpbGVVUkksIHNzcy5VU0VSX1NIRUVUKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICBzZXRUaW1lb3V0KGZ1bmN0aW9uIGxvYWRYVUwoKSB7DQogICAgICAgICAgICAgICAgICAgIGlmKHh1bEZpbGVzLmxlbmd0aCA+IDApIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIGRvY3VtZW50LmxvYWRPdmVybGF5KHh1bEZpbGVzLnNoaWZ0KCksIG51bGwpOw0KICAgICAgICAgICAgICAgICAgICAgICAgc2V0VGltZW91dChsb2FkWFVMLCA1KTsNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIH0sIDApOw0KICAgICAgICAgICAgXV0+PC9jb25zdHJ1Y3Rvcj4NCiAgICAgICAgPC9pbXBsZW1lbnRhdGlvbj4NCiAgICA8L2JpbmRpbmc+DQo8L2JpbmRpbmdzPg==");
 }
 
-/*
-.toolbarbutton#alltabs-button {
-	-moz-binding: url("userChrome.xml#js");
-}*/
-
 /*Page title*/
 
 #pagetitle-bar {
@@ -217,8 +196,9 @@ statuspanel #statuspanel-label {
 	overflow: hidden !important;
 	text-overflow: ".." !important;
 	white-space: nowrap !important;
-	padding-top: 2px !important;
-	color: yellow !important;
+	padding-top: 0px !important;
+	padding-bottom: 1px !important;
+	color: dodgerblue !important;
 	font-family: "Fira Sans" !important;
 	font-size: 14px !important;
 }
@@ -227,12 +207,13 @@ statuspanel #statuspanel-label {
 	content: attr(titlepage) !important;
 	margin-left: 5px !important;
 	margin-right: 5px !important;
+
 }
 
 /*--------------------close tab size --------------*/
 
 :root {
-	--tab_close_icons_size: 17px;
+	--tab_close_icons_size: 15px;
 }
 
 #main-window #navigator-toolbox #TabsToolbar #closetab_fmarin_com-browser-action .toolbarbutton-icon,
@@ -250,11 +231,11 @@ statuspanel #statuspanel-label {
 /* tabs --- rotate close button */
 
 .tab-close-button {
-	list-style-image: url("green-bullet-large.png") !important;
+	list-style-image: url("closespin.svg") !important;
 }
 
 #tab-close-button:hover {
-	list-style-image: url("green-bullet-large.png") !important;
+	list-style-image: url("closespin.svg") !important;
 }
 
 #tabbrowser-tabs .tabbrowser-tab:hover .tab-close-button {
@@ -318,6 +299,7 @@ menuitem[disabled="true"],
 menuitem[disabled="true"]>.menu-text {
 	color: #777 !important;
 }
+
 
 menuitem:hover,
 menu:hover,
@@ -468,7 +450,8 @@ tooltip {
 /*--------- ombre onglets / tab shadow ------------*/
 
 .tabbrowser-tab[visuallyselected="true"] {
-	box-shadow: 2px 0px 8px 0px grey !important;
+	box-shadow: 0px 0px 26px 0px white !important;
+	/*width: 140px !important;*/
 }
 
 /* Selected Tab Text */
@@ -878,7 +861,8 @@ identity-popup-security-content,
 
 #TabsToolbar,
 .tabbrowser-tab {
-	max-height: 38px !important;
+	max-height: 35px !important;
+
 }
 
 .bookmark-item {
@@ -1049,16 +1033,6 @@ treechildren::-moz-tree-image(query) {
 
 }
 
-/* Avoid overriding classic Bookmarks Toolbar and Other Bookmarks icons in menus
-#BMB_bookmarksPopup #BMB_bookmarksToolbar.menu-iconic-icon,
-#bookmarksMenu #bookmarksToolbarFolderMenu.menu-iconic-icon {
-	list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png") !important;
-}
-
-#BMB_bookmarksPopup #BMB_unsortedBookmarks.menu-iconic-icon,
-#bookmarksMenu #menu_unsortedBookmarks.menu-iconic-icon {
-	list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png") !important;
-}*/
 
 /*-min max close */
 .titlebar-button>.toolbarbutton-icon {
@@ -1106,20 +1080,6 @@ treechildren::-moz-tree-image(query) {
 	background-color: transparent !important;
 }
 
-/*
-.close-icon{
-transform:scale(1,1)!important;
-transition:opacity 250ms var(--animation-easing-function),
-   margin-left 250ms var(--animation-easing-function),
-   transform var(--animation-easing-function),
-   visibility 0ms 25ms!important;
-}
-.tabbrowser-tab:not(:hover) .close-icon{
-opacity:0!important;
-margin-left:calc((-20px * .9) + 2px)!important;
-transform:scale(.9,.9)!important;
-}
-*/
 
 /*----------------------hamburger menu-----------------------------*/
 
@@ -1233,7 +1193,7 @@ panel #editBookmarkPanel,
 /*-------------------------------------------------------*/
 
 :root[uidensity="compact"] #navigator-toolbox {
-	--nav-bar-height: 38px;
+	--nav-bar-height: 35px;
 	--tab-min-height: 35px;
 }
 
@@ -1652,39 +1612,6 @@ hbox#sidebar-search-container textbox#search-box {
 	color: white !important;
 }
 
-/*-------------------anims hover ------------------------------------------------------------
-/* Contextual toolbar buttons, only show on hover, this is what matters, the rest of the file are just style tweaks I like
-
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-:root:not([customizing]) #nav-bar toolbarbutton {
-	margin-left: -28px !important;
-	transform: scale(0, 0) !important;
-	pointer-events: none !important;
-	transition: all 300ms var(--animation-easing-function) !important;
-}
-
-:root:not([customizing]) :hover>#nav-bar toolbarbutton,
-:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
-:root:not([customizing]) :hover>#titlebar toolbarbutton {
-	transform: scale(1, 1) !important;
-	margin-left: 0 !important;
-	pointer-events: auto !important;
-}
-
-/* auto collapse nav bar height when in stealth mode (not active),
-kinda jumpy and annoying after a while so let's just comment it for now*/
-/*
-#nav-bar {
-	height: 30px !important;
-	transition: all 300ms var(--animation-easing-function) !important;
-}
-
-:root:not([customizing]) :hover>#nav-bar,
-:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar {
-	height: 30px !important;
-}
-*/
 :root {
 	--tabs-border: none !important;
 }
@@ -1764,10 +1691,6 @@ toolbarbutton.bookmark-item:hover {
 	border: 1px #1f1f1f solid !important;
 }
 
-/*
-.titlebar-placeholder[type="post-tabs"] {
-	width: 50px !important;
-}*/
 
 .titlebar-spacer[type="post-tabs"] {
 	width: 50px !important;
@@ -1837,12 +1760,6 @@ toolbarbutton.bookmark-item:hover {
 	text-shadow: none !important;
 }
 
-/*
-toolbarspring {
-	min-width: 8px !important;
-	max-width: 8px !important;
-}
-*/
 
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"]) {
 	background-color: #1e8fff56 !important;
@@ -1858,43 +1775,6 @@ toolbarspring {
 		background: transparent !important;
 	}
 }
-
-/* personalbar slide
-:root {
-	--hptb-height: -30px;
-	--hptb-transition: margin 0.3s linear;
-}
-
-#content-deck {
-	margin-top: 0 !important;
-	transition: var(--hptb-transition) !important;
-}
-
-#PersonalToolbar {
-	margin-top: var(--hptb-height) !important;
-	transition: var(--hptb-transition) !important;
-}
-
-#navigator-toolbox:hover #PersonalToolbar {
-	margin-top: 0px !important;
-}
-
-#navigator-toolbox:hover~#content-deck {
-	margin-top: var(--hptb-height) !important;
-}
-
-#nav-bar {
-	z-index: 1;
-}
-*/
-/* tab icons for dark mode -----------
-.tab-icon-image {
-	background-color: rgba(128, 128, 128, 0.651) !important;
-	border-radius: 0px;
-	padding: 1px;
-	
-	transform: scale(1);
-}*/
 
 
 .tab-icon-image {
@@ -1917,40 +1797,6 @@ toolbarspring {
 	transition: all 0.4s ease 0s !important;
 }
 
-/*
-#nav-bar:not([customizing="true"]),
-#PersonalToolbar:not([customizing="true"]) {
-	visibility: collapse !important;
-	min-height: 0px !important;
-	max-height: 0px !important;
-	transition: visibility 400ms reverse !important;
-}
-
-#navigator-toolbox:hover :-moz-any(#nav-bar, #PersonalToolbar),
-#navigator-toolbox:focus-within :-moz-any(#nav-bar, #PersonalToolbar) {
-	visibility: visible !important;
-	min-height: 28px !important;
-	/* edit if needed */
-/*max-height: 28px !important;
- edit if needed 
-}
-*/
-
-/*#nav-bar:not([customizing="true"]),
-#PersonalToolbar:not([customizing="true"]) {
-	visibility: collapse !important;
-	
-	transition: visibility 400ms ease-in-out !important;
-	transition: all 53ms ease 0.1s !important;
-}
-
-#navigator-toolbox:hover :-moz-any(#nav-bar, #PersonalToolbar),
-#navigator-toolbox:focus-within :-moz-any(#nav-bar, #PersonalToolbar) {
-	visibility: visible !important;
-	transition: all 53ms ease 0.1s !important;
-	
-	transition: visibility 400ms ease-in-out !important;
-}*/
 
 /* all icons get full brightness */
 .toolbarbutton-animatable-box,
@@ -1958,18 +1804,8 @@ toolbarspring {
 	fill-opacity: 1 !important;
 }
 
-/*-------------------------------*/
 
-/*---------download button coloring ------
-#downloads-button[attention="success"]>#downloads-indicator-anchor>#downloads-indicator-icon,
-#downloads-button[attention="success"]>#downloads-indicator-anchor>#downloads-indicator-progress-outer {
-	fill: white !important;
-}
 
-#downloads-indicator-progress-inner {
-	fill: yellow !important;
-}
-*/
 /*---colored blinking cursor in url bar ----*/
 #urlbar {
 	color: #ffffff !important;
@@ -2006,239 +1842,6 @@ toolbarbutton:not([disabled]):active>.toolbarbutton-badge-stack>.toolbarbutton-i
 	background-color: transparent !important;
 }
 
-/* Back button override
-:root:not([uidensity="compact"]) #back-button {
-	clip-path: none;
-	background-color: transparent !important;
-	opacity: 1 !important;
-}
-
-:root:not([uidensity="compact"]) #back-button>.toolbarbutton-icon {
-	background-color: var(--backbutton-background) !important; opacity: 1 !important;
-}
-
-:root:not([uidensity="compact"]) .toolbarbutton-1:not(#back-button) {
-	margin: var(--toolbarbutton-outer-padding) 0 !important; 
-}
-*/
-/*
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);*/
-/* Rotate icons on hover */
-/*
-.tab-icon-image:hover,
-awcanvas:hover>image,
-image.search-go-button:hover,
-dropmarker:hover>image,
-#urlbar-icons>image:hover,
-#urlbarext-icons>image:hover,
-#page-proxy-stack:hover>image,
-#xpinstallheader:hover>image,
-installitem:hover>hbox>.xpinstallIconContainer>.xpinstallItemIcon,
-treecol:hover>.treecol-icon,
-richlistitem:hover>hbox>.addon-icon>.addonIconStack>.addonIcon,
-statusbarpanel>[class="fs-toolbutton"]:hover,
-statusbarpanel:hover>hbox>image,
-statusbarpanel:hover>image:not(.fs-toolbutton),
-tab:hover>*>image,
-tab:hover>image,
-checkbox:hover>.checkbox-check,
-radio:hover>image,
-radio:hover>*>image,
-menuitem:hover>hbox>.menu-iconic-icon,
-menu:hover>image.menubar-left,
-menu:hover>hbox>.menu-iconic-icon,
-toolbarbutton:not([id^="fx-home-button"]):hover>image,
-hbox[id*="Button"]:not(#BottomAreaButtons):hover>.button-box>.button-icon,
-button:hover>.button-box>.button-icon {
-	transform: rotate(20deg) !important;
-	-moz-transform: rotate(20deg) !important
-}
-*/
-
-/*rotate icons on active (clicked)*/
-/*
-.tab-icon-image:active,
-awcanvas:active>image,
-image.search-go-button:active,
-dropmarker:active>image,
-#urlbar-icons>image:active,
-#urlbarext-icons>image:active,
-#page-proxy-stack:active>image,
-#xpinstallheader:active>image,
-installitem:active>hbox>.xpinstallIconContainer>.xpinstallItemIcon,
-treecol:active>.treecol-icon,
-richlistitem:active>hbox>.addon-icon>.addonIconStack>.addonIcon,
-statusbarpanel>[class="fs-toolbutton"]:active,
-statusbarpanel:active>hbox>image,
-statusbarpanel:active>image:not(.fs-toolbutton),
-tab:active>*>image,
-tab:active>image,
-checkbox:active>.checkbox-check,
-radio:active>image,
-radio:active>*>image,
-menuitem:active>hbox>.menu-iconic-icon,
-menu:active>image.menubar-left,
-menu:active>hbox>.menu-iconic-icon,
-toolbarbutton:not([id^="fx-home-button"]):active>.toolbarbutton-icon,
-hbox[id*="Button"]:not(#BottomAreaButtons):active>.button-box>.button-icon,
-button:active>.button-box>.button-icon {
-	transform: rotate(45deg) !important;
-	-moz-transform: rotate(45deg) !important
-}
-*/
-/*if it doesn't have this then the icons get swapped to the other side on hover*/
-/*
-.tab-icon-image,
-awcanvas>image,
-image.search-go-button,
-dropmarker>image,
-#urlbar-icons>image,
-#urlbarext-icons>image,
-#page-proxy-stack>image,
-#xpinstallheader>image,
-installitem>hbox>.xpinstallIconContainer>.xpinstallItemIcon,
-treecol>.treecol-icon,
-richlistitem>hbox>.addon-icon>.addonIconStack>.addonIcon,
-statusbarpanel>.fs-toolbutton,
-statusbarpanel>hbox>image,
-statusbarpanel>image:not(.fs-toolbutton),
-tab>*>image,
-tab>image,
-checkbox>.checkbox-check,
-radio>image,
-radio>*>image,
-menuitem>hbox>.menu-iconic-icon,
-menu>image.menubar-left,
-menu>hbox>.menu-iconic-icon,
-toolbarbutton:not(.panel-combined-button):not([id^="fx-home-button"])>.toolbarbutton-icon,
-hbox[id*="Button"]:not(#BottomAreaButtons)>.button-box>.button-icon,
-button>.button-box>.button-icon {
-	transition: transform .5s ease-in-out !important;
-	transform: rotate(0) !important;
-	-moz-transform: rotate(0) !important
-}
-*/
-/*extend the menu bottom area for rotating*/
-/*
-popup>.popup-internal-box>.arrowscrollbox-scrollbox>.scrollbox-innerbox,
-menupopup>.popup-internal-box>.arrowscrollbox-scrollbox>.scrollbox-innerbox {
-	margin-bottom: 2px !important
-}
-
-#userstyles-heading>#styles-sort>menupopup>hbox {
-	overflow: hidden !important
-}
-*/
-/*.titlebar-button,
-.toolbarbutton-1 {
-transform: scale(1.25) !important;
---toolbarbutton-inner-padding: 5px !important;
-}
-*/
-/*
-:root:not([uidensity="compact"]) #back-button{ --uc-back-extra-padding: 2px }
-
-.toolbarbutton-icon,
-.menuitem-iconic .menu-iconic-icon{
-transition: transform 83ms linear !important;
-}
-
-toolbar .toolbarbutton-1 > .toolbarbutton-icon,
-.urlbar-icon{
-transition: padding 83ms linear !important;
-}
-
-toolbarbutton:not(.toolbarbutton-1) > .toolbarbutton-icon,
-toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon,
-.menuitem-iconic .menu-iconic-icon{
-transform: scale(0.8) !important;
-}
-
-toolbar .toolbarbutton-1 > .toolbarbutton-icon{
-padding: calc(var(--toolbarbutton-inner-padding) + var(--uc-back-extra-padding,0px) + 2px) !important;
-}
-
-#page-action-buttons .urlbar-icon:not(:hover){ padding: calc(var(--urlbar-icon-padding) + 2px) !important; }
-
-toolbarbutton:not(.toolbarbutton-1):not([disabled]):hover > .toolbarbutton-icon,
-toolbar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-badge-stack > .toolbarbutton-icon,
-.menuitem-iconic:not([disabled]):hover .menu-iconic-icon{
-transform: none !important;
-}
-
-toolbar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-icon{
-padding: calc(var(--toolbarbutton-inner-padding) + var(--uc-back-extra-padding,0px)) !important;
-}
-*/
-/*
-.tabbrowser-tab[fadein]:not([pinned]) {
-	flex-grow: 1;
-	min-width: 160px !important;
-	max-width: 170px !important;
-}*/
-
-/*
-
-#PlacesToolbarItems {
-	-moz-box-pack: center
-}
-*/
-/* This very likely only works properly on Windows10 
-@-moz-document url("chrome://browser/content/browser.xul") {
-
-	menupopup[placespopup="true"]>hbox>arrowscrollbox>autorepeatbutton[disabled] {
-		display: none !important;
-	}
-
-	menupopup[placespopup="true"]>hbox>arrowscrollbox>scrollbox {
-		overflow-y: auto !important;
-	}
-}
-*/
-
-/* rotate toolbar tweak 
-#browser {
-padding-left: 40px;
-}
-
-#TabsToolbar {
-width: calc(100vh - 32px) !important;
-position: fixed !important;
-height: 30px !important;
-z-index: 10 !important;
-top: 32px !important; 
-left: 40px !important;
-margin: 0 !important;
-overflow: hidden !important;
-transform-origin: 0 0;
-transform: rotate(90deg);
-}
-
-
-#nav-bar {
-margin-left: 80px;
-background: black !important;
-width: calc(100% - 80px) !important;
-}
-
-*/
-/*
-#PanelUI-button {
-	-moz-box-ordinal-group: 0 !important;
-}
-*/
-
-/*
-#PopupAutoCompleteRichResult,
-#PopupSearchAutoComplete {
-	border-radius: 10px;
-	padding-left: 100px;
-	padding-right: 70px;
-}
-#PopupAutoCompleteRichResult {
-	overflow: hidden !important;
-}
-*/
 
 #urlbar[pageproxystate="valid"]>#identity-box.verifiedIdentity {
 	border-image-slice: 0 !important;
@@ -2256,222 +1859,7 @@ width: calc(100% - 80px) !important;
 	border-image-slice: 0 !important;
 }
 
-/*
-Flag multi-selected tabs for more obvious visibility (Mark "✔" on the selected tab)
-https://www.reddit.com/r/FirefoxCSS/comments/a3tiu7/flag_multiselected_tabs_for_more_obvious/
-
-.tabbrowser-tab,
-.tabbrowser-tab[pinned] {
-	position: relative;
-}
-
-.tabbrowser-tab.tabbrowser-tab[multiselected="true"] .tab-content::before {
-
-	content: "✔";
-	position: absolute;
-	margin: -17px 0 0 -9px !important;
-	padding: 1px 3px !important;
-	font-size: 12px !important;
-	font-weight: bold !important;
-	color: #fff !important;
-	background-color: dodgerblue !important;
-	border-radius: 0px 0px 0x 0px !important;
-
-}
-*/
-/* Make the height of the inactive tab slightly higher 
-.tab-background:not([selected=true]) {
-	border-top: 2px !important;
-}
-*/
-/* 
-Number the tabs
-https://www.reddit.com/r/FirefoxCSS/comments/8ruy2d/numbered_tabs_revisited/
-
-#tabbrowser-tabs {
-	counter-reset: n_tabs 0;
-}
-
-.tabbrowser-tab .tab-content {
-	padding-left: 2px;
-}
-
-.tabbrowser-tab .tab-content::before {
-	display: -moz-box;
-	margin-top: 0px;
-	padding-right: 4px;
-	counter-increment: n_tabs;
-	content: counter(n_tabs);
-	font-family: Fira Sans !important;
-	font-weight: bold !important;
-	font-size: 12px !important;
-	color: white !important;
-}
-*/
-/*
-:root:not([uidensity="compact"]) #back-button {
-	--uc-back-extra-padding: 5px
-}
-
-.toolbarbutton-icon,
-.menuitem-iconic .menu-iconic-icon {
-	transition: transform 100ms linear !important;
-}
-
-toolbar .toolbarbutton-1>.toolbarbutton-icon,
-.urlbar-icon {
-	transition: padding 100ms linear !important;
-}
-
-toolbarbutton:not(.toolbarbutton-1)>.toolbarbutton-icon,
-toolbar .toolbarbutton-1>.toolbarbutton-badge-stack>.toolbarbutton-icon,
-.menuitem-iconic .menu-iconic-icon {
-	transform: scale(1.0) !important;
-}
-
-toolbar .toolbarbutton-1>.toolbarbutton-icon {
-	padding: calc(var(--toolbarbutton-inner-padding) + var(--uc-back-extra-padding, 0px) + 2px) !important;
-}
-
-#page-action-buttons .urlbar-icon:not(:hover) {
-	padding: calc(var(--urlbar-icon-padding) + 2px) !important;
-}
-
-toolbarbutton:not(.toolbarbutton-1):not([disabled]):hover>.toolbarbutton-icon,
-toolbar .toolbarbutton-1:not([disabled]):hover>.toolbarbutton-badge-stack>.toolbarbutton-icon,
-.menuitem-iconic:not([disabled]):hover .menu-iconic-icon {
-	transform: none !important;
-}
-
-toolbar .toolbarbutton-1:not([disabled]):hover>.toolbarbutton-icon {
-	padding: calc(var(--toolbarbutton-inner-padding) + var(--uc-back-extra-padding, 0px)) !important;
-}*/
-
-/* Fx65+ Address bar - Reduce height 
-
-toolbar {
-	-moz-appearance: toolbar !important;
-	min-width: 1px !important;
-	max-height: 33px !important;
-}
-
-/* Fx65+ Reduce tabs height 
-#TabsToolbar,
-.tabbrowser-tab {
-	max-height: 33px !important;
-}
-
-/* Vertical space for min/max/close buttons above the main toolbar */
-
-/* as Sized on Windows 7 (cf. Jscher) 
-
-#main-window[tabsintitlebar="true"][sizemode="normal"]:not([inFullscreen="true"]) #nav-bar {
-	margin-top: -3px !important;
-}
-
-#main-window[tabsintitlebar="true"] [sizemode="maximized"]:not([inFullscreen="true"]) #nav-bar {
-	margin-top: -3px !important;
-}
-*/
-/*
-:root[tabsintitlebar="true"] #nav-bar {
-	--window-drag-space-width: 24px
-}
-
-.titlebar-buttonbox-container {
-	position: fixed;
-	top: 0;
-	right: 0;
-	height: 40px;
-}
-
-#toolbar-menubar[inactive]>.titlebar-buttonbox-container {
-	opacity: 0
-}
-
-:root[sizemode="maximized"]>#navigator-toolbox {
-	padding-top: 8px !important;
-}
-
-:root[sizemode="maximized"] .titlebar-buttonbox-container {
-	top: 8px
-}
-
-:root[uidensity="compact"] .titlebar-buttonbox-container {
-	height: 32px
-}
-
-.titlebar-buttonbox-container>.titlebar-buttonbox {
-	height: 100%;
-}
-
-#titlebar {
-	-moz-box-ordinal-group: 2;
-	-moz-appearance: none !important;
-}
-
-:root[tabsintitlebar="true"] #nav-bar {
-	padding-right: calc(138px + var(--window-drag-space-width, 0px));
-	padding-left: var(--window-drag-space-width, 0px)
-}
-
-.titlebar-placeholder,
-#TabsToolbar .titlebar-spacer {
-	display: none;
-}
-*/
-
-/*-------------------------bottombar------------------------*/
-/* This change the color of the bottombar to dark, don't use this if you want default color (white) 
-#browser-bottombox-vbox {
-	background-color: #1f1f1f !important;
-}
-
-#addonbar {
-	background-color: #1f1f1f !important;
-}
-
-
-#browser-bottombox {
-	*height: 35px !important;
-	* The value should be between 24-40px *
-	direction: rtl !important;
-	 This makes the toolbar buttons positioned from right to left
-Should be used with the pseudo Separators below 
-}
-
-*/
-
-/* Pseudo Separators
-This technically transforms the flexible spaces to separators whenever they are put to the bottombar.
-The down side is that you cannot use flexible spaces on bottombar anymore 
-#browser-bottombox toolbarspring {
-	background: #1f1f1f !important;
-	max-width: 0px !important;
-	min-width: 0px !important;
-	width: 0px !important;
-	border-left: 1px solid white !important;
-	border-right: 1px solid black !important;
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
-	margin-left: 6px !important;
-	margin-right: 6px !important;
-}
-*/
-/* Change these if you want more or less space between each button 
-#browser-bottombox toolbarbutton {
-	--toolbarbutton-inner-padding: 2px !important;
-	padding-left: 2px !important;
-	padding-right: 2px !important;
-	margin-left: 0px !important;
-	margin-right: 6px !important;
-}*/
-
-/* Don't like the flat look? Try these lines! This is for dark theme, if you want light, you can try using rgba(112,112,112,1) 0%, rgba(237,237,237,1) 100% 
-#browser-bottombox-vbox {
-	background: -moz-radial-gradient(center, ellipse cover, rgba(55, 55, 55, 1) 0%, rgba(12, 12, 12, 1) 100%);
-}*/
-
+/*-------------------------------------------------------------------------------------------------*/
 #uc-restart .toolbarbutton-icon {
 	list-style-image: url("reloadsvg.svg");
 	/* icon / path to icon */
@@ -2681,9 +2069,7 @@ findbar {
 
 .urlbar-history-dropmarker {
 	list-style-image: url("dropmarker.svg") !important;
-
 	opacity: 1 !important;
-
 	-moz-box-ordinal-group: 4;
 }
 
@@ -2829,9 +2215,7 @@ toolbar #zoom-out-button {
 
 /*changes color of not selected tabs close button*/
 .tab-close-button:not([selected]) {
-	filter: invert(50%)
-		/*invert(100%) */
-		 !important;
+	filter: invert(50%) !important;
 }
 
 
@@ -3023,15 +2407,6 @@ findbar>.findbar-container::after {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Removes 1px border underneath the navbar */
 
 #navigator-toolbox::after {
@@ -3043,40 +2418,214 @@ findbar>.findbar-container::after {
 /* Removes 1px borders around the selected tab */
 
 .tab-background {
-
 	margin-inline-start: -1px !important;
-
 	margin-inline-end: -1px !important;
-
 	border: 0 !important;
-
 	border-image-width: 0 !important;
-
 }
 
 
 /* Hide "go" button in the address bar */
 
 .urlbar-go-button {
-
 	display: none !important;
-
 }
 
 
 /* Prevent window control buttons being stretch vertically when addionally drag space above the tab bar is enabled */
+/*
+.titlebar-buttonbox-container {*/
+	/*max-height: 20px !important;
+}*/
 
-.titlebar-buttonbox-container {
-
-	max-height: 30px !important;
-
-}
-
-
-/* Hide tab loading burst effect */
+/* Hide tab loading burst effect 
 
 .tab-loading-burst {
 
 	display: none !important;
 
+}
+
+*/
+
+
+
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+/* NOTE  ********************************************************************************/
+
+/*
+:root {
+	--bookmark_items_lines: 1 !important;
+	--addonbar_height: 27px;
+}
+
+#browser-bottombox-vbox {
+	color: white !important;
+	background-color: #1f1f1f !important;
+}
+
+#addonbar {
+	color: white !important;
+	background-color: #1f1f1f !important;
+}
+
+#browser-bottombox {
+	color: white !important;
+	direction: rtl !important;
+}
+*/
+/*
+.tabbrowser-tab .tab-loading-burst {
+	background-image: linear-gradient(90deg, transparent, dodgerblue) !important;
+	background-repeat: no-repeat !important;
+	transition: background-size 0.5s ease-out !important, opacity 0.5s linear;
+	background-size: 0px 100% !important;
+}
+
+.tabbrowser-tab:not([busy]) .tab-loading-burst {
+	opacity: 0;
+}
+
+.tabbrowser-tab[busy] .tab-loading-burst {
+	background-size: 20% 100% !important;
+	transition: background-size 0.3s ease-out;
+}
+
+.tabbrowser-tab[busy][progress] .tab-loading-burst {
+	background-size: 100% 100% !important;
+	transition-duration: 2s !important;
+}
+
+.tabbrowser-tab[bursting] .tab-loading-burst {
+	background-size: 100% 100% !important;
+	transition-duration: 0.5s;
+}
+
+*/
+/*
+.tabbrowser-tab[selected]>.tab-stack::before {
+	content: "" !important;
+	position: fixed !important;
+	top: 38px !important;
+	z-index: 2 !important;
+	height: 3px !important;
+	width: 100vw !important;
+	background-image: linear-gradient(90deg, transparent, dodgerblue) !important;
+	background-repeat: no-repeat !important;
+	transition: background-size 0.5s ease-out, opacity 0.3s linear 1s !important;
+	background-size: 100% 100% !important;
+	pointer-events: none !important;
+}
+
+.tabbrowser-tab[selected]:not([busy])>.tab-stack::before {
+	opacity: 0 !important;
+}
+
+.tabbrowser-tab[selected][busy]:not([progress]):not([bursting])>.tab-stack::before {
+	background-size: 20% 100% !important;
+	transition: background-size 0.3s ease-out !important;
+}
+
+.tabbrowser-tab[selected][busy][progress]>.tab-stack::before {
+	background-size: 100% 100% !important;
+	transition-duration: 1.5s !important;
+}
+
+.tabbrowser-tab[selected][bursting]>.tab-stack::before {
+	background-size: 100% 100% !important;
+	transition-duration: 0.5s !important;
+}
+*/
+/* Replace the button background-colors with a glow effect */
+/* Edit the color choices how you see fit */
+
+
+/* Make backgrounds transparent 
+.urlbar-icon,
+.urlbar-icon-wrapper,
+toolbar .toolbarbutton-1,
+#tabbrowser-tabs toolbarbutton,
+toolbar toolbarbutton>.toolbarbutton-icon,
+toolbar toolbarbutton>.toolbarbutton-badge-stack,
+.titlebar-button {
+	background-color: transparent !important;
+}
+
+.close-icon {
+	fill-opacity: 0 !important;
+}*/
+/*Glow effects on hover 
+.close-icon:hover,
+.urlbar-history-dropmarker:hover,
+#page-action-buttons>.urlbar-icon:hover,
+.urlbar-icon-wrapper:hover>.urlbar-icon,
+toolbar .toolbarbutton-1:not([disabled]):hover .toolbarbutton-icon,
+#TabsToolbar toolbarbutton:not([disabled]):hover .toolbarbutton-icon,
+toolbar #downloads-button:hover #downloads-indicator-anchor {
+	filter: brightness(2) drop-shadow(0 0 2px cyan) drop-shadow(0 0 0 cyan)
+}*/
+
+/*Active states and close window button hover state 
+.titlebar .titlebar-buttonbox>.titlebar-close:hover>.toolbarbutton-icon,
+.close-icon:active,
+.urlbar-history-dropmarker:active,
+.page-action-buttons>.urlbar-icon:active,
+.page-action-buttons>.urlbar-icon[open],
+.urlbar-icon-wrapper:active>.urlbar-icon,
+.urlbar-icon-wrapper[open]>.urlbar-icon,
+toolbar toolbarbutton:not([disabled]):active .toolbarbutton-icon,
+toolbar toolbarbutton:not([disabled])[open] .toolbarbutton-icon,
+.TabsToolbar toolbarbutton:not([disabled]):active .toolbarbutton-icon,
+toolbar #downloads-button:active #downloads-indicator-anchor,
+toolbar #downloads-button[open] #downloads-indicator-anchor {
+	filter: brightness(2) drop-shadow(0 0 2px red) drop-shadow(0 0 0 yellow)
+}
+
+*/
+/*
+.panel-subview-body {
+	scrollbar-color: rgb(210, 210, 210) var(--uc-dark-bkgnd-color, var(--arrowpanel-background));
+	scrollbar-width: thin
+}
+
+#permList,
+scrollbar {
+	scrollbar-color: rgb(210, 210, 210) var(--uc-light-bkgnd-color, var(--arrowpanel-background));
+	scrollbar-width: thin
+}
+*/
+
+/* ################################################################################################# */
+/* TAB ANIMATION: LOADING PROGRESS LINE INDICATOR */
+/* ################################################################################################# */
+
+.tabbrowser-tab .tab-loading-burst {
+	background-image: linear-gradient(90deg, transparent, dodgerblue) !important;
+	background-repeat: no-repeat !important;
+	transition: background-size 0.5s ease-out !important;
+	background-size: 0px 10px !important;
+	background-position-y: bottom !important;
+}
+
+.tabbrowser-tab:not([busy]) .tab-loading-burst {
+	opacity: 0 !important;
+}
+
+.tabbrowser-tab[busy] .tab-loading-burst {
+	background-size: 20% 2px !important;
+	transition: background-size 0.3s ease-out !important;
+}
+
+.tabbrowser-tab[busy][progress] .tab-loading-burst {
+	background-size: 100% 2px !important;
+	transition-duration: 2s !important;
+}
+
+.tabbrowser-tab[bursting] .tab-loading-burst {
+	background-size: 100% 2px !important;
+	transition-duration: 0.5s !important;
 }
