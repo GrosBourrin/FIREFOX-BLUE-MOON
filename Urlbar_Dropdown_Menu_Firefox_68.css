@@ -1,0 +1,198 @@
+/* 2 lines url result dropdown list
+   Firefox 57-68 users: https://www.jeffersonscher.com/gm/url-bar-tweaks.html
+*/
+/* Remove " - Visit" or " - Search with" bar in the drop-down */
+#PopupAutoCompleteRichResult richlistitem:first-of-type[type*="heuristic"],
+#PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="searchengine"],
+#PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"],
+#PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="keyword"],
+panel#urlbar-results #urlbarView-row-0 {
+	display: none !important;
+}
+
+/* Hide line for searching sld.tld below "Visit" Line */
+#PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"]+richlistitem[actiontype="searchengine"] {
+	display: none !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistbox,
+#urlbarView-results {
+	padding-top: 3px !important;
+	padding-bottom: 0 !important;
+}
+
+/* Restore persistent display of drop-marker */
+#urlbar:not(:hover)>.urlbar-textbox-container>.urlbar-history-dropmarker,
+.urlbar-history-dropmarker {
+	opacity: 1 !important;
+}
+
+/* Set max-height for items visible without scrolling */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox,
+#urlbarView-results {
+	height: unset !important;
+	max-height: calc(41px * 9.76) !important;
+}
+
+/* adapt it at your taste */
+panel#urlbar-results {
+	width: 1248px !important;
+	max-width: 1248px !important;
+	margin-left: 0 !important;
+	--item-padding-start: 0 !important;
+	--item-padding-end: 0 !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title-text,
+#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-url-text,
+.urlbarView-row:not([type="search"]) .urlbarView-title,
+.urlbarView-row:not([type="search"]) .urlbarView-action,
+.urlbarView-row .urlbarView-url {
+	min-width: 710px !important;
+	max-width: 710px !important;
+}
+
+.urlbarView-row-inner {
+	max-width: 785px !important;
+}
+
+/* Remove excess width of one-off search engine buttons */
+panel#urlbar-results .searchbar-engine-one-off-item.dummy:not(.last-of-row) {
+	display: none !important;
+}
+
+/* Create sufficient height for two lines */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) {
+	position: relative !important;
+	height: 45.5px !important;
+}
+
+.urlbarView-row:not([type="search"]) {
+	position: relative !important;
+	height: 32px !important;
+}
+
+/* Subtle border between results */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem,
+.urlbarView-row {
+	border-bottom: 1px solid #1f1f1f !important;
+}
+
+/* Position page title, set font-size */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title,
+.urlbarView-row:not([type="search"]) .urlbarView-title {
+	position: absolute !important;
+	color: white !important;
+	font-family: 'Fira Sans' !important;
+	left: 54px !important;
+	top: 5px !important;
+	font-size: 14px !important;
+}
+
+/* Position page url / action, set font-size */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-url,
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action,
+.urlbarView-row:not([type="search"]) .urlbarView-secondary {
+	position: absolute !important;
+	color: dodgerblue !important;
+	font-family: 'Fira Sans' !important;
+	left: 54px !important;
+	top: 26px !important;
+	font-size: 12px !important;
+}
+
+/* Position bookmark tags */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-tags,
+.urlbarView-row .urlbarView-tags {
+	position: absolute !important;
+	right: 0px !important;
+	top: 3px !important;
+}
+/* Hide separator between title and URL */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-separator,
+.urlbarView-row:not([type="search"]) .urlbarView-title-separator {
+	display: none !important;
+}
+
+/* Position special icon (bookmark, switch-to-tab) */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-type-icon,
+.urlbarView-row .urlbarView-type-icon {
+	margin-left: 4px !important;
+}
+
+/* Prevent excess indenting of icons in Photon */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem [anonid="type-icon-spacer"],
+panel#urlbar-results .autocomplete-richlistitem [anonid="type-icon-spacer"] {
+	display: none !important;
+}
+
+#PopupAutoCompleteRichResult,
+panel#urlbar-results {
+	--item-padding-start: 0 !important;
+	--item-padding-end: 0 !important;
+}
+
+/* Dark Themed Drop-down */
+/* Dark Theme - Firefox 48+ */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox,
+#urlbarView-results {
+	background-color: #1f1f1f !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+	border-bottom-color: #333 !important;
+}
+/*
+.autocomplete-richlistitem .ac-title,
+.autocomplete-richlistitem .ac-action,
+.autocomplete-richlistitem .ac-separator,
+.urlbarView-row .urlbarView-title,
+.urlbarView-row .urlbarView-secondary,
+.urlbarView-row .urlbarView-title-separator {
+	color: #777 !important;
+}
+*/
+.autocomplete-richlistitem[selected=true],
+.urlbarView-row[selected] {
+	background-color: #1e90ff !important;
+}
+
+.autocomplete-richlistitem[selected=true] .ac-title,
+.ac-title[selected],
+.autocomplete-richlistitem[selected=true] .ac-action,
+.ac-action[selected],
+.autocomplete-richlistitem[selected=true] .ac-separator,
+.ac-separator[selected],
+.urlbarView-row[selected] .urlbarView-title,
+.urlbarView-row[selected] .urlbarView-secondary,
+.urlbarView-row[selected] .urlbarView-title-separator {
+	color: #eee !important;
+}
+
+.autocomplete-richlistitem[selected=true] .ac-url,
+.ac-url[selected],
+.urlbarView-row[selected] .urlbarView-url {
+	color: #1e90ff !important;
+}
+
+/* Subtle bottom border */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem,
+.urlbarView-row {
+	border-bottom: 0px solid rgba(255, 255, 255, 0.1) !important;
+	/* dark theme */
+}
+
+/* Use default text matching */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox,
+#urlbarView-results {
+	overflow-y: auto !important;
+	padding-right: 3px !important;
+}
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+	padding-right: 0 !important;
+}
+.urlbarView-row:hover {
+	background-color: #1e8fff80 !important;
+}
+
+
