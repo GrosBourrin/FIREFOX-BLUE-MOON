@@ -6,6 +6,82 @@
 	background-color: #1f1f1f !important;
 }
 
+/* Tweaks for Ctrl+Tab */
+
+#ctrlTab-previews {
+	border-radius: 0% !important;
+}
+
+#ctrlTab-panel {
+	-moz-appearance: none !important;
+	color: dodgerblue !important;
+	border-style: none !important;
+	padding: 20px 10px 10px !important;
+	font-family: Fira Sans !important;
+	font-weight: bold !important;
+	/*text-shadow: 0 0 4px hsl(0, 0%, 20%), 0 0 4px hsl(0, 0%, 20%) !important;*/
+	background: transparent !important;
+}
+
+
+.ctrlTab-preview:not(#ctrlTab-showAll)>*>.ctrlTab-preview-inner {
+	margin: -10px -10px 0 !important;
+}
+
+.ctrlTab-preview-inner {
+	padding: 8px !important;
+	border: 2px solid transparent !important;
+	border-radius: 0px !important;
+}
+
+tabPreview-canvas element {
+	max-width: 272px !important;
+	min-width: 272px !important;
+	max-height: 153px !important;
+	min-height: 153px !important;
+}
+
+.ctrlTab-favicon-container {
+	-moz-box-align: start !important;
+	-moz-box-pack: start !important;
+}
+
+.ctrlTab-favicon[src] {
+	background-color: transparent !important;
+	width: 25px !important;
+	height: 25px !important;
+	padding: 2px !important;
+}
+
+/* padlock--------------------------- */
+
+#urlbar>#identity-box.notSecureText>#identity-icon-labels>#identity-icon-label {
+	color: rgba(255, 0, 0, 0.867) !important;
+}
+
+#urlbar[pageproxystate="valid"]>#identity-box.notSecure>#connection-icon {
+	fill: darkgreen !important;
+	/*whatever color*/
+}
+
+
+/*-------------------------------------------*/
+
+#identity-box.verifiedIdentity {
+	--urlbar-separator-color: dodgerblue !important;
+}
+
+#identity-box.verifiedIdentity #identity-icon-labels,
+.identity-popup-connection-secure {
+	color: blue !important;
+}
+
+#connection-icon,
+#identity-popup[connection^=secure] #identity-popup-security-content,
+#identity-popup[connection^=secure] #identity-popup-securityView {
+	fill: rgb(255, 100, 190) !important;
+}
+
 /*--------------------About firefox ---------------------------------*/
 @-moz-document url("chrome://browser/content/aboutDialog.xul") {
 	#leftBox {
@@ -18,7 +94,7 @@
 		background-image: url("spacex.jpg") !important;
 		border: none !important;
 		font-family: Fira Sans !important;
-		/*font-size: inherit !important;*/
+		font-size: inherit !important;
 		color: dodgerblue !important;
 	}
 
@@ -52,6 +128,7 @@
 	opacity: 0 !important;
 }
 
+
 /*-------------------------nav button----------------------------*/
 
 #back-button {
@@ -61,6 +138,7 @@
 #forward-button {
 	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSOA3k2CXQAAAAbklEQVQoz5WRMQqDABAEF4UgKEIIPkKJii+3s7NLpY1N3qBR84axsPYOt1sYuNtdSZLEi5FG1yKk5U9tIQ86dioLiejZKC0k5sPK20JSBn4UFvJkYiG3kIwvM8npAt2Vc8J50onpFOVU7Y51PfcBtUFUSir+geUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDMtMTlUMTg6NTY6MTMrMDE6MDDECqmDAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAzLTE5VDE4OjU2OjEzKzAxOjAwtVcRPwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=") !important;
 }
+
 
 #back-button:not(:hover),
 #back-button:not(:hover)>.toolbarbutton-icon {
@@ -106,7 +184,7 @@
 /*---------------------------------------------------------------*/
 
 .PlacesToolbar {
-	height: inherit !important;
+	height: 24px !important;
 }
 
 #statuspanel #statuspanel-label {
@@ -155,7 +233,8 @@ statuspanel #statuspanel-label {
 	opacity: 1 !important;
 	transform: scale(.85, .85) !important;
 	pointer-events: none !important;
-}*/
+}
+*/
 
 /* Revert tab throbber */
 
@@ -165,7 +244,7 @@ statuspanel #statuspanel-label {
 }
 
 .tab-throbber[busy]:not([progress])::before {
-	filter: grayscale(100%);
+	filter: grayscale(100%) !important;
 }
 
 @media (min-resolution: 2dppx) {
@@ -174,8 +253,7 @@ statuspanel #statuspanel-label {
 	}
 }
 
-/* restart button */
-/* Use JS */
+/* restart button Use JS */
 
 toolbarbutton#alltabs-button {
 	-moz-binding: url("data:text/plain;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjwhLS0gQ29weXJpZ2h0IChjKSAyMDE3IEhhZ2dhaSBOdWNoaQpBdmFpbGFibGUgZm9yIHVzZSB1bmRlciB0aGUgTUlUIExpY2Vuc2U6Cmh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUCiAtLT4KCjwhLS0gUnVuIHVzZXJDaHJvbWUuanMvdXNlckNocm9tZS54dWwgYW5kIC51Yy5qcy8udWMueHVsLy5jc3MgZmlsZXMgIC0tPgo8YmluZGluZ3MgeG1sbnM9Imh0dHA6Ly93d3cubW96aWxsYS5vcmcveGJsIj4KICAgIDxiaW5kaW5nIGlkPSJqcyIgZXh0ZW5kcz0iY2hyb21lOi8vZ2xvYmFsL2NvbnRlbnQvYmluZGluZ3MvdG9vbGJhcmJ1dHRvbi54bWwjdG9vbGJhcmJ1dHRvbi1iYWRnZWQiPgogICAgICAgIDxpbXBsZW1lbnRhdGlvbj4KICAgICAgICAgICAgPGNvbnN0cnVjdG9yPjwhW0NEQVRBWwogICAgICAgICAgICAgICAgaWYod2luZG93LnVzZXJDaHJvbWVKc01vZCkgcmV0dXJuOwogICAgICAgICAgICAgICAgd2luZG93LnVzZXJDaHJvbWVKc01vZCA9IHRydWU7CgogICAgICAgICAgICAgICAgdmFyIGNocm9tZUZpbGVzID0gRmlsZVV0aWxzLmdldERpcigiVUNocm0iLCBbXSkuZGlyZWN0b3J5RW50cmllczsKICAgICAgICAgICAgICAgIHZhciB4dWxGaWxlcyA9IFtdOwogICAgICAgICAgICAgICAgdmFyIHNzcyA9IENjWydAbW96aWxsYS5vcmcvY29udGVudC9zdHlsZS1zaGVldC1zZXJ2aWNlOzEnXS5nZXRTZXJ2aWNlKENpLm5zSVN0eWxlU2hlZXRTZXJ2aWNlKTsKCiAgICAgICAgICAgICAgICB3aGlsZShjaHJvbWVGaWxlcy5oYXNNb3JlRWxlbWVudHMoKSkgewogICAgICAgICAgICAgICAgICAgIHZhciBmaWxlID0gY2hyb21lRmlsZXMuZ2V0TmV4dCgpLlF1ZXJ5SW50ZXJmYWNlKENpLm5zSUZpbGUpOwogICAgICAgICAgICAgICAgICAgIHZhciBmaWxlVVJJID0gU2VydmljZXMuaW8ubmV3RmlsZVVSSShmaWxlKTsKCiAgICAgICAgICAgICAgICAgICAgaWYoZmlsZS5pc0ZpbGUoKSkgewogICAgICAgICAgICAgICAgICAgICAgICB0eXBlID0gIm5vbmUiOwogICAgICAgICAgICAgICAgICAgICAgICBpZigvKF51c2VyQ2hyb21lfFwudWMpXC5qcyQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlID0gInVzZXJjaHJvbWUvanMiOwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYoLyhedXNlckNocm9tZXxcLnVjKVwueHVsJC9pLnRlc3QoZmlsZS5sZWFmTmFtZSkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHR5cGUgPSAidXNlcmNocm9tZS94dWwiOwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYoL1wuYXNcLmNzcyQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlID0gImFnZW50c2hlZXQiOwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYoL14oPyEodXNlckNocm9tZXx1c2VyQ29udGVudClcLmNzcyQpLitcLmNzcyQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlID0gInVzZXJzaGVldCI7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgaWYodHlwZSAhPSAibm9uZSIpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKCItLS0tLS0tLS0tXFwgIiArIGZpbGUubGVhZk5hbWUgKyAiICgiICsgdHlwZSArICIpIik7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmKHR5cGUgPT0gInVzZXJjaHJvbWUvanMiKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNlcnZpY2VzLnNjcmlwdGxvYWRlci5sb2FkU3ViU2NyaXB0V2l0aE9wdGlvbnMoZmlsZVVSSS5zcGVjLCB7dGFyZ2V0OiB3aW5kb3csIGlnbm9yZUNhY2hlOiB0cnVlfSk7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYodHlwZSA9PSAidXNlcmNocm9tZS94dWwiKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHh1bEZpbGVzLnB1c2goZmlsZVVSSS5zcGVjKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZWxzZSBpZih0eXBlID09ICJhZ2VudHNoZWV0IikgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZighc3NzLnNoZWV0UmVnaXN0ZXJlZChmaWxlVVJJLCBzc3MuQUdFTlRfU0hFRVQpKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3NzLmxvYWRBbmRSZWdpc3RlclNoZWV0KGZpbGVVUkksIHNzcy5BR0VOVF9TSEVFVCk7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYodHlwZSA9PSAidXNlcnNoZWV0IikgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZighc3NzLnNoZWV0UmVnaXN0ZXJlZChmaWxlVVJJLCBzc3MuVVNFUl9TSEVFVCkpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzc3MubG9hZEFuZFJlZ2lzdGVyU2hlZXQoZmlsZVVSSSwgc3NzLlVTRVJfU0hFRVQpOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0gY2F0Y2goZSkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKCIjIyMjIyMjIyMjIEVSUk9SOiAiICsgZSArICIgYXQgIiArIGUubGluZU51bWJlciArICI6IiArIGUuY29sdW1uTnVtYmVyKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKCItLS0tLS0tLS0tLyAiICsgZmlsZS5sZWFmTmFtZSk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgc2V0VGltZW91dChmdW5jdGlvbiBsb2FkWFVMKCkgewogICAgICAgICAgICAgICAgICAgIGlmKHh1bEZpbGVzLmxlbmd0aCA+IDApIHsKICAgICAgICAgICAgICAgICAgICAgICAgZG9jdW1lbnQubG9hZE92ZXJsYXkoeHVsRmlsZXMuc2hpZnQoKSwgbnVsbCk7CiAgICAgICAgICAgICAgICAgICAgICAgIHNldFRpbWVvdXQobG9hZFhVTCwgNSk7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfSwgMCk7CiAgICAgICAgICAgIF1dPjwvY29uc3RydWN0b3I+CiAgICAgICAgPC9pbXBsZW1lbnRhdGlvbj4KICAgIDwvYmluZGluZz4KPC9iaW5kaW5ncz4K");
@@ -236,7 +314,7 @@ toolbarbutton#alltabs-button {
 	margin-right: 2px !important;
 }
 
-/*---close button anim----*/
+/*------close button anim-------*/
 /* tabs --- rotate close button */
 
 .tab-close-button {
@@ -252,12 +330,12 @@ toolbarbutton#alltabs-button {
 	transition: transform ease-in-out 4s !important;
 }
 
-/*rotate closebutton end */
+/*------rotate closebutton end-------*/
 /*-----------------------------------*/
 
 /* url bar text decoration */
 * #urlbar input.textbox-input::-moz-selection {
-	font-family: Fira Sans !important;
+	font-family: 'Fira Sans' !important;
 	font-size: 14px !important;
 	background-color: dodgerblue !important;
 	border: 0px !important;
@@ -454,7 +532,7 @@ tooltip {
 /*--------- ombre onglets / tab shadow ------------*/
 
 .tabbrowser-tab[visuallyselected="true"] {
-	box-shadow: 0px 0px 26px white !important;
+	box-shadow: 0px 0px 28px white !important;
 	/*width: 140px !important;*/
 }
 
@@ -476,6 +554,12 @@ default document icons treechildren::-moz-tree-image {
 }
 
 /*--------------------------------------------*/
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"] {
+	display: none !important;
+}
+
+/*--------------------------------------------------*/
 
 toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text {
 	display: -moz-box !important;
@@ -557,7 +641,7 @@ menuitem {
 #personal-bookmarks .menu-iconic-text,
 #personal-bookmarks .toolbarbutton-text {
 	font-family: Fira Sans !important;
-	margin-top: 2px !important;
+	margin-top: 0px !important;
 	font-size: 14px !important;
 }
 
@@ -654,8 +738,9 @@ menuitem .menu-accel {
 }
 
 /*  unselected tabs hide tabline */
+
 .tabbrowser-tab:not([selected]) .tab-line {
-	display: none;
+	display: none !important;
 }
 
 /*----------------------*/
@@ -668,7 +753,7 @@ menuitem .menu-accel {
 	border-radius: 0px !important;
 	--toolbarbutton-active-background: none !important;
 	/*#1e8fff80*/
-	border-radius: 0px !important;
+
 }
 
 .urlbar-icon:not([disabled]):hover,
@@ -745,44 +830,48 @@ identity-popup-security-content,
 	border-left: none !important;
 }
 
-/*---------------------------------------------------------------------------------------------------*/
+/*---------------------------------url drop down------------------------------------------------------------------
+@namespace html url("http://www.w3.org/1999/xhtml");
 
 @-moz-document url("chrome://browser/content/browser.xul") {
-
-	/* " - Visit" or " - Search with" bar NOT HIDDEN */
-	:root {
+*/
+/*
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+	/* " - Visit" or " - Search with" bar NOT HIDDEN 
+ :root {
 		--panel-separator-color: grey !important;
 	}
-
-	/* Restore persistent display of drop-marker */
+*/
+/* Restore persistent display of drop-marker 
 	#urlbar:not(:hover)>.urlbar-textbox-container>.urlbar-history-dropmarker {
-		/*opacity: 1 !important;*/
-		border: 0px !important;
+			border: 0px !important;
 	}
-
-	/* Set max-height for items visible without scrolling */
+*/
+/* Set max-height for items visible without scrolling 
 	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-		/* height:auto doesn't work in photon */
+	
 		max-height: calc(40px * 10) !important;
 	}
-
-	/* Constrain drop-down width */
-	/*#PopupAutoCompleteRichResult {max-width: 1200px !important;}*/
-	/* Font-sizes */
-	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
+*/
+/* Constrain drop-down width */
+/*#PopupAutoCompleteRichResult {max-width: 1200px !important;}*/
+/* Font-sizes */
+/*	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
+		font-weight: bold !important;
 	}
 
 	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-url,
 	#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
 		font-family: Fira Sans !important;
 		font-size: 12px !important;
+		font-weight: normal !important;
 	}
 
 	/* Dark Themed Drop-down */
-	/* Dark Theme - Firefox 48+ */
-	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+/* Dark Theme - Firefox 48+ */
+/*	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
 		background-color: #1f1f1f !important;
 	}
 
@@ -827,16 +916,28 @@ identity-popup-security-content,
 	}
 
 	/* Ability to scroll in Fx57 */
-	#PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox {
+/*	#PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox {
 		overflow-y: auto !important;
 		padding-right: 3px !important;
 	}
 
+
 	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-		padding-right: 0 !important;
+		padding-right: 0px !important;
+	}
+
+	*|span.urlbarView-url {
+		font-family: Fira Sans !important;
+		font-size: 12px !important;
+
+	}
+
+	*|span.urlbarView-secondary {
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
 	}
 }
-
+*/
 /*----------Hamburger icon -----------*/
 
 #PanelUI-menu-button {
@@ -889,7 +990,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 /* --- [2] --- */
 
 .toolbarbutton.bookmark-item[type="menu"] {
-	margin-right: 0.5em !important;
+	margin-right: 2px !important;
 }
 
 .toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
@@ -1038,7 +1139,9 @@ treechildren::-moz-tree-image(query) {
 #BMB_bookmarksPopup #BMB_unsortedBookmarks.menu-iconic-icon,
 #bookmarksMenu #menu_unsortedBookmarks.menu-iconic-icon {
 	list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png") !important;
-}*/
+}
+*/
+/* */
 
 /*-min max close */
 .titlebar-button>.toolbarbutton-icon {
@@ -1173,15 +1276,67 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	list-style-image: url("star.png") !important;
 }
 
+/* white text in star menu */
+#editBMPanel_folderMenuList {
+	-moz-appearance: none !important;
+	background: #1f1f1f !important;
+	color: white !important;
+}
+
 panel #editBookmarkPanel,
 .panel-arrow,
 .panel-arrowcontent {
 	opacity: 1 !important;
 	font-family: Fira Sans !important;
-	/* background-color: #1f1f1f !important;*/
+	background-color: #2f2f2f !important;
 	fill: #1f1f1f !important;
 }
 
+/*------------------------------------------------------------------------------*/
+/*#editBookmarkPanel button,*/
+#editBookmarkPanel textbox,
+#editBookmarkPanel menulist,
+#editBookmarkPanel richlistbox,
+#editBookmarkPanel tree {
+	-moz-appearance: none !important;
+	background-color: #1f1f1f !important;
+	color: #ffffff !important;
+	fill: white !important;
+}
+
+#editBookmarkPanel button:hover {
+	filter: brightness(70%) !important;
+	border: none !important;
+}
+
+/*
+#editBookmarkPanel button {
+	max-height: 15px !important;
+}
+*/
+#editBookmarkPanel menulist {
+	padding: 4px !important;
+}
+
+#editBookmarkPanel button {
+	padding: 14px !important;
+	font-size: 12px !important;
+}
+
+#editBMPanel_folderTree treechildren::-moz-tree-cell(selected) {
+	background-color: dodgerblue !important;
+}
+
+#editBMPanel_folderTree treechildren::-moz-tree-cell(hover) {
+	background-color: rgba(30, 143, 255, 0.5) !important;
+}
+
+#PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
+	fill: dodgerblue !important;
+}
+
+
+/*----------------------------------*/
 #urlbar,
 .searchbar-textbox {
 	font-family: Fira Sans !important;
@@ -1254,7 +1409,7 @@ hbox#sidebar-search-container textbox#search-box {
 #template-container,
 #webext-panels-browser,
 #webextpanels-window {
-	background-color: #1f1f1f !important;
+	background-color: #747474 !important;
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 }
@@ -1264,7 +1419,7 @@ hbox#sidebar-search-container textbox#search-box {
 }
 
 /*-----------------------------------------------*/
-
+/*
 #main-window[chromemargin] #toolbar-menubar,
 #main-window[chromemargin] #toolbar-menubar[autohide="true"]~#TabsToolbar {
 	margin-left: 0px !important;
@@ -1273,7 +1428,7 @@ hbox#sidebar-search-container textbox#search-box {
 #main-window[chromemargin] #titlebar-placeholder-on-TabsToolbar-for-captions-buttons {
 	display: none !important;
 }
-
+*/
 .searchbar-textbox {
 	direction: ltr !important;
 	background-color: #1e8fff77 !important;
@@ -1295,7 +1450,7 @@ hbox#sidebar-search-container textbox#search-box {
 	display: none !important;
 }
 
-/*-------------librairie **********/
+/*-------------librairie ********* :) */
 
 :root {
 	--magenta-50: #ff1ad9;
@@ -1637,13 +1792,6 @@ hbox#sidebar-search-container textbox#search-box {
 	}
 }
 
-/* white text in star menu */
-#editBMPanel_folderMenuList {
-	-moz-appearance: none !important;
-	background: #1f1f1f !important;
-	color: white !important;
-}
-
 /*-------------------anims hover ------------------------------------------------------------
 /* Contextual toolbar buttons, only show on hover, this is what matters, the rest of the file are just style tweaks I like
 
@@ -1699,11 +1847,12 @@ nav-bar {
 	opacity: 1 !important;
 }
 
+/*
 #urlbar {
 	margin-left: 1px !important;
 	margin-right: 1px !important;
 }
-
+*/
 .tab-background {
 	border-top: none !important;
 }
@@ -1756,10 +1905,11 @@ toolbarbutton.bookmark-item:hover {
 	border: 1px #1f1f1f solid !important;
 }
 
+/*
 .titlebar-spacer[type="post-tabs"] {
 	width: 50px !important;
 }
-
+*/
 .titlebar-spacer #TabsToolbar {
 	margin-bottom: 0px !important;
 }
@@ -1835,16 +1985,17 @@ toolbarspring {
 	background-color: #1e8fff56 !important;
 }
 
+/*
 @-moz-document url("chrome://browser/content/sanitize.xul") {
 	.SanitizeDialog {
 		background: #1f1f1f !important;
 		color: white !important;
-	}
-
-	caption {
-		background: transparent !important;
-	}
 }
+
+caption {
+	background: transparent !important;
+}
+}*/
 
 /* personalbar slide
 :root {
@@ -1888,12 +2039,12 @@ toolbarspring {
 }
 
 /*-------------------------------------*/
-/*#PersonalToolbar {
+#PersonalToolbar {
 
-	transition: margin 250ms linear !important;
+	transition: margin 150ms linear !important;
 	position: relative;
 	z-index: 0;
-	margin-top: -24px;
+	margin-top: -24px !important;
 	-moz-window-dragging: no-drag;
 }
 
@@ -1903,11 +2054,99 @@ toolbarspring {
 
 #nav-bar:hover+#PersonalToolbar,
 #PersonalToolbar:hover {
-	margin-top: 0px;
-	margin-bottom: -24px;
+	margin-top: 0px !important;
+	margin-bottom: -24px !important;
+}
+
+/* Show bookmarks toolbar only when cursor is on top of toolbar area */
+/* Hide the whole toolbar area unless urlbar is focused or cursor is over the toolbar */
+/* Dimensions on non-Win10 OS probably needs to be adjusted 
+
+:root[sizemode="maximized"]:not([inDOMFullscreen]) {
+	margin-top: 10px
+}
+
+:root[sizemode="maximized"]>#navigator-toolbox {
+	margin-top: -2px
+}
+
+@media screen and (min-resolution: 1.25dppx) {
+	:root[sizemode="maximized"]:not([inDOMFullscreen]) {
+		margin-top: 9px
+	}
+}
+
+@media screen and (min-resolution: 1.5dppx) {
+	:root[sizemode="maximized"]:not([inDOMFullscreen]) {
+		margin-top: 8px
+	}
+
+	:root[sizemode="maximized"]>#navigator-toolbox {
+		margin-top: -1px
+	}
+}
+
+@media screen and (min-resolution: 2dppx) {
+	:root[sizemode="maximized"]:not([inDOMFullscreen]) {
+		margin-top: 7px
+	}
+}
+
+#navigator-toolbox {
+	position: fixed !important;
+	background-color: var(--lwt-accent-color, black);
+	transition: transform 82ms 33ms linear, opacity 82ms 33ms linear !important;
+	transform-origin: top !important;
+	line-height: 0 !important;
+}
+
+#navigator-toolbox>* {
+	line-height: normal !important;
+}
+
+
+#navigator-toolbox,
+#navigator-toolbox>* {
+	width: 100vw;
+	-moz-appearance: none !important;
+}
+
+:root:not([customizing])>#navigator-toolbox:not(:focus-within):not(:hover) {
+	transform: rotateX(86deg);
+	opacity: 0;
+}
+
+:root[sizemode="maximized"]:not([customizing])>#navigator-toolbox:not(:focus-within):not(:hover) {
+	transform: rotateX(89.5deg)
+}
+
+#PersonalToolbar[collapsed] {
+	margin-block-end: -7px
 }
 */
+/* Uncomment this if tabs toolbar is hidden with hide_tabs_toolbar.css */
+/*#titlebar{ margin-bottom: -9px }*/
+/*
+#PersonalToolbar:not([customizing]) {
+	margin-bottom: -24px;
+	transform: rotateX(90deg);
+	transform-origin: top;
+	transition: transform 135ms linear 48ms !important;
+}
 
+:root[uidensity="compact"]>#navigator-toolbox>#PersonalToolbar:not([customizing]) {
+	margin-bottom: -20px
+}
+
+:root[uidensity="touch"]>#navigator-toolbox>#PersonalToolbar:not([customizing]) {
+	margin-bottom: -26px
+}
+
+#navigator-toolbox:hover>#PersonalToolbar {
+	transform: rotateX(0)
+}
+*/
+/*
 #PersonalToolbar {
 	margin-top: -24px !important;
 	transition: all 0.4s ease 0s !important;
@@ -1921,7 +2160,7 @@ toolbarspring {
 	margin-top: 0px !important;
 	transition: all 0.4s ease 0s !important;
 }
-
+*/
 /*
 #nav-bar:not([customizing="true"]),
 #PersonalToolbar:not([customizing="true"]) {
@@ -1996,7 +2235,7 @@ toolbarbutton:not([disabled]):active>.toolbarbutton-badge-stack>.toolbarbutton-i
 	transform: scale(0.5);
 }
 
-/* Restyle hover state - remove everything below if you want the scale effect to also apply to background-color */
+/* Restyle hover state - remove everything below if you want the scale effect to also apply to background-color 
 .toolbar .toolbarbutton-1 {
 	clip-path: inset(3px);
 }
@@ -2255,7 +2494,7 @@ width: calc(100% - 80px) !important;
 }
 
 #identity-box.verifiedIdentity {
-	--urlbar-separator-color: black !important;
+	--urlbar-separator-color: grey !important;
 }
 
 #urlbar[pageproxystate="valid"]>#identity-box.extensionPage {
@@ -2419,15 +2658,9 @@ toolbar .toolbarbutton-1:not([disabled]):hover>.toolbarbutton-icon {
 #TabsToolbar .titlebar-spacer {
   display: none;
 }*/
-
 /*-------------------------------------------------------------------------------------------------*/
 #uc-restart .toolbarbutton-icon {
 	list-style-image: url("reloadsvg.svg");
-	/* icon / path to icon */
-	/*transform: scalex(-1);*/
-	/* icon mirroring */
-
-	/*fill: red;  icon color name/code */
 }
 
 #urlbar>#identity-box.verifiedIdentity>#identity-icon-labels>#identity-icon-label,
@@ -2631,6 +2864,8 @@ findbar {
 */
 .urlbar-history-dropmarker {
 	list-style-image: url("dropmarker.svg") !important;
+	width: 12px !important;
+	height: 16px !important;
 	opacity: 1 !important;
 	-moz-box-ordinal-group: 4;
 }
@@ -2738,9 +2973,7 @@ toolbar #zoom-out-button {
 /* autohide forward button */
 #forward-button {
 	transform: scale(1, 1) !important;
-	transition: margin-left 250ms var(--animation-easing-function),
-		opacity 250ms var(--animation-easing-function),
-		transform 250ms var(--animation-easing-function) !important;
+	transition: margin-left 250ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 250ms var(--animation-easing-function) !important;
 }
 
 #forward-button[disabled="true"] {
@@ -2836,9 +3069,9 @@ findbar>.findbar-container::after {
 #PersonalToolbar {
 	min-height: unset !important;
 	max-height: unset !important;
-
 }
-
+*/
+/*
 #PersonalToolbar #PlacesToolbarItems {
 	overflow-x: visible !important;
 	overflow-y: visible !important;
@@ -2861,48 +3094,13 @@ findbar>.findbar-container::after {
 	list-style-image: url("folder4blue.svg") !important;
 }
 
-/*------------------------------------------------------------------------------*/
-/*#editBookmarkPanel button,*/
-#editBookmarkPanel textbox,
-#editBookmarkPanel menulist,
-#editBookmarkPanel richlistbox,
-#editBookmarkPanel tree {
-	-moz-appearance: none !important;
-	background-color: #1f1f1f !important;
-	color: #ffffff !important;
-}
-
-#editBookmarkPanel button:hover {
-	filter: brightness(150%) !important;
-}
-
-#editBookmarkPanel menulist {
-	padding: 4px !important;
-}
-
-#editBookmarkPanel button {
-	padding: 8px !important;
-}
-
-#editBMPanel_folderTree treechildren::-moz-tree-cell(selected) {
-	background-color: dodgerblue !important;
-}
-
-#editBMPanel_folderTree treechildren::-moz-tree-cell(hover) {
-	background-color: dodgerblue !important;
-}
-
-#PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
-	fill: slateblue !important;
-}
-
 /* Removes 1px border underneath the navbar */
 
 #navigator-toolbox::after {
 	border-bottom: 0px !important;
 }
 
-/* Removes 1px borders around the selected tab
+/* Removes 1px borders around the selected tab*/
 
 .tab-background {
 	margin-inline-start: -1px !important;
@@ -2910,7 +3108,7 @@ findbar>.findbar-container::after {
 	border: 0 !important;
 	border-image-width: 0 !important;
 }
-*/
+
 
 /* Hide "go" button in the address bar */
 
@@ -2918,13 +3116,13 @@ findbar>.findbar-container::after {
 	display: none !important;
 }
 
-/* Prevent window control buttons being stretch vertically when addionally drag space above the tab bar is enabled */
+/* Prevent window control buttons being stretch vertically when addionally drag space above the tab bar is enabled 
 
 .titlebar-buttonbox-container {
 	max-height: 30px !important;
 }
-
-/* Make backgrounds transparent */
+*/
+/* Make backgrounds transparent 
 .urlbar-icon,
 .urlbar-icon-wrapper,
 toolbar .toolbarbutton-1,
@@ -2940,8 +3138,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack,
 }
 
 */
-
-/*Glow effects on hover */
+/*Glow effects on hover 
 .close-icon:hover,
 .urlbar-history-dropmarker:hover,
 #page-action-buttons>.urlbar-icon:hover,
@@ -2951,7 +3148,7 @@ toolbar .toolbarbutton-1:not([disabled]):hover .toolbarbutton-icon,
 toolbar #downloads-button:hover #downloads-indicator-anchor {
 	filter: brightness(2) drop-shadow(0 0 2px cyan) drop-shadow(0 0 0 cyan);
 }
-
+*/
 /*Active states and close window button hover state
 .titlebar .titlebar-buttonbox>.titlebar-close:hover>.toolbarbutton-icon,
 .close-icon:active,
@@ -2999,17 +3196,17 @@ scrollbar {
 }
 
 .tabbrowser-tab[busy] .tab-loading-burst {
-	background-size: 20% 2px !important;
+	background-size: 20% 38px !important;
 	transition: background-size 0.3s ease-out !important;
 }
 
 .tabbrowser-tab[busy][progress] .tab-loading-burst {
-	background-size: 100% 2px !important;
+	background-size: 100% 38px !important;
 	transition-duration: 2s !important;
 }
 
 .tabbrowser-tab[bursting] .tab-loading-burst {
-	background-size: 100% 2px !important;
+	background-size: 100% 38px !important;
 	transition-duration: 0.5s !important;
 }
 
@@ -3070,9 +3267,826 @@ statuspanel[inactive] .statuspanel-inner::before {
 */
 
 
+/* Tweaks for Ctrl+Tab 
 
+#ctrlTab-previews {
+	border-radius: 0px !important;
+}
 
-/* Tab switch Ctrl+Tab Transparent */
 #ctrlTab-panel {
-  background: transparent !important;
+	-moz-appearance: none !important;
+	color: white !important;
+	border-style: none !important;
+	padding: 20px 10px 10px !important;
+	font-family: Fira Sans !important;
+	font-weight: bold !important;
+	text-shadow: 0 0 2px hsl(0, 0%, 8%), 0 0 2px hsl(0, 0%, 8%) !important;
+	background: transparent !important;
+}
+
+
+.ctrlTab-preview:not(#ctrlTab-showAll)>*>.ctrlTab-preview-inner {
+	margin: -10px -10px 0 !important;
+}
+
+.ctrlTab-preview-inner {
+	padding: 8px !important;
+	border: 2px solid transparent !important;
+	border-radius: 0px !important;
+}
+
+tabPreview-canvas element {
+	max-width: 272px !important;
+	min-width: 272px !important;
+	max-height: 153px !important;
+	min-height: 153px !important;
+}
+
+.ctrlTab-favicon-container {
+	-moz-box-align: start !important;
+	-moz-box-pack: start !important;
+}
+
+.ctrlTab-favicon[src] {
+	background-color: transparent !important;
+	width: 25px !important;
+	height: 25px !important;
+	padding: 2px !important;
+}
+*/
+
+
+/*avatar*/
+
+#fxa-avatar-image {
+	/* icon should be 20px, but we don't want to affect button size */
+	transform: scale(1.25) !important;
+}
+
+
+/* throbber 
+@keyframes rotate-360 {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.tab-throbber {
+	-moz-context-properties: fill !important;
+	fill: currentColor !important;
+	background-image: url("spinner-busy.svg") !important;
+	margin: 0 !important;
+	transform-origin: center !important;
+	animation: rotate-360 1.333s linear infinite reverse !important;
+	position: static !important;
+}
+
+.tab-throbber[progress] {
+	background-image: url("spinner-progress.svg") !important;
+	animation-direction: normal !important;
+}
+
+.tab-throbber::before {
+	display: none !important;
+}
+*/
+
+
+/*
+input,
+textarea,
+select {
+	color: #000000;
+	background: #ffffff;
+	-moz-appearance: none;
+}
+
+input[type=button],
+input[type=submit] {
+	-moz-appearance: button;
+}
+
+input[type=checkbox] {
+	-moz-appearance: checkbox;
+}
+
+input[type=radio] {
+	-moz-appearance: radio;
+}*/
+
+
+
+
+
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+findbar {
+	border-top: 1px solid ThreeDShadow;
+	min-width: 1px;
+	transition-property: margin-bottom, opacity, visibility;
+	transition-duration: 150ms, 150ms, 0s;
+	transition-timing-function: ease-in-out, ease-in-out, linear;
+}*/
+/* Override display:none to make the transition work. 
+findbar[hidden] {
+	
+	display: -moz-box;
+	visibility: collapse;
+	margin-bottom: -1em;
+	opacity: 0;
+	transition-delay: 0s, 0s, 150ms;
+}
+
+findbar[noanim] {
+	transition-duration: 0s !important;
+	transition-delay: 0s !important;
+}
+
+.findbar-container {
+	padding-inline-start: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.findbar-closebutton {
+	padding: 0 8px;
+}
+*/
+/* Search field */
+
+/* Don't apply theme colors on findbar when header image is applied to avoid
+contrast issues, see bug 1506913 
+:root[lwtheme-image] findbar {
+	--lwt-toolbar-field-background-color: initial;
+	--lwt-toolbar-field-color: initial;
+	--lwt-toolbar-field-border-color: initial;
+	--lwt-toolbar-field-focus: initial;
+	--lwt-toolbar-field-focus-color: initial;
+}
+
+.findbar-textbox {
+	-moz-appearance: none;
+	background-color: -moz-Field;
+	border: 1px solid var(--lwt-toolbar-field-border-color, ThreeDShadow);
+	border-start-start-radius: 2px;
+	border-end-start-radius: 2px;
+	margin: 0;
+	padding: 2px 5px;
+	width: 14em;
+}
+
+.findbar-textbox:-moz-lwtheme {
+	background-color: var(--lwt-toolbar-field-background-color, -moz-Field);
+	color: var(--lwt-toolbar-field-color, -moz-FieldText);
+}
+
+.findbar-textbox[focused="true"] {
+	background-color: var(--lwt-toolbar-field-focus, var(--lwt-toolbar-field-background-color, -moz-Field));
+	color: var(--lwt-toolbar-field-focus-color, var(--lwt-toolbar-field-color, -moz-FieldText));
+	border-color: var(--toolbar-field-focus-border-color, Highlight);
+}
+
+.findbar-textbox[status="notfound"] {
+	background-color: rgba(255, 0, 57, .3);
+	color: inherit;
+}
+
+.findbar-textbox[flash="true"] {
+	background-color: #117722;
+	color: inherit;
+}
+
+.findbar-textbox.minimal {
+	border-radius: 2px;
+}
+
+.findbar-find-previous,
+.findbar-find-next {
+	margin-inline-start: 0;
+	-moz-appearance: none;
+	background: rgba(255, 255, 255, .2);
+	border: 1px solid ThreeDShadow;
+	padding: 2px 5px;
+	line-height: 1em;
+	-moz-context-properties: fill;
+	fill: currentColor;
+	color: inherit;
+}
+
+.findbar-find-previous:not([disabled]):hover,
+.findbar-find-next:not([disabled]):hover {
+	background: rgba(190, 190, 190, .2);
+}
+
+.findbar-find-previous:not([disabled]):hover:active,
+.findbar-find-next:not([disabled]):hover:active {
+	background: rgba(23, 50, 76, .2);
+	box-shadow: 0 1px 2px rgba(10, 31, 51, .2) inset;
+}
+
+.findbar-find-previous {
+	list-style-image: url(chrome://global/skin/icons/find-previous-arrow.svg);
+	border-right-width: 0;
+	border-left-width: 0;
+	margin-inline-end: 0;
+}
+
+.findbar-find-next {
+	list-style-image: url(chrome://global/skin/icons/find-next-arrow.svg);
+	border-start-end-radius: 2px;
+	border-end-end-radius: 2px;
+}
+
+.findbar-find-next:-moz-lwtheme,
+.findbar-find-previous:-moz-lwtheme {
+	border-color: var(--lwt-toolbar-field-border-color, ThreeDShadow);
+}
+
+.findbar-find-previous>.toolbarbutton-icon,
+.findbar-find-next>.toolbarbutton-icon {
+	margin: 0;
+}
+
+.findbar-find-previous[disabled="true"]>.toolbarbutton-icon,
+.findbar-find-next[disabled="true"]>.toolbarbutton-icon {
+	opacity: .4;
+}
+
+.findbar-highlight,
+.findbar-case-sensitive,
+.findbar-entire-word {
+	margin-inline-start: 5px;
+}
+
+.findbar-highlight>.toolbarbutton-icon,
+.findbar-case-sensitive>.toolbarbutton-icon,
+.findbar-entire-word>.toolbarbutton-icon {
+	display: none;
+}
+
+.findbar-find-status,
+.found-matches {
+	color: GrayText;
+	margin: 0 !important;
+	margin-inline-start: 12px !important;
+}
+
+.findbar-find-status:-moz-lwtheme,
+.found-matches:-moz-lwtheme {
+	color: inherit;
+	opacity: .6;
+}
+
+.find-status-icon[status="pending"] {
+	list-style-image: url("chrome://global/skin/icons/loading.png");
+}
+
+@media (min-resolution: 1.1dppx) {
+	.find-status-icon[status="pending"] {
+		width: 16px;
+		list-style-image: url("chrome://global/skin/icons/loading@2x.png");
+	}
+}
+*/
+/*
+#urlbar:not([focused]) .urlbar-input {
+	text-align: center !important;
+}
+*/
+/*
+.tabbrowser-tab[fadein] {
+	max-width: 100vw !important
+}
+*/
+
+
+
+
+
+
+
+
+/* Dark library, page-info and bookmark-properties */
+/* Color scheme matches default dark theme */
+
+@-moz-document url(chrome://browser/content/places/places.xul),
+url(chrome://browser/content/pageinfo/pageInfo.xul),
+url(chrome://browser/content/places/bookmarkProperties.xul) {
+
+	#placesToolbox,
+	#placesView,
+	#placesToolbar,
+	#main-window,
+	#topBar,
+	dialog,
+	tree {
+		-moz-appearance: none !important;
+		background-color: #1f1f1f !important;
+		color: white !important;
+	}
+
+	#placesToolbar,
+	tree {
+		background: transparent !important;
+	}
+
+	textbox,
+	richlistbox,
+	treecol,
+	button,
+	menu,
+	#permList {
+		-moz-appearance: none !important;
+		color: inherit !important;
+	}
+
+	textbox,
+	richlistbox {
+		background-color: #1f1f1f !important;
+	}
+
+	treecol:not([hideheader]) {
+		height: 24px !important;
+	}
+
+	treecol:hover {
+		filter: brightness(160%) !important;
+	}
+
+	treechildren::-moz-tree-row(multicol, odd),
+	#permList {
+		background-color: #1f1f1f !important;
+	}
+
+	radiogroup>radio[selected],
+	radiogroup>radio:hover,
+	#permList>.permission:hover,
+	treechildren::-moz-tree-row(hover),
+	button:hover {
+		background-color: rgba(255, 255, 255, 0.1) !important;
+		color: inherit !important;
+	}
+
+	treechildren::-moz-tree-row(selected) {
+		background-color: Highlight !important;
+	}
+
+	button {
+		padding: 3px !important;
+	}
+
+	#placesMenu>menu {
+		border: none !important;
+	}
+
+	button {
+		border: 1px solid rgba(255, 255, 255, 0.1) !important;
+		border-radius: 0px !important;
+	}
+
+}
+
+
+
+
+/*
+.tabbrowser-tab:not([selected]):hover .tab-content {
+	background: linear-gradient(0deg, rgb(71, 88, 182), rgb(8, 11, 33)) !important;
+}
+
+.tabbrowser-tab[selected]:not([pinned]) {
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0) !important;
+}
+*/
+
+
+
+
+/* Wider tabs 
+.tabbrowser-tab:not([pinned]) {
+	min-width: 200px !important;
+}
+
+#navigator-toolbox[inFullscreen] #PersonalToolbar {
+	visibility: visible !important;
+}
+
+#navigator-toolbox {
+	box-shadow: 0 0px 6px 0 rgba(12, 12, 13, 0.6), 0 0px 15px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+#fullscr-toggler {
+	pointer-events: none;
+}
+
+
+:root:not([sizemode="normal"]) :-moz-any(#TabsToolbar, #nav-bar, #PersonalToolbar) {
+	-moz-window-dragging: no-drag !important;
+}
+
+
+:root[sizemode="fullscreen"] #navigator-toolbox {
+	background-color: var(--lwt-accent-color) !important;
+}
+
+:root #navigator-toolbox {
+	background-color: var(--lwt-accent-color) !important;
+}
+
+
+
+:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox {
+	margin-top: calc(-70px - var(--tab-min-height)) !important;
+	transition: all .2s ease .2s !important;
+	opacity: 0.01 !important;
+	z-index: 1;
+}
+
+:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox::after {
+	height: 2px !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+
+:root[customizing] #navigator-toolbox,
+:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:focus-within,
+:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:hover {
+	margin-top: 0 !important;
+	transition-delay: 0s !important;
+	opacity: 1 !important;
+}
+
+:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:focus-within::after,
+:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:hover::after {
+	height: 30px;
+	opacity: 1 !important;
+}
+
+:root:not([sizemode="normal"]):not([customizing]) #content-deck {
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+:root:not([inFullscreen]) #content-deck {
+	top: 4px !important;
+
+	height: calc(100% - 4px) !important;
+
+}
+
+:root:not([sizemode="normal"]):not([customizing]) #content-deck>#browser {
+	width: 100%;
+	height: 100%;
+}
+*/
+
+
+
+/* border around the tab 
+.tabbrowser-tab[selected] {
+	border-left: 2px solid dodgerblue !important;
+	border-right: 2px solid dodgerblue !important;
+}
+*/
+
+
+/* White GitHub favicon */
+.tabbrowser-tab[image^="data:image/x-icon;base64,AAABAAIAEBAAAAEAIAAoBQAAJgAAACAgAAABACAAKBQAAE4FAAAoAAAAEAAAACAAAAABACAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERE3YTExPFDg4OEgAAAAAAAAAADw8PERERFLETExNpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFJYTExT8ExMU7QAAABkAAAAAAAAAAAAAABgVFRf/FRUX/xERE4UAAAAAAAAAAAAAAAAAAAAAAAAAABEREsETExTuERERHhAQEBAAAAAAAAAAAAAAAAAAAAANExMU9RUVF/8VFRf/EREUrwAAAAAAAAAAAAAAABQUFJkVFRf/BgYRLA4ODlwPDw/BDw8PIgAAAAAAAAAADw8PNBAQEP8VFRf/FRUX/xUVF/8UFBSPAAAAABAQEDAPDQ//AAAA"] .tab-icon-image {
+	filter: invert(1.0) !important;
+
+}
+
+
+
+#editBMPanel_tagsSelector>richlistitem>image,
+radio>.radio-check,
+checkbox>.checkbox-check {
+	-moz-appearance: none !important;
+	border: 1px solid graytext !important;
+	border-radius: 0px !important;
+	height: 1.3em !important;
+	width: 1.3em !important;
+	padding: 1px !important;
+}
+
+#editBMPanel_tagsSelector>richlistitem>image {
+	background-color: var(--toolbar-bgcolor, #1f1f1f) !important;
+	margin: 1px !important;
+	border-color: graytext !important;
+	border-radius: 0px !important;
+}
+
+#editBMPanel_tagsSelector>richlistitem:not([disabled]):hover>image,
+radio:not([disabled]):hover>.radio-check,
+checkbox:not([disabled]):hover>.checkbox-check {
+	border-color: highlight !important;
+}
+
+radio>.radio-check {
+	padding: 0 !important;
+	border-radius: 20px !important;
+}
+
+#editBMPanel_tagsSelector>richlistitem[checked]>image,
+radio[selected]>.radio-check,
+checkbox[checked]>.checkbox-check {
+	list-style-image: url("chrome://global/skin/icons/check.svg") !important;
+	-moz-context-properties: fill !important;
+	fill: highlight !important;
+}
+
+radio[selected]>.radio-check {
+	list-style-image: url("chrome://global/skin/in-content/radio.svg") !important;
+}
+
+#editBMPanel_tagsSelector>richlistitem[disabled]>image,
+radio[disabled]>.radio-check,
+checkbox[disabled]>.checkbox-check {
+	fill: graytext !important;
+}
+
+/*------------------------------------
+#urlbarView-row {
+	padding-left: 0px !important;
+}
+*/
+.tabbrowser-tab {
+	opacity: 0.50 !important;
+}
+
+.tabbrowser-tab:hover {
+	opacity: 0.70 !important;
+}
+
+.tabbrowser-tab[selected] {
+	opacity: 1 !important;
+}
+
+
+
+
+/*************************/
+
+/*
+  Firefox 57-68 users: https://www.jeffersonscher.com/gm/url-bar-tweaks.html
+  You can copy/paste into a userChrome.css file, see https://www.userchrome.org/
+*/
+/* Remove " - Visit" or " - Search with" bar in the drop-down */
+#PopupAutoCompleteRichResult richlistitem:first-of-type[type*="heuristic"],
+#PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="searchengine"],
+#PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"],
+#PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="keyword"],
+panel#urlbar-results #urlbarView-row-0 {
+	display: none !important;
+}
+
+/* Hide line for searching sld.tld below "Visit" Line */
+#PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"]+richlistitem[actiontype="searchengine"] {
+	display: none !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistbox,
+#urlbarView-results {
+	padding-top: 3px !important;
+	padding-bottom: 0 !important;
+}
+
+/* Restore persistent display of drop-marker */
+#urlbar:not(:hover)>.urlbar-textbox-container>.urlbar-history-dropmarker,
+.urlbar-history-dropmarker {
+	opacity: 1 !important;
+}
+
+/* Set max-height for items visible without scrolling */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox,
+#urlbarView-results {
+	height: unset !important;
+	max-height: calc(45.5px * 10) !important;
+	/*9.76) !important;*/
+}
+
+/* Set drop-down width 
+#PopupAutoCompleteRichResult,
+panel#urlbar-results {
+	width: 800px !important;
+	max-width: 800px !important;
+	margin-left: 0 !important;
+}*/
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title-text,
+#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-url-text,
+.urlbarView-row:not([type="search"]) .urlbarView-title,
+.urlbarView-row:not([type="search"]) .urlbarView-action,
+.urlbarView-row .urlbarView-url {
+	min-width: 710px !important;
+	max-width: 710px !important;
+}
+
+.urlbarView-row-inner {
+	max-width: 785px !important;
+}
+
+/* Remove excess width of one-off search engine buttons */
+panel#urlbar-results .searchbar-engine-one-off-item.dummy:not(.last-of-row) {
+	display: none !important;
+}
+
+/* Create sufficient height for two lines */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) {
+	position: relative !important;
+	height: 45.5px !important;
+}
+
+.urlbarView-row:not([type="search"]) {
+	position: relative !important;
+	height: 32px !important;
+}
+
+/* Subtle border between results */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem,
+.urlbarView-row {
+	border-bottom: 1px solid #1f1f1f !important;
+	/* light theme */
+}
+
+/* Position page title, set font-size */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title,
+.urlbarView-row:not([type="search"]) .urlbarView-title {
+	position: absolute !important;
+	color: white !important;
+	font-family: 'Fira Sans' !important;
+	left: 54px !important;
+	top: 5px !important;
+	font-size: 14px !important;
+}
+
+/* Position page url / action, set font-size */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-url,
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action,
+.urlbarView-row:not([type="search"]) .urlbarView-secondary {
+	position: absolute !important;
+	color: dodgerblue !important;
+	font-family: 'Fira Sans' !important;
+	left: 54px !important;
+	top: 26px !important;
+	font-size: 12px !important;
+}
+
+/* Position bookmark tags */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-tags,
+.urlbarView-row .urlbarView-tags {
+	position: absolute !important;
+	right: 0px !important;
+	top: 3px !important;
+}
+
+/* Hide separator between title and URL */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-separator,
+.urlbarView-row:not([type="search"]) .urlbarView-title-separator {
+	display: none !important;
+}
+
+/* Position special icon (bookmark, switch-to-tab) */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-type-icon,
+.urlbarView-row .urlbarView-type-icon {
+	margin-left: 4px !important;
+}
+
+/* Prevent excess indenting of icons in Photon */
+#PopupAutoCompleteRichResult .autocomplete-richlistitem [anonid="type-icon-spacer"],
+panel#urlbar-results .autocomplete-richlistitem [anonid="type-icon-spacer"] {
+	display: none !important;
+}
+
+#PopupAutoCompleteRichResult,
+panel#urlbar-results {
+	--item-padding-start: 0 !important;
+	--item-padding-end: 0 !important;
+}
+
+/* Dark Themed Drop-down */
+/* Dark Theme - Firefox 48+ */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox,
+#urlbarView-results {
+	background-color: #1f1f1f !important;
+}
+
+/*
+#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+	border-bottom-color: #333 !important;
+}*/
+
+/*
+.autocomplete-richlistitem .ac-title,
+.autocomplete-richlistitem .ac-action,
+.autocomplete-richlistitem .ac-separator,
+.urlbarView-row .urlbarView-title,
+.urlbarView-row .urlbarView-secondary,
+.urlbarView-row .urlbarView-title-separator {
+	color: #777 !important;
+}
+*/
+.autocomplete-richlistitem[selected=true],
+.urlbarView-row[selected] {
+	background-color: #1e90ff !important;
+}
+
+.autocomplete-richlistitem[selected=true] .ac-title,
+.ac-title[selected],
+.autocomplete-richlistitem[selected=true] .ac-action,
+.ac-action[selected],
+.autocomplete-richlistitem[selected=true] .ac-separator,
+.ac-separator[selected],
+.urlbarView-row[selected] .urlbarView-title,
+.urlbarView-row[selected] .urlbarView-secondary,
+.urlbarView-row[selected] .urlbarView-title-separator {
+	color: #eee !important;
+}
+
+.autocomplete-richlistitem[selected=true] .ac-url,
+.ac-url[selected],
+.urlbarView-row[selected] .urlbarView-url {
+	color: #1e90ff !important;
+}
+
+/* Subtle bottom border 
+#PopupAutoCompleteRichResult .autocomplete-richlistitem,
+.urlbarView-row {
+	border-bottom: 0px solid rgba(255, 255, 255, 0.1) !important;
+
+}*/
+
+/* Use default text matching style */
+/* Ability to scroll in Fx57 */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox,
+#urlbarView-results {
+	overflow-y: auto !important;
+	padding-right: 3px !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+	padding-right: 0 !important;
+}
+
+
+panel#urlbar-results {
+	width: 1248px !important;
+	max-width: 1248px !important;
+	margin-left: 0 !important;
+	--item-padding-start: 0 !important;
+	--item-padding-end: 0 !important;
+}
+
+.urlbarView-row:hover {
+	background-color: #1e8fff80 !important;
+}
+
+.tabbrowser-tab {
+	text-shadow: none !important;
+}
+
+.toolbarbutton-text {
+	text-shadow: none !important;
+}
+
+.toolbarbutton-text {
+	color: #fffff !important;
+}
+
+#navigator-toolbox {
+	border-bottom: 0px !important;
+}
+
+/* Change visuals of unloaded/hibernated tabs */
+
+.tab.discarded {
+	color: orange !important;
+}
+
+.tab.discarded:hover {
+	color: red !important;
+}
+
+/*---------------------------------------------*/
+
+#urlbarView-results {
+	overflow-y: auto;
+	/*max-height: <whatever_max-height> !important;*/
 }
