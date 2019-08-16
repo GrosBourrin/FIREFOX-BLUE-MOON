@@ -277,8 +277,8 @@ toolbarbutton#alltabs-button {
 
 #pagetitle-bar::before {
 	content: attr(titlepage);
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
 }
 
 /*----------------------------------------------*/
@@ -505,7 +505,7 @@ tooltip {
 /*----------------*/
 
 #TabsToolbar {
-	background-color: #000000 !important;
+	background-color: black !important;
 	font-family: Fira Sans !important;
 	color: #ffffff !important;
 	--toolbarbutton-inner-padding: 0px !important;
@@ -523,7 +523,7 @@ tooltip {
 }
 
 #urlbar:hover {
-	background-color: #1e8fff4d !important;
+	background-color: #1e8fff80 !important;
 	opacity: 1 !important;
 	color: #ffffff !important;
 	border: 0px !important;
@@ -532,7 +532,7 @@ tooltip {
 /*--------- ombre onglets / tab shadow ------------*/
 
 .tabbrowser-tab[visuallyselected="true"] {
-	box-shadow: 0px 0px 28px white !important;
+	box-shadow: 0px 0px 26px white !important;
 	/*width: 140px !important;*/
 }
 
@@ -997,8 +997,8 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	display: -moz-box !important;
 }
 
-.urlbar-zoom-button {
-	color: white !important;
+#urlbar-zoom-reset-button {
+	fill: dodgerblue !important;
 	display: -moz-box !important;
 }
 
@@ -1127,7 +1127,7 @@ treechildren::-moz-tree-image(query) {
 #BMB_bookmarksPopup menu[container="true"] .menu-iconic-icon,
 #bookmarksMenu menu[container="true"] .menu-iconic-icon,
 .bookmark-item[container] {
-	list-style-image: url("folder4.svg") !important;
+	list-style-image: url("foldervert.png") !important;
 }
 
 /* Avoid overriding classic Bookmarks Toolbar and Other Bookmarks icons in menus
@@ -1214,13 +1214,15 @@ transform:scale(.9,.9)!important;
 	border-color: #ffffff !important;
 }
 
+/*
 #appMenu-zoomReset-button {
 	color: dodgerblue !important;
+	fill: dodgerblue !important;
 	border-color: dodgerblue !important;
 	border-radius: 0px !important;
 	background-color: #1f1f1f !important;
 }
-
+*/
 .subviewbutton.panel-subview-footer {
 	background-color: #1f1f1f !important;
 	border-top: 0px solid !important;
@@ -1713,7 +1715,7 @@ hbox#sidebar-search-container textbox#search-box {
 	}*/
 
 	#placesView treechildren::-moz-tree-image {
-		list-style-image: url("folder4.svg") !important;
+		list-style-image: url("foldervert.png") !important;
 	}
 
 	tree {
@@ -1838,11 +1840,12 @@ kinda jumpy and annoying after a while so let's just comment it for now
 	box-shadow: none !important;
 }
 
+/*
 #urlbar,
 nav-bar {
 	fill-opacity: 1 !important;
 }
-
+*/
 #urlbar .urlbar-input-box {
 	opacity: 1 !important;
 }
@@ -1982,7 +1985,7 @@ toolbarspring {
 */
 
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"]) {
-	background-color: #1e8fff56 !important;
+	background-color: #1e8fff50 !important;
 }
 
 /*
@@ -2198,11 +2201,11 @@ caption {
 }*/
 
 /* all icons get full brightness */
-.toolbarbutton-animatable-box,
+/*.toolbarbutton-animatable-box,
 .toolbarbutton-1 {
 	fill-opacity: 1 !important;
 }
-
+*/
 /*-------------------------------*/
 
 /*---------download button coloring ------
@@ -2684,7 +2687,7 @@ toolbar .toolbarbutton-1:not([disabled]):hover>.toolbarbutton-icon {
 /* Github: https://github.com/aris-t2/customcssforfx ************************************/
 /****************************************************************************************/
 
-/******* button icon colors ******/
+/******* button icon colors *******/
 #containers-panelmenu,
 #web-apps-button,
 #e10s-button,
@@ -2739,7 +2742,7 @@ toolbar .toolbarbutton-1:not([disabled]):hover>.toolbarbutton-icon {
 #developer-button,
 #preferences-button,
 #characterencoding-button {
-	fill: #ffffff !important;
+	fill: white !important;
 	fill-opacity: 1 !important;
 	opacity: 1 !important;
 }
@@ -2864,8 +2867,9 @@ findbar {
 */
 .urlbar-history-dropmarker {
 	list-style-image: url("dropmarker.svg") !important;
-	width: 12px !important;
-	height: 16px !important;
+	/*width: 12px !important;
+	height: 16px !important;*/
+
 	opacity: 1 !important;
 	-moz-box-ordinal-group: 4;
 }
@@ -2952,28 +2956,10 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 /* Github: https://github.com/aris-t2/customcssforfx ************************************/
 /****************************************************************************************/
 
-toolbar #zoom-controls>separator {
-	color: transparent !important;
-}
-
-toolbar #zoom-controls>#zoom-reset-button {
-	color: dodgerblue !important;
-}
-
-toolbar #zoom-in-button {
-	-moz-padding-start: 0px !important;
-	fill: dodgerblue !important;
-}
-
-toolbar #zoom-out-button {
-	-moz-padding-end: 0px !important;
-	fill: dodgerblue !important;
-}
-
 /* autohide forward button */
 #forward-button {
 	transform: scale(1, 1) !important;
-	transition: margin-left 250ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 250ms var(--animation-easing-function) !important;
+	transition: margin-left 250ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
 }
 
 #forward-button[disabled="true"] {
@@ -3079,19 +3065,19 @@ findbar>.findbar-container::after {
 }
 */
 .bookmark-item[container="true"] [label="Divers"] {
-	list-style-image: url("folder4blue.svg") !important;
+	list-style-image: url("folderblue1.png") !important;
 }
 
 .bookmark-item[container="true"] [label="BD"] {
-	list-style-image: url("folder4blue.svg") !important;
+	list-style-image: url("folderblue1.png") !important;
 }
 
 .bookmark-item[container="true"] [label="Perso"] {
-	list-style-image: url("folder4blue.svg") !important;
+	list-style-image: url("folderblue1.png") !important;
 }
 
 .bookmark-item[container="true"] [label="Code"] {
-	list-style-image: url("folder4blue.svg") !important;
+	list-style-image: url("folderblue1.png") !important;
 }
 
 /* Removes 1px border underneath the navbar */
@@ -3882,6 +3868,11 @@ panel#urlbar-results #urlbarView-row-0 {
 	/*9.76) !important;*/
 }
 
+#urlbar-results {
+	background-color: #1f1f1f !important;
+	border-color: #1f1f1f !important;
+}
+
 /* Set drop-down width 
 #PopupAutoCompleteRichResult,
 panel#urlbar-results {
@@ -4058,6 +4049,8 @@ panel#urlbar-results {
 	background-color: #1e8fff80 !important;
 }
 
+
+
 .tabbrowser-tab {
 	text-shadow: none !important;
 }
@@ -4067,12 +4060,14 @@ panel#urlbar-results {
 }
 
 .toolbarbutton-text {
-	color: #fffff !important;
+	color: white !important;
 }
 
 #navigator-toolbox {
 	border-bottom: 0px !important;
 }
+
+
 
 /* Change visuals of unloaded/hibernated tabs */
 
@@ -4089,4 +4084,246 @@ panel#urlbar-results {
 #urlbarView-results {
 	overflow-y: auto;
 	/*max-height: <whatever_max-height> !important;*/
+}
+
+/*
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]) .tab-close-button {
+	-moz-box-ordinal-group: 0 !important;
+	-moz-margin-start: -4px !important;
+	-moz-margin-end: 4px !important;
+}
+*/
+
+/* Specify column layout - menu has 3 columns 
+
+#bookmarksMenu menupopup .arrowscrollbox-scrollbox,
+#BMB_bookmarksPopup .arrowscrollbox-scrollbox,
+#PlacesToolbarItems .bookmark-item>menupopup[placespopup="true"] .arrowscrollbox-scrollbox {
+
+	/* Main menu and Bookmark folders 
+
+	display: block !important;
+
+	-moz-column-count: 3;
+
+	column-count: 3;
+
+	-moz-column-width: 325px !important;
+
+	column-width: 325px !important;
+
+	-moz-column-rule: 1px solid #5f5f5f;
+
+	column-rule: 1px solid #5f5f5f;
+
+	padding-top: 4px !important;
+
+	padding-bottom: 4px !important;
+
+}
+
+/* Specify column layout - folders have 2 columns 
+
+#bookmarksMenuPopup .bookmark-item[container="true"] menupopup .arrowscrollbox-scrollbox,
+
+#BMB_bookmarksPopup menupopup[placespopup="true"] .arrowscrollbox-scrollbox,
+
+#PlacesToolbarItems .bookmark-item>menupopup[placespopup="true"] .arrowscrollbox-scrollbox {
+
+	-moz-column-count: 2;
+
+	column-count: 2;
+
+}
+
+/* Force overall widths as needed 
+
+#bookmarksMenu menupopup,
+#BMB_bookmarksPopup {
+
+	max-width: 1020px !important;
+
+}
+
+
+#BMB_bookmarksPopup {
+
+	min-width: 1020px !important;
+
+	width: 1020px !important;
+
+}
+
+/* Force item widths so each has its own line 
+
+#bookmarksMenuPopup menu,
+#bookmarksMenuPopup menuitem,
+#bookmarksMenuPopup menuseparator,
+
+#PlacesToolbarItems .bookmark-item>menupopup[placespopup="true"] menu,
+
+#PlacesToolbarItems .bookmark-item>menupopup[placespopup="true"] menuitem,
+
+#PlacesToolbarItems .bookmark-item>menupopup[placespopup="true"] menuseparator,
+
+#BMB_bookmarksPopup menu,
+#BMB_bookmarksPopup menuitem,
+#BMB_bookmarksPopup menuseparator {
+
+	width: 325px !important;
+
+}
+
+/* Clean up item and separator spacing 
+
+#BMB_bookmarksPopup menu,
+#BMB_bookmarksPopup menuitem,
+#BMB_bookmarksPopup menuseparator {
+
+	padding: 0 4px 0 12px !important;
+
+	margin: 0 !important;
+
+}
+
+
+#PlacesToolbarItems .bookmark-item>menupopup[placespopup="true"] menuseparator {
+
+	margin: 0 !important;
+
+	padding: 0 !important;
+
+}
+
+
+#BMB_bookmarksPopup .subviewbutton.panel-subview-footer {
+
+	min-height: 22px !important;
+
+	border-top: none !important;
+
+}
+
+/* Remove scrolling triangles from classic menu 
+
+#bookmarksMenuPopup .autorepeatbutton-up,
+#bookmarksMenuPopup .arrowscrollbox-overflow-start-indicator,
+
+#bookmarksMenuPopup .arrowscrollbox-overflow-end-indicator,
+#bookmarksMenuPopup .autorepeatbutton-down {
+
+	display: none !important;
+
+}
+*/
+/*
+#editBookmarkPanelInfoArea {
+
+display: none !important;
+
+}
+*/
+
+/*
+toolbar #zoom-controls>separator {
+	color: transparent !important;
+}
+
+toolbar #zoom-control>#zoom-reset-button {
+	color: dodgerblue !important;
+}
+
+toolbar #zoom-in-button {
+	-moz-padding-start: 0px !important;
+	fill: dodgerblue !important;
+}
+
+toolbar #zoom-out-button {
+	-moz-padding-end: 0px !important;
+	fill: dodgerblue !important;
+}
+*
+
+/* Toolbar Buttons Zoom Control */
+#zoom-out-button {
+	background: transparent !important;
+	fill: dodgerblue !important;
+	/* BG color */
+	border: 0px solid #ffffff !important;
+	/* Adding border */
+	border-radius: 0px !important;
+	/* Adding Border Radius */
+}
+
+toolbar #zoom-controls>separator {
+	color: transparent !important;
+}
+
+#zoom-in-button {
+	background: transparent !important;
+	fill: dodgerblue !important;
+	/* BG color */
+	border: 0px solid #ffffff !important;
+	/* Adding border */
+	border-radius: 0px !important;
+	/* Adding Border Radius */
+}
+
+#zoom-reset-button {
+	background: transparent !important;
+	color: dodgerblue !important;
+	/* BG color */
+	border: 0px solid #ffffff !important;
+	/* Adding border */
+	border-radius: 0px !important;
+	/* Adding Border Radius */
+	font-family: "Fira Sans" !important;
+}
+
+/* Hamburger Menu Zoom Control */
+#appMenu-zoomReduce-button {
+	background: transparent !important;
+	color: dodgerblue !important;
+	/* BG color */
+	border: 0px solid dodgerblue !important;
+	/* Adding border */
+	border-radius: 0px !important;
+	/* Adding Border Radius */
+}
+
+#appMenu-zoomReset-button {
+	background: transparent !important;
+	color: dodgerblue !important;
+	/* BG color */
+	border: 1px solid dodgerblue !important;
+	/* Adding border */
+	border-radius: 0px !important;
+	/* Adding Border Radius */
+	font-family: "Fira Sans" !important;
+}
+
+#appMenu-zoomEnlarge-button {
+	background: transparent !important;
+	color: dodgerblue !important;
+	/* BG color */
+	border: 0px solid #ffffff !important;
+	/* Adding border */
+	border-radius: 0px !important;
+	/* Adding Border Radius */
+}
+
+/*
+#zoom-out-button,
+#zoom-in-button {
+	background: #4a4a4f !important;
+	/* BG color 
+border: 0px solid #ffffff !important;
+/* Adding border 
+border-radius: 0px !important;*/
+/* Adding Border Radius 
+}*/
+
+
+#tracking-protection-icon-container::after {
+	border-right: 0px !important;
 }
