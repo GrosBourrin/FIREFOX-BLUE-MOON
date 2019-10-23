@@ -23,7 +23,6 @@
 	background: transparent !important;
 }
 
-
 .ctrlTab-preview:not(#ctrlTab-showAll)>*>.ctrlTab-preview-inner {
 	margin: -10px -10px 0 !important;
 }
@@ -53,7 +52,8 @@ tabPreview-canvas element {
 	padding: 2px !important;
 }
 
-/* padlock--------------------------- */
+/* -------------------identity tweaks -------------------------------*/
+/* --------------------------padlock-colors--------------------------*/
 
 #urlbar>#identity-box.notSecureText>#identity-icon-labels>#identity-icon-label {
 	color: rgba(255, 0, 0, 0.867) !important;
@@ -61,11 +61,8 @@ tabPreview-canvas element {
 
 #urlbar[pageproxystate="valid"]>#identity-box.notSecure>#connection-icon {
 	fill: darkgreen !important;
-	/*whatever color*/
+
 }
-
-
-/*-------------------------------------------*/
 
 #identity-box.verifiedIdentity {
 	--urlbar-separator-color: dodgerblue !important;
@@ -73,13 +70,95 @@ tabPreview-canvas element {
 
 #identity-box.verifiedIdentity #identity-icon-labels,
 .identity-popup-connection-secure {
-	color: blue !important;
+	color: dodgerblue !important;
 }
 
 #connection-icon,
 #identity-popup[connection^=secure] #identity-popup-security-content,
 #identity-popup[connection^=secure] #identity-popup-securityView {
 	fill: rgb(255, 100, 190) !important;
+}
+
+/*== Identity Box ==*/
+
+#identity-box:hover:not(.no-hover):not([open="true"]) {
+	background-color: #1e8fff80 !important;
+}
+
+#identity-box:hover:active:not(.no-hover),
+#identity-box[open="true"] {
+	background-color: #1e8eff80 !important;
+}
+
+/*== Identity Popup ==*/
+
+#identity-popup-securityView,
+identity-popup-security-content,
+.identity-popup-section,
+#identity-popup-securityView-footer {
+	background-color: #1f1f1f !important;
+	color: #ffffff !important;
+}
+
+#urlbar[pageproxystate="valid"]>#identity-box.verifiedIdentity {
+	border-image-slice: 0 !important;
+}
+
+#urlbar[pageproxystate="valid"]>#identity-box.chromeUI {
+	border-image-slice: 0 !important;
+}
+
+#identity-box.verifiedIdentity {
+	--urlbar-separator-color: transparent !important;
+}
+
+#urlbar[pageproxystate="valid"]>#identity-box.extensionPage {
+	border-image-slice: 0 !important;
+}
+
+#urlbar>#identity-box.verifiedIdentity>#identity-icon-labels>#identity-icon-label,
+#urlbar>#identity-box.verifiedIdentity>#identity-icon-labels>#identity-icon-country-label {
+	color: dodgerblue !important;
+}
+
+#urlbar>#identity-box.notSecureText>#identity-icon-labels>#identity-icon-label {
+	color: rgba(255, 0, 0, 0.867) !important;
+}
+
+/*#extension-icon[tooltiptext$="Tabliss"], #extension-icon[tooltiptext$="Tabliss"] ~ #identity-icon-labels{ display: none }*/
+#identity-box {
+	border-image-slice: 0 !important;
+}
+
+#extension-icon,
+#identity-icon-label {
+	display: none !important;
+}
+
+/* identity button color */
+#identity-popup-clear-sitedata-footer {
+	padding-bottom: 10px !important;
+	background-color: dodgerblue !important;
+}
+
+#identity-box {
+	border-inline-end: 0px !important;
+}
+
+/*-------------------
+#identity-box:after {
+	content: '|';
+	color: transparent !important;
+	display: inline-block;
+	margin-left: 5px !important;
+}*/
+
+.identity-popup-section {
+	border-top: 1px solid #404040 !important;
+}
+
+#identity-popup-mainView-panel-header {
+	background-color: dodgerblue !important;
 }
 
 /*--------------------About firefox ---------------------------------*/
@@ -108,8 +187,13 @@ tabPreview-canvas element {
 	}
 }
 
+#update-available-whats-new,
+.text-link {
+	color: white !important;
+	font-style: normal !important;
+}
 
-
+/*---------------------------------------------------------------------*/
 #nav-bar {
 	box-shadow: none !important;
 }
@@ -128,7 +212,6 @@ tabPreview-canvas element {
 	opacity: 0 !important;
 }
 
-
 /*-------------------------nav button----------------------------*/
 
 #back-button {
@@ -138,7 +221,6 @@ tabPreview-canvas element {
 #forward-button {
 	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSOA3k2CXQAAAAbklEQVQoz5WRMQqDABAEF4UgKEIIPkKJii+3s7NLpY1N3qBR84axsPYOt1sYuNtdSZLEi5FG1yKk5U9tIQ86dioLiejZKC0k5sPK20JSBn4UFvJkYiG3kIwvM8npAt2Vc8J50onpFOVU7Y51PfcBtUFUSir+geUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDMtMTlUMTg6NTY6MTMrMDE6MDDECqmDAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAzLTE5VDE4OjU2OjEzKzAxOjAwtVcRPwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=") !important;
 }
-
 
 #back-button:not(:hover),
 #back-button:not(:hover)>.toolbarbutton-icon {
@@ -189,12 +271,12 @@ tabPreview-canvas element {
 
 #statuspanel #statuspanel-label {
 	-moz-appearance: none !important;
-	background-color: #1f1f1f !important;
+	background-color: dodgerblue !important;
 	font-family: "Fira Sans" !important;
 	font-size-adjust: inherit !important;
-	font-weight: thin !important;
-	color: dodgerblue !important;
-	border: 0px solid #1f1f1f !important;
+	font-weight: bold !important;
+	color: white !important;
+	border: 0px solid dodgerblue !important;
 }
 
 #statuspanel {
@@ -209,7 +291,7 @@ tabPreview-canvas element {
 /* If you're not on the latest Nightly, change the #statuspanel-inner to .statuspanel-inner */
 
 statuspanel #statuspanel-inner {
-	background: transparent !important;
+	background: dodgerblue !important;
 	border: none !important;
 	height: 20px !important;
 }
@@ -218,7 +300,7 @@ statuspanel #statuspanel-inner {
 to .statuspanel-label */
 
 statuspanel #statuspanel-label {
-	background-color: transparent !important;
+	background-color: dodgerblue !important;
 	border: none !important;
 }
 
@@ -269,6 +351,7 @@ toolbarbutton#alltabs-button {
 /*Page title*/
 #pagetitle-bar {
 	/* Change this value if you want shorter/longer bar */
+
 	width: 850px;
 	overflow: hidden;
 	text-overflow: "..";
@@ -289,7 +372,9 @@ toolbarbutton#alltabs-button {
 }
 
 /*------------#tabs-newtab-button----------------------------------*/
-.tabs-newtab-button.toolbarbutton-1 .toolbarbutton-icon {
+/* #tabs-newtab-button for v70                                     */
+
+#tabs-newtab-button.toolbarbutton-1 .toolbarbutton-icon {
 	background-color: unset !important;
 	list-style-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAxNSAxNCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF9LTUVkenVLWUlnYVpuTnhJS0Z4eklvQjdMcmhpTVFmZiI+PHJlY3Qgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF9LTUVkenVLWUlnYVpuTnhJS0Z4eklvQjdMcmhpTVFmZikiPjxjbGlwUGF0aCBpZD0iX2NsaXBQYXRoX3RXWmJjbmxRdlRrdVo5Z241dTFuN3RTNWtPMnlKZEw2Ij48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTQiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMCwwKSIgZmlsbD0icmdiKDI1NSwyNTUsMjU1KSIvPjwvY2xpcFBhdGg+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF90V1piY25sUXZUa3VaOWduNXUxbjd0UzVrTzJ5SmRMNikiPjxnPjxsaW5lYXJHcmFkaWVudCBpZD0iX2xncmFkaWVudF8xIiB4MT0iLTAuMDAxNTU3OTcxMDE0NDkyNzQ5IiB5MT0iMC40OTk5NjMxNjQ4NzQwMjM4NyIgeDI9IjEuMDg4MDI1MzYyMzE4ODQwNSIgeTI9IjAuNDk5OTYzMTY0ODc0MDIzODciIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMTUsMCwwLDE0LDAsMCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjEuNzM5MTMwNDM0NzgyNjA4NiUiIHN0b3Atb3BhY2l0eT0iMSIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDAsMCwwKSIvPjxzdG9wIG9mZnNldD0iMjMuOTEzMDQzNDc4MjYwODclIiBzdG9wLW9wYWNpdHk9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYigzMCwxNDQsMjU1KSIvPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZD0iIE0gMCAwIEwgOC43MiAwIEwgMTUgNy4wMDkgTCA4LjcyIDE0IEwgMCAxNCBMIDAgMCBaICBNIDYuOTc1IDMuNzUxIEwgNi45NzUgNi41NjEgTCA0LjE2NSA2LjU2MSBMIDQuMTY1IDcuNDk4IEwgNi45NzUgNy40OTggTCA2Ljk3NSAxMC4zMDggTCA3LjkxMSAxMC4zMDggTCA3LjkxMSA3LjQ5OCBMIDEwLjcyMSA3LjQ5OCBMIDEwLjcyMSA2LjU2MSBMIDcuOTExIDYuNTYxIEwgNy45MTEgMy43NTEgTCA2Ljk3NSAzLjc1MSBaICIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSJ1cmwoI19sZ3JhZGllbnRfMSkiLz48L2c+PC9nPjwvZz48L3N2Zz4=') !important;
 	opacity: 1 !important;
@@ -325,11 +410,11 @@ toolbarbutton#alltabs-button {
 /* tabs --- rotate close button */
 
 .tab-close-button {
-	list-style-image: url("closespin.svg") !important;
+	list-style-image: url("closespin.png") !important;
 }
 
 #tab-close-button:hover {
-	list-style-image: url("closespin.svg") !important;
+	list-style-image: url("closespin.png") !important;
 }
 
 #tabbrowser-tabs .tabbrowser-tab:hover .tab-close-button {
@@ -341,7 +426,7 @@ toolbarbutton#alltabs-button {
 /*-----------------------------------*/
 
 /* url bar text decoration */
-* #urlbar input.textbox-input::-moz-selection {
+.urlbar-input-box:-moz-selection {
 	font-family: 'Fira Sans' !important;
 	font-size: 14px !important;
 	background-color: dodgerblue !important;
@@ -350,13 +435,12 @@ toolbarbutton#alltabs-button {
 	color: #ffffff !important;
 }
 
-#urlbar .urlbar-input-box {
-	/* align bar text */
+#urlbar-input {
 	text-align: left !important;
 	margin-top: 1px !important;
 }
 
-/*-----------------*/
+/*--------------------------------------------------------------*/
 
 menupopup {
 	-moz-appearance: none !important;
@@ -375,7 +459,7 @@ menuseparator {
 	border: none !important;
 	padding: 0.5px 0px 0.5px 0px !important;
 	margin: 4px 8px 4px 8px !important;
-	background-color: #80808080 !important;
+	background-color: #303030 !important;
 }
 
 menuitem,
@@ -785,27 +869,6 @@ menuitem .menu-accel {
 	border-radius: 0px !important;
 }
 
-/*== Identity Box ==*/
-
-#identity-box:hover:not(.no-hover):not([open="true"]) {
-	background-color: #1e8fff80 !important;
-}
-
-#identity-box:hover:active:not(.no-hover),
-#identity-box[open="true"] {
-	background-color: #1e8eff80 !important;
-}
-
-/*== Identity Popup ==*/
-
-#identity-popup-securityView,
-identity-popup-security-content,
-.identity-popup-section,
-#identity-popup-securityView-footer {
-	background-color: #1f1f1f !important;
-	color: #ffffff !important;
-}
-
 /*------------------------*/
 
 /* Border color Drop Down */
@@ -928,7 +991,6 @@ identity-popup-security-content,
 		padding-right: 3px !important;
 	}
 
-
 	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
 		padding-right: 0px !important;
 	}
@@ -1001,12 +1063,6 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 }
 
 .toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
-	display: -moz-box !important;
-}
-
-#urlbar-zoomRreset-button {
-	fill: dodgerblue !important;
-	color: dodgerblue !important;
 	display: -moz-box !important;
 }
 
@@ -1138,7 +1194,6 @@ treechildren::-moz-tree-image(query) {
 	list-style-image: url("foldervert.png") !important;
 }
 
-
 /*-min max close */
 .titlebar-button>.toolbarbutton-icon {
 	height: 17px !important;
@@ -1206,6 +1261,7 @@ transform:scale(.9,.9)!important;
 
 .panel-arrow {
 	fill: #1f1f1f !important;
+	background: transparent !important;
 }
 
 .panel-subview-body {
@@ -1214,15 +1270,14 @@ transform:scale(.9,.9)!important;
 	border-color: #ffffff !important;
 }
 
-/*
-#appMenu-zoomReset-button {
+.appMenu-zoomReset-button {
 	color: dodgerblue !important;
 	fill: dodgerblue !important;
 	border-color: dodgerblue !important;
 	border-radius: 0px !important;
 	background-color: #1f1f1f !important;
 }
-*/
+
 .subviewbutton.panel-subview-footer {
 	background-color: #1f1f1f !important;
 	border-top: 0px solid !important;
@@ -1244,8 +1299,20 @@ transform:scale(.9,.9)!important;
 	border-top: 1px solid #1f1f1f !important;
 }
 
+/*
 :root {
-	--panel-separator-color: #323232 !important;
+	--panel-separator-color: yellow !important;
+}
+
+.toolbar-separator {
+	color: #212121 !important;
+	border-color: #212121 !important;
+}
+*/
+.appMenu-tp-separator,
+toolbarseparator {
+	display: visible !important;
+	border-color: #404040 !important;
 }
 
 .subviewbutton[shortcut]::after {
@@ -1336,7 +1403,6 @@ panel #editBookmarkPanel,
 #PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
 	fill: dodgerblue !important;
 }
-
 
 /*----------------------------------*/
 #urlbar,
@@ -2107,7 +2173,6 @@ caption {
 	line-height: normal !important;
 }
 
-
 #navigator-toolbox,
 #navigator-toolbox>* {
 	width: 100vw;
@@ -2182,7 +2247,6 @@ caption {
 
 }
 
-
 #nav-bar:not([customizing="true"]),
 #PersonalToolbar:not([customizing="true"]) {
 	visibility: collapse !important;
@@ -2201,11 +2265,11 @@ caption {
 }*/
 
 /* all icons get full brightness */
-/*.toolbarbutton-animatable-box,
+.toolbarbutton-animatable-box,
 .toolbarbutton-1 {
 	fill-opacity: 1 !important;
 }
-*/
+
 /*-------------------------------*/
 
 /*---------download button coloring ------
@@ -2462,7 +2526,6 @@ transform-origin: 0 0;
 transform: rotate(90deg);
 }
 
-
 #nav-bar {
 margin-left: 80px;
 background: black !important;
@@ -2487,22 +2550,6 @@ width: calc(100% - 80px) !important;
 	overflow: hidden !important;
 }
 */
-
-#urlbar[pageproxystate="valid"]>#identity-box.verifiedIdentity {
-	border-image-slice: 0 !important;
-}
-
-#urlbar[pageproxystate="valid"]>#identity-box.chromeUI {
-	border-image-slice: 0 !important;
-}
-
-#identity-box.verifiedIdentity {
-	--urlbar-separator-color: grey !important;
-}
-
-#urlbar[pageproxystate="valid"]>#identity-box.extensionPage {
-	border-image-slice: 0 !important;
-}
 
 /*
 Flag multi-selected tabs for more obvious visibility (Mark "✔" on the selected tab)
@@ -2666,11 +2713,6 @@ toolbar .toolbarbutton-1:not([disabled]):hover>.toolbarbutton-icon {
 	list-style-image: url("reloadsvg.svg");
 }
 
-#urlbar>#identity-box.verifiedIdentity>#identity-icon-labels>#identity-icon-label,
-#urlbar>#identity-box.verifiedIdentity>#identity-icon-labels>#identity-icon-country-label {
-	color: dodgerblue !important;
-}
-
 /*
 * Makes the Not Secure text of HTTP pages appear in red text.
 * The label itself can be enabled by setting
@@ -2678,10 +2720,6 @@ toolbar .toolbarbutton-1:not([disabled]):hover>.toolbarbutton-icon {
 *
 * Contributor(s): Madis0
 */
-
-#urlbar>#identity-box.notSecureText>#identity-icon-labels>#identity-icon-label {
-	color: rgba(255, 0, 0, 0.867) !important;
-}
 
 /* Firefox Quantum userChrome.css tweaks ************************************************/
 /* Github: https://github.com/aris-t2/customcssforfx ************************************/
@@ -2745,21 +2783,6 @@ toolbar .toolbarbutton-1:not([disabled]):hover>.toolbarbutton-icon {
 	fill: white !important;
 	fill-opacity: 1 !important;
 	opacity: 1 !important;
-}
-
-/*#extension-icon[tooltiptext$="Tabliss"], #extension-icon[tooltiptext$="Tabliss"] ~ #identity-icon-labels{ display: none }*/
-#identity-box {
-	border-image-slice: 0 !important;
-}
-
-#extension-icon,
-#identity-icon-label {
-	display: none !important;
-}
-
-/* identity button color */
-#identity-popup-clear-sitedata-footer {
-	background-color: dodgerblue !important;
 }
 
 /*** Find Bar Tweaks ***/
@@ -2989,6 +3012,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	filter: invert(50%) !important;
 }
 
+/*-------------findbar ------------------------------------*/
 findbar {
 	-moz-box-ordinal-group: 0;
 	position: relative;
@@ -2996,11 +3020,12 @@ findbar {
 	margin-bottom: calc(0px - 2 * var(--toolbarbutton-inner-padding) - 20px);
 	border-top: none !important;
 	transition: transform 82ms linear, opacity 82ms linear 32ms !important;
-	background: var(--toolbar-bgcolor) !important;
+	background: #1f1f1f !important;
+
 	/* --lwt-accent-color for contrast */
 
 	/* Don't overlap with scrollbar */
-	/* margin-right: 16px; */
+	margin-right: 16px;
 }
 
 findbar .findbar-textbox {
@@ -3023,7 +3048,7 @@ findbar .findbar-button {
 findbar .found-matches {
 	-moz-box-ordinal-group: 2;
 	display: -moz-box;
-	min-width: 200px;
+	min-width: 200px !important;
 	text-align: right !important;
 	opacity: 0.75 !important;
 }
@@ -3034,7 +3059,7 @@ findbar .findbar-find-fast.findbar-find-status {
 }
 
 findbar>.findbar-container>hbox {
-	margin: 0 70px;
+	margin: 0 70px !important;
 }
 
 findbar>.findbar-container::before,
@@ -3093,13 +3118,12 @@ findbar>.findbar-container::after {
 	border-image-width: 0 !important;
 }
 
-
 /* Hide "go" button in the address bar */
-
+/*
 .urlbar-go-button {
 	display: none !important;
 }
-
+*/
 /* Prevent window control buttons being stretch vertically when addionally drag space above the tab bar is enabled 
 
 .titlebar-buttonbox-container {
@@ -3250,7 +3274,6 @@ statuspanel[inactive] .statuspanel-inner::before {
 }
 */
 
-
 /* Tweaks for Ctrl+Tab 
 
 #ctrlTab-previews {
@@ -3267,7 +3290,6 @@ statuspanel[inactive] .statuspanel-inner::before {
 	text-shadow: 0 0 2px hsl(0, 0%, 8%), 0 0 2px hsl(0, 0%, 8%) !important;
 	background: transparent !important;
 }
-
 
 .ctrlTab-preview:not(#ctrlTab-showAll)>*>.ctrlTab-preview-inner {
 	margin: -10px -10px 0 !important;
@@ -3299,14 +3321,12 @@ tabPreview-canvas element {
 }
 */
 
-
 /*avatar*/
 
 #fxa-avatar-image {
 	/* icon should be 20px, but we don't want to affect button size */
 	transform: scale(1.25) !important;
 }
-
 
 /* throbber 
 @keyframes rotate-360 {
@@ -3339,7 +3359,6 @@ tabPreview-canvas element {
 }
 */
 
-
 /*
 input,
 textarea,
@@ -3361,11 +3380,6 @@ input[type=checkbox] {
 input[type=radio] {
 	-moz-appearance: radio;
 }*/
-
-
-
-
-
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -3556,13 +3570,6 @@ contrast issues, see bug 1506913
 }
 */
 
-
-
-
-
-
-
-
 /* Dark library, page-info and bookmark-properties */
 /* Color scheme matches default dark theme */
 
@@ -3643,9 +3650,6 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 
 }
 
-
-
-
 /*
 .tabbrowser-tab:not([selected]):hover .tab-content {
 	background: linear-gradient(0deg, rgb(71, 88, 182), rgb(8, 11, 33)) !important;
@@ -3655,9 +3659,6 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0) !important;
 }
 */
-
-
-
 
 /* Wider tabs 
 .tabbrowser-tab:not([pinned]) {
@@ -3676,11 +3677,9 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	pointer-events: none;
 }
 
-
 :root:not([sizemode="normal"]) :-moz-any(#TabsToolbar, #nav-bar, #PersonalToolbar) {
 	-moz-window-dragging: no-drag !important;
 }
-
 
 :root[sizemode="fullscreen"] #navigator-toolbox {
 	background-color: var(--lwt-accent-color) !important;
@@ -3689,8 +3688,6 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 :root #navigator-toolbox {
 	background-color: var(--lwt-accent-color) !important;
 }
-
-
 
 :root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox {
 	margin-top: calc(-70px - var(--tab-min-height)) !important;
@@ -3727,7 +3724,6 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	height: 100%;
 }
 
-
 :root:not([inFullscreen]) #content-deck {
 	top: 4px !important;
 
@@ -3741,8 +3737,6 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 }
 */
 
-
-
 /* border around the tab 
 .tabbrowser-tab[selected] {
 	border-left: 2px solid dodgerblue !important;
@@ -3750,14 +3744,11 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 }
 */
 
-
 /* White GitHub favicon */
 .tabbrowser-tab[image^="data:image/x-icon;base64,AAABAAIAEBAAAAEAIAAoBQAAJgAAACAgAAABACAAKBQAAE4FAAAoAAAAEAAAACAAAAABACAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERE3YTExPFDg4OEgAAAAAAAAAADw8PERERFLETExNpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFJYTExT8ExMU7QAAABkAAAAAAAAAAAAAABgVFRf/FRUX/xERE4UAAAAAAAAAAAAAAAAAAAAAAAAAABEREsETExTuERERHhAQEBAAAAAAAAAAAAAAAAAAAAANExMU9RUVF/8VFRf/EREUrwAAAAAAAAAAAAAAABQUFJkVFRf/BgYRLA4ODlwPDw/BDw8PIgAAAAAAAAAADw8PNBAQEP8VFRf/FRUX/xUVF/8UFBSPAAAAABAQEDAPDQ//AAAA"] .tab-icon-image {
 	filter: invert(1.0) !important;
 
 }
-
-
 
 #editBMPanel_tagsSelector>richlistitem>image,
 radio>.radio-check,
@@ -3806,11 +3797,8 @@ checkbox[disabled]>.checkbox-check {
 	fill: graytext !important;
 }
 
-/*------------------------------------
-#urlbarView-row {
-	padding-left: 0px !important;
-}
-*/
+/*------------------------------------*/
+
 .tabbrowser-tab {
 	opacity: 0.50 !important;
 }
@@ -3823,16 +3811,13 @@ checkbox[disabled]>.checkbox-check {
 	opacity: 1 !important;
 }
 
-
-
-
 /*************************/
 
 /*
   Firefox 57-68 users: https://www.jeffersonscher.com/gm/url-bar-tweaks.html
   You can copy/paste into a userChrome.css file, see https://www.userchrome.org/
 */
-/* Remove " - Visit" or " - Search with" bar in the drop-down */
+/* Remove " - Visit" or " - Search with" bar in the drop-down 
 #PopupAutoCompleteRichResult richlistitem:first-of-type[type*="heuristic"],
 #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="searchengine"],
 #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"],
@@ -3841,7 +3826,7 @@ panel#urlbar-results #urlbarView-row-0 {
 	display: none !important;
 }
 
-/* Hide line for searching sld.tld below "Visit" Line */
+/* Hide line for searching sld.tld below "Visit" Line 
 #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"]+richlistitem[actiontype="searchengine"] {
 	display: none !important;
 }
@@ -3852,18 +3837,18 @@ panel#urlbar-results #urlbarView-row-0 {
 	padding-bottom: 0 !important;
 }
 
-/* Restore persistent display of drop-marker */
+/* Restore persistent display of drop-marker 
 #urlbar:not(:hover)>.urlbar-textbox-container>.urlbar-history-dropmarker,
 .urlbar-history-dropmarker {
 	opacity: 1 !important;
 }
 
-/* Set max-height for items visible without scrolling */
+/* Set max-height for items visible without scrolling 
 #PopupAutoCompleteRichResult .autocomplete-richlistbox,
 #urlbarView-results {
 	height: unset !important;
 	max-height: calc(45.5px * 10) !important;
-	/*9.76) !important;*/
+	/*9.76) !important;
 }
 
 #urlbar-results {
@@ -3871,7 +3856,7 @@ panel#urlbar-results #urlbarView-row-0 {
 	border-color: #1f1f1f !important;
 }
 
-/* Set drop-down width */
+/* Set drop-down width 
 #PopupAutoCompleteRichResult,
 panel#urlbar-results {
 	width: 800px !important;
@@ -3892,12 +3877,12 @@ panel#urlbar-results {
 	max-width: 785px !important;
 }
 
-/* Remove excess width of one-off search engine buttons */
+/* Remove excess width of one-off search engine buttons 
 panel#urlbar-results .searchbar-engine-one-off-item.dummy:not(.last-of-row) {
 	display: none !important;
 }
 
-/* Create sufficient height for two lines */
+/* Create sufficient height for two lines
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) {
 	position: relative !important;
 	height: 45.5px !important;
@@ -3908,14 +3893,14 @@ panel#urlbar-results .searchbar-engine-one-off-item.dummy:not(.last-of-row) {
 	height: 32px !important;
 }
 
-/* Subtle border between results */
+/* Subtle border between results 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem,
 .urlbarView-row {
 	border-bottom: 1px solid #1f1f1f !important;
-	/* light theme */
+	/* light theme 
 }
-
-/* Position page title, set font-size */
+*/
+/* Position page title, set font-size 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title,
 .urlbarView-row:not([type="search"]) .urlbarView-title {
 	position: absolute !important;
@@ -3926,7 +3911,7 @@ panel#urlbar-results .searchbar-engine-one-off-item.dummy:not(.last-of-row) {
 	font-size: 14px !important;
 }
 
-/* Position page url / action, set font-size */
+/* Position page url / action, set font-size 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-url,
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action,
 .urlbarView-row:not([type="search"]) .urlbarView-secondary {
@@ -3938,7 +3923,7 @@ panel#urlbar-results .searchbar-engine-one-off-item.dummy:not(.last-of-row) {
 	font-size: 12px !important;
 }
 
-/* Position bookmark tags */
+/* Position bookmark tags 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-tags,
 .urlbarView-row .urlbarView-tags {
 	position: absolute !important;
@@ -3946,19 +3931,19 @@ panel#urlbar-results .searchbar-engine-one-off-item.dummy:not(.last-of-row) {
 	top: 3px !important;
 }
 
-/* Hide separator between title and URL */
+/* Hide separator between title and URL 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-separator,
 .urlbarView-row:not([type="search"]) .urlbarView-title-separator {
 	display: none !important;
 }
 
-/* Position special icon (bookmark, switch-to-tab) */
+/* Position special icon (bookmark, switch-to-tab) 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-type-icon,
 .urlbarView-row .urlbarView-type-icon {
-	margin-left: 4px !important;
+	margin-left: 2px !important;
 }
 
-/* Prevent excess indenting of icons in Photon */
+/* Prevent excess indenting of icons in Photon 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem [anonid="type-icon-spacer"],
 panel#urlbar-results .autocomplete-richlistitem [anonid="type-icon-spacer"] {
 	display: none !important;
@@ -3969,14 +3954,15 @@ panel#urlbar-results {
 	--item-padding-start: 0 !important;
 	--item-padding-end: 0 !important;
 }
-
+*/
 /* Dark Themed Drop-down */
 /* Dark Theme - Firefox 48+ */
+/*
 #PopupAutoCompleteRichResult .autocomplete-richlistbox,
 #urlbarView-results {
 	background-color: #1f1f1f !important;
 }
-
+*/
 /*
 #PopupAutoCompleteRichResult .autocomplete-richlistitem {
 	border-bottom-color: #333 !important;
@@ -3991,7 +3977,7 @@ panel#urlbar-results {
 .urlbarView-row .urlbarView-title-separator {
 	color: #777 !important;
 }
-*/
+
 .autocomplete-richlistitem[selected=true],
 .urlbarView-row[selected] {
 	background-color: #1e90ff !important;
@@ -4006,7 +3992,7 @@ panel#urlbar-results {
 .urlbarView-row[selected] .urlbarView-title,
 .urlbarView-row[selected] .urlbarView-secondary,
 .urlbarView-row[selected] .urlbarView-title-separator {
-	color: #eee !important;
+	color: white !important;
 }
 
 .autocomplete-richlistitem[selected=true] .ac-url,
@@ -4015,40 +4001,7 @@ panel#urlbar-results {
 	color: #1e90ff !important;
 }
 
-/* Subtle bottom border 
-#PopupAutoCompleteRichResult .autocomplete-richlistitem,
-.urlbarView-row {
-	border-bottom: 0px solid rgba(255, 255, 255, 0.1) !important;
-
-}*/
-
-/* Use default text matching style */
-/* Ability to scroll in Fx57 */
-#PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox,
-#urlbarView-results {
-	overflow-y: auto !important;
-	padding-right: 3px !important;
-}
-
-#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-	padding-right: 0 !important;
-}
-
-
-panel#urlbar-results {
-	width: 1248px !important;
-	max-width: 1248px !important;
-	margin-left: 0 !important;
-	--item-padding-start: 0 !important;
-	--item-padding-end: 0 !important;
-}
-
-.urlbarView-row:hover {
-	background-color: #1e8fff80 !important;
-}
-
-
-
+/*--------------------------------------------*/
 .tabbrowser-tab {
 	text-shadow: none !important;
 }
@@ -4065,8 +4018,6 @@ panel#urlbar-results {
 	border-bottom: 0px !important;
 }
 
-
-
 /* Change visuals of unloaded/hibernated tabs */
 
 .tab.discarded {
@@ -4075,13 +4026,6 @@ panel#urlbar-results {
 
 .tab.discarded:hover {
 	color: red !important;
-}
-
-/*---------------------------------------------*/
-
-#urlbarView-results {
-	overflow-y: auto;
-	/*max-height: <whatever_max-height> !important;*/
 }
 
 /*
@@ -4143,7 +4087,6 @@ panel#urlbar-results {
 
 }
 
-
 #BMB_bookmarksPopup {
 
 	min-width: 1020px !important;
@@ -4184,7 +4127,6 @@ panel#urlbar-results {
 
 }
 
-
 #PlacesToolbarItems .bookmark-item>menupopup[placespopup="true"] menuseparator {
 
 	margin: 0 !important;
@@ -4192,7 +4134,6 @@ panel#urlbar-results {
 	padding: 0 !important;
 
 }
-
 
 #BMB_bookmarksPopup .subviewbutton.panel-subview-footer {
 
@@ -4222,12 +4163,14 @@ display: none !important;
 }
 */
 
-
 toolbar #zoom-controls>separator {
 	color: transparent !important;
 }
 
-toolbar #zoom-control>#zoom-reset-button {
+#zoom-reset-button label {
+	font-family: 'Fira Sans' !important;
+	font-weight: bold !important;
+	padding-top: 6px !important;
 	color: dodgerblue !important;
 }
 
@@ -4241,16 +4184,19 @@ toolbar #zoom-out-button {
 	fill: dodgerblue !important;
 }
 
+toolbar #fullscreen-button {
+	fill: dodgerblue !important;
+}
 
-/* Toolbar Buttons Zoom Control */
+/* Toolbar Buttons Zoom Control 
 #zoom-out-button {
 	background: transparent !important;
 	fill: dodgerblue !important;
-	/* BG color */
+
 	border: 0px solid #ffffff !important;
-	/* Adding border */
+
 	border-radius: 0px !important;
-	/* Adding Border Radius */
+
 }
 
 toolbar #zoom-controls>separator {
@@ -4260,25 +4206,25 @@ toolbar #zoom-controls>separator {
 #zoom-in-button {
 	background: transparent !important;
 	fill: dodgerblue !important;
-	/* BG color */
-	border: 0px solid #ffffff !important;
-	/* Adding border */
-	border-radius: 0px !important;
-	/* Adding Border Radius */
-}
 
+	border: 0px solid #ffffff !important;
+
+	border-radius: 0px !important;
+
+}*/
+/*
 #zoom-reset-button {
 	background: transparent !important;
 	color: dodgerblue !important;
 	fill: dodgerblue !important;
-	/* BG color */
+
 	border: 0px solid #ffffff !important;
-	/* Adding border */
+
 	border-radius: 0px !important;
-	/* Adding Border Radius */
+
 	font-family: "Fira Sans" !important;
 }
-
+*/
 /* Hamburger Menu Zoom Control */
 #appMenu-zoomReduce-button {
 	background: transparent !important;
@@ -4290,6 +4236,17 @@ toolbar #zoom-controls>separator {
 	/* Adding Border Radius */
 }
 
+#appMenu-zoomReset-button label {
+	background: transparent !important;
+	color: dodgerblue !important;
+	/* BG color 
+	border: 1px solid dodgerblue !important;*/
+	/* Adding border */
+	border-radius: 0px !important;
+	/* Adding Border Radius */
+	font-family: "Fira Sans" !important;
+}
+
 #appMenu-zoomReset-button {
 	background: transparent !important;
 	color: dodgerblue !important;
@@ -4298,7 +4255,17 @@ toolbar #zoom-controls>separator {
 	/* Adding border */
 	border-radius: 0px !important;
 	/* Adding Border Radius */
-	font-family: "Fira Sans" !important;
+
+}
+
+#appMenu-fullscreen-button {
+	background: transparent !important;
+	color: dodgerblue !important;
+	/* BG color */
+	border: 0px solid #ffffff !important;
+	/* Adding border */
+	border-radius: 0px !important;
+	/* Adding Border Radius */
 }
 
 #appMenu-zoomEnlarge-button {
@@ -4322,11 +4289,9 @@ border-radius: 0px !important;*/
 /* Adding Border Radius 
 }*/
 
-
 #tracking-protection-icon-container::after {
 	border-right: 0px !important;
 }
-
 
 /*
 #PlacesToolbarItems>.bookmark-item {
@@ -4353,8 +4318,6 @@ border-radius: 0px !important;*/
 	}
 }
 
-
-
 /*
 #urlbar-results {
 	width: 785px !important;
@@ -4367,9 +4330,7 @@ panel#urlbar-results {
 	--item-padding-end: 0 !important;
 }
 */
-
-
-
+/*
 .tabbrowser-tab:not([pinned]):not(:hover) .tab-close-button {
 	visibility: collapse !important;
 }
@@ -4378,4 +4339,450 @@ panel#urlbar-results {
 	visibility: visible !important;
 	display: block !important;
 }
+*/
+/* Show Tab Close buttons only when hovered (slide in using max-width) */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+	max-width: 0 !important;
+	opacity: 0 !important;
+	transition: all 250ms ease-in-out 0ms !important;
+	/* no delay on exit*/
+}
 
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+	display: -moz-box !important;
+	max-width: 20px !important;
+	opacity: 1 !important;
+	transition: all 250ms ease-in-out 250ms !important;
+	/* quarter second delay on entry*/
+}
+
+/* Show Tab Close buttons only when hovered (slide in using max-width) 
+.tabbrowser-tab:not([pinned="true"])>.tab-stack>.tab-content>.tab-close-button {
+	max-width: 0 !important;
+	opacity: 0 !important;
+	transition: all 250ms ease-in-out 550ms !important; // no delay on exit
+}
+
+.tabbrowser-tab:not([pinned="true"]):hover>.tab-stack>.tab-content>.tab-close-button {
+	max-width: 20px !important;
+	opacity: 1 !important;
+	transition: all 250ms ease-in-out 550ms !important; // quarter second delay on entry
+}
+
+.tabbrowser-tab:not([pinned="true"])>.tab-stack>.tab-content>.tab-close-button {
+	display: -moz-box !important;
+}
+*/
+
+.tab-drop-indicator {
+	list-style-image: url("chrome://global/skin/icons/arrow-up-12.svg") !important;
+	-moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
+	fill: dodgerblue !important;
+	margin-bottom: -10px !important;
+	z-index: 6 !important;
+	width: 17px !important;
+	max-width: 17px !important;
+}
+
+/* finbar 2 ---
+findbar {
+	-moz-box-ordinal-group: 0;
+	position: relative !important;
+	display: block !important;
+	left: 1.5em;
+	border: 0px solid transparent !important;
+	border-bottom-left-radius: 4px !important;
+	border-bottom-right-radius: 4px !important;
+	border-top: none !important;
+	box-shadow: 0 0px 6px 0 rgba(12, 12, 13, 0.6), 0 0px 15px 0 rgba(0, 0, 0, 0.2) !important;
+	background-image: none !important;
+	transition: 150ms !important;
+	z-index: 0 !important;
+	overflow: hidden;
+}
+
+findbar[hidden] {
+	margin-top: -2em !important;
+}
+
+#sidebar-box[hidden="true"]~#appcontent findbar,
+#sidebar-box[ordinal="2"]~#appcontent findbar {
+	left: initial !important;
+	right: 1.5em !important;
+	transition: 150ms !important;
+}
+
+:root:not([sizemode="normal"]) #navigator-toolbox {
+	border: none !important;
+}
+
+.findbar-closebutton {
+	margin-top: -1px !important;
+}
+
+.findbar-closebutton {
+	margin-inline-start: 0.5em !important;
+	vertical-align: middle !important;
+	margin-bottom: 0.25em !important;
+	height: inherit !important;
+	padding-left: 0px !important;
+	padding: 0px !important;
+	margin-inline-end: 7px !important;
+}
+
+.findbar-closebutton .toolbarbutton-icon {
+	border-radius: 50% !important;
+	width: 1.5em !important;
+	height: 1.5em !important;
+	fill-opacity: 0 !important;
+}
+
+.findbar-closebutton:hover .toolbarbutton-icon {
+	background-color: var(--arrowpanel-dimmed) !important;
+}
+
+.findbar-closebutton:hover:active .toolbarbutton-icon {
+	background-color: var(--arrowpanel-dimmed-further) !important;
+}
+
+.findbar-textbox {
+	border: none !important;
+	transition: 300ms !important;
+}
+
+.findbar-textbox input>.anonymous-div {
+	color: white !important;
+	opacity: 1 !important;
+}
+
+.findbar-textbox,
+.findbar-textbox:-moz-lwtheme {
+	background-color: rgb(40, 47, 77) !important;
+	color: white !important;
+}
+
+.findbar-textbox:focus {
+	background-color: rgb(50, 57, 87) !important;
+	color: rgb(255, 255, 255) !important;
+	transition: 300ms !important;
+}
+
+.findbar-textbox[status="notfound"] {
+	background-color: rgb(35, 40, 65) !important;
+	color: rgba(255, 255, 255, 0.5) !important;
+	transition: 400ms !important;
+}
+
+findbar:focus-within .findbar-textbox:not([status="notfound"]) {
+	background-color: rgb(50, 57, 87) !important;
+	color: rgb(255, 255, 255) !important;
+	transition: 300ms !important;
+}
+
+.findbar-find-previous>.toolbarbutton-icon,
+.findbar-find-next>.toolbarbutton-icon {
+	border-radius: 50% !important;
+	background-color: rgba(200, 200, 255, 0);
+	padding: 1.5px !important;
+	width: 17px !important;
+	margin-top: -3px !important;
+	margin-bottom: -3px !important;
+	opacity: 0.8 !important;
+}
+
+.findbar-find-previous,
+.findbar-find-next {
+	border: none !important;
+	margin-left: -1px !important;
+	padding-left: 1px !important;
+	padding-right: 2px !important;
+	background: rgb(40, 47, 77) !important;
+	fill: rgba(255, 255, 255, 1) !important;
+	transition: 300ms !important;
+}
+
+.findbar-find-previous {
+	margin-right: -1.5px !important;
+}
+
+.findbar-find-previous:not([disabled]):hover>.toolbarbutton-icon,
+.findbar-find-next:not([disabled]):hover>.toolbarbutton-icon {
+	background: var(--desaturate-dimmed) !important;
+	opacity: 0.9 !important;
+}
+
+.findbar-find-previous:not([disabled]):hover:active,
+.findbar-find-next:not([disabled]):hover:active {
+	box-shadow: none !important;
+}
+
+.findbar-find-previous:not([disabled]):hover:active>.toolbarbutton-icon,
+.findbar-find-next:not([disabled]):hover:active>.toolbarbutton-icon {
+	background: var(--desaturate-dimmed-further) !important;
+	opacity: 1 !important;
+}
+
+.findbar-textbox[status="notfound"]~ :-moz-any(.findbar-find-previous, .findbar-find-next)>.toolbarbutton-icon,
+.findbar-find-next[disabled="true"]>.toolbarbutton-icon,
+.findbar-find-previous[disabled="true"]>.toolbarbutton-icon {
+	fill: rgba(255, 255, 255, 1) !important;
+	pointer-events: none !important;
+	opacity: 0.5 !important;
+}
+
+.findbar-textbox[status="notfound"]~ :-moz-any(.findbar-find-previous, .findbar-find-next) {
+	pointer-events: none !important;
+}
+
+.findbar-textbox:focus~ :-moz-any(.findbar-find-previous, .findbar-find-next) {
+	background-color: rgb(50, 57, 87) !important;
+	transition: 300ms !important;
+}
+
+.findbar-textbox[status="notfound"]~ :-moz-any(.findbar-find-previous, .findbar-find-next) {
+	background-color: rgb(35, 40, 65) !important;
+	transition: 400ms !important;
+}
+
+findbar:focus-within .findbar-textbox:not([status="notfound"])~ :-moz-any(.findbar-find-previous, .findbar-find-next) {
+	background-color: rgb(50, 57, 87) !important;
+	transition: 300ms !important;
+}
+
+.findbar-find-status,
+.found-matches,
+.find-status-icon {
+	visibility: collapse !important;
+}
+
+.findbar-entire-word,
+.findbar-case-sensitive {
+	display: none !important;
+}
+
+.findbar-highlight {
+	visibility: hidden !important;
+	width: 0px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	border-left: 0px !important;
+	border-right: 0px !important;
+}
+
+*/
+/*.ac-separator
+#urlbar[breakout][breakout-extend] {
+	background-image: url("noise512x512.png") !important;
+	background-color: #2A2A2AC0 !important;
+	backdrop-filter: blur(32px) !important;
+}
+*/
+
+/* " - Visit" or " - Search with" bar NOT HIDDEN */
+/*
+:root {
+	--panel-separator-color: grey !important;
+}
+*/
+/* Restore persistent display of drop-marker */
+
+/*Use default text matching style */
+/* Ability to scroll in Fx57 */
+
+#urlbar-input::-moz-selection {
+	font-family: 'Fira Sans' !important;
+	font-size: 14px !important;
+	background-color: dodgerblue !important;
+	border: 0px !important;
+	opacity: 1 !important;
+	color: black !important;
+}
+
+/* url dropdown -*/
+
+#urlbar[breakout],
+#urlbar[breakout] #urlbar-input-container,
+#urlbar[breakout] .urlbarView.megabar {
+	transition: none !important;
+}
+
+#urlbar[breakout][breakout-extend]>#urlbar-input-container,
+#urlbar-input-container {
+	height: var(--urlbar-height) !important;
+	padding-block: 0px !important;
+	padding-inline: 0px !important;
+	background-color: var(--lwt-toolbar-field-background-color, rgba(30, 143, 255, 0.5));
+	transition: none !important;
+	border-radius: var(--toolbarbutton-border-radius);
+}
+
+#urlbar[breakout][breakout-extend]>#urlbar-background,
+#urlbar[breakout][breakout-extend]>.urlbarView {
+	animation-name: none !important;
+	animation-timing-function: var(--animation-easing-function);
+}
+
+#urlbar[breakout][breakout-extend],
+#urlbar[breakout][breakout-extend-disabled][open] {
+	/*top: 3px !important;*/
+	left: 0px !important;
+	width: calc(100% + 50px) !important;
+	height: auto !important;
+	padding-left: 25px !important;
+	padding-right: 25px !important;
+	margin-left: -25px !important;
+	box-shadow: 0 5px 18px rgba(0, 0, 0, .2);
+	background: none !important;
+	transition: none !important;
+}
+
+#urlbar[breakout][breakout-extend] .urlbarView {
+	/*top: 3.5px !important;*/
+	margin: 0 !important;
+	width: calc(100% + 6px) !important;
+	left: -3px !important;
+	position: relative !important;
+}
+
+.urlbarView {
+	/*top: 3.5px !important;*/
+	margin: 0 !important;
+	width: calc(100% + 6px) !important;
+	left: -3px !important;
+	position: relative !important;
+}
+
+/*--------------2nd part ------------------*/
+.urlbarView-row {
+	overflow: hidden !important;
+	min-width: 0 !important;
+	padding: 0 !important;
+}
+
+.urlbarView-row-inner {
+	padding: 6px 6.5px !important;
+}
+
+.search-panel-one-offs {
+	min-width: 0 !important;
+}
+
+.urlbarView.megabar .urlbarView-body-inner {
+	border-top: none !important;
+}
+
+.urlbarView.megabar #urlbar-results {
+	background-image: url(texture/noise-512x512.png) !important;
+	background-color: rgba(14, 16, 31, 0.7) !important;
+	backdrop-filter: blur(22px) !important;
+	border-bottom-left-radius: 4px !important;
+	border-bottom-right-radius: 4px !important;
+	box-shadow: 0 5px 18px rgba(0, 0, 0, .2);
+	padding-left: 3px !important;
+	padding-right: 3.5px !important;
+	/*padding-top: 3px !important;*/
+}
+
+.urlbarView.megabar .search-panel-one-offs {
+	background: none !important;
+	width: -moz-fit-content !important;
+	margin: 0 !important;
+	padding-right: 0 !important;
+}
+
+.urlbarView.megabar .search-one-offs {
+	width: -moz-fit-content !important;
+	direction: ltr !important;
+	/*top: -36.5px !important;*/
+	right: 0px !important;
+	margin-right: 3.5px !important;
+	margin-left: 0.5px !important;
+}
+
+#urlbar[breakout][breakout-extend] .search-one-offs,
+#urlbar[breakout][breakout-extend-disabled][open] .search-one-offs {
+	display: flex !important;
+}
+
+#urlbar .search-one-offs:not([hidden]) {
+	display: flex !important;
+}
+
+.urlbarView.megabar {
+	direction: rtl !important;
+}
+
+.urlbarView.megabar * {
+	direction: ltr !important;
+}
+
+.urlbarView-row:last-child {
+	margin-right: 474px !important;
+}
+
+.urlbarView-row:not(:last-child) {
+	margin-bottom: 3px !important;
+}
+
+#urlbar-background {
+	display: none !important;
+}
+
+#urlbar.megabar>#urlbar-input-container {
+	border: none !important;
+}
+
+#urlbar.megabar>#urlbar-input-container>#urlbar-search-icon {
+	display: none !important;
+}
+
+#urlbar.megabar>#urlbar-input-container>#identity-box[pageproxystate="invalid"] {
+	display: -moz-box !important;
+}
+
+/*--------------3rd part --------------------*/
+
+#urlbar-container {
+	transform: translateY(0);
+	position: relative;
+	z-index: 10;
+	padding-block: 3px !important;
+	padding-inline: 0px !important;
+	margin-inline: 5px !important;
+}
+
+#nav-bar-customization-target {
+	overflow: visible !important
+}
+
+#urlbar-results {
+	max-width: 100% !important;
+}
+
+.urlbarView {
+	top: calc(100% - 5px) !important;
+	width: 100%;
+	border-width: 0 1px 1px 1px !important;
+	;
+	border-style: solid;
+	border-color: inherit !important;
+}
+
+:root[uidensity="compact"] .urlbarView {
+	margin-top: 2px
+}
+
+:root[uidensity="touch"] .urlbarView {
+	margin-top: 1px
+}
+
+#urlbar[open] {
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+.urlbarView-row {
+	padding: 6px 0px !important;
+}
