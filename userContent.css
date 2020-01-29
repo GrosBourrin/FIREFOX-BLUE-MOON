@@ -1,0 +1,523 @@
+@-moz-document url-prefix("about:") {
+	:root {
+		--in-content-border-hover: rgba(30, 143, 255, 0.5) !important;
+		--in-content-border-active: dodgerblue !important;
+		--in-content-border-active-shadow: rgba(30, 143, 255, 0.325) !important;
+	}
+
+	* {
+		font-family: "Fira Sans" !important;
+
+	}
+
+}
+
+@-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
+
+	* {
+		background-color: #1f1f1f !important;
+		color: dodgerblue !important;
+		font-family: "Fira Sans" !important;
+		font-size: 14px !important;
+		font-weight: 300 !important;
+
+	}
+
+}
+
+::selection {
+	background: dodgerblue !important;
+	color: white !important;
+}
+
+/*---------------------------------UBLOCK ORIGIN ---------------------*/
+
+@-moz-document url-prefix("moz-extension://ad2ba683-e23a-449d-854a-d528b8e793d3/") {
+
+	body {
+		font-family: Fira Sans !important;
+		background-color: #1f1f1f !important;
+		color: #ffffff !important;
+	}
+
+	a {
+		color: #888 !important;
+	}
+
+	h2 {
+		background-color: #444 !important;
+		color: #ffffff !important;
+	}
+
+	code {
+		background-color: #555 !important;
+	}
+
+	#switch .fa {
+		fill: #1e90ff !important;
+	}
+
+	body.off #switch .fa {
+		color: #555 !important;
+	}
+
+	.tool {
+		color: #ffffff !important;
+	}
+
+	.tool.enabled:hover {
+		fill: #1e90ff !important;
+	}
+
+	.permatoolbar {
+		background-color: #333 !important;
+	}
+
+	.permatoolbar .button {
+		background-color: #444 !important;
+	}
+
+	.permatoolbar .button:hover {
+		background-color: #888 !important;
+	}
+
+	#tooltip {
+		background-color: #000000 !important;
+		border: 1px solid #000000 !important;
+		color: #ffffff !important;
+	}
+
+	#firewallContainer>div {
+		background-color: #333 !important;
+	}
+
+	#firewallContainer>div:hover {
+		background-color: #444 !important;
+	}
+
+	#firewallContainer>div>span {
+		color: #ffffff !important;
+		border-bottom: 1px solid #111 !important;
+	}
+
+	#firewallContainer>div>span:first-of-type~span {
+		border-left: 1px solid #111 !important;
+	}
+
+	#extraTools {
+		background-color: #444 !important;
+	}
+
+	#extraTools>span:hover {
+		fill: #1e90ff !important;
+	}
+
+	#dashboard-nav-widgets {
+		background-color: #111 !important;
+		border-bottom: 1px solid #777 !important;
+	}
+
+	.tabButton {
+		background-color: #444 !important;
+		border: 1px solid #666 !important;
+		border-bottom: 1px solid #777 !important;
+		color: #ffffff !important;
+	}
+
+	.tabButton.selected {
+		background-color: #222 !important;
+		border-bottom: 1px solid #222 !important;
+	}
+
+	#diff li {
+		background-color: #555 !important;
+	}
+
+	#diff li:nth-child(even) {
+		background-color: #444 !important;
+	}
+
+	#diff textarea {
+		background-color: #333 !important;
+		color: #ffff !important;
+	}
+}
+
+#ublock0_raymondhill_net-browser-action .toolbarbutton-badge {
+	background-color: dodgerblue !important;
+}
+
+/*-------------downloads sidebar webext tweaks dark ------------------*/
+
+@-moz-document url("moz-extension://7daa4a0e-9887-4437-9ae9-0b05b77417fa/sidebar/panel.html") {
+
+	html,
+	body {
+		font-family: Fira Sans !important;
+		background-color: #1f1f1f !important;
+		color: #ffffff !important;
+	}
+
+	.toolbar-item .btn,
+	.change-state-button,
+	.cancel-button,
+	.erase-button {
+		filter: invert(100%) !important;
+	}
+
+	.progress {
+		border: 0px solid #777 !important;
+		background-color: rgba(30, 143, 255, 0.5) !important;
+	}
+
+	.toolbar-bottom {
+		border-top: 0px solid #777 !important;
+	}
+
+	.item:hover {
+		background-image: linear-gradient(to top, dodgerblue, #1f1f1f) !important;
+		border-radius: 0px !important;
+		box-shadow: 0 0 0px 4px black !important;
+	}
+
+	.item:selected {
+		background-image: linear-gradient(to top, dodgerblue, #1f1f1f) !important;
+		border-radius: 0px !important;
+		box-shadow: 0 0 0px 4px black !important;
+	}
+}
+
+/*----------------picture in picture tweaks--------------------*/
+
+.statusIcon[type="pictureInPicture"] {
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+}
+
+.statusIcon[type="pictureInPicture"] {
+	min-width: 84px !important;
+	min-height: 84px !important;
+	background-image: url("chrome://global/skin/media/pictureinpicture.svg") !important;
+	-moz-context-properties: fill, stroke !important;
+	fill: dodgerblue !important;
+	stroke: #fff !important;
+}
+
+.pictureInPictureToggleButton {
+	display: flex !important;
+	-moz-appearance: none !important;
+	position: absolute !important;
+	background-color: var(--pip-toggle-bgcolor) !important;
+	color: var(--pip-toggle-text-and-icon-color) !important;
+	border: 0 !important;
+	padding: var(--pip-toggle-padding) !important;
+	right: 0 !important;
+	top: 50% !important;
+	transform: translateY(-50%) translateX(calc(100% - var(--pip-toggle-icon-width-height) - 2 * var(--pip-toggle-padding))) !important;
+	transition: opacity 160ms linear, transform 160ms linear !important;
+	min-width: max-content !important;
+	pointer-events: auto !important;
+	opacity: 0 !important;
+}
+
+.pictureInPictureToggleIcon {
+	display: inline-block !important;
+	background-image: url("chrome://global/skin/media/pictureinpicture.svg") !important;
+	background-position: center left !important;
+	background-repeat: no-repeat !important;
+	-moz-context-properties: fill, stroke !important;
+	fill: var(--pip-toggle-text-and-icon-color) !important;
+	stroke: var(--pip-toggle-text-and-icon-color) !important;
+	width: var(--pip-toggle-icon-width-height) !important;
+	height: var(--pip-toggle-icon-width-height) !important;
+	min-width: max-content !important;
+}
+
+.pictureInPictureToggleLabel {
+	margin-inline-start: var(--pip-toggle-padding) !important;
+}
+
+.controlsOverlay:hover>.pictureInPictureToggleButton {
+	opacity: 0.8 !important;
+}
+
+.controlsOverlay:hover>.pictureInPictureToggleButton:hover {
+	opacity: 1 !important;
+	transform: translateY(-50%) translateX(0) !important;
+}
+
+.pictureInPictureToggleButton {
+	transition-duration: 300ms !important;
+}
+
+/* NEW TAB BACKGROUND COLOR */
+@-moz-document url(about:blank),
+url(about:newtab) {
+
+	#newtab-window,
+	html {
+		background: #1f1f1f !important;
+		color: white !important;
+	}
+}
+
+/* about:preferences */
+@-moz-document url(about:preferences) {
+
+	#categories>.category[selected],
+	#categories>.category.selected {
+		color: dodgerblue !important;
+		border-radius: 0px !important;
+	}
+
+	checkbox:not([disabled="true"]):hover>.checkbox-check,
+	input[type="checkbox"]:not(:disabled):hover {
+		border-color: dodgerblue !important;
+	}
+
+	radio:not([disabled="true"]):hover>.radio-check {
+		border-color: dodgerblue !important;
+	}
+
+	.text-link {
+		color: dodgerblue !important;
+	}
+
+	.content-blocking-category.selected {
+		border: 1px solid dodgerblue !important;
+		border-radius: 0px !important;
+		background-color: rgba(30, 143, 255, 0.5) !important;
+	}
+
+}
+
+@-moz-document url('chrome://devtools/content/webconsole/index.html') {
+	.webconsole-output .info {
+		background-color: #1f1f1f !important;
+		color: white !important;
+	}
+}
+
+@-moz-document url('chrome://global/content/config.xul') {
+	:root {
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		background-color: #1f1f1f !important;
+		color: white !important;
+	}
+
+}
+
+@-moz-document url('about:home'),
+url('about:newtab') {
+	body {
+		background-color: #1f1f1f !important;
+	}
+}
+
+/*
+scrollbar {
+	z-index: 2147483647 !important;
+	position: relative !important;
+}
+*/
+/*
+scrollbar,
+scrollbar * {
+	-moz-appearance: none !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	border: 0px !important;
+	box-shadow: none !important;
+}
+
+scrollbar[orient="vertical"] {
+	-moz-margin-start: 0px !important;
+	max-width: 10px !important;
+	min-width: 10px !important;
+
+	background: linear-gradient(to right, #222, #222) !important;
+	background-size: 10px 10px !important;
+	background-repeat: repeat-y !important;
+	background-position: 50% 0% !important;
+	cursor: default;
+}
+
+scrollbar[orient="horizontal"] {
+	margin-top: 0px !important;
+	max-height: 10px !important;
+	min-height: 10px !important;
+
+	background: linear-gradient(to right, #222, #222) !important;
+	background-size: 16px 16px !important;
+	background-repeat: repeat-x !important;
+	background-position: 0% 50% !important;
+	cursor: default;
+}
+
+scrollbar thumb[orient="vertical"] {
+	min-height: 20px !important;
+	width: 10px !important;
+	min-width: 10px !important;
+	max-width: 10px !important;
+}
+
+scrollbar thumb[orient="horizontal"] {
+	min-width: 20px !important;
+	height: 10px !important;
+	min-height: 10px !important;
+	max-height: 10px !important;
+}
+
+scrollbar thumb {
+	background: transparent !important;
+	box-shadow: 0 0 0 10px #888 inset !important;
+	opacity: 1 !important;
+	transition: 0.2s !important;
+}
+
+scrollbar:hover thumb {
+	box-shadow: 0 0 0 10px #1e90ff50 inset !important;
+}
+
+scrollbar thumb:active {
+	box-shadow: 0 0 0 16px #1e90ff inset !important;
+	transition: 0s !important;
+}
+
+scrollcorner {
+	background-image: radial-gradient(at top left, #222, #222) !important;
+	background-color: #222 !important;
+}
+
+/* no buttons */
+
+@-moz-document url(about:blank),
+url(about:newtab) {
+
+	#newtab-window,
+	html {
+		background: #1f1f1f !important;
+		color: white !important;
+	}
+}
+
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
+	:root {
+		--in-content-border-hover: dodgerblue !important;
+		--card-outline-color: dodgerblue !important;
+		--in-content-item-hover: rgba(69, 161, 255, 0.2) !important;
+
+		--in-content-item-selected: dodgerblue !important;
+		font-family: "Fira Sans" !important;
+	}
+
+	* {
+		font-family: "Fira Sans" !important;
+	}
+
+	.addon.card {
+		border-radius: 0px !important;
+	}
+
+	:root {
+		overflow-x: hidden !important;
+	}
+
+	/* Remove this if it causes horizontal scrolling problems */
+
+	@media (min-width:720px) {
+		#main {
+			max-width: unset !important;
+			padding-right: 28px !important;
+		}
+	}
+
+	addon-list>section,
+	recommended-addon-list {
+		padding: 1em !important;
+		display: grid !important;
+		grid-template-areas: "hd hd""cd cd" !important;
+		grid-template-columns: 1fr 1fr !important;
+		column-gap: 1em !important;
+
+	}
+
+	addon-card .card-contents {
+		width: unset !important;
+		white-space: initial !important;
+	}
+
+	.card-heading-image {
+		max-width: calc(100% + 32px) !important;
+	}
+
+	section>h2 {
+		grid-area: hd !important;
+	}
+
+	addon-card {
+		padding-bottom: 0px !important;
+		padding-top: 0px !important;
+		grid-area: auto !important;
+
+	}
+
+	addon-card .addon-description {
+		height: 3em !important;
+		scrollbar-color: dodgerblue black !important;
+		scrollbar-width: thin !important;
+	}
+
+	#page-options panel-list {
+		background-color: #1f1f1f !important;
+		font-size: 14px !important;
+		border: none !important;
+	}
+
+	button[role=menuitem]:focus,
+	button[role=menuitem]:enabled:hover {
+		background-color: dodgerblue !important;
+	}
+
+	panel-item-separator {
+		background-color: #404040 !important;
+		margin-inline: 5px !important;
+	}
+
+}
+
+* {
+	scrollbar-color: dodgerblue black !important;
+	scrollbar-width: thin !important;
+	scrollbar-highlight-color: rgba(30, 143, 255, 0.5) !important;
+
+}
+
+/*
+.scrollbutton-up[orient="horizontal"]~spacer {
+	border-width: 0px !important;
+	opacity: 0 !important;
+}*/
+@-moz-document url("http://www.w3.org/1999/xhtml") {
+
+	html|input.urlbar-scheme {
+		display: none !important;
+	}
+}
+
+@-moz-document url-prefix("about:"),
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
+
+	window,
+	page,
+	html,
+	.main-content,
+	scrollbar {
+		scrollbar-color: dodgerblue black !important;
+		scrollbar-width: thin !important;
+		scrollbar-highlight-color: rgba(30, 143, 255, 0.5) !important;
+	}
+
+}
