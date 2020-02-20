@@ -15,8 +15,8 @@
 @-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
 
 	* {
-		background-color: #1f1f1f !important;
-		color: dodgerblue !important;
+		background-color: #1E2129 !important;
+		color: white !important;
 		font-family: "Fira Sans" !important;
 		font-size: 14px !important;
 		font-weight: 300 !important;
@@ -36,7 +36,7 @@
 
 	body {
 		font-family: Fira Sans !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		color: #ffffff !important;
 	}
 
@@ -143,9 +143,6 @@
 	}
 }
 
-#ublock0_raymondhill_net-browser-action .toolbarbutton-badge {
-	background-color: dodgerblue !important;
-}
 
 /*-------------downloads sidebar webext tweaks dark ------------------*/
 
@@ -154,7 +151,7 @@
 	html,
 	body {
 		font-family: Fira Sans !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		color: #ffffff !important;
 	}
 
@@ -175,19 +172,19 @@
 	}
 
 	.item:hover {
-		background-image: linear-gradient(to top, dodgerblue, #1f1f1f) !important;
+		background-image: linear-gradient(to top, dodgerblue, #1E2129) !important;
 		border-radius: 0px !important;
 		box-shadow: 0 0 0px 4px black !important;
 	}
 
 	.item:selected {
-		background-image: linear-gradient(to top, dodgerblue, #1f1f1f) !important;
+		background-image: linear-gradient(to top, dodgerblue, #1E2129) !important;
 		border-radius: 0px !important;
 		box-shadow: 0 0 0px 4px black !important;
 	}
 }
 
-/*----------------picture in picture tweaks--------------------*/
+/*----------------picture in picture tweaks--------------------
 
 .statusIcon[type="pictureInPicture"] {
 	background-size: contain !important;
@@ -250,20 +247,47 @@
 .pictureInPictureToggleButton {
 	transition-duration: 300ms !important;
 }
+*/
+/*
+.pictureInPictureToggleLabel {
+	display: none !important;
+}
 
-/* NEW TAB BACKGROUND COLOR */
-@-moz-document url(about:blank),
-url(about:newtab) {
+.pictureInPictureToggleIcon {
+	display: none !important;
+}
+*/
+.pictureInPictureToggleButton {
+	transition-duration: 300ms !important;
+}
 
-	#newtab-window,
-	html {
-		background: #1f1f1f !important;
-		color: white !important;
-	}
+.pictureInPictureToggleButton:hover {
+	cursor: pointer !important;
+}
+
+.pictureInPictureToggleButton:not(:focused) {
+	height: 24px !important;
+	width: 30px !important;
+}
+
+.pictureInPictureToggleButton {
+	height: 24px !important;
+	width: 30px !important;
+	margin-top: -60px !important;
+	background-color: #1E2129 !important;
+	outline: 1px solid #1E2129 !important;
 }
 
 /* about:preferences */
 @-moz-document url(about:preferences) {
+	.sticky-container {
+		background-color: #1E2129 !important;
+	}
+
+	:root {
+		font-family: Fira Sans !important;
+		background-color: #1E2129 !important;
+	}
 
 	#categories>.category[selected],
 	#categories>.category.selected {
@@ -294,17 +318,19 @@ url(about:newtab) {
 
 @-moz-document url('chrome://devtools/content/webconsole/index.html') {
 	.webconsole-output .info {
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		color: white !important;
 	}
 }
 
-@-moz-document url('chrome://global/content/config.xul') {
+@-moz-document url('chrome://global/content/config.xhtml') {
 	:root {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		color: white !important;
+		fill: white !important;
+		opacity: 1 !important;
 	}
 
 }
@@ -312,7 +338,20 @@ url(about:newtab) {
 @-moz-document url('about:home'),
 url('about:newtab') {
 	body {
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
+	}
+
+	.prefs-button button {
+		fill: #1E2129 !important;
+	}
+
+	.prefs-button button:hover,
+	.prefs-button button:focus {
+		background-color: transparent !important;
+	}
+
+	.prefs-button button {
+		display: none !important;
 	}
 }
 
@@ -391,15 +430,17 @@ scrollcorner {
 	background-color: #222 !important;
 }
 
-/* no buttons */
+*/
 
 @-moz-document url(about:blank),
-url(about:newtab) {
+url(about:newtab),
+url(about:config) {
 
 	#newtab-window,
 	html {
-		background: #1f1f1f !important;
+		background: #1E2129 !important;
 		color: white !important;
+		font-family: Fira Sans !important;
 	}
 }
 
@@ -407,10 +448,17 @@ url(about:newtab) {
 	:root {
 		--in-content-border-hover: dodgerblue !important;
 		--card-outline-color: dodgerblue !important;
-		--in-content-item-hover: rgba(69, 161, 255, 0.2) !important;
+		--in-content-item-hover: rgba(30, 143, 255, 0.5) !important;
 
 		--in-content-item-selected: dodgerblue !important;
-		font-family: "Fira Sans" !important;
+		background-color: #1E2129 !important;
+	}
+
+	.sticky-container,
+	.main-search,
+	.main-heading,
+	.main-page-content {
+		background-color: #1E2129 !important;
 	}
 
 	* {
@@ -419,6 +467,7 @@ url(about:newtab) {
 
 	.addon.card {
 		border-radius: 0px !important;
+		background-color: #262A34 !important;
 	}
 
 	:root {
@@ -471,7 +520,7 @@ url(about:newtab) {
 	}
 
 	#page-options panel-list {
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		font-size: 14px !important;
 		border: none !important;
 	}
@@ -486,13 +535,11 @@ url(about:newtab) {
 		margin-inline: 5px !important;
 	}
 
-}
-
-* {
-	scrollbar-color: dodgerblue black !important;
-	scrollbar-width: thin !important;
-	scrollbar-highlight-color: rgba(30, 143, 255, 0.5) !important;
-
+	/*
+	.more-options-button {
+		background: transparent !important;
+	}
+*/
 }
 
 /*
@@ -501,7 +548,6 @@ url(about:newtab) {
 	opacity: 0 !important;
 }*/
 @-moz-document url("http://www.w3.org/1999/xhtml") {
-
 	html|input.urlbar-scheme {
 		display: none !important;
 	}
@@ -517,7 +563,164 @@ url(about:newtab) {
 	scrollbar {
 		scrollbar-color: dodgerblue black !important;
 		scrollbar-width: thin !important;
-		scrollbar-highlight-color: rgba(30, 143, 255, 0.5) !important;
+
 	}
 
+}
+
+* {
+	scrollbar-color: dodgerblue black !important;
+	scrollbar-width: thin !important;
+	scrollbar-highlight-color: rgb(140, 197, 255) !important;
+
+}
+
+/*
+@-moz-document url-prefix("about:neterror") {
+	body {
+		background-color: green !important;
+	}
+
+	#errorPageContainer {
+		background-color: blue !important;
+	}
+}
+*/
+@-moz-document url(about:blank),
+url-prefix(about:newtab),
+url(moz-extension://5ca479e7-c3d7-4443-b6bd-b8e95d3e0794/html/newtab.html) {
+
+	html:not(#adblock-plus0-epicker),
+	html:not(#adblock-plus0-epicker) body,
+	#newtab-customize-overlay {
+		background: #1E2129 !important;
+		color: white !important;
+	}
+}
+
+@-moz-document url("about:home"),
+url("about:newtab") {
+	.outer-wrapper {
+		background-color: #1E2129 !important;
+	}
+}
+
+@-moz-document url-prefix("about:addons") {
+	#categories {
+
+		background-color: #1E2129 !important;
+	}
+
+	#categories>richlistitem {
+
+		background-color: #1E2129 !important;
+
+	}
+
+	#category-box {
+
+		background-color: #1E2129 !important;
+	}
+}
+
+/*------ HTTPS EVERYWHERE ADDON ------*/
+@-moz-document url-prefix("moz-extension://12cd9013-8223-41e7-98ff-8af828035706/") {
+
+	html,
+	body {
+		background: #1E2129 !important;
+		color: #ccc !important
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: #fff !important
+	}
+
+	label {
+		color: #ccc !important
+	}
+
+	button,
+	input[type="button"] {
+		-moz-appearance: none !important;
+		border-radius: 3px !important;
+		background-color: #555 !important;
+		color: #ddd !important;
+		border: none !important;
+		padding: 5px !important;
+		margin: 3px !important
+	}
+
+	button:hover,
+	input[type="button"]:hover {
+		background-color: #222 !important;
+		color: #fff !important;
+		box-shadow: none !important
+	}
+
+	a:link,
+	a {
+		color: dodgerblue !important
+	}
+
+	a:visited {
+		color: #0070aa !important
+	}
+
+	a:hover {
+		color: #0ff !important
+	}
+
+	a:active {
+		color: #0050aa !important
+	}
+
+	input[type="text"] {
+		-moz-appearance: none !important;
+		background-color: #444 !important;
+		border: 1px solid #666 !important;
+		color: #fff !important;
+		margin: 3px !important
+	}
+
+	input[type="text"]:focus {
+		border: 1px solid dodgerblue !important
+	}
+
+	input[type="text"][disabled] {
+		color: #aaa !important
+	}
+}
+
+/* uBlock Origin */
+#ublock0_raymondhill_net-browser-action label {
+	color: white !important;
+	background-color: dodgerblue !important;
+	opacity: 1 !important;
+}
+
+@-moz-document url-prefix("about:restartrequired") {
+	body {
+		background-color: #1E2129 !important;
+	}
+}
+
+@-moz-document url-prefix("about:debugging") {
+	body {
+		background-color: #1E2129 !important;
+		color: white !important;
+	}
+
+	li.card.debug-target-item.qa-debug-target-item {
+		background-color: #263238 !important;
+		color: white !important;
+
+	}
+
+	button.default-button.qa-debug-target-inspect-button {
+		color: white !important;
+		background-color: dodgerblue !important;
+	}
 }
