@@ -1,15 +1,22 @@
 #browserContainer {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
+	/* #15202B */
 }
 
 #tabbrowser-tabpanels {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 ::selection {
 	background: dodgerblue !important;
 	color: white !important;
 }
+
+/* overflow button 
+#nav-bar-overflow-button {
+	list-style-image: url("chrome://browser/skin/chevron.svg") !important;
+}
+*/
 
 /* Tweaks for Ctrl+Tab */
 
@@ -106,7 +113,7 @@ tabPreview-canvas element {
 identity-popup-security-content,
 .identity-popup-section,
 #identity-popup-securityView-footer {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	color: #ffffff !important;
 }
 
@@ -141,7 +148,13 @@ identity-popup-security-content,
 	border-image-slice: 0 !important;
 }
 
-#extension-icon,
+#tracking-protection-icon-container {
+	/*visibility: collapse !important;*/
+	border: 0px solid transparent !important;
+}
+
+/*
+#extension-icon,*/
 #identity-icon-label {
 	display: none !important;
 }
@@ -176,7 +189,7 @@ identity-popup-security-content,
 
 #popup-mainView-panel {
 	opacity: 1 !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 #protections-popup {
@@ -186,21 +199,21 @@ identity-popup-security-content,
 
 #protections-popup-tp-switch-section {
 	opacity: 1 !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 #tracking-protection-container {
 	opacity: 1 !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 #protections-popup-mainView-panel-header {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	color: inherit !important;
 }
 
 #protections-popup-footer {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 .protections-popup-category:-moz-focusring,
@@ -214,7 +227,7 @@ identity-popup-security-content,
 }
 
 /*--------------------About firefox ---------------------------------*/
-@-moz-document url("chrome://browser/content/aboutDialog.xul") {
+@-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	#leftBox {
 		background-image: url("foxy.gif") !important;
 		background-position: left !important;
@@ -245,8 +258,8 @@ identity-popup-security-content,
 	font-style: normal !important;
 }
 
-/*---------------------------------------------------------------------*/
 
+/*------------------------------------------------------------------------------*/
 #nav-bar {
 	box-shadow: none !important;
 }
@@ -319,12 +332,8 @@ identity-popup-security-content,
 	font-size-adjust: inherit !important;
 	font-weight: normal !important;
 	color: dodgerblue !important;
-	border: 0px solid black !important;
+	border: 1px solid black !important;
 	border-radius: 0px !important;
-}
-
-#statuspanel {
-	transition: none !important;
 }
 
 #statuspanel {
@@ -393,9 +402,11 @@ identity-popup-security-content,
 	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF92SDU2eGE0aWxxcmgzT2xoaUNsMGpRTnNpV0dGNWZuTiI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF92SDU2eGE0aWxxcmgzT2xoaUNsMGpRTnNpV0dGNWZuTikiPjxwYXRoIGQ9IiBNIDAgOCBDIDAgMy41ODUgMy41ODUgMCA4IDAgQyAxMi40MTUgMCAxNiAzLjU4NSAxNiA4IEMgMTYgMTIuNDE1IDEyLjQxNSAxNiA4IDE2IEMgMy41ODUgMTYgMCAxMi40MTUgMCA4IFogIE0gOC44ODYgNS4yMzQgQyA4Ljg4NiAzLjk5IDkuODk2IDIuOTc5IDExLjE0IDIuOTc5IEMgMTIuMzg0IDIuOTc5IDEzLjM5NSAzLjk5IDEzLjM5NSA1LjIzNCBDIDEzLjM5NSA2LjMwNyAxMi42NDIgNy4yMDYgMTEuNjM3IDcuNDMzIEMgMTEuNDc3IDcuNDY5IDExLjMxMSA3LjQ4OCAxMS4xNCA3LjQ4OCBDIDkuODk2IDcuNDg4IDguODg2IDYuNDc4IDguODg2IDUuMjM0IFogIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9InJnYigxMzIsMTkzLDI1NSkiLz48L2c+PC9zdmc+") !important;
 }
 
+/*
 #tab-close-button:hover {
 	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF92SDU2eGE0aWxxcmgzT2xoaUNsMGpRTnNpV0dGNWZuTiI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF92SDU2eGE0aWxxcmgzT2xoaUNsMGpRTnNpV0dGNWZuTikiPjxwYXRoIGQ9IiBNIDAgOCBDIDAgMy41ODUgMy41ODUgMCA4IDAgQyAxMi40MTUgMCAxNiAzLjU4NSAxNiA4IEMgMTYgMTIuNDE1IDEyLjQxNSAxNiA4IDE2IEMgMy41ODUgMTYgMCAxMi40MTUgMCA4IFogIE0gOC44ODYgNS4yMzQgQyA4Ljg4NiAzLjk5IDkuODk2IDIuOTc5IDExLjE0IDIuOTc5IEMgMTIuMzg0IDIuOTc5IDEzLjM5NSAzLjk5IDEzLjM5NSA1LjIzNCBDIDEzLjM5NSA2LjMwNyAxMi42NDIgNy4yMDYgMTEuNjM3IDcuNDMzIEMgMTEuNDc3IDcuNDY5IDExLjMxMSA3LjQ4OCAxMS4xNCA3LjQ4OCBDIDkuODk2IDcuNDg4IDguODg2IDYuNDc4IDguODg2IDUuMjM0IFogIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9InJnYigxMzIsMTkzLDI1NSkiLz48L2c+PC9zdmc+") !important;
 }
+*/
 
 #tabbrowser-tabs .tabbrowser-tab:hover .tab-close-button {
 	transform: rotate(2880deg) !important;
@@ -422,7 +433,7 @@ identity-popup-security-content,
 menupopup {
 	-moz-appearance: none !important;
 	padding: 8px 2px 8px 2px !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	color: white !important;
 	border: 0px solid !important;
 	border-radius: 0px !important;
@@ -520,7 +531,7 @@ menulist {
 	-moz-appearance: none !important;
 	padding: 4px 4px 4px 4px !important;
 	border: 0px !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 menulist:hover {
@@ -557,6 +568,12 @@ menulist[open="true"] {
 	transform: rotate(-45deg) scale(0.55);
 }
 
+#btTooltip,
+#un-toolbar-tooltip,
+#tooltip,
+.tooltip,
+#aHTMLTooltip,
+#urlTooltip,
 tooltip {
 	-moz-appearance: none !important;
 	color: yellow !important;
@@ -586,7 +603,7 @@ tooltip {
 
 #urlbar {
 	padding: 0 !important;
-	background: #1f1f1f !important;
+	background: #1E2129 !important;
 }
 
 #urlbar:hover {
@@ -639,9 +656,15 @@ menuitem {
 	color: white !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+
 }
 
-/*-------------------------------------------*/
+#PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
+	fill: brightness(200%) !important;
+	border: none !important;
+	fill-opacity: 100% !important;
+	fill: white !important;
+}
 
 /*---menus-----*/
 #PanelUI-button {
@@ -767,7 +790,7 @@ menuitem .menu-accel {
 
 #PersonalToolbar,
 #nav-bar {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	/*fill: #ffffff !important;
 	opacity: 1 !important;*/
 }
@@ -786,13 +809,61 @@ menuitem .menu-accel {
 
 #PlacesToolbar .bookmark-item {
 	border-radius: 0px !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	color: white !important;
 }
 
-#toolbar-menubar {
-	background-color: black !important;
-	background-image: none !important;
+/*
+:root {
+	background: black !important;
+}
+*/
+#toolbar-menubar,
+#TabsToolbar {
+	background: none !important;
+}
+
+/* Shows window title in menubar */
+/* Enable menubar for correct behavior */
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+	:root:not([sizemode="fullscreen"])>head {
+		display: block;
+		position: fixed;
+		right: 140px;
+		/* Space for window controls */
+		width: calc(100vw - 900px);
+		/* Window width - window control width - menuitem (English) width */
+		text-align: left;
+	}
+
+	head>* {
+		display: none;
+	}
+
+	head>title {
+		display: -moz-box;
+		padding-top: 8px !important;
+		margin-top: 6px !important;
+		max-width: 60vw;
+		overflow-x: -moz-hidden-unscrollable;
+		text-overflow: ellipsis;
+		-moz-box-pack: center;
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		color: dodgerblue !important;
+	}
+
+	@media (-moz-os-version:windows-win10) {
+		:root[sizemode="maximized"]>head>title {
+			padding-top: 10px
+		}
+	}
+}
+
+#navigator-toolbox {
+	z-index: 999;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
+	/* border-bottom: 2px ridge black !important; */
 }
 
 #nav-bar {
@@ -854,9 +925,9 @@ menuitem .menu-accel {
 
 .tab-background[selected="true"] {
 	background-attachment: none !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	opacity: 1 !important;
-	background-image: linear-gradient(#1f1f1f, #1f1f1f) !important;
+	background-image: linear-gradient(#1E2129, #1E2129) !important;
 }
 
 /*--------------------------------------------*/
@@ -871,12 +942,12 @@ menuitem .menu-accel {
 /*----------Hamburger icon -----------*/
 
 #PanelUI-menu-button {
-	list-style-image: url("bars.svg") !important;
+	list-style-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDEzNSAxNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZiI+CiAgICA8cmVjdCB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMjA7MTEwOzEwMDs5MDs4MDs3MDs2MDs1MDs0MDsxNDA7MTIwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieSIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEyMDsxMTA7MTAwOzkwOzgwOzcwOzYwOzUwOzQwOzE0MDsxMjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IgogICAgICAgICAgICAgYmVnaW49IjAuMjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSI2MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0MCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjkwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjEyMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTA7MTU7MjA7MjU7MzA7MzU7NDA7NDU7NTA7MDsxMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgPC9yZWN0Pgo8L3N2Zz4K") !important;
 }
 
 @media (min-resolution: 4dppx) {
 	#PanelUI-menu-button {
-		list-style-image: url("bars.svg") !important;
+		list-style-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDEzNSAxNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZiI+CiAgICA8cmVjdCB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMjA7MTEwOzEwMDs5MDs4MDs3MDs2MDs1MDs0MDsxNDA7MTIwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieSIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEyMDsxMTA7MTAwOzkwOzgwOzcwOzYwOzUwOzQwOzE0MDsxMjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IgogICAgICAgICAgICAgYmVnaW49IjAuMjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSI2MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0MCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjkwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjEyMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTA7MTU7MjA7MjU7MzA7MzU7NDA7NDU7NTA7MDsxMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgPC9yZWN0Pgo8L3N2Zz4K") !important;
 		opacity: 1 !important;
 	}
 }
@@ -912,6 +983,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	margin-inline-end: 2px !important;
 }
 
+
 .toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text {
 	display: -moz-box !important;
 }
@@ -944,7 +1016,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 
 #sidebar {
 	margin: 0 0 0 0 !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	font-family: Fira Sans !important;
 	color: rgb(255, 255, 255) !important;
 }
@@ -955,7 +1027,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 #history-panel,
 #historyTree,
 #downloads-panel {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	color: #ffffff !important;
@@ -1058,7 +1130,7 @@ treechildren::-moz-tree-image(query) {
 #BMB_bookmarksPopup menu[container="true"] .menu-iconic-icon,
 #bookmarksMenu menu[container="true"] .menu-iconic-icon,
 .bookmark-item[container] {
-	list-style-image: url("dossier2.svg") !important;
+	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDQ2IDM4IiB3aWR0aD0iNDZwdCIgaGVpZ2h0PSIzOHB0Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF9ad0J4cEpiU3psYkhQc3oyQ3YxVkNzM2lCZWdwVFcwMyI+PHJlY3Qgd2lkdGg9IjQ2IiBoZWlnaHQ9IjM4Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF9ad0J4cEpiU3psYkhQc3oyQ3YxVkNzM2lCZWdwVFcwMykiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI0NiIgaGVpZ2h0PSIzOCIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIiBmaWxsPSJub25lIi8+PHBhdGggZD0iIE0gMyAwIEMgMS4zNDggMCAwIDEuMzU1IDAgMy4wMTYgTCAwIDkuMDQ3IEwgNDYgOS4wNDcgTCA0NiA3LjAzOCBDIDQ2IDUuMzc2IDQ0LjY1MiA0LjAyIDQzIDQuMDIgTCAxNi4wNDcgNC4wMjYgQyAxNS43NjYgMy45MjcgMTUuMTg4IDMgMTQuODc5IDIuNTA2IEMgMTQuMTEzIDEuMjc3IDEzLjMxNiAwIDEyIDAgTCAzIDAgTCAzIDAgWiAiIGZpbGw9InJnYigyNTUsMjEwLDApIi8+PHBhdGggZD0iIE0gMSAxMC45MiBDIDAuNDQ5IDEwLjkyIDAgMTEuMzEyIDAgMTEuNzkzIEwgMCAzNS4zNzkgQyAwIDM2LjgyNiAxLjM0NCAzOCAzIDM4IEwgNDMgMzggQyA0NC42NTYgMzggNDYgMzYuODI2IDQ2IDM1LjM3OSBMIDQ2IDExLjc5MyBDIDQ2IDExLjMxMiA0NS41NTEgMTAuOTIgNDUgMTAuOTIgTCAxIDEwLjkyIFogIiBmaWxsPSJyZ2IoMjU1LDE1MywwKSIvPjwvZz48L3N2Zz4=") !important;
 
 }
 
@@ -1116,13 +1188,13 @@ treechildren::-moz-tree-image(query) {
 /*----------------------hamburger menu-----------------------------*/
 
 .panel-arrow {
-	fill: #1f1f1f !important;
+	fill: #1E2129 !important;
 	background: transparent !important;
 }
 
 .panel-subview-body {
 	color: #ffffff !important;
-	background: #1f1f1f !important;
+	background: #1E2129 !important;
 	border-color: #ffffff !important;
 }
 
@@ -1131,28 +1203,28 @@ treechildren::-moz-tree-image(query) {
 	fill: dodgerblue !important;
 	border-color: dodgerblue !important;
 	border-radius: 0px !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 .subviewbutton.panel-subview-footer {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	border-top: 0px solid !important;
 }
 
 .panel-header {
-	border-bottom: 1px solid #1f1f1f !important;
-	background: #1f1f1f !important;
+	border-bottom: 1px solid #1E2129 !important;
+	background: #1E2129 !important;
 }
 
 .panel-subview-footer,
 [class^="PanelUI-"] {
 	color: #ffffff !important;
-	background: #1f1f1f !important;
+	background: #1E2129 !important;
 }
 
 .subviewbutton.panel-subview-footer {
-	background-color: #1f1f1f !important;
-	border-top: 1px solid #1f1f1f !important;
+	background-color: #1E2129 !important;
+	border-top: 1px solid #1E2129 !important;
 }
 
 .appMenu-tp-separator,
@@ -1175,6 +1247,7 @@ toolbarseparator {
 panelmultiview .toolbaritem-combined-buttons>label {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+
 }
 
 .PanelUI-subView .toolbaritem-combined-buttons>.subviewbutton-iconic>.toolbarbutton-text {
@@ -1187,7 +1260,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 #editBookmarkPanel menulist menupopup {
 	-moz-appearance: none !important;
 	border: 0px solid #777 !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 #editBookmarkPanel menulist menupopup menuitem {
@@ -1209,7 +1282,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 /* white text in star menu */
 #editBMPanel_folderMenuList {
 	-moz-appearance: none !important;
-	background: #1f1f1f !important;
+	background: #1E2129 !important;
 	color: white !important;
 }
 
@@ -1218,9 +1291,10 @@ panelmultiview .toolbaritem-combined-buttons>label {
 }
 
 .panel-arrow {
-	fill: #1f1f1f !important;
+	fill: #1E2129 !important;
 	background-color: transparent !important;
 	color: white !important;
+
 }
 
 panel #editBookmarkPanel,
@@ -1229,7 +1303,7 @@ panel #editBookmarkPanel,
 	opacity: 1 !important;
 	color: white !important;
 	font-family: Fira Sans !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	/*box-shadow: 0 15px black !important;*/
 }
 
@@ -1330,10 +1404,15 @@ checkbox[disabled]>.checkbox-check {
 	border: none !important;
 }
 
-#PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
-	fill: dodgerblue !important;
-	border: none !important;
-}
+
+/*
+.bookmark-item[label="Sticky"] image {
+	width: 0 !important;
+	height: 0 !important;
+	padding: 0 0 16px 16px !important;
+	background-image: url("error.svg") !important;
+	-moz-image-region: auto !important;
+}*/
 
 #editBookmarkPanel .expander-down,
 #editBookmarkPanel .expander-up {
@@ -1375,14 +1454,13 @@ checkbox[disabled]>.checkbox-check {
 
 .tab-icon-sound[soundplaying] {
 	fill: white !important;
-	list-style-image: url("audio.svg") !important;
+	list-style-image: url("data:image/svg+xml;base64,PCEtLSBCeSBTYW0gSGVyYmVydCAoQHNoZXJiKSwgZm9yIGV2ZXJ5b25lLiBNb3JlIEAgaHR0cDovL2dvby5nbC83QUp6YkwgLS0+Cjxzdmcgd2lkdGg9IjU1IiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgNTUgODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0ZGRiI+CiAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDgwKSI+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIwIiByeD0iMyI+CiAgICAgICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iNC4zcyIKICAgICAgICAgICAgICAgICB2YWx1ZXM9IjIwOzQ1OzU3OzgwOzY0OzMyOzY2OzQ1OzY0OzIzOzY2OzEzOzY0OzU2OzM0OzM0OzI7MjM7NzY7Nzk7MjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPC9yZWN0PgogICAgICAgIDxyZWN0IHg9IjE1IiB3aWR0aD0iMTAiIGhlaWdodD0iODAiIHJ4PSIzIj4KICAgICAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IgogICAgICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIycyIKICAgICAgICAgICAgICAgICB2YWx1ZXM9IjgwOzU1OzMzOzU7NzU7MjM7NzM7MzM7MTI7MTQ7NjA7ODAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPC9yZWN0PgogICAgICAgIDxyZWN0IHg9IjMwIiB3aWR0aD0iMTAiIGhlaWdodD0iNTAiIHJ4PSIzIj4KICAgICAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IgogICAgICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxLjRzIgogICAgICAgICAgICAgICAgIHZhbHVlcz0iNTA7MzQ7Nzg7MjM7NTY7MjM7MzQ7NzY7ODA7NTQ7MjE7NTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPC9yZWN0PgogICAgICAgIDxyZWN0IHg9IjQ1IiB3aWR0aD0iMTAiIGhlaWdodD0iMzAiIHJ4PSIzIj4KICAgICAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IgogICAgICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIycyIKICAgICAgICAgICAgICAgICB2YWx1ZXM9IjMwOzQ1OzEzOzgwOzU2OzcyOzQ1Ozc2OzM0OzIzOzY3OzMwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDwvcmVjdD4KICAgIDwvZz4KPC9zdmc+") !important;
 }
 
 .tab-icon-sound[muted] {
-	fill: dodgerblue !important;
-	/*transform: rotate(-90deg);*/
+	opacity: 0.5 !important;
+	transform: rotate(-90deg);
 	animation: none !important;
-
 }
 
 .tab-icon-sound[soundplaying] {
@@ -1448,13 +1526,13 @@ hbox#sidebar-search-container textbox#search-box {
 #template-container,
 #webext-panels-browser,
 #webextpanels-window {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 }
 
 #sidebarMenu-popup .panel-arrowcontent {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 /*-----------------------------------------------*/
@@ -1482,7 +1560,7 @@ hbox#sidebar-search-container textbox#search-box {
 
 /*---------------------------------library ----------------------------------*/
 
-@-moz-document url(chrome://browser/content/places/places.xul) {
+@-moz-document url(chrome://browser/content/places/places.xhtml) {
 	:root {
 		--magenta-50: #ff1ad9;
 		--magenta-60: #ed00b5;
@@ -1603,7 +1681,7 @@ hbox#sidebar-search-container textbox#search-box {
 		--selected-icon-fill-color: var(--tone-1);
 		--in-content-dark-header-background: var(--tone-9);
 		--secure-connection-color: var(--accent-1);
-		--theme-sidebar-background: #1f1f1f;
+		--theme-sidebar-background: #1E2129;
 		--cm-background: var(--tone-9);
 		--cm-selection: #cfcfcf;
 		--cm-marker: #555;
@@ -1634,7 +1712,7 @@ hbox#sidebar-search-container textbox#search-box {
 	listbox,
 	textbox {
 		-moz-appearance: none !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		/*var(--in-content-box-background) !important;*/
 		color: var(--in-content-page-color) !important;
 		min-height: 20px !important;
@@ -1647,7 +1725,7 @@ hbox#sidebar-search-container textbox#search-box {
 	#editBMPanel_rows>row>hbox>textbox,
 	#editBMPanel_rows>row>textbox,
 	#editBMPanel_tagsSelector {
-		background: #1f1f1f !important;
+		background: #1E2129 !important;
 	}
 
 	#placesToolbar>toolbarbutton {
@@ -1662,7 +1740,7 @@ hbox#sidebar-search-container textbox#search-box {
 	#placesList {
 		-moz-appearance: none !important;
 		color: var(--in-content-page-color) !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 	}
 
 	#placesView>splitter {
@@ -1672,12 +1750,12 @@ hbox#sidebar-search-container textbox#search-box {
 	#places #downloadsRichListBox {
 		-moz-appearance: none !important;
 		color: var(--in-content-page-color) !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 	}
 
 	#detailsDeck {
 		border: none !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		color: var(--in-content-page-color) !important;
 	}
 
@@ -1744,8 +1822,7 @@ hbox#sidebar-search-container textbox#search-box {
 	}
 
 	tree {
-		background-color: #1f1f1f !important;
-		/*var(--in-content-box-background)*/
+		background-color: #1E2129 !important;
 	}
 
 	/*
@@ -1823,7 +1900,7 @@ hbox#sidebar-search-container textbox#search-box {
 /*-------------------anims hover ------------------------------------------------------------*/
 /* Contextual toolbar buttons, only show on hover, this is what matters, the rest of the file are just style tweaks I like
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xhtml");
 
 :root:not([customizing]) #nav-bar toolbarbutton {
 	margin-left: -28px !important;
@@ -1902,20 +1979,16 @@ window:not([chromehidden~="toolbar"]) #urlbar-container>.toolbarbutton-1:-moz-an
 /* Override vertical shifts when moving a tab */
 
 #TabsToolbar[movingtab] {
-	padding-bottom: 0 !important;
+	padding-bottom: 0px !important;
 	overflow: hidden !important;
 }
 
 #TabsToolbar[movingtab]>.tabbrowser-tabs {
-	padding-bottom: 0 !important;
+	padding-bottom: 0px !important;
 }
 
 #TabsToolbar[movingtab]+#nav-bar {
-	margin-top: 0 !important;
-}
-
-#TabsToolbar[movingtab] {
-	padding-bottom: 0px !important;
+	margin-top: 0px !important;
 }
 
 #TabsToolbar[movingtab]>#tabbrowser-tabs {
@@ -1924,16 +1997,20 @@ window:not([chromehidden~="toolbar"]) #urlbar-container>.toolbarbutton-1:-moz-an
 }
 
 /*----------------------------*/
-
-toolbarbutton.bookmark-item:hover {
-	background-color: #1f1f1f !important;
-	border: 0px #1f1f1f solid !important;
+.titlebar-spacer {
+	display: none !important;
 }
 
+toolbarbutton.bookmark-item:hover {
+	background-color: #1E2129 !important;
+	border: 0px #1E2129 solid !important;
+}
+
+/*
 .titlebar-spacer #TabsToolbar {
 	margin-bottom: 0px !important;
 }
-
+*/
 #navigator-toolbox::after {
 	border-bottom: 0px !important;
 }
@@ -1993,6 +2070,26 @@ toolbarbutton.bookmark-item:hover {
 	background-color: #1e8fff50 !important;
 }
 
+/* tab fill 
+.tab-background {
+	background-image: none !important;
+	overflow: hidden;
+}
+
+.tab-background:after {
+	content: '';
+	width: auto !important;
+	height: 38px !important;
+	background-color: #1e8fff50 !important;
+	display: flex !important;
+	transform: translateX(-230px) !important;
+	transition: all 200ms 100ms ease-in-out !important;
+}
+
+.tabbrowser-tab:hover>.tab-stack>.tab-background:after {
+	transform: translateX(0) !important;
+}
+*/
 /*-------------------------------------*/
 #PersonalToolbar {
 	transition: margin 180ms linear !important;
@@ -2180,37 +2277,40 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 }
 
 /*---------------------------------------------------------------*/
-.bookmark-item[container="true"] [label="Divers "] {
-	list-style-image: url("dossier1.svg") !important;
-}
-
-.bookmark-item[container="true"] [label="BD "] {
-	list-style-image: url("dossier1.svg") !important;
-}
-
-.bookmark-item[container="true"] [label="Perso "] {
-	list-style-image: url("dossier1.svg") !important;
-}
-
+.bookmark-item[container="true"] [label="Divers "],
+.bookmark-item[container="true"] [label="BD "],
+.bookmark-item[container="true"] [label="Perso "],
 .bookmark-item[container="true"] [label="Code "] {
-	list-style-image: url("dossier1.svg") !important;
+	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDQ2IDM4IiB3aWR0aD0iNDZwdCIgaGVpZ2h0PSIzOHB0Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF9iWklZdkNoMXU3WkRRTUtGTVpuZjREODVwTXF4VUNDSSI+PHJlY3Qgd2lkdGg9IjQ2IiBoZWlnaHQ9IjM4Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF9iWklZdkNoMXU3WkRRTUtGTVpuZjREODVwTXF4VUNDSSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI0NiIgaGVpZ2h0PSIzOCIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIiBmaWxsPSJub25lIi8+PHBhdGggZD0iIE0gMyAwIEMgMS4zNDggMCAwIDEuMzU1IDAgMy4wMTYgTCAwIDkuMDQ3IEwgNDYgOS4wNDcgTCA0NiA3LjAzOCBDIDQ2IDUuMzc2IDQ0LjY1MiA0LjAyIDQzIDQuMDIgTCAxNi4wNDcgNC4wMjYgQyAxNS43NjYgMy45MjcgMTUuMTg4IDMgMTQuODc5IDIuNTA2IEMgMTQuMTEzIDEuMjc3IDEzLjMxNiAwIDEyIDAgTCAzIDAgTCAzIDAgWiAiIGZpbGw9InJnYigzMCwxNDQsMjU1KSIvPjxwYXRoIGQ9IiBNIDEgMTAuOTIgQyAwLjQ0OSAxMC45MiAwIDExLjMxMiAwIDExLjc5MyBMIDAgMzUuMzc5IEMgMCAzNi44MjYgMS4zNDQgMzggMyAzOCBMIDQzIDM4IEMgNDQuNjU2IDM4IDQ2IDM2LjgyNiA0NiAzNS4zNzkgTCA0NiAxMS43OTMgQyA0NiAxMS4zMTIgNDUuNTUxIDEwLjkyIDQ1IDEwLjkyIEwgMSAxMC45MiBMIDEgMTAuOTIgWiAiIGZpbGw9InJnYigxMzQsMTk0LDI1NSkiLz48L2c+PC9zdmc+") !important;
 }
 
 /* Removes 1px border underneath the navbar */
-
+/*
 #navigator-toolbox::after {
 	border-bottom: 0px !important;
 }
+*/
 
 /* Removes 1px borders around the selected tab*/
-
+/*
 .tab-background {
 	margin-inline-start: -1px !important;
 	margin-inline-end: -1px !important;
 	border: 0 !important;
 	border-image-width: 0 !important;
 }
+*/
 
+/* add arrow folders bookmarbar 
+#PlacesToolbarItems>.bookmark-item[container]:after {
+	content: '^ ';
+	font-weight: 250;
+	margin-left: 5px;
+	display: block;
+	transform: scale(1.75, -1.3);
+	color: white;
+}
+*/
 /* ################################################################################################# */
 /* TAB ANIMATION: LOADING PROGRESS LINE INDICATOR */
 /* ################################################################################################# */
@@ -2263,9 +2363,9 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 /* Dark library, page-info and bookmark-properties */
 /* Color scheme matches default dark theme */
 
-@-moz-document url(chrome://browser/content/places/places.xul),
-url(chrome://browser/content/pageinfo/pageInfo.xul),
-url(chrome://browser/content/places/bookmarkProperties.xul) {
+@-moz-document url(chrome://browser/content/places/places.xhtml),
+url(chrome://browser/content/pageinfo/pageInfo.xhtml),
+url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 
 	#placesToolbox,
 	#placesView,
@@ -2274,7 +2374,7 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	#topBar,
 	tree {
 		-moz-appearance: none !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		color: white !important;
 	}
 
@@ -2292,13 +2392,13 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	menu,
 	#permList {
 		-moz-appearance: none !important;
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		color: white !important;
 	}
 
 	textbox,
 	richlistbox {
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 	}
 
 	treecol:not([hideheader]) {
@@ -2311,7 +2411,7 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 
 	treechildren::-moz-tree-row(multicol, odd),
 	#permList {
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 	}
 
 	radiogroup>radio[selected],
@@ -2366,7 +2466,7 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	}
 
 	#editBMPanel_tagsSelector>richlistitem>image {
-		background-color: var(--toolbar-bgcolor, #1f1f1f) !important;
+		background-color: var(--toolbar-bgcolor, #1E2129) !important;
 		margin: 1px !important;
 		border-color: graytext !important;
 		border-radius: 0px !important;
@@ -2447,7 +2547,7 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	color: red !important;
 }
 
-/*-----------------zoom button tweaks--------------------------*/
+/*-----------------zoom & copy paste button tweaks--------------------------*/
 toolbar #zoom-controls>separator {
 	color: transparent !important;
 }
@@ -2457,22 +2557,44 @@ toolbar #zoom-controls>separator {
 	font-weight: bold !important;
 	padding-top: 6px !important;
 	color: rgb(118, 187, 255) !important;
-	margin-left: -6px !important;
+	margin-left: -10px !important;
 }
 
-toolbar #zoom-in-button {
+#zoom-in-button {
 	-moz-padding-start: 0px !important;
 	fill: dodgerblue !important;
+	margin-left: -10px !important;
 
 }
 
-toolbar #zoom-out-button {
+#zoom-out-button {
 	-moz-padding-end: 0px !important;
 	fill: dodgerblue !important;
+	/*margin-left: -6px !important;*/
 }
 
 toolbar #fullscreen-button {
 	fill: dodgerblue !important;
+	/*margin-left: -6px !important;*/
+}
+
+#cut-button {
+	fill: dodgerblue !important;
+
+}
+
+#copy-button {
+	fill: dodgerblue !important;
+	margin-left: -6px !important;
+}
+
+#paste-button {
+	fill: dodgerblue !important;
+	margin-left: -6px !important;
+}
+
+.toolbaritem-combined-buttons>separator {
+	display: none !important;
 }
 
 /* Hamburger Menu Zoom Control */
@@ -2519,9 +2641,9 @@ toolbar #fullscreen-button {
 	border-right: 0px !important;
 }
 
-@-moz-document url(chrome://global/content/alerts/alert.xul) {
+@-moz-document url(chrome://global/content/alerts/alert.xhtml) {
 	#alertBox {
-		background-color: #1f1f1f !important;
+		background-color: #1E2129 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -2548,19 +2670,12 @@ toolbar #fullscreen-button {
 	/* quarter second delay on entry*/
 }
 
-.tab-drop-indicator {
-	list-style-image: url("chrome://global/skin/icons/arrow-up-12.svg") !important;
-	-moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
-	fill: dodgerblue !important;
-	margin-bottom: -10px !important;
-	z-index: 6 !important;
-	width: 17px !important;
-	max-width: 17px !important;
-}
+/***************************************/
+
 
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
 	max-height: calc(40px * 10) !important;
-	background: #1f1f1f !important;
+	background: #1E2129 !important;
 }
 
 /* Font-sizes */
@@ -2573,18 +2688,18 @@ toolbar #fullscreen-button {
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
 	font-family: "Fira Sans" !important;
 	font-size: 14px !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 /* Dark Themed Drop-down */
 /* Dark Theme - Firefox 48+ */
 
 #urlbarview-results {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 #PopupAutoComplete .ac-site {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 }
 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem {
@@ -2595,8 +2710,8 @@ toolbar #fullscreen-button {
 .autocomplete-richlistitem .ac-action,
 .autocomplete-richlistitem .ac-separator {
 	color: white !important;
-	background-color: #1f1f1f !important;
-	background: #1f1f1f !important;
+	background-color: #1E2129 !important;
+	background: #1E2129 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 }
@@ -2618,8 +2733,8 @@ toolbar #fullscreen-button {
 	color: white !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	background-color: #1f1f1f !important;
-	background: #1f1f1f !important;
+	background-color: #1E2129 !important;
+	background: #1E2129 !important;
 }
 
 .autocomplete-richlistitem[selected="true"] .ac-url,
@@ -2627,7 +2742,7 @@ toolbar #fullscreen-button {
 	color: dodgerblue !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 
 }
 
@@ -2682,7 +2797,7 @@ toolbar #fullscreen-button {
 /* Firefox 70+ */
 
 #urlbar-container {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	transform: translateY(0);
 	position: relative;
 	z-index: 10;
@@ -2704,7 +2819,7 @@ toolbar #fullscreen-button {
 .urlbarView {
 	top: calc(100% - 5px) !important;
 	width: 100% !important;
-	background: #1f1f1f !important;
+	background: #1E2129 !important;
 	/*border-width: 0 1px 1px 1px !important;	
 	border-style: solid;*/
 	border-color: transparent !important;
@@ -2787,8 +2902,8 @@ input:not(#urlbar-input) {
 	border-radius: 0px !important;
 	margin: 3px 0 !important;
 	padding: 9px !important;
-	border: 1px solid #1f1f1f !important;
-	background-color: #1f1f1f !important;
+	border: 1px solid #1E2129 !important;
+	background-color: #1E2129 !important;
 }
 
 #trackingProtectionShield {
@@ -2796,7 +2911,7 @@ input:not(#urlbar-input) {
 }
 
 #customization-panel-container>.panel-arrowcontent {
-	border-color: #1f1f1f !important;
+	border-color: #1E2129 !important;
 	border: 1px !important;
 }
 
@@ -2805,81 +2920,62 @@ input:not(#urlbar-input) {
 #customization-panelDescription,
 #customize-mode-overflow-list-description,
 #widget-overflow-fixed-list {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	color: white !important;
 	border: 0px !important;
 	font-family: Fira Sans !important;
 }
 
 #customization-footer {
-	background-color: black !important;
+	background-color: #0f0f0f !important;
 	font-family: Fira Sans !important;
 }
 
 :root {
 	--toolbar-bgcolor: #303030 !important;
 	--toolbar-non-lwt-bgcolor: #303030 !important;
-	--toolbar-non-lwt-textcolor: white !important
+	--toolbar-non-lwt-textcolor: white !important;
 }
 
 /* The customization page button colors */
 .customizationmode-button {
 	-moz-appearance: none !important;
-	border-radius: 3px !important;
-	background: #555 !important;
-	color: #ddd !important;
-	border: none !important
+	border-radius: 0px !important;
+	background: #1e8fff7c !important;
+	color: white !important;
+	border: none !important;
 }
 
 .customizationmode-button:hover {
-	background: #444 !important;
-	color: #fff !important
+	background: dodgerblue !important;
+	color: white !important;
 }
 
 .customization-lwtheme-menu-footeritem {
 	border-right: 1px solid #222 !important;
-	background: linear-gradient(#555, #333) !important;
-	color: #ddd !important
+	background: linear-gradient(#555, #1E2129) !important;
+	color: white !important;
 }
 
 .customization-lwtheme-menu-footeritem:hover {
-	background: linear-gradient(#333, #555) !important;
-	color: #fff !important
+	background: linear-gradient(#1E2129, #555) !important;
+	color: #fff !important;
 }
 
 .button-menu-dropmarker .dropmarker-icon {
-	filter: invert(75%) !important
+	filter: invert(75%) !important;
 }
 
 #customization-done-button {
 	-moz-appearance: none !important;
 	border-radius: 0px !important;
-	background: #1e90ff !important;
-	color: #fff !important;
-	border: none !important
+	background: #1e90ff7c !important;
+	color: white !important;
+	border: none !important;
 }
 
 #customization-done-button:hover {
-	background: #1040A0 !important
-}
-
-#customization-lwtheme-menu-footer {
-	border-top: none !important
-}
-
-/* This is a fix for systems with a custom OS theme */
-.customizationmode-button {
-	padding: 0.5em !important
-}
-
-#customization-done-button {
-	padding: 0.5em 3em 0.5em 3em !important
-}
-
-#PopupAutoComplete image.ac-site-icon {
-	min-width: 24px !important;
-	height: 24px !important;
-	max-height: 24px !important;
+	background: dodgerblue !important;
 }
 
 @-moz-document url(about:blank),
@@ -2889,7 +2985,7 @@ url(moz-extension://5ca479e7-c3d7-4443-b6bd-b8e95d3e0794/html/newtab.html) {
 	html:not(#adblock-plus0-epicker),
 	html:not(#adblock-plus0-epicker) body,
 	#newtab-customize-overlay {
-		background: #1f1f1f !important;
+		background: #1E2129 !important;
 		color: white !important;
 	}
 }
@@ -2904,201 +3000,9 @@ url(moz-extension://5ca479e7-c3d7-4443-b6bd-b8e95d3e0794/html/newtab.html) {
 	border: none !important;
 }
 
-#zoom-out-button {
-	margin-right: -6px !important;
-}
-
-#zoom-reset-button label {
-	margin-left: -6px !important;
-}
-
-#zoom-in-button {
-	margin-left: -12px !important;
-}
-
-#cut-button {
-	fill: dodgerblue !important;
-	margin-right: -6px !important;
-}
-
-#copy-button {
-	fill: dodgerblue !important;
-}
-
-#paste-button {
-	fill: dodgerblue !important;
-	margin-left: -6px !important;
-}
-
-.toolbaritem-combined-buttons>separator {
-	display: none !important;
-}
-
-/*-----------------------*/
-/*Sliding bookmarks bar*/
-/*Make bookmarks bar slide in*/
-/* default state 
-#nav-bar~#PersonalToolbar:not([customizing]) {
-	position: fixed !important;
-	display: block !important;
-	height: 24px !important;
-	width: 100% !important;
-	transform: translateY(-95%) !important;
-	transition: transform 0.25s !important;
-}
-
-#nav-bar {
-	z-index: 1 !important;
-}
-
-/* on hover 
-#navigator-toolbox:hover>#nav-bar~#PersonalToolbar:not([customizing]) {
-	transform: translateY(0) !important;
-}
-
-/* Menubar hidden - Alt key pressed 
-#toolbar-menubar:not([inactive="true"])~#nav-bar~#PersonalToolbar:not([customizing]) {
-	transform: translateY(0);
-}
-*/
-
-#navigator-toolbox {
-	z-index: 999;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
-	/* border-bottom: 2px ridge black !important; */
-}
-
-/*------------findbar -------------------*/
-@keyframes scale-in {
-	0% {
-		transform: scaleY(0);
-	}
-
-	100% {
-		transform: scaleY(1);
-	}
-}
-
-@keyframes scale-out {
-	0% {
-		transform: scaleY(1);
-	}
-
-	100% {
-		transform: scaleY(0);
-	}
-}
-
-.browserContainer {
-	position: relative !important;
-}
-
-findbar {
-	animation: 0.2s scale-in;
-	transform-origin: top center;
-	background: #1f1f1f !important;
-	padding: 4px 6px 6px 6px !important;
-	border: 1px solid #1f1f1f !important;
-	border-top-width: 0 !important;
-	border-radius: 0 0 0 0 !important;
-	position: absolute !important;
-	top: -2px !important;
-	right: 38px !important;
-	display: block;
-}
-
-findbar[hidden="true"] {
-	animation: 0.2s scale-out !important;
-}
-
-findbar .findbar-container {
-	padding: 0 !important;
-	padding-inline-start: 0 !important;
-	padding-inline-end: 0 !important;
-}
-
-findbar .findbar-container .findbar-textbox {
-	padding: 6px 8px !important;
-	background-color: var(--url-and-searchbar-background-color) !important;
-	border-color: var(--backbutton-border-color) !important;
-}
-
-findbar .findbar-container .findbar-textbox[status="notfound"] {
-	background-color: #E74C3C !important;
-	color: white !important;
-}
-
-findbar .findbar-container .findbar-find-previous,
-findbar .findbar-container .findbar-find-next {
-	background: transparent !important;
-	border-color: var(--backbutton-border-color) !important;
-}
-
-findbar .findbar-container .findbar-find-previous:hover,
-findbar .findbar-container .findbar-find-previous:focus,
-findbar .findbar-container .findbar-find-next:hover,
-findbar .findbar-container .findbar-find-next:focus {
-	background-color: var(--toolbarbutton-hover-background) !important;
-}
-
-findbar .findbar-button {
-	border: 1px solid var(--backbutton-border-color) !important;
-	border-radius: 0px !important;
-}
-
-findbar .findbar-closebutton {
-	margin-right: 4px !important;
-	padding-inline-end: 0 !important;
-	position: relative;
-	top: 6px !important;
-}
-
-window[lwtheme="true"] findbar {
-	background: var(--lwt-header-image) !important;
-	background-attachment: fixed !important;
-	background-position: top right !important;
-	top: -1px !important;
-}
-
-window[lwtheme="true"] findbar:before {
-	display: block !important;
-	content: '';
-	position: absolute !important;
-	top: 0 !important;
-	left: 0 !important;
-	z-index: 0;
-	width: 100% !important;
-	height: 100% !important;
-	background-color: var(--toolbar-bgcolor) !important;
-}
-
-window[lwtheme="true"] findbar .findbar-container,
-window[lwtheme="true"] findbar .findbar-closebutton {
-	position: relative !important;
-	z-index: 1;
-}
-
-window[lwtheme="true"] findbar .findbar-textbox {
-	color: var(--lwt-text-color) !important;
-	background-color: var(--toolbar-bgcolor) !important;
-}
-
-window[lwtheme="true"] findbar .findbar-button[checked="true"] {
-	font-weight: bold !important;
-	background-color: var(--toolbar-bgcolor) !important;
-}
-
-window[lwtheme="true"] findbar .findbar-find-status,
-window[lwtheme="true"] findbar .found-matches {
-	color: var(--lwt-text-color) !important;
-}
-
-.browserContainer>findbar {
-	border-top: none !important;
-}
-
 /*-----------------------------------*/
-/* downloads button color */
+/* downloads button color            */
+/*-----------------------------------*/
 
 #downloads-button[attention="success"] #downloads-indicator-icon {
 	display: visible !important;
@@ -3135,24 +3039,36 @@ window[lwtheme="true"] findbar .found-matches {
 
 #downloads-button>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-progress-outer>#downloads-indicator-progress-inner {
 	fill: red !important;
+	border: 1px !important;
+	border-color: red !important;
 }
 
+/*--------------------scrollbar tweaks -----------------------------*/
 scrollbar {
 	scrollbar-color: dodgerblue black !important;
 	scrollbar-width: thin !important;
-	scrollbar-highlight-color: rgba(30, 143, 255, 0.5) !important;
+	scrollbar-highlight-color: rgb(140, 197, 255) !important;
 }
 
 * {
 	scrollbar-color: dodgerblue black !important;
 	scrollbar-width: thin !important;
-	scrollbar-highlight-color: rgba(30, 143, 255, 0.5) !important;
+
 }
 
 .scrollbutton-up[orient="horizontal"]~spacer {
 	border-width: 0px !important;
 	opacity: 0 !important;
 }
+
+/*--------------------*/
+/* hide scrollbar  
+:-moz-any(#content, #appcontent) browser {
+	margin-right: -17px !important;
+	overflow-y: scroll;
+	margin-bottom: 0px !important;
+	overflow-x: scroll;
+}*/
 
 /* Color private browsing window 
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar {
@@ -3188,17 +3104,13 @@ scrollbar {
 }
 */
 
-#tracking-protection-icon-container {
-	/*visibility: collapse !important;*/
-	border: 0px solid transparent !important;
-}
-
+/*
 #nav-bar {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	fill: #ffffff !important;
 	opacity: 1 !important;
 }
-
+*/
 .toolbarbutton-animatable-box,
 .toolbarbutton-1 {
 	fill-opacity: 1 !important;
@@ -3206,7 +3118,7 @@ scrollbar {
 
 #PersonalToolbar,
 #nav-bar {
-	background-color: #1f1f1f !important;
+	background-color: #1E2129 !important;
 	fill: #ffffff !important;
 	opacity: 1 !important;
 }
@@ -3215,4 +3127,212 @@ scrollbar {
 .tabbrowser-tab .tab-icon-image[src="data:image/x-icon;base64,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AAAAAAAAKysrBhYWGUcWFhiVFRUYvxUVGNkWFhfzFhYX8xUVGNkVFRi/FhYYlRYWGUcrKysGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="] {
 	/* Makes Github icon white on dark theme */
 	filter: invert(100%) drop-shadow(0px 0px 5px white) !important;
+}
+
+.tab-icon-image {
+	filter: drop-shadow(0px 0px 5px white) !important;
+}
+
+/*
+.scrollbutton-up[orient="horizontal"]~spacer {
+	width: 38px !important;
+	
+	background-size: 37px 100% !important;
+
+}
+*/
+/*
+html[windowtype="Toolkit:PictureInPicture"] {
+	border: 1px solid dodgerblue !important;
+}
+*/
+/*
+html[windowtype="Toolkit:PictureInPicture"] .player-holder {
+	height: calc(100vh - 20px) !important;
+}*/
+
+@-moz-document url("http://www.w3.org/1999/xhtml") {
+	html|input.urlbar-scheme {
+		display: none !important;
+	}
+}
+
+@keyframes scale-in {
+	0% {
+		transform: scaleY(0);
+	}
+
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes scale-out {
+	0% {
+		transform: scaleY(1);
+	}
+
+	100% {
+		transform: scaleY(0);
+	}
+}
+
+.browserContainer {
+	position: relative;
+}
+
+findbar {
+	animation: 0.2s scale-in;
+	transform-origin: top center;
+	background: #1E2129 !important;
+	padding: 4px 6px 6px 6px;
+	border: 1px solid #1E2129;
+	border-top-width: 0;
+	border-radius: 0 0 var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius);
+	position: absolute;
+	top: -2px;
+	right: 38px;
+	display: block;
+}
+
+findbar[hidden="true"] {
+	animation: 0.2s scale-out;
+}
+
+findbar .findbar-container {
+	padding: 0 !important;
+	padding-inline-start: 0 !important;
+	padding-inline-end: 0 !important;
+}
+
+findbar .findbar-container .findbar-textbox {
+	padding: 6px 8px !important;
+	background-color: #1e90ff80 !important;
+	border-color: var(--backbutton-border-color) !important;
+}
+
+findbar .findbar-container .findbar-textbox[status="notfound"] {
+	background-color: #E74C3C !important;
+	color: white !important;
+}
+
+findbar .findbar-container .findbar-find-previous,
+findbar .findbar-container .findbar-find-next {
+	background: transparent !important;
+	border-color: var(--backbutton-border-color) !important;
+}
+
+findbar .findbar-container .findbar-find-previous:hover,
+findbar .findbar-container .findbar-find-previous:focus,
+findbar .findbar-container .findbar-find-next:hover,
+findbar .findbar-container .findbar-find-next:focus {
+	background-color: #1e90ff !important;
+}
+
+findbar .findbar-button {
+	border: 1px solid var(--backbutton-border-color);
+	border-radius: var(--toolbarbutton-border-radius) !important;
+}
+
+findbar .findbar-closebutton {
+	margin-right: 4px !important;
+	padding-inline-end: 0 !important;
+	position: relative;
+	top: 6px;
+}
+
+window[lwtheme="true"] findbar {
+	background: var(--lwt-header-image) !important;
+	background-attachment: fixed !important;
+	background-position: top right !important;
+	top: -1px;
+}
+
+window[lwtheme="true"] findbar:before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #1E2129;
+}
+
+window[lwtheme="true"] findbar .findbar-container,
+window[lwtheme="true"] findbar .findbar-closebutton {
+	position: relative;
+	z-index: 1;
+}
+
+window[lwtheme="true"] findbar .findbar-textbox {
+	color: white !important;
+	background-color: #1E2129 !important;
+}
+
+
+window[lwtheme="true"] findbar .findbar-button[checked="true"] {
+	font-weight: bold;
+	background-color: #1E2129 !important;
+}
+
+window[lwtheme="true"] findbar .findbar-find-status,
+window[lwtheme="true"] findbar .found-matches {
+	color: var(--lwt-text-color) !important;
+}
+
+.browserContainer>findbar {
+	border-top: none !important;
+}
+
+
+/*
+#statuspanel-label {
+	display: none !important;
+}
+*/
+/*
+button[class="dialog-button"] {
+	-moz-appearance: none !important;
+	background-color: black !important;
+	color: white !important;
+}
+*/
+/*
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]) {
+	mask-image: none !important;
+}
+*/
+/* Replace the button background-colors with a glow effect */
+/* Edit the color choices how you see fit */
+
+
+/* Make backgrounds transparent */
+
+.urlbar-icon,
+.urlbar-icon-wrapper,
+toolbar .toolbarbutton-1,
+#tabbrowser-tabs toolbarbutton,
+toolbar toolbarbutton>.toolbarbutton-icon,
+toolbar toolbarbutton>.toolbarbutton-badge-stack,
+.titlebar-button,
+/*#identity-box,
+#tracking-protection-icon-container, */
+.findbar-textbox~toolbarbutton,
+toolbarbutton.scrollbutton-up,
+toolbarbutton.scrollbutton-down {
+	background-color: transparent !important;
+	border-color: transparent !important;
+}
+
+.close-icon {
+	fill-opacity: 0 !important;
+}
+
+/* uBlock Origin */
+#ublock0_raymondhill_net-browser-action label {
+	color: white !important;
+	background-color: dodgerblue !important;
+	opacity: 1 !important;
 }
