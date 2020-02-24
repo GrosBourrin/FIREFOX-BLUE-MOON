@@ -1,10 +1,10 @@
 #browserContainer {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	/* #15202B */
 }
 
 #tabbrowser-tabpanels {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 ::selection {
@@ -113,7 +113,7 @@ tabPreview-canvas element {
 identity-popup-security-content,
 .identity-popup-section,
 #identity-popup-securityView-footer {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	color: #ffffff !important;
 }
 
@@ -189,7 +189,7 @@ identity-popup-security-content,
 
 #popup-mainView-panel {
 	opacity: 1 !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 #protections-popup {
@@ -199,21 +199,21 @@ identity-popup-security-content,
 
 #protections-popup-tp-switch-section {
 	opacity: 1 !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 #tracking-protection-container {
 	opacity: 1 !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 #protections-popup-mainView-panel-header {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	color: inherit !important;
 }
 
 #protections-popup-footer {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 .protections-popup-category:-moz-focusring,
@@ -433,7 +433,7 @@ identity-popup-security-content,
 menupopup {
 	-moz-appearance: none !important;
 	padding: 8px 2px 8px 2px !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	color: white !important;
 	border: 0px solid !important;
 	border-radius: 0px !important;
@@ -531,7 +531,7 @@ menulist {
 	-moz-appearance: none !important;
 	padding: 4px 4px 4px 4px !important;
 	border: 0px !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 menulist:hover {
@@ -603,7 +603,7 @@ tooltip {
 
 #urlbar {
 	padding: 0 !important;
-	background: #1E2129 !important;
+	background: #161925 !important;
 }
 
 #urlbar:hover {
@@ -728,7 +728,7 @@ menuitem {
 
 .tab-text {
 	font-family: Fira Sans !important;
-	color: white !important;
+	text color: white !important;
 	font-size: 14px !important;
 	margin-top: 2px !important;
 }
@@ -790,7 +790,7 @@ menuitem .menu-accel {
 
 #PersonalToolbar,
 #nav-bar {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	/*fill: #ffffff !important;
 	opacity: 1 !important;*/
 }
@@ -809,7 +809,7 @@ menuitem .menu-accel {
 
 #PlacesToolbar .bookmark-item {
 	border-radius: 0px !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	color: white !important;
 }
 
@@ -925,9 +925,9 @@ menuitem .menu-accel {
 
 .tab-background[selected="true"] {
 	background-attachment: none !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	opacity: 1 !important;
-	background-image: linear-gradient(#1E2129, #1E2129) !important;
+	background-image: linear-gradient(#161925, #161925) !important;
 }
 
 /*--------------------------------------------*/
@@ -1016,7 +1016,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 
 #sidebar {
 	margin: 0 0 0 0 !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	font-family: Fira Sans !important;
 	color: rgb(255, 255, 255) !important;
 }
@@ -1027,7 +1027,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 #history-panel,
 #historyTree,
 #downloads-panel {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	color: #ffffff !important;
@@ -1188,43 +1188,35 @@ treechildren::-moz-tree-image(query) {
 /*----------------------hamburger menu-----------------------------*/
 
 .panel-arrow {
-	fill: #1E2129 !important;
+	fill: #161925 !important;
 	background: transparent !important;
 }
 
 .panel-subview-body {
 	color: #ffffff !important;
-	background: #1E2129 !important;
+	background: #161925 !important;
 	border-color: #ffffff !important;
 }
 
-.appMenu-zoomReset-button {
-	color: dodgerblue !important;
-	fill: dodgerblue !important;
-	border-color: dodgerblue !important;
-	border-radius: 0px !important;
-	background-color: #1E2129 !important;
-}
-
 .subviewbutton.panel-subview-footer {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	border-top: 0px solid !important;
 }
 
 .panel-header {
-	border-bottom: 1px solid #1E2129 !important;
-	background: #1E2129 !important;
+	border-bottom: 1px solid #161925 !important;
+	background: #161925 !important;
 }
 
 .panel-subview-footer,
 [class^="PanelUI-"] {
 	color: #ffffff !important;
-	background: #1E2129 !important;
+	background: #161925 !important;
 }
 
 .subviewbutton.panel-subview-footer {
-	background-color: #1E2129 !important;
-	border-top: 1px solid #1E2129 !important;
+	background-color: #161925 !important;
+	border-top: 1px solid #161925 !important;
 }
 
 .appMenu-tp-separator,
@@ -1254,13 +1246,53 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	display: none !important;
 }
 
+/* Hamburger Menu Zoom Control */
+#appMenu-zoom-reduce {
+	background: transparent !important;
+	fill: dodgerblue !important;
+	border: 0px solid dodgerblue !important;
+	border-radius: 0px !important;
+}
+
+#appMenu-zoomReset-button label {
+	background: transparent !important;
+	color: dodgerblue !important;
+	border-radius: 0px !important;
+	font-family: "Fira Sans" !important;
+}
+
+#appMenu-zoomReset-button {
+	background: transparent !important;
+	color: dodgerblue !important;
+	border: 1px solid dodgerblue !important;
+	border-radius: 0px !important;
+}
+
+#appMenu-fullscreen-button {
+	background: transparent !important;
+	color: dodgerblue !important;
+	border: 0px solid #ffffff !important;
+	border-radius: 0px !important;
+}
+
+#appMenu-zoomEnlarge-button {
+	background: transparent !important;
+	fill: dodgerblue !important;
+	border: 0px solid #ffffff !important;
+	border-radius: 0px !important;
+}
+
+.PanelUI-subView .toolbaritem-combined-buttons>.subviewbutton-iconic>.toolbarbutton-text {
+	display: none !important;
+}
+
 /*== image Panel Star ==*/
 /*== Panel Star ==*/
 /* Star Bookmark Panel - Menulist Drop-down: 2 Colors + Border Width and Color */
 #editBookmarkPanel menulist menupopup {
 	-moz-appearance: none !important;
 	border: 0px solid #777 !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 #editBookmarkPanel menulist menupopup menuitem {
@@ -1282,7 +1314,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 /* white text in star menu */
 #editBMPanel_folderMenuList {
 	-moz-appearance: none !important;
-	background: #1E2129 !important;
+	background: #161925 !important;
 	color: white !important;
 }
 
@@ -1291,7 +1323,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 }
 
 .panel-arrow {
-	fill: #1E2129 !important;
+	fill: #161925 !important;
 	background-color: transparent !important;
 	color: white !important;
 
@@ -1303,7 +1335,7 @@ panel #editBookmarkPanel,
 	opacity: 1 !important;
 	color: white !important;
 	font-family: Fira Sans !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	/*box-shadow: 0 15px black !important;*/
 }
 
@@ -1526,13 +1558,13 @@ hbox#sidebar-search-container textbox#search-box {
 #template-container,
 #webext-panels-browser,
 #webextpanels-window {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 }
 
 #sidebarMenu-popup .panel-arrowcontent {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 /*-----------------------------------------------*/
@@ -1681,7 +1713,7 @@ hbox#sidebar-search-container textbox#search-box {
 		--selected-icon-fill-color: var(--tone-1);
 		--in-content-dark-header-background: var(--tone-9);
 		--secure-connection-color: var(--accent-1);
-		--theme-sidebar-background: #1E2129;
+		--theme-sidebar-background: #161925;
 		--cm-background: var(--tone-9);
 		--cm-selection: #cfcfcf;
 		--cm-marker: #555;
@@ -1712,7 +1744,7 @@ hbox#sidebar-search-container textbox#search-box {
 	listbox,
 	textbox {
 		-moz-appearance: none !important;
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 		/*var(--in-content-box-background) !important;*/
 		color: var(--in-content-page-color) !important;
 		min-height: 20px !important;
@@ -1725,7 +1757,7 @@ hbox#sidebar-search-container textbox#search-box {
 	#editBMPanel_rows>row>hbox>textbox,
 	#editBMPanel_rows>row>textbox,
 	#editBMPanel_tagsSelector {
-		background: #1E2129 !important;
+		background: #161925 !important;
 	}
 
 	#placesToolbar>toolbarbutton {
@@ -1740,7 +1772,7 @@ hbox#sidebar-search-container textbox#search-box {
 	#placesList {
 		-moz-appearance: none !important;
 		color: var(--in-content-page-color) !important;
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 	}
 
 	#placesView>splitter {
@@ -1750,12 +1782,12 @@ hbox#sidebar-search-container textbox#search-box {
 	#places #downloadsRichListBox {
 		-moz-appearance: none !important;
 		color: var(--in-content-page-color) !important;
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 	}
 
 	#detailsDeck {
 		border: none !important;
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 		color: var(--in-content-page-color) !important;
 	}
 
@@ -1822,7 +1854,7 @@ hbox#sidebar-search-container textbox#search-box {
 	}
 
 	tree {
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 	}
 
 	/*
@@ -2002,8 +2034,8 @@ window:not([chromehidden~="toolbar"]) #urlbar-container>.toolbarbutton-1:-moz-an
 }
 
 toolbarbutton.bookmark-item:hover {
-	background-color: #1E2129 !important;
-	border: 0px #1E2129 solid !important;
+	background-color: #161925 !important;
+	border: 0px #161925 solid !important;
 }
 
 /*
@@ -2374,7 +2406,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	#topBar,
 	tree {
 		-moz-appearance: none !important;
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 		color: white !important;
 	}
 
@@ -2392,13 +2424,13 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	menu,
 	#permList {
 		-moz-appearance: none !important;
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 		color: white !important;
 	}
 
 	textbox,
 	richlistbox {
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 	}
 
 	treecol:not([hideheader]) {
@@ -2411,7 +2443,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 
 	treechildren::-moz-tree-row(multicol, odd),
 	#permList {
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 	}
 
 	radiogroup>radio[selected],
@@ -2466,7 +2498,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	}
 
 	#editBMPanel_tagsSelector>richlistitem>image {
-		background-color: var(--toolbar-bgcolor, #1E2129) !important;
+		background-color: var(--toolbar-bgcolor, #161925) !important;
 		margin: 1px !important;
 		border-color: graytext !important;
 		border-radius: 0px !important;
@@ -2600,7 +2632,7 @@ toolbar #fullscreen-button {
 /* Hamburger Menu Zoom Control */
 #appMenu-zoomReduce-button {
 	background: transparent !important;
-	color: dodgerblue !important;
+	fill: dodgerblue !important;
 	border: 0px solid dodgerblue !important;
 	border-radius: 0px !important;
 }
@@ -2628,7 +2660,7 @@ toolbar #fullscreen-button {
 
 #appMenu-zoomEnlarge-button {
 	background: transparent !important;
-	color: dodgerblue !important;
+	fill: dodgerblue !important;
 	border: 0px solid #ffffff !important;
 	border-radius: 0px !important;
 }
@@ -2643,7 +2675,7 @@ toolbar #fullscreen-button {
 
 @-moz-document url(chrome://global/content/alerts/alert.xhtml) {
 	#alertBox {
-		background-color: #1E2129 !important;
+		background-color: #161925 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -2675,7 +2707,7 @@ toolbar #fullscreen-button {
 
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
 	max-height: calc(40px * 10) !important;
-	background: #1E2129 !important;
+	background: #161925 !important;
 }
 
 /* Font-sizes */
@@ -2688,18 +2720,18 @@ toolbar #fullscreen-button {
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
 	font-family: "Fira Sans" !important;
 	font-size: 14px !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 /* Dark Themed Drop-down */
 /* Dark Theme - Firefox 48+ */
 
 #urlbarview-results {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 #PopupAutoComplete .ac-site {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem {
@@ -2710,8 +2742,8 @@ toolbar #fullscreen-button {
 .autocomplete-richlistitem .ac-action,
 .autocomplete-richlistitem .ac-separator {
 	color: white !important;
-	background-color: #1E2129 !important;
-	background: #1E2129 !important;
+	background-color: #161925 !important;
+	background: #161925 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 }
@@ -2733,8 +2765,8 @@ toolbar #fullscreen-button {
 	color: white !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	background-color: #1E2129 !important;
-	background: #1E2129 !important;
+	background-color: #161925 !important;
+	background: #161925 !important;
 }
 
 .autocomplete-richlistitem[selected="true"] .ac-url,
@@ -2742,7 +2774,7 @@ toolbar #fullscreen-button {
 	color: dodgerblue !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 
 }
 
@@ -2797,7 +2829,7 @@ toolbar #fullscreen-button {
 /* Firefox 70+ */
 
 #urlbar-container {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	transform: translateY(0);
 	position: relative;
 	z-index: 10;
@@ -2819,7 +2851,7 @@ toolbar #fullscreen-button {
 .urlbarView {
 	top: calc(100% - 5px) !important;
 	width: 100% !important;
-	background: #1E2129 !important;
+	background: #161925 !important;
 	/*border-width: 0 1px 1px 1px !important;	
 	border-style: solid;*/
 	border-color: transparent !important;
@@ -2902,8 +2934,8 @@ input:not(#urlbar-input) {
 	border-radius: 0px !important;
 	margin: 3px 0 !important;
 	padding: 9px !important;
-	border: 1px solid #1E2129 !important;
-	background-color: #1E2129 !important;
+	border: 1px solid #161925 !important;
+	background-color: #161925 !important;
 }
 
 #trackingProtectionShield {
@@ -2911,7 +2943,7 @@ input:not(#urlbar-input) {
 }
 
 #customization-panel-container>.panel-arrowcontent {
-	border-color: #1E2129 !important;
+	border-color: #161925 !important;
 	border: 1px !important;
 }
 
@@ -2920,7 +2952,7 @@ input:not(#urlbar-input) {
 #customization-panelDescription,
 #customize-mode-overflow-list-description,
 #widget-overflow-fixed-list {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	color: white !important;
 	border: 0px !important;
 	font-family: Fira Sans !important;
@@ -2953,12 +2985,12 @@ input:not(#urlbar-input) {
 
 .customization-lwtheme-menu-footeritem {
 	border-right: 1px solid #222 !important;
-	background: linear-gradient(#555, #1E2129) !important;
+	background: linear-gradient(#555, #161925) !important;
 	color: white !important;
 }
 
 .customization-lwtheme-menu-footeritem:hover {
-	background: linear-gradient(#1E2129, #555) !important;
+	background: linear-gradient(#161925, #555) !important;
 	color: #fff !important;
 }
 
@@ -2976,18 +3008,6 @@ input:not(#urlbar-input) {
 
 #customization-done-button:hover {
 	background: dodgerblue !important;
-}
-
-@-moz-document url(about:blank),
-url-prefix(about:newtab),
-url(moz-extension://5ca479e7-c3d7-4443-b6bd-b8e95d3e0794/html/newtab.html) {
-
-	html:not(#adblock-plus0-epicker),
-	html:not(#adblock-plus0-epicker) body,
-	#newtab-customize-overlay {
-		background: #1E2129 !important;
-		color: white !important;
-	}
 }
 
 /* NEW TAB BACKGROUND COLOR */
@@ -3106,7 +3126,7 @@ scrollbar {
 
 /*
 #nav-bar {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	fill: #ffffff !important;
 	opacity: 1 !important;
 }
@@ -3118,12 +3138,12 @@ scrollbar {
 
 #PersonalToolbar,
 #nav-bar {
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 	fill: #ffffff !important;
 	opacity: 1 !important;
 }
 
-/*---------------------------------------------------------*/
+/*-------------------makes github tab icon white for dark theme--------------------------------------*/
 .tabbrowser-tab .tab-icon-image[src="data:image/x-icon;base64,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AAAAAAAAKysrBhYWGUcWFhiVFRUYvxUVGNkWFhfzFhYX8xUVGNkVFRi/FhYYlRYWGUcrKysGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="] {
 	/* Makes Github icon white on dark theme */
 	filter: invert(100%) drop-shadow(0px 0px 5px white) !important;
@@ -3184,9 +3204,9 @@ html[windowtype="Toolkit:PictureInPicture"] .player-holder {
 findbar {
 	animation: 0.2s scale-in;
 	transform-origin: top center;
-	background: #1E2129 !important;
+	background: #161925 !important;
 	padding: 4px 6px 6px 6px;
-	border: 1px solid #1E2129;
+	border: 1px solid #161925;
 	border-top-width: 0;
 	border-radius: 0 0 var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius);
 	position: absolute;
@@ -3257,7 +3277,7 @@ window[lwtheme="true"] findbar:before {
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #1E2129;
+	background-color: #161925;
 }
 
 window[lwtheme="true"] findbar .findbar-container,
@@ -3268,13 +3288,13 @@ window[lwtheme="true"] findbar .findbar-closebutton {
 
 window[lwtheme="true"] findbar .findbar-textbox {
 	color: white !important;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 
 window[lwtheme="true"] findbar .findbar-button[checked="true"] {
 	font-weight: bold;
-	background-color: #1E2129 !important;
+	background-color: #161925 !important;
 }
 
 window[lwtheme="true"] findbar .findbar-find-status,
@@ -3335,4 +3355,56 @@ toolbarbutton.scrollbutton-down {
 	color: white !important;
 	background-color: dodgerblue !important;
 	opacity: 1 !important;
+}
+
+/* show favicon for tabs without favicons */
+.tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
+	display: inline !important;
+}
+
+.tabbrowser-tab:not([pinned])[busy] .tab-icon-image {
+	display: none !important;
+}
+
+.bookmark-item[label="about:config"] image {
+	width: 0 !important;
+	height: 0 !important;
+	padding: 16px 16px 0 0 !important;
+	background-image: url('firefoxflyph.png') !important;
+	-moz-image-region: auto !important;
+}
+
+.bookmark-item[label="Redémarrage nécessaire"] image {
+	width: 0 !important;
+	height: 0 !important;
+	padding: 16px 16px 0 0 !important;
+	background-image: url('firefoxflyph.png') !important;
+	-moz-image-region: auto !important;
+}
+
+
+
+/* TAB ICONS - none-selected tab icons are grey, 1px white glow to see dark icons on dark*/
+.tabbrowser-tab .tab-icon-image {
+	filter: grayscale(100%) drop-shadow(0px 0px 1px white) !important;
+	opacity: 1 !important;
+}
+
+.tabbrowser-tab[selected] .tab-icon-image {
+	filter: drop-shadow(0px 0px 1px white) !important;
+	opacity: 1 !important;
+}
+
+.tabbrowser-tab:hover:not([selected]) .tab-icon-image {
+	filter: drop-shadow(0px 0px 1px white) !important;
+	opacity: 1 !important;
+}
+
+/* BOOKMARKS adds glow 1px white glow to see dark icons on dark */
+.bookmark-item.menuitem-with-favicon:not([container]) image {
+	filter: drop-shadow(0px 0px 1px white) !important;
+}
+
+#PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
+	filter: drop-shadow(0px 0px 1px white) !important;
 }
