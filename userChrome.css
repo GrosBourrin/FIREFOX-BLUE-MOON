@@ -1,10 +1,6 @@
 #browserContainer {
-	background-color: #161925 !important;
-	/* #15202B */
-}
-
-#tabbrowser-tabpanels {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
+	/* #15202b */
 }
 
 ::selection {
@@ -67,7 +63,7 @@ tabPreview-canvas element {
 /* ------------------padlock-colors----------------------------------*/
 
 #urlbar>#identity-box.notSecureText>#identity-icon-labels>#identity-icon-label {
-	color: whitesmoke !important;
+	color: white !important;
 }
 
 #urlbar[pageproxystate="valid"]>#identity-box.notSecure>#connection-icon {
@@ -113,7 +109,7 @@ tabPreview-canvas element {
 identity-popup-security-content,
 .identity-popup-section,
 #identity-popup-securityView-footer {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	color: #ffffff !important;
 }
 
@@ -189,7 +185,7 @@ identity-popup-security-content,
 
 #popup-mainView-panel {
 	opacity: 1 !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 #protections-popup {
@@ -199,21 +195,21 @@ identity-popup-security-content,
 
 #protections-popup-tp-switch-section {
 	opacity: 1 !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 #tracking-protection-container {
 	opacity: 1 !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 #protections-popup-mainView-panel-header {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	color: inherit !important;
 }
 
 #protections-popup-footer {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 .protections-popup-category:-moz-focusring,
@@ -229,7 +225,7 @@ identity-popup-security-content,
 /*--------------------About firefox ---------------------------------*/
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	#leftBox {
-		background-image: url("foxy.gif") !important;
+		background-image: url("renard.gif") !important;
 		background-position: left !important;
 		background-repeat: no-repeat !important;
 	}
@@ -262,6 +258,10 @@ identity-popup-security-content,
 /*------------------------------------------------------------------------------*/
 #nav-bar {
 	box-shadow: none !important;
+}
+
+#tabbrowser-tabpanels {
+	background-color: #15202b !important;
 }
 
 #TabsToolbar {
@@ -327,12 +327,12 @@ identity-popup-security-content,
 
 #statuspanel #statuspanel-label {
 	-moz-appearance: none !important;
-	background-color: black !important;
+	background-color: #15202b !important;
 	font-family: "Fira Sans" !important;
 	font-size-adjust: inherit !important;
 	font-weight: normal !important;
 	color: dodgerblue !important;
-	border: 1px solid black !important;
+	border: 1px solid #15202b !important;
 	border-radius: 0px !important;
 }
 
@@ -433,7 +433,7 @@ identity-popup-security-content,
 menupopup {
 	-moz-appearance: none !important;
 	padding: 8px 2px 8px 2px !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	color: white !important;
 	border: 0px solid !important;
 	border-radius: 0px !important;
@@ -531,7 +531,7 @@ menulist {
 	-moz-appearance: none !important;
 	padding: 4px 4px 4px 4px !important;
 	border: 0px !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 menulist:hover {
@@ -603,7 +603,7 @@ tooltip {
 
 #urlbar {
 	padding: 0 !important;
-	background: #161925 !important;
+	background: #15202b !important;
 }
 
 #urlbar:hover {
@@ -618,6 +618,8 @@ tooltip {
 .tabbrowser-tab[visuallyselected="true"] {
 	box-shadow: 0px 0px 20px white !important;
 	/*width: 140px !important;*/
+
+
 }
 
 /* Selected Tab Text */
@@ -728,7 +730,7 @@ menuitem {
 
 .tab-text {
 	font-family: Fira Sans !important;
-	text color: white !important;
+	color: white !important;
 	font-size: 14px !important;
 	margin-top: 2px !important;
 }
@@ -788,9 +790,9 @@ menuitem .menu-accel {
 
 /* -------------------------------- */
 
-#PersonalToolbar,
+
 #nav-bar {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	/*fill: #ffffff !important;
 	opacity: 1 !important;*/
 }
@@ -809,7 +811,7 @@ menuitem .menu-accel {
 
 #PlacesToolbar .bookmark-item {
 	border-radius: 0px !important;
-	background-color: #161925 !important;
+	background-color: transparent !important;
 	color: white !important;
 }
 
@@ -831,9 +833,9 @@ menuitem .menu-accel {
 		position: fixed;
 		right: 140px;
 		/* Space for window controls */
-		width: calc(100vw - 900px);
+		width: calc(100vw - 890px) !important;
 		/* Window width - window control width - menuitem (English) width */
-		text-align: left;
+		text-align: left !important;
 	}
 
 	head>* {
@@ -841,13 +843,13 @@ menuitem .menu-accel {
 	}
 
 	head>title {
-		display: -moz-box;
-		padding-top: 8px !important;
+		display: -moz-box !important;
+		padding-top: 7px !important;
 		margin-top: 6px !important;
-		max-width: 60vw;
-		overflow-x: -moz-hidden-unscrollable;
-		text-overflow: ellipsis;
-		-moz-box-pack: center;
+		max-width: 60vw !important;
+		overflow-x: -moz-hidden-unscrollable !important;
+		text-overflow: ellipsis !important;
+		-moz-box-pack: right;
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
 		color: dodgerblue !important;
@@ -855,7 +857,7 @@ menuitem .menu-accel {
 
 	@media (-moz-os-version:windows-win10) {
 		:root[sizemode="maximized"]>head>title {
-			padding-top: 10px
+			padding-top: 9px !important;
 		}
 	}
 }
@@ -925,9 +927,9 @@ menuitem .menu-accel {
 
 .tab-background[selected="true"] {
 	background-attachment: none !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	opacity: 1 !important;
-	background-image: linear-gradient(#161925, #161925) !important;
+	background-image: linear-gradient(#15202b, #15202b) !important;
 }
 
 /*--------------------------------------------*/
@@ -1016,7 +1018,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 
 #sidebar {
 	margin: 0 0 0 0 !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	font-family: Fira Sans !important;
 	color: rgb(255, 255, 255) !important;
 }
@@ -1027,7 +1029,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 #history-panel,
 #historyTree,
 #downloads-panel {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	color: #ffffff !important;
@@ -1059,8 +1061,6 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 .sidebar-splitter {
 	opacity: 0 !important;
 }
-
-/*-------------------------------------------------------------------------------------------*/
 
 #sidebar-switcher-bookmarks>.toolbarbutton-icon,
 #sidebar-box[sidebarcommand="viewBookmarksSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
@@ -1188,35 +1188,35 @@ treechildren::-moz-tree-image(query) {
 /*----------------------hamburger menu-----------------------------*/
 
 .panel-arrow {
-	fill: #161925 !important;
+	fill: #15202b !important;
 	background: transparent !important;
 }
 
 .panel-subview-body {
 	color: #ffffff !important;
-	background: #161925 !important;
+	background: #15202b !important;
 	border-color: #ffffff !important;
 }
 
 .subviewbutton.panel-subview-footer {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	border-top: 0px solid !important;
 }
 
 .panel-header {
-	border-bottom: 1px solid #161925 !important;
-	background: #161925 !important;
+	border-bottom: 1px solid #15202b !important;
+	background: #15202b !important;
 }
 
 .panel-subview-footer,
 [class^="PanelUI-"] {
 	color: #ffffff !important;
-	background: #161925 !important;
+	background: #15202b !important;
 }
 
 .subviewbutton.panel-subview-footer {
-	background-color: #161925 !important;
-	border-top: 1px solid #161925 !important;
+	background-color: #15202b !important;
+	border-top: 1px solid #15202b !important;
 }
 
 .appMenu-tp-separator,
@@ -1289,130 +1289,131 @@ panelmultiview .toolbaritem-combined-buttons>label {
 /*== image Panel Star ==*/
 /*== Panel Star ==*/
 /* Star Bookmark Panel - Menulist Drop-down: 2 Colors + Border Width and Color */
-#editBookmarkPanel menulist menupopup {
-	-moz-appearance: none !important;
-	border: 0px solid #777 !important;
-	background-color: #161925 !important;
-}
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+	#editBookmarkPanel menulist menupopup {
+		-moz-appearance: none !important;
+		border: 0px solid #777 !important;
+		background-color: #15202b !important;
+	}
 
-#editBookmarkPanel menulist menupopup menuitem {
-	color: #ffffff !important;
-}
+	#editBookmarkPanel menulist menupopup menuitem {
+		color: #ffffff !important;
+	}
 
-#editBookmarkPanelStarIcon {
-	background-image: none !important;
-	background-color: transparent !important;
-	list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABl0lEQVQ4T2NkwAM+HuZrAEnz234C09gAIy6J/+cZBD585n8Kkhfg/SjNaMjwgSQDwLYzMtaDNf3/34jLFVhdALOdiYmBC6T/3z+Gb7hcgdUAFNth7sbhCsZPR3kT/jMwyv//z+gA8i4jA4MBvoD9z8BwgYGB4QMj4/8DjP//P2B8v0fgChPHf218mnDJ/fvGeIrxZadkNIvq7yUsYr9JMuPPMzaGn5e4A8Fh8LxWIYFN9+ssFqlfrMSY8ucZ2++/17jNxBoeXIAH4qsGBQNmra+nCBmCrBlkGUosvFsn3MEs9qccnyv+vWEuEgx41w9Tg2LA+y1CC5gE/sbjNeAD80JBn3cJ2A3YKXCHifu/Ml4DvjCeF/T4YITdgH0Cn5jY/vOCU993Jobf9zjegtisSj+EmTj/QVL1T6YXAs7vJbEa8PEI////vxkZfj/i+PnrLlcHF9O/CSCF3/4xFbApf6tglfvBzsj6n4Hf5iPc6yhh8HqexLs/z1lXcvxmrhRseICS+943KAj8YP3bziL9y1U04aUKzAUAjFOhhwB/HmYAAAAASUVORK5CYII=') !important;
-}
+	/*== image URL Star ==*/
 
-/*== image URL Star ==*/
+	#editBookmarkPanelStarIcon {
+		background-image: none !important;
+		background-color: transparent !important;
+		list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABl0lEQVQ4T2NkwAM+HuZrAEnz234C09gAIy6J/+cZBD585n8Kkhfg/SjNaMjwgSQDwLYzMtaDNf3/34jLFVhdALOdiYmBC6T/3z+Gb7hcgdUAFNth7sbhCsZPR3kT/jMwyv//z+gA8i4jA4MBvoD9z8BwgYGB4QMj4/8DjP//P2B8v0fgChPHf218mnDJ/fvGeIrxZadkNIvq7yUsYr9JMuPPMzaGn5e4A8Fh8LxWIYFN9+ssFqlfrMSY8ucZ2++/17jNxBoeXIAH4qsGBQNmra+nCBmCrBlkGUosvFsn3MEs9qccnyv+vWEuEgx41w9Tg2LA+y1CC5gE/sbjNeAD80JBn3cJ2A3YKXCHifu/Ml4DvjCeF/T4YITdgH0Cn5jY/vOCU993Jobf9zjegtisSj+EmTj/QVL1T6YXAs7vJbEa8PEI////vxkZfj/i+PnrLlcHF9O/CSCF3/4xFbApf6tglfvBzsj6n4Hf5iPc6yhh8HqexLs/z1lXcvxmrhRseICS+943KAj8YP3bziL9y1U04aUKzAUAjFOhhwB/HmYAAAAASUVORK5CYII=') !important;
+	}
 
-#star-button {
-	list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABl0lEQVQ4T2NkwAM+HuZrAEnz234C09gAIy6J/+cZBD585n8Kkhfg/SjNaMjwgSQDwLYzMtaDNf3/34jLFVhdALOdiYmBC6T/3z+Gb7hcgdUAFNth7sbhCsZPR3kT/jMwyv//z+gA8i4jA4MBvoD9z8BwgYGB4QMj4/8DjP//P2B8v0fgChPHf218mnDJ/fvGeIrxZadkNIvq7yUsYr9JMuPPMzaGn5e4A8Fh8LxWIYFN9+ssFqlfrMSY8ucZ2++/17jNxBoeXIAH4qsGBQNmra+nCBmCrBlkGUosvFsn3MEs9qccnyv+vWEuEgx41w9Tg2LA+y1CC5gE/sbjNeAD80JBn3cJ2A3YKXCHifu/Ml4DvjCeF/T4YITdgH0Cn5jY/vOCU993Jobf9zjegtisSj+EmTj/QVL1T6YXAs7vJbEa8PEI////vxkZfj/i+PnrLlcHF9O/CSCF3/4xFbApf6tglfvBzsj6n4Hf5iPc6yhh8HqexLs/z1lXcvxmrhRseICS+943KAj8YP3bziL9y1U04aUKzAUAjFOhhwB/HmYAAAAASUVORK5CYII=') !important;
-}
+	#star-button {
+		list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABl0lEQVQ4T2NkwAM+HuZrAEnz234C09gAIy6J/+cZBD585n8Kkhfg/SjNaMjwgSQDwLYzMtaDNf3/34jLFVhdALOdiYmBC6T/3z+Gb7hcgdUAFNth7sbhCsZPR3kT/jMwyv//z+gA8i4jA4MBvoD9z8BwgYGB4QMj4/8DjP//P2B8v0fgChPHf218mnDJ/fvGeIrxZadkNIvq7yUsYr9JMuPPMzaGn5e4A8Fh8LxWIYFN9+ssFqlfrMSY8ucZ2++/17jNxBoeXIAH4qsGBQNmra+nCBmCrBlkGUosvFsn3MEs9qccnyv+vWEuEgx41w9Tg2LA+y1CC5gE/sbjNeAD80JBn3cJ2A3YKXCHifu/Ml4DvjCeF/T4YITdgH0Cn5jY/vOCU993Jobf9zjegtisSj+EmTj/QVL1T6YXAs7vJbEa8PEI////vxkZfj/i+PnrLlcHF9O/CSCF3/4xFbApf6tglfvBzsj6n4Hf5iPc6yhh8HqexLs/z1lXcvxmrhRseICS+943KAj8YP3bziL9y1U04aUKzAUAjFOhhwB/HmYAAAAASUVORK5CYII=') !important;
+	}
 
-/* white text in star menu */
-#editBMPanel_folderMenuList {
-	-moz-appearance: none !important;
-	background: #161925 !important;
-	color: white !important;
-}
+	/* white text in star menu */
+	#editBMPanel_folderMenuList {
+		-moz-appearance: none !important;
+		background: #15202b !important;
+		color: white !important;
+	}
 
-#editBMPanel_folderTree {
-	min-height: 300px !important;
-}
+	#editBMPanel_folderTree {
+		min-height: 300px !important;
+	}
 
-.panel-arrow {
-	fill: #161925 !important;
-	background-color: transparent !important;
-	color: white !important;
+	.panel-arrow {
+		fill: #15202b !important;
+		background-color: transparent !important;
+		color: white !important;
 
-}
+	}
 
-panel #editBookmarkPanel,
-.panel-arrowcontent {
-	border: 0px !important;
-	opacity: 1 !important;
-	color: white !important;
-	font-family: Fira Sans !important;
-	background-color: #161925 !important;
-	/*box-shadow: 0 15px black !important;*/
-}
+	panel #editBookmarkPanel,
+	.panel-arrowcontent {
+		border: 0px !important;
+		opacity: 1 !important;
+		color: white !important;
+		font-family: Fira Sans !important;
+		background-color: #15202b !important;
 
-#editBMPanel_tagsSelector>richlistitem>image,
-radio>.radio-check,
-checkbox>.checkbox-check {
-	-moz-appearance: none !important;
-	border: 1px solid #404040;
-	border-radius: 0px;
-	height: 1.3em;
-	width: 1.3em;
-	padding: 1px;
-}
+	}
 
-#editBMPanel_tagsSelector>richlistitem>image {
-	/*background-color: var(--toolbar-bgcolor, rgb(50, 50, 52)) !important;*/
-	margin: 1px !important;
-	border-color: graytext !important;
-	border-radius: 0px !important;
-}
+	#editBMPanel_tagsSelector>richlistitem>image,
+	radio>.radio-check,
+	checkbox>.checkbox-check {
+		-moz-appearance: none !important;
+		border: 1px solid #404040;
+		border-radius: 0px;
+		height: 1.3em;
+		width: 1.3em;
+		padding: 1px;
+	}
 
-#editBMPanel_tagsSelector>richlistitem:not([disabled]):hover>image,
-radio:not([disabled]):hover>.radio-check,
-checkbox:not([disabled]):hover>.checkbox-check {
-	border-color: highlight !important;
-}
+	#editBMPanel_tagsSelector>richlistitem>image {
+		/*background-color: var(--toolbar-bgcolor, rgb(50, 50, 52)) !important;*/
+		margin: 1px !important;
+		border-color: graytext !important;
+		border-radius: 0px !important;
+	}
 
-#editBMPanel_tagsSelector>richlistitem[checked]>image,
-radio[selected]>.radio-check,
-checkbox[checked]>.checkbox-check {
-	list-style-image: url("chrome://global/skin/icons/check.svg");
-	-moz-context-properties: fill !important;
-	fill: highlight !important;
-}
+	#editBMPanel_tagsSelector>richlistitem:not([disabled]):hover>image,
+	radio:not([disabled]):hover>.radio-check,
+	checkbox:not([disabled]):hover>.checkbox-check {
+		border-color: highlight !important;
+	}
 
-radio[selected]>.radio-check {
-	list-style-image: url("chrome://global/skin/in-content/radio.svg");
-}
+	#editBMPanel_tagsSelector>richlistitem[checked]>image,
+	radio[selected]>.radio-check,
+	checkbox[checked]>.checkbox-check {
+		list-style-image: url("chrome://global/skin/icons/check.svg");
+		-moz-context-properties: fill !important;
+		fill: highlight !important;
+	}
 
-#editBMPanel_tagsSelector>richlistitem[disabled]>image,
-radio[disabled]>.radio-check,
-checkbox[disabled]>.checkbox-check {
-	fill: graytext !important;
-}
+	radio[selected]>.radio-check {
+		list-style-image: url("chrome://global/skin/in-content/radio.svg");
+	}
 
-#editBMPanel_newFolderButton {
-	-moz-appearance: none !important;
-	border-radius: 0px !important;
-	background: dodgerblue !important;
-	color: white !important;
-	padding: 0.3em !important;
-	margin-top: 0.1em !important;
-	margin-bottom: 0.1em !important;
-}
+	#editBMPanel_tagsSelector>richlistitem[disabled]>image,
+	radio[disabled]>.radio-check,
+	checkbox[disabled]>.checkbox-check {
+		fill: graytext !important;
+	}
 
-/*------------------------------------------------------------------------------*/
-/*#editBookmarkPanel button,*/
-#editBookmarkPanel textbox,
-#editBookmarkPanel menulist,
-#editBookmarkPanel richlistbox,
-#editBookmarkPanel tree {
-	-moz-appearance: none !important;
-	background-color: black !important;
-	color: #ffffff !important;
-	/*fill: white !important;*/
-}
+	#editBMPanel_newFolderButton {
+		-moz-appearance: none !important;
+		border-radius: 0px !important;
+		background: dodgerblue !important;
+		color: white !important;
+		padding: 0.3em !important;
+		margin-top: 0.1em !important;
+		margin-bottom: 0.1em !important;
+	}
 
-#editBookmarkPanel button:hover {
-	filter: brightness(50%) !important;
-	border: none !important;
-}
+	/*------------------------------------------------------------------------------*/
+	/*#editBookmarkPanel button,*/
+	#editBookmarkPanel textbox,
+	#editBookmarkPanel menulist,
+	#editBookmarkPanel richlistbox,
+	#editBookmarkPanel tree {
+		-moz-appearance: none !important;
+		background-color: black !important;
+		color: #ffffff !important;
+		/*fill: white !important;*/
+	}
 
-#editBookmarkPanel menulist {
-	padding: 4px !important;
-}
+	#editBookmarkPanel button:hover {
+		filter: brightness(50%) !important;
+		border: none !important;
+	}
 
-/*
+	#editBookmarkPanel menulist {
+		padding: 4px !important;
+	}
+
+	/*
 #editBookmarkPanel button {
 	padding: 14px !important;
 	font-size: 12px !important;
@@ -1420,69 +1421,60 @@ checkbox[disabled]>.checkbox-check {
 	text-shadow: none !important;
 }
 */
-#editBMPanel_folderTree-row {
-	background: black !important;
-	color: white !important;
+	#editBMPanel_folderTree-row {
+		background: black !important;
+		color: white !important;
+	}
+
+	#editBMPanel_folderTree treechildren::-moz-tree-cell(selected) {
+		background-color: dodgerblue !important;
+		border: none !important;
+	}
+
+	#editBMPanel_folderTree treechildren::-moz-tree-cell(hover) {
+
+		background-color: rgba(30, 143, 255, 0.5) !important;
+		border: none !important;
+	}
+
+	#editBookmarkPanel .expander-down,
+	#editBookmarkPanel .expander-up {
+		padding: 0 !important;
+	}
+
+	/* star panel image */
+	#editBookmarkPanelImage {
+		border-radius: 0px !important;
+		height: 310px !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		margin: 0 2px !important;
+		transition: height 0.28s cubic-bezier(0.07, 0.95, 0, 1) !important;
+		transition-delay: 400ms !important;
+	}
+
+	#editBookmarkPanelDoneButton {
+		background-color: dodgerblue !important;
+	}
+
+	#editBookmarkPanelDoneButton:hover,
+	#editBookmarkPanelDoneButton:active {
+		background-color: dodgerblue !important;
+	}
+
+	#editBookmarkPanelRemoveButton {
+		background-color: rgba(30, 143, 255, 0.500) !important;
+		color: white !important;
+	}
+
+	#editBookmarkPanelRemoveButton:hover,
+	#editBookmarkPanelRemoveButton:active {
+		background-color: rgba(30, 143, 255, 0.200) !important;
+		color: white !important;
+	}
 }
 
-#editBMPanel_folderTree treechildren::-moz-tree-cell(selected) {
-	background-color: dodgerblue !important;
-	border: none !important;
-}
-
-#editBMPanel_folderTree treechildren::-moz-tree-cell(hover) {
-
-	background-color: rgba(30, 143, 255, 0.5) !important;
-	border: none !important;
-}
-
-
-/*
-.bookmark-item[label="Sticky"] image {
-	width: 0 !important;
-	height: 0 !important;
-	padding: 0 0 16px 16px !important;
-	background-image: url("error.svg") !important;
-	-moz-image-region: auto !important;
-}*/
-
-#editBookmarkPanel .expander-down,
-#editBookmarkPanel .expander-up {
-	padding: 0 !important;
-}
-
-/* star panel image */
-#editBookmarkPanelImage {
-	border-radius: 0px !important;
-	height: 310px !important;
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
-	margin: 0 2px !important;
-	transition: height 0.28s cubic-bezier(0.07, 0.95, 0, 1) !important;
-	transition-delay: 400ms !important;
-}
-
-#editBookmarkPanelDoneButton {
-	background-color: dodgerblue !important;
-}
-
-#editBookmarkPanelDoneButton:hover,
-#editBookmarkPanelDoneButton:active {
-	background-color: dodgerblue !important;
-}
-
-#editBookmarkPanelRemoveButton {
-	background-color: rgba(30, 143, 255, 0.500) !important;
-	color: white !important;
-}
-
-#editBookmarkPanelRemoveButton:hover,
-#editBookmarkPanelRemoveButton:active {
-	background-color: rgba(30, 143, 255, 0.200) !important;
-	color: white !important;
-}
-
-/*==== Thumping Sound icon for tab that has sound playing ====*/
+/*==== Thum}ping Sound icon for tab that has sound playing ====*/
 
 .tab-icon-sound[soundplaying] {
 	fill: white !important;
@@ -1558,13 +1550,13 @@ hbox#sidebar-search-container textbox#search-box {
 #template-container,
 #webext-panels-browser,
 #webextpanels-window {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 }
 
 #sidebarMenu-popup .panel-arrowcontent {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 /*-----------------------------------------------*/
@@ -1587,8 +1579,6 @@ hbox#sidebar-search-container textbox#search-box {
 .searchbar-search-icon-overlay {
 	display: none !important;
 }
-
-/*-------------librairie ********* :) */
 
 /*---------------------------------library ----------------------------------*/
 
@@ -1713,7 +1703,7 @@ hbox#sidebar-search-container textbox#search-box {
 		--selected-icon-fill-color: var(--tone-1);
 		--in-content-dark-header-background: var(--tone-9);
 		--secure-connection-color: var(--accent-1);
-		--theme-sidebar-background: #161925;
+		--theme-sidebar-background: #15202b;
 		--cm-background: var(--tone-9);
 		--cm-selection: #cfcfcf;
 		--cm-marker: #555;
@@ -1744,7 +1734,7 @@ hbox#sidebar-search-container textbox#search-box {
 	listbox,
 	textbox {
 		-moz-appearance: none !important;
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 		/*var(--in-content-box-background) !important;*/
 		color: var(--in-content-page-color) !important;
 		min-height: 20px !important;
@@ -1757,7 +1747,7 @@ hbox#sidebar-search-container textbox#search-box {
 	#editBMPanel_rows>row>hbox>textbox,
 	#editBMPanel_rows>row>textbox,
 	#editBMPanel_tagsSelector {
-		background: #161925 !important;
+		background: #15202b !important;
 	}
 
 	#placesToolbar>toolbarbutton {
@@ -1772,7 +1762,7 @@ hbox#sidebar-search-container textbox#search-box {
 	#placesList {
 		-moz-appearance: none !important;
 		color: var(--in-content-page-color) !important;
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 	}
 
 	#placesView>splitter {
@@ -1782,20 +1772,14 @@ hbox#sidebar-search-container textbox#search-box {
 	#places #downloadsRichListBox {
 		-moz-appearance: none !important;
 		color: var(--in-content-page-color) !important;
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 	}
 
 	#detailsDeck {
 		border: none !important;
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 		color: var(--in-content-page-color) !important;
 	}
-
-	/*
-	.expander-down,
-	.expander-up {
-		filter: invert(77%) !important;
-	}*/
 
 	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
 		color: var(--in-content-text-color) !important;
@@ -1854,20 +1838,9 @@ hbox#sidebar-search-container textbox#search-box {
 	}
 
 	tree {
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 	}
 
-	/*
-	#editBMPanel_tagsSelectorExpander.expander-down {
-		-moz-appearance: -moz-win-disclosure-button-closed !important;
-		/*filter: invert(79%) !important;
-	}
-
-	#editBMPanel_tagsSelectorExpander.expander-up {
-		-moz-appearance: -moz-win-disclosure-button-open !important;
-		/*filter: invert(79%) !important;
-	}
-*/
 	#main-menubar {
 		background-color: var(--in-content-category-header-background) !important;
 	}
@@ -1967,8 +1940,6 @@ kinda jumpy and annoying after a while so let's just comment it for now
 	--tabs-border: none !important;
 }
 
-/*-------------------------------------------------------*/
-
 /*-----------------------*/
 #urlbar,
 #searchbar-textbox {
@@ -2034,8 +2005,8 @@ window:not([chromehidden~="toolbar"]) #urlbar-container>.toolbarbutton-1:-moz-an
 }
 
 toolbarbutton.bookmark-item:hover {
-	background-color: #161925 !important;
-	border: 0px #161925 solid !important;
+	background-color: #15202b !important;
+	border: 0px #15202b solid !important;
 }
 
 /*
@@ -2122,9 +2093,11 @@ toolbarbutton.bookmark-item:hover {
 	transform: translateX(0) !important;
 }
 */
-/*-------------------------------------*/
+/*----------autohide personal bar---------------------------*/
+
+
 #PersonalToolbar {
-	transition: margin 180ms linear !important;
+	transition: margin 280ms linear !important;
 	position: relative !important;
 	z-index: 0 !important;
 	margin-top: -24px !important;
@@ -2144,6 +2117,7 @@ toolbarbutton.bookmark-item:hover {
 	margin-top: 0px !important;
 	margin-bottom: -24px !important;
 }
+
 
 /*---colored blinking cursor in url bar ----*/
 #urlbar {
@@ -2406,7 +2380,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	#topBar,
 	tree {
 		-moz-appearance: none !important;
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 		color: white !important;
 	}
 
@@ -2417,20 +2391,20 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 
 	#searchFilter,
 	menulist,
-	input,
+	/*input,*/
 	textbox,
 	richlistbox,
 	treecol,
 	menu,
 	#permList {
 		-moz-appearance: none !important;
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 		color: white !important;
 	}
 
 	textbox,
 	richlistbox {
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 	}
 
 	treecol:not([hideheader]) {
@@ -2443,7 +2417,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 
 	treechildren::-moz-tree-row(multicol, odd),
 	#permList {
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 	}
 
 	radiogroup>radio[selected],
@@ -2498,7 +2472,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	}
 
 	#editBMPanel_tagsSelector>richlistitem>image {
-		background-color: var(--toolbar-bgcolor, #161925) !important;
+		background-color: var(--toolbar-bgcolor, #15202b) !important;
 		margin: 1px !important;
 		border-color: graytext !important;
 		border-radius: 0px !important;
@@ -2675,7 +2649,7 @@ toolbar #fullscreen-button {
 
 @-moz-document url(chrome://global/content/alerts/alert.xhtml) {
 	#alertBox {
-		background-color: #161925 !important;
+		background-color: #15202b !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -2707,7 +2681,7 @@ toolbar #fullscreen-button {
 
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
 	max-height: calc(40px * 10) !important;
-	background: #161925 !important;
+	background: #15202b !important;
 }
 
 /* Font-sizes */
@@ -2720,18 +2694,18 @@ toolbar #fullscreen-button {
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
 	font-family: "Fira Sans" !important;
 	font-size: 14px !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 /* Dark Themed Drop-down */
 /* Dark Theme - Firefox 48+ */
 
 #urlbarview-results {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 #PopupAutoComplete .ac-site {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem {
@@ -2742,8 +2716,8 @@ toolbar #fullscreen-button {
 .autocomplete-richlistitem .ac-action,
 .autocomplete-richlistitem .ac-separator {
 	color: white !important;
-	background-color: #161925 !important;
-	background: #161925 !important;
+	background-color: #15202b !important;
+	background: #15202b !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 }
@@ -2765,8 +2739,8 @@ toolbar #fullscreen-button {
 	color: white !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	background-color: #161925 !important;
-	background: #161925 !important;
+	background-color: #15202b !important;
+	background: #15202b !important;
 }
 
 .autocomplete-richlistitem[selected="true"] .ac-url,
@@ -2774,7 +2748,7 @@ toolbar #fullscreen-button {
 	color: dodgerblue !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 
 }
 
@@ -2829,7 +2803,7 @@ toolbar #fullscreen-button {
 /* Firefox 70+ */
 
 #urlbar-container {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	transform: translateY(0);
 	position: relative;
 	z-index: 10;
@@ -2851,7 +2825,7 @@ toolbar #fullscreen-button {
 .urlbarView {
 	top: calc(100% - 5px) !important;
 	width: 100% !important;
-	background: #161925 !important;
+	background: #15202b !important;
 	/*border-width: 0 1px 1px 1px !important;	
 	border-style: solid;*/
 	border-color: transparent !important;
@@ -2934,8 +2908,8 @@ input:not(#urlbar-input) {
 	border-radius: 0px !important;
 	margin: 3px 0 !important;
 	padding: 9px !important;
-	border: 1px solid #161925 !important;
-	background-color: #161925 !important;
+	border: 1px solid #15202b !important;
+	background-color: #15202b !important;
 }
 
 #trackingProtectionShield {
@@ -2943,7 +2917,7 @@ input:not(#urlbar-input) {
 }
 
 #customization-panel-container>.panel-arrowcontent {
-	border-color: #161925 !important;
+	border-color: #15202b !important;
 	border: 1px !important;
 }
 
@@ -2952,7 +2926,7 @@ input:not(#urlbar-input) {
 #customization-panelDescription,
 #customize-mode-overflow-list-description,
 #widget-overflow-fixed-list {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	color: white !important;
 	border: 0px !important;
 	font-family: Fira Sans !important;
@@ -2985,12 +2959,12 @@ input:not(#urlbar-input) {
 
 .customization-lwtheme-menu-footeritem {
 	border-right: 1px solid #222 !important;
-	background: linear-gradient(#555, #161925) !important;
+	background: linear-gradient(#555, #15202b) !important;
 	color: white !important;
 }
 
 .customization-lwtheme-menu-footeritem:hover {
-	background: linear-gradient(#161925, #555) !important;
+	background: linear-gradient(#15202b, #555) !important;
 	color: #fff !important;
 }
 
@@ -3018,49 +2992,6 @@ input:not(#urlbar-input) {
 
 .scrollbutton-down[orient="horizontal"]~spacer {
 	border: none !important;
-}
-
-/*-----------------------------------*/
-/* downloads button color            */
-/*-----------------------------------*/
-
-#downloads-button[attention="success"] #downloads-indicator-icon {
-	display: visible !important;
-}
-
-/* During a download, force display of progress bar */
-
-#downloads-button[attention="success"] #downloads-indicator-progress-area {
-	display: -moz-box !important;
-	visibility: visible !important;
-}
-
-/* After something have successfully completed downloading, set the color of the download icon*/
-#downloads-button[attention="success"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
-#downloads-button[attention="success"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-progress-outer {
-	fill: dodgerblue !important;
-}
-
-/* Sets the color of the animated arrow that appears when a download is starting*/
-
-#downloads-button[notification="start"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
-#downloads-notification-anchor[notification="start"]>#downloads-indicator-notification {
-	fill: green !important;
-}
-
-/*Set the color of the download icon as something is downloading*/
-
-#downloads-button[progress]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
-#downloads-button[progress]>#downloads-indicator-anchor>#downloads-indicator-progress-outer {
-	fill: yellow !important;
-}
-
-/* Set the color for the progress bar as something is downloading */
-
-#downloads-button>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-progress-outer>#downloads-indicator-progress-inner {
-	fill: red !important;
-	border: 1px !important;
-	border-color: red !important;
 }
 
 /*--------------------scrollbar tweaks -----------------------------*/
@@ -3126,7 +3057,7 @@ scrollbar {
 
 /*
 #nav-bar {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	fill: #ffffff !important;
 	opacity: 1 !important;
 }
@@ -3138,7 +3069,7 @@ scrollbar {
 
 #PersonalToolbar,
 #nav-bar {
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 	fill: #ffffff !important;
 	opacity: 1 !important;
 }
@@ -3204,9 +3135,9 @@ html[windowtype="Toolkit:PictureInPicture"] .player-holder {
 findbar {
 	animation: 0.2s scale-in;
 	transform-origin: top center;
-	background: #161925 !important;
+	background: #15202b !important;
 	padding: 4px 6px 6px 6px;
-	border: 1px solid #161925;
+	border: 1px solid #15202b;
 	border-top-width: 0;
 	border-radius: 0 0 var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius);
 	position: absolute;
@@ -3277,7 +3208,7 @@ window[lwtheme="true"] findbar:before {
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #161925;
+	background-color: #15202b;
 }
 
 window[lwtheme="true"] findbar .findbar-container,
@@ -3288,13 +3219,13 @@ window[lwtheme="true"] findbar .findbar-closebutton {
 
 window[lwtheme="true"] findbar .findbar-textbox {
 	color: white !important;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 
 window[lwtheme="true"] findbar .findbar-button[checked="true"] {
 	font-weight: bold;
-	background-color: #161925 !important;
+	background-color: #15202b !important;
 }
 
 window[lwtheme="true"] findbar .findbar-find-status,
@@ -3384,7 +3315,7 @@ toolbarbutton.scrollbutton-down {
 
 
 
-/* TAB ICONS - none-selected tab icons are grey, 1px white glow to see dark icons on dark*/
+/* TAB ICONS - none-selected tab icons are grey, 1px white glow to see dark icons on dark
 .tabbrowser-tab .tab-icon-image {
 	filter: grayscale(100%) drop-shadow(0px 0px 1px white) !important;
 	opacity: 1 !important;
@@ -3399,7 +3330,7 @@ toolbarbutton.scrollbutton-down {
 	filter: drop-shadow(0px 0px 1px white) !important;
 	opacity: 1 !important;
 }
-
+*/
 /* BOOKMARKS adds glow 1px white glow to see dark icons on dark */
 .bookmark-item.menuitem-with-favicon:not([container]) image {
 	filter: drop-shadow(0px 0px 1px white) !important;
@@ -3407,4 +3338,157 @@ toolbarbutton.scrollbutton-down {
 
 #PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
 	filter: drop-shadow(0px 0px 1px white) !important;
+}
+
+
+/*
+input:focus {
+	outline: 0;
+	box-shadow: none;
+}*/
+@-moz-document url(about:blank),
+url-prefix(about:newtab) {
+
+	#newtab-window,
+	#newtab-customize-overlay,
+	html {
+		background: #15202b !important;
+		color: white !important;
+		font-family: Fira Sans !important;
+	}
+}
+
+/* webrender true and layout.css.backdrop-filter.enabled=true*/
+.urlbarView {
+	background-image: url(noise-512x512.png) !important;
+	background-color: #15202ba0 !important;
+	backdrop-filter: blur(8px) !important;
+}
+
+#urlbar-background {
+	display: none !important;
+}
+
+/*------------------------------------------------*/
+/*
+#PersonalToolbar {
+	background-image: url("noise-512x512.png") !important;
+	background-color: #15202ba0 !important;
+	backdrop-filter: blur(32px) !important;
+	--uc-bm-height: 24px;
+
+	--uc-bm-padding: 6px;
+
+}
+
+:root[uidensity="compact"] #PersonalToolbar {
+	--uc-bm-padding: 1px
+}
+
+:root[uidensity="touch"] #PersonalToolbar {
+	--uc-bm-padding: 6px
+}
+
+#PersonalToolbar:not([customizing]) {
+	margin-bottom: calc(2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+	transform: rotateX(90deg);
+	transform-origin: top;
+	transition: transform 135ms linear 600ms !important;
+	z-index: 1;
+
+}
+
+#PlacesToolbarItems>.bookmark-item {
+	padding-block: var(--uc-bm-padding) !important;
+}
+
+
+/* SELECT ONE BOOKMARKS TOOLBAR BEHAVIOR */
+
+/* ONE | Show when urlbar is focused 
+#nav-bar:focus-within+#PersonalToolbar {
+	transition-delay: 100ms !important;
+	transform: rotateX(0);
+}
+
+/* TWO | Show when cursor is over the toolbar area 
+My Personal Choice*/
+/*
+#navigator-toolbox:hover>#PersonalToolbar {
+	transition-delay: 100ms !important;
+	transform: rotateX(0);
+}
+*/
+/*
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content]>html {
+	background: #15202b !important;
+}
+*/
+
+
+/* Color for most dialogs */
+dialog,
+dialog caption,
+dialog select,
+.tabmodalprompt-buttonContainer {
+	/*    -moz-appearance: none !important; */
+	background-color: #15202b !important;
+	color: white !important;
+}
+
+/* Prevents White pre-load flash */
+.browserContainer {
+	background-color: #15202b !important;
+}
+
+.tabbrowser tabpanels {
+	background-color: #15202b !important;
+}
+
+
+
+
+@keyframes slidein {
+	from {
+		margin-top: calc(0px - var(--tab-min-height))
+	}
+
+	to {
+		margin-top: 0
+	}
+}
+
+@keyframes slideout {
+	from {
+		margin-top: var(--tab-min-height)
+	}
+
+	to {
+		margin-top: 0
+	}
+}
+
+/*
+#navigator-toolbox:not(:hover)>#titlebar {
+	-moz-appearance: none !important
+}
+*/
+#navigator-toolbox:not(:hover) #TabsToolbar:not([customizing]) {
+	visibility: collapse
+}
+
+#navigator-toolbox:hover>#nav-bar:not([customizing]) {
+	animation: slidein ease-out 150ms 1
+}
+
+#navigator-toolbox:not(:hover)>#nav-bar:not([customizing]) {
+	animation: slideout ease-out 150ms 1
+}
+
+#tabbrowser-tabpanels {
+	background-color: var(--uc-light-bkgnd-color, #323639) !important;
 }
