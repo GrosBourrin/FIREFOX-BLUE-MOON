@@ -2682,13 +2682,15 @@ toolbar #zoom-controls>separator {
 #zoom-reset-button label {
 	font-family: 'Fira Sans' !important;
 	font-weight: bold !important;
-	padding-top: 6px !important;
+	padding-top: 4px !important;
 	color: rgb(118, 187, 255) !important;
 	margin-left: -10px !important;
 }
 
 #zoom-in-button {
 	-moz-padding-start: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 3px !important;
 	fill: dodgerblue !important;
 	margin-left: -10px !important;
 
@@ -2696,26 +2698,36 @@ toolbar #zoom-controls>separator {
 
 #zoom-out-button {
 	-moz-padding-end: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 3px !important;
 	fill: dodgerblue !important;
 	/*margin-left: -6px !important;*/
 }
 
 toolbar #fullscreen-button {
+	padding-top: 0px !important;
+	padding-bottom: 3px !important;
 	fill: dodgerblue !important;
 	/*margin-left: -6px !important;*/
 }
 
 #cut-button {
+	padding-top: 0px !important;
+	padding-bottom: 3px !important;
 	fill: dodgerblue !important;
 
 }
 
 #copy-button {
+	padding-top: 0px !important;
+	padding-bottom: 3px !important;
 	fill: dodgerblue !important;
 	margin-left: -6px !important;
 }
 
 #paste-button {
+	padding-top: 0px !important;
+	padding-bottom: 3px !important;
 	fill: dodgerblue !important;
 	margin-left: -6px !important;
 }
