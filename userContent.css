@@ -18,7 +18,7 @@ url-prefix(about:newtab) {
 	#newtab-window,
 	#newtab-customize-overlay,
 	html {
-		background: #15202b !important;
+		background: #1D1923 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -27,7 +27,7 @@ url-prefix(about:newtab) {
 @-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
 
 	* {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 		color: white !important;
 		font-family: "Fira Sans" !important;
 		font-size: 14px !important;
@@ -44,7 +44,7 @@ url-prefix(about:newtab) {
 
 /*---------------------------------*/
 #viewer.pdfViewer {
-	background-color: #15202b !important;
+	background-color: #1D1923 !important;
 }
 
 /*---------------------------------UBLOCK ORIGIN ---------------------*/
@@ -53,7 +53,7 @@ url-prefix(about:newtab) {
 
 	body {
 		font-family: Fira Sans !important;
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 		color: #ffffff !important;
 	}
 
@@ -113,13 +113,7 @@ url-prefix(about:newtab) {
 	}
 
 	#firewallContainer>div>span {
-		background-color: #15202b !important;
-
-		color: #ffffff !important;
-		border-bottom: 1px solid #111 !important;
-	}
-
-	#firewallContainer>div>span {
+		background-color: #1D1923 !important;
 		color: #ffffff !important;
 		border-bottom: 1px solid #111 !important;
 	}
@@ -168,7 +162,6 @@ url-prefix(about:newtab) {
 
 	#cloudWidget {
 		background: none !important;
-
 		color: #ffffff !important;
 	}
 
@@ -182,7 +175,7 @@ url-prefix(about:newtab) {
 	html,
 	body {
 		font-family: Fira Sans !important;
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 		color: #ffffff !important;
 	}
 
@@ -194,100 +187,27 @@ url-prefix(about:newtab) {
 	}
 
 	.progress {
-		border: 0px solid #777 !important;
+		border: 0px solid #404040 !important;
 		background-color: rgba(30, 143, 255, 0.5) !important;
 	}
 
 	.toolbar-bottom {
-		border-top: 0px solid #777 !important;
+		border-top: 0px solid #404040 !important;
 	}
 
 	.item:hover {
-		background-image: linear-gradient(to top, dodgerblue, #15202b) !important;
+		background-image: linear-gradient(to top, dodgerblue, #1D1923) !important;
 		border-radius: 0px !important;
-		box-shadow: 0 0 0px 4px black !important;
+		box-shadow: 0 0 0px 4px #1D1923 !important;
 	}
 
 	.item:selected {
-		background-image: linear-gradient(to top, dodgerblue, #15202b) !important;
+		background-image: linear-gradient(to top, dodgerblue, #1D1923) !important;
 		border-radius: 0px !important;
-		box-shadow: 0 0 0px 4px black !important;
+		box-shadow: 0 0 0px 4px #1D1923 !important;
 	}
 }
 
-/*----------------picture in picture tweaks--------------------
-
-.statusIcon[type="pictureInPicture"] {
-	background-size: contain !important;
-	background-repeat: no-repeat !important;
-	background-position: center !important;
-}
-
-.statusIcon[type="pictureInPicture"] {
-	min-width: 84px !important;
-	min-height: 84px !important;
-	background-image: url("chrome://global/skin/media/pictureinpicture.svg") !important;
-	-moz-context-properties: fill, stroke !important;
-	fill: dodgerblue !important;
-	stroke: #fff !important;
-}
-
-.pictureInPictureToggleButton {
-	display: flex !important;
-	-moz-appearance: none !important;
-	position: absolute !important;
-	background-color: var(--pip-toggle-bgcolor) !important;
-	color: var(--pip-toggle-text-and-icon-color) !important;
-	border: 0 !important;
-	padding: var(--pip-toggle-padding) !important;
-	right: 0 !important;
-	top: 50% !important;
-	transform: translateY(-50%) translateX(calc(100% - var(--pip-toggle-icon-width-height) - 2 * var(--pip-toggle-padding))) !important;
-	transition: opacity 160ms linear, transform 160ms linear !important;
-	min-width: max-content !important;
-	pointer-events: auto !important;
-	opacity: 0 !important;
-}
-
-.pictureInPictureToggleIcon {
-	display: inline-block !important;
-	background-image: url("chrome://global/skin/media/pictureinpicture.svg") !important;
-	background-position: center left !important;
-	background-repeat: no-repeat !important;
-	-moz-context-properties: fill, stroke !important;
-	fill: var(--pip-toggle-text-and-icon-color) !important;
-	stroke: var(--pip-toggle-text-and-icon-color) !important;
-	width: var(--pip-toggle-icon-width-height) !important;
-	height: var(--pip-toggle-icon-width-height) !important;
-	min-width: max-content !important;
-}
-
-.pictureInPictureToggleLabel {
-	margin-inline-start: var(--pip-toggle-padding) !important;
-}
-
-.controlsOverlay:hover>.pictureInPictureToggleButton {
-	opacity: 0.8 !important;
-}
-
-.controlsOverlay:hover>.pictureInPictureToggleButton:hover {
-	opacity: 1 !important;
-	transform: translateY(-50%) translateX(0) !important;
-}
-
-.pictureInPictureToggleButton {
-	transition-duration: 300ms !important;
-}
-*/
-/*
-.pictureInPictureToggleLabel {
-	display: none !important;
-}
-
-.pictureInPictureToggleIcon {
-	display: none !important;
-}
-*/
 .pictureInPictureToggleButton {
 	transition-duration: 300ms !important;
 }
@@ -305,19 +225,26 @@ url-prefix(about:newtab) {
 	height: 24px !important;
 	width: 30px !important;
 	margin-top: -60px !important;
-	background-color: #15202b !important;
-	outline: 1px solid #15202b !important;
+	background-color: #1D1923 !important;
+	outline: 1px solid #1D1923 !important;
+}
+
+/* about:support*/
+@-moz-document url(about:support) {
+	body.wide-container {
+		background-color: #1D1923 !important;
+	}
 }
 
 /* about:preferences */
 @-moz-document url(about:preferences) {
 	.sticky-container {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 
 	:root {
 		font-family: Fira Sans !important;
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 
 	#categories>.category[selected],
@@ -349,7 +276,7 @@ url-prefix(about:newtab) {
 
 @-moz-document url('chrome://devtools/content/webconsole/index.html') {
 	.webconsole-output .info {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 		color: white !important;
 	}
 }
@@ -359,7 +286,7 @@ url('chrome://global/content/config.xhtml') {
 	:root {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 		color: white !important;
 		fill: white !important;
 		opacity: 1 !important;
@@ -370,11 +297,11 @@ url('chrome://global/content/config.xhtml') {
 @-moz-document url('about:home'),
 url('about:newtab') {
 	body {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 
 	.prefs-button button {
-		fill: #15202b !important;
+		fill: #1D1923 !important;
 	}
 
 	.prefs-button button:hover,
@@ -387,82 +314,6 @@ url('about:newtab') {
 	}
 }
 
-/*
-scrollbar {
-	z-index: 2147483647 !important;
-	position: relative !important;
-}
-*/
-/*
-scrollbar,
-scrollbar * {
-	-moz-appearance: none !important;
-	margin: 0px !important;
-	padding: 0px !important;
-	border: 0px !important;
-	box-shadow: none !important;
-}
-
-scrollbar[orient="vertical"] {
-	-moz-margin-start: 0px !important;
-	max-width: 10px !important;
-	min-width: 10px !important;
-
-	background: linear-gradient(to right, #222, #222) !important;
-	background-size: 10px 10px !important;
-	background-repeat: repeat-y !important;
-	background-position: 50% 0% !important;
-	cursor: default;
-}
-
-scrollbar[orient="horizontal"] {
-	margin-top: 0px !important;
-	max-height: 10px !important;
-	min-height: 10px !important;
-
-	background: linear-gradient(to right, #222, #222) !important;
-	background-size: 16px 16px !important;
-	background-repeat: repeat-x !important;
-	background-position: 0% 50% !important;
-	cursor: default;
-}
-
-scrollbar thumb[orient="vertical"] {
-	min-height: 20px !important;
-	width: 10px !important;
-	min-width: 10px !important;
-	max-width: 10px !important;
-}
-
-scrollbar thumb[orient="horizontal"] {
-	min-width: 20px !important;
-	height: 10px !important;
-	min-height: 10px !important;
-	max-height: 10px !important;
-}
-
-scrollbar thumb {
-	background: transparent !important;
-	box-shadow: 0 0 0 10px #888 inset !important;
-	opacity: 1 !important;
-	transition: 0.2s !important;
-}
-
-scrollbar:hover thumb {
-	box-shadow: 0 0 0 10px #1e90ff50 inset !important;
-}
-
-scrollbar thumb:active {
-	box-shadow: 0 0 0 16px #1e90ff inset !important;
-	transition: 0s !important;
-}
-
-scrollcorner {
-	background-image: radial-gradient(at top left, #222, #222) !important;
-	background-color: #222 !important;
-}
-
-*/
 
 @-moz-document url(about:blank),
 url(about:newtab),
@@ -470,7 +321,7 @@ url(about:config) {
 
 	#newtab-window,
 	html {
-		background: #15202b !important;
+		background: #1D1923 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -483,14 +334,14 @@ url(about:config) {
 		--in-content-item-hover: rgba(30, 143, 255, 0.5) !important;
 
 		--in-content-item-selected: dodgerblue !important;
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 
 	.sticky-container,
 	.main-search,
 	.main-heading,
 	.main-page-content {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 
 	* {
@@ -499,7 +350,8 @@ url(about:config) {
 
 	.addon.card {
 		border-radius: 0px !important;
-		background-color: rgba(59, 66, 83, 0.418) !important;
+		background-color: #262A34 !important;
+		color: white !important;
 		/* #262A34 !important;*/
 	}
 
@@ -553,9 +405,13 @@ url(about:config) {
 	}
 
 	#page-options panel-list {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 		font-size: 14px !important;
 		border: none !important;
+	}
+
+	details-deck {
+		color: white !important;
 	}
 
 	button[role=menuitem]:focus,
@@ -575,11 +431,6 @@ url(about:config) {
 */
 }
 
-/*
-.scrollbutton-up[orient="horizontal"]~spacer {
-	border-width: 0px !important;
-	opacity: 0 !important;
-}*/
 @-moz-document url("http://www.w3.org/1999/xhtml") {
 	html|input.urlbar-scheme {
 		display: none !important;
@@ -596,52 +447,36 @@ url(about:config) {
 	scrollbar {
 		scrollbar-color: dodgerblue black !important;
 		scrollbar-width: thin !important;
-
 	}
-
 }
 
 * {
 	scrollbar-color: dodgerblue black !important;
 	scrollbar-width: thin !important;
-	scrollbar-highlight-color: rgb(140, 197, 255) !important;
-
 }
-
-/*
-@-moz-document url-prefix("about:neterror") {
-	body {
-		background-color: green !important;
-	}
-
-	#errorPageContainer {
-		background-color: blue !important;
-	}
-}
-*/
 
 @-moz-document url("about:home"),
 url("about:newtab") {
 	.outer-wrapper {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 }
 
 @-moz-document url-prefix("about:addons") {
 	#categories {
 
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 
 	#categories>richlistitem {
 
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 
 	}
 
 	#category-box {
 
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 }
 
@@ -650,7 +485,7 @@ url("about:newtab") {
 
 	html,
 	body {
-		background: #15202b !important;
+		background: #1D1923 !important;
 		color: #ccc !important
 	}
 
@@ -725,13 +560,13 @@ url("about:newtab") {
 
 @-moz-document url-prefix("about:restartrequired") {
 	body {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 }
 
 @-moz-document url-prefix("about:debugging") {
 	body {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 		color: white !important;
 	}
 
@@ -750,28 +585,51 @@ url("about:newtab") {
 /**************************-*/
 @-moz-document url-prefix("https://addons.mozilla.org") {
 
+	:root {
+		--nordp-0: #2E3440;
+		--nordp-1: #3B4253;
+		--nordp-2: #434c5E;
+		--nordp-3: #4C566A;
+
+		--nords-0: #d8DEE9;
+		--nords-1: #E5e9f0;
+		--nords-2: #ECEFF4;
+
+		--nordf-0: #8FBCBB;
+		--nordf-1: #88C0D0;
+		--nordf-2: #81A1C1;
+		--nordf-3: #5E81AC;
+		--nordf-4: #8ad;
+
+		--norda-0: #BF616A;
+		--norda-1: #D08770;
+		--norda-2: #EBCB8B;
+		--norda-3: #A3Be8C;
+		--norda-4: #B48EAD;
+	}
+
 
 	.Page-content,
 	.Footer,
 	.Footer-wrapper,
 	.LanguageTools-header-row,
 	.amo {
-		background: var(--background) !important
+		background: #1D1923 !important
 	}
 
 	h1,
 	h2 {
-		color: var(--foreground) !important
+		color: white !important
 	}
 
 	.SearchResult-link,
 	.SearchResult-linklink {
-		color: var(--norda-2) !important
+		color: dodgerblue !important
 	}
 
 	.Guides-header,
 	.HomeHeroGuides-sections .Hero-name-HomeHeroGuides {
-		border-color: var(--foreground) !important
+		border-color: white !important;
 	}
 
 	.App-content,
@@ -779,15 +637,15 @@ url("about:newtab") {
 	.LandingPage,
 	.LanguageTools-table-row:nth-child(2n),
 	.Paginate {
-		background: var(--background) !important
+		background: #1D1923 !important;
 	}
 
 	.Select {
-		background-color: var(--background) !important
+		background-color: #1D1923 !important;
 	}
 
 	.SearchForm-icon-magnifying-glass {
-		filter: invert(85%) !important
+		filter: invert(85%) !important;
 	}
 
 	AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
@@ -815,7 +673,7 @@ url("about:newtab") {
 	.SearchForm-suggestions-item.SearchForm-suggestions-item,
 	.SectionLinks-dropdown .DropdownMenu-items,
 	input.AutoSearchInput-query {
-		background: var(--nordp-3) !important
+		background: var(--nordp-3) !important;
 	}
 
 	.Addon-author,
@@ -866,26 +724,26 @@ url("about:newtab") {
 	.SearchResult-summary,
 	.Select,
 	input.AutoSearchInput-query {
-		color: var(--foreground) !important
+		color: white !important;
 	}
 
 	.Paginate .Button.Paginate-item:active,
 	.Paginate .Button.Paginate-item:hover {
-		background-color: var(--background) !important
+		background-color: #1D1923 !important;
 	}
 
 	.AutoSearchInput-suggestions-item {
-		color: var(--foreground)
+		color: white !important;
 	}
 
 	.Card-header {
-		color: var(--foreground) !important
+		color: white !important;
 	}
 
 	.Card-contents li .Rating-star-group,
 	.Paginate-next::after,
 	.Paginate-previous::before {
-		filter: invert(70%) !important
+		filter: invert(70%) !important;
 	}
 
 	.AddonMeta .MetadataCard-content a,
@@ -906,12 +764,12 @@ url("about:newtab") {
 	.RatingsByStar-star a:active,
 	.RatingsByStar-star a:link,
 	.RatingsByStar-star a:visited {
-		color: var(--background) !important
+		color: #1D1923 !important
 	}
 
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0), var(--background)) !important
+		background: linear-gradient(rgba(255, 255, 255, 0), #1D1923) !important
 	}
 
 	.Addon-details .AddonDescription-contents a:link,
@@ -927,15 +785,15 @@ url("about:newtab") {
 	.LanguageTools-table a:link,
 	.SearchResult-link:focus .SearchResult-name,
 	.SearchResult-link:hover .SearchResult-name {
-		color: var(--foreground) !important
+		color: white !important
 	}
 
 	.Button--action.Button--outline-only {
-		border-color: var(--background) !important
+		border-color: #1D1923 !important
 	}
 
 	input.AutoSearchInput-query {
-		border-color: var(--background) !important
+		border-color: 1D1923 !important
 	}
 
 	.Addon .InstallButton-button,
@@ -1151,7 +1009,7 @@ url("about:newtab") {
 	}
 
 	.Page-content {
-		background: #15202b80 !important;
+		background: #1D192380 !important;
 	}
 
 	.App-content,
@@ -1168,6 +1026,11 @@ url("about:newtab") {
 
 	.SearchForm-icon-magnifying-glass {
 		filter: invert(65%) !important;
+	}
+
+	.Notice-genericWarning {
+		background-color: var(--norda-2) !important;
+		color: black !important;
 	}
 
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
@@ -1195,7 +1058,7 @@ url("about:newtab") {
 	.SearchForm-suggestions-item.SearchForm-suggestions-item,
 	.SectionLinks-dropdown .DropdownMenu-items,
 	input.AutoSearchInput-query {
-		background: #15202b !important;
+		background: #1D1923 !important;
 	}
 
 	.Addon-author,
@@ -1251,7 +1114,7 @@ url("about:newtab") {
 
 	.Paginate .Button.Paginate-item:active,
 	.Paginate .Button.Paginate-item:hover {
-		background-color: #15202b !important;
+		background-color: #1D1923 !important;
 	}
 
 	.AutoSearchInput-suggestions-item {
@@ -1290,7 +1153,7 @@ url("about:newtab") {
 	}
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0), #15202b) !important;
+		background: linear-gradient(rgba(255, 255, 255, 0), #1D1923) !important;
 	}
 
 	.SecondaryHero-module {
@@ -1382,22 +1245,10 @@ url("about:newtab") {
 	}
 }
 
-
-/*-------------------------------
-#browser vbox#appcontent tabbrowser,
-#content,
-#tabbrowser-tabpanels,
-browser[type=content-primary],
-browser[type=content]>html {
-	background: #15202b !important;
-}
-*/
-
-
 @-moz-document url-prefix(about:),
 url-prefix(chrome: //browser) {
 
 	browser[type="content"], tabpanels {
-		background: #15202b !important;
+		background: #1D1923 !important;
 	}
 }
