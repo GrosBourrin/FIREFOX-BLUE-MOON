@@ -328,7 +328,7 @@ identity-popup-security-content,
 /*---------------------------------------------------------------*/
 
 .PlacesToolbar {
-	height: 28px !important;
+	height: 24px !important;
 }
 
 #statuspanel #statuspanel-label {
@@ -605,10 +605,10 @@ tooltip {
 }
 
 /*-------------------------*/
-
+/*
 #urlbar-textbox {
 	margin-bottom: 4px !important;
-}
+}*/
 
 #urlbar {
 	padding: 0 !important;
@@ -1610,9 +1610,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 
 /*-------------------------------------------------------*/
 
-:root[uidensity="compact"] #navigator-toolbox {
-	--tab-min-height: 38px;
-}
+
 
 /*
 #nav-bar-customization-target {
@@ -2283,8 +2281,8 @@ toolbarbutton:not([disabled]):active>.toolbarbutton-badge-stack>.toolbarbutton-i
 #tabs-newtab-button,
 #alltabs-button,
 #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) #alltabs-button,
-#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-arrowscrollbox>.scrollbutton-up,
-#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-arrowscrollbox>.scrollbutton-down,
+#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) #tabbrowser-arrowscrollbox>.scrollbutton-up,
+#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) #tabbrowser-arrowscrollbox>.scrollbutton-down,
 #downloads-button,
 #downloads-button[indicator="true"]:not([attention="success"]) #downloads-indicator-icon,
 #copy-button,
@@ -2480,8 +2478,8 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 }
 
 .toolbarbutton-1 {
-	padding-bottom: 3px !important;
-	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	padding-top: 1px !important;
 }
 
 /*avatar account icon*/
@@ -3007,7 +3005,7 @@ toolbar #fullscreen-button {
 input:not(#urlbar-input) {
 	-moz-appearance: none !important;
 	background-color: black !important;
-	padding: 2px !important;
+	/*padding: 2px !important;*/
 	color: white !important;
 	border: 1px solid black !important;
 }
@@ -3387,8 +3385,6 @@ toolbar .toolbarbutton-1,
 toolbar toolbarbutton>.toolbarbutton-icon,
 toolbar toolbarbutton>.toolbarbutton-badge-stack,
 .titlebar-button,
-/*#identity-box,
-#tracking-protection-icon-container, */
 .findbar-textbox~toolbarbutton,
 toolbarbutton.scrollbutton-up,
 toolbarbutton.scrollbutton-down {
@@ -3702,3 +3698,9 @@ scrollbox{ overflow-y: var(--uc-scrollbox-overflow,initial) !important; }
   display: var(--uc-scrollbutton-display-model,initial) !important;
 }
 */
+#tabbrowser-tabs,
+#tabbrowser-tabs>#tabbrowser-arrowscrollbox {
+	min-height: 38px !important;
+	margin-top: 0px !important;
+	border: none !important;
+}
