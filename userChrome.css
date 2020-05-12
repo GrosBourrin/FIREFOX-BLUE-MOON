@@ -1286,9 +1286,9 @@ treechildren::-moz-tree-image(query) {
 	background-color: #f8f8f8 !important;
 	border-bottom-width: 1px !important;
 	border-bottom-color: #000000 !important:
-		/*color: white !important;*/
+		color: white !important;
 }
-
+*/
 :root[sizemode="normal"] .titlebar-max {
 	padding: 6px 13px !important;
 }
@@ -2487,6 +2487,10 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	transform: scale(1.25) !important;
 }
 
+/*#fxa-toolbar-menu-button {
+	margin-bottom: 0px !important;
+}
+*/
 /* Dark library, page-info and bookmark-properties */
 /* Color scheme matches default dark theme */
 
@@ -2940,9 +2944,9 @@ toolbar #fullscreen-button {
 	transform: translateY(0);
 	position: relative;
 	z-index: 10;
-	padding-block: 3px !important;
+	padding-block: 0px !important;
 	padding-inline: 0px !important;
-	margin-inline: 6px !important;
+	margin-inline: 0px !important;
 }
 
 #nav-bar-customization-target {
@@ -3716,3 +3720,40 @@ scrollbox{ overflow-y: var(--uc-scrollbox-overflow,initial) !important; }
 	margin-top: 0px !important;
 	border: none !important;
 }
+
+
+
+
+/*------------------transparent ff not yet fixed
+html,
+html>*,
+html>*>*,
+.browser-toolbar {
+	border: none !important;
+	-moz-appearance: none !important;
+	box-shadow: none !important;
+	background-image: url(noise512x512.png) !important;
+}
+
+.titlebar-color,
+.browser-toolbar,
+findbar {
+	background: rgba(49, 54, 59, 0.75) !important;
+}
+
+.tab-line {
+	background: none !important;
+}
+
+.tab-background[selected=true] {
+	background: #5294e2 !important;
+	border-radius: 6px;
+	border: none !important;
+}
+
+tab[selected="true"]::after,
+.tabbrowser-tab[beforeselected-visible]::after {
+	opacity: 0 !important;
+}
+
+*/
