@@ -3217,23 +3217,6 @@ input:not(#urlbar-input) {
 	filter: drop-shadow(0px 0px 5px white) !important;
 }
 
-/*
-.scrollbutton-up[orient="horizontal"]~spacer {
-	width: 38px !important;
-
-	background-size: 37px 100% !important;
-
-}
-*/
-/*
-html[windowtype="Toolkit:PictureInPicture"] {
-	border: 1px solid dodgerblue !important;
-}
-*/
-/*
-html[windowtype="Toolkit:PictureInPicture"] .player-holder {
-	height: calc(100vh - 20px) !important;
-}*/
 
 @-moz-document url("http://www.w3.org/1999/xhtml") {
 	html|input.urlbar-scheme {
@@ -3371,27 +3354,6 @@ window[lwtheme="true"] findbar .found-matches {
 }
 
 
-/*
-#statuspanel-label {
-	display: none !important;
-}
-*/
-/*
-button[class="dialog-button"] {
-	-moz-appearance: none !important;
-	background-color: black !important;
-	color: white !important;
-}
-*/
-/*
-.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]) {
-	mask-image: none !important;
-}
-*/
-/* Replace the button background-colors with a glow effect */
-/* Edit the color choices how you see fit */
-
-
 /* Make backgrounds transparent */
 
 .urlbar-icon,
@@ -3454,22 +3416,6 @@ toolbarbutton.scrollbutton-down {
 
 
 
-/* TAB ICONS - none-selected tab icons are grey, 1px white glow to see dark icons on dark
-.tabbrowser-tab .tab-icon-image {
-	filter: grayscale(100%) drop-shadow(0px 0px 1px white) !important;
-	opacity: 1 !important;
-}
-
-.tabbrowser-tab[selected] .tab-icon-image {
-	filter: drop-shadow(0px 0px 1px white) !important;
-	opacity: 1 !important;
-}
-
-.tabbrowser-tab:hover:not([selected]) .tab-icon-image {
-	filter: drop-shadow(0px 0px 1px white) !important;
-	opacity: 1 !important;
-}
-*/
 /* BOOKMARKS adds glow 1px white glow to see dark icons on dark */
 .bookmark-item.menuitem-with-favicon:not([container]) image {
 	filter: drop-shadow(0px 0px 1px white) !important;
@@ -3508,65 +3454,6 @@ url-prefix(about:newtab) {
 	display: none !important;
 }
 
-/*------------------------------------------------*/
-/*
-#PersonalToolbar {
-	background-image: url("noise-512x512.png") !important;
-	background-color: #1D1923a0 !important;
-	backdrop-filter: blur(32px) !important;
-	--uc-bm-height: 24px;
-
-	--uc-bm-padding: 6px;
-
-}
-
-:root[uidensity="compact"] #PersonalToolbar {
-	--uc-bm-padding: 1px
-}
-
-:root[uidensity="touch"] #PersonalToolbar {
-	--uc-bm-padding: 6px
-}
-
-#PersonalToolbar:not([customizing]) {
-	margin-bottom: calc(2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
-	transform: rotateX(90deg);
-	transform-origin: top;
-	transition: transform 135ms linear 600ms !important;
-	z-index: 1;
-
-}
-
-#PlacesToolbarItems>.bookmark-item {
-	padding-block: var(--uc-bm-padding) !important;
-}
-
-
-/* SELECT ONE BOOKMARKS TOOLBAR BEHAVIOR */
-
-/* ONE | Show when urlbar is focused
-#nav-bar:focus-within+#PersonalToolbar {
-	transition-delay: 100ms !important;
-	transform: rotateX(0);
-}
-
-/* TWO | Show when cursor is over the toolbar area
-My Personal Choice*/
-/*
-#navigator-toolbox:hover>#PersonalToolbar {
-	transition-delay: 100ms !important;
-	transform: rotateX(0);
-}
-*/
-/*
-#browser vbox#appcontent tabbrowser,
-#content,
-#tabbrowser-tabpanels,
-browser[type=content-primary],
-browser[type=content]>html {
-	background: #1D1923 !important;
-}
-*/
 
 
 /* Color for most dialogs */
@@ -3589,131 +3476,12 @@ dialog select,
 }
 
 
-/*
-
-@keyframes slidein {
-	from {
-		margin-top: calc(0px - var(--tab-min-height))
-	}
-
-	to {
-		margin-top: 0
-	}
-}
-
-@keyframes slideout {
-	from {
-		margin-top: var(--tab-min-height)
-	}
-
-	to {
-		margin-top: 0
-	}
-}
-
-
-#navigator-toolbox:not(:hover)>#titlebar {
-	-moz-appearance: none !important
-}
-
-#navigator-toolbox:not(:hover) #TabsToolbar:not([customizing]) {
-	visibility: collapse
-}
-
-#navigator-toolbox:hover>#nav-bar:not([customizing]) {
-	animation: slidein ease-out 150ms 1
-}
-
-#navigator-toolbox:not(:hover)>#nav-bar:not([customizing]) {
-	animation: slideout ease-out 150ms 1
-}
-
-#tabbrowser-tabpanels {
-	background-color: var(--uc-light-bkgnd-color, #323639) !important;
-}
-*/
-
 #downloadsRichListBox {
 	background-color: #1D1923 !important;
 	color: white !important;
 
 }
 
-/*
-#downloadsRichListBox [selected] {
-	background-color: dodgerblue !important;
-	color: white !important;
-	border-radius: 0px !important;
-	border: 1px solid !important;
-}
-*/
-
-
-/*
-.urlbar-input-box {
-	padding-left: 5px !important;
-	margin-right: 5px !important;
-	border-inline: 1px solid !important;
-	border-image: linear-gradient(transparent 15%, rgba(1, 1, 1, 0.3) 15%, rgba(1, 1, 1, 0.3) 85%, transparent 85%) !important;
-	border-image-slice: 1 !important;
-}
-*/
-
-/* tab counter
-
-.tabbrowser-tab:first-child {
-	counter-reset: nth-tab 0
-}
-*/
-/* Change to -1 for 0-indexing 
-.tab-text::before {
-	content: counter(nth-tab) " ";
-	counter-increment: nth-tab
-}
-*/
-/*
-.tab-content::before {
-	content: counter(nth-tab) " ";
-	counter-increment: nth-tab;
-	display: -moz-box;
-	padding-inline-end: 3px
-}
-*/
-/*
-menupopup>menu:not(.menu-iconic)::before,
-menupopup>menuitem:not(.menuitem-iconic)::before {
-	content: attr(label) !important;
-	display: -moz-box !important;
-	-moz-appearance: menuitemtext !important;
-	-moz-box-flex: 1 !important;
-}
-
-menubar>menu::before {
-	content: attr(label) !important;
-	display: -moz-box !important;
-	margin: 2px 6px 0px 6px !important;
-}
-
-.menu-text,
-.menubar-text {
-	display: none !important;
-}
-*/
-/* Color change of tab icon*/
-
-/*
-.menupopup-arrowscrollbox{
-  --uc-scrollbox-overflow: auto;
-  --uc-scrollbutton-display-model: none;
-}
-
-scrollbox{ overflow-y: var(--uc-scrollbox-overflow,initial) !important; }
-
-#scrollbutton-up,
-#scrollbutton-down{
-  display: var(--uc-scrollbutton-display-model,initial) !important;
-}
-*/
 #tabbrowser-tabs,
 #tabbrowser-tabs>#tabbrowser-arrowscrollbox {
 	min-height: 38px !important;
@@ -3723,37 +3491,3 @@ scrollbox{ overflow-y: var(--uc-scrollbox-overflow,initial) !important; }
 
 
 
-
-/*------------------transparent ff not yet fixed
-html,
-html>*,
-html>*>*,
-.browser-toolbar {
-	border: none !important;
-	-moz-appearance: none !important;
-	box-shadow: none !important;
-	background-image: url(noise512x512.png) !important;
-}
-
-.titlebar-color,
-.browser-toolbar,
-findbar {
-	background: rgba(49, 54, 59, 0.75) !important;
-}
-
-.tab-line {
-	background: none !important;
-}
-
-.tab-background[selected=true] {
-	background: #5294e2 !important;
-	border-radius: 6px;
-	border: none !important;
-}
-
-tab[selected="true"]::after,
-.tabbrowser-tab[beforeselected-visible]::after {
-	opacity: 0 !important;
-}
-
-*/
