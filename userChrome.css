@@ -3033,10 +3033,11 @@ toolbar #fullscreen-button {
 	border-bottom-left-radius: 0px !important;
 }
 
+/*
 .urlbarView-row {
 	padding: 6px 0px !important;
 }
-
+*/
 .popup-notification-body .menulist-label-box {
 	color: white !important;
 }
@@ -3854,40 +3855,35 @@ panelview .toolbarbutton-1,
 
 	/* REMOVE URL RESULT PADDING START */
 	.urlbarView {
-		margin-inline: 0 !important;
+		margin-inline: 0px !important;
 		width: 100% !important;
 		box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.688) !important;
 	}
 
 	.urlbarView-row {
-		padding-block: 0 !important;
+		padding-block: 0px !important;
 	}
 
 	/* REMOVE URL RESULT PADDING END */
 
 	/* MOVE URL RESULT TYPE ICON TO LEFT START */
-	.urlbarView.megabar-type-icon {
+	.urlbarView-type-icon {
+
 		min-width: 16px !important;
 		height: 16px !important;
-		margin-bottom: 0 !important;
-		margin-inline-start: 0 !important;
+		margin-bottom: 0px !important;
+		margin-inline-start: 0px !important;
 	}
+
 
 	.urlbarView-favicon {
 		margin-inline-start: 20px !important;
 	}
 
-	/* Megabar custom background 
-	.urlbarView.megabar {
-		background-color: #01323f !important;
-		margin-bottom: 7px !important;
-	}*/
+
 
 	.urlbarView.megabar {
-		/*background-image: url("noise-512x512.png") !important;*/
-		/*background-color: #1D192380 !important;*/
-		/*background: #1d192380 !important;*/
-		/*backdrop-filter: blur(2px) !important;*/
+		
 		top: calc(100% - 5px) !important;
 		width: 100% !important;
 		/*background: #1D192380 !important;*/
@@ -3908,34 +3904,6 @@ panelview .toolbarbutton-1,
 
 /* REMOVE MEGABAR END */
 
-
-/* Firefox Quantum userChrome.css tweaks ************************************************/
-/* Github: https://github.com/aris-t2/customcssforfx ************************************/
-/****************************************************************************************
-#urlbar #urlbar-background,
-#urlbar,
-#urlbar-input-container {
-	border-radius: 20px !important;
+scrollbox[orient="horizontal"] {
+	-moz-box-pack: center;
 }
-
-#urlbar[focused="true"]:not([usertyping="true"]) .urlbarView,
-#urlbar .search-one-offs,
-#urlbar .search-one-offs .search-panel-header,
-#urlbar .search-one-offs .search-panel-one-offs-container {
-	border-bottom-left-radius: 20px !important;
-	border-bottom-right-radius: 20px !important;
-}
-
-#urlbar .search-one-offs .search-setting-button-compact {
-	border-bottom-right-radius: 20px !important;
-}
-
-#urlbar[focused="true"][open] #urlbar-input-container {
-	border-bottom-left-radius: 0px !important;
-	border-bottom-right-radius: 0px !important;
-}
-
-#searchbar:focus-within {
-	box-shadow: inset 0 0 0 2px var(--toolbar-field-focus-border-color) !important;
-	border: 0px !important;
-}*/
