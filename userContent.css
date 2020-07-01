@@ -47,31 +47,60 @@ url-prefix(about:newtab) {
 	background-color: #1D1923 !important;
 }
 
+
 /*---------------------------------UBLOCK ORIGIN ---------------------*/
 
 @-moz-document url-prefix("moz-extension://ad2ba683-e23a-449d-854a-d528b8e793d3/") {
 
-	body {
+	/* see this to tweak : https://github.com/gorhill/uBlock/blob/master/src/css/cloud-ui.css*/
+
+
+	body,
+	#sticky,
+	#main {
 		font-family: Fira Sans !important;
 		background-color: #1D1923 !important;
 		color: #ffffff !important;
+	}
+
+	hr {
+		display: none !important;
 	}
 
 	a {
 		color: #888 !important;
 	}
 
+	.fa-icon {
+		fill: white !important;
+		color: white !important;
+	}
+
 	h2 {
-		background-color: #444 !important;
+		background-color: #1D1923 !important;
 		color: #ffffff !important;
 	}
 
 	code {
-		background-color: #555 !important;
+		background-color: #1D1923 !important;
+	}
+
+	#switch .fa-icon {
+		fill: #1e90ff !important;
 	}
 
 	#switch .fa {
 		fill: #1e90ff !important;
+	}
+
+	html#ublock0-epicker,
+	#ublock0-epicker body {
+		background: #1D1923 !important;
+		color: white !important;
+	}
+
+	#ublock0-epicker aside {
+		background-color: black !important;
 	}
 
 	body.off #switch .fa {
@@ -79,23 +108,28 @@ url-prefix(about:newtab) {
 	}
 
 	.tool {
+		background-color: #1D1923 !important;
 		color: #ffffff !important;
 	}
 
 	.tool.enabled:hover {
+		background-color: #1f1f1f !important;
 		fill: dodgerblue !important;
+		color: dodgerblue !important;
 	}
 
 	.permatoolbar {
-		background-color: #333 !important;
+		background-color: #1D1923 !important;
 	}
 
 	.permatoolbar .button {
-		background-color: #444 !important;
+		background-color: #1f1f1f !important;
 	}
 
 	.permatoolbar .button:hover {
-		background-color: #888 !important;
+		fill: dodgerblue !important;
+		color: dodgerblue !important;
+		background-color: #1f1f1f !important;
 	}
 
 	#tooltip {
@@ -104,30 +138,39 @@ url-prefix(about:newtab) {
 		color: #ffffff !important;
 	}
 
-	#firewallContainer>div {
+	#firewall {
+		background: #1D1923 !important;
+	}
+
+	#firewall>div {
 		background-color: #333 !important;
 	}
 
-	#firewallContainer>div:hover {
+	#firewall>div:hover {
 		background-color: #444 !important;
 	}
 
-	#firewallContainer>div>span {
+	#firewall>div>span {
 		background-color: #1D1923 !important;
 		color: #ffffff !important;
-		border-bottom: 1px solid #111 !important;
+		/*border-bottom: 1px solid #111 !important;*/
 	}
 
-	#firewallContainer>div>span:first-of-type~span {
+	#firewall>div>span:first-of-type~span {
 		border-left: 1px solid #111 !important;
 	}
 
 	#extraTools {
-		background-color: #444 !important;
+		background-color: #1D1923 !important;
 	}
 
 	#extraTools>span:hover {
 		fill: #1e90ff !important;
+	}
+
+	#dashboard-nav {
+		background-color: #111 !important;
+		border-bottom: 1px solid #777 !important;
 	}
 
 	#dashboard-nav-widgets {
@@ -136,15 +179,16 @@ url-prefix(about:newtab) {
 	}
 
 	.tabButton {
-		background-color: #444 !important;
-		border: 1px solid #666 !important;
-		border-bottom: 1px solid #777 !important;
+		background-color: #1D1923 !important;
+		border: 0px solid #1D192380 !important;
+		border-bottom: 0px solid #777 !important;
 		color: #ffffff !important;
 	}
 
 	.tabButton.selected {
-		background-color: #222 !important;
-		border-bottom: 1px solid #222 !important;
+		background-color: dodgerblue !important;
+		color: white !important;
+		border-bottom: 0px solid #222 !important;
 	}
 
 	#diff li {
@@ -160,12 +204,85 @@ url-prefix(about:newtab) {
 		color: #ffff !important;
 	}
 
+	hr {
+		display: none !important;
+	}
+
+	.fieldset-header {
+		color: white !important;
+	}
+
+	#loggerSettingsDialog,
+	#modalOverlayContainer,
+	#netFilteringDialog,
+	#netFilteringDialog>.panes>.details>div,
+	#netFilteringDialog>div.panes>.dynamic .row {
+		background-color: #1D1923 !important;
+		border-color: grey !important;
+	}
+
+	#domTree {
+		color: white !important;
+	}
+
+	#ruleFilter input,
+	input[type=number] {
+		-moz-appearance: none !important;
+		background-color: #1D1923 !important;
+		border: 1px solid !important;
+		border-color: #1D1923 !important;
+		color: white !important;
+	}
+
 	#cloudWidget {
-		background: none !important;
+		background: #1D1923 !important;
+		color: #ffffff !important;
 		color: #ffffff !important;
 	}
 
+	#cloudWidget>span {
+		background: #1D1923 !important;
+		color: #ffffff !important;
+		/*	fill: white !important;*/
+	}
+
+	#cloudinfo {
+		background: #1D1923 !important;
+		color: #ffffff !important;
+	}
+
+	:root {
+
+		--checkmark: #ffffff80 !important;
+		--checkbox-checked-ink: var(--checkmark) !important;
+
+	}
+
+	button:hover {
+		background-color: #1D1923 !important;
+		fill: #1e90ff80
+	}
+
+	button#cloudPush,
+	button#cloudPull,
+	button#cloudPullAndMerge {
+		background: dodgerblue !important;
+	}
+
+	#actions {
+		background: #1D1923 !important;
+	}
+
+	#ublock0_raymondhill_net-browser-action label {
+		color: white !important;
+		background-color: dodgerblue !important;
+		opacity: 1 !important;
+	}
+
+	/*---------------------------------------*/
+
 }
+
 
 
 /*-------------downloads sidebar webext tweaks dark ------------------*/
@@ -486,7 +603,7 @@ url("about:newtab") {
 	html,
 	body {
 		background: #1D1923 !important;
-		color: #ccc !important
+		color: white !important;
 	}
 
 	h1,
@@ -504,7 +621,7 @@ url("about:newtab") {
 		-moz-appearance: none !important;
 		border-radius: 3px !important;
 		background-color: #555 !important;
-		color: #ddd !important;
+		color: white !important;
 		border: none !important;
 		padding: 5px !important;
 		margin: 3px !important
@@ -512,8 +629,8 @@ url("about:newtab") {
 
 	button:hover,
 	input[type="button"]:hover {
-		background-color: #222 !important;
-		color: #fff !important;
+		background-color: dodgerblue !important;
+		color: white !important;
 		box-shadow: none !important
 	}
 
@@ -552,11 +669,6 @@ url("about:newtab") {
 }
 
 /* uBlock Origin */
-#ublock0_raymondhill_net-browser-action label {
-	color: white !important;
-	background-color: dodgerblue !important;
-	opacity: 1 !important;
-}
 
 @-moz-document url-prefix("about:restartrequired") {
 	body {
@@ -1250,5 +1362,37 @@ url-prefix(chrome: //browser) {
 
 	browser[type="content"], tabpanels {
 		background: #1D1923 !important;
+		background-color: #1D1923 !important;
+	}
+}
+
+@-moz-document url(chrome://global/content/alerts/alert.xhtml) {
+	#alertBox {
+		background-color: #1D1923 !important;
+		color: white !important;
+		font-family: Fira Sans !important;
+	}
+
+	#alertSourceLabel {
+		color: dodgerblue !important;
+		font-family: Fira Sans !important;
+	}
+}
+
+
+
+browser vbox#appcontent tabbrowser,
+content,
+tabbrowser-tabpanels,
+browser[type=content-primary], browser[type=content] > html {
+	background: #1d1923 !important;
+}
+
+@-moz-document url("about:memory") {
+
+	html,
+	body {
+		background-color: #1D1923 !important;
+		color: white !important;
 	}
 }
