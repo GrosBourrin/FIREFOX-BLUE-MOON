@@ -18,7 +18,7 @@ url-prefix(about:newtab) {
 	#newtab-window,
 	#newtab-customize-overlay,
 	html {
-		background: #1D1923 !important;
+		background: #131518 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -27,7 +27,7 @@ url-prefix(about:newtab) {
 @-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
 
 	* {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: white !important;
 		font-family: "Fira Sans" !important;
 		font-size: 14px !important;
@@ -44,7 +44,13 @@ url-prefix(about:newtab) {
 
 /*---------------------------------*/
 #viewer.pdfViewer {
-	background-color: #1D1923 !important;
+	background-color: #131518 !important;
+
+	a[href$=".pdf"]:after {
+		font-size: smaller;
+		content: " [pdf]";
+	}
+
 }
 
 
@@ -59,7 +65,7 @@ url-prefix(about:newtab) {
 	#sticky,
 	#main {
 		font-family: Fira Sans !important;
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: #ffffff !important;
 	}
 
@@ -77,12 +83,12 @@ url-prefix(about:newtab) {
 	}
 
 	h2 {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: #ffffff !important;
 	}
 
 	code {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	#switch .fa-icon {
@@ -95,7 +101,7 @@ url-prefix(about:newtab) {
 
 	html#ublock0-epicker,
 	#ublock0-epicker body {
-		background: #1D1923 !important;
+		background: #131518 !important;
 		color: white !important;
 	}
 
@@ -108,28 +114,28 @@ url-prefix(about:newtab) {
 	}
 
 	.tool {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: #ffffff !important;
 	}
 
 	.tool.enabled:hover {
-		background-color: #1f1f1f !important;
+		background-color: #131518 !important;
 		fill: dodgerblue !important;
 		color: dodgerblue !important;
 	}
 
 	.permatoolbar {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	.permatoolbar .button {
-		background-color: #1f1f1f !important;
+		background-color: #131518 !important;
 	}
 
 	.permatoolbar .button:hover {
 		fill: dodgerblue !important;
 		color: dodgerblue !important;
-		background-color: #1f1f1f !important;
+		background-color: #131518 !important;
 	}
 
 	#tooltip {
@@ -139,7 +145,7 @@ url-prefix(about:newtab) {
 	}
 
 	#firewall {
-		background: #1D1923 !important;
+		background: #131518 !important;
 	}
 
 	#firewall>div {
@@ -151,7 +157,7 @@ url-prefix(about:newtab) {
 	}
 
 	#firewall>div>span {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: #ffffff !important;
 		/*border-bottom: 1px solid #111 !important;*/
 	}
@@ -161,7 +167,7 @@ url-prefix(about:newtab) {
 	}
 
 	#extraTools {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	#extraTools>span:hover {
@@ -179,8 +185,8 @@ url-prefix(about:newtab) {
 	}
 
 	.tabButton {
-		background-color: #1D1923 !important;
-		border: 0px solid #1D192380 !important;
+		background-color: #131518 !important;
+		border: 0px solid #13151880 !important;
 		border-bottom: 0px solid #777 !important;
 		color: #ffffff !important;
 	}
@@ -217,7 +223,7 @@ url-prefix(about:newtab) {
 	#netFilteringDialog,
 	#netFilteringDialog>.panes>.details>div,
 	#netFilteringDialog>div.panes>.dynamic .row {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		border-color: grey !important;
 	}
 
@@ -228,26 +234,26 @@ url-prefix(about:newtab) {
 	#ruleFilter input,
 	input[type=number] {
 		-moz-appearance: none !important;
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		border: 1px solid !important;
-		border-color: #1D1923 !important;
+		border-color: #131518 !important;
 		color: white !important;
 	}
 
 	#cloudWidget {
-		background: #1D1923 !important;
+		background: #131518 !important;
 		color: #ffffff !important;
 		color: #ffffff !important;
 	}
 
 	#cloudWidget>span {
-		background: #1D1923 !important;
+		background: #131518 !important;
 		color: #ffffff !important;
 		/*	fill: white !important;*/
 	}
 
 	#cloudinfo {
-		background: #1D1923 !important;
+		background: #131518 !important;
 		color: #ffffff !important;
 	}
 
@@ -259,7 +265,7 @@ url-prefix(about:newtab) {
 	}
 
 	button:hover {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		fill: #1e90ff80
 	}
 
@@ -270,13 +276,39 @@ url-prefix(about:newtab) {
 	}
 
 	#actions {
-		background: #1D1923 !important;
+		background: #131518 !important;
 	}
 
 	#ublock0_raymondhill_net-browser-action label {
 		color: white !important;
 		background-color: dodgerblue !important;
 		opacity: 1 !important;
+	}
+
+	.CodeMirror-activeline-background {
+		background: #8ad !important
+	}
+
+	/*****THIS IS A PLACEHOLDER COLOR CHOOSE SOMETHING NICER****/
+	#advancedSettings {
+		color: #f9f9fa !important;
+	}
+
+	.CodeMirror {
+		background: #131518 !important;
+
+		color: #f9f9fb !important;
+	}
+
+	.CodeMirror-gutters {
+		background-color: #131518 !important;
+		border-right: 1px solid #32313c !important;
+	}
+
+	.CodeMirror-merge-gap {
+		background: #131518 !important;
+		border-left: 1px solid #32313c !important;
+		border-right: 1px solid #32313c !important;
 	}
 
 	/*---------------------------------------*/
@@ -292,7 +324,7 @@ url-prefix(about:newtab) {
 	html,
 	body {
 		font-family: Fira Sans !important;
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: #ffffff !important;
 	}
 
@@ -304,24 +336,24 @@ url-prefix(about:newtab) {
 	}
 
 	.progress {
-		border: 0px solid #404040 !important;
+		border: 0px solid #303030 !important;
 		background-color: rgba(30, 143, 255, 0.5) !important;
 	}
 
 	.toolbar-bottom {
-		border-top: 0px solid #404040 !important;
+		border-top: 0px solid #303030 !important;
 	}
 
 	.item:hover {
-		background-image: linear-gradient(to top, dodgerblue, #1D1923) !important;
+		background-image: linear-gradient(to top, dodgerblue, #131518) !important;
 		border-radius: 0px !important;
-		box-shadow: 0 0 0px 4px #1D1923 !important;
+		box-shadow: 0 0 0px 4px #131518 !important;
 	}
 
 	.item:selected {
-		background-image: linear-gradient(to top, dodgerblue, #1D1923) !important;
+		background-image: linear-gradient(to top, dodgerblue, #131518) !important;
 		border-radius: 0px !important;
-		box-shadow: 0 0 0px 4px #1D1923 !important;
+		box-shadow: 0 0 0px 4px #131518 !important;
 	}
 }
 
@@ -342,26 +374,26 @@ url-prefix(about:newtab) {
 	height: 24px !important;
 	width: 30px !important;
 	margin-top: -60px !important;
-	background-color: #1D1923 !important;
-	outline: 1px solid #1D1923 !important;
+	background-color: #131518 !important;
+	outline: 1px solid #131518 !important;
 }
 
 /* about:support*/
 @-moz-document url(about:support) {
 	body.wide-container {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 }
 
 /* about:preferences */
 @-moz-document url(about:preferences) {
 	.sticky-container {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	:root {
 		font-family: Fira Sans !important;
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	#categories>.category[selected],
@@ -389,11 +421,39 @@ url-prefix(about:newtab) {
 		background-color: rgba(30, 143, 255, 0.5) !important;
 	}
 
+	.sync-group.sync-configured {
+		border-radius: 0px !important;
+		background-color: rgba(30, 143, 255, 0.5) !important;
+		/*border: 1px solid var(--in-content-border-color);*/
+	}
+
+
+
+	/* Changes colors on the page 
+:root {
+	--in-content-page-color: #009bd4 !important;
+	
+	--in-content-page-background: #1a1a1a !important;
+	
+	-in-content-text-color: #009bd4 !important;
+	--in-content-category-text-selected: #009bd4 !important;
+	--in-content-border-color: #009bd4 !important;
+	--in-content-link-color: #009bd4 !important;
+	--in-content-border-active: none !important;
+	--in-content-border-active-shadow: none !important;
+	--in-content-category-text-selected-active: #009bd4 !important;
+	--in-content-category-background-hover: #000000 !important;
 }
+
+	html|h1 {
+		color: #009bd4 !important;
+	} */
+}
+
 
 @-moz-document url('chrome://devtools/content/webconsole/index.html') {
 	.webconsole-output .info {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: white !important;
 	}
 }
@@ -403,7 +463,7 @@ url('chrome://global/content/config.xhtml') {
 	:root {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: white !important;
 		fill: white !important;
 		opacity: 1 !important;
@@ -413,12 +473,32 @@ url('chrome://global/content/config.xhtml') {
 
 @-moz-document url('about:home'),
 url('about:newtab') {
+	.outer-wrapper {
+		background-color: #131518 !important;
+	}
+
+	#newtab-search-text,
+	#searchSuggestionTable,
+	#searchSuggestionTable>tr,
+	#searchSuggestionTable>tr>td,
+	#searchSuggestionTable>table>tr>td,
+	#searchSuggestionTable>button {
+		background-color: #131518 !important;
+		color: #F8F8F2 !important;
+		fill: #F8F8F2 !important;
+	}
+
+	.search-wrapper input {
+		box-shadow: rgba(248, 248, 242, 0.2) 0px 1px 4px 0px, rgba(238, 238, 232, 0.15) 0px 0px 0px 1px !important;
+	}
+
+
 	body {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	.prefs-button button {
-		fill: #1D1923 !important;
+		fill: #131518 !important;
 	}
 
 	.prefs-button button:hover,
@@ -438,7 +518,7 @@ url(about:config) {
 
 	#newtab-window,
 	html {
-		background: #1D1923 !important;
+		background: #131518 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -451,14 +531,14 @@ url(about:config) {
 		--in-content-item-hover: rgba(30, 143, 255, 0.5) !important;
 
 		--in-content-item-selected: dodgerblue !important;
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	.sticky-container,
 	.main-search,
 	.main-heading,
 	.main-page-content {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	* {
@@ -522,7 +602,7 @@ url(about:config) {
 	}
 
 	#page-options panel-list {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		font-size: 14px !important;
 		border: none !important;
 	}
@@ -537,15 +617,14 @@ url(about:config) {
 	}
 
 	panel-item-separator {
-		background-color: #404040 !important;
+		background-color: #303030 !important;
 		margin-inline: 5px !important;
 	}
 
 	/*
 	.more-options-button {
 		background: transparent !important;
-	}
-*/
+	}*/
 }
 
 @-moz-document url("http://www.w3.org/1999/xhtml") {
@@ -562,38 +641,33 @@ url(about:config) {
 	html,
 	.main-content,
 	scrollbar {
+
 		scrollbar-color: dodgerblue black !important;
 		scrollbar-width: thin !important;
 	}
 }
 
 * {
+
 	scrollbar-color: dodgerblue black !important;
 	scrollbar-width: thin !important;
-}
-
-@-moz-document url("about:home"),
-url("about:newtab") {
-	.outer-wrapper {
-		background-color: #1D1923 !important;
-	}
 }
 
 @-moz-document url-prefix("about:addons") {
 	#categories {
 
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	#categories>richlistitem {
 
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 
 	}
 
 	#category-box {
 
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 }
 
@@ -601,9 +675,20 @@ url("about:newtab") {
 @-moz-document url-prefix("moz-extension://12cd9013-8223-41e7-98ff-8af828035706/") {
 
 	html,
-	body {
-		background: #1D1923 !important;
+	body,
+	header {
+		font-family: Fira Sans !important;
+		background: #131518 !important;
 		color: white !important;
+	}
+
+	span,
+	span.rulesets-version,
+	span#current-version {
+		font-family: Fira Sans !important;
+		background: #131518 !important;
+		color: white !important;
+		background-size: ;
 	}
 
 	h1,
@@ -625,6 +710,16 @@ url("about:newtab") {
 		border: none !important;
 		padding: 5px !important;
 		margin: 3px !important
+	}
+
+	.logo-container img {
+		display: none;
+	}
+
+	.logo-container::before {
+		content: url("HTTPS-Everywhere-Logo2.png") !important;
+		height: 36px !important;
+		width: 71.017px !important;
 	}
 
 	button:hover,
@@ -656,29 +751,31 @@ url("about:newtab") {
 		background-color: #444 !important;
 		border: 1px solid #666 !important;
 		color: #fff !important;
-		margin: 3px !important
+		margin: 3px !important;
 	}
 
 	input[type="text"]:focus {
-		border: 1px solid dodgerblue !important
+		border: 1px solid dodgerblue !important;
 	}
 
 	input[type="text"][disabled] {
-		color: #aaa !important
+		color: #aaa !important;
 	}
 }
 
-/* uBlock Origin */
+
 
 @-moz-document url-prefix("about:restartrequired") {
 	body {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
+
 	}
 }
 
+
 @-moz-document url-prefix("about:debugging") {
 	body {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: white !important;
 	}
 
@@ -726,17 +823,17 @@ url("about:newtab") {
 	.Footer-wrapper,
 	.LanguageTools-header-row,
 	.amo {
-		background: #1D1923 !important
+		background: #131518 !important;
 	}
 
 	h1,
 	h2 {
-		color: white !important
+		color: white !important;
 	}
 
 	.SearchResult-link,
 	.SearchResult-linklink {
-		color: dodgerblue !important
+		color: dodgerblue !important;
 	}
 
 	.Guides-header,
@@ -749,11 +846,11 @@ url("about:newtab") {
 	.LandingPage,
 	.LanguageTools-table-row:nth-child(2n),
 	.Paginate {
-		background: #1D1923 !important;
+		background: #131518 !important;
 	}
 
 	.Select {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	.SearchForm-icon-magnifying-glass {
@@ -775,6 +872,7 @@ url("about:newtab") {
 	.Card-header,
 	.Categories .Card-contents,
 	.DropdownMenu-items::after,
+	.DropdownMenu-items,
 	.Hero .Card-contents,
 	.Home-SubjectShelf .Card-contents,
 	.LandingPage-header,
@@ -784,8 +882,10 @@ url("about:newtab") {
 	.SearchForm-query,
 	.SearchForm-suggestions-item.SearchForm-suggestions-item,
 	.SectionLinks-dropdown .DropdownMenu-items,
-	input.AutoSearchInput-query {
-		background: var(--nordp-3) !important;
+	input.AutoSearchInput-query,
+	.DropdownMenuItem-section {
+		background-color: #131518 !important;
+		color: white !important;
 	}
 
 	.Addon-author,
@@ -804,6 +904,7 @@ url("about:newtab") {
 	.Card-footer-text,
 	.Definition-dt,
 	.DropdownMenuItem,
+	.ui.DropdownMenu-items,
 	.DropdownMenuItem-link a,
 	.DropdownMenuItem-link a:link,
 	.DropdownMenuItem-section,
@@ -836,12 +937,13 @@ url("about:newtab") {
 	.SearchResult-summary,
 	.Select,
 	input.AutoSearchInput-query {
+		/*background-color: #1f1f1f !important;*/
 		color: white !important;
 	}
 
 	.Paginate .Button.Paginate-item:active,
 	.Paginate .Button.Paginate-item:hover {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	.AutoSearchInput-suggestions-item {
@@ -876,12 +978,12 @@ url("about:newtab") {
 	.RatingsByStar-star a:active,
 	.RatingsByStar-star a:link,
 	.RatingsByStar-star a:visited {
-		color: #1D1923 !important
+		color: #131518 !important;
 	}
 
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0), #1D1923) !important
+		background: linear-gradient(rgba(255, 255, 255, 0), #131518) !important;
 	}
 
 	.Addon-details .AddonDescription-contents a:link,
@@ -897,70 +999,71 @@ url("about:newtab") {
 	.LanguageTools-table a:link,
 	.SearchResult-link:focus .SearchResult-name,
 	.SearchResult-link:hover .SearchResult-name {
-		color: white !important
+		color: white !important;
+		background: dodgerblue !important;
 	}
 
 	.Button--action.Button--outline-only {
-		border-color: #1D1923 !important
+		border-color: #131518 !important;
 	}
 
 	input.AutoSearchInput-query {
-		border-color: 1D1923 !important
+		border-color: #1D1923 !important;
 	}
 
 	.Addon .InstallButton-button,
 	.Button--action,
 	.Button--action.Button--small,
 	.SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted {
-		background: var(--nordp-2) !important
+		background: var(--nordp-2) !important;
 	}
 
 	.Button--action.Button--outline-only:hover,
 	.Button--action:hover,
 	.SearchForm-query:hover {
-		border-color: var(--nordp-1) !important
+		border-color: var(--nordp-1) !important;
 	}
 
 	.SearchForm-query:focus {
 		box-shadow: 0 0 5px 0 var(--in-content-border-highlight) !important;
-		border-color: var(--in-content-primary-button-background) !important
+		border-color: var(--in-content-primary-button-background) !important;
 	}
 
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
 		background: var(--accent) !important;
-		border-radius: 0 !important
+		border-radius: 0 !important;
 	}
 
 	.Button--report {
-		text-shadow: none !important
+		text-shadow: none !important;
 	}
 
 	.Icon-arrow,
 	.Icon-external {
-		filter: invert(0%) !important
+		filter: invert(0%) !important;
 	}
 
 	.Icon-magnifying-glass {
-		filter: invert(0%)
+		filter: invert(0%) !important;
 	}
 
 	.Icon-featured {
-		filter: invert(85%) !important
+		filter: invert(85%) !important;
 	}
 
 	.Icon-plus-dark {
-		filter: invert(0%) !important
+		filter: invert(0%) !important;
 	}
 
 	.Button--neutral.Button--puffy,
 	.Button--neutral:link.Button--puffy {
 		background: var(--nordf-0) !important;
-		color: var(--foreground) !important
+		color: var(--foreground) !important;
 	}
 
 	.Button--neutral.Button--puffy:hover,
 	.Button--neutral:link.Button--puffy:hover {
-		background: var(--nordf-1) !important
+		background: var(--nordf-1) !important;
 	}
 }
 
@@ -1121,7 +1224,7 @@ url("about:newtab") {
 	}
 
 	.Page-content {
-		background: #1D192380 !important;
+		background: #13151880 !important;
 	}
 
 	.App-content,
@@ -1170,7 +1273,8 @@ url("about:newtab") {
 	.SearchForm-suggestions-item.SearchForm-suggestions-item,
 	.SectionLinks-dropdown .DropdownMenu-items,
 	input.AutoSearchInput-query {
-		background: #1D1923 !important;
+		/*background-color: #13151850 !important;*/
+		color: white !important;
 	}
 
 	.Addon-author,
@@ -1221,12 +1325,14 @@ url("about:newtab") {
 	.SearchResult-summary,
 	.Select,
 	input.AutoSearchInput-query {
-		color: var(--in-content-page-color) !important;
+		/*background-color: #1f1f1f !important;*/
+		color: white !important;
+
 	}
 
 	.Paginate .Button.Paginate-item:active,
 	.Paginate .Button.Paginate-item:hover {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 	}
 
 	.AutoSearchInput-suggestions-item {
@@ -1265,7 +1371,7 @@ url("about:newtab") {
 	}
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0), #1D1923) !important;
+		background: linear-gradient(rgba(255, 255, 255, 0), #131518) !important;
 	}
 
 	.SecondaryHero-module {
@@ -1290,7 +1396,8 @@ url("about:newtab") {
 	.LanguageTools-table a:link,
 	.SearchResult-link:focus .SearchResult-name,
 	.SearchResult-link:hover .SearchResult-name {
-		color: var(--in-content-link-color) !important;
+		background-color: dodgerblue !important;
+		color: white !important;
 	}
 
 	.Button--action.Button--outline-only {
@@ -1334,7 +1441,7 @@ url("about:newtab") {
 	}
 
 	.Icon-magnifying-glass {
-		filter: invert(65%)
+		filter: invert(65%) !important;
 	}
 
 	.Icon-featured {
@@ -1361,14 +1468,25 @@ url("about:newtab") {
 url-prefix(chrome: //browser) {
 
 	browser[type="content"], tabpanels {
-		background: #1D1923 !important;
-		background-color: #1D1923 !important;
+		background: #131518 !important;
+		background-color: #131518 !important;
+		color:white !important;
 	}
 }
 
 @-moz-document url(chrome://global/content/alerts/alert.xhtml) {
+	#tabmodalprompt-topContainer {
+		background-color: #131518 !important;
+		color: white !important;
+	}
+
+	#tabmodalprompt-infoContainer {
+		background-color: #131518 !important;
+		color: white !important;
+	}
+
 	#alertBox {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -1379,20 +1497,233 @@ url-prefix(chrome: //browser) {
 	}
 }
 
-
-
 browser vbox#appcontent tabbrowser,
 content,
 tabbrowser-tabpanels,
 browser[type=content-primary], browser[type=content] > html {
-	background: #1d1923 !important;
+	background-color: #131518 !important;
+	color:white !important;
+	font-family: Fira Sans !important;
 }
 
 @-moz-document url("about:memory") {
 
 	html,
 	body {
-		background-color: #1D1923 !important;
+		background-color: #131518 !important;
 		color: white !important;
+	}
+}
+
+#tabmodalprompt-topContainer {
+	background-color: #131518 !important;
+	color: white !important;
+}
+
+#tabmodalprompt-infoContainer {
+	background-color: #131518 !important;
+	color: white !important;
+}
+
+::selection {
+	background: #1e90ff !important;
+	color: #ffff !important;
+}
+
+html[windowtype="Toolkit:PictureInPicture"] {
+	/* border: 5px solid #414a59 !important;*/
+	border-radius: 5px !important;
+	background: transparent !important;
+}
+
+/* Dark Mode page between loading */
+
+@-moz-document url("about:home"),
+url("about:blank"),
+url("about:newtab"),
+url("about:privatebrowsing") {
+	body {
+		background-color: #131518 !important;
+	}
+}
+
+
+/*
+@-moz-document url-prefix(moz-extension: //bf5f8510-4f90-45c6-b93c-802fa6007948)	{
+
+	body {
+		background: #353e4b !important;
+		color: #b8b8b8 !important;
+	}
+
+	#onoffswitch_label,
+	#HttpNowhere__header,
+	HttpNowhere__explained,
+	#settingsForThisSite,
+	#viewAllRules,
+	#aboutTitle,
+	#donateEFF,
+	reset-to-defaults,
+	.see_more__text,
+	small,
+	h1,
+	h2,
+	a {
+		color: #b8b8b8 !important;
+	}
+
+	header {
+		background: #353e4b !important;
+		color: #b8b8b8 !important;
+	}
+
+	.logo-container {
+		background-image: url(https-everywhere-logo.png) !important;
+		background-size: 170px !important;
+	}
+}
+*/
+
+@-moz-document url-prefix("moz-extension://1249bce4-c7eb-4913-beb1-821f6a4c399e/") {
+
+	.panel-arrowcontent,
+	#share-directory-grid.clearfix {
+		background-color: #131518 !important;
+	}
+
+	button {
+		border-radius: 0px !important;
+
+	}
+}
+
+
+
+
+
+
+
+.dnsNotFound #errorPageContainer {
+	background-image: url("fox-gif-transparent-2.gif") !important;
+	background-color: #131518 !important;
+}
+
+.dnsNotFound {
+
+	background-color: #131518 !important;
+}
+
+/*
+#errorPageContainer {
+	
+}
+*/
+@-moz-document url-prefix("about:reader") {
+	body {
+		background-color: #131518 !important;
+	}
+
+	/* Unstick the toolbar so it can scroll */
+	#toolbar {
+		position: static !important;
+	}
+
+	/* Put the toolbar back at the left */
+	.reader-toolbar {
+		margin-left: 16px !important;
+	}
+}
+
+
+@-moz-document url("about:config") {
+	#configTree {
+		margin-bottom: 0px !important;
+		box-shadow: none !important;
+	}
+}
+
+@-moz-document url-prefix("about:reader") {
+	.toolbar {
+		border: none !important;
+		background-color: #2A2A2A !important;
+		width: 40px !important;
+	}
+
+	button {
+		fill: white !important;
+		background-color: transparent !important;
+		border: none !important;
+	}
+
+	button:hover {
+		background-color: #525252 !important;
+	}
+
+	.dropdown-popup {
+		/* Backdrop filter here... */
+		background-color: #2B2B2B !important;
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5) !important;
+		border-radius: 0px !important;
+		border: none !important;
+		opacity: 0 !important;
+		transition: opacity 150ms, visibility 0s 2s !important;
+	}
+
+	.open>.dropdown-popup {
+		opacity: 1 !important;
+		transition: opacity 150ms !important;
+	}
+
+	.dropdown-arrow {
+		display: none !important;
+	}
+
+	.dropdown.open {
+		background-color: #666666 !important;
+	}
+
+	.narrate-row:not(:first-child) {
+		border: none !important;
+	}
+
+	.font-type-buttons>button>.description {
+		color: #BEBEBE !important;
+	}
+}
+
+@-moz-document url-prefix("about:logins") {
+
+	.fxaccounts-avatar-button,
+	.fxaccounts-avatar-button:hover:active {
+		background: transparent !important;
+		border: none !important;
+	}
+
+	.meta-info {
+		font-weight: 400 !important;
+		font-size: initial !important;
+	}
+
+	.edit-button,
+	.delete-button {
+		background-position-x: 8px !important;
+		padding-left: 32px !important;
+	}
+
+	login-list,
+	div.meta {
+		background-color: var(--uwp-global-back) !important;
+	}
+
+	.login-list-item {
+		border-bottom: none !important;
+	}
+
+	.container[role="dialog"] {
+		background: var(--uwp-global-back) !important;
+		border: 1px solid #333333 !important;
+		border-radius: 0px !important;
+		color: var(--uwp-global-front) !important;
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .32) !important;
 	}
 }
