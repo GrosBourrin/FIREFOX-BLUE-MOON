@@ -18,7 +18,7 @@ url-prefix(about:newtab) {
 	#newtab-window,
 	#newtab-customize-overlay,
 	html {
-		background: #131518 !important;
+		background: #161825 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -27,7 +27,7 @@ url-prefix(about:newtab) {
 @-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
 
 	* {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 		font-family: "Fira Sans" !important;
 		font-size: 14px !important;
@@ -44,7 +44,7 @@ url-prefix(about:newtab) {
 
 /*---------------------------------*/
 #viewer.pdfViewer {
-	background-color: #131518 !important;
+	background-color: #161825 !important;
 
 	a[href$=".pdf"]:after {
 		font-size: smaller;
@@ -65,7 +65,7 @@ url-prefix(about:newtab) {
 	#sticky,
 	#main {
 		font-family: Fira Sans !important;
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: #ffffff !important;
 	}
 
@@ -83,12 +83,12 @@ url-prefix(about:newtab) {
 	}
 
 	h2 {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: #ffffff !important;
 	}
 
 	code {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	#switch .fa-icon {
@@ -101,7 +101,7 @@ url-prefix(about:newtab) {
 
 	html#ublock0-epicker,
 	#ublock0-epicker body {
-		background: #131518 !important;
+		background: #161825 !important;
 		color: white !important;
 	}
 
@@ -114,28 +114,28 @@ url-prefix(about:newtab) {
 	}
 
 	.tool {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: #ffffff !important;
 	}
 
 	.tool.enabled:hover {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		fill: dodgerblue !important;
 		color: dodgerblue !important;
 	}
 
 	.permatoolbar {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	.permatoolbar .button {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	.permatoolbar .button:hover {
 		fill: dodgerblue !important;
 		color: dodgerblue !important;
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	#tooltip {
@@ -145,7 +145,7 @@ url-prefix(about:newtab) {
 	}
 
 	#firewall {
-		background: #131518 !important;
+		background: #161825 !important;
 	}
 
 	#firewall>div {
@@ -157,7 +157,7 @@ url-prefix(about:newtab) {
 	}
 
 	#firewall>div>span {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: #ffffff !important;
 		/*border-bottom: 1px solid #111 !important;*/
 	}
@@ -167,7 +167,7 @@ url-prefix(about:newtab) {
 	}
 
 	#extraTools {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	#extraTools>span:hover {
@@ -185,8 +185,8 @@ url-prefix(about:newtab) {
 	}
 
 	.tabButton {
-		background-color: #131518 !important;
-		border: 0px solid #13151880 !important;
+		background-color: #161825 !important;
+		border: 0px solid #16182580 !important;
 		border-bottom: 0px solid #777 !important;
 		color: #ffffff !important;
 	}
@@ -223,7 +223,7 @@ url-prefix(about:newtab) {
 	#netFilteringDialog,
 	#netFilteringDialog>.panes>.details>div,
 	#netFilteringDialog>div.panes>.dynamic .row {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		border-color: grey !important;
 	}
 
@@ -234,26 +234,26 @@ url-prefix(about:newtab) {
 	#ruleFilter input,
 	input[type=number] {
 		-moz-appearance: none !important;
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		border: 1px solid !important;
-		border-color: #131518 !important;
+		border-color: #161825 !important;
 		color: white !important;
 	}
 
 	#cloudWidget {
-		background: #131518 !important;
+		background: #161825 !important;
 		color: #ffffff !important;
 		color: #ffffff !important;
 	}
 
 	#cloudWidget>span {
-		background: #131518 !important;
+		background: #161825 !important;
 		color: #ffffff !important;
 		/*	fill: white !important;*/
 	}
 
 	#cloudinfo {
-		background: #131518 !important;
+		background: #161825 !important;
 		color: #ffffff !important;
 	}
 
@@ -265,7 +265,7 @@ url-prefix(about:newtab) {
 	}
 
 	button:hover {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		fill: #1e90ff80
 	}
 
@@ -276,7 +276,7 @@ url-prefix(about:newtab) {
 	}
 
 	#actions {
-		background: #131518 !important;
+		background: #161825 !important;
 	}
 
 	#ublock0_raymondhill_net-browser-action label {
@@ -295,18 +295,18 @@ url-prefix(about:newtab) {
 	}
 
 	.CodeMirror {
-		background: #131518 !important;
+		background: #161825 !important;
 
 		color: #f9f9fb !important;
 	}
 
 	.CodeMirror-gutters {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		border-right: 1px solid #32313c !important;
 	}
 
 	.CodeMirror-merge-gap {
-		background: #131518 !important;
+		background: #161825 !important;
 		border-left: 1px solid #32313c !important;
 		border-right: 1px solid #32313c !important;
 	}
@@ -324,7 +324,7 @@ url-prefix(about:newtab) {
 	html,
 	body {
 		font-family: Fira Sans !important;
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: #ffffff !important;
 	}
 
@@ -345,15 +345,15 @@ url-prefix(about:newtab) {
 	}
 
 	.item:hover {
-		background-image: linear-gradient(to top, dodgerblue, #131518) !important;
+		background-image: linear-gradient(to top, dodgerblue, #161825) !important;
 		border-radius: 0px !important;
-		box-shadow: 0 0 0px 4px #131518 !important;
+		box-shadow: 0 0 0px 4px #161825 !important;
 	}
 
 	.item:selected {
-		background-image: linear-gradient(to top, dodgerblue, #131518) !important;
+		background-image: linear-gradient(to top, dodgerblue, #161825) !important;
 		border-radius: 0px !important;
-		box-shadow: 0 0 0px 4px #131518 !important;
+		box-shadow: 0 0 0px 4px #161825 !important;
 	}
 }
 
@@ -374,26 +374,26 @@ url-prefix(about:newtab) {
 	height: 24px !important;
 	width: 30px !important;
 	margin-top: -60px !important;
-	background-color: #131518 !important;
-	outline: 1px solid #131518 !important;
+	background-color: #161825 !important;
+	outline: 1px solid #161825 !important;
 }
 
 /* about:support*/
 @-moz-document url(about:support) {
 	body.wide-container {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 }
 
 /* about:preferences */
 @-moz-document url(about:preferences) {
 	.sticky-container {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	:root {
 		font-family: Fira Sans !important;
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	#categories>.category[selected],
@@ -453,7 +453,7 @@ url-prefix(about:newtab) {
 
 @-moz-document url('chrome://devtools/content/webconsole/index.html') {
 	.webconsole-output .info {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 	}
 }
@@ -463,7 +463,7 @@ url('chrome://global/content/config.xhtml') {
 	:root {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 		fill: white !important;
 		opacity: 1 !important;
@@ -474,7 +474,7 @@ url('chrome://global/content/config.xhtml') {
 @-moz-document url('about:home'),
 url('about:newtab') {
 	.outer-wrapper {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	#newtab-search-text,
@@ -483,7 +483,7 @@ url('about:newtab') {
 	#searchSuggestionTable>tr>td,
 	#searchSuggestionTable>table>tr>td,
 	#searchSuggestionTable>button {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: #F8F8F2 !important;
 		fill: #F8F8F2 !important;
 	}
@@ -494,11 +494,11 @@ url('about:newtab') {
 
 
 	body {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	.prefs-button button {
-		fill: #131518 !important;
+		fill: #161825 !important;
 	}
 
 	.prefs-button button:hover,
@@ -518,7 +518,7 @@ url(about:config) {
 
 	#newtab-window,
 	html {
-		background: #131518 !important;
+		background: #161825 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -531,14 +531,14 @@ url(about:config) {
 		--in-content-item-hover: rgba(30, 143, 255, 0.5) !important;
 
 		--in-content-item-selected: dodgerblue !important;
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	.sticky-container,
 	.main-search,
 	.main-heading,
 	.main-page-content {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	* {
@@ -597,12 +597,12 @@ url(about:config) {
 
 	addon-card .addon-description {
 		height: 3em !important;
-		scrollbar-color: dodgerblue black !important;
+		scrollbar-color: dodgerblue #161825 !important;
 		scrollbar-width: thin !important;
 	}
 
 	#page-options panel-list {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		font-size: 14px !important;
 		border: none !important;
 	}
@@ -642,32 +642,32 @@ url(about:config) {
 	.main-content,
 	scrollbar {
 
-		scrollbar-color: dodgerblue black !important;
+		scrollbar-color: dodgerblue #161825 !important;
 		scrollbar-width: thin !important;
 	}
 }
 
 * {
 
-	scrollbar-color: dodgerblue black !important;
+	scrollbar-color: dodgerblue #161825 !important;
 	scrollbar-width: thin !important;
 }
 
 @-moz-document url-prefix("about:addons") {
 	#categories {
 
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	#categories>richlistitem {
 
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 
 	}
 
 	#category-box {
 
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 }
 
@@ -678,7 +678,7 @@ url(about:config) {
 	body,
 	header {
 		font-family: Fira Sans !important;
-		background: #131518 !important;
+		background: #161825 !important;
 		color: white !important;
 	}
 
@@ -686,7 +686,7 @@ url(about:config) {
 	span.rulesets-version,
 	span#current-version {
 		font-family: Fira Sans !important;
-		background: #131518 !important;
+		background: #161825 !important;
 		color: white !important;
 		background-size: ;
 	}
@@ -767,7 +767,7 @@ url(about:config) {
 
 @-moz-document url-prefix("about:restartrequired") {
 	body {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 
 	}
 }
@@ -775,7 +775,7 @@ url(about:config) {
 
 @-moz-document url-prefix("about:debugging") {
 	body {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 	}
 
@@ -823,7 +823,7 @@ url(about:config) {
 	.Footer-wrapper,
 	.LanguageTools-header-row,
 	.amo {
-		background: #131518 !important;
+		background: #161825 !important;
 	}
 
 	h1,
@@ -846,11 +846,11 @@ url(about:config) {
 	.LandingPage,
 	.LanguageTools-table-row:nth-child(2n),
 	.Paginate {
-		background: #131518 !important;
+		background: #161825 !important;
 	}
 
 	.Select {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	.SearchForm-icon-magnifying-glass {
@@ -884,7 +884,7 @@ url(about:config) {
 	.SectionLinks-dropdown .DropdownMenu-items,
 	input.AutoSearchInput-query,
 	.DropdownMenuItem-section {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 	}
 
@@ -943,7 +943,7 @@ url(about:config) {
 
 	.Paginate .Button.Paginate-item:active,
 	.Paginate .Button.Paginate-item:hover {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	.AutoSearchInput-suggestions-item {
@@ -978,12 +978,12 @@ url(about:config) {
 	.RatingsByStar-star a:active,
 	.RatingsByStar-star a:link,
 	.RatingsByStar-star a:visited {
-		color: #131518 !important;
+		color: #161825 !important;
 	}
 
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0), #131518) !important;
+		background: linear-gradient(rgba(255, 255, 255, 0), #161825) !important;
 	}
 
 	.Addon-details .AddonDescription-contents a:link,
@@ -1004,7 +1004,7 @@ url(about:config) {
 	}
 
 	.Button--action.Button--outline-only {
-		border-color: #131518 !important;
+		border-color: #161825 !important;
 	}
 
 	input.AutoSearchInput-query {
@@ -1224,7 +1224,7 @@ url(about:config) {
 	}
 
 	.Page-content {
-		background: #13151880 !important;
+		background: #16182580 !important;
 	}
 
 	.App-content,
@@ -1273,7 +1273,7 @@ url(about:config) {
 	.SearchForm-suggestions-item.SearchForm-suggestions-item,
 	.SectionLinks-dropdown .DropdownMenu-items,
 	input.AutoSearchInput-query {
-		/*background-color: #13151850 !important;*/
+		/*background-color: #16182550 !important;*/
 		color: white !important;
 	}
 
@@ -1332,7 +1332,7 @@ url(about:config) {
 
 	.Paginate .Button.Paginate-item:active,
 	.Paginate .Button.Paginate-item:hover {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	.AutoSearchInput-suggestions-item {
@@ -1371,7 +1371,7 @@ url(about:config) {
 	}
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0), #131518) !important;
+		background: linear-gradient(rgba(255, 255, 255, 0), #161825) !important;
 	}
 
 	.SecondaryHero-module {
@@ -1468,25 +1468,26 @@ url(about:config) {
 url-prefix(chrome: //browser) {
 
 	browser[type="content"], tabpanels {
-		background: #131518 !important;
-		background-color: #131518 !important;
+		background: #161825 !important;
+		background-color: #161825 !important;
 		color:white !important;
 	}
+
 }
 
 @-moz-document url(chrome://global/content/alerts/alert.xhtml) {
 	#tabmodalprompt-topContainer {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 	}
 
 	#tabmodalprompt-infoContainer {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 	}
 
 	#alertBox {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
@@ -1501,7 +1502,7 @@ browser vbox#appcontent tabbrowser,
 content,
 tabbrowser-tabpanels,
 browser[type=content-primary], browser[type=content] > html {
-	background-color: #131518 !important;
+	background-color: #161825 !important;
 	color:white !important;
 	font-family: Fira Sans !important;
 }
@@ -1510,18 +1511,18 @@ browser[type=content-primary], browser[type=content] > html {
 
 	html,
 	body {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 		color: white !important;
 	}
 }
 
 #tabmodalprompt-topContainer {
-	background-color: #131518 !important;
+	background-color: #161825 !important;
 	color: white !important;
 }
 
 #tabmodalprompt-infoContainer {
-	background-color: #131518 !important;
+	background-color: #161825 !important;
 	color: white !important;
 }
 
@@ -1543,7 +1544,7 @@ url("about:blank"),
 url("about:newtab"),
 url("about:privatebrowsing") {
 	body {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 }
 
@@ -1588,7 +1589,7 @@ url("about:privatebrowsing") {
 
 	.panel-arrowcontent,
 	#share-directory-grid.clearfix {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	button {
@@ -1605,12 +1606,11 @@ url("about:privatebrowsing") {
 
 .dnsNotFound #errorPageContainer {
 	background-image: url("fox-gif-transparent-2.gif") !important;
-	background-color: #131518 !important;
+	background-color: #161825 !important;
 }
 
 .dnsNotFound {
-
-	background-color: #131518 !important;
+	background-color: #161825 !important;
 }
 
 /*
@@ -1620,7 +1620,7 @@ url("about:privatebrowsing") {
 */
 @-moz-document url-prefix("about:reader") {
 	body {
-		background-color: #131518 !important;
+		background-color: #161825 !important;
 	}
 
 	/* Unstick the toolbar so it can scroll */
@@ -1640,8 +1640,10 @@ url("about:privatebrowsing") {
 		margin-bottom: 0px !important;
 		box-shadow: none !important;
 	}
+
 }
 
+/*
 @-moz-document url-prefix("about:reader") {
 	.toolbar {
 		border: none !important;
@@ -1659,8 +1661,9 @@ url("about:privatebrowsing") {
 		background-color: #525252 !important;
 	}
 
-	.dropdown-popup {
-		/* Backdrop filter here... */
+	.dropdown-popup {*/
+/* Backdrop filter here... */
+/*
 		background-color: #2B2B2B !important;
 		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5) !important;
 		border-radius: 0px !important;
@@ -1691,6 +1694,7 @@ url("about:privatebrowsing") {
 	}
 }
 
+/*
 @-moz-document url-prefix("about:logins") {
 
 	.fxaccounts-avatar-button,
@@ -1712,7 +1716,7 @@ url("about:privatebrowsing") {
 
 	login-list,
 	div.meta {
-		background-color: var(--uwp-global-back) !important;
+		background-color: #161825 !important;
 	}
 
 	.login-list-item {
@@ -1720,10 +1724,11 @@ url("about:privatebrowsing") {
 	}
 
 	.container[role="dialog"] {
-		background: var(--uwp-global-back) !important;
+		background: #161825 !important;
 		border: 1px solid #333333 !important;
 		border-radius: 0px !important;
 		color: var(--uwp-global-front) !important;
 		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .32) !important;
 	}
 }
+*/
