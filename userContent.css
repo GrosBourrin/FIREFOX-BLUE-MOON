@@ -1538,7 +1538,6 @@ html[windowtype="Toolkit:PictureInPicture"] {
 }
 
 /* Dark Mode page between loading */
-
 @-moz-document url("about:home"),
 url("about:blank"),
 url("about:newtab"),
