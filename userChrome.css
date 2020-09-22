@@ -40,8 +40,8 @@
 
 
 ::selection {
-	background: #1e90ff !important;
-	color: #ffff !important;
+	background: #1e90ff80 !important;
+	color: white !important;
 }
 
 /* overflow button
@@ -405,11 +405,11 @@ identity-popup-security-content,
 	opacity: 1 !important;
 	border-radius: 0 !important;
 	/*calc(2*var(--toolbarbutton-inner-padding)+24px)*/
-	width: 28px !important;
+	width: 24px !important;
 	/*calc(2*var(--toolbarbutton-inner-padding)+24px)*/
-	height: 28px !important;
-	margin-left: -4px !important;
-	margin-top: 2px !important;
+	height: 24px !important;
+	margin-left: -3px !important;
+	margin-bottom: 4px !important;
 }
 
 /*--------------------close tab size --------------*/
@@ -626,33 +626,25 @@ tooltip {
 	font-family: Fira Sans !important;
 	color: #ffffff !important;
 	--toolbarbutton-inner-padding: 0px !important;
+	text-align: center !important;
 }
-
-/*--------- ombre onglets / tab shadow ------------*/
-.tabbrowser-tab[visuallyselected="true"] {
-
-	box-shadow: 0px 0px 10px #ffff !important;
-}
-
 
 /* Selected Tab Text */
 .tab-content[selected] label {
-	color: #ffff !important;
+	color: white !important;
+	text-align: center !important;
 
 }
 
 /*--------------------------------------------------*/
 
-toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text {
+toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text,
+toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
 	display: -moz-box !important;
 }
 
 toolbarbutton.bookmark-item[type="menu"] {
 	margin-right: 0.1em !important;
-}
-
-toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
-	display: -moz-box !important;
 }
 
 /*-----------*/
@@ -709,6 +701,7 @@ menuitem .menu-accel {
 	font-weight: normal !important;
 	font-style: normal !important;
 	font-size: 14px !important;
+	text-align: left !important;
 }
 
 /*--------------------------*/
@@ -718,7 +711,8 @@ menuitem .menu-accel {
 	font-family: Fira Sans !important;
 	margin-top: 2px !important;
 	font-size: 14px !important;
-	/*text-align: center !important;*/
+	text-align: left !important;
+
 }
 
 
@@ -727,6 +721,7 @@ menuitem .menu-accel {
 	color: #ffff !important;
 	font-size: 14px !important;
 	margin-top: 2px !important;
+	text-align: center !important;
 }
 
 .autocomplete-richlistitem {
@@ -942,14 +937,14 @@ background-color: #1e90ff !important;
 
 
 /*----------------------------------------------*/
-
+/*
 #TabsToolbar {
-	height: 38px !important;
-}
+	height: 40px !important;
+}*/
 
 #TabsToolbar,
 .tabbrowser-tab {
-	max-height: 38px !important;
+	max-height: 40px !important;
 }
 
 .bookmark-item {
@@ -2461,6 +2456,12 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	transition-duration: 0.5s !important;
 }
 
+.tab-background,
+.tab-loading-burst {
+	border: none !important;
+	border-radius: 0px !important;
+}
+
 /*--------------------------------------------*/
 /*
 .menubar-text {
@@ -2790,23 +2791,6 @@ toolbar #fullscreen-button {
 }
 
 */
-
-/* Show Tab Close buttons only when hovered (slide in using max-width) */
-.tabbrowser-tab:not([pinned]) .tab-close-button {
-	max-width: 0 !important;
-	opacity: 0 !important;
-	transition: all 250ms ease-in-out 0ms !important;
-	/* no delay on exit*/
-}
-
-.tabbrowser-tab:not([pinned]):hover .tab-close-button {
-	display: -moz-box !important;
-	max-width: 20px !important;
-	opacity: 1 !important;
-	transition: all 250ms ease-in-out 250ms !important;
-	/* quarter second delay on entry*/
-}
-
 /***************url dropdown************************/
 
 /*
@@ -3204,7 +3188,7 @@ scrollbox[orient="horizontal"] {
 }
 
 .tab-icon-image {
-	filter: drop-shadow(0px 0px 5px #ffff) !important;
+	filter: drop-shadow(0px 0px 10px white) !important;
 }
 
 /*
@@ -3691,7 +3675,7 @@ scrollbox{ overflow-y: var(--uc-scrollbox-overflow,initial) !important; }
 */
 #tabbrowser-tabs,
 #tabbrowser-tabs>#tabbrowser-arrowscrollbox {
-	min-height: 38px !important;
+	min-height: 40px !important;
 	margin-top: 0px !important;
 	border: none !important;
 }
@@ -4163,11 +4147,6 @@ See the above repository for updates as well as full license text. */
 	border-left-style: solid !important;
 }
 */
-.tab-background,
-.tab-loading-burst {
-	border: none !important;
-	border-radius: 0px !important;
-}
 
 /*
 :root {
@@ -4203,4 +4182,64 @@ See the above repository for updates as well as full license text. */
 #identity-box[pageproxystate="valid"].localResource~.urlbar-input-box,
 #identity-box[pageproxystate="valid"].chromeUI~.urlbar-input-box {
 	color: dodgerblue !important;
+
+}
+
+/* tabs roundness */
+:root {
+	--default_tab_border_roundness: 8px;
+}
+
+#TabsToolbar .tabbrowser-tab {
+	border-radius: var(--default_tab_border_roundness) !important;
+	overflow: hidden;
+	margin-bottom: 4px !important;
+}
+
+.tab-line {
+	height: 0px !important;
+}
+
+/*
+.tabbrowser-tab>.tab-stack>.tab-background {
+	border-radius: 4px !important;
+}*/
+
+/*--------- ombre onglets / tab shadow & background------------*/
+/*.tabbrowser-tab[visuallyselected="true"],*/
+.tabbrowser-tab[visuallyselected="true"] .tab-background {
+	/*	box-shadow: 0px 0px 10px #1e90ff80 !important;*/
+	background: #1e90ff90 !important;
+}
+
+/*
+.tabbrowser-tab {
+	padding-bottom: 5px !important;
+}
+*/
+/*
+#TabsToolbar {
+	padding: -5px 0px 0px 6px !important;
+}
+*/
+/* Show Tab Close buttons only when hovered (slide in using max-width) */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+	max-width: 0 !important;
+	opacity: 0 !important;
+	transition: all 250ms ease-in-out 0ms !important;
+	/* no delay on exit*/
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+	display: -moz-box !important;
+	max-width: 20px !important;
+	opacity: 1 !important;
+	transition: all 250ms ease-in-out 250ms !important;
+	/* quarter second delay on entry*/
+}
+
+.tab-text,
+.tab-label {
+	-moz-box-flex: 1 !important;
+	text-align: center !important;
 }
