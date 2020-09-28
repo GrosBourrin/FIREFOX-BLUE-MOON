@@ -2,6 +2,7 @@
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	#leftBox {
 		background-image: url("foxy.gif") !important;
+		
 		background-position: left !important;
 		background-repeat: no-repeat !important;
 	}
