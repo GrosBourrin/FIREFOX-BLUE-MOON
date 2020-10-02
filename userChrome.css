@@ -2,7 +2,6 @@
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	#leftBox {
 		background-image: url("foxy.gif") !important;
-		
 		background-position: left !important;
 		background-repeat: no-repeat !important;
 	}
@@ -413,7 +412,6 @@ identity-popup-security-content,
 	margin-bottom: 5px !important;
 }
 
-
 /*--------------------close tab size --------------*/
 
 :root {
@@ -472,12 +470,17 @@ menupopup {
 	/* opacity: 0.9 !important;*/
 }
 
+menu,
+menupopup {
+	border: 0px !important;
+}
+
 menuseparator {
 	-moz-appearance: none !important;
 	border: none !important;
 	padding: 0.5px 0px 0.5px 0px !important;
 	margin: 4px 8px 4px 8px !important;
-	background-color: #303030 !important;
+	background-color: #404040 !important;
 }
 
 menuitem,
@@ -509,7 +512,7 @@ menugroup {
 
 menuitem>.menu-text,
 menuitem>.menu-iconic-text {
-	color: #ffffff !important;
+	color: white !important;
 }
 
 menuitem[type="checkbox"] {
@@ -560,7 +563,6 @@ menucaption {
 }
 
 menulist {
-	-moz-appearance: none !important;
 	padding: 4px 4px 4px 4px !important;
 	border: 0px !important;
 	background-color: #161825 !important;
@@ -582,8 +584,9 @@ menulist[open="true"] {
 #context-reload>.menu-iconic-left,
 #context-stop>.menu-iconic-left,
 #context-bookmarkpage>.menu-iconic-left {
-	padding: 2px !important;
+	padding: 0px !important;
 }
+
 
 .menu-iconic-left {
 	-moz-appearance: none !important;
@@ -591,6 +594,7 @@ menulist[open="true"] {
 }
 
 .menu-right {
+	list-style-image: none !important;
 	-moz-appearance: none !important;
 	padding: 7.5px !important;
 	margin-right: 6px !important;
@@ -618,6 +622,45 @@ tooltip {
 	opacity: 1 !important;
 }
 
+/*---menu bar menus---*/
+#file-menu,
+#edit-menu,
+#toolbar-menubar,
+#history-menu,
+#bookmarksMenu,
+#view-menu,
+#tools-menu,
+#help-menu {
+	font-family: Fira Sans !important;
+	text-decoration: none !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	font-size: 14px !important;
+	text-align: left !important;
+}
+
+menubar,
+menubutton,
+menulist,
+menu,
+menuitem {
+	color: white !important;
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	/*text-align: left !important;*/
+}
+
+/*------coloring shortcuts in menus----------*/
+menuitem .menu-iconic-accel,
+menuitem .menu-accel {
+	margin-right: 6px !important;
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	color: #1e90ff !important;
+	/*text-align: right !important;*/
+
+}
+
 /*----------------*/
 
 #TabsToolbar {
@@ -635,6 +678,13 @@ tooltip {
 
 }
 
+/* no text in urlbar and searchbox */
+#urlbar-input::placeholder,
+.searchbar-textbox::placeholder {
+	opacity: 0 !important;
+
+}
+
 /*--------------------------------------------------*/
 
 toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text,
@@ -647,26 +697,6 @@ toolbarbutton.bookmark-item[type="menu"] {
 }
 
 /*-----------*/
-menubar,
-menubutton,
-menulist,
-menu,
-menuitem {
-	color: white !important;
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	/*text-align: left !important;*/
-}
-
-/*------coloring shortcuts in menus----------*/
-menuitem .menu-iconic-accel,
-menuitem .menu-accel {
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	color: #1e90ff !important;
-	/*text-align: right !important;*/
-
-}
 
 #PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
 	fill: brightness(200%) !important;
@@ -675,7 +705,7 @@ menuitem .menu-accel {
 	fill: #ffff !important;
 }
 
-/*---menus-----*/
+/*---menus hamburger separator-----*/
 #PanelUI-button {
 	border-image-slice: 0 !important;
 	/*border-inline-start: 0 !important;*/
@@ -684,23 +714,6 @@ menuitem .menu-accel {
 
 #sidebar-header {
 	padding: 0px !important;
-}
-
-/*---menu bar menus---*/
-#file-menu,
-#edit-menu,
-#toolbar-menubar,
-#history-menu,
-#bookmarksMenu,
-#view-menu,
-#tools-menu,
-#help-menu {
-	font-family: Fira Sans !important;
-	text-decoration: none !important;
-	font-weight: normal !important;
-	font-style: normal !important;
-	font-size: 14px !important;
-	text-align: left !important;
 }
 
 /*--------------------------*/
@@ -834,6 +847,7 @@ menuitem .menu-accel {
 	}
 }
 
+/* shadow under bookmarks bar */
 #navigator-toolbox {
 	z-index: 999;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
@@ -1187,6 +1201,9 @@ treechildren::-moz-tree-image(query) {
 
 }
 
+.subviewbutton-nav::after {
+	transform: scale(-0.5) !important;
+}
 
 /*----------------------hamburger menu-----------------------------*/
 
@@ -1462,8 +1479,8 @@ panelmultiview .toolbaritem-combined-buttons>label {
 		background-repeat: no-repeat !important;
 		background-size: cover !important;
 		margin: 0 2px !important;
-		transition: height 0.28s cubic-bezier(0.07, 0.95, 0, 1) !important;
-		transition-delay: 400ms !important;
+		/*transition: height 0.28s cubic-bezier(0.07, 0.95, 0, 1) !important;
+		transition-delay: 400ms !important;*/
 	}
 
 	#editBookmarkPanelDoneButton {
@@ -1485,6 +1502,19 @@ panelmultiview .toolbaritem-combined-buttons>label {
 		background-color: rgba(30, 143, 255, 0.200) !important;
 		color: #ffff !important;
 	}
+
+	#editBookmarkPanel textbox,
+	#editBookmarkPanel menulist,
+	#editBookmarkPanel richlistbox,
+	#editBookmarkPanel tree,
+	#editBookmarkPanel treechildren,
+	#editBookmarkPanel treecol,
+	#editBMPanel_folderTree treechildren .menu-iconic-icon,
+	#editBookmarkPanel menulist menupopup menuitem,
+	#editBMPanel_folderTree treechildren {
+		list-style-image: url("folderflat1.svg") !important;
+	}
+
 }
 
 /*==== Thum}ping Sound icon for tab that has sound playing ====*/
@@ -1774,7 +1804,7 @@ hbox#sidebar-search-container textbox#search-box {
 		border: none !important;
 	}
 
-	] #placesToolbar>toolbarbutton {
+	#placesToolbar>toolbarbutton {
 		margin: 6px 4px 5px !important;
 		-moz-appearance: none !important;
 		background-color: var(--tone-4) !important;
@@ -2077,14 +2107,6 @@ toolbarbutton.bookmark-item:hover {
 	--toolbarbutton-border-radius: 0px !important;
 }
 
-#context-back>.menu-iconic-left,
-#context-forward>.menu-iconic-left,
-#context-reload>.menu-iconic-left,
-#context-stop>.menu-iconic-left,
-#context-bookmarkpage>.menu-iconic-left {
-	padding: 0px !important;
-}
-
 /*
 #tabbrowser-tabs {
 	--tab-line-color: #1e90ff !important;
@@ -2172,31 +2194,8 @@ toolbarbutton.bookmark-item:hover {
   margin-bottom: 0px !important;
 }
 */
-/*----------autohide personal bar---------------------------
+/*----------autohide personal bar---------------------------*/
 
-#PersonalToolbar {
-	transition: margin 280ms linear !important;
-	position: relative !important;
-	z-index: 0 !important;
-	margin-top: -24px !important;
-	-moz-window-dragging: no-drag !important;
-}
-
-#nav-bar {
-	z-index: 1 !important;
-}
-
-#PersonalToolbar {
-	display: block;
-}
-
-#nav-bar:hover+#PersonalToolbar,
-#PersonalToolbar:hover {
-	margin-top: 0px !important;
-	margin-bottom: -24px !important;
-}
-
-*/
 #nav-bar {
 	z-index: 2 !important;
 }
@@ -2205,9 +2204,8 @@ toolbarbutton.bookmark-item:hover {
 	display: block;
 	position: relative !important;
 	z-index: 0 !important;
-	margin-top: -24px !important;
+	margin-top: -25px !important;
 	-moz-window-dragging: no-drag !important;
-	/*border-bottom: 1px solid #e1e1e2 !important;*/
 	transition: margin 280ms linear !important;
 }
 
@@ -2216,27 +2214,10 @@ toolbarbutton.bookmark-item:hover {
 #PersonalToolbar:hover {
 	z-index: 1 !important;
 	margin-top: 0px !important;
-	margin-bottom: -24px !important;
+	margin-bottom: -25px !important;
 	transition: margin 280ms linear !important;
 }
 
-/* This autohides the bookmarks bar 
-#PersonalToolbar {
-	visibility: collapse !important;
-	margin-bottom: -15px !important;
-	transition: all .204s ease .200s !important;
-}
-
-#PersonalToolbar {
-	display: block;
-}
-
-#navigator-toolbox:hover>#PersonalToolbar {
-	visibility: visible !important;
-	margin-bottom: 0px !important;
-	transition: all .204s ease .200s !important;
-}
-*/
 
 /*---colored blinking cursor in url bar ----*/
 #urlbar {
@@ -2435,7 +2416,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 }
 
 
-/* add arrow folders bookmarbar
+/* add arrow folders bookmarksbar
 #PlacesToolbarItems>.bookmark-item[container]:after {
 	content: '^ ';
 	font-weight: 250;
@@ -2811,7 +2792,7 @@ toolbar #fullscreen-button {
 	}
 }
 
-*/
+
 /***************url dropdown************************/
 
 /*
@@ -3064,12 +3045,13 @@ input:not(#urlbar-input) {
 	font-family: Fira Sans !important;
 }
 
+/*
 :root {
 	--toolbar-bgcolor: #303030 !important;
 	--toolbar-non-lwt-bgcolor: #303030 !important;
 	--toolbar-non-lwt-textcolor: #ffff !important;
 }
-
+*/
 /* The customization page button colors */
 .customizationmode-button {
 	-moz-appearance: none !important;
@@ -3132,6 +3114,14 @@ scrollbox[orient="horizontal"] {
 	-moz-box-pack: center !important;
 }
 
+.scrollbutton-up[orient="horizontal"]~spacer {
+	border: none !important;
+}
+
+.scrollbutton-down[orient="horizontal"]~spacer {
+	border: none !important;
+}
+
 /*---------------------------------------------------*/
 
 /*
@@ -3160,12 +3150,6 @@ scrollbox[orient="horizontal"] {
 	background-color: var(--toolbar-bgcolor) !important;
 }
 */
-#urlbar-input::placeholder,
-.searchbar-textbox::placeholder {
-	opacity: 0 !important;
-
-}
-
 /*
 #main-window[privatebrowsingmode="temporary"] #nav-bar-overflow-button {
 	background-image: url("chrome://browser/skin/private-browsing.svg");
@@ -3915,7 +3899,6 @@ panelview .toolbarbutton-1,
 	max-width: 100% !important;
 }
 */
-/
 /*
 :root {
 
@@ -4008,4 +3991,92 @@ See the above repository for updates as well as full license text. */
 .tab-label {
 	-moz-box-flex: 1 !important;
 	text-align: center !important;
+}
+
+/* booksmark menu tweaks */
+#BMB_bookmarksPopup menu[container="true"] .menu-right {
+	padding: 8px !important;
+	margin-right: 6px !important;
+	color: #ffffff !important;
+	border: solid #ffffff !important;
+	border-width: 0 2px 2px 0px !important;
+}
+
+#BMB_bookmarksPopup menupopup>menulist,
+#BMB_unsortedBookmarksPopup,
+#BMB_bookmarksPopup menu {
+	-moz-appearance: none !important;
+	background: none !important;
+	background-color: #161825 !important;
+	border: 0px !important;
+}
+
+#BMB_bookmarksPopup menu:hover {
+	-moz-appearance: none !important;
+	background: none !important;
+	background-color: dodgerblue !important;
+}
+
+#BMB_bookmarksPopup menuitem {
+	background-color: #161825 !important;
+	border: 0px !important;
+
+}
+
+#BMB_bookmarksPopup menuitem:hover {
+	background: dodgerblue !important;
+}
+
+#BMB_bookmarksPopup .panel-arrowcontent * {
+	-moz-appearance: none !important;
+	box-shadow: none !important;
+	border: 0px !important;
+}
+
+#BMB_bookmarksPopup menupopup .arrowscrollbox-scrollbox,
+#BMB_bookmarksPopup .panel-arrowcontent {
+	background: none !important;
+	/*padding: unset !important;
+	margin: unset !important;*/
+	/*border: unset !important;
+	box-shadow: unset !important;*/
+	border-radius: 0 !important;
+	border: 0px !important;
+}
+
+
+#BMB_bookmarksPopup menupopup,
+#BMB_bookmarksPopup .panel-arrowcontent {
+	/*-moz-appearance: unset !important;*/
+	border: 0px !important;
+}
+
+
+#BMB_bookmarksToolbarFolderMenu,
+#BMB_bookmarksToolbar,
+#BMB_bookmarksToolbarPopup {
+	border: 0px !important;
+}
+
+#BMB_bookmarksPopup menuitem .menu-iconic-accel,
+#BMB_bookmarksPopup menuitem .menu-accel {
+	margin-right: 6px !important;
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	color: #1e90ff !important;
+}
+
+#BMB_bookmarksPopup menuseparator {
+	/*margin-top: 2px !important;
+	margin-bottom: 2px !important;
+	-moz-margin-start: 28px !important;*/
+	-moz-margin-end: 0px !important;
+	border-bottom: 1px solid #404040 !important;
+	background: none !important;
+
+}
+
+
+.menupopup-arrowscrollbox {
+	background-color: #161825 !important;
 }
