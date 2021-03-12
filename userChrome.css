@@ -30,21 +30,11 @@
 	}
 }
 
-/*------------------------*/
-:root {
-	--default_tab_border_roundness: 6px;
-}
-
-#TabsToolbar .tabbrowser-tab {
-	border-radius: var(--default_tab_border_roundness) !important;
-	overflow: hidden;
-	margin-bottom: 5px !important;
-
-}
-
 .tab-line {
 	height: 0px !important;
 }
+
+/* 131620 */
 
 /*------------------------*/
 #browserContainer {
@@ -63,6 +53,12 @@ notification {
 	background: #1f90ff80 !important;
 	color: #ffffff !important;
 }
+
+/* overflow button
+#nav-bar-overflow-button {
+	list-style-image: url("chrome://browser/skin/chevron.svg") !important;
+}
+*/
 
 /* Tweaks for Ctrl+Tab */
 
@@ -126,7 +122,33 @@ tabPreview-canvas element {
 	margin-top: 3px !important;
 }
 
+/*
+#identity-box.verifiedIdentity {
+	--urlbar-separator-color: #404040 !important;
+}
 
+*/
+/*
+#identity-box.verifiedIdentity #identity-icon-labels,
+.identity-popup-connection-secure {
+	color: #1e90ff !important;
+	fill: #1e90ff !important;
+
+}
+
+.identity-popup-security-content,
+#identity-popup-permissions-content {
+	background: #131620 !important;
+}
+
+
+
+#connection-icon,
+#identity-popup[connection^=secure] #identity-popup-security-content,
+#identity-popup[connection^=secure] #identity-popup-securityView {
+	fill: #c8ff00 !important;
+}
+*/
 /*== Identity Box ==*/
 
 #identity-box:hover:not(.no-hover):not([open="true"]),
@@ -210,7 +232,7 @@ identity-popup-security-content,
 
 }
 
-
+/*#extension-icon[tooltiptext$="Tabliss"], #extension-icon[tooltiptext$="Tabliss"] ~ #identity-icon-labels{ display: none }*/
 #identity-box {
 	border-image-slice: 0 !important;
 }
@@ -255,7 +277,7 @@ identity-popup-security-content,
 }
 
 .identity-popup-section {
-	border-top: 0px solid #3c465d !important;
+	border-top: 0px solid #404040 !important;
 }
 
 #identity-popup-mainView-panel-header {
@@ -301,6 +323,11 @@ identity-popup-security-content,
 	color: #ffffff !important;
 }
 
+/*
+#identity-box.extensionPage label {
+	display: none
+}
+*/
 /*------------------------------------------------------------------------------*/
 #nav-bar {
 	box-shadow: none !important;
@@ -313,12 +340,19 @@ identity-popup-security-content,
 	background-color: #131620 !important;
 }
 
+/*
+#TabsToolbar {
+	background-color: #000000 !important;
+}
+*/
 /*-------------------------nav button----------------------------*/
-#back-button {
+#back-button,
+#context-back {
 	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSNzVLQoGBAAAAb0lEQVQoz43ROQqDUBSF4UMEESKCBBehOODK7ezSWZnGJmuI4xp+66CX9077FXc40k1o+fCSFRoOOgKLa3Z6QosrNt5EFpesDDwtLlgYSSzOmZlILY758SW7ykO+cYzwWNLjTI9HSc5XS86ypP+6Tw/fVEqhFbEZAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAzLTE5VDE4OjU1OjUzKzAxOjAwq3ccegAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMy0xOVQxODo1NTo1MyswMTowMNoqpMYAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC") !important;
 }
 
-#forward-button {
+#forward-button,
+#context-forward {
 	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSOA3k2CXQAAAAbklEQVQoz5WRMQqDABAEF4UgKEIIPkKJii+3s7NLpY1N3qBR84axsPYOt1sYuNtdSZLEi5FG1yKk5U9tIQ86dioLiejZKC0k5sPK20JSBn4UFvJkYiG3kIwvM8npAt2Vc8J50onpFOVU7Y51PfcBtUFUSir+geUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDMtMTlUMTg6NTY6MTMrMDE6MDDECqmDAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAzLTE5VDE4OjU2OjEzKzAxOjAwtVcRPwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=") !important;
 }
 
@@ -506,7 +540,7 @@ menupopup {
 
 toolbarseparator {
 	display: visible !important;
-	border-color: #3c465d !important;
+	border-color: #404040 !important;
 }
 
 menu,
@@ -519,7 +553,7 @@ menuseparator {
 	border: none !important;
 	padding: 0.5px 0px 0.5px 0px !important;
 	margin: 4.5px 8px 4px 8px !important;
-	background-color: #3c465d !important;
+	background-color: #404040 !important;
 }
 
 /*
@@ -636,6 +670,8 @@ menulist[open="true"] {
 #context-bookmarkpage>.menu-iconic-left {
 	padding: 0px !important;
 }
+
+
 
 
 .menu-iconic-left {
@@ -844,8 +880,8 @@ toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
 	-moz-appearance: none !important;
 	width: 2px !important;
 	margin: 2px 4px 2px 0px !important;
-	color: #3c465d !important;
-	/*background-color: #3c465d !important;*/
+	color: #404040 !important;
+	/*background-color: #404040 !important;*/
 }
 
 #PlacesToolbar .bookmark-item {
@@ -876,6 +912,12 @@ toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
 	display: none !important;
 }
 
+/*
+.tabbrowser-tab:not([selected]) .tab-text {
+	filter: blur(3px) brightness(50%);
+	transition: blur,
+		ease 0.5s !important;
+}*/
 
 /*----------hover button background color------------*/
 
@@ -915,6 +957,19 @@ toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
 	border: 0px !important;
 }
 
+/*------------------------
+.tab-bottom-line {
+	background-image: linear-gradient(to right, transparent 10%, yellow,#1e90ff 10%, red, red 90%, transparent 90%) !important;
+	height: 2px !important;
+	margin-bottom: 2px !;
+}*/
+
+/*.tab-line[selected="true"] {
+
+background-color:#1e90ff !important;
+}
+
+*/
 .tab-background[selected="true"] {
 	opacity: 1 !important;
 	background-image: linear-gradient(#131620, #131620) !important;
@@ -989,7 +1044,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 
 .sidebar-placesTree treechildren::-moz-tree-separator {
 	margin: 2px 8px 2px 0px !important;
-	border-color: #3c465d !important;
+	border-color: #404040 !important;
 	border-width: 0px 0px 1px 0px !important;
 
 }
@@ -1202,6 +1257,12 @@ treechildren::-moz-tree-image(query) {
 	font-size: 14px !important;
 }
 
+/*
+#pageActionPanelMainView {
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+
+}*/
 
 /* increase brightness for search bars go button */
 
@@ -1316,10 +1377,16 @@ treechildren::-moz-tree-image(query) {
 	}
 }
 
+/*
+.panel-arrow {
+	fill: #131620 !important;
+	background: transparent !important;
+}*/
+
 .panel-subview-body {
 	color: #ffffff !important;
 	background: #131620 !important;
-	border-color: #ffffff !important;
+	/*border-color: #ffffff !important;*/
 }
 
 .subviewbutton.panel-subview-footer {
@@ -1346,18 +1413,18 @@ treechildren::-moz-tree-image(query) {
 .PanelUI-subView toolbarseparator {
 	display: visible !important;
 	margin: 4px 8px 4px 8px !important;
-	border-color: #3c465d !important;
+	border-color: #404040 !important;
 }
 
 #appMenu-zoom-controls+toolbarseparator {
 	display: visible !important;
-	border-color: #3c465d !important;
+	border-color: #404040 !important;
 }
 
 #appMenu-tp-separator {
 	display: visible !important;
 	margin: 4px 8px 4px 8px !important;
-	border-color: #3c465d !important;
+	border-color: #404040 !important;
 }
 
 
@@ -1372,11 +1439,17 @@ treechildren::-moz-tree-image(query) {
 }
 
 #appMenu-popup .subviewbutton .toolbarbutton-text,
-#appMenu-popup .panel-arrowcontent,
+#appMenu-popup .panel-arrowcontent {
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	margin-left: 4px !important;
+
+}
+
 panelmultiview .toolbaritem-combined-buttons>label {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-
+	margin-left: 0px !important;
 }
 
 .PanelUI-subView .toolbaritem-combined-buttons>.subviewbutton-iconic>.toolbarbutton-text {
@@ -1402,6 +1475,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	color: #1e90ff !important;
 	border-radius: 0px !important;
 	font-family: "Fira Sans" !important;
+	padding-left: -2px !important;
 }
 
 #appMenu-zoomReset-button {
@@ -1437,6 +1511,59 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	fill: #1e90ff !important;
 }
 
+#appMenu-zoom-controls {
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArFJREFUeNqUU01IVGEUPe+9GcdRx18k0srKyKyQMtTMNEvCRbvatCja9WNlJLmJJMNt6KQW1CqkRVAEaZCDkVao2DgQFRKmoNQ4U+qkjs+ZeTPfu93Jft5UBF14fN+73HPuOZf7STBE+42bTboQFwgUD1rOSZIUlBXl6pmaEw34LYjo14+9td3t6O6mSFAlY0QCKjked5P9Wrv7bwRS9NJsb3XvLS/L2rKtEPZeLwYn/DDHKTCZJOxen4zjJRl47XKh78XAVN352uwYBc32tqbOzi5SNZ0O335PHc4ZGpsJ0SvPEvWML9D1oRmqc3goJIg6H3ZStN5IIIc1rX5PWQnaej04sDUNVRttmNMEpoMC8xEusCiwJphwd2QeFbtKoGmheqMNWejCkpyeAac7gO3ZCfCqAr6QjgUB+NnhkiwjOcmMUVVHSno6dKFbjAQmTgBCY88yBE/Ex539DF5icFCRkZgIhAVByOw3okHXdcQSkICICJjNCqYYqXLBYrQzg+OtPEjOa6woSDrC4QgTiBgCmXTS3B4vClea8eZTENOBqAX2zmqiYIvFBInPXKuOj14vq2FnRoJZn6/j2fMBHNpgZrAO9yJ3YpUsijsTVM7pYUJR3BKe9vVjk2XEFkPQam++PDo2Nv3WNYSafIE1VrahAYshYD5ASAmp2C9PwzXQD9+XORQfacXLluKfKyh9PwsuXmp4krsuJ3NncREyedrLayrh86wPg0NOfJjyoHJfFfLyCxDnd2LiUSOKzvZJkkFNwclTp2vT0tKO8luI+/EWSFL8a5VxW3h1NaxWG8pz5pG3ORWDd1pQei6WIBpZ/K2IWjPkomNXuq5UDCetKkJl6n1MJlQ+mBp1Hyyt7fmD4F+x415j9TCRBN4tOJyTx251jXT8D8E3EsP9Hc9J/SrAALenXlq1AZ12AAAAAElFTkSuQmCC") no-repeat !important;
+	min-height: 25px !important;
+	padding-left: 5px !important;
+	background-position: 15px 8px !important;
+}
+
+#appMenu-zoomReduce-button {
+	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArxJREFUeNqUk11Ik1EYx//nfd9tTp0fE4mstCxQK6SvaWaafeGFd3XTRdFdH1qKljeRZHhRF6VrrqCuQroIiqAZ5DBqFSo2BxUh4QcoOjd0rra5r/fdeU/vtI+tIugPh/Och3N+PM//nEOQIPOdux0ypRcZWArYSo4QEuF4/sa5+tNt+E2MsV8Lo8nstPb1sVgkyBIVCweZ9XkfM94yO/8GIPGg02hy7q+qzNuybQeMr9wYmgpApeYhCAR7CzNwqjwHHx0O2N4OzrU0N65JqqDT2N1hsfSyoCizY/fHWY/dwyY8UfbeFWL9k352e9jDWqwuFqWMWZ5aWHx/IoCTRLF1X2U5um1u1G3V41BxBvwxGR6RwU8J+BQB2lQBD0d9qN5TDlGMtia2wVGZajL0ObA7Q9iVnw6vSBCCAFFQQ0pZGVmZGowHGTL1eshU1iQCBCUBUBFqpWfwBHUNN6ESeCUkIEqJNEZx4VozYpCAmAhZlpEMYHR5k0rgMOOTYL7ehBDHIcQL0Gg5cAo3vBSDSiNAkiQFQJMBTGai0+VWb1+dig+uEHQ6AWHlVFqarNyECoKKB+M5FGpFzLrdkCgCSR4ser09r98M4ugmFeZDMmb9FGKMQZRkRCIyloIyqBIb1CG8tA2gWDOqSwKYjJ1XxiYmFj45hlFfQpGvpQiKwFIU8IUV46JBHOYW4BgcgPfLV5QdN+FdV9nPJ0i+z6WXLre92LihIHd3mQG5itsrz5RgftGLoWE7ZuZcqDlwEEUlpVAH7Jh61g7DeRshCdWUnjnb0JidnX1C+QvqH3+BET6wnp/USetqodXqUFXgQ9HmLAw96EJFUzIgrjxlrIq3lpCL2873Xq0eSV9rQE3WY0yn1jyZG3MeqWjs/wPwL+181F47whiBcsuw2qdP3usd7fkfwDIkIf6s+BT8JsAAKC9RphXbWHoAAAAASUVORK5CYII=") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
+	margin-left: 4px !important;
+	margin-right: 3px !important;
+}
+
+#appMenu-zoomEnlarge-button {
+	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAr9JREFUeNqUk11IU2EYx/9nZx9u6KYTiSyzL1ArpK9pJpp9IdVd3XRRdNeHpaYkRGQaQnRRuuYM6iqsi6AImkGOwlahonMXRYxQI0Xnhh+zNXfczjnveTubfZxVBP3h5bzn4Ty/93n+53kZKGS/fadFIuQCBU0BXYoxDBNVseyNc1WnGvGbKKW/Xqw2u8/Z3U3FaIQqJS5GqPN5N7Xesvv+BmDim1arzbe7rDR74+atsL4KoH88DK2WhZplULrWiJPFmXjv8cD1tm+qvq5mRVIFrdb2Foeji0Z4iR69N0LvD83Sz/MC9c7ytGdsgXYMztJ6p5/GCKWOpw4a/14JUAk837CrtBjtrgAObTJjX74JHGVwoLoNHKOGJkUDvUGNh94QyncWg+djDco2VEQiOqM5E24fh+2rUjEvMHIiC0OKDkJiaZFu0mEkQmEymyERSacEqOUAQPhEz5B7Plh1E3o5UadR48pFK2LRGOqv1UGEAIg8JElCMoASEJFAo1ZhIiSg43oteBkQT26ynwchABcWodGpIQiCDCDJACpR3ucPaLcsN+Cdn4PRqIEYo4mT48kqlWwWq8JaPY/JQAACQTjJg7lgsPP1mz4cWa/BNCdhMkSwGBUTZXMLIsILEoggwaLl0OPqRb7Om5YEsFlbm4ZHR2c+eAZQVUCQoxfxNSYhFBERjEgwxSLYr5qBp68XwfkvKDpmw2Bb0c8RZL4/Cy9dbny5bk1u1o4iC7Jkt5fGlMH0XBD9A25MTPlRsWcv8goKoQ27MfasGZZqF8Moqik8feZsTUZGxnH5Lmh/3AXKsOHV7Kc0IacSen0aynJDyNuQjv4HbSipTQbElS2vZfHWFLG47WzX1fKh1JUWVKQ/xrih4snUsO9wSc2LPwD/0rZHzZVDVJ7S+J9xusdP3O3ydv4PIAFR7D/KPkW+CTAATw5W30BzwxkAAAAASUVORK5CYII=") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
+	margin-left: 15px !important;
+	margin-right: 10px !important;
+}
+
+#appMenu-fullscreen-button {
+	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACYUlEQVQ4y6WTPWhUQRSFv/v2vV13XaOYgGuyrvEHZNcUYqVgES0EKy0VsRYbwVZsrG3SiVYW6RUbtVALRUGRgKAYJJpIDFHMEvOSTd7OnbkWz2xES6eZywxn7rnnnIH/XDI+Pv6u2Ww2/r4ws3/qP89EhLGxsXtxq9Xav7i4VJyY/AIi6xAwAySvkd4DAhCUM6dGGRwcPBQjwrM377m/eJZ9/QV+/FS+fu9i6gmqmHq8V4ILHNydsLUiPH35huNHFwCIMKMQCYd3F7l9sUqtWqAsEWURygibgLIJJYPG9oQ714ap9cVEUYSZEZvl83xvK5dvLfN+OsNU8c4RnBKcJ/icycPnC1zsdEmXur2RYjAQ+DjbpST0qAf1OVgV75SgCt7z5MUPOmnW0ytngGDBYwbm18FKcA6vSnCKd56ga5j3oMq63DEYIhBcwGO9rkH9b7DPwW6VoB6XOYJziAhmRpRbI+zfGTHSiPHqCRp+O5Dvwa0RnJKtdLlwehdxIdcNIMqjIfRXhZtXBhgZLuJVMR8IXgmaEbziMsel83u4cbVJKdoIVIwZhvF6cplz11dZaGesdR3mHD5bxXdzyuYcdx985uGjT7TbKxsumBlHDh2gWHxOkiTr2SVby1hKU0qlEls2b84pi4AFtLuVanUbIkI8MTExOzo6uvdCq0mSJKTpMkmSUChErKysIiL09W0hBE8n65C5jE2FMt++zTM1NdWREydP11+9eHxsYGCgOTQ01KrX68ONRmNbrVarVCqVOIRAmqY6NzfXmZmeWZyemZ6dn5//0G63J3fU6m//9zfzC1Bve3w6m7ToAAAAAElFTkSuQmCC") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
+	margin-left: 4px !important;
+}
+
+#appMenu-edit-controls {
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAsBJREFUeNp0U1tIFFEY/s7cd1rdXd0wUqTSCg0MyXqJiKKH6GUpsCiCCiMNH4qyIpBeAkGCKKNALF2jKCjKIiuhhyQiS9NerAehKBXTpHV3nb3MtX92DSJ14J+Zc873f//tO6yp7TEWeyzb7jJNK2TbDq2cf04YOI5BEPgnwkKOjuNkzDDM0LnaaliGNQ/DizyaWx+EFiRgjME0TTILqbSOD19+UMw58rnXxrLiDEb4G3FeBJ6H7Rhw018aCGYJWBbrVmTaFmzaEmyq07LsUJbE+ScMIPIcLt96lHGipODNzYUgKTAIcCi0mQgcCG6d9TW7wDkWuDnPbA+yPG40N5JpMdwIP8f+fTsg33yH5NU+6H4isCwT6VQaG5rGkB/wwOsV4VFEqBIHlQdUzoFIBA3bRJoKw8O2ZtRUHMHE+BSOjsfAUQnQEmnk+hT4AzL8eQoC9A346d8nISdXhqx6EEsxyNGvqDtWj9sj9zEzGoE5PUmZU65xLU0gFyjBoyqwJRmmJCEtSIgxBZaaB7W1CmcOlqE1fA9VlZvQY/egvXwJEVAGcS1FzRGQpC58TzJ8M0V8Tsvojyt4NeXFydelqNi9CjlDp7F3dQTdz17gQN1ZcLqZmQIiswZiJkM0yYOjHoBX4IgMCepe70gJ1oZWAqM/gZko3vfdwfbal0hqCTgGEbga+62Z+HTcR+2mFc3esuPQORVTF8h5zwpyngCiv9DeX4ic2m6CxJDSJbjBhcRsrHd4aHBr48AA3HJc4ei2iOuVnSg4VU/sCWC4BZ2DxRjdcgXrHY0EZcGdnkPicAVWQuZ359/YcndA8QdRVLQc/NuLCJaWY2eFD+FrYbwpPg/Z1shXJ43YGbnrKa2XNVzqyIjHMAxEpic7fPkFhy0mITj2FLKZRPU6GWtOdFUtcmFn2H8bhWTLFgB+XOzK/xFgAOGdQyz6l263AAAAAElFTkSuQmCC") no-repeat !important;
+	min-height: 25px !important;
+	padding-left: 5px !important;
+	background-position: 15px 5px !important;
+}
+
+
+#appMenu-cut-button {
+	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABxklEQVQ4jWP4//8/w////xlwgZV7LypsP3n7PS55Jpw6oeD5yzfLubg4BMg24P9/BiEmRkZ0VyWs3HuxgSgD/v3/L4uumYGBYf7rN+/4iTKAgYGBE13zsxdvbuWEOxYSawCK5qcvXj+RkhAxh4kTbQADA8P8J89ff5eWELUNd9b/QJQBK/deFODlZGX48uUrw5PnrxlkJEWtwp31HyCrYUHmxKz8KvDr2y+DX99+XXj/9L3Clce/8kVZvjG8ePmKQUZSNDHcWf8CuiVwAyIWfzT4/fP3/t/ff3/48fmHwP9//xkOXfrH4Gmt/uDy1ScK+w6ceICuGcULPz7+WP/zy8/A75++G/74/EPgz88/D378YlDcdfGv47m7fxkYGBj88Rrw5d0XhQ1Z4ge+vPmS8Ovrrwv//vxzPDnF4MO+JtUHDIxcDGy8UgUqngvOK7vNNMDqhe8fvn+wzL/0//f33wf+///veGqaITykf//8x8DMJrSBkZnnwa+Pd/czMDAIwk2AZSbTjHMKJulnUUyHAe2II/Dcpuq9BCXnwV1weoYR1kBCMsTg3+8vDr8+P0RRx4JDPTqY8O/P1/N/vr/6wMDA4IgsAQB4NNcSHtKLKAAAAABJRU5ErkJggg==") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
+	margin-left: 4px !important;
+}
+
+#appMenu-copy-button {
+	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABeElEQVQ4jX2SP0vDUBTFT0oWU1sdVLAUsdIOXRIQaVEcnArN1s0xxU/i1K/gppsKAae+UruIVIfikLxV0EFFKBSR9B8meB2kr0mb9MAb8s67597fe5EYY4RoXei6Xl3gA4wxCpNt29Rut4kxdr6oPhZlKIqCQqGAZDJpmKYZGSIxxqhcLgMA3h6v8dS8QuX0Bo1GY1FjgSb7d4cfD9jYVMT3JNgvzjkcxzEYY9B1vSoC+oMRvPU9pLbi6A9Gka0VRUE+n0en0zFM05xOcHZ5i8/hKtxfQHu9Q2plWuRH6/V6AIBEIgHLsgxxiZn0GrqjGLrfP8jtpANd/WjFYhHZbBaqqsJxnOkEldI+KqVpUbP5Hoq2HF8KhIuAe+sllHkW7eQ4eLEy0f+PeKhuB4xW61mg2fYX3PEYuYMMJuclSQpOIMuBFxWaRZsL4JyDcz5XqGnaQrSj3WzovlC9XiciItd155bneUREVKvVKHxun6LQhB9lRKHN6g+C+M39afVRcgAAAABJRU5ErkJggg==") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
+	margin-left: 18px !important;
+}
+
+#appMenu-paste-button {
+	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABnElEQVQ4jYWSz0sbQRTHP8rGH5fUmweRIk0o9NQEjKBCI0RK8if0kEY8FKR49BToJRgwXnPJRSH/gYUJ9KTH5LDirZR4UUqlh6U0qW7c3XkeYrYbdc0XhnnDm/eZ77yZMQIqlUoSXBeLxTFGyPhaSvhF1/E4yWQSANM0+ZyZkffpBaw/mo/7Z0/CDICVfBWA/NYu9XrdT64n3rL84QvV4na4g0Hwu/2NnfxrLi9+0vnb5bp7wz/rChDsnowG9Dq/eDEhTMwZWG+2/A3N7zarm3uoTQaUw1wutzEMEEFEA5qpyQgA2Wx26KRGo0Emk6HVahWUUgwg4wCCgHigdX8OUSQSIZVKEY1GC0qpgyEHaA/QIDoU0Gw2/di27QKwcQ/QoF3kAeDYbPvx9Gycm/s4vRSjUqkEeoBGtNMvDgDSyVioG8/zAgDRoG8RkaEeBB0EFQQb/XrN/OLg6YSrH33Iu8SrUAc+wHGEo4Mqvdv/n+Xl2icATk7PRzp4UkopERFxHOfRcF1XRETK5bL4Vwi1Zzyb5llArVbDsqyRgDvukMUKcpWeDwAAAABJRU5ErkJggg==") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
+	margin-left: 18px !important;
+}
+
 /*== image Panel Star ==*/
 /*== Panel Star ==*/
 /* Star Bookmark Panel - Menulist Drop-down: 2 Colors + Border Width and Color */
@@ -1445,10 +1572,12 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	-moz-appearance: none !important;
 	border: 0px !important;
 	background-color: #131620 !important;
+
 }
 
 #editBookmarkPanel menulist menupopup menuitem {
 	color: #ffffff !important;
+	border: none !important;
 }
 
 
@@ -1462,10 +1591,22 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	background-color: #000000 !important;
 	color: #ffffff !important;
 	height: 26px !important;
+	border: none !important;
+}
+
+#editBMPanel_namePicker {
+	-moz-appearance: none !important;
+	background-color: #000000 !important;
+	color: #ffffff !important;
+	height: 26px !important;
+	border: none !important;
+	outline-color: transparent !important;
 }
 
 #editBMPanel_tagsField {
 	height: 24px !important;
+	border: none !important;
+	border: none !important;
 }
 
 #editBMPanel_tagsSelectorRow {
@@ -1477,17 +1618,23 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	-moz-appearance: none !important;
 	background: #131620 !important;
 	color: #ffffff !important;
+	border: none !important;
 }
 
 #editBMPanel_folderTree {
 	min-height: 300px !important;
+	border: none !important;
 }
 
 .panel-arrow {
 	fill: #131620 !important;
 	background-color: transparent !important;
 	color: #ffffff !important;
+}
 
+#editBMPanel_keywordRow,
+#editBMPanel_locationRow {
+	visibility: visible !important;
 }
 
 panel #editBookmarkPanel,
@@ -1504,7 +1651,7 @@ panel #editBookmarkPanel,
 radio>.radio-check,
 checkbox>.checkbox-check {
 	-moz-appearance: none !important;
-	border: 1px solid #3c465d !important;
+	border: 1px solid #404040 !important;
 	border-radius: 0px !important;
 	height: 1.3em !important;
 	width: 1.3em !important;
@@ -1551,6 +1698,7 @@ checkbox[disabled]>.checkbox-check {
 	padding: 0.3em !important;
 	margin-top: 0.1em !important;
 	margin-bottom: 0.1em !important;
+	border: none !important;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -1563,6 +1711,7 @@ checkbox[disabled]>.checkbox-check {
 	background-color: #000000 !important;
 	color: #ffffff !important;
 	/*fill:  #ffffff !important;*/
+	border: none !important
 }
 
 #editBookmarkPanel button:hover {
@@ -1585,6 +1734,7 @@ checkbox[disabled]>.checkbox-check {
 #editBMPanel_folderTree-row {
 	background: #000000 !important;
 	color: #ffffff !important;
+	border: none !important;
 }
 
 #editBMPanel_folderTree treechildren::-moz-tree-cell(selected) {
@@ -1867,6 +2017,7 @@ checkbox[disabled]>.checkbox-check {
 	#editBMPanel_rows>row>textbox,
 	#editBMPanel_tagsSelector {
 		background: #131620 !important;
+		border: none !important;
 	}
 
 	#placesToolbox {
@@ -2042,6 +2193,43 @@ checkbox[disabled]>.checkbox-check {
 	}
 }
 
+/*-----------------------------------------anims hover -------------------------------------*/
+/* Contextual toolbar buttons, only show on hover, this is what matters, the rest of the 
+file are just style tweaks I like*/
+
+
+/*
+:root:not([customizing]) #nav-bar toolbarbutton {
+	margin-left: -28px !important;
+	transform: scale(0, 0) !important;
+	pointer-events: none !important;
+	transition: all 300ms var(--animation-easing-function) !important;
+}
+
+:root:not([customizing]) :hover>#nav-bar toolbarbutton,
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
+:root:not([customizing]) :hover>#titlebar toolbarbutton {
+	transform: scale(1, 1) !important;
+	margin-left: -2px !important;
+	margin-right: -2px !important;
+
+	pointer-events: auto !important;
+}*/
+
+/* auto collapse nav bar height when in stealth mode (not active),
+kinda jumpy and annoying after a while so let's just comment it for now*/
+/*
+#nav-bar {
+	height: 30px !important;
+	transition: all 300ms var(--animation-easing-function) !important;
+}
+
+:root:not([customizing]) :hover>#nav-bar,
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar {
+	height: 30px !important;
+}
+*/
+
 :root {
 	--tabs-border: none !important;
 }
@@ -2151,6 +2339,12 @@ toolbarbutton.bookmark-item:hover {
 	--toolbarbutton-border-radius: 0px !important;
 }
 
+/*
+#tabbrowser-tabs {
+	--tab-line-color:#1e90ff !important;
+	--tab-loading-fill:#1e90ff !important;
+	box-shadow: none !important;
+}*/
 
 :root[lwtheme-image]:-moz-lwtheme-brighttext {
 	text-shadow: none !important;
@@ -2162,6 +2356,81 @@ toolbarbutton.bookmark-item:hover {
 
 }
 
+/*
+.tab-background {
+	background-image: none !important;
+
+	overflow: hidden;
+}*/
+
+/*
+.tab-background:after {
+	content: '';
+	width: auto !important;
+	height: 38px !important;
+	background-color: #1e8fff50 !important;
+	display: flex !important;
+	transform: translateX(-230px) !important;
+	transition: all 200ms 100ms ease-in-out !important;
+}
+
+.tabbrowser-tab:hover>.tab-stack>.tab-background:after {
+	transform: translateX(0) !important;
+}
+*/
+/*
+#PersonalToolbar {
+	--uc-bm-height: 24px;
+
+	--uc-bm-padding: 4px;
+
+	--uc-autohide-toolbar-delay: 600ms;
+
+}
+
+:root[uidensity="compact"] #PersonalToolbar {
+	--uc-bm-padding: 1px
+}
+
+
+:root[uidensity="touch"] #PersonalToolbar {
+	--uc-bm-padding: 7px
+}
+
+#PersonalToolbar:not([customizing]) {
+	position: relative;
+	margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+	transform: rotateX(90deg);
+	transform-origin: top;
+	transition: transform 135ms linear var(--uc-autohide-toolbar-delay) !important;
+	z-index: 1;
+
+}
+
+#PlacesToolbarItems>.bookmark-item {
+	padding-block: var(--uc-bm-padding) !important;
+}
+
+#nav-bar:focus-within+#PersonalToolbar {
+	transition-delay: 100ms !important;
+	transform: rotateX(0);
+}
+
+
+#navigator-toolbox:hover>#PersonalToolbar {
+	transition-delay: 100ms !important;
+	transform: rotateX(0);
+}
+
+/* Uncomment to enable compatibility for multi-row_bookmarks.css */
+/* This would break buttons placed in the toolbar but that is likely not happening if you are using multi-row setup  */
+/*
+#PersonalToolbar:not([customizing]){
+  position: fixed;
+  display: block;
+  margin-bottom: 0px !important;
+}
+*/
 /*----------autohide personal bar---------------------------*/
 
 #nav-bar {
@@ -2288,6 +2557,14 @@ toolbarbutton:not([disabled]):active>.toolbarbutton-badge-stack>.toolbarbutton-i
 	transition: opacity 280ms ease-in-out;
 }
 
+/*.urlbar-history-dropmarker {
+	list-style-image: url("dropmarkerpng.png") !important;
+	opacity: 1 !important;
+	width: 26px !important;
+	height: 16px !important;
+	-moz-box-ordinal-group: 4 !important;
+}
+*/
 
 #tracking-protection-icon-container,
 #pageActionSeparator {
@@ -2323,7 +2600,27 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	border-radius: 0px !important;
 }
 
+/***************************************************************************/
 
+/* autohide forward button *
+#forward-button {
+	transform: scale(1, 1) !important;
+	transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
+}
+
+#forward-button[disabled="true"] {
+	margin-left: -28px !important;
+	opacity: 0 !important;
+	transform: scale(0.7, 0.7) !important;
+	pointer-events: none !important;
+}*/
+
+/* remove this if you don't want the forward button to be slightly smaller than the back button, a la australis 
+#forward-button .toolbarbutton-icon {
+	padding: calc(var(--toolbarbutton-inner-padding)) !important;
+	margin-left: -6px !important;	
+}
+*/
 
 /* autohide forward button */
 #forward-button {
@@ -2368,6 +2665,26 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 }
 
 
+/* Removes 1px borders around the selected tab*/
+/*
+.tab-background {
+	margin-inline-start: -1px !important;
+	margin-inline-end: -1px !important;
+	border: 0 !important;
+	border-image-width: 0 !important;
+}
+*/
+
+/* add arrow folders bookmarksbar
+#PlacesToolbarItems>.bookmark-item[container]:after {
+	content: '^ ';
+	font-weight: 250;
+	margin-left: 5px;
+	display: block;
+	transform: scale(1.75, -1.3);
+	color:  #ffffff;
+}
+*/
 /* ################################################################################################# */
 /* TAB ANIMATION: LOADING PROGRESS LINE INDICATOR */
 /* ################################################################################################# */
@@ -2421,6 +2738,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 /*avatar account icon*/
 #fxa-avatar-image {
 	margin-bottom: 3px !important;
+	padding: 16 16 !important;
 	transform: scale(1.25) !important;
 }
 
@@ -2431,16 +2749,15 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 
 }
 
-/*#fxa-toolbar-menu-button {
-	margin-bottom: 0px !important;
-}
-*/
 /* Dark library, page-info and bookmark-properties */
 /* Color scheme matches default dark theme */
 
 @-moz-document url(chrome://browser/content/places/places.xhtml),
 url(chrome://browser/content/pageinfo/pageInfo.xhtml),
 url(chrome://browser/content/places/bookmarkProperties.xhtml) {
+	* {
+		font-family: Fira Sans !important;
+	}
 
 	/*#main-window,*/
 	#placesToolbox,
@@ -2456,6 +2773,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	#placesToolbar,
 	tree {
 		background: #131620 !important;
+		color: white !important;
 	}
 
 	#searchFilter,
@@ -2474,6 +2792,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	textbox,
 	richlistbox {
 		background-color: #131620 !important;
+		color: white !important;
 	}
 
 	treecol:not([hideheader]) {
@@ -2487,6 +2806,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	treechildren::-moz-tree-row(multicol, odd),
 	#permList {
 		background-color: #131620 !important;
+		color: white !important;
 	}
 
 	radiogroup>radio[selected],
@@ -2513,6 +2833,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	#searchFilter,
 	.search-textbox {
 		background-color: #000000 !important;
+		color: white !important;
 	}
 
 	#editBMPanel_tagsSelector {
@@ -2524,7 +2845,7 @@ url(chrome://browser/content/places/bookmarkProperties.xhtml) {
 	}
 
 	#editBMPanel_tagsField {
-		height: 30px;
+		height: 30px !important;
 	}
 
 	.editBMPanel_foldersExpander {
@@ -2642,7 +2963,6 @@ toolbar #zoom-controls>separator {
 
 #zoom-in-button {
 	-moz-padding-start: 0px !important;
-	/*padding-top: 0px !important;*/
 	padding-bottom: 5px !important;
 	fill: #1e90ff !important;
 	margin-left: -10px !important;
@@ -2651,7 +2971,6 @@ toolbar #zoom-controls>separator {
 
 #zoom-out-button {
 	-moz-padding-end: 0px !important;
-	/*padding-top: 0px !important;*/
 	padding-bottom: 5px !important;
 	fill: #1e90ff !important;
 	/*margin-left: -6px !important;*/
@@ -2661,7 +2980,7 @@ toolbar #fullscreen-button {
 	padding-top: 0px !important;
 	padding-bottom: 4px !important;
 	fill: #1e90ff !important;
-	/*margin-left: -6px !important;*/
+	
 }
 
 #cut-button {
@@ -2689,6 +3008,7 @@ toolbar #fullscreen-button {
 	display: none !important;
 }
 
+
 .PanelUI-subView .toolbaritem-combined-buttons>.subviewbutton-iconic>.toolbarbutton-text {
 	display: none !important;
 }
@@ -2709,7 +3029,6 @@ toolbar #fullscreen-button {
 		font-family: Fira Sans !important;
 	}
 }
-
 
 /* Font-sizes */
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
@@ -2958,6 +3277,13 @@ input:not(#urlbar-input) {
 	font-family: Fira Sans !important;
 }
 
+/*
+:root {
+	--toolbar-bgcolor: #404040 !important;
+	--toolbar-non-lwt-bgcolor: #404040 !important;
+	--toolbar-non-lwt-textcolor:  #ffffff !important;
+}
+*/
 /* The customization page button colors */
 .customizationmode-button {
 	-moz-appearance: none !important;
@@ -3029,6 +3355,36 @@ scrollbox[orient="horizontal"] {
 	border: none !important;
 }
 
+/*---------------------------------------------------*/
+
+/*--------------------*/
+/* hide scrollbar
+:-moz-any(#content, #appcontent) browser {
+	margin-right: -17px !important;
+	overflow-y: scroll;
+	margin-bottom: 0px !important;
+	overflow-x: scroll;
+}*/
+
+/* Color private browsing window
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar {
+	background-color: #25003E !important;
+	-moz-appearance: none !important;
+}*/
+
+/* Keep unselected tabs visible
+#main-window[privatebrowsingmode="temporary"] .tab-background:not([selected]) {
+	background-color: var(--toolbar-bgcolor) !important;
+}
+*/
+/*
+#main-window[privatebrowsingmode="temporary"] #nav-bar-overflow-button {
+	background-image: url("chrome://browser/skin/private-browsing.svg");
+	background-repeat: no-repeat;
+	background-size: 80% auto;
+	background-position: center;
+}
+*/
 
 
 .toolbarbutton-animatable-box,
@@ -3057,6 +3413,29 @@ scrollbox[orient="horizontal"] {
 
 }
 
+/*
+.scrollbutton-up[orient="horizontal"]~spacer {
+	width: 38px !important;
+
+	background-size: 37px 100% !important;
+
+}
+*/
+/*
+html[windowtype="Toolkit:PictureInPicture"] {
+	border: 1px solid#1e90ff !important;
+}
+*/
+/*
+html[windowtype="Toolkit:PictureInPicture"] .player-holder {
+	height: calc(100vh - 20px) !important;
+}*/
+/*
+@-moz-document url("http://www.w3.org/1999/xhtml") {
+	html|input.urlbar-scheme {
+		display: none !important;
+	}
+}*/
 
 @keyframes scale-in {
 	0% {
@@ -3083,8 +3462,8 @@ scrollbox[orient="horizontal"] {
 }
 
 findbar {
-	animation: 0.2s scale-in;
-	transform-origin: top center;
+	animation: 0.2s scale-in !important;
+	transform-origin: top center !important;
 	background: #131620 !important;
 	padding: 4px 6px 6px 6px !important;
 	border: 1px solid #131620 !important;
@@ -3121,6 +3500,7 @@ findbar .findbar-container .findbar-find-previous,
 findbar .findbar-container .findbar-find-next {
 	background: transparent !important;
 	border-color: var(--backbutton-border-color) !important;
+	fill: white !important;
 }
 
 findbar .findbar-container .findbar-find-previous:hover,
@@ -3128,6 +3508,7 @@ findbar .findbar-container .findbar-find-previous:focus,
 findbar .findbar-container .findbar-find-next:hover,
 findbar .findbar-container .findbar-find-next:focus {
 	background-color: #1e90ff !important;
+	fill: white !important;
 }
 
 findbar .findbar-button {
@@ -3138,8 +3519,9 @@ findbar .findbar-button {
 findbar .findbar-closebutton {
 	margin-right: 4px !important;
 	padding-inline-end: 0 !important;
-	position: relative;
-	top: 6px;
+	position: relative !important;
+	top: 6px !important;
+	fill: white !important;
 }
 
 window[lwtheme="true"] findbar {
@@ -3200,6 +3582,14 @@ button[class="dialog-button"] {
 	background-color: #000000 !important;
 	color: #ffffff !important;
 }
+
+/*
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]) {
+	mask-image: none !important;
+}*/
+
+/* Replace the button background-colors with a glow effect */
+/* Edit the color choices how you see fit */
 
 
 /* Make backgrounds transparent */
@@ -3267,6 +3657,42 @@ toolbarbutton.scrollbutton-down {
 }
 
 
+/* TAB ICONS - none-selected tab icons are grey, 1px  #ffffff glow to see dark icons on dark*/
+/*.tabbrowser-tab .tab-icon-image {
+	filter: grayscale(100%) drop-shadow(0px 0px 1px  #ffffff) !important;
+	opacity: 1 !important;
+}*/
+/*
+.tabbrowser-tab[selected] .tab-icon-image {
+	filter: drop-shadow(0px 0px 1px  #ffffff) !important;
+	opacity: 1 !important;
+}
+
+.tabbrowser-tab:hover:not([selected]) .tab-icon-image {
+	filter: drop-shadow(0px 0px 1px  #ffffff) !important;
+	opacity: 1 !important;
+}
+*/
+/* BOOKMARKS adds glow 1px  #ffffff glow to see dark icons on dark 
+.bookmark-item.menuitem-with-favicon:not([container]) image {
+	filter: drop-shadow(0px 0px 1px  #ffffff) !important;
+}
+
+#PlacesToolbarItems>.bookmark-item:not([container])>.toolbarbutton-icon[label]:not([label=""]) {
+	filter: drop-shadow(0px 0px 1px  #ffffff) !important;
+}
+*/
+/*    */
+
+
+input:focus {
+	outline: 0px !important;
+	box-shadow: none !important;
+	/*background: black !important;*/
+	border: none !important;
+}
+
+
 /* webrender true and layout.css.backdrop-filter.enabled=true*/
 .urlbarView {
 	background-image: url("noise-512x512.png") !important;
@@ -3280,6 +3706,66 @@ toolbarbutton.scrollbutton-down {
 	display: none !important;
 }
 
+/*------------------------------------------------*/
+/*
+#PersonalToolbar {
+	background-image: url("noise-512x512.png") !important;
+	background-color: #131620a0 !important;
+	backdrop-filter: blur(32px) !important;
+	--uc-bm-height: 24px;
+
+	--uc-bm-padding: 6px;
+
+}
+
+:root[uidensity="compact"] #PersonalToolbar {
+	--uc-bm-padding: 1px
+}
+
+:root[uidensity="touch"] #PersonalToolbar {
+	--uc-bm-padding: 6px
+}
+
+#PersonalToolbar:not([customizing]) {
+	margin-bottom: calc(2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+	transform: rotateX(90deg);
+	transform-origin: top;
+	transition: transform 135ms linear 600ms !important;
+	z-index: 1;
+
+}
+
+#PlacesToolbarItems>.bookmark-item {
+	padding-block: var(--uc-bm-padding) !important;
+}
+
+
+/* SELECT ONE BOOKMARKS TOOLBAR BEHAVIOR */
+
+/* ONE | Show when urlbar is focused
+#nav-bar:focus-within+#PersonalToolbar {
+	transition-delay: 100ms !important;
+	transform: rotateX(0);
+}
+
+/* TWO | Show when cursor is over the toolbar area
+My Personal Choice*/
+/*
+#navigator-toolbox:hover>#PersonalToolbar {
+	transition-delay: 100ms !important;
+	transform: rotateX(0);
+}
+*/
+/*
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content]>html {
+	background: #131620 !important;
+}
+
+*/
 
 
 /* Color for most dialogs */
@@ -3291,8 +3777,63 @@ dialog select,
 	background: #131620 !important;
 	background-color: #131620 !important;
 	color: #ffffff !important;
+	border: none !important;
 }
 
+/* Prevents  #ffffff pre-load flash 
+.browserContainer {
+	background-color: #131620 !important;
+}
+*/
+/*
+.tabbrowser tabpanels {
+	background-color: #131620 !important;
+}*/
+
+
+/*
+
+@keyframes slidein {
+	from {
+		margin-top: calc(0px - var(--tab-min-height))
+	}
+
+	to {
+		margin-top: 0
+	}
+}
+
+@keyframes slideout {
+	from {
+		margin-top: var(--tab-min-height)
+	}
+
+	to {
+		margin-top: 0
+	}
+}
+
+
+#navigator-toolbox:not(:hover)>#titlebar {
+	-moz-appearance: none !important
+}
+
+#navigator-toolbox:not(:hover) #TabsToolbar:not([customizing]) {
+	visibility: collapse
+}
+
+#navigator-toolbox:hover>#nav-bar:not([customizing]) {
+	animation: slidein ease-out 150ms 1
+}
+
+#navigator-toolbox:not(:hover)>#nav-bar:not([customizing]) {
+	animation: slideout ease-out 150ms 1
+}
+
+#tabbrowser-tabpanels {
+	background-color: var(--uc-light-bkgnd-color, #323639) !important;
+}
+*/
 
 
 
@@ -3309,6 +3850,62 @@ dialog select,
 	border-image-slice: 1 !important;
 }
 
+
+/* tab counter
+
+.tabbrowser-tab:first-child {
+	counter-reset: nth-tab 0
+}
+*/
+/* Change to -1 for 0-indexing 
+.tab-text::before {
+	content: counter(nth-tab) " ";
+	counter-increment: nth-tab
+}
+*/
+/*
+.tab-content::before {
+	content: counter(nth-tab) " ";
+	counter-increment: nth-tab;
+	display: -moz-box;
+	padding-inline-end: 3px
+}
+*/
+/*
+menupopup>menu:not(.menu-iconic)::before,
+menupopup>menuitem:not(.menuitem-iconic)::before {
+	content: attr(label) !important;
+	display: -moz-box !important;
+	-moz-appearance: menuitemtext !important;
+	-moz-box-flex: 1 !important;
+}
+
+menubar>menu::before {
+	content: attr(label) !important;
+	display: -moz-box !important;
+	margin: 2px 6px 0px 6px !important;
+}
+
+.menu-text,
+.menubar-text {
+	display: none !important;
+}
+*/
+/* Color change of tab icon*/
+
+/*
+.menupopup-arrowscrollbox{
+  --uc-scrollbox-overflow: auto;
+  --uc-scrollbutton-display-model: none;
+}
+
+scrollbox{ overflow-y: var(--uc-scrollbox-overflow,initial) !important; }
+
+#scrollbutton-up,
+#scrollbutton-down{
+  display: var(--uc-scrollbutton-display-model,initial) !important;
+}
+*/
 #tabbrowser-tabs,
 #tabbrowser-tabs>#tabbrowser-arrowscrollbox {
 	min-height: 40px !important;
@@ -3318,6 +3915,35 @@ dialog select,
 
 
 
+
+/*
+.tab-icon-image:not([src]) {
+	background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/200px-Icon-round-Question_mark.svg.png") !important;
+	background-size: 16px 16px !important;
+	background-repeat: no-repeat !important;
+	list-style-image: none !important;
+	width: 0 !important;
+	padding-left: 16px !important;
+	display: block !important;
+	visibility: visible !important;
+}
+*/
+
+/*
+.subview-subheader,
+panelview .toolbarbutton-1,
+.subviewbutton,
+.widget-overflow-list .toolbarbutton-1 {
+	-moz-appearance: none;
+	visibility: collapse !important;
+}
+*/
+/*
+.tab-content {
+	-moz-box-direction: reverse;
+}
+
+*/
 
 
 #downloadsRichListBox [selected] {
@@ -3357,6 +3983,19 @@ dialog select,
 	border: 0px !important;
 }
 
+/*
+#downloadsRichListBox>richlistitem[selected] {
+	-moz-outline-radius: 0 !important;
+	outline-offset: 0px !important;
+	outline-width: 0px !important;
+	outline-style: none !important;
+	border: 0px !important;
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 0 !important;
+	outline: none !important;
+}
+*/
 .downloadIconRetry>.button-box>.button-icon {
 	background-color: transparent !important;
 	border-radius: 100% !important;
@@ -3459,10 +4098,32 @@ dialog select,
 		margin-bottom: 2px !important;
 	}
 
+	/*
+	.urlbarView-favicon {
+		margin-inline-start: 2px !important;
+	}
+*/
+	/* DISPLAY GO BUTTON WHEN TYPING START */
+	/*#urlbar-input-container[pageproxystate="invalid"] #urlbar-go-button {
+		display: block !important;
+	}*/
 
+	/* DISPLAY GO BUTTON WHEN TYPING END */
+	/* Megabar custom background 
+	.urlbarView.megabar {
+		background-color: #01323f !important;
+		margin-bottom: 7px !important;
+	}*/
 
 	.urlbarView.megabar {
-		
+		/*background-image: url("noise-512x512.png") !important;*/
+		/*background-color: #13162080 !important;*/
+		/*background: #13162080 !important;*/
+		/*backdrop-filter: blur(2px) !important;*/
+		/*top: calc(100% - 5px) !important;
+		width: 100% !important;*/
+		/*background: #13162080 !important;*/
+		/*border-width: 0 1px 1px 1px !important;	border-style: solid;*/
 		border-color: none !important;
 		box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.788) !important;
 	}
@@ -3472,6 +4133,13 @@ dialog select,
 	}
 }
 
+/*
+.urlbarView-row[selected]>.urlbarView-row-inner {
+	background-color: #1e90ff80 !important;
+
+}*/
+
+/* REMOVE MEGABAR END */
 
 
 #main-window {
@@ -3480,6 +4148,13 @@ dialog select,
 
 }
 
+/* tabs fill the screen 
+.tabbrowser-tab[fadein] {
+	max-width: 100vw !important
+}
+.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
+	max-width: 100vw !important;
+}*/
 
 .bookmark-item[label="Github"]>.toolbarbutton-icon {
 	width: 0px !important;
@@ -3507,6 +4182,54 @@ dialog select,
 }
 
 
+/*
+#tracking-protection-icon-container[hidden]~.urlbar-input-box::before {
+	display: none !important;
+}*/
+
+
+/*
+:root {
+
+	--toolbarbutton-outer-padding: -2px !important;
+	--toolbarbutton-inner-padding: 0px !important;
+}
+*/
+
+
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/urlbar_connection_type_colors.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+/* Modifies the urlbar text color based on connection type - "normal" https: won't be mdofied */
+/* Mixed content including neterror 
+#identity-box[pageproxystate="valid"].unknownIdentity~.urlbar-input-box {
+	color: orange !important;
+}
+*/
+/* http: and potentially some other insecure connections like ftp: 
+#identity-box[pageproxystate="valid"].notSecure~.urlbar-input-box {
+	color: red !important;
+}
+*/
+/* Extension pages 
+#identity-box[pageproxystate="valid"].extensionPage~.urlbar-input-box {
+	color: yellowgreen !important;
+}*/
+
+/* Internal about: and chrome:// urls (includes reader-view) 
+#identity-box[pageproxystate="valid"].localResource~.urlbar-input-box,
+#identity-box[pageproxystate="valid"].chromeUI~.urlbar-input-box {
+	color:#1e90ff !important;
+
+}
+*/
+
+/* tabs roundness */
+
+/*
+.tabbrowser-tab>.tab-stack>.tab-background {
+	border-radius: 0px !important;
+}*/
 
 /*--------- ombre onglets / tab shadow & background------------*/
 .tabbrowser-tab[visuallyselected="true"],
@@ -3516,6 +4239,16 @@ dialog select,
 
 }
 
+/*
+.tabbrowser-tab {
+	padding-bottom: 5px !important;
+}
+*/
+/*
+#TabsToolbar {
+	padding: -5px 0px 0px 6px !important;
+}
+*/
 /* Show Tab Close buttons only when hovered (slide in using max-width) */
 .tabbrowser-tab:not([pinned]) .tab-close-button {
 	max-width: 0px !important;
@@ -3620,7 +4353,7 @@ dialog select,
 	-moz-margin-end: 0px !important;
 	padding: 0.5px 0px 0.5px 0px !important;
 	margin: 4px 8px 4px 8px !important;
-	border-bottom: 1px solid #3c465d !important;
+	border-bottom: 1px solid #404040 !important;
 	background: none !important;
 }
 
@@ -3682,6 +4415,41 @@ hbox[part="innerbox"] {
 	}
 }
 
+/*
+.titlebar-buttonbox-container {
+	position: absolute !important;
+	display: block !important;
+	right: 0px !important;
+}
+*/
+/*
+tab:not(:active) .tab-background {
+	filter: blur(0px) brightness(100%);
+	transition: 0.4s !important;
+}
+*/
+/*
+tab .tab-background {
+
+	transition: 0.4s !important;
+}
+
+:root:not([customizing]) :hover>.tabbrowser-tab:not(:hover) {
+	filter: blur(3px) brightness(50%);
+	transition: blur, ease 0.5s !important;
+}
+
+:root:not([customizing]) :not(:hover)>.tabbrowser-tab {
+	filter: blur(0px) brightness(100%) !important;
+	transition: blur, ease 0.2s !important;
+}
+*/
+/*
+:-moz-broken {
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/450px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg);
+	background-size: cover;
+}
+*/
 /* Shows window title in menubar */
 /* Enable menubar for correct behavior */
 @-moz-document url(chrome://browser/content/browser.xhtml) {
@@ -3690,9 +4458,11 @@ hbox[part="innerbox"] {
 		position: fixed !important;
 		right: 140px !important;
 		/* Space for window controls */
-		width: calc(100vw - 830px) !important;
+		width: calc(100vw - 850px) !important;
 		/* Window width - window control width - menuitem (English) width */
 		text-align: left !important;
+		z-index: 1;
+		pointer-events: none;
 	}
 
 	head>* {
@@ -3724,65 +4494,79 @@ hbox[part="innerbox"] {
 /*----------------------------------------*/
 
 
-#appMenu-zoom-controls {
-	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArFJREFUeNqUU01IVGEUPe+9GcdRx18k0srKyKyQMtTMNEvCRbvatCja9WNlJLmJJMNt6KQW1CqkRVAEaZCDkVao2DgQFRKmoNQ4U+qkjs+ZeTPfu93Jft5UBF14fN+73HPuOZf7STBE+42bTboQFwgUD1rOSZIUlBXl6pmaEw34LYjo14+9td3t6O6mSFAlY0QCKjked5P9Wrv7bwRS9NJsb3XvLS/L2rKtEPZeLwYn/DDHKTCZJOxen4zjJRl47XKh78XAVN352uwYBc32tqbOzi5SNZ0O335PHc4ZGpsJ0SvPEvWML9D1oRmqc3goJIg6H3ZStN5IIIc1rX5PWQnaej04sDUNVRttmNMEpoMC8xEusCiwJphwd2QeFbtKoGmheqMNWejCkpyeAac7gO3ZCfCqAr6QjgUB+NnhkiwjOcmMUVVHSno6dKFbjAQmTgBCY88yBE/Ex539DF5icFCRkZgIhAVByOw3okHXdcQSkICICJjNCqYYqXLBYrQzg+OtPEjOa6woSDrC4QgTiBgCmXTS3B4vClea8eZTENOBqAX2zmqiYIvFBInPXKuOj14vq2FnRoJZn6/j2fMBHNpgZrAO9yJ3YpUsijsTVM7pYUJR3BKe9vVjk2XEFkPQam++PDo2Nv3WNYSafIE1VrahAYshYD5ASAmp2C9PwzXQD9+XORQfacXLluKfKyh9PwsuXmp4krsuJ3NncREyedrLayrh86wPg0NOfJjyoHJfFfLyCxDnd2LiUSOKzvZJkkFNwclTp2vT0tKO8luI+/EWSFL8a5VxW3h1NaxWG8pz5pG3ORWDd1pQei6WIBpZ/K2IWjPkomNXuq5UDCetKkJl6n1MJlQ+mBp1Hyyt7fmD4F+x415j9TCRBN4tOJyTx251jXT8D8E3EsP9Hc9J/SrAALenXlq1AZ12AAAAAElFTkSuQmCC") no-repeat !important;
-	min-height: 25px !important;
-	padding-left: 5px !important;
-	background-position: 15px 8px !important;
-}
-
-
-#appMenu-zoomReduce-button {
-	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArxJREFUeNqUk11Ik1EYx//nfd9tTp0fE4mstCxQK6SvaWaafeGFd3XTRdFdH1qKljeRZHhRF6VrrqCuQroIiqAZ5DBqFSo2BxUh4QcoOjd0rra5r/fdeU/vtI+tIugPh/Och3N+PM//nEOQIPOdux0ypRcZWArYSo4QEuF4/sa5+tNt+E2MsV8Lo8nstPb1sVgkyBIVCweZ9XkfM94yO/8GIPGg02hy7q+qzNuybQeMr9wYmgpApeYhCAR7CzNwqjwHHx0O2N4OzrU0N65JqqDT2N1hsfSyoCizY/fHWY/dwyY8UfbeFWL9k352e9jDWqwuFqWMWZ5aWHx/IoCTRLF1X2U5um1u1G3V41BxBvwxGR6RwU8J+BQB2lQBD0d9qN5TDlGMtia2wVGZajL0ObA7Q9iVnw6vSBCCAFFQQ0pZGVmZGowHGTL1eshU1iQCBCUBUBFqpWfwBHUNN6ESeCUkIEqJNEZx4VozYpCAmAhZlpEMYHR5k0rgMOOTYL7ehBDHIcQL0Gg5cAo3vBSDSiNAkiQFQJMBTGai0+VWb1+dig+uEHQ6AWHlVFqarNyECoKKB+M5FGpFzLrdkCgCSR4ser09r98M4ugmFeZDMmb9FGKMQZRkRCIyloIyqBIb1CG8tA2gWDOqSwKYjJ1XxiYmFj45hlFfQpGvpQiKwFIU8IUV46JBHOYW4BgcgPfLV5QdN+FdV9nPJ0i+z6WXLre92LihIHd3mQG5itsrz5RgftGLoWE7ZuZcqDlwEEUlpVAH7Jh61g7DeRshCdWUnjnb0JidnX1C+QvqH3+BET6wnp/USetqodXqUFXgQ9HmLAw96EJFUzIgrjxlrIq3lpCL2873Xq0eSV9rQE3WY0yn1jyZG3MeqWjs/wPwL+181F47whiBcsuw2qdP3usd7fkfwDIkIf6s+BT8JsAAKC9RphXbWHoAAAAASUVORK5CYII=") !important;
-	-moz-image-region: rect(0px 16px 16px 0px) !important;
-	margin-left: 4px !important;
-	margin-right: 3px !important;
-}
-
-#appMenu-zoomEnlarge-button {
-	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAr9JREFUeNqUk11IU2EYx/9nZx9u6KYTiSyzL1ArpK9pJpp9IdVd3XRRdNeHpaYkRGQaQnRRuuYM6iqsi6AImkGOwlahonMXRYxQI0Xnhh+zNXfczjnveTubfZxVBP3h5bzn4Ty/93n+53kZKGS/fadFIuQCBU0BXYoxDBNVseyNc1WnGvGbKKW/Xqw2u8/Z3U3FaIQqJS5GqPN5N7Xesvv+BmDim1arzbe7rDR74+atsL4KoH88DK2WhZplULrWiJPFmXjv8cD1tm+qvq5mRVIFrdb2Foeji0Z4iR69N0LvD83Sz/MC9c7ytGdsgXYMztJ6p5/GCKWOpw4a/14JUAk837CrtBjtrgAObTJjX74JHGVwoLoNHKOGJkUDvUGNh94QyncWg+djDco2VEQiOqM5E24fh+2rUjEvMHIiC0OKDkJiaZFu0mEkQmEymyERSacEqOUAQPhEz5B7Plh1E3o5UadR48pFK2LRGOqv1UGEAIg8JElCMoASEJFAo1ZhIiSg43oteBkQT26ynwchABcWodGpIQiCDCDJACpR3ucPaLcsN+Cdn4PRqIEYo4mT48kqlWwWq8JaPY/JQAACQTjJg7lgsPP1mz4cWa/BNCdhMkSwGBUTZXMLIsILEoggwaLl0OPqRb7Om5YEsFlbm4ZHR2c+eAZQVUCQoxfxNSYhFBERjEgwxSLYr5qBp68XwfkvKDpmw2Bb0c8RZL4/Cy9dbny5bk1u1o4iC7Jkt5fGlMH0XBD9A25MTPlRsWcv8goKoQ27MfasGZZqF8Moqik8feZsTUZGxnH5Lmh/3AXKsOHV7Kc0IacSen0aynJDyNuQjv4HbSipTQbElS2vZfHWFLG47WzX1fKh1JUWVKQ/xrih4snUsO9wSc2LPwD/0rZHzZVDVJ7S+J9xusdP3O3ydv4PIAFR7D/KPkW+CTAATw5W30BzwxkAAAAASUVORK5CYII=") !important;
-	-moz-image-region: rect(0px 16px 16px 0px) !important;
-	margin-left: 15px !important;
-	margin-right: 10px !important;
-}
-
-#appMenu-fullscreen-button {
-	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACYUlEQVQ4y6WTPWhUQRSFv/v2vV13XaOYgGuyrvEHZNcUYqVgES0EKy0VsRYbwVZsrG3SiVYW6RUbtVALRUGRgKAYJJpIDFHMEvOSTd7OnbkWz2xES6eZywxn7rnnnIH/XDI+Pv6u2Ww2/r4ws3/qP89EhLGxsXtxq9Xav7i4VJyY/AIi6xAwAySvkd4DAhCUM6dGGRwcPBQjwrM377m/eJZ9/QV+/FS+fu9i6gmqmHq8V4ILHNydsLUiPH35huNHFwCIMKMQCYd3F7l9sUqtWqAsEWURygibgLIJJYPG9oQ714ap9cVEUYSZEZvl83xvK5dvLfN+OsNU8c4RnBKcJ/icycPnC1zsdEmXur2RYjAQ+DjbpST0qAf1OVgV75SgCt7z5MUPOmnW0ytngGDBYwbm18FKcA6vSnCKd56ga5j3oMq63DEYIhBcwGO9rkH9b7DPwW6VoB6XOYJziAhmRpRbI+zfGTHSiPHqCRp+O5Dvwa0RnJKtdLlwehdxIdcNIMqjIfRXhZtXBhgZLuJVMR8IXgmaEbziMsel83u4cbVJKdoIVIwZhvF6cplz11dZaGesdR3mHD5bxXdzyuYcdx985uGjT7TbKxsumBlHDh2gWHxOkiTr2SVby1hKU0qlEls2b84pi4AFtLuVanUbIkI8MTExOzo6uvdCq0mSJKTpMkmSUChErKysIiL09W0hBE8n65C5jE2FMt++zTM1NdWREydP11+9eHxsYGCgOTQ01KrX68ONRmNbrVarVCqVOIRAmqY6NzfXmZmeWZyemZ6dn5//0G63J3fU6m//9zfzC1Bve3w6m7ToAAAAAElFTkSuQmCC") !important;
-	-moz-image-region: rect(0px 16px 16px 0px) !important;
-	margin-left: 4px !important;
-}
-
-#appMenu-edit-controls {
-	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAsBJREFUeNp0U1tIFFEY/s7cd1rdXd0wUqTSCg0MyXqJiKKH6GUpsCiCCiMNH4qyIpBeAkGCKKNALF2jKCjKIiuhhyQiS9NerAehKBXTpHV3nb3MtX92DSJ14J+Zc873f//tO6yp7TEWeyzb7jJNK2TbDq2cf04YOI5BEPgnwkKOjuNkzDDM0LnaaliGNQ/DizyaWx+EFiRgjME0TTILqbSOD19+UMw58rnXxrLiDEb4G3FeBJ6H7Rhw018aCGYJWBbrVmTaFmzaEmyq07LsUJbE+ScMIPIcLt96lHGipODNzYUgKTAIcCi0mQgcCG6d9TW7wDkWuDnPbA+yPG40N5JpMdwIP8f+fTsg33yH5NU+6H4isCwT6VQaG5rGkB/wwOsV4VFEqBIHlQdUzoFIBA3bRJoKw8O2ZtRUHMHE+BSOjsfAUQnQEmnk+hT4AzL8eQoC9A346d8nISdXhqx6EEsxyNGvqDtWj9sj9zEzGoE5PUmZU65xLU0gFyjBoyqwJRmmJCEtSIgxBZaaB7W1CmcOlqE1fA9VlZvQY/egvXwJEVAGcS1FzRGQpC58TzJ8M0V8Tsvojyt4NeXFydelqNi9CjlDp7F3dQTdz17gQN1ZcLqZmQIiswZiJkM0yYOjHoBX4IgMCepe70gJ1oZWAqM/gZko3vfdwfbal0hqCTgGEbga+62Z+HTcR+2mFc3esuPQORVTF8h5zwpyngCiv9DeX4ic2m6CxJDSJbjBhcRsrHd4aHBr48AA3HJc4ei2iOuVnSg4VU/sCWC4BZ2DxRjdcgXrHY0EZcGdnkPicAVWQuZ359/YcndA8QdRVLQc/NuLCJaWY2eFD+FrYbwpPg/Z1shXJ43YGbnrKa2XNVzqyIjHMAxEpic7fPkFhy0mITj2FLKZRPU6GWtOdFUtcmFn2H8bhWTLFgB+XOzK/xFgAOGdQyz6l263AAAAAElFTkSuQmCC") no-repeat !important;
-	min-height: 25px !important;
-	padding-left: 5px !important;
-	background-position: 15px 5px !important;
-}
-
 /*
-#appMenu-edit-controls:hover {
-	background:#1e90ff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAsBJREFUeNp0U1tIFFEY/s7cd1rdXd0wUqTSCg0MyXqJiKKH6GUpsCiCCiMNH4qyIpBeAkGCKKNALF2jKCjKIiuhhyQiS9NerAehKBXTpHV3nb3MtX92DSJ14J+Zc873f//tO6yp7TEWeyzb7jJNK2TbDq2cf04YOI5BEPgnwkKOjuNkzDDM0LnaaliGNQ/DizyaWx+EFiRgjME0TTILqbSOD19+UMw58rnXxrLiDEb4G3FeBJ6H7Rhw018aCGYJWBbrVmTaFmzaEmyq07LsUJbE+ScMIPIcLt96lHGipODNzYUgKTAIcCi0mQgcCG6d9TW7wDkWuDnPbA+yPG40N5JpMdwIP8f+fTsg33yH5NU+6H4isCwT6VQaG5rGkB/wwOsV4VFEqBIHlQdUzoFIBA3bRJoKw8O2ZtRUHMHE+BSOjsfAUQnQEmnk+hT4AzL8eQoC9A346d8nISdXhqx6EEsxyNGvqDtWj9sj9zEzGoE5PUmZU65xLU0gFyjBoyqwJRmmJCEtSIgxBZaaB7W1CmcOlqE1fA9VlZvQY/egvXwJEVAGcS1FzRGQpC58TzJ8M0V8Tsvojyt4NeXFydelqNi9CjlDp7F3dQTdz17gQN1ZcLqZmQIiswZiJkM0yYOjHoBX4IgMCepe70gJ1oZWAqM/gZko3vfdwfbal0hqCTgGEbga+62Z+HTcR+2mFc3esuPQORVTF8h5zwpyngCiv9DeX4ic2m6CxJDSJbjBhcRsrHd4aHBr48AA3HJc4ei2iOuVnSg4VU/sCWC4BZ2DxRjdcgXrHY0EZcGdnkPicAVWQuZ359/YcndA8QdRVLQc/NuLCJaWY2eFD+FrYbwpPg/Z1shXJ43YGbnrKa2XNVzqyIjHMAxEpic7fPkFhy0mITj2FLKZRPU6GWtOdFUtcmFn2H8bhWTLFgB+XOzK/xFgAOGdQyz6l263AAAAAElFTkSuQmCC") no-repeat !important;
-	padding-left: 5px !important;
-	background-position: 15px 5px !important;
-}*/
-
-#appMenu-cut-button {
-	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABxklEQVQ4jWP4//8/w////xlwgZV7LypsP3n7PS55Jpw6oeD5yzfLubg4BMg24P9/BiEmRkZ0VyWs3HuxgSgD/v3/L4uumYGBYf7rN+/4iTKAgYGBE13zsxdvbuWEOxYSawCK5qcvXj+RkhAxh4kTbQADA8P8J89ff5eWELUNd9b/QJQBK/deFODlZGX48uUrw5PnrxlkJEWtwp31HyCrYUHmxKz8KvDr2y+DX99+XXj/9L3Clce/8kVZvjG8ePmKQUZSNDHcWf8CuiVwAyIWfzT4/fP3/t/ff3/48fmHwP9//xkOXfrH4Gmt/uDy1ScK+w6ceICuGcULPz7+WP/zy8/A75++G/74/EPgz88/D378YlDcdfGv47m7fxkYGBj88Rrw5d0XhQ1Z4ge+vPmS8Ovrrwv//vxzPDnF4MO+JtUHDIxcDGy8UgUqngvOK7vNNMDqhe8fvn+wzL/0//f33wf+///veGqaITykf//8x8DMJrSBkZnnwa+Pd/czMDAIwk2AZSbTjHMKJulnUUyHAe2II/Dcpuq9BCXnwV1weoYR1kBCMsTg3+8vDr8+P0RRx4JDPTqY8O/P1/N/vr/6wMDA4IgsAQB4NNcSHtKLKAAAAABJRU5ErkJggg==") !important;
-	-moz-image-region: rect(0px 16px 16px 0px) !important;
-	margin-left: 4px !important;
+.tabbrowser-tab[selected="true"] {
+	min-width: 165px !important;
 }
 
-#appMenu-copy-button {
-	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABeElEQVQ4jX2SP0vDUBTFT0oWU1sdVLAUsdIOXRIQaVEcnArN1s0xxU/i1K/gppsKAae+UruIVIfikLxV0EFFKBSR9B8meB2kr0mb9MAb8s67597fe5EYY4RoXei6Xl3gA4wxCpNt29Rut4kxdr6oPhZlKIqCQqGAZDJpmKYZGSIxxqhcLgMA3h6v8dS8QuX0Bo1GY1FjgSb7d4cfD9jYVMT3JNgvzjkcxzEYY9B1vSoC+oMRvPU9pLbi6A9Gka0VRUE+n0en0zFM05xOcHZ5i8/hKtxfQHu9Q2plWuRH6/V6AIBEIgHLsgxxiZn0GrqjGLrfP8jtpANd/WjFYhHZbBaqqsJxnOkEldI+KqVpUbP5Hoq2HF8KhIuAe+sllHkW7eQ4eLEy0f+PeKhuB4xW61mg2fYX3PEYuYMMJuclSQpOIMuBFxWaRZsL4JyDcz5XqGnaQrSj3WzovlC9XiciItd155bneUREVKvVKHxun6LQhB9lRKHN6g+C+M39afVRcgAAAABJRU5ErkJggg==") !important;
-	-moz-image-region: rect(0px 16px 16px 0px) !important;
-	margin-left: 18px !important;
+.tabbrowser-tab:not([selected]):not([pinned]) {
+	max-width: 200px !important;
+
 }
 
-#appMenu-paste-button {
-	list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABnElEQVQ4jYWSz0sbQRTHP8rGH5fUmweRIk0o9NQEjKBCI0RK8if0kEY8FKR49BToJRgwXnPJRSH/gYUJ9KTH5LDirZR4UUqlh6U0qW7c3XkeYrYbdc0XhnnDm/eZ77yZMQIqlUoSXBeLxTFGyPhaSvhF1/E4yWQSANM0+ZyZkffpBaw/mo/7Z0/CDICVfBWA/NYu9XrdT64n3rL84QvV4na4g0Hwu/2NnfxrLi9+0vnb5bp7wz/rChDsnowG9Dq/eDEhTMwZWG+2/A3N7zarm3uoTQaUw1wutzEMEEFEA5qpyQgA2Wx26KRGo0Emk6HVahWUUgwg4wCCgHigdX8OUSQSIZVKEY1GC0qpgyEHaA/QIDoU0Gw2/di27QKwcQ/QoF3kAeDYbPvx9Gycm/s4vRSjUqkEeoBGtNMvDgDSyVioG8/zAgDRoG8RkaEeBB0EFQQb/XrN/OLg6YSrH33Iu8SrUAc+wHGEo4Mqvdv/n+Xl2icATk7PRzp4UkopERFxHOfRcF1XRETK5bL4Vwi1Zzyb5llArVbDsqyRgDvukMUKcpWeDwAAAABJRU5ErkJggg==") !important;
-	-moz-image-region: rect(0px 16px 16px 0px) !important;
-	margin-left: 18px !important;
+.tabbrowser-tab[selected="true"]:not([pinned]) {
+	max-width: 275px !important;
 }
+
+*/
+
+
+/*padding above tabbar in compact mode 
+#main-window[sizemode="compact"]>#titlebar {
+	-moz-appearance: initial !important;
+}
+
+.toolbarbutton-icon,
+.toolbarbutton-badge-stack {
+	border-radius: 0px !important;
+	
+	max-height: 30px !important;
+}
+*/
+/*
+.tabbrowser-tab:hover .tab-line {
+	height: 3px !important;
+	background-color:#1e90ff !important;
+}
+*/
+/*
+.tabbrowser-tab:hover {
+	border-color:#1e90ff !important;
+	border: 3px !important;
+
+}
+*/
+/* Makes panels, menupopups, urlbar and searchbar rounded */
+
+/* Modify the rounding size here 
+:root {
+	--uc-menupopup-border-radius: 20px
+}
+
+panel[type="autocomplete-richlistbox"],
+menupopup,
+hbox,
+.panel-arrowcontent {
+	-moz-appearance: none !important;
+	border-radius: var(--uc-menupopup-border-radius) !important;
+	overflow: -moz-hidden-unscrollable !important;
+}
+*/
+/* The rounding is also applied to searchbar and urlbar to look consistent 
+searchbar#searchbar,
+#urlbar-background {
+	border-radius: var(--uc-menupopup-border-radius) !important
+}
+*/
+/* Reposition the panel-arrow  
+panel[type="arrow"] {
+	margin-inline-end: calc(-10px - var(--uc-menupopup-border-radius)) !important;
+}
+
+.panel-arrow {
+	margin-inline: var(--uc-menupopup-border-radius) !important;
+}
+*/
 
 
 /* Hides the first item in the urlbar dropdown if it is a "search with" or "visit" or "tab-to-search" item.  Does not hide "search in private window item", probably */
@@ -3795,7 +4579,7 @@ hbox[part="innerbox"] {
 
 
 #reader-mode-button[readeractive] {
-	fill: yellow !important;
+	fill: #ffff00 !important;
 
 }
 
@@ -3811,4 +4595,409 @@ hbox[part="innerbox"] {
 #tabmodalprompt-infoContainer {
 	background-color: #131620 !important;
 	color: #ffffff !important;
+}
+
+
+/*-----------------------------------------------*/
+/* page info */
+@-moz-document url(chrome://browser/content/pageinfo/pageInfo.xhtml) {
+	#topBar {
+		-moz-appearance: none !important;
+		background: #131620 !important
+	}
+
+	#mainDeck {
+		background: #131620 !important;
+		color: white !important
+	}
+
+	textbox {
+		color: white !important
+	}
+
+	.text-link {
+		color: dodgerblue !important;
+	}
+
+	button {
+		-moz-appearance: none !important;
+		background-color: dodgerblue !important;
+		border: 1px solid !important;
+		border-radius: 3px !important;
+		color: white !important;
+		border-color: dodgerblue !important
+	}
+
+	button:hover {
+		background-color: #1e90ff80 !important
+	}
+
+	#feedListbox,
+	#feedListbox>richlistitem,
+	#imagecontainerbox,
+	.groupbox-body,
+	.permission {
+		-moz-appearance: none !important;
+		background: #131620 !important;
+		color: white !important;
+		/*border-color: var(--in-content-box-border-color) !important*/
+	}
+
+	#feedListbox richlistitem {
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	#permPluginTemplate {
+		color: white !important;
+	}
+
+	#feedListbox,
+	#imagecontainerbox,
+	#permList,
+	.groupbox-body {
+		border: 1px solid !important
+	}
+
+	#permList {
+		-moz-appearance: none !important
+	}
+
+	groupbox.collapsable caption .caption-icon {
+		filter: invert(65%) !important
+	}
+
+	tree {
+		-moz-appearance: none !important;
+		color: var(--in-content-page-color) !important
+	}
+
+	treecol {
+		-moz-appearance: none !important;
+		border: 0 solid !important;
+		border-color: var(--in-content-box-background) !important
+	}
+
+	treecolpicker {
+		-moz-appearance: none;
+		border: none !important;
+		filter: invert(84%)
+	}
+
+	.checkbox-check[checked] {
+		list-style-image: url(chrome://global/skin/icons/check.svg);
+		-moz-context-properties: fill;
+		fill: dodgerblue !important
+	}
+
+	#imagetree,
+	#metatree {
+		border: 1px solid !important
+	}
+
+	#viewGroup>radio {
+		-moz-appearance: none !important;
+		background-color: #131620 !important;
+		text-shadow: none !important;
+		padding: 0 8px !important;
+		color: white !important;
+		border-right: 1px solid !important;
+		border-color: #131620 !important
+	}
+
+	#viewGroup>radio[selected=true] {
+		color: white !important
+	}
+
+	#viewGroup>radio:first-of-type {
+		border-top-left-radius: 4px !important;
+		border-bottom-left-radius: 4px !important
+	}
+
+	#viewGroup>radio:last-of-type {
+		border: none !important;
+		border-top-right-radius: 4px !important;
+		border-bottom-right-radius: 4px !important
+	}
+
+	@media screen and (-moz-windows-theme),
+	screen and (-moz-windows-classic),
+	screen and (-moz-windows-default-theme),
+	screen and (-moz-os-version:windows-win7),
+	screen and (-moz-os-version:windows-win8),
+	screen and (-moz-os-version:windows-win10) {
+		#topBar {
+			-moz-appearance: none !important;
+			background-color: #131620 !important;
+			border: none !important;
+			padding-top: 5px !important;
+			padding-bottom: 5px !important;
+			color: white !important
+		}
+
+		#metaTagsCaption,
+		#security-identity,
+		#security-identity-groupbox,
+		#security-privacy,
+		#security-privacy-groupbox,
+		#security-technical,
+		#security-technical-groupbox {
+			-moz-appearance: none !important;
+			background-color: #131620 !important;
+			border: none !important;
+			color: white !important;
+		}
+
+		#security-identity-groupbox,
+		#security-privacy-groupbox,
+		#security-technical-groupbox {
+			-moz-appearance: none !important;
+			background-color: #131620 !important;
+		}
+	}
+}
+
+@-moz-document url-prefix(chrome: //browser/content/preferences/cookies.xul) {
+
+	#CookiesDialog {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-page-background) !important
+	}
+
+	#domainCol,
+	#nameCol {
+		-moz-appearance: none !important;
+		border: none !important
+	}
+
+	#domainCol {
+		border-right: 1px solid !important;
+		border-color: var(--in-content-box-border-color) !important
+	}
+
+	.windowDialog,
+	textbox {
+		color: var(--in-content-page-color) !important
+	}
+
+	textbox[type=search] {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-box-background) !important;
+		border: 1px solid;
+		border-color: var(--in-content-box-border-color) !important;
+		border-radius: 3px !important;
+		padding: 2px 4px 2px 2px !important
+	}
+
+	#cookiesList {
+		-moz-appearance: none !important;
+		border: 1px solid !important;
+		border-color: var(--in-content-box-border-color) !important
+	}
+
+	button {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-page-background) !important;
+		border: 1px solid !important;
+		border-radius: 3px !important;
+		color: var(--in-content-page-color) !important;
+		border-color: var(--in-content-box-border-color) !important
+	}
+
+	button:hover {
+		background-color: var(--in-content-box-background) !important
+	}
+}
+
+@-moz-document url-prefix(chrome: //pippki) {
+
+	tab {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-box-background) !important;
+		text-shadow: none !important;
+		padding: 0 8px !important;
+		color: var(--in-content-page-color);
+		border-right: 1px solid !important;
+		border-color: var(--in-content-box-border-color) !important
+	}
+
+	tab:first-of-type {
+		border-top-left-radius: 4px !important;
+		border-bottom-left-radius: 4px !important
+	}
+
+	tab:last-of-type {
+		border: none !important;
+		border-top-right-radius: 4px !important;
+		border-bottom-right-radius: 4px !important
+	}
+
+	tab[selected=true] {
+		color: var(--in-content-selected-text) !important
+	}
+
+	#certDetails {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-page-background) !important
+	}
+
+	tree {
+		-moz-appearance: none !important;
+		color: var(--in-content-page-color) !important
+	}
+
+	treecol {
+		-moz-appearance: none !important;
+		border: 0 solid !important;
+		border-color: var(--in-content-box-background) !important
+	}
+
+	treecolpicker {
+		-moz-appearance: none;
+		border: none !important
+	}
+
+	.windowDialog,
+	dialog,
+	textbox {
+		color: var(--in-content-page-color) !important
+	}
+
+	#certDumpVal,
+	.scrollfield,
+	textbox[type=search] {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-box-background) !important;
+		border: 1px solid;
+		border-color: var(--in-content-box-border-color) !important;
+		border-radius: 3px !important;
+		padding: 2px 4px 2px 2px !important
+	}
+
+	button {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-page-background) !important;
+		border: 1px solid !important;
+		border-radius: 3px !important;
+		color: var(--in-content-page-color) !important;
+		border-color: var(--in-content-box-border-color) !important
+	}
+
+	button:hover {
+		background-color: var(--in-content-box-background) !important
+	}
+}
+
+@-moz-document url-prefix(chrome: //pippki/content/exceptionDialog) {
+
+	#exceptiondialog {
+		-moz-appearance: none !important;
+		background-color: var(--tone-8) !important
+	}
+
+	textbox {
+		-moz-appearance: none !important;
+		min-height: 20px !important;
+		background: var(--in-content-box-background) !important;
+		border: 1px solid var(--in-content-box-border-color);
+		padding: 1px
+	}
+}
+
+
+/*------------------------*/
+:root {
+	--default_tab_border_roundness: 6px;
+}
+
+#TabsToolbar .tabbrowser-tab {
+	border-radius: var(--default_tab_border_roundness) !important;
+	overflow: hidden;
+	margin-bottom: 5px !important;
+
+}
+
+#sanitizeEverythingWarningBox {
+	background-color: #131620 !important;
+	color: white !important;
+	border: 0px !important;
+}
+
+#SanitizeDialog {
+	font-family: Fira Sans !important;
+
+}
+
+@-moz-document url-prefix(chrome: //browser/content/sanitizeDialog.xhtml) {
+
+	* {
+		font-family: Fira Sans !important;
+		border: 0px !important;
+		outline: none !important;
+	}
+}
+
+
+/*** Enlarge Preview in New Print Experience (Firefox 86) ***/
+
+/* Level 1: Use more of the window */
+
+.dialogBox.printDialogBox[sizeto="available"] {
+	max-width: 98vw !important;
+	max-height: 89vh !important;
+	background-color: #131620 !important;
+}
+
+/* Level 2: Override the "Fit Height" limit and enabling scrolling */
+
+.dialogBox.printDialogBox[sizeto="available"] .previewStack {
+	overflow-y: auto !important;
+}
+
+@media (max-resolution: 92dpi) {
+	.dialogBox.printDialogBox[sizeto="available"] .previewStack {
+		min-height: calc(1056px / 1.1) !important;
+	}
+}
+
+@media (min-resolution: 92.05dpi) and (max-resolution: 100dpi) {
+	.dialogBox.printDialogBox[sizeto="available"] .previewStack {
+		min-height: calc(1056px / 1.15) !important;
+	}
+}
+
+@media (min-resolution: 100.05dpi) and (max-resolution: 115dpi) {
+	.dialogBox.printDialogBox[sizeto="available"] .previewStack {
+		min-height: calc(1056px / 1.25) !important;
+	}
+}
+
+@media (min-resolution: 115.05dpi) and (max-resolution: 124dpi) {
+	.dialogBox.printDialogBox[sizeto="available"] .previewStack {
+		min-height: calc(1056px / 1.4) !important;
+	}
+}
+
+@media (min-resolution: 124.05dpi) and (max-resolution: 138dpi) {
+	.dialogBox.printDialogBox[sizeto="available"] .previewStack {
+		min-height: calc(1056px / 1.55) !important;
+	}
+}
+
+@media (min-resolution: 138.05dpi) and (max-resolution: 149dpi) {
+	.dialogBox.printDialogBox[sizeto="available"] .previewStack {
+		min-height: calc(1056px / 1.7) !important;
+	}
+}
+
+@media (min-resolution: 149.05dpi) {
+	.dialogBox.printDialogBox[sizeto="available"] .previewStack {
+		min-height: calc((95vw - 250px) / 1.5) !important;
+	}
+}
+
+
+
+/* changes the logo in the URL bar to Halo when you're on a Firefox page */
+#identity-box[pageproxystate="valid"].chromeUI>#identity-icon {
+	list-style-image: url("firefoxflyph.png") !important;
 }
