@@ -2963,6 +2963,7 @@ toolbar #zoom-controls>separator {
 
 #zoom-in-button {
 	-moz-padding-start: 0px !important;
+	/*padding-top: 0px !important;*/
 	padding-bottom: 5px !important;
 	fill: #1e90ff !important;
 	margin-left: -10px !important;
@@ -2971,6 +2972,7 @@ toolbar #zoom-controls>separator {
 
 #zoom-out-button {
 	-moz-padding-end: 0px !important;
+	/*padding-top: 0px !important;*/
 	padding-bottom: 5px !important;
 	fill: #1e90ff !important;
 	/*margin-left: -6px !important;*/
@@ -2980,7 +2982,7 @@ toolbar #fullscreen-button {
 	padding-top: 0px !important;
 	padding-bottom: 4px !important;
 	fill: #1e90ff !important;
-	
+	/*margin-left: -6px !important;*/
 }
 
 #cut-button {
@@ -3008,7 +3010,6 @@ toolbar #fullscreen-button {
 	display: none !important;
 }
 
-
 .PanelUI-subView .toolbaritem-combined-buttons>.subviewbutton-iconic>.toolbarbutton-text {
 	display: none !important;
 }
@@ -3030,6 +3031,15 @@ toolbar #fullscreen-button {
 	}
 }
 
+
+/***************url dropdown************************/
+
+/*
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+	max-height: calc(40px * 10) !important;
+	background: #131620 !important;
+}
+*/
 /* Font-sizes */
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
 	font-family: "Fira Sans" !important;
@@ -4416,40 +4426,12 @@ hbox[part="innerbox"] {
 }
 
 /*
-.titlebar-buttonbox-container {
-	position: absolute !important;
-	display: block !important;
-	right: 0px !important;
-}
-*/
-/*
-tab:not(:active) .tab-background {
-	filter: blur(0px) brightness(100%);
-	transition: 0.4s !important;
-}
-*/
-/*
-tab .tab-background {
-
-	transition: 0.4s !important;
-}
-
-:root:not([customizing]) :hover>.tabbrowser-tab:not(:hover) {
-	filter: blur(3px) brightness(50%);
-	transition: blur, ease 0.5s !important;
-}
-
-:root:not([customizing]) :not(:hover)>.tabbrowser-tab {
-	filter: blur(0px) brightness(100%) !important;
-	transition: blur, ease 0.2s !important;
-}
-*/
-/*
 :-moz-broken {
 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/450px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg);
 	background-size: cover;
 }
 */
+
 /* Shows window title in menubar */
 /* Enable menubar for correct behavior */
 @-moz-document url(chrome://browser/content/browser.xhtml) {
@@ -4490,83 +4472,6 @@ tab .tab-background {
 		}
 	}
 }
-
-/*----------------------------------------*/
-
-
-/*
-.tabbrowser-tab[selected="true"] {
-	min-width: 165px !important;
-}
-
-.tabbrowser-tab:not([selected]):not([pinned]) {
-	max-width: 200px !important;
-
-}
-
-.tabbrowser-tab[selected="true"]:not([pinned]) {
-	max-width: 275px !important;
-}
-
-*/
-
-
-/*padding above tabbar in compact mode 
-#main-window[sizemode="compact"]>#titlebar {
-	-moz-appearance: initial !important;
-}
-
-.toolbarbutton-icon,
-.toolbarbutton-badge-stack {
-	border-radius: 0px !important;
-	
-	max-height: 30px !important;
-}
-*/
-/*
-.tabbrowser-tab:hover .tab-line {
-	height: 3px !important;
-	background-color:#1e90ff !important;
-}
-*/
-/*
-.tabbrowser-tab:hover {
-	border-color:#1e90ff !important;
-	border: 3px !important;
-
-}
-*/
-/* Makes panels, menupopups, urlbar and searchbar rounded */
-
-/* Modify the rounding size here 
-:root {
-	--uc-menupopup-border-radius: 20px
-}
-
-panel[type="autocomplete-richlistbox"],
-menupopup,
-hbox,
-.panel-arrowcontent {
-	-moz-appearance: none !important;
-	border-radius: var(--uc-menupopup-border-radius) !important;
-	overflow: -moz-hidden-unscrollable !important;
-}
-*/
-/* The rounding is also applied to searchbar and urlbar to look consistent 
-searchbar#searchbar,
-#urlbar-background {
-	border-radius: var(--uc-menupopup-border-radius) !important
-}
-*/
-/* Reposition the panel-arrow  
-panel[type="arrow"] {
-	margin-inline-end: calc(-10px - var(--uc-menupopup-border-radius)) !important;
-}
-
-.panel-arrow {
-	margin-inline: var(--uc-menupopup-border-radius) !important;
-}
-*/
 
 
 /* Hides the first item in the urlbar dropdown if it is a "search with" or "visit" or "tab-to-search" item.  Does not hide "search in private window item", probably */
