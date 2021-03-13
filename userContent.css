@@ -2521,5 +2521,58 @@ html[windowtype="Toolkit:PictureInPicture"] {
 
 
 
+/* doesnt work ff 86.0.1 */
 
+/* fix dark white flash issue with dar reader */
+/* Remove white flash before page load 
+@-moz-document url(about:blank),
+url(about:newtab),
+url(about:home) {
 
+	html:not(#ublock0-epicker),
+	html:not(#ublock0-epicker) body,
+	#newtab-customize-overlay {
+		background: #131620 !important;
+		background-color: #131620 !important;
+	}
+}
+
+@-moz-document url("about:home"),
+url("about:blank"),
+url("about:newtab"),
+url("about:privatebrowsing") {
+	body {
+		background: #131620 !important;
+		background-color: #131620 !important;
+	}
+}
+
+@-moz-document("about:privatebrowsing") {
+	.search-handoff-button {
+		background: #131620 !important;
+		background-color: #131620 !important;
+	}
+
+	.fake-textbox {
+		color: rgb(200, 200, 200) !important
+	}
+}
+
+@-moz-document url-prefix(about:),
+url-prefix(chrome: //browser) {
+
+	browser[type="content"], tabpanels {
+		background: #131620 !important;
+		background-color: #131620 !important;
+	}
+
+	#fullscreen-warning {
+		display: none !important;
+	}
+}
+
+#tabbrowser-tabpanels {
+	background: #131620 !important;
+	background-color: var(#131620, #131620) !important;
+}
+*/
