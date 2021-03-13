@@ -4935,7 +4935,7 @@ panel[type="arrow"] {
 	list-style-image: url("firefoxflyph.png") !important;
 }
 
-
+/* statuspanel tweaks */
 #statuspanel #statuspanel-label {
 	-moz-appearance: none !important;
 	background-color: #131620 !important;
