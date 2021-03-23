@@ -1,0 +1,98 @@
+
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
+	:root {
+		--in-content-border-hover: #1e90ff !important;
+		--card-outline-color: #1e90ff !important;
+		--in-content-item-hover: rgba(30, 144, 255, 0.5) !important;
+		--in-content-item-selected: #1e90ff !important;
+		background-color: #131620 !important;
+		font-family: "Fira Sans" !important;
+	}
+
+	.sticky-container,
+	.main-search,
+	.main-heading,
+	.main-page-content {
+		background-color: #131620 !important;
+	}
+
+	* {
+		font-family: "Fira Sans" !important;
+	}
+
+	.addon.card {
+		border-radius: 0px !important;
+		background-color: #262A34 !important;
+		color: #ffffff !important;
+
+	}
+
+	:root {
+		overflow-x: hidden !important;
+	}
+
+	/* Remove this if it causes horizontal scrolling problems */
+
+	@media (min-width:720px) {
+		#main {
+			max-width: unset !important;
+			padding-right: 28px !important;
+		}
+	}
+
+	addon-list>section,
+	recommended-addon-list {
+		padding: 1em !important;
+		display: grid !important;
+		grid-template-areas: "hd hd""cd cd" !important;
+		grid-template-columns: 1fr 1fr !important;
+		column-gap: 1em !important;
+
+	}
+
+	addon-card .card-contents {
+		width: unset !important;
+		white-space: initial !important;
+	}
+
+	.card-heading-image {
+		max-width: calc(100% + 32px) !important;
+	}
+
+	section>h2 {
+		grid-area: hd !important;
+	}
+
+	addon-card {
+		padding-bottom: 0px !important;
+		padding-top: 0px !important;
+		grid-area: auto !important;
+
+	}
+
+	addon-card .addon-description {
+		height: 3em !important;
+		scrollbar-color: #1e90ff #000000 !important;
+		scrollbar-width: thin !important;
+	}
+
+	#page-options panel-list {
+		background-color: #131620 !important;
+		font-size: 14px !important;
+		border: none !important;
+	}
+
+	details-deck {
+		color: #ffffff !important;
+	}
+
+	button[role=menuitem]:focus,
+	button[role=menuitem]:enabled:hover {
+		background-color: #1e90ff !important;
+	}
+
+	panel-item-separator {
+		background-color: #404040 !important;
+		margin-inline: 5px !important;
+	}
+}
