@@ -4817,11 +4817,11 @@ panel[type="arrow"] {
 		border: 1px solid !important;
 		border-radius: 3px !important;
 		color: var(--in-content-page-color) !important;
-		border-color: var(--in-content-box-border-color) !important
+		border-color: var(--in-content-box-border-color) !important;
 	}
 
 	button:hover {
-		background-color: var(--in-content-box-background) !important
+		background-color: var(--in-content-box-background) !important;
 	}
 }
 
@@ -4829,15 +4829,16 @@ panel[type="arrow"] {
 
 	#exceptiondialog {
 		-moz-appearance: none !important;
-		background-color: var(--tone-8) !important
+		background-color: var(--tone-8) !important;
 	}
 
+	
 	textbox {
 		-moz-appearance: none !important;
 		min-height: 20px !important;
 		background: var(--in-content-box-background) !important;
-		border: 1px solid var(--in-content-box-border-color);
-		padding: 1px
+		border: 1px solid var(--in-content-box-border-color) !important;
+		padding: 1px !important;
 	}
 }
 
