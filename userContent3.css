@@ -450,108 +450,6 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 }
 
-/*
-@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html"),
-url("about:addons") {
-		{
-		:root {
-			--in-content-border-hover: #1e90ff !important;
-			--card-outline-color: #1e90ff !important;
-			--in-content-item-hover: rgba(30, 144, 255, 0.5) !important;
-			--in-content-item-selected: #1e90ff !important;
-			background-color: #191A2A !important;
-			font-family: "Fira Sans" !important;
-		}
-
-		.sticky-container,
-		.main-search,
-		.main-heading,
-		.main-page-content {
-			background-color: #191A2A !important;
-		}
-
-		* {
-			font-family: "Fira Sans" !important;
-		}
-
-		.addon.card {
-			border-radius: 0px !important;
-			background-color: #262A34 !important;
-			color: #ffffff !important;
-
-		}
-
-		:root {
-			overflow-x: hidden !important;
-		}
-
-		
-
-		@media (min-width:720px) {
-			#main {
-				max-width: unset !important;
-				padding-right: 28px !important;
-			}
-		}
-
-		addon-list>section,
-		recommended-addon-list {
-			padding: 1em !important;
-			display: grid !important;
-			grid-template-areas: "hd hd""cd cd" !important;
-			grid-template-columns: 1fr 1fr !important;
-			column-gap: 1em !important;
-
-		}
-
-		addon-card .card-contents {
-			width: unset !important;
-			white-space: initial !important;
-		}
-
-		.card-heading-image {
-			max-width: calc(100% + 32px) !important;
-		}
-
-		section>h2 {
-			grid-area: hd !important;
-		}
-
-		addon-card {
-			padding-bottom: 0px !important;
-			padding-top: 0px !important;
-			grid-area: auto !important;
-
-		}
-
-		addon-card .addon-description {
-			height: 3em !important;
-			scrollbar-color: #1e90ff #000000 !important;
-			scrollbar-width: thin !important;
-		}
-
-		#page-options panel-list {
-			background-color: #191A2A !important;
-			font-size: 14px !important;
-			border: none !important;
-		}
-
-		details-deck {
-			color: #ffffff !important;
-		}
-
-		button[role=menuitem]:focus,
-		button[role=menuitem]:enabled:hover {
-			background-color: #1e90ff !important;
-		}
-
-		panel-item-separator {
-			background-color: #404040 !important;
-			margin-inline: 5px !important;
-		}
-	}
-}
-*/
 @-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html"),
 url("about:addons") {
 
@@ -662,22 +560,6 @@ url("about:addons") {
 		color: #ffffff !important;
 	}
 
-	/*
-	@media (min-width:1220px) {
-
-		addon-list>section,
-		recommended-addon-list {
-			grid-template-areas: "hd hd hd""cd cd cd";
-		}
-	}
-
-	@media (min-width:1720px) {
-
-		addon-list>section,
-		recommended-addon-list {
-			grid-template-areas: "hd hd hd hd""cd cd cd cd";
-		}
-	}*/
 }
 
 @-moz-document url("http://www.w3.org/1999/xhtml") {
@@ -780,9 +662,6 @@ url("about:addons") {
 	}
 }
 
-
-
-
 @-moz-document url-prefix("about:debugging") {
 	body {
 		background-color: #191A2A !important;
@@ -840,7 +719,7 @@ url("about:addons") {
 	}
 }
 
-/**************************-*/
+/*------------------------------------------------------*/
 @-moz-document url-prefix("https://addons.mozilla.org") {
 
 	:root {
@@ -1619,8 +1498,8 @@ browser[type=content]>html {
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 }
-
 */
+
 @-moz-document url("about:memory") {
 
 	html,
@@ -1638,6 +1517,9 @@ html[windowtype="Toolkit:PictureInPicture"] {
 	background: transparent !important;
 }
 */
+
+
+
 /* Dark Mode page between loading*/
 @-moz-document url("about:home"),
 url("about:blank"),
@@ -1907,43 +1789,6 @@ url("about:privatebrowsing") {
 }
 
 
-/* Changes colors on the page 
-:root {
-	--in-content-page-color: #009bd4 !important;
-	
-	--in-content-page-background: #1a1a1a !important;
-	
-	-in-content-text-color: #009bd4 !important;
-	--in-content-category-text-selected: #009bd4 !important;
-	--in-content-border-color: #009bd4 !important;
-	--in-content-link-color: #009bd4 !important;
-	--in-content-border-active: none !important;
-	--in-content-border-active-shadow: none !important;
-	--in-content-category-text-selected-active: #009bd4 !important;
-	--in-content-category-background-hover: #000000 !important;
-}
-
-	html|h1 {
-		color: #009bd4 !important;
-	} 
-}
-*/
-/*@-moz-document url("chrome://devtools/content/webconsole/index.html")
-
-@-moz-document url-prefix("about:devtools-toolbox") {
-	.devtools-tabbar {
-		background-color: #191A2A !important;
-	}
-
-	* {
-		font-family: Fira Sans !important;
-	}
-
-	.theme-body {
-		background-color: #191A2A !important;
-	}
-}*/
-
 @-moz-document url('chrome://global/content/config.xhtml'),
 url('chrome://userchromejs/content/aboutconfig/config.xhtml') {
 	:root {
@@ -2005,14 +1850,6 @@ url('about:newtab') {
 }
 
 
-
-/*
-@-moz-document url("http://www.w3.org/1999/xhtml") {
-	html|input.urlbar-scheme {
-		display: none !important;
-	}
-}
-*/
 @-moz-document url-prefix("about:"),
 @-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
 
@@ -2058,25 +1895,6 @@ url('about:newtab') {
 	}
 }
 
-/*
-.netTimeout #errorPageContainer {
-	background-image: url("sonicfoottap.webp") !important;
-}
-
-html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div.title h1.title-text {
-	font-size: 0px !important;
-}
-
-html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div.title h1.title-text::before {
-	font-size: 32px !important;
-	content: "You're too slow!" !important;
-}
-
-html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div#errorLongContent div#errorShortDesc::before {
-	font-size: 15px;
-	content: "(Actually, it's the server)";
-}
-*/
 @-moz-document url-prefix("about:debugging") {
 	body {
 		background-color: #191A2A !important;
@@ -2107,7 +1925,7 @@ url-prefix(chrome: //browser) {
 
 }
 
-/*
+
 browser vbox#appcontent tabbrowser,
 content,
 tabbrowser-tabpanels,
@@ -2117,7 +1935,7 @@ browser[type=content]>html {
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 }
-*/
+
 @-moz-document url("about:memory") {
 
 	html,
