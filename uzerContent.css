@@ -1,0 +1,3004 @@
+@-moz-document url-prefix("about:") {
+	:root {
+		--in-content-border-hover: #1e90ff80 !important;
+		--in-content-border-active: #1e90ff !important;
+		--in-content-border-active-shadow: #1e90ff40 !important;
+	}
+
+	* {
+		font-family: "Fira Sans" !important;
+	}
+}
+
+@-moz-document url(about:blank),
+url-prefix(about:newtab),
+url(about:config),
+url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
+
+	#newtab-window,
+	#newtab-customize-overlay,
+	html {
+		background: #191A2A !important;
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+		font-family: Fira Sans !important;
+	}
+}
+
+@-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
+	* {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+		font-family: "Fira Sans" !important;
+		font-size: 14px !important;
+	}
+}
+
+#main-window {
+	background-color: #191A2A !important;
+	background: #191A2A !important;
+}
+
+/* see this to tweak : https://github.com/gorhill/uBlock/blob/master/src/css/cloud-ui.css*/
+/*---------------------------------UBLOCK ORIGIN ---------------------*/
+
+@-moz-document url-prefix("moz-extension://0f9fde7e-09fc-4dbc-8f3d-8af9a1fd3e5c/") {
+
+
+	body,
+	#sticky,
+	#main {
+		font-family: Fira Sans !important;
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	hr {
+		display: none !important;
+	}
+
+	a {
+		color: #888 !important;
+	}
+
+	.fa-icon {
+		fill: #ffffff !important;
+		color: #ffffff !important;
+	}
+
+	h2 {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	code {
+		background-color: #191A2A !important;
+	}
+
+	#switch .fa-icon {
+		fill: #1e90ff !important;
+	}
+
+	#switch .fa {
+		fill: #1e90ff !important;
+	}
+
+	html#ublock0-epicker,
+	#ublock0-epicker body {
+		background: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	#ublock0-epicker aside {
+		background-color: #000000 !important;
+	}
+
+	body.off #switch .fa {
+		color: #555 !important;
+	}
+
+	.tool {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	.tool.enabled:hover {
+		background-color: #191A2A !important;
+		fill: #1e90ff !important;
+		color: #1e90ff !important;
+	}
+
+	.permatoolbar {
+		background-color: #191A2A !important;
+	}
+
+	.permatoolbar .button {
+		background-color: #191A2A !important;
+	}
+
+	.permatoolbar .button:hover {
+		fill: #1e90ff !important;
+		color: #1e90ff !important;
+		background-color: #191A2A !important;
+	}
+
+	#tooltip {
+		background-color: #000000 !important;
+		border: 1px solid #000000 !important;
+		color: #ffffff !important;
+	}
+
+	#firewall {
+		background: #191A2A !important;
+	}
+
+	#firewall>div {
+		background-color: #333 !important;
+	}
+
+	#firewall>div:hover {
+		background-color: #444 !important;
+	}
+
+	#firewall>div>span {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+
+	}
+
+	#firewall>div>span:first-of-type~span {
+		border-left: 1px solid #111 !important;
+	}
+
+	#extraTools {
+		background-color: #191A2A !important;
+	}
+
+	#extraTools>span:hover {
+		fill: #1e90ff !important;
+	}
+
+	#dashboard-nav {
+		background-color: #111 !important;
+		border-bottom: 1px solid #777 !important;
+	}
+
+	#dashboard-nav-widgets {
+		background-color: #111 !important;
+		border-bottom: 1px solid #777 !important;
+	}
+
+	.tabButton {
+		background-color: #191A2A !important;
+		border: 0px solid #191A2A80 !important;
+		border-bottom: 0px solid #777 !important;
+		color: #ffffff !important;
+	}
+
+	.tabButton.selected {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		border-bottom: 0px solid #222 !important;
+	}
+
+	#diff li {
+		background-color: #555 !important;
+	}
+
+	#diff li:nth-child(even) {
+		background-color: #444 !important;
+	}
+
+	#diff textarea {
+		background-color: #333 !important;
+		color: #ffffff !important;
+	}
+
+	hr {
+		display: none !important;
+	}
+
+	.fieldset-header {
+		color: #ffffff !important;
+	}
+
+	#loggerSettingsDialog,
+	#modalOverlayContainer,
+	#netFilteringDialog,
+	#netFilteringDialog>.panes>.details>div,
+	#netFilteringDialog>div.panes>.dynamic .row {
+		background-color: #191A2A !important;
+		border-color: grey !important;
+	}
+
+	#domTree {
+		color: #ffffff !important;
+	}
+
+	#ruleFilter input,
+	input[type=number] {
+		-moz-appearance: none !important;
+		background-color: #191A2A !important;
+		border: 1px solid !important;
+		border-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	#cloudWidget {
+		background: #191A2A !important;
+		color: #ffffff !important;
+		color: #ffffff !important;
+	}
+
+	#cloudWidget>span {
+		background: #191A2A !important;
+		color: #ffffff !important;
+
+	}
+
+	#cloudinfo {
+		background: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	:root {
+
+		--checkmark: #ffffff !important;
+		--checkbox-checked-ink: #ffffff !important;
+
+	}
+
+	button:hover {
+		background-color: #191A2A !important;
+		fill: #1e90ff80
+	}
+
+	button#cloudPush,
+	button#cloudPull,
+	button#cloudPullAndMerge {
+		background: #1e90ff !important;
+	}
+
+	#actions {
+		background: #191A2A !important;
+	}
+
+	#ublock0_raymondhill_net-browser-action label {
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		opacity: 1 !important;
+	}
+
+	.CodeMirror-activeline-background {
+		background: rgb(56, 0, 56) !important
+	}
+
+	/*****THIS IS A PLACEHOLDER COLOR CHOOSE SOMETHING NICER****/
+	#advancedSettings {
+		color: #f9f9fa !important;
+	}
+
+	.CodeMirror {
+		background: #000000 !important;
+		color: #f9f9fb !important;
+	}
+
+	.CodeMirror-gutters {
+		background-color: #000000 !important;
+		border-right: 1px solid #32313c !important;
+	}
+
+	.CodeMirror-merge-gap {
+		background: #0e0047 !important;
+		border-left: 1px solid #32313c !important;
+		border-right: 1px solid #32313c !important;
+	}
+}
+
+/*-------------downloads sidebar webext tweaks dark ------------------*/
+
+@-moz-document url("moz-extension://7f4204ad-80dd-4c0b-94c6-0f3de61a4ca3/sidebar/panel.html") {
+
+	html,
+	body {
+		font-family: Fira Sans !important;
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	.toolbar-item .btn,
+	.change-state-button,
+	.cancel-button,
+	.erase-button {
+		filter: invert(100%) !important;
+	}
+
+	.progress {
+		border: 0px solid #404040 !important;
+		background-color: rgba(30, 144, 255, 0.5) !important;
+	}
+
+	.toolbar-bottom {
+		border-top: 0px solid #404040 !important;
+	}
+
+	.item:hover {
+		background-image: linear-gradient(to top, #1e90ff, #191A2A) !important;
+		border-radius: 0px !important;
+		box-shadow: 0 0 0px 4px #191A2A !important;
+	}
+
+	.item:selected {
+		background-image: linear-gradient(to top, #1e90ff, #191A2A) !important;
+		border-radius: 0px !important;
+		box-shadow: 0 0 0px 4px #191A2A !important;
+	}
+}
+
+/* about:support*/
+@-moz-document url(about:support) {
+	body.wide-container {
+		background-color: #191A2A !important;
+	}
+}
+
+/* about:preferences */
+@-moz-document url(about:preferences) {
+	.sticky-container {
+		background-color: #191A2A !important;
+	}
+
+	:root {
+		font-family: Fira Sans !important;
+		background-color: #191A2A !important;
+	}
+
+	#categories>.category[selected],
+	#categories>.category.selected {
+		color: #1e90ff !important;
+		border-radius: 0px !important;
+	}
+
+	checkbox:not([disabled="true"]):hover>.checkbox-check,
+	input[type="checkbox"]:not(:disabled):hover {
+		border-color: #1e90ff !important;
+	}
+
+	radio:not([disabled="true"]):hover>.radio-check {
+		border-color: #1e90ff !important;
+	}
+
+	.text-link {
+		color: #1e90ff !important;
+	}
+
+	.content-blocking-category.selected {
+		border: 1px solid#1e90ff !important;
+		border-radius: 0px !important;
+		background-color: rgba(30, 144, 255, 0.5) !important;
+	}
+
+	.sync-group.sync-configured {
+		border-radius: 0px !important;
+		background-color: rgba(30, 144, 255, 0.5) !important;
+		/*border: 1px solid var(--in-content-border-color);*/
+	}
+
+
+}
+
+
+@-moz-document url("chrome://global/content/config.xhtml") {
+	:root {
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+		fill: #ffffff !important;
+		opacity: 1 !important;
+	}
+
+}
+
+@-moz-document url("about:home") {
+	.outer-wrapper {
+		background-color: #191A2A !important;
+	}
+
+	#newtab-search-text,
+	#searchSuggestionTable,
+	#searchSuggestionTable>tr,
+	#searchSuggestionTable>tr>td,
+	#searchSuggestionTable>table>tr>td,
+	#searchSuggestionTable>button {
+		background-color: #191A2A !important;
+		color: #F8F8F2 !important;
+		fill: #F8F8F2 !important;
+	}
+
+	.search-wrapper input {
+		box-shadow: rgba(248, 248, 242, 0.2) 0px 1px 4px 0px, rgba(238, 238, 232, 0.15) 0px 0px 0px 1px !important;
+	}
+
+
+	body {
+		background-color: #191A2A !important;
+		background: #191A2A !important;
+	}
+
+	.prefs-button button {
+		fill: #191A2A !important;
+	}
+
+	.prefs-button button:hover,
+	.prefs-button button:focus {
+		background-color: transparent !important;
+	}
+
+	.prefs-button button {
+		display: none !important;
+	}
+}
+
+@-moz-document url-prefix("chrome: //global/content/httpsonlyerror/errorpage.html") {
+
+	html,
+	body.container {
+		font-family: Fira Sans !important;
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+}
+
+/*
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html"),
+url("about:addons") {
+		{
+		:root {
+			--in-content-border-hover: #1e90ff !important;
+			--card-outline-color: #1e90ff !important;
+			--in-content-item-hover: rgba(30, 144, 255, 0.5) !important;
+			--in-content-item-selected: #1e90ff !important;
+			background-color: #191A2A !important;
+			font-family: "Fira Sans" !important;
+		}
+
+		.sticky-container,
+		.main-search,
+		.main-heading,
+		.main-page-content {
+			background-color: #191A2A !important;
+		}
+
+		* {
+			font-family: "Fira Sans" !important;
+		}
+
+		.addon.card {
+			border-radius: 0px !important;
+			background-color: #262A34 !important;
+			color: #ffffff !important;
+
+		}
+
+		:root {
+			overflow-x: hidden !important;
+		}
+
+		
+
+		@media (min-width:720px) {
+			#main {
+				max-width: unset !important;
+				padding-right: 28px !important;
+			}
+		}
+
+		addon-list>section,
+		recommended-addon-list {
+			padding: 1em !important;
+			display: grid !important;
+			grid-template-areas: "hd hd""cd cd" !important;
+			grid-template-columns: 1fr 1fr !important;
+			column-gap: 1em !important;
+
+		}
+
+		addon-card .card-contents {
+			width: unset !important;
+			white-space: initial !important;
+		}
+
+		.card-heading-image {
+			max-width: calc(100% + 32px) !important;
+		}
+
+		section>h2 {
+			grid-area: hd !important;
+		}
+
+		addon-card {
+			padding-bottom: 0px !important;
+			padding-top: 0px !important;
+			grid-area: auto !important;
+
+		}
+
+		addon-card .addon-description {
+			height: 3em !important;
+			scrollbar-color: #1e90ff #000000 !important;
+			scrollbar-width: thin !important;
+		}
+
+		#page-options panel-list {
+			background-color: #191A2A !important;
+			font-size: 14px !important;
+			border: none !important;
+		}
+
+		details-deck {
+			color: #ffffff !important;
+		}
+
+		button[role=menuitem]:focus,
+		button[role=menuitem]:enabled:hover {
+			background-color: #1e90ff !important;
+		}
+
+		panel-item-separator {
+			background-color: #404040 !important;
+			margin-inline: 5px !important;
+		}
+	}
+}
+*/
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html"),
+url("about:addons") {
+
+	:root {
+		overflow-x: hidden;
+		--in-content-border-hover: #1e90ff !important;
+		--card-outline-color: #1e90ff !important;
+		--in-content-item-hover: rgba(30, 144, 255, 0.5) !important;
+		--in-content-item-selected: #1e90ff !important;
+		--in-content-item: white !important;
+		background-color: #191A2A !important;
+		font-family: "Fira Sans" !important;
+
+	}
+
+	/* Remove this if it causes horizontal scrolling problems */
+
+	@media (min-width:720px) {
+		#main {
+			max-width: unset !important;
+			padding-right: 28px !important;
+		}
+
+		addon-list>section,
+		recommended-addon-list {
+			padding: 1em !important;
+			display: grid !important;
+			grid-template-areas: "hd hd""cd cd" !important;
+			grid-template-columns: 1fr 1fr !important;
+			column-gap: 1em !important;
+
+		}
+
+		addon-card .card-contents {
+			width: unset !important;
+			white-space: initial !important;
+		}
+
+		.card-heading-image {
+			max-width: calc(100% + 32px) !important;
+		}
+
+		section>h2 {
+			grid-area: hd !important;
+		}
+
+		addon-card {
+			padding-bottom: 0px !important;
+			padding-top: 0px !important;
+			grid-area: auto !important;
+		}
+
+		addon-card .addon-description {
+			max-height: 3em !important;
+			scrollbar-width: thin !important;
+		}
+	}
+
+	addon-card .addon-description {
+		height: 3em !important;
+		scrollbar-color: #1e90ff #000000 !important;
+		scrollbar-width: thin !important;
+	}
+
+	#page-options panel-list {
+		background-color: #191A2A !important;
+		font-size: 14px !important;
+		border: none !important;
+	}
+
+	details-deck {
+		color: #ffffff !important;
+	}
+
+	details-deck-button {
+		color: #ffffff !important;
+	}
+
+	button[role=menuitem]:focus,
+	button[role=menuitem]:enabled:hover {
+		background-color: #1e90ff !important;
+	}
+
+	panel-item-separator {
+		background-color: #404040 !important;
+		margin-inline: 5px !important;
+	}
+
+	.sticky-container,
+	.main-search,
+	.main-heading,
+	.main-page-content {
+		background-color: #191A2A !important;
+	}
+
+	.addon-name-link {
+		color: #1e90ff !important;
+	}
+
+	* {
+		font-family: "Fira Sans" !important;
+		/*color: white !important;*/
+	}
+
+	.addon.card {
+		border-radius: 6px !important;
+		background-color: #1e90ff10 !important;
+		color: #ffffff !important;
+	}
+
+	/*
+	@media (min-width:1220px) {
+
+		addon-list>section,
+		recommended-addon-list {
+			grid-template-areas: "hd hd hd""cd cd cd";
+		}
+	}
+
+	@media (min-width:1720px) {
+
+		addon-list>section,
+		recommended-addon-list {
+			grid-template-areas: "hd hd hd hd""cd cd cd cd";
+		}
+	}*/
+}
+
+@-moz-document url("http://www.w3.org/1999/xhtml") {
+	html|input.urlbar-scheme {
+		display: none !important;
+	}
+}
+
+
+/*------ HTTPS EVERYWHERE ADDON ------*/
+@-moz-document url-prefix("moz-extension://f5d2cbb8-a2fd-4851-915a-f9be7f7e659f/") {
+
+	html,
+	body,
+	header {
+		font-family: Fira Sans !important;
+		background: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	span,
+	span.rulesets-version,
+	span#current-version {
+		font-family: Fira Sans !important;
+		background: #191A2A !important;
+		color: #ffffff !important;
+
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: #fff !important
+	}
+
+	label {
+		color: #ccc !important
+	}
+
+	button,
+	input[type="button"] {
+		-moz-appearance: none !important;
+		border-radius: 3px !important;
+		background-color: #555 !important;
+		color: #ffffff !important;
+		border: none !important;
+		padding: 5px !important;
+		margin: 3px !important
+	}
+
+	.logo-container img {
+		display: none;
+	}
+
+	.logo-container::before {
+		content: url("HTTPS-Everywhere-Logo2.png") !important;
+		height: 36px !important;
+		width: 71.017px !important;
+		background-color: #191A2A !important;
+	}
+
+	button:hover,
+	input[type="button"]:hover {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		box-shadow: none !important
+	}
+
+	a:link,
+	a {
+		color: #1e90ff !important
+	}
+
+	a:visited {
+		color: #0070aa !important
+	}
+
+	a:hover {
+		color: #0ff !important
+	}
+
+	a:active {
+		color: #0050aa !important
+	}
+
+	input[type="text"] {
+		-moz-appearance: none !important;
+		background-color: #444 !important;
+		border: 1px solid #666 !important;
+		color: #fff !important;
+		margin: 3px !important;
+	}
+
+	input[type="text"]:focus {
+		border: 1px solid#1e90ff !important;
+	}
+
+	input[type="text"][disabled] {
+		color: #aaa !important;
+	}
+}
+
+
+
+
+@-moz-document url-prefix("about:debugging") {
+	body {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	li.card.debug-target-item.qa-debug-target-item {
+		background-color: #262a34 !important;
+		color: #ffffff !important;
+
+	}
+
+	button.default-button.qa-debug-target-inspect-button {
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+	}
+
+	.card,
+	.card *:not(button) {
+		background-color: #262a34 !important;
+	}
+
+	.fieldpair__description {
+		color: #ffffff !important;
+	}
+
+	.default-button {
+		background-color: #1e90ff !important;
+	}
+
+	.default-button:enabled:hover {
+		background-color: #1e90ff50 !important;
+	}
+
+
+	.icon-label__icon,
+	.sidebar__footer__icon {
+		fill: grey !important;
+	}
+
+	*:link {
+		color: #1e90ff !important;
+	}
+
+	*:visited {
+		color: #434c5e !important;
+	}
+
+	html,
+	:root,
+	body,
+	* {
+		color: #ffffff !important;
+		background-color: #191A2A !important;
+	}
+}
+
+/**************************-*/
+@-moz-document url-prefix("https://addons.mozilla.org") {
+
+	:root {
+		--nordp-0: #2E3440;
+		--nordp-1: #3B4253;
+		--nordp-2: #434c5E;
+		--nordp-3: #4C566A;
+
+		--nords-0: #d8DEE9;
+		--nords-1: #E5e9f0;
+		--nords-2: #ECEFF4;
+
+		--nordf-0: #8FBCBB;
+		--nordf-1: #88C0D0;
+		--nordf-2: #81A1C1;
+		--nordf-3: #5E81AC;
+		--nordf-4: #8ad;
+
+		--norda-0: #BF616A;
+		--norda-1: #D08770;
+		--norda-2: #EBCB8B;
+		--norda-3: #A3Be8C;
+		--norda-4: #B48EAD;
+	}
+
+	:root {
+		font-family: Fira Sans !important;
+	}
+
+	.Page-content,
+	.Header-wrapper,
+	.Header,
+	.Footer,
+	.Footer-wrapper,
+	.LanguageTools-header-row,
+	.amo {
+		background: #191A2A !important;
+	}
+
+	h1,
+	h2 {
+		color: #ffffff !important;
+	}
+
+	.SearchResult-link,
+	.SearchResult-linklink {
+		color: #1e90ff !important;
+		font-size: 16px !important;
+	}
+
+	.Guides-header,
+	.HomeHeroGuides-sections .Hero-name-HomeHeroGuides {
+		border-color: #ffffff !important;
+	}
+
+	.App-content,
+	.Home,
+	.LandingPage,
+	.LanguageTools-table-row:nth-child(2n),
+	.Paginate {
+		background: #191A2A !important;
+	}
+
+	.Select {
+		background-color: #191A2A !important;
+	}
+
+	.SearchForm-icon-magnifying-glass {
+		filter: invert(85%) !important;
+	}
+
+	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
+	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
+	.AddonsByAuthorsCard .Card-contents .AddonsCard-list,
+	.AddonsCard--horizontal .Card-contents,
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
+	.AutoSearchInput-suggestions-item,
+	.Card--photon .Card-contents,
+	.Card-contents,
+	.Card-contents li,
+	.Card-footer,
+	.Card-footer-link,
+	.Card-footer-text,
+	.Card-header,
+	.Categories .Card-contents,
+	.DropdownMenu-items::after,
+	.DropdownMenu-items,
+	.Hero .Card-contents,
+	.Home-SubjectShelf .Card-contents,
+	.LandingPage-header,
+	.MetadataCard,
+	.Search .SearchResults .SearchResult,
+	.Search .SearchResults-message,
+	.SearchForm-query,
+	.SearchForm-suggestions-item.SearchForm-suggestions-item,
+	.SectionLinks-dropdown .DropdownMenu-items,
+	input.AutoSearchInput-query,
+	.DropdownMenuItem-section {
+		background-color: #0d2135 !important;
+		color: #ffffff !important;
+	}
+
+	.AutoSearchInput-suggestions-item {
+		color: #ffffff !important;
+		font-size: 12px !important;
+	}
+
+	input.AutoSearchInput-query {
+		font-size: 13px !important;
+	}
+
+	.Addon-author,
+	.Addon-author a,
+	.Addon-author a:link .Button--action,
+	.Addon-title,
+	.AddonBadges .Badge,
+	.AddonTitle,
+	.Button--action,
+	.Button--action.Button--small:link,
+	.Button--action:link,
+	.Button--neutral,
+	.Button--neutral:link,
+	.Card--photon .Card-contents,
+	.Card-contents,
+	.Card-footer-text,
+	.Definition-dt,
+	.DropdownMenuItem,
+	.ui.DropdownMenu-items,
+	.DropdownMenuItem-link a,
+	.DropdownMenuItem-link a:link,
+	.DropdownMenuItem-section,
+	.ExpandableCard-ToggleLink:link,
+	.Footer a:active,
+	.Footer a:hover,
+	.Footer-links-header a:link,
+	.GuidesAddonCard .AddonTitle a,
+	.GuidesAddonCard .GuidesAddonCard-content-header-title .AddonTitle-author,
+	.Home-SubjectShelf-link:link,
+	.Home-SubjectShelf-link:visited,
+	.Home-SubjectShelf-subheading,
+	.LandingPage-addonType-name,
+	.LandingPage-heading-content,
+	.MetadataCard-list dt,
+	.Paginate .Button.Paginate-item--current-page,
+	.Paginate .Button.Paginate-item:first-child,
+	.Paginate .Button.Paginate-item:last-child,
+	.Paginate .Button.Paginate-item:link:first-child,
+	.Paginate .Button.Paginate-item:link:last-child,
+	.Paginate .Button.Paginate-item:visited:first-child,
+	.Paginate .Button.Paginate-item:visited:last-child .Paginate-page-number,
+	.PermissionsCard-subhead,
+	.ReportAbuseButton-show-more,
+	.SearchContextCard-header,
+	.SearchFilters-label,
+	.SearchForm-query,
+	.SearchResult--meta-section,
+	.SearchResult-name,
+	.SearchResult-summary,
+	.Select,
+	input.AutoSearchInput-query {
+		/*background-color: #0D2135 !important;*/
+
+		color: #ffffff !important;
+	}
+
+	.SearchResult-summary {
+		font-weight: normal !important;
+		font-size: 14px !important;
+		line-height: normal !important;
+		text-align: justify !important;
+	}
+
+	.PromotedBadge {
+		background: white !important;
+		border-radius: 16px !important;
+	}
+
+	.Paginate .Button.Paginate-item:active,
+	.Paginate .Button.Paginate-item:hover {
+		background-color: #191A2A !important;
+	}
+
+	.AutoSearchInput-suggestions-item {
+		color: #ffffff !important;
+		font-size: 12px !important;
+	}
+
+	.Card-header {
+		color: #ffffff !important;
+	}
+
+	/*
+	.Card-contents li .Rating-star-group,
+	.Paginate-next::after,
+	.Paginate-previous::before {
+		filter: invert(70%) !important;
+	}
+*/
+	.AddonMeta .MetadataCard-content a,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:link,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta .MetadataCard-content a:link,
+	.AddonMeta .MetadataCard-content a:visited,
+	.AddonMeta .MetadataCard-title a,
+	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link,
+	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:link,
+	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta .MetadataCard-title a:link,
+	.AddonMeta .MetadataCard-title a:visited,
+	.RatingsByStar-count a:active,
+	.RatingsByStar-count a:link,
+	.RatingsByStar-count a:visited,
+	.RatingsByStar-star a:active,
+	.RatingsByStar-star a:link,
+	.RatingsByStar-star a:visited {
+		color: #191A2A !important;
+	}
+
+
+	.ShowMoreCard-contents::after {
+		background: linear-gradient(rgba(255, 255, 255, 0), #191A2A) !important;
+	}
+
+	.Addon-details .AddonDescription-contents a:link,
+	.AddonMoreInfo-contents a:link,
+	.Card-footer-link a,
+	.Card-footer-link a:hover,
+	.Card-footer-link a:link,
+	.Card.ShowMoreCard.AddonDescription-version-notes a:link,
+	.DropdownMenuItem-link a:hover,
+	.Home-SubjectShelf-link:active,
+	.Home-SubjectShelf-link:focus,
+	.Home-SubjectShelf-link:hover,
+	.LanguageTools-table a:link,
+	.SearchResult-link:focus .SearchResult-name,
+	.SearchResult-link:hover .SearchResult-name {
+		color: #ffffff !important;
+		background: #1e90ff !important;
+	}
+
+	.AddonDescription-contents {
+		text-align: justify !important;
+	}
+
+	.Button--action.Button--outline-only {
+		border-color: #191A2A !important;
+	}
+
+	input.AutoSearchInput-query {
+		border-color: #191A2A !important;
+		/*#1D1923*/
+	}
+
+	.Addon .InstallButton-button,
+	.Button--action,
+	.Button--action.Button--small,
+	.SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted {
+		background: var(--nordp-2) !important;
+	}
+
+	.Button--action.Button--outline-only:hover,
+	.Button--action:hover,
+	.SearchForm-query:hover {
+		border-color: var(--nordp-1) !important;
+	}
+
+	.SearchForm-query:focus {
+		box-shadow: 0 0 5px 0 var(--in-content-border-highlight) !important;
+		border-color: var(--in-content-primary-button-background) !important;
+	}
+
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
+		background: var(--accent) !important;
+		border-radius: 0 !important;
+	}
+
+	.Button--report {
+		text-shadow: none !important;
+	}
+
+	.Icon-arrow,
+	.Icon-external {
+		filter: invert(0%) !important;
+	}
+
+	.Icon-magnifying-glass {
+		filter: invert(0%) !important;
+	}
+
+	.Icon-featured {
+		filter: invert(85%) !important;
+	}
+
+	.Icon-plus-dark {
+		filter: invert(0%) !important;
+	}
+
+	.Button--neutral.Button--puffy,
+	.Button--neutral:link.Button--puffy {
+		background: var(--nordf-0) !important;
+		color: var(--foreground) !important;
+	}
+
+	.Button--neutral.Button--puffy:hover,
+	.Button--neutral:link.Button--puffy:hover {
+		background: var(--nordf-1) !important;
+	}
+}
+
+@-moz-document url-prefix("https://addons.mozilla.org") {
+	:root {
+		--pale-blue: #728cbb;
+		--custom-bg: #333333;
+		--custom-bg-dark: #1a1c1d;
+		--custom-fg: #e2e2e2;
+		--custom-fg-dark: #cccccc;
+		--magenta-50: #ff1ad9;
+		--magenta-60: #ed00b5;
+		--magenta-70: #b5007f;
+		--magenta-80: #7d004f;
+		--magenta-90: #440027;
+		--purple-50: #9400ff;
+		--purple-60: #8000d7;
+		--purple-70: #6200a4;
+		--purple-80: #440071;
+		--purple-90: #25003e;
+		--blue-40: #45a1ff;
+		--blue-50: #0a84ff;
+		--blue-60: #1e90ff;
+		--blue-70: #003eaa;
+		--blue-80: #002275;
+		--blue-90: #000f40;
+		--teal-50: #00feff;
+		--teal-60: #00c8d7;
+		--teal-70: #008ea4;
+		--teal-80: #005a71;
+		--teal-90: #002d3e;
+		--green-50: #30e60b;
+		--green-60: #12bc00;
+		--green-70: #058b00;
+		--green-80: #006504;
+		--green-90: #003706;
+		--yellow-50: #ffe900;
+		--yellow-60: #d7b600;
+		--yellow-70: #a47f00;
+		--yellow-80: #715100;
+		--yellow-90: #3e2800;
+		--red-50: #ff0039;
+		--red-60: #d70022;
+		--red-70: #a4000f;
+		--red-80: #5a0002;
+		--red-90: #3e0200;
+		--orange-50: #ff9400;
+		--orange-60: #d76e00;
+		--orange-70: #a44900;
+		--orange-80: #712b00;
+		--orange-90: #3e1300;
+		--grey-10: #f9f9fa;
+		--grey-20: #ededf0;
+		--grey-30: #d7d7db;
+		--grey-40: #b1b1b3;
+		--grey-50: #737373;
+		--grey-60: #4a4a4f;
+		--grey-70: #38383d;
+		--grey-80: #191A2A;
+		--grey-90: #0c0c0d;
+		--code-green: #86de74 !important;
+		--warning-color: #FCE19F;
+		--warning-background-color: #44391F;
+		--theme-highlight-green: #86DE74;
+		--theme-highlight-blue: #75BFFF;
+		--theme-highlight-purple: #B98EFF;
+		--theme-highlight-red: #FF7DE9;
+		--theme-highlight-yellow: #FFF89E;
+		--theme-highlight-bluegrey: #5e88b0;
+		--theme-highlight-lightorange: #d99b28;
+		--theme-highlight-orange: #d96629;
+		--theme-highlight-pink: #df80ff;
+		--tone-1: var(--grey-10);
+		--tone-2: var(--grey-20);
+		--tone-3: var(--grey-30);
+		--tone-4: var(--grey-40);
+		--tone-5: var(--grey-50);
+		--tone-6: var(--grey-60);
+		--tone-7: var(--grey-70);
+		--tone-8: var(--grey-80);
+		--tone-9: var(--grey-90);
+		--accent-1: var(--pale-blue);
+		--accent-2: var(--pale-blue);
+		--accent-3: var(--pale-blue);
+		--in-content-page-color: var(--tone-1) !important;
+		--in-content-page-background: var(--tone-8) !important;
+		--in-content-text-color: var(--tone-1) !important;
+		--in-content-selected-text: var(--tone-1) !important;
+		--in-content-selected-text-background: #5675b9;
+		--in-content-box-background: var(--tone-7) !important;
+		--in-content-box-background-odd: #f3f6fa;
+		--in-content-box-background-hover: var(--tone-6) !important;
+		--in-content-box-background-active: var(--tone-6) !important;
+		--in-content-box-border-color: var(--tone-5) !important;
+		--in-content-item-hover: rgba(0, 149, 221, 0.25);
+		--in-content-item-selected: var(--tone-8) !important;
+		--in-content-border-highlight: var(--accent-1) !important;
+		--in-content-border-focus: var(--accent-1) !important;
+		--in-content-border-color: var(--tone-6) !important;
+		--in-content-category-outline-focus: 1px dotted #0a84ff;
+		--in-content-category-text: var(--tone-2) !important;
+		--in-content-category-text-active: #0c0c0d;
+		--in-content-category-text-selected: var(--accent-1) !important;
+		--in-content-category-text-selected-active: #1e90ff;
+		--in-content-category-background-hover: rgba(12, 12, 13, 0.1);
+		--in-content-category-background-active: rgba(12, 12, 13, 0.15);
+		--in-content-category-background-selected-hover: rgba(12, 12, 13, 0.15);
+		--in-content-category-background-selected-active: rgba(12, 12, 13, 0.2);
+		--in-content-tab-color: #424f5a;
+		--in-content-link-color: var(--accent-1) !important;
+		--in-content-link-color-hover: var(--accent-2) !important;
+		--in-content-link-color-active: #003eaa;
+		--in-content-link-color-visited: #0a8dff;
+		--in-content-primary-button-background: var(--accent-2) !important;
+		--in-content-primary-button-background-hover: var(--accent-3) !important;
+		--in-content-primary-button-background-active: var(--accent-3) !important;
+		--in-content-table-border-dark-color: var(--tone-7) !important;
+		--in-content-table-header-background: var(--accent-2) !important;
+		--theme-selection-background: var(--accent-2) !important;
+		--theme-selection-background-hover: var(--accent-1) !important;
+		--in-content-category-header-background: var(--tone-8) !important;
+		--selected-icon-fill-color: var(--tone-2) !important;
+		--in-content-dark-header-background: var(--tone-9) !important;
+		--tab-line-selected-color: var(--accent-2) !important;
+		--secure-connection-color: var(--accent-1);
+		--tab-background-color: var(--tone-9) !important;
+		--tab-color: var(--in-content-selected-text);
+		--theme-sidebar-background: #1B1B1D !important;
+		--card-outline-color: var(--in-content-box-border-color) !important;
+		--cm-background: var(--tone-8) !important;
+		--cm-selection: #353b48 !important;
+		--cm-marker: #555 !important;
+		--cm-linenumber: #58575c !important;
+		--cm-cursor: #fff !important;
+		--cm-active-line-background: rgba(185, 215, 253, .15) !important;
+		--cm-matching-bracket: rgba(255, 255, 255, .25) !important;
+		--cm-search-background: rgba(24, 29, 32, 1) !important;
+		--cm-red: #de7474 !important;
+
+		--dummy-variable-for-updater-scripts: #000000;
+	}
+
+	* {
+		font-family: Fira Sans !important;
+	}
+
+	.Footer,
+	.Footer-wrapper,
+	.LanguageTools-header-row,
+	.amo {
+		background: var(--in-content-category-header-background) !important;
+	}
+
+	h1,
+	h2 {
+		color: var(--in-content-category-text) !important;
+	}
+
+	.Guides-header,
+	.HomeHeroGuides-sections .Hero-name-HomeHeroGuides {
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	.Page-content {
+		background: #191A2A80 !important;
+	}
+
+	.App-content,
+	.Home,
+	.LandingPage,
+	.LanguageTools-table-row:nth-child(2n),
+	.Paginate {
+		background: var(--in-content-page-background) !important;
+	}
+
+	.Select {
+		background-color: var(--in-content-page-background) !important;
+	}
+
+	.SearchForm-icon-magnifying-glass {
+		filter: invert(65%) !important;
+	}
+
+	.Notice-genericWarning {
+		background-color: var(--norda-2) !important;
+		color: #000000 !important;
+	}
+
+	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
+	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
+	.AddonsByAuthorsCard .Card-contents .AddonsCard-list,
+	.AddonsCard--horizontal .Card-contents,
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
+	.AutoSearchInput-suggestions-item,
+	.Card--photon .Card-contents,
+	.Card-contents,
+	.Card-contents li,
+	.Card-footer,
+	.Card-footer-link,
+	.Card-footer-text,
+	.Card-header,
+	.Categories .Card-contents,
+	.DropdownMenu-items::after,
+	.Hero .Card-contents,
+	.Home-SubjectShelf .Card-contents,
+	.LandingPage-header,
+	.MetadataCard,
+	.Search .SearchResults .SearchResult,
+	.Search .SearchResults-message,
+	.SearchForm-query,
+	.SearchForm-suggestions-item.SearchForm-suggestions-item,
+	.SectionLinks-dropdown .DropdownMenu-items,
+	input.AutoSearchInput-query {
+		/*background-color: #191A2A50 !important;*/
+		color: #ffffff !important;
+	}
+
+	input.AutoSearchInput-query {
+		font-size: 13px !important;
+	}
+
+	.Addon-author,
+	.Addon-author a,
+	.Addon-author a:link .Button--action,
+	.Addon-title,
+	.AddonBadges .Badge,
+	.AddonTitle,
+	.Button--action,
+	.Button--action.Button--small:link,
+	.Button--action:link,
+	.Button--neutral,
+	.Button--neutral:link,
+	.Card--photon .Card-contents,
+	.Card-contents,
+	.Card-footer-text,
+	.Definition-dt,
+	.DropdownMenuItem,
+	.DropdownMenuItem-link a,
+	.DropdownMenuItem-link a:link,
+	.DropdownMenuItem-section,
+	.ExpandableCard-ToggleLink:link,
+	.Footer a:active,
+	.Footer a:hover,
+	.Footer-links-header a:link,
+	.GuidesAddonCard .AddonTitle a,
+	.GuidesAddonCard .GuidesAddonCard-content-header-title .AddonTitle-author,
+	.Home-SubjectShelf-link:link,
+	.Home-SubjectShelf-link:visited,
+	.Home-SubjectShelf-subheading,
+	.LandingPage-addonType-name,
+	.LandingPage-heading-content,
+	.MetadataCard-list dt,
+	.Paginate .Button.Paginate-item--current-page,
+	.Paginate .Button.Paginate-item:first-child,
+	.Paginate .Button.Paginate-item:last-child,
+	.Paginate .Button.Paginate-item:link:first-child,
+	.Paginate .Button.Paginate-item:link:last-child,
+	.Paginate .Button.Paginate-item:visited:first-child,
+	.Paginate .Button.Paginate-item:visited:last-child .Paginate-page-number,
+	.PermissionsCard-subhead,
+	.ReportAbuseButton-show-more,
+	.SearchContextCard-header,
+	.SearchFilters-label,
+	.SearchForm-query,
+	.SearchResult--meta-section,
+	.SearchResult-name,
+	.SearchResult-summary,
+	.Select,
+	input.AutoSearchInput-query {
+		/*background-color: #0D2135 !important;*/
+		color: #ffffff !important;
+	}
+
+	input.AutoSearchInput-query {
+		font-size: 13px !important;
+	}
+
+	.SearchResult-summary {
+		font-size: 14px !important;
+		line-height: normal !important;
+		text-align: justify !important;
+		font-weight: normal !important;
+	}
+
+	.Paginate .Button.Paginate-item:active,
+	.Paginate .Button.Paginate-item:hover {
+		background-color: #191A2A !important;
+	}
+
+	.AutoSearchInput-suggestions-item {
+		color: white !important;
+		font-size: 13px !important;
+	}
+
+	.Card-header {
+		color: var(--in-content-text-color) !important;
+	}
+
+
+	.Card-contents li .Rating-star-group,
+	.Paginate-next::after,
+	.Paginate-previous::before {
+		filter: invert(70%) !important;
+	}
+
+	.AddonMeta .MetadataCard-content a,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:link,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta .MetadataCard-content a:link,
+	.AddonMeta .MetadataCard-content a:visited,
+	.AddonMeta .MetadataCard-title a,
+	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link,
+	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:link,
+	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta .MetadataCard-title a:link,
+	.AddonMeta .MetadataCard-title a:visited,
+	.RatingsByStar-count a:active,
+	.RatingsByStar-count a:link,
+	.RatingsByStar-count a:visited,
+	.RatingsByStar-star a:active,
+	.RatingsByStar-star a:link,
+	.RatingsByStar-star a:visited {
+		color: var(--in-content-page-color) !important;
+	}
+
+	.ShowMoreCard-contents::after {
+		background: linear-gradient(rgba(255, 255, 255, 0), #191A2A) !important;
+	}
+
+	.SecondaryHero-module {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.SecondaryHero-message-description {
+		color: #1e90ff !important;
+	}
+
+	.Addon-details .AddonDescription-contents a:link,
+	.AddonMoreInfo-contents a:link,
+	.Card-footer-link a,
+	.Card-footer-link a:hover,
+	.Card-footer-link a:link,
+	.Card.ShowMoreCard.AddonDescription-version-notes a:link,
+	.DropdownMenuItem-link a:hover,
+	.Home-SubjectShelf-link:active,
+	.Home-SubjectShelf-link:focus,
+	.Home-SubjectShelf-link:hover,
+	.LanguageTools-table a:link,
+	.SearchResult-link:focus .SearchResult-name,
+	.SearchResult-link:hover .SearchResult-name {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.AddonDescription-contents {
+		text-align: justify !important;
+	}
+
+	.Button--action.Button--outline-only {
+		border-color: var(--in-content-border-highlight) !important;
+	}
+
+	input.AutoSearchInput-query {
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	.Addon .InstallButton-button,
+	.Button--action,
+	.Button--action.Button--small,
+	.SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted {
+		background: var(--in-content-primary-button-background) !important;
+	}
+
+	.Button--action.Button--outline-only:hover,
+	.Button--action:hover,
+	.SearchForm-query:hover {
+		border-color: var(--in-content-primary-button-background) !important;
+	}
+
+	.SearchForm-query:focus {
+		box-shadow: 0 0 5px 0 var(--in-content-border-highlight) !important;
+		border-color: var(--in-content-primary-button-background) !important;
+	}
+
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
+		background: var(--in-content-page-background) !important;
+		border-radius: 0 !important;
+	}
+
+	.Button--report {
+		text-shadow: none !important;
+	}
+
+	.Icon-arrow,
+	.Icon-external {
+		filter: invert(20%) !important;
+	}
+
+	.Icon-magnifying-glass {
+		filter: invert(65%) !important;
+	}
+
+	.Icon-featured {
+		filter: invert(85%) !important;
+	}
+
+	.Icon-plus-dark {
+		filter: invert(100%) !important;
+	}
+
+	.Button--neutral.Button--puffy,
+	.Button--neutral:link.Button--puffy {
+		background: var(--in-content-primary-button-background) !important;
+		color: var(--in-content-selected-text) !important;
+	}
+
+	.Button--neutral.Button--puffy:hover,
+	.Button--neutral:link.Button--puffy:hover {
+		background: var(--in-content-primary-button-background-hover) !important;
+	}
+}
+
+
+@-moz-document url-prefix(about:),
+url-prefix(chrome: //browser) {
+
+	browser[type="content"], tabpanels {
+		background: #191A2A !important;
+		background-color: #191A2A !important;
+	}
+}
+
+@-moz-document url(chrome://global/content/alerts/alert.xhtml) {
+	#tabmodalprompt-topContainer {
+		background-color: #191A2A80 !important;
+		color: #ffffff !important;
+
+	}
+
+	#tabmodalprompt-infoContainer {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+		/*border: none !important;*/
+	}
+
+	#alertBox {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+		font-family: Fira Sans !important;
+		/*border: none !important;*/
+	}
+
+	#alertSourceLabel {
+		color: #1e90ff !important;
+		font-family: Fira Sans !important;
+		/*border: none !important;*/
+	}
+}
+
+/*
+browser vbox#appcontent tabbrowser,
+content,
+tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content]>html {
+	background-color: #191A2A !important;
+	color: #ffffff !important;
+	font-family: Fira Sans !important;
+}
+
+*/
+@-moz-document url("about:memory") {
+
+	html,
+	body {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+}
+
+
+/*
+html[windowtype="Toolkit:PictureInPicture"] {
+	
+	border-radius: 5px !important;
+	background: transparent !important;
+}
+*/
+/* Dark Mode page between loading*/
+@-moz-document url("about:home"),
+url("about:blank"),
+url("about:newtab"),
+url("about:privatebrowsing") {
+	body {
+		background-color: #191A2A !important;
+	}
+}
+
+
+@-moz-document url-prefix("about:reader") {
+	body {
+		background-color: #191A2A !important;
+	}
+
+	/* Unstick the toolbar so it can scroll */
+	/*#toolbar {
+		position: static !important;
+	}*/
+
+	/* Put the toolbar back at the left */
+	.reader-toolbar {
+		margin-left: 16px !important;
+	}
+
+	.toolbar {
+		border: none !important;
+		background-color: #191A2A !important;
+		width: 40px !important;
+	}
+
+	button {
+		fill: #ffffff !important;
+		background-color: transparent !important;
+		border: none !important;
+	}
+
+	button:hover {
+		background-color: #1e90ff !important;
+	}
+
+	.dropdown-popup {
+		background-color: #191A2A !important;
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5) !important;
+		border-radius: 0px !important;
+		border: none !important;
+		opacity: 0 !important;
+		transition: opacity 150ms, visibility 0s 2s !important;
+	}
+
+	.open>.dropdown-popup {
+		opacity: 1 !important;
+		transition: opacity 150ms !important;
+	}
+
+	.dropdown-arrow {
+		display: none !important;
+	}
+
+	.dropdown.open {
+		background-color: #1e90ff !important;
+	}
+
+	.narrate-row:not(:first-child) {
+		border: none !important;
+	}
+
+	.font-type-buttons>button>.description {
+		color: #BEBEBE !important;
+	}
+}
+
+
+@-moz-document url("about:config") {
+	#configTree {
+		margin-bottom: 0px !important;
+		box-shadow: none !important;
+	}
+}
+
+@-moz-document url-prefix("about:logins") {
+
+	.fxaccounts-avatar-button,
+	.fxaccounts-avatar-button:hover:active {
+		background: transparent !important;
+		border: none !important;
+	}
+
+	.meta-info {
+		font-weight: 400 !important;
+		font-size: initial !important;
+	}
+
+	.edit-button,
+	.delete-button {
+		background-position-x: 8px !important;
+		padding-left: 32px !important;
+		background-color: #1e90ff50 !important;
+
+	}
+
+	.copy-button,
+	.create-login-button {
+		background-color: #1e90ff50 !important;
+	}
+
+	.edit-button:hover,
+	.delete-button:hover,
+	.copy-button:hover,
+	.create-login-button:hover {
+		background-color: #1e90ff80 !important;
+	}
+
+	login-list,
+	div.meta {
+		background-color: #191A2A !important;
+	}
+
+	.login-list-item {
+		border: none !important;
+
+	}
+
+	.container[role="dialog"] {
+		background: #191A2A !important;
+		border: 1px solid #333333 !important;
+		border-radius: 0px !important;
+		color: white !important;
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .32) !important;
+	}
+
+	.login-list-item.selected {
+		background-color: #1e90ff80 !important;
+	}
+
+	.login-list-item:hover {
+		background-color: #1e90ff40 !important;
+	}
+
+	.body,
+	header,
+	div.container {
+		background-color: #191A2A !important;
+	}
+}
+
+@-moz-document url-prefix(view-source:) {
+	:root {
+		background: none !important;
+	}
+
+	* #viewsource {
+		font-family: Fira Sans !important;
+		font-size: 16px !important;
+		/*, -moz-fixed*/
+		/*line-height: 1.5em;*/
+		background-color: #191A2A !important;
+		/*background-image: url(https://farm9.staticflickr.com/8536/8680613751_71ef92bbdb_o_d.jpg),
+		linear-gradient(to right, #002b36d0, #002b36d0, #000000d0),
+		linear-gradient(#00000040 50%, transparent 50%);
+		background-size: cover, cover, auto 3em;
+		background-position: center, center, top 10px left 0;
+		background-attachment: fixed, fixed, scroll;
+		background-repeat: no-repeat, no-repeat, repeat-y;
+		background-blend-mode: overlay, normal, normal;*/
+		color: #ffffff !important;
+	}
+
+	pre[id]:before,
+	span[id]:before {
+		width: 6ch !important;
+		color: #586e75 !important;
+		margin-left: -7ch !important;
+	}
+
+	pre {
+		padding-left: 1ch;
+		margin-left: 6ch !important;
+		border-left: 2px solid #073642 !important;
+	}
+
+	pre> :first-child {
+		padding-right: 1ch;
+	}
+
+	.highlight .start-tag {
+		color: yellow !important;
+	}
+
+	.highlight .end-tag {
+		color: yellow !important;
+	}
+
+	.highlight .comment {
+		color: #586e75 !important;
+	}
+
+	.highlight .cdata {
+		color: #cb4b16 !important;
+	}
+
+	.highlight .doctype {
+		color: #268be2 !important;
+	}
+
+	.highlight .pi {
+		color: #268be2 !important;
+		/* orchid -> blue */
+	}
+
+	.highlight .entity {
+		color: #b58900 !important;
+		/* violet -> yellow */
+	}
+
+	.highlight .attribute-name {
+		color: violet !important;
+	}
+
+	.highlight .attribute-value {
+		color: #2aa198 !important;
+		text-shadow: 1px 1px 2px #000000 !important;
+	}
+
+	.highlight .markupdeclaration {
+		color: #859900cc !important;
+	}
+
+	.highlight .error,
+	.highlight .error> :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype,
+		.pi, .entity, .attribute-name, .attribute-value) {
+		color: #002b36 !important;
+		background-color: #dc322f !important;
+	}
+}
+
+@-moz-document url-prefix("about:") {
+	:root {
+		--in-content-border-hover: rgba(30, 144, 255, 0.5) !important;
+		--in-content-border-active: #1e90ff !important;
+		--in-content-border-active-shadow: rgba(30, 144, 255, 0.325) !important;
+	}
+
+	* {
+		font-family: "Fira Sans" !important;
+	}
+}
+
+/*---------------------------------*/
+#viewer.pdfViewer {
+	background-color: #191A2A !important;
+}
+
+.pdfViewer .page {
+	margin: 1px auto -3px auto !important;
+	border: 1px dashed transparent !important;
+}
+
+
+
+/* about:support*/
+@-moz-document url(about:support) {
+	body.wide-container {
+		background-color: #191A2A !important;
+	}
+}
+
+
+/* Changes colors on the page 
+:root {
+	--in-content-page-color: #009bd4 !important;
+	
+	--in-content-page-background: #1a1a1a !important;
+	
+	-in-content-text-color: #009bd4 !important;
+	--in-content-category-text-selected: #009bd4 !important;
+	--in-content-border-color: #009bd4 !important;
+	--in-content-link-color: #009bd4 !important;
+	--in-content-border-active: none !important;
+	--in-content-border-active-shadow: none !important;
+	--in-content-category-text-selected-active: #009bd4 !important;
+	--in-content-category-background-hover: #000000 !important;
+}
+
+	html|h1 {
+		color: #009bd4 !important;
+	} 
+}
+*/
+/*@-moz-document url("chrome://devtools/content/webconsole/index.html")
+
+@-moz-document url-prefix("about:devtools-toolbox") {
+	.devtools-tabbar {
+		background-color: #191A2A !important;
+	}
+
+	* {
+		font-family: Fira Sans !important;
+	}
+
+	.theme-body {
+		background-color: #191A2A !important;
+	}
+}*/
+
+@-moz-document url('chrome://global/content/config.xhtml'),
+url('chrome://userchromejs/content/aboutconfig/config.xhtml') {
+	:root {
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		background-color: #191A2A !important;
+		background: #191A2A !important;
+		color: #ffffff !important;
+		fill: #ffffff !important;
+		opacity: 1 !important;
+
+	}
+
+	#configTree {
+		margin-bottom: 0px !important;
+		box-shadow: none !important;
+	}
+
+}
+
+@-moz-document url('about:home'),
+url('about:newtab') {
+	.outer-wrapper {
+		background-color: #191A2A !important;
+	}
+
+	#newtab-search-text,
+	#searchSuggestionTable,
+	#searchSuggestionTable>tr,
+	#searchSuggestionTable>tr>td,
+	#searchSuggestionTable>table>tr>td,
+	#searchSuggestionTable>button {
+		background-color: #191A2A !important;
+		color: #F8F8F2 !important;
+		fill: #F8F8F2 !important;
+	}
+
+	.search-wrapper input {
+		box-shadow: rgba(248, 248, 242, 0.2) 0px 1px 4px 0px, rgba(238, 238, 232, 0.15) 0px 0px 0px 1px !important;
+	}
+
+
+	body {
+		background-color: #191A2A !important;
+	}
+
+	.prefs-button button {
+		fill: #191A2A !important;
+	}
+
+	.prefs-button button:hover,
+	.prefs-button button:focus {
+		background-color: transparent !important;
+	}
+
+	.prefs-button button {
+		display: none !important;
+	}
+}
+
+
+
+/*
+@-moz-document url("http://www.w3.org/1999/xhtml") {
+	html|input.urlbar-scheme {
+		display: none !important;
+	}
+}
+*/
+@-moz-document url-prefix("about:"),
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
+
+	window,
+	page,
+	html,
+	.main-content,
+	scrollbar {
+		scrollbar-color: #1e90ff #000000 !important;
+		scrollbar-width: thin !important;
+	}
+}
+
+* {
+	scrollbar-color: #1e90ff #000000 !important;
+	scrollbar-width: thin !important;
+}
+
+
+@-moz-document url-prefix("about:restartrequired") {
+	body {
+		background-color: #191A2A !important;
+	}
+
+	#errorPageContainer {
+		min-height: 550px !important;
+		display: flex;
+		flex-direction: column !important;
+		background-position: left center !important;
+		background-repeat: no-repeat;
+		background-size: 35% !important;
+		background-image: url("fox-gif-transparent-2.gif") !important;
+	}
+
+	#restart {
+		background-color: #1e90ff !important;
+		border: none !important;
+	}
+
+	#restart:hover {
+		background-color: rgba(30, 144, 255, .70) !important;
+		border: none !important;
+	}
+}
+
+/*
+.netTimeout #errorPageContainer {
+	background-image: url("sonicfoottap.webp") !important;
+}
+
+html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div.title h1.title-text {
+	font-size: 0px !important;
+}
+
+html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div.title h1.title-text::before {
+	font-size: 32px !important;
+	content: "You're too slow!" !important;
+}
+
+html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div#errorLongContent div#errorShortDesc::before {
+	font-size: 15px;
+	content: "(Actually, it's the server)";
+}
+*/
+@-moz-document url-prefix("about:debugging") {
+	body {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+	li.card.debug-target-item.qa-debug-target-item {
+		background-color: #263238 !important;
+		color: #ffffff !important;
+
+	}
+
+	button.default-button.qa-debug-target-inspect-button {
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+	}
+}
+
+
+@-moz-document url-prefix(about:),
+url-prefix(chrome: //browser) {
+
+	browser[type="content"], tabpanels {
+		background: #191A2A !important;
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+
+}
+
+/*
+browser vbox#appcontent tabbrowser,
+content,
+tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content]>html {
+	background-color: #191A2A !important;
+	color: #ffffff !important;
+	font-family: Fira Sans !important;
+}
+*/
+@-moz-document url("about:memory") {
+
+	html,
+	body {
+		background-color: #191A2A !important;
+		color: #ffffff !important;
+	}
+}
+
+
+#tabmodalprompt-topContainer {
+	background-color: #191A2A !important;
+	color: #ffffff !important;
+}
+
+#tabmodalprompt-infoContainer {
+	background-color: #191A2A !important;
+	color: #ffffff !important;
+}
+
+/*
+/* Dark Mode page between loading */
+@-moz-document url("about:privatebrowsing") {
+
+	html:not(#ublock0-epicker),
+	html:not(#ublock0-epicker) body,
+	#newtab-customize-overlay {
+		background-color: #191A2A !important;
+		/*#232324*/
+	}
+
+	#search-handoff-button {
+		background-color: #0000004d !important;
+		border: none !important;
+		box-shadow: none !important;
+		border-bottom: 1px solid #f4eef782 !important;
+		border-radius: 10px 10px 10px 10px !important;
+	}
+
+	.fake-textbox {
+		color: #ffffff !important;
+	}
+
+	#search-handoff-button:active>.fake-textbox,
+	#search-handoff-button:hover>.fake-textbox,
+	#search-handoff-button:focus>.fake-textbox,
+	#search-handoff-button:focus-within>.fake-textbox {
+		color: white !important;
+		opacity: 0.8 !important;
+
+	}
+
+	.fake-caret {
+		background: rgb(255, 255, 255) !important;
+	}
+
+	.logo-and-wordmark .wordmark {
+		fill: #b821ec !important;
+
+	}
+}
+
+@-moz-document url("about:home"),
+url("about:blank"),
+url("about:newtab") {
+
+	html:not(#ublock0-epicker),
+	html:not(#ublock0-epicker) body,
+	#newtab-customize-overlay {
+		background-color: #191A2A !important;
+		/*#232324*/
+	}
+}
+
+@-moz-document url-prefix("moz-extension://e87ccd4e-1a44-4eeb-b319-f0545403e86a/") {
+
+	body {
+		background: #191A2A !important;
+	}
+
+	.panel-arrowcontent,
+	#share-directory-grid.clearfix {
+		background: #191A2A !important;
+		background-color: #191A2A !important;
+		height: 73px !important;
+	}
+
+	#share-directory {
+		width: inherit !important;
+	}
+
+	#share-directory-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	button {
+		/*padding: 30px !important;*/
+		width: 50px !important;
+		height: 50px !important;
+		border-radius: 4px !important;
+
+		margin: 4px !important;
+		border: 0px !important;
+		cursor: pointer !important;
+		transition: 0s !important;
+		padding-top: 2px !important;
+		outline: 0px !important;
+	}
+
+	button:hover {
+		background-color: #1e90ff !important;
+		border-radius: 4px !important;
+		outline: 0px !important;
+
+	}
+
+
+	button:active,
+	button:focus {
+		width: 96px !important;
+		height: 96px !important;
+		margin: 6px !important;
+		border: 0px !important;
+		box-shadow: 0px 0px 0px 2px #1e90ff !important;
+		outline: 0px !important;
+	}
+
+	.buttons-sm button {
+		width: 60px !important;
+		height: 60px !important;
+	}
+
+	.buttons-md button {
+		width: 100px !important;
+		height: 100px !important;
+	}
+
+	.buttons-lg button {
+		width: 150px !important;
+		height: 150px !important;
+	}
+
+	button img {
+		max-height: 90% !important;
+		max-width: 90% !important;
+		margin: auto !important;
+		outline: 0px !important;
+	}
+
+	/*
+	.col {
+		text-align: justify !important;
+	}*/
+}
+
+
+
+@-moz-document url-prefix("https://www.youtube.com") {
+	* {
+		font-family: Fira Sans !important;
+	}
+
+	/* imo, Roboto is too narrow, this spaces it more nicely */
+	html,
+	body,
+	ytd-page-manager>*.ytd-page-manager {
+		letter-spacing: 0.2px !important;
+		background-color: #191A2A !important;
+	}
+
+	/* VIDEO TITLE */
+	.title.ytd-video-primary-info-renderer {
+		color: #ffffff !important;
+		font-size: 22px !important;
+	}
+
+	#video-title.yt-simple-endpoint.ytd-grid-video-renderer {
+		color: #ffffff;
+	}
+
+	.title.ytd-guide-entry-renderer {
+		color: #ffffff !important;
+	}
+
+	/* VIDEO DESC */
+	.content.ytd-video-secondary-info-renderer {
+		color: #cbd1dd !important;
+	}
+
+	.count-text.ytd-comments-header-renderer {
+		color: #cbd1dd !important;
+	}
+
+	#owner-name.ytd-video-owner-renderer {
+		font-size: 1.6rem !important;
+		margin-bottom: 4px !important;
+	}
+
+	/* VIDEO MENU BTN TEXT */
+	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer {
+		font-size: 15px !important;
+	}
+
+	/* COMMENT TEXT, RELATED VIDS TITLE TEXT */
+	#content-text.ytd-comment-renderer,
+	#video-title {
+		color: #cbd1dd !important;
+		font-size: 14px !important;
+	}
+
+	/* COMMENT USERNAME, MORE/LESS BTN */
+	#author-text.yt-simple-endpoint.ytd-comment-renderer,
+	.more-button.ytd-comment-renderer,
+	.less-button.ytd-comment-renderer {
+		color: rgba(140, 202, 255, 0.9);
+		font-size: 13px !important;
+	}
+
+	/* COMMENT USERNAME (OP) */
+	ytd-author-comment-badge-renderer.creator {
+		background-color: rgb(72, 122, 235) !important;
+	}
+
+	ytd-author-comment-badge-renderer.creator yt-formatted-string {
+		color: #ffffff !important;
+	}
+
+
+	/* NAVBAR, CHANNEL HEADER, NOTIFICATIONS BOX */
+	#masthead,
+	#channel-header.ytd-c4-tabbed-header-renderer,
+	#tabs-inner-container.ytd-c4-tabbed-header-renderer,
+	ytd-multi-page-menu-renderer {
+		background-color: #191A2A !important;
+		box-shadow: 0 6px 50px rgba(0, 0, 0, 0.3) !important;
+	}
+
+	/* POPOVERS */
+	paper-menu {
+		background-color: rgba(21, 25, 36, 0.94);
+		border-radius: 4px !important;
+	}
+
+	.dropdown-content.paper-menu-button {
+		background-color: transparent !important;
+	}
+
+	/* THUMBNAILS */
+	ytd-thumbnail.ytd-compact-video-renderer,
+	ytd-thumbnail.ytd-video-renderer {
+		box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.4) !important;
+	}
+
+	ytd-thumbnail.ytd-compact-video-renderer img,
+	ytd-thumbnail.ytd-video-renderer img {
+		border-radius: 2px !important;
+	}
+
+	/* SEARCH */
+	ytd-searchbox[mode=legacy] #container.ytd-searchbox {
+		background-color: rgba(255, 255, 255, 0.1) !important;
+		border: 1px solid transparent !important;
+		box-shadow: none !important;
+		border-radius: 2px !important;
+	}
+
+	#search-icon-legacy.ytd-searchbox {
+		background-color: transparent;
+		border: none;
+		border-radius: 3px;
+		width: 50px;
+	}
+
+	ytd-searchbox[mode=legacy] #search-icon-legacy.ytd-searchbox:hover>yt-icon {
+		color: rgba(255, 255, 255, 0.8) !important;
+	}
+
+	ytd-searchbox[mode=legacy] #search-icon-legacy.ytd-searchbox:hover {
+		background-color: transparent;
+	}
+
+	/* SIDEBBAR */
+	ytd-guide-renderer.ytd-app,
+	app-drawer.ytd-app:not([persistent]) #header.ytd-app {
+		background-color: #191A2A !important;
+	}
+
+	#endpoint.yt-simple-endpoint.ytd-guide-entry-renderer:hover {
+		background-color: #1e90ff !important;
+	}
+
+	/* MINOR TEXT (off- #ffffff) */
+	#published-time-text.ytd-comment-renderer [is=yt-endpoint],
+	ytd-button-renderer #button.ytd-button-renderer,
+	yt-icon,
+	#metadata-line.ytd-grid-video-renderer,
+	.more-button.ytd-comment-replies-renderer,
+	.less-button.ytd-comment-replies-renderer,
+	.more-button.ytd-video-secondary-info-renderer,
+	.less-button.ytd-video-secondary-info-renderer,
+	.date.ytd-video-secondary-info-renderer,
+	#metadata.ytd-video-meta-block,
+	.view-count,
+	#title.ytd-metadata-row-renderer,
+	#byline.ytd-video-meta-block,
+	#metadata-line.ytd-video-meta-block,
+	#label.ytd-pinned-comment-badge-renderer,
+	paper-tab:not(.iron-selected)>.tab-content.paper-tab,
+	#footer.ytd-guide-renderer #guide-links-primary a,
+	#footer.ytd-guide-renderer #guide-links-secondary a,
+	#autoplay.ytd-compact-autoplay-renderer,
+	#title-annotation.ytd-shelf-renderer,
+	paper-button.yt-next-continuation,
+	#description-text.ytd-video-renderer,
+	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer,
+	#subtitle.ytd-shelf-renderer,
+	#published-time-text.ytd-comment-renderer {
+		color: rgba(180, 190, 200, 0.8) !important;
+	}
+
+	/* LIKE BTN */
+	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer .style-default-active {
+		color: #ffffff !important;
+	}
+
+	#top-level-buttons ytd-toggle-button-renderer.style-default-active:first-child yt-icon,
+	#like-button .style-default-active>yt-icon {
+		color: #5fd9b1 !important;
+	}
+
+	#top-level-buttons ytd-toggle-button-renderer.style-default-active:nth-child(2) yt-icon,
+	#dislike-button .style-default-active>yt-icon {
+		color: hsl(3, 100%, 66%) !important;
+	}
+
+	/* COMMENT BTN */
+	ytd-button-renderer #button.ytd-button-renderer.style-primary {
+		color: #ffffff !important;
+	}
+
+	paper-button {
+		background-color: transparent !important;
+	}
+
+	/* VIEWS */
+	.view-count {
+		font-size: 18px !important;
+	}
+
+	/* RED ICON */
+	ytd-guide-entry-renderer[active] .guide-icon.ytd-guide-entry-renderer {
+		color: rgba(255, 78, 78, 0.83) !important;
+	}
+
+	/* RED 'NEW' ICON */
+	.badge-style-type-simple.ytd-badge-supported-renderer {
+		background-color: rgba(96, 100, 118, 0.83);
+		color: rgba(255, 255, 255, 0.78);
+	}
+
+	/* LINKS */
+	[is=yt-endpoint],
+	.yt-simple-endpoint,
+	paper-tab:not(.iron-selected):hover>.tab-content {
+		color: rgba(140, 202, 255, 0.9);
+	}
+
+	[is=yt-endpoint]:hover,
+	.yt-simple-endpoint:hover {
+		color: rgba(180, 230, 255, 1);
+	}
+
+	/* SUBSCRIBE BTN */
+	paper-button.ytd-subscribe-button-renderer {
+		background: linear-gradient(90deg, #e11958, hsl(3, 81.8%, 49.6%));
+		transition: all 0.2s ease;
+	}
+
+	paper-button.ytd-subscribe-button-renderer:hover {
+		filter: brightness(1.25);
+	}
+
+	paper-button[subscribed].ytd-subscribe-button-renderer {
+		background: hsl(0, 0%, 93.3%);
+	}
+
+	/* VOTE COUNT (on comments) */
+	#vote-count.ytd-comment-action-buttons-renderer {
+		color: #5fd9b1;
+	}
+
+	/* LIKE BAR */
+	#sentiment.ytd-video-primary-info-renderer {
+		width: 255px;
+		height: 3px;
+		margin-top: 6px;
+	}
+
+	#like-bar.ytd-sentiment-bar-renderer {
+		height: 3px;
+	}
+}
+
+
+@-moz-document domain("mail.google.com") {
+	* {
+		font-family: "Fira Sans" !important;
+	}
+}
+
+.pip-wrapper {
+	/*transform: scale(0.5) !important;*/
+	top: inherit !important;
+	left: 15px !important;
+	border: none !important;
+}
+
+@-moz-document url-prefix("about:httpsonlyerror") {
+	body {
+		background-color: #191A2A !important;
+	}
+
+
+	.title {
+		background-image: url("Lock.svg") !important;
+	}
+
+	* {
+		font-family: Fira Sans !important;
+	}
+}
+
+/* error page illustration */
+.dnsNotFound #errorPageContainer {
+	background-image: url("https://i.imgur.com/Z07I9ar.gif") !important;
+	background-color: #191A2A !important;
+}
+
+.dnsNotFound {
+	font-family: Fira Sans !important;
+	background-color: #191A2A !important;
+}
+
+
+
+/*** Firefox 81 PDF Viewer Dark Theme for userContent.css ***/
+/* 
+  These rules are from 
+  resource://pdf.js/web/viewer.css
+  Line 456, the lines within:
+  @media (prefers-color-scheme: dark) { :root { } }
+
+[mozdisallowselectionprint] > body {
+	--main-color: rgba(249, 249, 250, 1);
+	--body-bg-color: rgba(42, 42, 46, 1);
+	--errorWrapper-bg-color: rgba(199, 17, 17, 1);
+	--progressBar-color: rgba(0, 96, 223, 1);
+	--scrollbar-color: rgba(121, 121, 123, 1);
+	--scrollbar-bg-color: rgba(35, 35, 39, 1);
+
+	--sidebar-bg-color: rgba(50, 50, 52, 1);
+	--toolbar-bg-color: rgba(56, 56, 61, 1);
+	--toolbar-border-color: rgba(12, 12, 13, 1);
+	--button-hover-color: rgba(102, 102, 103, 1);
+	--toggled-btn-bg-color: rgba(0, 0, 0, 0.3);
+	--dropdown-btn-bg-color: rgba(74, 74, 79, 1);
+
+	--field-color: rgba(250, 250, 250, 1);
+	--field-bg-color: rgba(64, 64, 68, 1);
+	--field-border-color: rgba(115, 115, 115, 1);
+	--findbar-nextprevious-btn-bg-color: rgba(89, 89, 89, 1);
+	--outline-color: rgba(255, 255, 255, 0.8);
+	--outline-hover-color: rgba(255, 255, 255, 0.9);
+	--outline-active-color: rgba(255, 255, 255, 0.08);
+	--outline-active-bg-color: rgba(255, 255, 255, 1);
+	--sidebaritem-bg-color: rgba(255, 255, 255, 0.15);
+	--doorhanger-bg-color: rgba(74, 74, 79, 1);
+	--doorhanger-border-color: rgba(39, 39, 43, 1);
+	--doorhanger-hover-color: rgba(93, 94, 98, 1);
+	--doorhanger-separator-color: rgba(92, 92, 97, 1);
+	--overlay-button-bg-color: rgba(92, 92, 97, 1);
+	--overlay-button-hover-color: rgba(115, 115, 115, 1);
+
+	--loading-icon: url(images/loading-dark.svg);
+	--treeitem-expanded-icon: url(images/treeitem-expanded-dark.svg);
+	--treeitem-collapsed-icon: url(images/treeitem-collapsed-dark.svg);
+	--toolbarButton-menuArrow-icon: url(images/toolbarButton-menuArrow-dark.svg);
+	--toolbarButton-sidebarToggle-icon: url(images/toolbarButton-sidebarToggle-dark.svg);
+	--toolbarButton-secondaryToolbarToggle-icon: url(images/toolbarButton-secondaryToolbarToggle-dark.svg);
+	--toolbarButton-pageUp-icon: url(images/toolbarButton-pageUp-dark.svg);
+	--toolbarButton-pageDown-icon: url(images/toolbarButton-pageDown-dark.svg);
+	--toolbarButton-zoomOut-icon: url(images/toolbarButton-zoomOut-dark.svg);
+	--toolbarButton-zoomIn-icon: url(images/toolbarButton-zoomIn-dark.svg);
+	--toolbarButton-presentationMode-icon: url(images/toolbarButton-presentationMode-dark.svg);
+	--toolbarButton-print-icon: url(images/toolbarButton-print-dark.svg);
+	--toolbarButton-openFile-icon: url(images/toolbarButton-openFile-dark.svg);
+	--toolbarButton-download-icon: url(images/toolbarButton-download-dark.svg);
+	--toolbarButton-bookmark-icon: url(images/toolbarButton-bookmark-dark.svg);
+	--toolbarButton-viewThumbnail-icon: url(images/toolbarButton-viewThumbnail-dark.svg);
+	--toolbarButton-viewOutline-icon: url(images/toolbarButton-viewOutline-dark.svg);
+	--toolbarButton-viewAttachments-icon: url(images/toolbarButton-viewAttachments-dark.svg);
+	--toolbarButton-search-icon: url(images/toolbarButton-search-dark.svg);
+	--findbarButton-previous-icon: url(images/findbarButton-previous-dark.svg);
+	--findbarButton-next-icon: url(images/findbarButton-next-dark.svg);
+	--secondaryToolbarButton-firstPage-icon: url(images/secondaryToolbarButton-firstPage-dark.svg);
+	--secondaryToolbarButton-lastPage-icon: url(images/secondaryToolbarButton-lastPage-dark.svg);
+	--secondaryToolbarButton-rotateCcw-icon: url(images/secondaryToolbarButton-rotateCcw-dark.svg);
+	--secondaryToolbarButton-rotateCw-icon: url(images/secondaryToolbarButton-rotateCw-dark.svg);
+	--secondaryToolbarButton-selectTool-icon: url(images/secondaryToolbarButton-selectTool-dark.svg);
+	--secondaryToolbarButton-handTool-icon: url(images/secondaryToolbarButton-handTool-dark.svg);
+	--secondaryToolbarButton-scrollVertical-icon: url(images/secondaryToolbarButton-scrollVertical-dark.svg);
+	--secondaryToolbarButton-scrollHorizontal-icon: url(images/secondaryToolbarButton-scrollHorizontal-dark.svg);
+	--secondaryToolbarButton-scrollWrapped-icon: url(images/secondaryToolbarButton-scrollWrapped-dark.svg);
+	--secondaryToolbarButton-spreadNone-icon: url(images/secondaryToolbarButton-spreadNone-dark.svg);
+	--secondaryToolbarButton-spreadOdd-icon: url(images/secondaryToolbarButton-spreadOdd-dark.svg);
+	--secondaryToolbarButton-spreadEven-icon: url(images/secondaryToolbarButton-spreadEven-dark.svg);
+	--secondaryToolbarButton-documentProperties-icon: url(images/secondaryToolbarButton-documentProperties-dark.svg);
+}
+
+
+
+@-moz-document url-prefix("about:reader") {
+	body.dark.serif {
+
+		background-size: 100% 100% !important;
+		background-repeat: no-repeat !important;
+		background-attachment: fixed !important;
+		background-position: center !important;
+	}
+}
+
+
+/* volume and video controls */
+.videoControls #controlBar #scrubberStack {
+	display: inline-block !important;
+}
+
+.videoControls #controlBar #volumeStack {
+	display: inline-block !important;
+}
+
+.videoControls #pictureInPictureToggle[hidden]~#controlBar #muteButton {
+	display: none !important;
+}
+
+#controlsContainer:not([hidden]) #controlBar #volumeStack {
+	display: inline-block !important;
+}
+
+#controlsContainer:not([hidden]) #pictureInPictureToggle[hidden]~#controlBar #muteButton {
+	display: none !important;
+}
+
+@-moz-document media-document(video) {
+	#controlsContainer:not([hidden]) #controlBar #volumeStack {
+		display: inline-block !important;
+	}
+
+	#controlsContainer:not([hidden]) #pictureInPictureToggle[hidden]~#controlBar #muteButton {
+		display: none !important;
+	}
+}
+
+
+
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+	browser[type="content-primary"] {
+		background: #191A2A !important;
+	}
+}
+
+@-moz-document url(about:newtab) {
+
+	body,
+	#newtab-customize-overlay {
+		background-color: #191A2A !important;
+		color: white !important;
+	}
+}
+
+#tabbrowser-tabpanels {
+	background-color: var(--uc-light-bkgnd-color, #191A2A) !important;
+}
+
+
+:where(textarea),
+:where(input[type="text"], input[type="search"], input[type="password"], input[type="url"]) {
+	appearance: none;
+	border-style: solid;
+	outline: none;
+}
+
+::selection {
+	background: #1e90ff !important;
+	color: #ffffff !important;
+}
+
+
+
+@-moz-document url-prefix("chrome://global/content/print.xhtml") {
+	* {
+		--in-content-page-background: #191A2A !important;
+		--dropdown-bgcolor: #191A2A !important;
+	}
+
+	.printPreviewBrowser {
+		background: black !important;
+	}
+}
+
+
+@-moz-document domain("facebook.com") {
+	* {
+		font-family: "Fira Sans" !important;
+	}
+}
+
+@-moz-document domain("reddit.com") {
+
+	html,
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	li,
+	li span,
+	p,
+	a,
+	.sitetable,
+	.entry .buttons li a,
+	.md p,
+	.morelink a,
+	.morelink a:hover {
+		font-family: 'Fira Sans', sans-serif;
+	}
+
+	.s1r1zaa-6,
+	.s1c2oq5o-6,
+	.eePGjB {
+		background-color: rgba(0, 0, 0, 0.8) !important;
+	}
+
+	.s1r1zaa-2:after,
+	.bkQNFA,
+	#overlayScrollContainer:after,
+	.s1c2oq5o-2:after,
+	.s3n19jy-0:after,
+	.s1tblowa-2:after,
+	.kaaRvo:after,
+	.kujlWd::after,
+	.eePGjB::after {
+		background: rgba(0, 0, 0, 0) !important;
+	}
+
+	.eePGjB {
+		-webkit-animation: fadein 1s;
+		-moz-animation: fadein 1s;
+		-ms-animation: fadein 1s;
+		-o-animation: fadein 1s;
+		animation: fadein 1s;
+	}
+
+	@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+		.eePGjB {
+			-webkit-backdrop-filter: blur(3px) !important;
+			backdrop-filter: blur(3px) !important;
+		}
+	}
+
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* Firefox < 16 */
+	@-moz-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* Internet Explorer */
+	@-ms-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* Opera < 12.1 */
+	@-o-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1 !important;
+		}
+	}
+
+
+}
+
+
+@-moz-document url-prefix(chrome: //browser/content/preferences/cookies.xul) {
+
+	#CookiesDialog {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-page-background) !important;
+	}
+
+	#domainCol,
+	#nameCol {
+		-moz-appearance: none !important;
+		border: none !important;
+	}
+
+	#domainCol {
+		border-right: 1px solid !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	.windowDialog,
+	textbox {
+		color: var(--in-content-page-color) !important;
+	}
+
+	textbox[type=search] {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-box-background) !important;
+		border: 1px solid !important;
+		border-color: var(--in-content-box-border-color) !important;
+		border-radius: 3px !important;
+		padding: 2px 4px 2px 2px !important;
+	}
+
+	#cookiesList {
+		-moz-appearance: none !important;
+		border: 1px solid !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	button {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-page-background) !important;
+		border: 1px solid !important;
+		border-radius: 3px !important;
+		color: var(--in-content-page-color) !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	button:hover {
+		background-color: var(--in-content-box-background) !important;
+	}
+}
+
+@-moz-document url-prefix(chrome: //pippki) {
+
+	tab {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-box-background) !important;
+		text-shadow: none !important;
+		padding: 0 8px !important;
+		color: var(--in-content-page-color);
+		border-right: 1px solid !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	tab:first-of-type {
+		border-top-left-radius: 4px !important;
+		border-bottom-left-radius: 4px !important;
+	}
+
+	tab:last-of-type {
+		border: none !important;
+		border-top-right-radius: 4px !important;
+		border-bottom-right-radius: 4px !important;
+	}
+
+	tab[selected=true] {
+		color: var(--in-content-selected-text) !important;
+	}
+
+	#certDetails {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-page-background) !important;
+	}
+
+	tree {
+		-moz-appearance: none !important;
+		color: var(--in-content-page-color) !important;
+	}
+
+	treecol {
+		-moz-appearance: none !important;
+		border: 0 solid !important;
+		border-color: var(--in-content-box-background) !important;
+	}
+
+	treecolpicker {
+		-moz-appearance: none;
+		border: none !important;
+	}
+
+	.windowDialog,
+	dialog,
+	textbox {
+		color: var(--in-content-page-color) !important;
+	}
+
+	#certDumpVal,
+	.scrollfield,
+	textbox[type=search] {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-box-background) !important;
+		border: 1px solid;
+		border-color: var(--in-content-box-border-color) !important;
+		border-radius: 3px !important;
+		padding: 2px 4px 2px 2px !important;
+	}
+
+	button {
+		-moz-appearance: none !important;
+		background-color: var(--in-content-page-background) !important;
+		border: 1px solid !important;
+		border-radius: 3px !important;
+		color: var(--in-content-page-color) !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	button:hover {
+		background-color: var(--in-content-box-background) !important;
+	}
+}
+
+@-moz-document url-prefix(chrome: //pippki/content/exceptionDialog) {
+
+	#exceptiondialog {
+		-moz-appearance: none !important;
+		background-color: var(--tone-8) !important
+	}
+
+	textbox {
+		-moz-appearance: none !important;
+		min-height: 20px !important;
+		background: var(--in-content-box-background) !important;
+		border: 1px solid var(--in-content-box-border-color) !important;
+		padding: 1px !important;
+	}
+}
+
+:root {
+
+	--checkmark: #ffffff !important;
+	--checkbox-checked-ink: #ffffff !important;
+
+}
