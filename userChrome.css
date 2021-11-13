@@ -842,7 +842,7 @@ treechildren::-moz-tree-image(query) {
 		position: fixed !important;
 		right: 140px !important;
 		/* Space for window controls */
-		width: calc(100vw - 875px) !important;
+		width: calc(100vw - 840px) !important;
 		/* Window width - window control width - menuitem (English) width */
 		text-align: left !important;
 		z-index: 1;
@@ -856,7 +856,7 @@ treechildren::-moz-tree-image(query) {
 	head>title {
 		display: -moz-box !important;
 		padding-top: 1px !important;
-		margin-top: 10px !important;
+		margin-top: 12px !important;
 		max-width: 57vw !important;
 		overflow-x: -moz-hidden-unscrollable !important;
 		text-overflow: ellipsis !important;
@@ -2031,9 +2031,15 @@ input:not(#urlbar-input) {
 	transition: all 0.3s ease !important;
 }
 
-
+/*
+.urlbarView-favicon {
+	display: none !important;
+}
+*/
 /* tab-close button tweaks */
+
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button {
+	/*list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF92SDU2eGE0aWxxcmgzT2xoaUNsMGpRTnNpV0dGNWZuTiI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF92SDU2eGE0aWxxcmgzT2xoaUNsMGpRTnNpV0dGNWZuTikiPjxwYXRoIGQ9IiBNIDAgOCBDIDAgMy41ODUgMy41ODUgMCA4IDAgQyAxMi40MTUgMCAxNiAzLjU4NSAxNiA4IEMgMTYgMTIuNDE1IDEyLjQxNSAxNiA4IDE2IEMgMy41ODUgMTYgMCAxMi40MTUgMCA4IFogIE0gOC44ODYgNS4yMzQgQyA4Ljg4NiAzLjk5IDkuODk2IDIuOTc5IDExLjE0IDIuOTc5IEMgMTIuMzg0IDIuOTc5IDEzLjM5NSAzLjk5IDEzLjM5NSA1LjIzNCBDIDEzLjM5NSA2LjMwNyAxMi42NDIgNy4yMDYgMTEuNjM3IDcuNDMzIEMgMTEuNDc3IDcuNDY5IDExLjMxMSA3LjQ4OCAxMS4xNCA3LjQ4OCBDIDkuODk2IDcuNDg4IDguODg2IDYuNDc4IDguODg2IDUuMjM0IFogIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9InJnYigxMzIsMTkzLDI1NSkiLz48L2c+PC9zdmc+") !important;*/
 	list-style-image: url("closespin.svg") !important;
 	background: none !important;
 	width: 28px !important;
@@ -2041,6 +2047,7 @@ input:not(#urlbar-input) {
 	/*margin-right: 2px !important;*/
 
 }
+
 
 #tabbrowser-tabs .tabbrowser-tab:hover .tab-close-button {
 	transform: rotate(2880deg) !important;
