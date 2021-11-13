@@ -47,6 +47,7 @@ tooltip {
 
 }
 
+/* menus */
 #file-menu,
 #edit-menu,
 #toolbar-menubar,
@@ -54,14 +55,13 @@ tooltip {
 #bookmarksMenu,
 #view-menu,
 #tools-menu,
-#help-menu {
-
+#helpMenu {
+	-moz-appearance: none !important;
+	margin-top: 6px !important;
 	font-family: Fira Sans !important;
-	/*	text-decoration: none !important;
-	font-weight: normal !important;
-	font-style: normal !important;*/
 	font-size: 14px !important;
-	/*text-align: left !important;*/
+	text-align: left !important;
+
 }
 
 menubar,
@@ -842,7 +842,7 @@ treechildren::-moz-tree-image(query) {
 		position: fixed !important;
 		right: 140px !important;
 		/* Space for window controls */
-		width: calc(100vw - 835px) !important;
+		width: calc(100vw - 875px) !important;
 		/* Window width - window control width - menuitem (English) width */
 		text-align: left !important;
 		z-index: 1;
@@ -856,7 +856,7 @@ treechildren::-moz-tree-image(query) {
 	head>title {
 		display: -moz-box !important;
 		padding-top: 1px !important;
-		margin-top: 8px !important;
+		margin-top: 10px !important;
 		max-width: 57vw !important;
 		overflow-x: -moz-hidden-unscrollable !important;
 		text-overflow: ellipsis !important;
@@ -874,22 +874,6 @@ treechildren::-moz-tree-image(query) {
 	}
 }
 
-
-/* menus */
-#file-menu,
-#edit-menu,
-#toolbar-menubar,
-#history-menu,
-#bookmarksMenu,
-#view-menu,
-#tools-menu,
-#helpMenu {
-	-moz-appearance: none !important;
-	margin-top: 3px !important;
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	text-align: left !important;
-}
 
 #PlacesToolbar,
 #titlebar,
@@ -1241,10 +1225,11 @@ toolbarbutton#scrollbutton-down:active>.toolbarbutton-icon {
 	transform: scale(-0.6) !important;
 }
 
+/*
 toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	padding: calc(var(--toolbarbutton-inner-padding) + 3px) !important;
 }
-
+*/
 
 /*---------------------------------------------------------------------------*/
 /*Move the three dots to the end (rightmost) of the PageActions*/
@@ -1307,29 +1292,32 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	margin-left: -5px !important;
 }
 
-
-/*center tab label */
-.tab-label-container {
-	display: grid;
-	justify-content: safe center;
+/* center tab text */
+.tab-text,
+.tab-label {
+	-moz-box-flex: 1 !important;
+	text-align: center !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	padding-top: 1px !important;
 }
 
+/*
 .tab-label,
 .tab-secondary-label {
 	overflow: hidden !important;
 }
-
+*/
+/*
 .tabbrowser-tab[selected]:not(:hover) .tab-label-container,
 #tabbrowser-tabs:not([closebuttons="activetab"]) .tabbrowser-tab:not(:hover, [pinned]) .tab-label-container {
 	margin-inline-end: 7px;
 }
+*/
 
-/*toolbarbutton.scrollbutton-up,
-toolbarbutton.scrollbutton-down
-.urlbar-icon,
+/* reduce space of navbar icons */
+toolbarbutton.scrollbutton-up,
+toolbarbutton.scrollbutton-down .urlbar-icon,
 .urlbar-icon-wrapper,
 toolbar .toolbarbutton-1,
 #tabbrowser-tabs toolbarbutton,
@@ -1341,7 +1329,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack,
 	border-color: none !important;
 	margin: -1.5px !important;
 }
-*/
+
 
 /* Hide the normal loading indicator (just show tab-icon instead) and make the top tab-line bounce left-to-right */
 @keyframes tab-loading-line-anim {
@@ -1358,7 +1346,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack,
 .tab-background[selected]::before {
 	content: "";
 	display: -moz-box;
-	height: 27px;
+	height: 30px;
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -1790,7 +1778,30 @@ input:not(#urlbar-input) {
 	border-top: 0px !important;
 }
 
-/* Reduce Spacing Between Pinned And Regular Tabs */
+/*
+#tabbrowser-arrowscrollbox {
+	border-inline: 10px solid transparent;
+	transition-duration: 7000ms;
+}
+
+#tabbrowser-arrowscrollbox[highlight] {
+	transition-duration: 0ms;
+}
+
+#tabbrowser-arrowscrollbox[overflowing]:not([scrolledtoend="true"]) {
+	border-right-color: color-mix(in srgb, currentColor 30%, transparent);
+}
+
+#tabbrowser-arrowscrollbox[overflowing]:not([scrolledtostart="true"]) {
+	border-left-color: color-mix(in srgb, currentColor 30%, transparent);
+}
+
+#tabbrowser-arrowscrollbox[overflowing][highlight]:not([scrolledtoend="true"]) {
+	border-right-color: transparent !important;
+}
+*/
+
+/* Reduce Spacing Between Pinned And Regular Tabs 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
 	margin-inline-start: initial !important;
 }
@@ -1800,27 +1811,57 @@ input:not(#urlbar-input) {
 	display: none !important;
 }
 
-/* Adds Small Space Before First Tab To Match Top Padding */
+/* Adds Small Space Before First Tab To Match Top Padding 
 #tabbrowser-tabs {
 	margin-left: 0px !important;
-}
+}*/
 
-/* Sets Right-Padding Of New Tab Button To 0 */
+/* Sets Right-Padding Of New Tab Button To 0 
 #tabs-newtab-button,
 #TabsToolbar #new-tab-button {
 	padding-right: 0px !important;
 }
-
+*/
 /* Make Pinned Tabs Have Equal Favicon Padding */
-/* Fixed By Bred For Brave-Fox                 */
+/* Fixed By Bred For Brave-Fox                 
 :root:not([uidensity="compact"]) .tab-content[pinned] {
 	padding-top: 0px !important;
 	padding-right: 0px !important;
 	padding-bottom: 0px !important;
 	padding-left: 9px !important;
 }
+*/
 
+/* Kill Close Button. (Don't Worry, It Comes Back Later) */
+#TabsToolbar .close-icon {
+	display: none !important;
+}
 
+/* Always Show Close Icon - Selected Tabs */
+#TabsToolbar .tabbrowser-tab[selected]:not([pinned]) .close-icon {
+	display: inline-block !important;
+}
+
+/* Show Close Icon On Hover - Unfoucused Tabs */
+/* Thanks u/9hp71n */
+#TabsToolbar .tabbrowser-tab:not([pinned]):hover .close-icon {
+	display: inline-block !important;
+}
+
+/* Make Close Icon Hitbox Circular 
+.tab-close-button,
+.tab-icon-overlay:-moz-any([soundplaying], [muted], [activemedia-blocked]),
+.tab-icon-sound {
+	border-radius: 99px !important;
+	color: inherit !important;
+	-moz-context-properties: fill, fill-opacity !important;
+	transition-property: fill-opacity, background-color !important;
+	transition-duration: .15s !important;
+	transition-timing-function: var(--ease-basic) !important;
+	fill-opacity: 1 !important;
+	opacity: 1 !important;
+}
+*/
 /* Remove Stupid Black Line Under ToolBar */
 :root {
 	--chrome-content-separator-color: none !important;
@@ -1829,31 +1870,31 @@ input:not(#urlbar-input) {
 /* Make Tab Name Semi-Bold When Selected */
 .tab-text[selected] {
 	color: white !important;
-	font-weight: bold !important;
+
 }
 
 .tab-text {
 	color: #808080 !important;
 }
 
-/* Annihilate Padding Between Tabs */
+/* Annihilate Padding Between Tabs 
 .tabbrowser-tab {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
-
-/* Changes Minimum Hight For Tabs [Do Not Touch] */
+*/
+/* Changes Minimum Hight For Tabs [Do Not Touch] 
 #TabsToolbar,
 #tabbrowser-tabs {
 	--tab-min-height: 30px !important;
 }
-
-/* Remove 1px Gap */
+*/
+/*
 .tabbrowser-tab:hover::after {
 	width: 0px !important;
 	transition: width 350ms linear !important;
 }
-
+*/
 #PlacesToolbar toolbarseparator {
 	-moz-appearance: none !important;
 	width: 1px;
@@ -1869,7 +1910,60 @@ input:not(#urlbar-input) {
 	margin-left: 0px !important;
 }
 
+/*================ GLOBAL COLORS ================*/
+:root {
+
+	--caption-min-color: 36, 209, 49;
+	--caption-max-color: 252, 185, 15;
+	--caption-close-color: 250, 55, 55;
+}
+
+/*================== CAPTION BUTTONS ==================
+.titlebar-buttonbox {
+	position: relative;	
+}
+
+.titlebar-button {
+	transition: all 0.3s ease !important;
+	padding: 8px 10px !important;
+	background: rgba(var(--dark-color), 1) !important;
+}
+
+.titlebar-button.titlebar-close {
+	padding-right: 26px !important;
+}
+
+.titlebar-button>.toolbarbutton-icon {
+	transition: all 0.3s ease !important;
+	list-style-image: none;
+	border-radius: 16px !important;
+}
+
+.titlebar-button.titlebar-min>.toolbarbutton-icon {
+	background: rgba(var(--caption-min-color), 1) !important;
+}
+
+.titlebar-button.titlebar-max>.toolbarbutton-icon,
+.titlebar-button.titlebar-restore>.toolbarbutton-icon {
+	background: rgba(var(--caption-max-color), 1) !important;
+}
+
+.titlebar-button.titlebar-close>.toolbarbutton-icon {
+	background: rgba(var(--caption-close-color), 1) !important;
+}
+
+.titlebar-button:hover>.toolbarbutton-icon {
+	background: #1e90ff !important;
+}
+*/
+/*
+.titlebar-button.titlebar-min:hover>.toolbarbutton-icon,
+.titlebar-button.titlebar-max:hover>.toolbarbutton-icon,
+.titlebar-button.titlebar-restore:hover>.toolbarbutton-icon,
+.titlebar-button.titlebar-close:hover>.toolbarbutton-icon {}
+*/
 /*-min max close */
+
 
 .titlebar-button>.toolbarbutton-icon {
 	height: 18px !important;
@@ -1938,7 +2032,8 @@ input:not(#urlbar-input) {
 }
 
 
-#tabbrowser-tabs .tabbrowser-tab .tab-close-button {	
+/* tab-close button tweaks */
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button {
 	list-style-image: url("closespin.svg") !important;
 	background: none !important;
 	width: 28px !important;
@@ -1951,3 +2046,4 @@ input:not(#urlbar-input) {
 	transform: rotate(2880deg) !important;
 	transition: transform ease-in-out 4s !important;
 }
+
