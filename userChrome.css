@@ -1790,29 +1790,6 @@ input:not(#urlbar-input) {
 	border-top: 0px !important;
 }
 
-/*
-#tabbrowser-arrowscrollbox {
-	border-inline: 10px solid transparent;
-	transition-duration: 7000ms;
-}
-
-#tabbrowser-arrowscrollbox[highlight] {
-	transition-duration: 0ms;
-}
-
-#tabbrowser-arrowscrollbox[overflowing]:not([scrolledtoend="true"]) {
-	border-right-color: color-mix(in srgb, currentColor 30%, transparent);
-}
-
-#tabbrowser-arrowscrollbox[overflowing]:not([scrolledtostart="true"]) {
-	border-left-color: color-mix(in srgb, currentColor 30%, transparent);
-}
-
-#tabbrowser-arrowscrollbox[overflowing][highlight]:not([scrolledtoend="true"]) {
-	border-right-color: transparent !important;
-}
-*/
-
 /* Reduce Spacing Between Pinned And Regular Tabs */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
 	margin-inline-start: initial !important;
@@ -1844,36 +1821,6 @@ input:not(#urlbar-input) {
 }
 
 
-/* Kill Close Button. (Don't Worry, It Comes Back Later) 
-#TabsToolbar .close-icon {
-	display: none !important;
-}
-*/
-/* Always Show Close Icon - Selected Tabs 
-#TabsToolbar .tabbrowser-tab[selected]:not([pinned]) .close-icon {
-	display: inline-block !important;
-}
-*/
-/* Show Close Icon On Hover - Unfoucused Tabs */
-/* Thanks u/9hp71n 
-#TabsToolbar .tabbrowser-tab:not([pinned]):hover .close-icon {
-	display: inline-block !important;
-}
-*/
-/* Make Close Icon Hitbox Circular 
-.tab-close-button,
-.tab-icon-overlay:-moz-any([soundplaying], [muted], [activemedia-blocked]),
-.tab-icon-sound {
-	border-radius: 99px !important;
-	color: inherit !important;
-	-moz-context-properties: fill, fill-opacity !important;
-	transition-property: fill-opacity, background-color !important;
-	transition-duration: .15s !important;
-	transition-timing-function: var(--ease-basic) !important;
-	fill-opacity: 1 !important;
-	opacity: 1 !important;
-}
-*/
 /* Remove Stupid Black Line Under ToolBar */
 :root {
 	--chrome-content-separator-color: none !important;
@@ -1922,60 +1869,7 @@ input:not(#urlbar-input) {
 	margin-left: 0px !important;
 }
 
-/*================ GLOBAL COLORS ================*/
-:root {
-
-	--caption-min-color: 36, 209, 49;
-	--caption-max-color: 252, 185, 15;
-	--caption-close-color: 250, 55, 55;
-}
-
-/*================== CAPTION BUTTONS ==================
-.titlebar-buttonbox {
-	position: relative;	
-}
-
-.titlebar-button {
-	transition: all 0.3s ease !important;
-	padding: 8px 10px !important;
-	background: rgba(var(--dark-color), 1) !important;
-}
-
-.titlebar-button.titlebar-close {
-	padding-right: 26px !important;
-}
-
-.titlebar-button>.toolbarbutton-icon {
-	transition: all 0.3s ease !important;
-	list-style-image: none;
-	border-radius: 16px !important;
-}
-
-.titlebar-button.titlebar-min>.toolbarbutton-icon {
-	background: rgba(var(--caption-min-color), 1) !important;
-}
-
-.titlebar-button.titlebar-max>.toolbarbutton-icon,
-.titlebar-button.titlebar-restore>.toolbarbutton-icon {
-	background: rgba(var(--caption-max-color), 1) !important;
-}
-
-.titlebar-button.titlebar-close>.toolbarbutton-icon {
-	background: rgba(var(--caption-close-color), 1) !important;
-}
-
-.titlebar-button:hover>.toolbarbutton-icon {
-	background: #1e90ff !important;
-}
-*/
-/*
-.titlebar-button.titlebar-min:hover>.toolbarbutton-icon,
-.titlebar-button.titlebar-max:hover>.toolbarbutton-icon,
-.titlebar-button.titlebar-restore:hover>.toolbarbutton-icon,
-.titlebar-button.titlebar-close:hover>.toolbarbutton-icon {}
-*/
 /*-min max close */
-
 
 .titlebar-button>.toolbarbutton-icon {
 	height: 18px !important;
@@ -2043,31 +1937,8 @@ input:not(#urlbar-input) {
 	transition: all 0.3s ease !important;
 }
 
-/*
-.urlbarView-favicon {
-	display: none !important;
-}
-*/
-/* tab-close button tweaks */
-/*--------------------close tab size --------------
-:root {
-	--tab_close_icons_size: 20px !important;
-}
-*/
-/*
-#main-window #navigator-toolbox #TabsToolbar #closetab_fmarin_com-browser-action .toolbarbutton-icon,
-#main-window #navigator-toolbox #TabsToolbar #_fe8cab45-aaee-45f8-8765-781e0ebea300_-browser-action .toolbarbutton-icon,
-#main-window #navigator-toolbox #TabsToolbar .close-icon>.toolbarbutton-icon,
-#main-window #navigator-toolbox #TabsToolbar .tab-content .close-icon {
-	min-width: var(--tab_close_icons_size) !important;
-	width: var(--tab_close_icons_size) !important;
-	min-height: var(--tab_close_icons_size) !important;
-	height: var(--tab_close_icons_size) !important;
-	margin-right: 2px !important;
-}*/
 
-#tabbrowser-tabs .tabbrowser-tab .tab-close-button {
-	/*list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF92SDU2eGE0aWxxcmgzT2xoaUNsMGpRTnNpV0dGNWZuTiI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF92SDU2eGE0aWxxcmgzT2xoaUNsMGpRTnNpV0dGNWZuTikiPjxwYXRoIGQ9IiBNIDAgOCBDIDAgMy41ODUgMy41ODUgMCA4IDAgQyAxMi40MTUgMCAxNiAzLjU4NSAxNiA4IEMgMTYgMTIuNDE1IDEyLjQxNSAxNiA4IDE2IEMgMy41ODUgMTYgMCAxMi40MTUgMCA4IFogIE0gOC44ODYgNS4yMzQgQyA4Ljg4NiAzLjk5IDkuODk2IDIuOTc5IDExLjE0IDIuOTc5IEMgMTIuMzg0IDIuOTc5IDEzLjM5NSAzLjk5IDEzLjM5NSA1LjIzNCBDIDEzLjM5NSA2LjMwNyAxMi42NDIgNy4yMDYgMTEuNjM3IDcuNDMzIEMgMTEuNDc3IDcuNDY5IDExLjMxMSA3LjQ4OCAxMS4xNCA3LjQ4OCBDIDkuODk2IDcuNDg4IDguODg2IDYuNDc4IDguODg2IDUuMjM0IFogIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9InJnYigxMzIsMTkzLDI1NSkiLz48L2c+PC9zdmc+") !important;*/
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button {	
 	list-style-image: url("closespin.svg") !important;
 	background: none !important;
 	width: 28px !important;
