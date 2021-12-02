@@ -1,4 +1,4 @@
-/*--------------------About firefox --------------181a21----181c25--#1b1d2c-#131620--*/
+/*--------------------About firefox --------------181a21----181c25--#242131-#131620--*/
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	#leftBox {
 		background-image: url("renardeau.gif") !important;
@@ -19,7 +19,7 @@
 		min-height: 350px !important;
 		max-height: 400px !important;
 		/*background-image: url("spacex.jpg") !important;*/
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 		border: 0px !important;
 		font-family: Fira Sans !important;
 		font-size: inherit !important;
@@ -38,6 +38,11 @@
 	}
 }
 
+::selection {
+	background: #1f90ff !important;
+	color: #ffffff !important;
+}
+
 * {
 	/* ---------- 😉--------- 🎨 Customization 🎨 -------------------- */
 	/*--tab-corner-rounding: 7px !important;*/
@@ -48,8 +53,8 @@
 
 #main-window,
 #navigator-toolbox {
-	background-color: #1b1d2c !important;
-	background: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 	border: none !important;
 }
 
@@ -81,7 +86,7 @@ tooltip {
 	color: yellow !important;
 	width: 170px !important;
 	height: auto !important;
-	background: #1b1d2c !important;
+	background: #242131 !important;
 	border: none !important;
 	margin-inline: 2px !important;
 	font-family: Fira Sans !important;
@@ -97,7 +102,7 @@ tooltip {
 #protections-popup-tp-switch-section,
 #tracking-protection-container,
 #protections-popup-mainView {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 }
 
 :-moz-focusring,
@@ -126,11 +131,11 @@ button::-moz-focus-inner,
 
 #statuspanel #statuspanel-label {
 	appearance: none !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	font-family: "Fira Sans" !important;
 	font-size: 14px !important;
 	color: #ffff00 !important;
-	border: 1px solid #1b1d2c !important;
+	border: 1px solid #242131 !important;
 	border-radius: 0px !important;
 	text-align: center !important;
 }
@@ -229,7 +234,7 @@ menuseparator {
 @-moz-document url("chrome://global/content/alerts/alert.xhtml") {
 	#alertBox {
 		border-radius: 4px !important;
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 		color: white !important;
 	}
 
@@ -358,7 +363,7 @@ treechildren::-moz-tree-image(query) {
 .bookmark-item[container="true"] [label="Divers "],
 .bookmark-item[container="true"] [label="BD "],
 .bookmark-item[container="true"] [label="Perso "],
-.bookmark-item[container="true"] [label="Code "] {
+.bookmark-item[container="true"] [label="Code"] {
 	list-style-image: url("Folderflat2.svg") !important;
 }
 
@@ -376,7 +381,7 @@ treechildren::-moz-tree-image(query) {
 
 .panel-subview-body {
 	color: #ffffff !important;
-	background: #1b1d2c !important;
+	background: #242131 !important;
 
 }
 
@@ -385,19 +390,19 @@ treechildren::-moz-tree-image(query) {
 }
 
 .subviewbutton.panel-subview-footer {
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	border-top: 0px solid !important;
 }
 
 .panel-header {
-	border-bottom: 1px solid #1b1d2c !important;
-	background: #1b1d2c !important;
+	border-bottom: 1px solid #242131 !important;
+	background: #242131 !important;
 }
 
 .panel-subview-footer,
 [class^="PanelUI-"] {
 	color: #ffffff !important;
-	background: #1b1d2c !important;
+	background: #242131 !important;
 	border-radius: 8px !important;
 }
 
@@ -481,7 +486,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 #editBookmarkPanel menulist menupopup {
 	appearance: none !important;
 	border: 0px !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	font-family: Fira Sans !important;
 }
 
@@ -498,7 +503,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 
 #editBMPanel_tagsSelector {
 	appearance: none !important;
-	background-color: #000000 !important;
+	background-color: #242131 !important;
 	color: #ffffff !important;
 	height: 26px !important;
 	border: none !important;
@@ -507,7 +512,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 
 #editBMPanel_namePicker {
 	appearance: none !important;
-	background-color: #000000 !important;
+	background-color: #242131 !important;
 	color: #ffffff !important;
 	height: 26px !important;
 	border: none !important;
@@ -515,11 +520,36 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	font-family: Fira Sans !important;
 }
 
+#editBMPanel_locationField,
+#editBMPanel_tagsField,
+#editBMPanel_keywordField,
+#editBMPanel_tagsSelector {
+	appearance: none !important;
+	background: #242131 !important;
+	color: white !important;
+	border: none !important;
+}
+
+
 #editBMPanel_tagsField {
 	height: 24px !important;
 	border: none !important;
-	border: none !important;
 	font-family: Fira Sans !important;
+	background: #242131 !important;
+	border: 0px !important;
+	outline: 0 !important;
+}
+
+#editBMPanel_locationField {
+	background: #242131 !important;
+	border: 0px !important;
+	outline: 0 !important;
+}
+
+#editBMPanel_keywordField {
+	background: #242131 !important;
+	border: 0px !important;
+	outline: 0 !important;
 }
 
 #editBMPanel_tagsSelectorRow {
@@ -530,7 +560,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 /*  #ffffff text in star menu */
 #editBMPanel_folderMenuList {
 	appearance: none !important;
-	background: #1b1d2c !important;
+	background: #242131 !important;
 	color: #ffffff !important;
 	border: none !important;
 	font-family: Fira Sans !important;
@@ -543,7 +573,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 }
 
 .panel-arrow {
-	fill: #1b1d2c !important;
+	fill: #242131 !important;
 	background-color: transparent !important;
 	color: #ffffff !important;
 }
@@ -559,7 +589,7 @@ panel #editBookmarkPanel,
 	opacity: 1 !important;
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 }
 
 #editBMPanel_tagsSelector>richlistitem>image,
@@ -567,7 +597,7 @@ radio>.radio-check,
 checkbox>.checkbox-check {
 	appearance: none !important;
 	border: 1px solid #404040 !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 	height: 1.3em !important;
 	width: 1.3em !important;
 	padding: 1px !important;
@@ -578,15 +608,17 @@ checkbox>.checkbox-check {
 	/*background-color: var(--toolbar-bgcolor, rgb(50, 50, 52)) !important;*/
 	margin: 1px !important;
 	border-color: graytext !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 }
 
 #editBMPanel_tagsSelector>richlistitem:not([disabled]):hover>image,
 radio:not([disabled]):hover>.radio-check,
 checkbox:not([disabled]):hover>.checkbox-check {
-	border-color: highlight !important;
+	border-color: dodgerblue !important;
 	background-color: dodgerblue !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
+	color: white !important;
+	fill: white !important;
 }
 
 #editBMPanel_tagsSelector>richlistitem[checked]>image,
@@ -594,17 +626,28 @@ radio[selected]>.radio-check,
 checkbox[checked]>.checkbox-check {
 	list-style-image: url("chrome://global/skin/icons/check.svg");
 	-moz-context-properties: fill !important;
-	fill: highlight !important;
+	fill: white !important;
+	background: dodgerblue !important;
+}
+
+#editBMPanel_tagsSelector>richlistitem[checked]>image,
+radio>.radio-check,
+checkbox>.checkbox-check {
+	background-color: #242131 !important;
+	color: white !important;
+	border-color: dodgerblue !important;
+	border-radius: 2px !important;
 }
 
 radio[selected]>.radio-check {
 	list-style-image: url("chrome://global/skin/in-content/radio.svg");
+	fill: dodgerblue !important;
 }
 
 #editBMPanel_tagsSelector>richlistitem[disabled]>image,
 radio[disabled]>.radio-check,
 checkbox[disabled]>.checkbox-check {
-	fill: #1b1d2c !important;
+	fill: #242131 !important;
 	color: white !important;
 }
 
@@ -803,7 +846,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 
 #sidebar {
 	margin: 0 0 0 0 !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	font-family: Fira Sans !important;
 	color: #ffffff !important;
 }
@@ -817,7 +860,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 #downloadsPanel-mainview,
 #downloadMainArea,
 #downloadsPanel-multiview {
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	color: #ffffff !important;
@@ -878,8 +921,8 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	color: #ffffff !important;
 	opacity: 1 !important;
 	border: 0px !important;
-	background-color: #1b1d2c !important;
-	background: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 }
 
 #sidebar-header,
@@ -887,8 +930,8 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 #sidebar-search-container #viewButton,
 .content-header,
 .sidebar-header {
-	background-color: #1b1d2c !important;
-	background: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 	color: #ffffff !important;
 	opacity: 1 !important;
 }
@@ -896,31 +939,31 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 .sidebar-search-container.tabs-container.sync-state.selected .search-box,
 hbox#sidebar-search-container textbox#search-box {
 	/*appearance: none !important;*/
-	background-color: #1b1d2c !important;
-	background: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 	color: #ffffff !important;
 	min-height: 20px !important;
 	padding: 0 0 0 2px !important;
 	border: 0px solid !important;
-	border-color: #1b1d2c !important;
+	border-color: #242131 !important;
 	border-radius: 0px !important;
 }
 
 .sidebar-search-container.tabs-container.sync-state.selected .search-box .textbox-input-box {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 	padding: 2px !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 }
 
 #sidebar .search-textbox {
-	background-color: #1b1d2c !important;
-	background: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 }
 
 #sidebar-search-container #search-box {
 	appearance: none !important;
-	background-color: #1b1d2c !important;
-	background: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 	color: #ffffff !important;
 }
 
@@ -929,18 +972,18 @@ hbox#sidebar-search-container textbox#search-box {
 #template-container,
 #webext-panels-browser,
 #webextpanels-window {
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	/*color: white !important;*/
 	font-family: "Fira Sans" !important;
 }
 
 #sidebarMenu-popup .panel-arrowcontent {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 
 }
 
 #sidebarMenu-popup {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 	border-radius: 8px !important;
 }
 
@@ -975,11 +1018,11 @@ hbox#sidebar-search-container textbox#search-box {
 }
 
 .sidebar-box {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 }
 
 :is(menupopup, panel)[type="arrow"] {
-	--panel-background: #1b1d2c !important;
+	--panel-background: #242131 !important;
 	--panel-color: white;
 	--panel-border-color: none !important;
 	--panel-border-radius: 8px;
@@ -1070,7 +1113,7 @@ treechildren::-moz-tree-image(query) {
 		position: fixed !important;
 		right: 140px !important;
 		/* Space for window controls */
-		width: calc(100vw - 835px) !important;
+		width: calc(100vw - 855px) !important;
 		/* Window width - window control width - menuitem (English) width */
 		text-align: left !important;
 		z-index: 1;
@@ -1111,8 +1154,8 @@ menubar,
 spacer,
 #new-tab-button,
 #toolbar-menubar {
-	background-color: #1b1d2c !important;
-	background: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 }
 
 /* hide webextion label */
@@ -1124,7 +1167,7 @@ spacer,
 #nav-bar,
 #PersonalToolbar,
 #PlacesToolbar {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 	border: 0px !important;
 }
 
@@ -1180,9 +1223,9 @@ spacer,
 	--arrowpanel-color: #ffffff !important;
 	--panel-color: #ffffff !important;
 	/* Background color */
-	--menu-background-color: #1b1d2c !important;
-	--arrowpanel-background: #1b1d2c !important;
-	--panel-background: #1b1d2c !important;
+	--menu-background-color: #242131 !important;
+	--arrowpanel-background: #242131 !important;
+	--panel-background: #242131 !important;
 	/* Border color (if any) */
 	--menu-border-color: #404040 !important;
 	--arrowpanel-border-color: transparent !important;
@@ -1239,8 +1282,8 @@ menupopup:not(.in-menulist)>menu {
 	z-index: 2 !important;
 	height: 100% !important;
 	color: #1e90ff !important;
-	text-shadow: 0 0 2px #1b1d2c !important;
-	margin-top: -2px !important;
+	text-shadow: 0 0 2px #242131 !important;
+	margin-top: -1px !important;
 	pointer-events: none !important;
 	font-family: Fira Sans !important;
 }
@@ -1318,6 +1361,12 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	margin-left: 2px !important;
 }
 
+#page-action-buttons:hover,
+#pageActionButton:hover,
+.urlbar-page-action:hover {
+	background: transparent !important;
+}
+
 /* blinkin cursor on urlbar */
 #urlbar {
 	color: #ffffff !important;
@@ -1375,23 +1424,25 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 
 /* lock icon in urlbar */
 #identity-icon {
-	list-style-image: url("lock.svg") !important;
-	width: 18px !important;
-	height: 18px !important;
+	/*list-style-image: url("padlock.svg") !important;
+	width: 20px !important;
+	height: 20px !important;*/
 	background: transparent !important;
 }
 
 #identity-popup-mainView {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 	font-size: 14px !important;
 }
 
 #identity-icon:hover {
 	background: dodgerblue !important;
+	border-radius: 2px !important;
 }
 
 #identity-icon-box[active] {
 	background: dodgerblue !important;
+	border-radius: 2px !important;
 }
 
 #identity-icon-box {
@@ -1401,6 +1452,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 #identity-box:hover,
 #tracking-protection-icon-container:hover {
 	background: dodgerblue !important;
+	border-radius: 2px !important;
 }
 
 #identity-box,
@@ -1419,6 +1471,14 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	border-color: white !important;
 }
 
+#protections-popup-cookiesView,
+#protections-popup-trackersView {
+	background: #242131 !important;
+	background-color: #242131 !important;
+	font-size: 14px !important;
+	color: white !important;
+}
+
 .protections-popup-tp-switch[enabled] {
 	background-color: #1e90ff !important;
 	border-color: white !important;
@@ -1429,7 +1489,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 }
 
 #permission-popup-mainView {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 	font-size: 14px !important;
 }
 
@@ -1498,22 +1558,19 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
 	font-family: "Fira Sans" !important;
 	font-size: 14px !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 }
 
-/* Dark Themed Drop-down */
-/* Dark Theme - Firefox 48+ */
-
 #PopupAutoComplete .ac-site {
-	background-color: #1b1d2c80 !important;
+	background-color: #24213180 !important;
 }
 
 .autocomplete-richlistitem .ac-title,
 .autocomplete-richlistitem .ac-action,
 .autocomplete-richlistitem .ac-separator {
 	color: #ffffff !important;
-	/*background-color: #1b1d2c80 !important;*/
-	background: #1b1d2c80 !important;
+	/*background-color: #24213180 !important;*/
+	background: #24213180 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 }
@@ -1537,8 +1594,8 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	background-color: #1b1d2c !important;
-	background: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 }
 
 .autocomplete-richlistitem[selected="true"] .ac-url,
@@ -1546,20 +1603,21 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	color: #1e90ff !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 }
 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:hover {
 	background-color: #1e90ff !important;
+	background: #1e90ff !important;
 	border-radius: 2px !important;
 }
 
-/*
+
 #PopupAutoCompleteRichResult .autocomplete-richlistitem[selected] {
 	background-color: #1e90ff !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 }
-*/
+
 /* Ability to scroll in Fx57 */
 #PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox {
 	overflow-y: auto !important;
@@ -1568,7 +1626,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
 	padding-right: 0px !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 }
 
 *|span.urlbarView-url {
@@ -1583,7 +1641,8 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 
 /* for actions e.g. "visit", "search with x", "switch to tab" etc. */
 .urlbarView-action {
-	color: yellow !important;
+	color: black !important;
+	background-color: dodgerblue !important;
 }
 
 /* Position page title, set font-size */
@@ -1628,8 +1687,8 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 }
 
 .popup-notification-body .menulist-label-box {
-	background: #1b1d2c !important;
-	background-color: #1b1d2c !important;
+	background: #242131 !important;
+	background-color: #242131 !important;
 	color: #ffffff !important;
 }
 
@@ -1640,17 +1699,15 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 .urlbarView-row:hover .urlbarView-secondary,
 .urlbarView-row:hover .urlbarView-title-separator {
 	color: #ffffff !important;
+	background-color: transparent !important;
+	border-radius: 3px !important;
 }
 
-/*
+
 .urlbarView-row[selected],
-.urlbarView-row[selected],
-.urlbarView-row[selected],*/
-.urlbarView-row:hover,
-.urlbarView-row:hover,
 .urlbarView-row:hover {
 	background-color: #1e90ff !important;
-	border-radius: 2px !important;
+	border-radius: 3px !important;
 }
 
 /*
@@ -1666,13 +1723,13 @@ input:not(#urlbar-input) {
 */
 .autocomplete-richlistitem[selected="true"] {
 	background-color: #1e90ff !important;
-	border-radius: 2px !important;
+	border-radius: 3px !important;
 }
 
 .urlbarView {
 	background-image: url("noise-512x512.png") !important;
-	background-color: #1b1d2c80 !important;
-	background: #1b1d2c80 !important;
+	background-color: #24213180 !important;
+	background: #24213180 !important;
 	backdrop-filter: blur(8px) !important;
 	border-radius: 6px !important;
 }
@@ -1693,26 +1750,26 @@ input:not(#urlbar-input) {
 
 	toolbar {
 		appearance: none !important;
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 		border: 0px !important;
 	}
 
 	listbox,
 	textbox {
 		appearance: none !important;
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 		color: #ffffff !important;
 		min-height: 20px !important;
 		padding: 0 0 0 4px !important;
 		border: 1px solid !important;
-		border-color: #1b1d2c !important;
+		border-color: #242131 !important;
 		border-radius: 0px !important;
 	}
 
 	#editBMPanel_rows>row>hbox>textbox,
 	#editBMPanel_rows>row>textbox,
 	#editBMPanel_tagsSelector {
-		background: #1b1d2c !important;
+		background: #242131 !important;
 		border: none !important;
 	}
 
@@ -1732,29 +1789,74 @@ input:not(#urlbar-input) {
 	#placesList {
 		appearance: none !important;
 		color: #ffffff !important;
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 	}
 
 	#placesView>splitter {
 		border-color: #303030 !important;
 	}
 
+
+	#editBMPanel_locationField,
+	#editBMPanel_tagsField,
+	#editBMPanel_keywordField,
+	#editBMPanel_tagsSelector {
+		appearance: none !important;
+		background: #24213150 !important;
+		color: white !important;
+
+		outline: 1px ridge #1e90ff50 !important;
+		border-radius: 0px !important;
+	}
+
+	/*
+	#editBookmarkPanelRows>vbox>input,
+	#editBookmarkPanelRows>vbox>hbox>input {
+		border-radius: 3px !important;
+		background: black !important;
+	}
+
+
+	#editBMPanel_keywordRow,
+	#editBMPanel_locationRow,
+	#editBMPanel_tagsRow,
+	#editBMPanel_tagsSelectorRow {
+
+		background: black !important;
+		color: white !important;
+		border: none !important;
+	}
+*/
+	/*
+	#editBookmarkPanelRows>vbox>html|input,
+	#editBookmarkPanelRows>vbox>hbox>html|input {
+
+		padding: 8px !important;
+		border-radius: 4px !important;
+		border: 0 !important;
+		outline: 1px solid var(--input-border-color, ThreeDShadow);
+		outline-offset: -1px !important;
+		background: black !important;
+		color: black !important;
+		margin: 0 !important;
+	}*/
+
 	#places #downloadsRichListBox {
 		appearance: none !important;
 		color: #ffffff !important;
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 	}
 
 	#detailsDeck {
 		border: none !important;
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 		color: #ffffff !important;
 	}
 
 	#detailsPane {
 		border: none !important;
 		border-top: 1px solid #303030 !important;
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 		color: #ffffff !important;
 	}
 
@@ -1791,7 +1893,7 @@ input:not(#urlbar-input) {
 
 	#placeContent>treechildren::-moz-tree-cell,
 	#placeContent>treechildren::-moz-tree-column {
-		border-color: #1b1d2c !important;
+		border-color: #242131 !important;
 	}
 
 	#placesView treechildren::-moz-tree-row {
@@ -1801,10 +1903,10 @@ input:not(#urlbar-input) {
 	#contentView treecol {
 		appearance: none !important;
 		border: none !important;
-		background: #1b1d2c !important;
+		background: #242131 !important;
 		color: #ffffff !important;
 		border-right: 1px solid !important;
-		border-color: #1b1d2c !important;
+		border-color: #242131 !important;
 	}
 
 	#placesView treechildren .separator {
@@ -1812,11 +1914,11 @@ input:not(#urlbar-input) {
 	}
 
 	tree {
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 	}
 
 	#main-menubar {
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 	}
 
 	#main-menubar>* {
@@ -1826,7 +1928,7 @@ input:not(#urlbar-input) {
 	#main-menubar> :hover,
 	menubar>menu[_moz-menuactive="true"][open="true"] {
 		appearance: none !important;
-		background: #1b1d2c !important;
+		background: #242131 !important;
 	}
 
 	@media screen and (-moz-windows-theme),
@@ -1844,7 +1946,7 @@ input:not(#urlbar-input) {
 		#security-technical,
 		#security-technical-groupbox {
 			appearance: none !important;
-			background-color: #1b1d2c !important;
+			background-color: #242131 !important;
 			border: none !important;
 			color: #ffffff !important;
 		}
@@ -1857,7 +1959,7 @@ input:not(#urlbar-input) {
 		#security-privacy-groupbox,
 		#security-technical-groupbox {
 			appearance: none !important;
-			background-color: #1b1d2c !important;
+			background-color: #242131 !important;
 		}
 
 		#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover):not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
@@ -1873,6 +1975,7 @@ input:not(#urlbar-input) {
 	#placesToolbar>toolbarbutton#forward-button {
 		width: 24px !important;
 		height: 24px !important;
+		background: transparent !important;
 	}
 
 	@media screen and (-moz-os-version: windows-win7) {
@@ -1888,7 +1991,7 @@ input:not(#urlbar-input) {
 }
 
 #urlbar-input {
-	margin-top: 1px !important;
+	margin-top: 2px !important;
 }
 
 :root {
@@ -2094,6 +2197,7 @@ input:not(#urlbar-input) {
 	list-style-image: url("KnobRemove.ico") !important;
 	background-color: transparent !important;
 	transition: all 0.3s ease !important;
+	filter: drop-shadow(0px 0px 2px white) !important;
 }
 
 
@@ -2106,6 +2210,7 @@ input:not(#urlbar-input) {
 	list-style-image: url("KnobAdd.ico") !important;
 	background-color: transparent !important;
 	transition: all 0.3s ease !important;
+	filter: drop-shadow(0px 0px 2px white) !important;
 }
 
 .titlebar-max {
@@ -2117,6 +2222,7 @@ input:not(#urlbar-input) {
 	list-style-image: url("KnobAdd.ico") !important;
 	background-color: transparent !important;
 	transition: all 0.3s ease !important;
+	filter: drop-shadow(0px 0px 2px white) !important;
 }
 
 .titlebar-close {
@@ -2128,6 +2234,7 @@ input:not(#urlbar-input) {
 	list-style-image: url("KnobCancel.ico") !important;
 	background-color: transparent !important;
 	transition: all 0.3s ease !important;
+	filter: drop-shadow(0px 0px 2px white) !important;
 }
 
 /*
@@ -2182,8 +2289,8 @@ input:not(#urlbar-input) {
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button {
 	list-style-image: url("closespin.svg") !important;
 	background: transparent !important;
-	width: 28px !important;
-	height: 28px !important;
+	width: 29px !important;
+	height: 29px !important;
 	margin-left: 2px !important;
 }
 
@@ -2203,10 +2310,12 @@ input:not(#urlbar-input) {
 
 
 
+
 #statuspanel {
 	bottom: -16px !important;
 	margin-left: 50% !important;
 	max-width: 45% !important;
+
 }
 
 #statuspanel-inner {
@@ -2216,51 +2325,148 @@ input:not(#urlbar-input) {
 
 #statuspanel #statuspanel-label {
 	/*appearance: none !important;*/
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	font-family: "Fira Sans" !important;
 	font-size: 14px !important;
 	font-weight: normal !important;
 	color: yellow !important;
-	border: 1px solid #1b1d2c !important;
+	border: 1px solid #242131 !important;
 	border-radius: 0px !important;
 	text-align: center !important;
 	/*0 1px 1px 1px;
 	border-style: none solid solid solid !important;*/
 }
 
-
-/* Tweaks for Ctrl+Tab */
-#ctrlTab-previews {
-	background: none !important;
-	border-radius: 0% !important;
-}
-
+/* Ctrl-Tab */
 #ctrlTab-panel {
 	appearance: none !important;
+	-moz-window-shadow: none !important;
+	--panel-background: transparent !important;
+	--panel-color: white !important;
+	--panel-border-color: transparent !important;
+	--panel-padding: 20px 10px 10px !important;
+	font-weight: bold !important;
+	background: transparent !important;
 	color: #ffffff !important;
 	border-style: none !important;
 	padding: 20px 10px 10px !important;
 	font-family: Fira Sans !important;
 	font-weight: bold !important;
-	background: none !important;
+	background: #191C26b0 !important;
 	text-align: center !important;
 	text-shadow: none !important;
 }
 
-.ctrlTab-preview:not(#ctrlTab-showAll)>*>.ctrlTab-preview-inner {
+#ctrlTab-panel:hover {
+	background: none !important;
+}
 
+.ctrlTab-preview,
+#ctrlTab-showAll {
+	appearance: none !important;
+	color: inherit !important;
+	/* remove the :-moz-focusring outline from button.css on Windows */
+	outline: none !important;
+	margin: 0 !important;
+	text-shadow: 0 0 2px rgb(31, 31, 31), 0 0 2px hsl(0, 0%, 12%) !important;
+	background: none !important;
+}
+
+.ctrlTab-preview>.button-box {
+	display: none !important;
+}
+
+.ctrlTab-canvas>html|img,
+.ctrlTab-canvas>html|canvas {
+	min-width: inherit !important;
+	max-width: inherit !important;
+	min-height: inherit !important;
+	max-height: inherit !important;
+	/*background: none !important;*/
+}
+
+.ctrlTab-favicon-container {
+	position: relative !important;
+	-moz-box-pack: end !important;
+}
+
+.ctrlTab-favicon[src] {
+	max-width: 32px !important;
+	max-height: 32px !important;
+	margin-top: -44px !important;
+	margin-bottom: 2px !important;
+	margin-inline-end: -6px ! important;
+	padding: 5px !important;
+	background: none !important;
+	border-radius: 2px !important;
+	box-shadow: inset 0 0 0 3px rgba(0, 0, 0, .1) !important;
+}
+
+.ctrlTab-canvas {
+	box-shadow: 1px 1px 2px #1f1f1f !important;
+	margin-bottom: 8px !important;
+
+}
+
+.ctrlTab-preview-inner,
+#ctrlTab-showAll {
+	padding: 8px !important;
+	border: 2px solid transparent !important;
+	border-radius: .5em !important;
+
+}
+
+.ctrlTab-preview-inner {
+	margin-top: -10px !important;
+
+}
+
+#ctrlTab-showAll {
+	background-color: rgba(255, 255, 255, .2) !important;
+	margin-top: .5em !important;
+}
+
+.ctrlTab-preview:focus>.ctrlTab-preview-inner,
+#ctrlTab-showAll:focus {
+	background-color: rgba(0, 0, 0, .75) !important;
+	/*background: none !important;*/
+	text-shadow: none !important;
+	border-color: dodgerblue !important;
+}
+
+.ctrlTab-label {
+	text-align: center !important;
+}
+
+/*
+#ctrlTab-previews {
+	border-radius: 0% !important;
+}
+
+#ctrlTab-panel {
+	-moz-appearance: none !important;
+	color: #ffffff !important;
+	border-style: none !important;
+	padding: 20px 10px 10px !important;
+	font-family: Fira Sans !important;
+	font-weight: bold !important;
+	background: #191C26b0 !important;
+	text-align: center !important;
+	text-shadow: none !important;
+
+}
+
+.ctrlTab-preview:not(#ctrlTab-showAll)>*>.ctrlTab-preview-inner {
 	margin: -10px -10px 0 !important;
 }
 
 .ctrlTab-preview-inner {
-
 	padding: 8px !important;
 	border: 2px solid transparent !important;
 	border-radius: 0px !important;
 }
 
 tabPreview-canvas element {
-
 	max-width: 272px !important;
 	min-width: 272px !important;
 	max-height: 153px !important;
@@ -2278,6 +2484,7 @@ tabPreview-canvas element {
 	height: 25px !important;
 	padding: 2px !important;
 }
+*/
 
 #appMenu-popup toolbarbutton.subviewbutton:is(:hover) {
 	background-color: dodgerblue !important;
@@ -2367,7 +2574,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 
 /* customization page */
 #customization-panel-container>.panel-arrowcontent {
-	border-color: #1b1d2c !important;
+	border-color: #242131 !important;
 	/*border: 1px !important;*/
 }
 
@@ -2376,14 +2583,14 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 #customization-panelDescription,
 #customize-mode-overflow-list-description,
 #widget-overflow-fixed-list {
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	color: #ffffff !important;
 	border: 0px !important;
 	font-family: Fira Sans !important;
 }
 
 #customization-footer {
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 	font-family: Fira Sans !important;
 }
 
@@ -2403,12 +2610,12 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 
 .customization-lwtheme-menu-footeritem {
 	border-right: 0px solid #222 !important;
-	background: linear-gradient(#555, #1b1d2c) !important;
+	background: linear-gradient(#555, #242131) !important;
 	color: #ffffff !important;
 }
 
 .customization-lwtheme-menu-footeritem:hover {
-	background: linear-gradient(#1b1d2c, #555) !important;
+	background: linear-gradient(#242131, #555) !important;
 	color: #fff !important;
 }
 
@@ -2435,15 +2642,19 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 #tabbrowser-tabpanels,
 browser[type=content-primary],
 browser[type=content]>html {
-	background: #1b1d2c !important
+	background: #242131 !important;
+	background-color: #242131 !important;
+
 }
 
 .tabbrowser-tabpanels {
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 }
 
 browser {
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
+	background: #242131 !important;
 }
 
 /* new tab button icon */
@@ -2454,9 +2665,11 @@ browser {
 }
 
 
-.tab-label:-moz-window-inactive,
-.tab-text:-moz-window-inactive {
+.tab-label[selected]:-moz-window-inactive,
+.tab-text[selected]:-moz-window-inactive {
 	color: white !important;
+	opacity: 1 !important;
+
 }
 
 /*
@@ -2515,7 +2728,7 @@ findbar>.findbar-container {
 	-moz-box-direction: reverse;
 	border-left-width: 1px;
 	border-bottom-left-radius: 4px;
-	background: #1b1d2c !important;
+	background: #242131 !important;
 }
 
 .findbar-find-status {
@@ -2581,13 +2794,6 @@ findbar::before {
 
 }
 
-/* Bookmark edit screen */
-#editBookmarkPanelRows>vbox>input,
-#editBookmarkPanelRows>vbox>hbox>input,
-.panel-footer>button {
-	border-radius: 3px !important;
-}
-
 /*
 toolbarbutton.bookmark-item:not(.subviewbutton) {
 	margin-inline: 0 !important;
@@ -2599,7 +2805,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 /* ################################################################################################# */
 
 .tabbrowser-tab .tab-loading-burst {
-	background-image: linear-gradient(90deg, #1b1d2c, dodgerblue) !important;
+	background-image: linear-gradient(90deg, #242131, dodgerblue) !important;
 	background-repeat: no-repeat !important;
 	transition: background-size 0.5s ease-out !important;
 	opacity: 0.7s linear !important;
@@ -2680,18 +2886,18 @@ toolbar #fullscreen-button {
 }
 
 :root[uidensity=compact] {
-	--tab-min-height: 35px !important;
+	--tab-min-height: 30px !important;
 }
 
 
 
 #bookmarkpropertiesdialog {
-	background: #1b1d2c !important;
+	background: #242131 !important;
 }
 
 .titleIcon {
 	background-image: url("star.svg") !important;
-	background-color: #1b1d2c !important;
+	background-color: #242131 !important;
 
 }
 
@@ -2715,28 +2921,35 @@ toolbar #fullscreen-button {
 	list-style-image: url("star.svg") !important;
 }
 
-
+/*
 .tab-icon-image:not([src]) {
 	background: url("firefox-5.svg") !important;
 	background-size: 16px 16px !important;
 	background-repeat: no-repeat !important;
 	list-style-image: none !important;
-	/*width: 0 !important;*/
+	width: 0 !important;
 	margin-top: 2px !important;
 	display: block !important;
 	visibility: visible !important;
 
-
-}
+#1e90ff
+}*/
 
 tab:not([selected]):hover .tab-background {
 	background-color: #1e90ff85 !important;
+
+}
+
+tab[selected]:hover .tab-background {
+	background-color: #1e90ff70 !important;
+	/*filter: drop-shadow(0px 0px 4px #1e90ff) !important;*/
+
 }
 
 tab:not([beforeselected-visible])::after {
 	margin-top: 4px !important;
 	margin-bottom: 4px !important;
-	transition: border-color var(--animation-speed), margin-top var(--animation-speed) !important;
+	transition: border-color 300ms, margin-top 3000ms !important;
 }
 
 tab[beforehovered]::after,
@@ -2756,7 +2969,7 @@ tab:hover::after {
 @-moz-document url("chrome://mozapps/content/downloads/unknownContentType.xhtml") {
 	#unknownContentType {
 		color: white !important;
-		background-color: #1b1d2c !important;
+		background-color: #242131 !important;
 	}
 
 	button {
@@ -3022,11 +3235,11 @@ See the above repository for updates as well as full license text. */
 
 /* In short, these native widgets will be dark on dark theme and light on light theme */
 
-
+/*
 #editBMPanel_tagsSelector>richlistitem>image,
 radio>.radio-check,
 checkbox>.checkbox-check {
-	-moz-appearance: none !important;
+	appearance: none !important;
 	border: 1px solid graytext;
 	border-radius: 2px;
 	height: 1.3em;
@@ -3069,7 +3282,7 @@ radio[disabled]>.radio-check,
 checkbox[disabled]>.checkbox-check {
 	fill: graytext !important;
 }
-
+*/
 /*Buttons*/
 /* This only applies to natively-ish styled buttons, not the buttons in toolbars */
 
@@ -3077,32 +3290,33 @@ button {
 	appearance: none !important;
 	color: inherit !important;
 	background-color: #1e90ff !important;
-	border: 0px solid graytext;
+	border: 0px solid dodgerblue !important;
 }
 
 button[disabled] {
-	opacity: 0.8;
+	opacity: 0.8 !important;
 }
 
 
 button:not([disabled]):hover {
 	/*border-color: highlight;*/
 	background-color: #1e90ff80 !important;
-	box-shadow: none;
+	box-shadow: none !important;
 }
 
 button:not([disabled]):active {
-	box-shadow: none;
+	box-shadow: none !important;
 }
 
 button.searchbar-engine-one-off-item,
 .panel-footer>button {
-	border-width: 1px 0 0 0;
+	border-width: 1px 0 0 0 !important;
 }
 
+/*
 button.panel-button {
 	padding: 2px 2px 1px 2px !important;
-}
+}*/
 
 #customization-done-button {
 	background-color: #0a84ff !important;
@@ -3125,4 +3339,89 @@ button.panel-button {
 	background-color: #1e90ff80 !important;
 	border: 0px !important;
 	outline: none !important;
+}
+
+/*
+#tabbrowser-tabs {
+	--uc-tabs-scrollbutton-border: 2px
+}
+
+#scrollbutton-up,
+#scrollbutton-down {
+	border-block-width: var(--uc-tabs-scrollbutton-border, 0px) !important;
+}
+
+
+#tabbrowser-tabs:not([movingtab]) {
+	--uc-scroll-visibility: hidden;
+}
+
+#tabbrowser-tabs[overflow] {
+	--uc-scrollbox-margin: -28px;
+}
+
+#scrollbutton-up {
+	position: relative;
+	z-index: 1
+}
+
+#scrollbutton-up,
+#scrollbutton-down,
+#scrollbutton-up~spacer {
+	visibility: var(--uc-scroll-visibility, visible);
+}
+
+.scrollbox-clip {
+	margin-inline: var(--uc-scrollbox-margin, 0);
+}
+*/
+.urlbarView-row:hover>.urlbarView-row-inner {
+	background-color: dodgerblue !important;
+	border-radius: 3px !important;
+}
+
+
+
+/* Hides info icons (except remote control icon) on the left side of urlbar and shows them when urlbar is hovered. 
+
+#urlbar-search-button,
+#tracking-protection-icon-container,
+#identity-box,
+#identity-box.extensionPage #identity-icon-label {
+	max-width: 0px;
+	transition: max-width 100ms linear !important;
+	overflow: hidden;
+}
+
+#identity-box.extensionPage {
+	max-width: 32px !important;
+}
+
+#urlbar:hover #urlbar-input-container>box,
+#urlbar:hover #identity-box.extensionPage #identity-icon-label {
+	max-width: 300px !important;
+
+}
+*/
+#tabbrowser-tabpanels {
+	background-color: #242131 !important;
+}
+
+#commonDialog {
+	background: rgb(36, 33, 49) !important;
+	color: white !important;
+}
+
+
+.toolbarbutton-badge {
+	background-color: dodgerblue !important;
+	font-family: Fira Sans !important;
+	color: white !important;
+	/*margin-top: 7px !important;*/
+	border-radius: 0px !important;
+}
+
+.toolbarbutton-badge {
+
+	margin-inline: 4px !important;
 }
