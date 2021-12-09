@@ -1,0 +1,250 @@
+/*---------------------------------library ----------------------------------*/
+
+@-moz-document url(chrome://browser/content/places/places.xhtml) {
+	* {
+		font-family: Fira Sans !important;
+		font-weight: inherit !important;
+		font-size: 14px !important;
+		color: white !important;
+	}
+
+	:root {
+		--organizer-border-color: #404040 !important;
+	}
+
+	toolbar {
+		appearance: none !important;
+		background-color: #161a27 !important;
+		border: 0px !important;
+	}
+
+	listbox,
+	textbox {
+		appearance: none !important;
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+		min-height: 20px !important;
+		padding: 0 0 0 4px !important;
+		border: 1px solid !important;
+		border-color: #161a27 !important;
+		border-radius: 0px !important;
+	}
+
+	#editBMPanel_rows>row>hbox>textbox,
+	#editBMPanel_rows>row>textbox,
+	#editBMPanel_tagsSelector {
+		background: #161a27 !important;
+		border: none !important;
+	}
+
+	
+
+	#placesToolbar>toolbarbutton {
+		margin: 6px 4px 5px !important;
+		appearance: none !important;
+		background: #1e90ff !important;
+		border-radius: 0px !important;
+		/*filter: invert(100%) !important;*/
+		border: none !important;
+	}
+
+	#placesList {
+		appearance: none !important;
+		color: #ffffff !important;
+		background-color: #161a27 !important;
+	}
+
+
+	#placesView>splitter {
+		border-color: #404040 !important;
+	}
+
+
+	#editBMPanel_locationField,
+	#editBMPanel_tagsField,
+	#editBMPanel_keywordField,
+	#editBMPanel_tagsSelector {
+		appearance: none !important;
+		background: black !important;
+		color: white !important;
+
+		/*outline: 1px ridge #1e90ff50 !important;*/
+		border-radius: 0px !important;
+	}
+
+
+	#editBookmarkPanelRows>vbox>input,
+	#editBookmarkPanelRows>vbox>hbox>input {
+		border-radius: 3px !important;
+		background: black !important;
+	}
+
+
+	#editBMPanel_keywordRow,
+	#editBMPanel_locationRow,
+	#editBMPanel_tagsRow,
+	#editBMPanel_tagsSelectorRow {
+
+		background: #161a27 !important;
+		color: white !important;
+		border: none !important;
+	}
+
+	#searchFilter {
+		appearance: none !important;
+		background-color: black !important;
+		color: white !important;
+		
+	}
+
+	
+
+	#places #downloadsRichListBox {
+		appearance: none !important;
+		color: #ffffff !important;
+		background-color: #161a27 !important;
+	}
+
+	#detailsDeck {
+		/*border: none !important;*/
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	#detailsPane {
+		/*border: none !important;*/
+		border-top: 1px !important;
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
+		color: #ffffff !important;
+	}
+
+	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
+	#placesList>treechildren::-moz-tree-row(selected) {
+		appearance: none !important;
+		-moz-font-smoothing-background-color: none !important;
+		border: none !important;
+		background: #1e90ff !important;
+		border-radius: 2px !important;
+		color: #ffffff !important;
+	}
+
+	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+	#placesList>treechildren::-moz-tree-cell-text(selected) {
+		color: #ffffff !important;
+	}
+
+	#places treechildren::-moz-tree-row {
+		background-color: transparent !important;
+	}
+
+	#places treechildren::-moz-tree-image {
+		fill: #ffffff !important;
+	}
+
+	#places treechildren::-moz-tree-image(selected) {
+		fill: #ffffff !important;
+	}
+
+	#placeContent>treechildren::-moz-tree-cell,
+	#placeContent>treechildren::-moz-tree-column {
+		border-color: #404040 !important;
+	}
+
+	#placesView treechildren::-moz-tree-row {
+		min-height: 24px !important;
+	}
+
+	#contentView treecol {
+		appearance: none !important;
+		border: none !important;
+		background: #161a27 !important;
+		color: #ffffff !important;
+		border-right: 1px solid !important;
+		border-color: #161a27 !important;
+		box-shadow: inset 0 -1px #404040 !important;
+	}
+
+
+	tree {
+		background-color: #161a27 !important;
+	}
+
+	#main-menubar {
+		background-color: #161a27 !important;
+	}
+
+	#main-menubar>* {
+		color: #ffffff !important;
+	}
+
+	#contentView treecol {
+		box-shadow: inset 0 -1px var(--organizer-border-color) !important;
+	}
+
+	#main-menubar> :hover,
+	menubar>menu[_moz-menuactive="true"][open="true"] {
+		appearance: none !important;
+		background: #161a27 !important;
+	}
+
+
+	@media screen and (-moz-windows-theme),
+	screen and (-moz-windows-classic),
+	screen and (-moz-windows-default-theme),
+	screen and (-moz-os-version: windows-win7),
+	screen and (-moz-os-version: windows-win8),
+	screen and (-moz-os-version: windows-win10) {
+
+		#metaTagsCaption,
+		#security-identity,
+		#security-identity-groupbox,
+		#security-privacy,
+		#security-privacy-groupbox,
+		#security-technical,
+		#security-technical-groupbox {
+			appearance: none !important;
+			background-color: #161a27 !important;
+			border: none !important;
+			color: #ffffff !important;
+		}
+
+		#placesMenu>menu {
+			color: #ffffff !important;
+		}
+
+		#security-identity-groupbox,
+		#security-privacy-groupbox,
+		#security-technical-groupbox {
+			appearance: none !important;
+			background-color: #161a27 !important;
+		}
+
+		#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover):not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
+			background: 0 0 !important;
+			-moz-border-top-colors: transparent !important;
+			-moz-border-right-colors: transparent !important;
+			-moz-border-left-colors: transparent !important;
+			-moz-border-bottom-colors: transparent !important;
+		}
+
+	}
+
+
+	#placesToolbar>toolbarbutton#back-button,
+	#placesToolbar>toolbarbutton#forward-button {
+		width: 24px !important;
+		height: 24px !important;
+		background: transparent !important;
+	}
+
+	@media screen and (-moz-os-version: windows-win7) {
+		treechildren {
+			--treechildren-outline: none !important;
+
+		}
+	}
+}
