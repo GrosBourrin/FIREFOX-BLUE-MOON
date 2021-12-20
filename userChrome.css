@@ -588,12 +588,15 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	color: #ffffff !important;
 	border: none !important;
 	font-family: Fira Sans !important;
+
 }
 
 #editBMPanel_folderTree {
 	min-height: 300px !important;
 	border: none !important;
 	font-family: Fira Sans !important;
+	outline: 0 !important;
+
 }
 
 .panel-arrow {
@@ -686,7 +689,6 @@ checkbox[disabled]>.checkbox-check {
 	border: none !important;
 }
 
-/*------------------------------------------------------------------------------*/
 /*#editBookmarkPanel button,*/
 #editBookmarkPanel textbox,
 #editBookmarkPanel menulist,
@@ -701,30 +703,6 @@ checkbox[disabled]>.checkbox-check {
 	outline: none !important;
 }
 
-treechildren::-moz-tree-cell-text(title, separator, selected, focus):hover {
-	background: yellow !important;
-	color: white !important;
-	outline: none !important;
-	border: none !important;
-}
-
-
-
-/*
-treechildren::-moz-tree-cell-text(title, separator, selected, focus)(selected)){
-	background-color: #1e90ff !important;
-	color: white !important;
-	outline: none !important;
-	border: none !important;
-}*/
-
-/*
-#editBookmarkPanel tree:hover {
-	background-color: #1e90ff !important;
-	color: white !important;
-	outline: none !important;
-	border: none !important;
-}*/
 
 #editBookmarkPanel button:hover {
 	filter: brightness(50%) !important;
@@ -746,8 +724,8 @@ treechildren::-moz-tree-cell-text(title, separator, selected, focus)(selected)){
 	font-family: Fira Sans !important;
 	text-shadow: none !important;
 }
-
 */
+
 #editBMPanel_folderTree-row {
 	background: #000000 !important;
 	color: #ffffff !important;
@@ -756,31 +734,32 @@ treechildren::-moz-tree-cell-text(title, separator, selected, focus)(selected)){
 	outline: none !important;
 }
 
-#editBMPanel_folderTree treechildren::-moz-tree-cell(selected) {
-	appearance: none !important;
-	background: #1e90ff !important;
-	border-radius: 0px !important;
+
+#editBMPanel_folderTree treechildren::-moz-tree-cell(hover),
+#editBMPanel_folderTree treechildren::-moz-tree-cell-text(hover) {
+	background-color: #1e90ff !important;
+	border-radius: 3px !important;
 	border: none !important;
-	outline: none !important;
+	outline: 0 !important;
 	color: white !important;
+	outline-offset: none !important;
+	box-shadow: none !important;
+	--focus-outline: 0px !important;
 }
 
-#editBMPanel_folderTree treechildren::-moz-tree-cell(hover) {
-	appearance: none !important;
-	background: #1e90ff80 !important;
-	border-radius: 0px !important;
-	border: 0px !important;
-	outline: none !important;
+
+#editBMPanel_folderTree treechildren::-moz-tree-cell(selected),
+#editBMPanel_folderTree treechildren::-moz-tree-cell-text(selected) {
+	background-color: #1e90ff !important;
+	border-radius: 3px !important;
+	border: none !important;
+	outline: 0 !important;
 	color: white !important;
+	outline-offset: none !important;
+	box-shadow: none !important;
+	--focus-outline: 0px !important;
 }
 
-
-/*
-#editBookmarkPanel .expander-down,
-#editBookmarkPanel .expander-up {
-	padding: 0 !important;
-}
-*/
 /* star panel image */
 #editBookmarkPanelImage {
 	border-radius: 2px !important;
@@ -828,6 +807,12 @@ treechildren::-moz-tree-cell-text(title, separator, selected, focus)(selected)){
 	display: none !important;
 }
 
+#editBookmarkPanelRows>vbox>html|input:focus-visible,
+#editBookmarkPanelRows>vbox>hbox>html|input:focus-visible {
+	outline: 0px solid var(--focus-outline-color) !important;
+	color: white !important;
+	background-color: black !important;
+}
 
 /* Bookmark*/
 /*--------------------------------------------------*/
@@ -935,7 +920,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 /* Sidebar items */
 
 .sidebar-placesTreechildren::-moz-tree-row {
-	border: 2px !important;
+	border-radius: 2px !important;
 }
 
 .sidebar-placesTreechildren::-moz-tree-cell(hover) {
@@ -1921,6 +1906,9 @@ input:not(#urlbar-input) {
 		background: black !important;
 	}
 
+	#editBookmarkPanelRows .expander-up .button-icon {
+		transform: rotate(180deg) !important;
+	}
 
 	#editBMPanel_keywordRow,
 	#editBMPanel_locationRow,
@@ -3788,10 +3776,6 @@ browser[type="content"] {
 #editBookmarkPanelRows .expander-up {
 	list-style-image: url("arrowdown.svg") !important;
 }*/
-
-#editBookmarkPanelRows .expander-up .button-icon {
-	transform: rotate(180deg) !important;
-}
 
 #downloadsPanel-mainView {
 	background: #161a27 !important;
