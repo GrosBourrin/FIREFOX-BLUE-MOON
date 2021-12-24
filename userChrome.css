@@ -53,6 +53,19 @@
 	color: white !important;
 }
 
+:-moz-focusring,
+:focus,
+button::-moz-focus-inner,
+:-moz-focusring *,
+:focus *,
+:-moz-focusring:focus:not(:focus-visible),
+:-moz-focusring:focus:not(:focus-visible)>* {
+	border: none !important;
+	outline: unset !important;
+	outline-offset: unset !important;
+	-moz-outline-radius: unset !important;
+}
+
 :root {
 	/* ---------- 😉--------- 🎨 Customization 🎨 -------------------- */
 	/*--tab-corner-rounding: 7px !important;*/
@@ -67,7 +80,7 @@
 }
 
 :root[uidensity=compact] {
-	--tab-min-height: 32px !important;
+	--tab-min-height: 30px !important;
 }
 
 #protections-popup-tp-switch-breakage-link,
@@ -83,7 +96,7 @@
 }
 
 #permission-popup-menulist {
-	background-color: dodgerblue !important;
+	background-color: #1e90ff !important;
 }
 
 #navigator-toolbox {
@@ -141,17 +154,6 @@ tooltip,
 	background: #161a27 !important;
 }
 
-:-moz-focusring,
-:focus,
-button::-moz-focus-inner,
-:-moz-focusring *,
-:focus *,
-:-moz-focusring:focus:not(:focus-visible),
-:-moz-focusring:focus:not(:focus-visible)>* {
-	outline: unset !important;
-	outline-offset: unset !important;
-	-moz-outline-radius: unset !important;
-}
 
 /* status panel */
 #statuspanel {
@@ -221,6 +223,10 @@ menuitem {
 
 }
 
+#PlacesToolbar menupopup[placespopup="true"] menuseparator {
+	background-color: #454545 !important;
+}
+
 menu:hover,
 menulist:hover,
 menuitem:hover,
@@ -233,7 +239,6 @@ menuitem:active {
 	border-radius: 2px !important;
 	outline: none !important;
 	outline-offset: none !important;
-
 }
 
 menulist[open="true"] {
@@ -283,9 +288,13 @@ menuitem .menu-accel {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	color: #1e90ff !important;
-	filter: drop-shadow(0px 0px 2px black) !important;
+	filter: drop-shadow(0px 0px 2px #000000) !important;
 }
 
+.menu-iconic-icon,
+.menu-iconic-left {
+	margin-bottom: 1px !important;
+}
 
 menuseparator {
 	appearance: none !important;
@@ -441,7 +450,7 @@ treechildren::-moz-tree-image(query) {
 #appMenu-fullscreen-button2 {
 	border-color: transparent !important;
 	background: transparent !important;
-	color: dodgerblue !important;
+	color: #1e90ff !important;
 	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 }
 
@@ -449,7 +458,7 @@ treechildren::-moz-tree-image(query) {
 #appMenu-zoomReduce-button2:hover,
 #appMenu-zoomEnlarge-button2:hover,
 #appMenu-fullscreen-button2:hover {
-	background: dodgerblue !important;
+	background: #1e90ff !important;
 	color: white !important;
 }
 
@@ -464,7 +473,7 @@ treechildren::-moz-tree-image(query) {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	color: #1e90ff !important;
-	filter: drop-shadow(0px 0px 2px black) !important;
+	filter: drop-shadow(0px 0px 2px #000000) !important;
 }
 
 .subviewbutton-nav::after {
@@ -536,7 +545,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 
 #editBMPanel_namePicker {
 	appearance: none !important;
-	background-color: black !important;
+	background-color: #000000 !important;
 	color: #ffffff !important;
 	height: 26px !important;
 	border: none !important;
@@ -549,7 +558,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 #editBMPanel_keywordField,
 #editBMPanel_tagsSelector {
 	appearance: none !important;
-	background: black !important;
+	background: #000000 !important;
 	color: white !important;
 	border: none !important;
 }
@@ -559,19 +568,19 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	height: 24px !important;
 	border: none !important;
 	font-family: Fira Sans !important;
-	background: black !important;
+	background: #000000 !important;
 	border: 0px !important;
 	outline: 0 !important;
 }
 
 #editBMPanel_locationField {
-	background: black !important;
+	background: #000000 !important;
 	border: 0px !important;
 	outline: 0 !important;
 }
 
 #editBMPanel_keywordField {
-	background: black !important;
+	background: #000000 !important;
 	border: 0px !important;
 	outline: 0 !important;
 }
@@ -680,10 +689,10 @@ checkbox[disabled]>.checkbox-check {
 
 #editBMPanel_newFolderButton {
 	appearance: none !important;
-	border-radius: 2x !important;
+	border-radius: 2px !important;
 	background: #1e90ff !important;
 	color: #ffffff !important;
-	padding: 0.3em !important;
+	padding: 0.1em !important;
 	margin-top: 0.1em !important;
 	margin-bottom: 0.1em !important;
 	border: none !important;
@@ -734,31 +743,37 @@ checkbox[disabled]>.checkbox-check {
 	outline: none !important;
 }
 
-
-#editBMPanel_folderTree treechildren::-moz-tree-cell(hover),
-#editBMPanel_folderTree treechildren::-moz-tree-cell-text(hover) {
+/*
+#editBMPanel_folderTree treechildren::-moz-tree-cell(selected) {
 	background-color: #1e90ff !important;
-	border-radius: 3px !important;
+	border-radius: 2px !important;
 	border: none !important;
-	outline: 0 !important;
+}
+*/
+#editBMPanel_folderTree treechildren::-moz-tree-row(hover) {
+	background-color: #1e90ff80 !important;
+	background: #1e90ff80 !important;
+	border-radius: 2px !important;
 	color: white !important;
-	outline-offset: none !important;
-	box-shadow: none !important;
-	--focus-outline: 0px !important;
+	outline: unset !important;
+	outline-offset: unset !important;
 }
 
-
-#editBMPanel_folderTree treechildren::-moz-tree-cell(selected),
+#editBMPanel_folderTree treechildren::-moz-tree-twisty(selected),
+#editBMPanel_folderTree treechildren::-moz-tree-row(selected),
 #editBMPanel_folderTree treechildren::-moz-tree-cell-text(selected) {
 	background-color: #1e90ff !important;
-	border-radius: 3px !important;
-	border: none !important;
-	outline: 0 !important;
+	background: #1e90ff !important;
+	border-radius: 2px !important;
 	color: white !important;
-	outline-offset: none !important;
-	box-shadow: none !important;
-	--focus-outline: 0px !important;
+	outline: unset !important;
+	outline-offset: unset !important;
+	border: 0px !important;
+	fill: white !important;
+
 }
+
+
 
 /* star panel image */
 #editBookmarkPanelImage {
@@ -772,23 +787,29 @@ checkbox[disabled]>.checkbox-check {
 }
 
 #editBookmarkPanelDoneButton {
-	background-color: #1e90ff !important;
+	background: #1e90ff !important;
+	color: white !important;
+	border: none !important;
 }
 
 #editBookmarkPanelDoneButton:hover,
 #editBookmarkPanelDoneButton:active {
-	background-color: #1e90ff !important;
+	background: #1e90ff80 !important;
+	color: white !important;
+	border: none !important;
 }
 
 #editBookmarkPanelRemoveButton {
-	background-color: #1e90ff80 !important;
+	background: #1e90ff80 !important;
 	color: #ffffff !important;
+	border: none !important;
 }
 
 #editBookmarkPanelRemoveButton:hover,
 #editBookmarkPanelRemoveButton:active {
-	background-color: #1e90ff80 !important;
+	background: #1e90ff !important;
 	color: #ffffff !important;
+	border: none !important;
 }
 
 #editBookmarkPanel textbox,
@@ -811,7 +832,7 @@ checkbox[disabled]>.checkbox-check {
 #editBookmarkPanelRows>vbox>hbox>html|input:focus-visible {
 	outline: 0px solid var(--focus-outline-color) !important;
 	color: white !important;
-	background-color: black !important;
+	background: #000000 !important;
 }
 
 /* Bookmark*/
@@ -1017,14 +1038,28 @@ hbox#sidebar-search-container textbox#search-box {
 }
 
 #sidebarMenu-popup .panel-arrowcontent {
-	background: #161a27 !important;
+	background: transparent !important;
+	padding-top: 0px !important;
 
 }
 
 #sidebarMenu-popup {
-	margin-top: 4px !important;
-	background: transparent !important;
+	margin-top: 10px !important;
+	margin-left: 0px !important;
+	background: #161a27 !important;
 	border-radius: 8px !important;
+	padding-top: 0px !important;
+
+}
+
+
+#sidebarMenu-popup .subviewbutton {
+	padding-bottom: 1px !important;
+	padding-top: 0px !important;
+	margin-bottom: 2px !important;
+	margin-top: 0px !important;
+	--arrowpanel-menuitem-margin: 0 0px !important;
+	--arrowpanel-menuitem-padding-block: 0 !important;
 }
 
 
@@ -1047,7 +1082,7 @@ hbox#sidebar-search-container textbox#search-box {
 	fill: #1e90ff !important;
 	opacity: 1 !important;
 	margin-bottom: 1px !important;
-	filter: drop-shadow(0px 0px 1px black) !important;
+	filter: drop-shadow(0px 0px 1px #000000) !important;
 
 }
 
@@ -1055,7 +1090,8 @@ hbox#sidebar-search-container textbox#search-box {
 	margin-bottom: 3px !important;
 }
 
-#sidebar-box>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
+
+#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
 	margin-bottom: 3px !important;
 }
 
@@ -1069,9 +1105,11 @@ hbox#sidebar-search-container textbox#search-box {
 	border-radius: 2px !important;
 }
 
+
+/*
+#panel-arrowcontent,*/
 .protections-popup,
-.panel-arrowcontainer,
-#panel-arrowcontent {
+.panel-arrowcontainer {
 	margin-top: 10px !important;
 	background: transparent !important;
 	border-radius: 8px !important;
@@ -1169,7 +1207,7 @@ treechildren::-moz-tree-image(query) {
 .tab-icon-image,
 #bookmarks-toolbar-placeholder>.toolbarbutton-icon,
 #PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon {
-	filter: drop-shadow(0px 0px 2px black) !important;
+	filter: drop-shadow(0px 0px 2px #000000) !important;
 }
 
 /* Shows window title in menubar */
@@ -1302,6 +1340,14 @@ spacer,
 	-moz-image-region: auto !important;
 }
 
+.bookmark-item[label="Mots entre Amis"] image {
+	width: 0 !important;
+	height: 0 !important;
+	padding: 16px 16px 0 0 !important;
+	background-image: url('mots16.png') !important;
+	-moz-image-region: auto !important;
+}
+
 .bookmark-item[label="Redémarrage"] image {
 	width: 0 !important;
 	height: 0 !important;
@@ -1336,13 +1382,16 @@ spacer,
 	--button-active-bgcolor: #1e90ff !important;
 }
 
-.tab-background[selected] {
+.tab-background[selected],
+.tab-background[multiselected=true] {
 	outline: none !important;
 	border: 0px solid transparent !important;
 	box-shadow: none !important;
 	background: #1e90ff !important;
 	border-radius: 3px !important;
 	background-clip: padding-box !important;
+	color: white !important;
+	text-shadow: 1px 1px 1px #161a27 !important;
 }
 
 tab:not([selected]):hover .tab-background {
@@ -1363,6 +1412,13 @@ tab[selected]:hover .tab-background {
 	/*filter: drop-shadow(0px 0px 4px #1e90ff) !important;*/
 
 }
+
+tab[selected] .tab-background {
+	background: #1e90ff !important;
+	border-radius: 3px !important;
+
+}
+
 
 tab:not([beforeselected-visible])::after {
 	margin-top: 4px !important;
@@ -1724,7 +1780,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 
 /* for actions e.g. "visit", "search with x", "switch to tab" etc. */
 .urlbarView-action {
-	color: black !important;
+	color: #000000 !important;
 	background-color: #1e90ff !important;
 }
 
@@ -1892,7 +1948,7 @@ input:not(#urlbar-input) {
 	#editBMPanel_keywordField,
 	#editBMPanel_tagsSelector {
 		appearance: none !important;
-		background: black !important;
+		background: #000000 !important;
 		color: white !important;
 
 		/*outline: 1px ridge #1e90ff50 !important;*/
@@ -1903,7 +1959,7 @@ input:not(#urlbar-input) {
 	#editBookmarkPanelRows>vbox>input,
 	#editBookmarkPanelRows>vbox>hbox>input {
 		border-radius: 3px !important;
-		background: black !important;
+		background: #000000 !important;
 	}
 
 	#editBookmarkPanelRows .expander-up .button-icon {
@@ -1922,7 +1978,7 @@ input:not(#urlbar-input) {
 
 	#searchFilter {
 		appearance: none !important;
-		background-color: black !important;
+		background-color: #000000 !important;
 		color: white !important;
 		/*border: 1px solid var(--organizer-toolbar-field-border-color);
 	border-radius: 4px;
@@ -1940,8 +1996,8 @@ input:not(#urlbar-input) {
 		border: 0 !important;
 		outline: 1px solid var(--input-border-color, ThreeDShadow);
 		outline-offset: -1px !important;
-		background: black !important;
-		color: black !important;
+		background: #000000 !important;
+		color: #000000 !important;
 		margin: 0 !important;
 	}*/
 
@@ -1996,6 +2052,10 @@ input:not(#urlbar-input) {
 		border: 1px #454545 !important;
 	}
 
+	#places treechildren::-moz-tree-twisty {
+		margin-bottom: 3px !important;
+	}
+
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
 	#placesList>treechildren::-moz-tree-row(selected) {
 		appearance: none !important;
@@ -2006,21 +2066,46 @@ input:not(#urlbar-input) {
 		color: #ffffff !important;
 	}
 
-	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
-	#placesList>treechildren::-moz-tree-cell-text(selected) {
+	/*#placesList>treechildren::-moz-tree-row(hover)*/
+	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+		appearance: none !important;
+		-moz-font-smoothing-background-color: none !important;
+		border: none !important;
+		background-color: #1e90ff !important;
+		border-radius: 2px !important;
 		color: #ffffff !important;
 	}
+
+	/*#placesList>treechildren::-moz-tree-cell-text(selected)
+	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
+		appearance: none !important;
+		-moz-font-smoothing-background-color: none !important;
+		border: none !important;
+		background: #1e90ff !important;
+		border-radius: 2px !important;
+		color: #ffffff !important;
+	}
+*/
+	/*
+	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(hover),
+	#placesList>treechildren::-moz-tree-cell-text(hover) {
+		appearance: none !important;
+		color: #ffffff !important;
+		border: none !important;
+		background: #1e90ff80 !important;
+		border-radius: 2px !important;
+	}*/
 
 	#places treechildren::-moz-tree-row {
 		background-color: transparent !important;
 	}
 
 	#places treechildren::-moz-tree-image {
-		fill: #ffffff !important;
+		fill: white !important;
 	}
 
 	#places treechildren::-moz-tree-image(selected) {
-		fill: #ffffff !important;
+		fill: white !important;
 	}
 
 	#placeContent>treechildren::-moz-tree-cell,
@@ -2281,7 +2366,7 @@ input:not(#urlbar-input) {
 	opacity: 1 !important;
 }
 */
-/* Remove Stupid Black Line Under ToolBar */
+/* Remove Stupid #000000 Line Under ToolBar */
 :root {
 	--chrome-content-separator-color: transparent !important;
 }
@@ -2289,7 +2374,11 @@ input:not(#urlbar-input) {
 /* Make Tab Name Semi-Bold When Selected */
 .tab-text[selected] {
 	color: white !important;
-	text-shadow: 1px 1px 1px #161a27 !important;
+	/*text-shadow: 0px 0px 6px #000000 !important;*/
+	text-shadow: 1px 1px 1px #000000,
+		0 0 3px #000000,
+		0 0 3px #000000 !important;
+	/*font-weight: bold !important;*/
 }
 
 .tab-text {
@@ -2319,6 +2408,7 @@ input:not(#urlbar-input) {
 	transition: width 350ms linear !important;
 }
 */
+/*
 .tab-stack {
 	transition: transform 20ms linear !important;
 }
@@ -2326,7 +2416,7 @@ input:not(#urlbar-input) {
 .tabbrowser-tab:active .tab-stack {
 	transform: scale(0.9) !important;
 }
-
+*/
 #alltabs-button {
 	fill: #ffffff !important;
 	/*opacity: 1 !important;*/
@@ -2502,10 +2592,11 @@ input:not(#urlbar-input) {
 	background: transparent !important;
 }
 
-.tab-icon-overlay[muted] {
-	opacity: 0.5 !important;
-	transform: rotate(-90deg);
-	/*animation: none !important;*/
+.tab-icon-overlay:is([muted]) {
+	list-style-image: url("data:image/svg+xml;base64,PCEtLSBCeSBTYW0gSGVyYmVydCAoQHNoZXJiKSwgZm9yIGV2ZXJ5b25lLiBNb3JlIEAgaHR0cDovL2dvby5nbC83QUp6YkwgLS0+Cjxzdmcgd2lkdGg9IjU1IiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgNTUgODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0ZGRiI+CiAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDgwKSI+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIwIiByeD0iMyI+CiAgICAgICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iNC4zcyIKICAgICAgICAgICAgICAgICB2YWx1ZXM9IjIwOzQ1OzU3OzgwOzY0OzMyOzY2OzQ1OzY0OzIzOzY2OzEzOzY0OzU2OzM0OzM0OzI7MjM7NzY7Nzk7MjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPC9yZWN0PgogICAgICAgIDxyZWN0IHg9IjE1IiB3aWR0aD0iMTAiIGhlaWdodD0iODAiIHJ4PSIzIj4KICAgICAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IgogICAgICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIycyIKICAgICAgICAgICAgICAgICB2YWx1ZXM9IjgwOzU1OzMzOzU7NzU7MjM7NzM7MzM7MTI7MTQ7NjA7ODAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPC9yZWN0PgogICAgICAgIDxyZWN0IHg9IjMwIiB3aWR0aD0iMTAiIGhlaWdodD0iNTAiIHJ4PSIzIj4KICAgICAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IgogICAgICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxLjRzIgogICAgICAgICAgICAgICAgIHZhbHVlcz0iNTA7MzQ7Nzg7MjM7NTY7MjM7MzQ7NzY7ODA7NTQ7MjE7NTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPC9yZWN0PgogICAgICAgIDxyZWN0IHg9IjQ1IiB3aWR0aD0iMTAiIGhlaWdodD0iMzAiIHJ4PSIzIj4KICAgICAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IgogICAgICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIycyIKICAgICAgICAgICAgICAgICB2YWx1ZXM9IjMwOzQ1OzEzOzgwOzU2OzcyOzQ1Ozc2OzM0OzIzOzY3OzMwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDwvcmVjdD4KICAgIDwvZz4KPC9zdmc+") !important;
+	filter: opacity(0.5) !important;
+	/*transform: rotate(0.75turn) !important;*/
+
 }
 
 
@@ -2785,7 +2876,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	}
 
 	#sidebar-box {
-		box-shadow: 0 0 16px black !important;
+		box-shadow: 0 0 16px #000000 !important;
 		position: relative !important;
 		z-index: 1 !important;
 	}
@@ -3153,7 +3244,7 @@ toolbar #fullscreen-button {
 
 #context-bookmarkpage {
 	color: #1e90ff !important;
-	/*filter: drop-shadow(0px 0px 2px black) !important;*/
+	/*filter: drop-shadow(0px 0px 2px #000000) !important;*/
 }
 
 #context-bookmarkpage:hover {
@@ -3554,40 +3645,45 @@ button.panel-button {
 	outline: none !important;
 }
 
-/*
-#tabbrowser-tabs {
-	--uc-tabs-scrollbutton-border: 2px
-}
 
+/*
 #scrollbutton-up,
 #scrollbutton-down {
 	border-block-width: var(--uc-tabs-scrollbutton-border, 0px) !important;
 }
-
+*/
 
 #tabbrowser-tabs:not([movingtab]) {
-	--uc-scroll-visibility: hidden;
+	--uc-scroll-visibility: hidden !important;
 }
 
 #tabbrowser-tabs[overflow] {
-	--uc-scrollbox-margin: -28px;
+	--uc-scrollbox-margin: -28px !important;
 }
 
+#tabbrowser-tabs {
+	--uc-tabs-scrollbutton-border: 2px !important;
+}
+
+/*
 #scrollbutton-up {
-	position: relative;
-	z-index: 1
+	position: relative !important;
+	z-index: 1 !important;
 }
 
 #scrollbutton-up,
 #scrollbutton-down,
 #scrollbutton-up~spacer {
-	visibility: var(--uc-scroll-visibility, visible);
-}
-
-.scrollbox-clip {
-	margin-inline: var(--uc-scrollbox-margin, 0);
+	visibility: var(--uc-scroll-visibility, visible) !important;
 }
 */
+/*
+.scrollbox-clip {
+	margin-inline: var(--uc-scrollbox-margin, 0) !important;
+}
+*/
+
+
 .urlbarView-row:hover>.urlbarView-row-inner {
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
@@ -3650,7 +3746,7 @@ dialog,
 	font-family: Fira Sans !important;
 	font-size: 10px !important;
 	padding: 1px 2px !important;
-	color: black !important;
+	color: #000000 !important;
 	text-shadow: none !important;
 	border-radius: 2px !important;
 	box-shadow: 0 1px 0 hsla(0, 100%, 100%, .2) inset, 0 -1px 0 hsla(0, 0%, 0%, .1) inset, 0 1px 0 hsla(206, 50%, 10%, .2) !important;
@@ -3801,7 +3897,7 @@ menupopup>menu>menupopup {
 	margin-inline-start: 4px !important;
 }
 
-/*----------------autohide personal bar---------------------------*/
+/*----------------autohide personal bar---------------------------
 #nav-bar {
 	z-index: 2 !important;
 }
@@ -3810,7 +3906,7 @@ menupopup>menu>menupopup {
 	position: relative !important;
 	z-index: 0 !important;
 	margin-top: -28px !important;
-	-moz-window-dragging: no-drag !important;
+	
 	transition-delay: 0.2s !important;
 	transition: margin 200ms linear !important;
 	transition: all 800ms var(--animation-easing-function) !important;
@@ -3827,7 +3923,7 @@ menupopup>menu>menupopup {
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) !important;
 	transition: all 800ms var(--animation-easing-function) !important;
 }
-
+*/
 #PlacesToolbarItems>.bookmark-item {
 	margin-inline: -2px !important;
 }
@@ -3840,10 +3936,93 @@ menupopup>menu>menupopup {
 
 #appMenu-fxa-separator {
 	appearance: none !important;
-	--panel-separator-zap-gradient: linear-gradient(90deg, #161a27 0%, #9059FF 35%, #1f90ff 52.08%, #ffff00 75%, #ffffff 100%) !important;
+	--panel-separator-zap-gradient: linear-gradient(90deg, #161a2750 0%, #9059FF 35%, #1f90ff 52.08%, #ffff00 75%, #ffffff 100%) !important;
 }
 
 :root {
 	--toolbarseparator-color: #1e90ff90 !important;
 	--download-progress-flare-color: yellow !important;
 }
+
+
+
+
+
+
+
+
+
+#PersonalToolbar {
+	--uc-bm-height: 28px;
+	/* Might need to adjust if the toolbar has other buttons */
+	--uc-bm-padding: 7px;
+	/* Vertical padding to be applied to bookmarks */
+	--uc-autohide-toolbar-delay: 400ms;
+	/* The toolbar is hidden after 0.6s */
+
+	/* 0deg = "show" ; 90deg = "hide" ;  Set the following to control when bookmarks are shown */
+	--uc-autohide-toolbar-focus-rotation: 0deg;
+	/* urlbar is focused */
+	--uc-autohide-toolbar-hover-rotation: 0deg;
+	/* cursor is over the toolbar area */
+}
+
+:root[uidensity="compact"] #PersonalToolbar {
+	--uc-bm-padding: 0px;
+}
+
+/*
+:root[uidensity="touch"] #PersonalToolbar {
+	--uc-bm-padding: 7px
+}
+*/
+#PersonalToolbar:not([customizing]) {
+	position: relative;
+	margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+	transform: rotateX(90deg);
+	transform-origin: top;
+	transition: transform 130ms linear var(--uc-autohide-toolbar-delay) !important;
+	z-index: 1;
+	/* The following properties should allow the themes with trasparent toolbars to work */
+	/*background-color: transparent !important;*/
+	/*background-repeat: no-repeat, no-repeat, var(--lwt-background-tiling);*/
+	--uc-bg-y: calc(-2 * (var(--tab-block-margin) + var(--toolbarbutton-inner-padding) + var(--toolbarbutton-outer-padding)) - var(--tab-min-height) - 16px - var(--bookmark-block-padding));
+	background-position: top left, top left, var(--lwt-background-alignment, top left);
+	background-position-y: top, top, var(--uc-bg-y), var(--uc-bg-y), var(--uc-bg-y) !important;
+	background-color: #161a27 !important;
+
+}
+
+#PlacesToolbarItems>.bookmark-item,
+#OtherBookmarks,
+#PersonalToolbar>#import-button {
+	padding-block: var(--uc-bm-padding) !important;
+
+}
+
+#nav-bar:focus-within+#PersonalToolbar {
+	transition-delay: 90ms !important;
+	transform: rotateX(var(--uc-autohide-toolbar-focus-rotation, 0));
+
+}
+
+#navigator-toolbox:hover>#PersonalToolbar {
+	transition-delay: 90ms !important;
+	transform: rotateX(var(--uc-autohide-toolbar-hover-rotation, 0));
+
+}
+
+#navigator-toolbox:hover>#nav-bar:focus-within+#PersonalToolbar {
+	transform: rotateX(0);
+
+}
+
+/* Uncomment to enable compatibility for multi-row_bookmarks.css */
+/* This would break buttons placed in the toolbar but that is likely not happening if you are using multi-row setup  */
+/*
+#PersonalToolbar:not([customizing]){
+  position: fixed;
+  display: block;
+  margin-bottom: 0px !important;
+}
+*/
