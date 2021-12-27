@@ -146,6 +146,12 @@ tooltip,
 	box-shadow: none !important;
 }
 
+tooltip * {
+	color: yellow !important;
+	background-color: #161a27 !important;
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+}
 
 #protections-popup-mainView-panel-header,
 #protections-popup-tp-switch-section,
@@ -193,10 +199,15 @@ tooltip,
 #tools-menu,
 #helpMenu {
 	appearance: none !important;
-	margin-top: 3px !important;
+	margin-top: 2px !important;
+	/*padding-top: 1px !important;*/
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	text-align: left !important;
+}
+
+.menubar-text {
+	padding-top: 2px !important;
 }
 
 menubar,
@@ -908,7 +919,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 
 #sidebar,
 #sidebar-header {
-	border: 0px solid !important;
+	border: 0px !important;
 }
 
 #sidebar {
@@ -1034,36 +1045,72 @@ hbox#sidebar-search-container textbox#search-box {
 #webextpanels-window {
 	background-color: #161a27 !important;
 	color: white !important;
-	font-family: "Fira Sans" !important;
+	/*font-family: "Fira Sans" !important;*/
+
 }
 
+/*
 #sidebarMenu-popup .panel-arrowcontent {
 	background: transparent !important;
-	padding-top: 0px !important;
+	padding-top: -10px !important;
 
-}
+}*/
 
 #sidebarMenu-popup {
 	margin-top: 10px !important;
 	margin-left: 0px !important;
 	background: #161a27 !important;
 	border-radius: 8px !important;
-	padding-top: 0px !important;
+	/*padding-block: 0px !important;*/
+	/*--arrowpanel-padding: 0 !important;*/
+
+
+}
+
+#sidebarMenu-popup toolbarseparator {
+	border-color: #454545 !important;
+	padding: 10px 6px 0px 6px !important;
 
 }
 
 
+/*
+#sidebarMenu-popup>.panel-arrowcontainer {
+	margin-top: -2px !important;
+	padding-left: 0px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	margin-bottom: 0px !important;
+	margin: 2px 8px 2px 0px !important;
+}
+
+#sidebarMenu-popup[class=panel-arrowbox] {
+	margin-top: -2px !important;
+}
+
+#sidebarMenu-popup #panel-arrowbox {
+	margin-top: -3px !important;
+}
+*/
 #sidebarMenu-popup .subviewbutton {
-	padding-bottom: 1px !important;
+	padding-bottom: 0px !important;
 	padding-top: 0px !important;
-	margin-bottom: 2px !important;
-	margin-top: 0px !important;
-	--arrowpanel-menuitem-margin: 0 0px !important;
-	--arrowpanel-menuitem-padding-block: 0 !important;
+	margin-bottom: 6px !important;
+	margin-top: -6px !important;
 }
 
+/*--arrowpanel-menuitem-margin: -2px !important;*/
+/*--arrowpanel-menuitem-padding-block: 0 !important;*/
+/*
+#sidebarMenu-popup :is(menupopup, panel[type="arrow"]) {
+	--panel-padding: 0px !important;
+}*/
 
-#sidebar-header {
+#sidebarMenu-popup {
+	--panel-padding: -6px !important
+}
+
+#sidebar-switcher-target {
 	padding: 0px !important;
 }
 
@@ -1081,9 +1128,8 @@ hbox#sidebar-search-container textbox#search-box {
 	color: #1e90ff !important;
 	fill: #1e90ff !important;
 	opacity: 1 !important;
-	margin-bottom: 1px !important;
+	/*margin-bottom: 0px !important;*/
 	filter: drop-shadow(0px 0px 1px #000000) !important;
-
 }
 
 #sidebar-box[sidebarcommand="viewBookmarksSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
@@ -1093,6 +1139,15 @@ hbox#sidebar-search-container textbox#search-box {
 
 #sidebar-header>#sidebar-switcher-target>#sidebar-icon {
 	margin-bottom: 3px !important;
+}
+
+/*
+#sidebarmenu>#sidebar-switcher-target>#sidebar-icon {
+	margin-bottom: 3px !important;
+}*/
+
+#sidebar-header {
+	padding: 0px !important;
 }
 
 #sidebar-switcher-target:hover {
@@ -1120,9 +1175,6 @@ hbox#sidebar-search-container textbox#search-box {
 
 }
 
-.sidebar-box {
-	background: #161a27 !important;
-}
 
 :is(menupopup, panel)[type="arrow"] {
 	--panel-background: #161a27 !important;
@@ -1165,6 +1217,7 @@ treechildren::-moz-tree-image(query) {
 
 #sidebar-box {
 	padding-top: 24px !important;
+	background: #161a27 !important;
 }
 
 /* left-hand space at opened subfolders 
@@ -1232,7 +1285,7 @@ treechildren::-moz-tree-image(query) {
 	head>title {
 		display: -moz-box !important;
 		padding-top: 1px !important;
-		margin-top: 10px !important;
+		margin-top: 9px !important;
 		max-width: 57vw !important;
 		overflow-x: -moz-hidden-unscrollable !important;
 		text-overflow: ellipsis !important;
@@ -2376,8 +2429,8 @@ input:not(#urlbar-input) {
 	color: white !important;
 	/*text-shadow: 0px 0px 6px #000000 !important;*/
 	text-shadow: 1px 1px 1px #000000,
-		0 0 3px #000000,
-		0 0 3px #000000 !important;
+		0 0 2px #000000,
+		0 0 2px #000000 !important;
 	/*font-weight: bold !important;*/
 }
 
@@ -3950,7 +4003,7 @@ menupopup>menu>menupopup {
 
 
 
-
+/* auto hide toolbar */
 
 #PersonalToolbar {
 	--uc-bm-height: 28px;
@@ -3997,24 +4050,20 @@ menupopup>menu>menupopup {
 #OtherBookmarks,
 #PersonalToolbar>#import-button {
 	padding-block: var(--uc-bm-padding) !important;
-
 }
 
 #nav-bar:focus-within+#PersonalToolbar {
 	transition-delay: 90ms !important;
 	transform: rotateX(var(--uc-autohide-toolbar-focus-rotation, 0));
-
 }
 
 #navigator-toolbox:hover>#PersonalToolbar {
 	transition-delay: 90ms !important;
 	transform: rotateX(var(--uc-autohide-toolbar-hover-rotation, 0));
-
 }
 
 #navigator-toolbox:hover>#nav-bar:focus-within+#PersonalToolbar {
 	transform: rotateX(0);
-
 }
 
 /* Uncomment to enable compatibility for multi-row_bookmarks.css */
