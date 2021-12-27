@@ -3497,12 +3497,22 @@ textbox {
 		font-family: Fira Sans !important;
 	}
 
+	html, body {
+		background: #161a27 !important;
+	}
+
 	#prefs {
 		background-color: #161a27 !important;
 		color: #ffffff !important;
 
 	}
 
+	:root {
+		--checkmark: #ffffff !important;
+		--checkbox-checked-ink: #1e90ff !important;
+	}
+
+	/*
 
 	#prefs,
 	#prefs * {
@@ -3521,12 +3531,13 @@ textbox {
 		padding-right: unset !important;
 		margin: unset !important;
 	}
-
+*/
 	#prefs {
-		width: 100% !important;
-		border-radius: 0 !important;
+
+		border: none !important;
 	}
 
+	/*
 	#prefs button {
 		min-height: 16px !important;
 		height: unset !important;
@@ -3559,35 +3570,74 @@ textbox {
 	#search-container {
 		padding: 0 !important;
 	}
+*/
+	input[type="checkbox"]:disabled {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #161a27 !important;
+		border-radius: 2px;
+	}
 
+	input[type="checkbox"]:hover {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1e90ff80 !important;
+		border-radius: 2px;
+	}
+
+	input[type="checkbox"] {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #161a27 !important;
+		border-radius: 2px;
+	}
+
+	input[type="checkbox"]:checked {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1e90ff !important;
+		border-radius: 2px;
+		color:white !important;
+	}
+
+	#toolbar,
 	#search-container,
 	#about-config-search:focus,
 	#search-container,
 	#about-config-search[focused] {
 		box-shadow: unset !important;
+		border:none !important;
+		box-sizing: unset !important;
+		outline: none !important;
 	}
 
+	#toolbar,
 	#search-container,
-	#about-config-search:-moz-ui-invalid:focus {
+	#about-config-search {
 		box-shadow: unset !important;
+		box-shadow: unset !important;
+		border:none !important;
+		box-sizing: unset !important;
+		outline: none !important;
 	}
 
+	/*
 	.cell-edit,
 	.cell-reset {
 		width: 20px !important;
 	}
-
+*/
 	#about-config-search {
 		/*-moz-context-properties: fill, fill-opacity;*/
 		fill: #1e90ff !important;
 		opacity: 1 !important;
 		box-sizing: border-box;
 		flex-grow: 1;
-		filter: brightness(100%) !important;
-		background-image: url("search.svg");
+		filter: opacity(100%) !important;
+		background-image: url("search.svg") !important;
 		background-repeat: no-repeat;
 		background-position: 8px center;
-		background-size: 16px;
+		background-size: 20px !important;
 		margin-inline: 0;
 		text-align: match-parent;
 		direction: ltr;
@@ -3603,6 +3653,53 @@ textbox {
 		width: 235px !important;
 		background-size: 100% !important;
 	}
+
+	checkbox:not([disabled]):hover>.checkbox-check {
+		border-color: #1e90ff !important;
+		background-color: #1e90ff !important;
+		border-radius: 3px !important;
+		color: #ffffff !important;
+		fill: #ffffff !important;
+	}
+
+	checkbox[checked]>.checkbox-check {
+		list-style-image: url("chrome://global/skin/icons/check.svg");
+		-moz-context-properties: fill !important;
+		fill: #ffffff !important;
+		background-color: #1e90ff !important;
+	}
+
+	checkbox>.checkbox-check {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+		border-color: #1e90ff !important;
+		border-radius: 2px !important;
+
+	}
+
+	button:hover,
+	input[type="button"]:hover {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+		box-shadow: none !important;
+	}
+
+	button,
+	input[type="button"] {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		box-shadow: none !important;
+	}
+
+	.checkbox-container {
+		margin-right: 45px !important;
+	}
+
+	.checkbox-container-label {
+		font-size: 12px !important;
+	}
+
+
 }
 
 checkbox:not([disabled]):hover>.checkbox-check {
@@ -3614,10 +3711,10 @@ checkbox:not([disabled]):hover>.checkbox-check {
 }
 
 checkbox[checked]>.checkbox-check {
-	list-style-image: url("chrome://global/skin/icons/check.svg");
+	/*list-style-image: url("chrome://global/skin/icons/check.svg");*/
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
-	background: #1e90ff !important;
+	background-color: #1e90ff !important;
 }
 
 checkbox>.checkbox-check {
