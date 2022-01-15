@@ -14,7 +14,8 @@
 
 		bottom: 10px !important;
 	}
-*/
+	*/
+
 	#aboutDialogContainer {
 		min-height: 350px !important;
 		max-height: 400px !important;
@@ -48,11 +49,6 @@
 	}
 }
 
-::selection {
-	background: #1f90ff !important;
-	color: white !important;
-}
-
 :-moz-focusring,
 :focus,
 button::-moz-focus-inner,
@@ -69,7 +65,7 @@ button::-moz-focus-inner,
 :root {
 	/* ---------- 😉--------- 🎨 Customization 🎨 -------------------- */
 	/*--tab-corner-rounding: 7px !important;*/
-	--button-corner-rounding: 2px;
+	--button-corner-rounding: 2px !important;
 	/*--menu-corner-rounding: 11px;*/
 	--toolbarbutton-hover-background: #1e90ff80 !important;
 	--focus-outline: 0px !important;
@@ -79,8 +75,13 @@ button::-moz-focus-inner,
 	outline: none !important;
 }
 
+/*
+#PlacesToolbar {
+	max-height: 2px !important;
+}
+*/
 :root[uidensity=compact] {
-	--tab-min-height: 30px !important;
+	--tab-min-height: 32px !important;
 }
 
 #protections-popup-tp-switch-breakage-link,
@@ -103,6 +104,7 @@ button::-moz-focus-inner,
 	background-color: #161a27 !important;
 	background: #161a27 !important;
 	border: none !important;
+	outline: none !important;
 }
 
 scrollbox[part="scrollbox"][flex="1"][orient="horizontal"][smoothscroll="false"] {
@@ -158,8 +160,9 @@ tooltip * {
 #tracking-protection-container,
 #protections-popup-mainView {
 	background: #161a27 !important;
+	color: white !important;
+	padding-top: 4px !important;
 }
-
 
 /* status panel */
 #statuspanel {
@@ -222,20 +225,18 @@ menuitem {
 
 }
 
-#backForwardMenu-arrowscollbox,
+#backForwardMenu-arrowscrollbox,
 .menupopup-arrowscrollbox {
 	background: #161a27 !important;
 	border-radius: 8px !important;
 	margin-top: 5px !important;
 	padding-left: 4px !important;
 	padding-right: 4px !important;
+	padding-bottom: 6px !important;
+	padding-top: 6px !important;
 	outline: none !important;
 	border: none !important;
 
-}
-
-#PlacesToolbar menupopup[placespopup="true"] menuseparator {
-	background-color: #454545 !important;
 }
 
 menu:hover,
@@ -258,13 +259,18 @@ menulist[open="true"] {
 	border-radius: 2.5px !important;
 	outline: none !important;
 	outline-offset: none !important;
+	padding-block: 4px !important;
+	min-height: 28px !important;
+	border: none !important;
+	outline: none !important;
 }
 
 menuitem[disabled="true"],
 menuitem[disabled="true"]>.menu-text {
 	appearance: none !important;
-	color: #888888 !important;
+	color: #999999 !important;
 }
+
 
 menupopup:not(.in-menulist)>menuitem,
 menupopup:not(.in-menulist)>menu {
@@ -272,14 +278,27 @@ menupopup:not(.in-menulist)>menu {
 	min-height: 28px !important;
 	border: none !important;
 	outline: none !important;
-	/*display: -moz-box !important;*/
+
+}
+
+:root {
+	--arrowpanel-menuitem-padding: 4px 8px !important;
+}
+
+menulist {
+	max-width: auto !important;
+	min-width: auto !important;
 }
 
 menugroup {
 	background-color: #161a27 !important;
 	color: #ffffff !important;
 	outline: none !important;
-	box-shadow: none !important;
+	/*box-shadow: none !important;*/
+}
+
+menupopup menuitem {
+	padding-block: 4px !important;
 }
 
 /*
@@ -293,18 +312,23 @@ menubar>menu[open] {
 	padding-left: 11px !important;
 }
 
+
+
 /*------coloring shortcuts in menus----------*/
 menuitem .menu-iconic-accel,
 menuitem .menu-accel {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+	font-weight: bold !important;
 	color: #1e90ff !important;
-	filter: drop-shadow(0px 0px 2px #000000) !important;
+	filter: drop-shadow(0px 0px 4px #161a27) !important;
+
 }
 
 .menu-iconic-icon,
 .menu-iconic-left {
-	margin-bottom: 1px !important;
+	margin-bottom: 1.0px !important;
+	color: white !important;
 }
 
 menuseparator {
@@ -414,6 +438,21 @@ treechildren::-moz-tree-image(query) {
 	list-style-image: url("Folderflat2.svg") !important;
 }
 
+#PlacesToolbarItems>.bookmark-item[container]>.toolbarbutton-icon,
+.toolbarbutton-icon {
+	margin-top: 1px !important;
+}
+
+.bookmark-item[container="true"] label {
+	margin-top: 2px !important;
+	margin-left: 1px !important;
+}
+
+#PlacesToolbar menupopup[placespopup="true"] menuseparator {
+	background-color: #454545 !important;
+}
+
+
 /* panel ui */
 #PanelUI-menu-button {
 	list-style-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDEzNSAxNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZiI+CiAgICA8cmVjdCB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMjA7MTEwOzEwMDs5MDs4MDs3MDs2MDs1MDs0MDsxNDA7MTIwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieSIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEyMDsxMTA7MTAwOzkwOzgwOzcwOzYwOzUwOzQwOzE0MDsxMjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IgogICAgICAgICAgICAgYmVnaW49IjAuMjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSI2MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0MCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjkwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjEyMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTA7MTU7MjA7MjU7MzA7MzU7NDA7NDU7NTA7MDsxMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgPC9yZWN0Pgo8L3N2Zz4K") !important;
@@ -429,6 +468,7 @@ treechildren::-moz-tree-image(query) {
 .panel-subview-body {
 	color: #ffffff !important;
 	background: #161a27 !important;
+
 }
 
 
@@ -483,8 +523,9 @@ treechildren::-moz-tree-image(query) {
 .subviewbutton[shortcut]::after {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+	font-weight: bold !important;
 	color: #1e90ff !important;
-	filter: drop-shadow(0px 0px 2px #000000) !important;
+	filter: drop-shadow(0px 0px 4px #161a27) !important;
 }
 
 .subviewbutton-nav::after {
@@ -504,10 +545,24 @@ treechildren::-moz-tree-image(query) {
 	border-radius: 2px !important;
 }
 
+#appMenu-popup {
+	margin-top: 4px !important;
+}
+
 panelmultiview .toolbaritem-combined-buttons>label {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	margin-left: 0px !important;
+}
+
+#PanelUI-fxa-menu,
+#PanelUI-fxa-menu menupopup {
+	font-family: Fira Sans !important;
+}
+
+#appMenu-fxa-label2,
+.panel-header {
+	font-family: Fira Sans !important;
 }
 
 /* no zoom text */
@@ -532,6 +587,8 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	border: 0px !important;
 	background-color: #161a27 !important;
 	font-family: Fira Sans !important;
+	padding-block: 2px !important;
+	min-height: 28px !important;
 }
 
 #editBookmarkPanel menulist menupopup menuitem {
@@ -543,6 +600,31 @@ panelmultiview .toolbaritem-combined-buttons>label {
 #star-button {
 	list-style-image: url('star.svg') !important;
 	margin-left: 0px !important;
+	margin-bottom: 1px !important;
+	background: transparent !important;
+}
+
+#star-button:hover {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+#star-button-box:hover {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+#star-button-box:Selected {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+.urlbar-page-action:not([disabled])[open],
+.urlbar-page-action:not([disabled]):hover:active,
+#urlbar-go-button:hover:active,
+.search-go-button:hover:active {
+	background-color: transparent !important;
+
 }
 
 #editBMPanel_tagsSelector {
@@ -552,6 +634,11 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	height: 26px !important;
 	border: none !important;
 	font-family: Fira Sans !important;
+}
+
+#editBookmarkHeaderSeparator,
+#editBookmarkSeparator {
+	background: #454545 !important;
 }
 
 #editBMPanel_namePicker {
@@ -572,6 +659,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	background: #000000 !important;
 	color: white !important;
 	border: none !important;
+	height: 24px !important;
 }
 
 
@@ -608,6 +696,16 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	color: #ffffff !important;
 	border: none !important;
 	font-family: Fira Sans !important;
+	background: #161a27 !important;
+	padding-block: 2px !important;
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+
+}
+
+#editBMPanel_folderMenuList menuitem {
+	padding-block: 4px !important;
+
 
 }
 
@@ -616,7 +714,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	border: none !important;
 	font-family: Fira Sans !important;
 	outline: 0 !important;
-
+	background: black !important;
 }
 
 .panel-arrow {
@@ -788,13 +886,15 @@ checkbox[disabled]>.checkbox-check {
 
 /* star panel image */
 #editBookmarkPanelImage {
-	border-radius: 2px !important;
-	height: 320px !important;
+	border-radius: 4px !important;
+	height: 380px !important;
+	/*width: 100% !important;*/
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
-	margin: 0 2px !important;
-	transition: height 0.28s cubic-bezier(0.07, 0.95, 0, 1) !important;
-	transition-delay: 400ms !important;
+	margin: 0 0px !important;
+	/*transition: height 0.88s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+	transition-delay: 800ms !important;*/
+
 }
 
 #editBookmarkPanelDoneButton {
@@ -808,6 +908,8 @@ checkbox[disabled]>.checkbox-check {
 	background: #1e90ff80 !important;
 	color: white !important;
 	border: none !important;
+	transition: height 0.28s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+	transition-delay: 800ms !important;
 }
 
 #editBookmarkPanelRemoveButton {
@@ -920,13 +1022,20 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 #sidebar,
 #sidebar-header {
 	border: 0px !important;
+	font-size: 14px !important;
 }
 
+/*
+#sidebar-header {
+	padding: 8px !important;
+}
+*/
 #sidebar {
 	/*margin: 0 0 0 0 !important;*/
 	background-color: #161a27 !important;
 	font-family: Fira Sans !important;
 	color: #ffffff !important;
+	font-size: 14px !important;
 }
 
 #sidebar,
@@ -942,44 +1051,70 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	color: #ffffff !important;
+	outline: none !important;
+	box-shadow: none !important;
 }
 
 #sidebarMenu-popup label {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+	/*padding: 0px !important;*/
 }
+
 
 /* Sidebar items */
-
+.sidebar-placesTreechildren,
 .sidebar-placesTreechildren::-moz-tree-row {
 	border-radius: 2px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 }
 
+/*
 .sidebar-placesTreechildren::-moz-tree-cell(hover) {
 	background: #1e90ff !important;
-	border-radius: 2px !important;
+	border-radius: 3px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 
 }
 
 .sidebar-placesTreechildren::-moz-tree-cell(selected) {
 	background: #1e90ff !important;
-	border-radius: 2px !important;
-}
+	border-radius: 4px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}*/
 
 .sidebar-placesTreechildren::-moz-tree-row(selected) {
 	background: #1e90ff !important;
 	border-radius: 2px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 }
 
 .sidebar-placesTreechildren::-moz-tree-row(hover) {
 	background: #1e90ff !important;
-	border-radius: 4px !important;
+	border-radius: 2px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 }
+
 
 .sidebar-placesTreechildren::-moz-tree-cell-text(selected) {
 	color: #ffffff !important;
-	background-color: #1e90ff !important;
+	background: #1e90ff !important;
 	border-radius: 2px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(hover) {
+	color: #ffffff !important;
+	background: #1e90ff !important;
+	border-radius: 2px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 }
 
 .sidebar-splitter {
@@ -996,11 +1131,11 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	background: #161a27 !important;
 }
 
+/*.sidebar-header*/
 #sidebar-header,
 #sidebar-search-container,
 #sidebar-search-container #viewButton,
-.content-header,
-.sidebar-header {
+.content-header {
 	background-color: #161a27 !important;
 	background: #161a27 !important;
 	color: #ffffff !important;
@@ -1013,8 +1148,8 @@ hbox#sidebar-search-container textbox#search-box {
 	background-color: #161a27 !important;
 	background: #161a27 !important;
 	color: #ffffff !important;
-	min-height: 20px !important;
-	padding: 0 0 0 2px !important;
+	min-height: 24px !important;
+	padding: 0px 0px 0px 0px !important;
 	border: 0px solid !important;
 	border-color: #161a27 !important;
 	border-radius: 2px !important;
@@ -1022,7 +1157,7 @@ hbox#sidebar-search-container textbox#search-box {
 
 .sidebar-search-container.tabs-container.sync-state.selected .search-box .textbox-input-box {
 	background: #161a27 !important;
-	padding: 2px !important;
+	padding: 0px !important;
 	background-color: #161a27 !important;
 }
 
@@ -1045,8 +1180,13 @@ hbox#sidebar-search-container textbox#search-box {
 #webextpanels-window {
 	background-color: #161a27 !important;
 	color: white !important;
-	/*font-family: "Fira Sans" !important;*/
+	font-family: "Fira Sans" !important;
+	font-size: 14px !important;
+}
 
+#sidebar-box {
+	padding-top: 28px !important;
+	background: #161a27 !important;
 }
 
 /*
@@ -1058,19 +1198,16 @@ hbox#sidebar-search-container textbox#search-box {
 
 #sidebarMenu-popup {
 	margin-top: 10px !important;
-	margin-left: 0px !important;
 	background: #161a27 !important;
 	border-radius: 8px !important;
+	--panel-padding: -6px !important;
 	/*padding-block: 0px !important;*/
 	/*--arrowpanel-padding: 0 !important;*/
-
-
 }
 
 #sidebarMenu-popup toolbarseparator {
 	border-color: #454545 !important;
 	padding: 10px 6px 0px 6px !important;
-
 }
 
 
@@ -1097,6 +1234,9 @@ hbox#sidebar-search-container textbox#search-box {
 	padding-top: 0px !important;
 	margin-bottom: 6px !important;
 	margin-top: -6px !important;
+	margin-left: -2px !important;
+	margin-right: 2px !important;
+	font-size: 14px !important;
 }
 
 /*--arrowpanel-menuitem-margin: -2px !important;*/
@@ -1106,14 +1246,11 @@ hbox#sidebar-search-container textbox#search-box {
 	--panel-padding: 0px !important;
 }*/
 
-#sidebarMenu-popup {
-	--panel-padding: -6px !important
-}
-
+/*
 #sidebar-switcher-target {
 	padding: 0px !important;
 }
-
+*/
 /*
 #sidebar-switcher-bookmarks>.toolbarbutton-icon,
 #sidebar-box[sidebarcommand="viewBookmarksSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon,
@@ -1122,29 +1259,10 @@ hbox#sidebar-search-container textbox#search-box {
 #sidebar-switcher-sync-tabs>.toolbarbutton-icon,
 .sidebar-box[sidebarcommand="viewTabsSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon */
 
-#sidebar-box[sidebarcommand="viewBookmarksSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon,
-#sidebar-box[sidebarcommand="viewHistorySidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon,
-#sidebar-box[sidebarcommand="viewTabsSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
-	color: #1e90ff !important;
-	fill: #1e90ff !important;
-	opacity: 1 !important;
-	/*margin-bottom: 0px !important;*/
-	filter: drop-shadow(0px 0px 1px #000000) !important;
-}
 
-#sidebar-box[sidebarcommand="viewBookmarksSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
-	margin-bottom: 3px !important;
-}
-
-
-#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
-	margin-bottom: 3px !important;
-}
-
-/*
 #sidebarmenu>#sidebar-switcher-target>#sidebar-icon {
 	margin-bottom: 3px !important;
-}*/
+}
 
 #sidebar-header {
 	padding: 0px !important;
@@ -1154,27 +1272,6 @@ hbox#sidebar-search-container textbox#search-box {
 	background: #1e90ff !important;
 	border-radius: 2px !important;
 }
-
-.toolbarbutton.subviewbutton:is(:hover) {
-	background-color: #1e90ff !important;
-	border-radius: 2px !important;
-}
-
-
-/*
-#panel-arrowcontent,*/
-.protections-popup,
-.panel-arrowcontainer {
-	margin-top: 10px !important;
-	background: transparent !important;
-	border-radius: 8px !important;
-	border: 0px !important;
-	outline: none !important;
-	box-shadow: none !important;
-	margin-left: 2px !important;
-
-}
-
 
 :is(menupopup, panel)[type="arrow"] {
 	--panel-background: #161a27 !important;
@@ -1197,7 +1294,7 @@ treechildren::-moz-tree-image(query) {
 	margin-left: 0px !important;
 	padding-left: 4px !important;
 	padding-right: 4px !important;
-	border-radius: 2px !important;
+	border-radius: 3px !important;
 
 }
 
@@ -1212,32 +1309,70 @@ treechildren::-moz-tree-image(query) {
 .sidebar-placesTree treechildren::-moz-tree-row {
 	min-height: 26px !important;
 	height: 26px !important;
-	border-radius: 2px !important;
+	border-radius: 3px !important;
+	border: none !important;
 }
 
-#sidebar-box {
-	padding-top: 24px !important;
-	background: #161a27 !important;
+
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon,
+#sidebar-box[sidebarcommand="viewHistorySidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon,
+#sidebar-box[sidebarcommand="viewTabsSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
+	color: #1e90ff !important;
+	fill: #1e90ff !important;
+	opacity: 1 !important;
+	margin-bottom: 3px !important;
+	filter: drop-shadow(0px 0px 1px #000000) !important;
+}
+
+#sidebar-box>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
+	margin-bottom: 3px !important;
+}
+
+#sidebar-switcher-target>#sidebar-icon {
+	margin-bottom: 3px !important;
+}
+
+/*
+#sidebar-box>#sidebar-switcher-target>#sidebar-icon {
+	margin-bottom: 3px !important;
+}
+*/
+#sidebar-switcher-target {
+	appearance: none !important;
+	margin-inline-end: 4px !important;
+	padding: 2px 4px !important;
+}
+
+.toolbarbutton.subviewbutton:is(:hover) {
+	background-color: #1e90ff !important;
+	border-radius: 3px !important;
+	border: none !important;
 }
 
 /* left-hand space at opened subfolders 
 .sidebar-placesTreechildren::-moz-tree-indentation {
 	width: 8px !important;
 */
+
+/*
+#panel-arrowcontent,*/
+#identity-popup,
+#protections-popup,
+#permission-popup,
+.panel-arrowcontainer {
+	margin-top: 5px !important;
+	background: transparent !important;
+	border-radius: 8px !important;
+	border: 0px !important;
+	outline: none !important;
+	box-shadow: none !important;
+	margin-left: 2px !important;
+}
+
 #fxa-avatar-image {
 	margin-bottom: 0px !important;
 	padding: 16 16 !important;
 	transform: scale(1.25) !important;
-}
-
-#PanelUI-fxa-menu,
-#PanelUI-fxa-menu menupopup {
-	font-family: Fira Sans !important;
-}
-
-#appMenu-fxa-label2,
-.panel-header {
-	font-family: Fira Sans !important;
 }
 
 /*-------------------------nav button----------------------------*/
@@ -1315,7 +1450,7 @@ spacer,
 	background-color: #161a27 !important;
 	background: #161a27 !important;
 	outline: none !important;
-	/*box-shadow: none !important;*/
+	box-shadow: none !important;
 }
 
 /* hide webextion label */
@@ -1329,7 +1464,9 @@ spacer,
 #PlacesToolbar {
 	background: #161a27 !important;
 	border: 0px !important;
+	box-shadow: none !important;
 }
+
 
 /*----------*/
 
@@ -1370,9 +1507,13 @@ spacer,
 
 .urlbarView-favicon {
 	margin-bottom: 2px !important;
+	margin-left: 3px !important;
 }
 
-
+.urlbarView-title-separator::before {
+	content: " ► " !important;
+	opacity: 1 !important;
+}
 
 /*
 */
@@ -1419,7 +1560,7 @@ spacer,
 	height: 100% !important;
 	color: #1e90ff !important;
 	text-shadow: 0 0 2px #161a27 !important;
-	margin-top: -1px !important;
+	margin-top: 0px !important;
 	pointer-events: none !important;
 	font-family: Fira Sans !important;
 }
@@ -1525,7 +1666,7 @@ toolbarbutton#scrollbutton-down:active>.toolbarbutton-icon {
 
 
 toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
-	padding: calc(var(--toolbarbutton-inner-padding) + 3px) !important;
+	padding: calc(var(--toolbarbutton-inner-padding) + 1px) !important;
 }
 
 
@@ -1534,7 +1675,11 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 #page-action-buttons {
 	-moz-box-ordinal-group: 0 !important;
 	/*margin: 0px !important;*/
-	padding-top: 1px !important;
+	padding-block: 0 !important;
+	margin-left: 6px !important;
+
+	/*paddingwidth: 28px !important;
+	height: 28px !important;*/
 }
 
 #pageActionButton {
@@ -1542,13 +1687,30 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 }
 
 .urlbar-page-action {
-	margin-left: 2px !important;
+	width: 28px !important;
+	height: 28px !important;
+	margin-inline: -2px !important;
 }
 
+/*
+#page-action-buttons {
+	margin-left: 4px !important;
+}
+*/
 #page-action-buttons:hover,
 #pageActionButton:hover,
 .urlbar-page-action:hover {
 	background: transparent !important;
+
+}
+
+
+
+toolbar .toolbarbutton-1>.toolbarbutton-icon,
+toolbar .toolbarbutton-1>.toolbarbutton-text,
+toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
+	padding: 2px;
+	border-radius: 2px !important;
 }
 
 /* blinkin cursor on urlbar */
@@ -1662,6 +1824,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	background-color: #161a27 !important;
 	font-size: 14px !important;
 	color: white !important;
+	margin-left: 4px !important;
 }
 
 .protections-popup-tp-switch[enabled] {
@@ -1676,6 +1839,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 #permission-popup-mainView {
 	background: #161a27 !important;
 	font-size: 14px !important;
+	margin-top: 5px !important;
 }
 
 #tracking-protection-icon-container:hover,
@@ -1685,10 +1849,9 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	background: #1e90ff !important;
 }
 
-/* reduce space of navbar icons */
+/* reduce space of navbar icons 
 .titlebar-button,
-.findbar-textbox~toolbarbutton,
-toolbarbutton.scrollbutton-up,
+.findbar-textbox~toolbarbutton,*/
 toolbarbutton.scrollbutton-down .urlbar-icon,
 .urlbar-icon-wrapper,
 toolbar .toolbarbutton-1,
@@ -1700,6 +1863,15 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	margin-inline: -2px !important;
 }
 
+#nav-bar {
+	height: 33px !important;
+}
+
+/*
+.urlbar-icon {
+	margin-top: 4px !important;
+}
+*/
 /* Hide the normal loading indicator (just show tab-icon instead) and make the top tab-line bounce left-to-right*
 @keyframes tab-loading-line-anim {
 	from {
@@ -1769,6 +1941,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 #PopupAutoCompleteRichResult .ac-url:not([selected="true"]) {
 	color: #1e90ff !important;
 	border-radius: 2px !important;
+
 }
 
 .autocomplete-richlistitem[selected="true"] {
@@ -1794,6 +1967,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	color: #1e90ff !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+
 	background-color: #161a27 !important;
 }
 
@@ -1812,7 +1986,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 /* Ability to scroll in Fx57 */
 #PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox {
 	overflow-y: auto !important;
-	padding-right: 3px !important;
+	padding-right: 4px !important;
 
 }
 
@@ -1829,6 +2003,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 *|span.urlbarView-secondary {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+
 }
 
 /* for actions e.g. "visit", "search with x", "switch to tab" etc. */
@@ -1852,6 +2027,8 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	color: #1e90ff !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+
+	/*margin-top: 1px !important;*/
 }
 
 .urlbar-results {
@@ -1902,6 +2079,10 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	border-radius: 3px !important;
 }
 
+#urlbar {
+	margin-top: 4px !important;
+}
+
 /*
 #search-box,
 #searchFilter,
@@ -1920,8 +2101,8 @@ input:not(#urlbar-input) {
 
 .urlbarView {
 	background-image: url("noise-512x512.png") !important;
-	background-color: #161a2780 !important;
-	background: #161a2780 !important;
+	background-color: #161a27f0 !important;
+	background: #161a27f0 !important;
 	backdrop-filter: blur(8px) !important;
 	border-radius: 6px !important;
 }
@@ -2003,7 +2184,7 @@ input:not(#urlbar-input) {
 		appearance: none !important;
 		background: #000000 !important;
 		color: white !important;
-
+		height: 24px !important;
 		/*outline: 1px ridge #1e90ff50 !important;*/
 		border-radius: 0px !important;
 	}
@@ -2344,7 +2525,7 @@ input:not(#urlbar-input) {
 }
 
 #urlbar-input {
-	margin-top: 2px !important;
+	margin-top: 4px !important;
 }
 
 :root {
@@ -2542,8 +2723,9 @@ input:not(#urlbar-input) {
 
 .titlebar-button {
 	padding-left: 0px !important;
-	margin-right: -2px !important;
+	margin-right: 0px !important;
 	padding-top: 7px !important;
+	margin-left: 0px !important;
 }
 
 
@@ -2677,32 +2859,6 @@ input:not(#urlbar-input) {
 
 
 
-
-#statuspanel {
-	bottom: -16px !important;
-	margin-left: 50% !important;
-	max-width: 45% !important;
-
-}
-
-#statuspanel-inner {
-	-moz-box-align: start !important;
-	margin-left: -50% !important;
-}
-
-#statuspanel #statuspanel-label {
-	/*appearance: none !important;*/
-	background-color: #161a27 !important;
-	font-family: "Fira Sans" !important;
-	font-size: 14px !important;
-	font-weight: normal !important;
-	color: yellow !important;
-	border: 2px solid #161a27 !important;
-	border-radius: 0px !important;
-	text-align: center !important;
-	/*0 1px 1px 1px;
-	border-style: none solid solid solid !important;*/
-}
 
 /* Ctrl-Tab */
 #ctrlTab-panel {
@@ -3269,15 +3425,17 @@ toolbar #fullscreen-button {
 
 #bookmarkpropertiesdialog {
 	background: #161a27 !important;
+
 }
 
-/*
+
 .titleIcon {
 	background-image: url("starborder.svg") !important;
+	fill: yellow !important;
 	background-color: #161a27 !important;
 
 }
-*/
+
 
 .dialog-button-box>button {
 	background: #1e90ff !important;
@@ -3332,7 +3490,7 @@ toolbar #fullscreen-button {
 
 		appearance: none !important;
 
-		background-color: #1e90ff !important;
+		background-color: #161a27 !important;
 
 		color: white !important;
 
@@ -3369,24 +3527,19 @@ toolbar #fullscreen-button {
 
 	#app-picker {
 		color: white !important;
-		background-color: #2b2a33 !important;
+		background-color: #161a27 !important;
 	}
 
 	button {
 
 		appearance: none !important;
-
-		background-color: #1e90ff !important;
-
+		background-color: #161a27 !important;
 		color: white !important;
-
-		border: 1px solid #1e90ff !important;
+		border: 0px solid #1e90ff !important;
 		border-radius: 0px !important;
-
 	}
 
 	button:hover {
-
 		background-color: #1e90ff80 !important;
 		border: 1px solid #1e90ff !important;
 	}
@@ -3417,7 +3570,7 @@ toolbar #fullscreen-button {
 
 PersonalToolbar {
 	/*background-color: var(--moonlight-gray-2) !important;*/
-	padding: 2px 0 !important;
+	padding: 0px !important;
 }
 
 #PersonalToolbar toolbarbutton.bookmark-item {
@@ -3426,7 +3579,8 @@ PersonalToolbar {
 	/*background-color: var(--moonlight-gray-4);
 	border: 1px solid var(--moonlight-gray-1) !important;*/
 	/*color: var(--moonlight-gray-10) !important;*/
-	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+	transition: background-color,
+		border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 	border-radius: 2px !important;
 }
 
@@ -3459,7 +3613,7 @@ toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active)>.too
 #PersonalToolbar toolbarbutton.bookmark-item:hover,
 #PersonalToolbar toolbarbutton.bookmark-item[open=true],
 .search-go-button:not([disabled="true"], [checked], [open], :active) {
-	transition: background linear 250ms;
+	transition: background linear 250ms !important;
 }
 
 /* Pin / Un-Pin Tab Animation    */
@@ -3472,7 +3626,10 @@ toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active)>.too
 	list-style-image: url(folderflat1.svg) !important;
 }
 
-
+#fxa-manage-account-button,
+#fxa-menu-header-title {
+	color: white !important;
+}
 
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css made available under Mozilla Public License v. 2.0
 See the above repository for updates as well as full license text. */
@@ -3581,8 +3738,6 @@ See the above repository for updates as well as full license text. */
 }
 
 /* Make Bookmark Button Centred Again */
-
-
 
 /* Source file https: //github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/dark_checkboxes_and_radios.css made available under Mozilla Public License v. 2.0
 See the above repository for updates as well as full license text. */
@@ -3920,11 +4075,12 @@ browser[type="content"] {
 	background: #161a27 !important;
 }
 
-
-/*
-#editBookmarkPanelRows .expander-up {
-	list-style-image: url("arrowdown.svg") !important;
-}*/
+#editBookmarkPanel .expander-up,
+#editBookmarkPanel .expander-down {
+	min-width: 16px !important;
+	min-height: 16px !important;
+	border-radius: 2px !important;
+}
 
 #downloadsPanel-mainView {
 	background: #161a27 !important;
@@ -3943,7 +4099,7 @@ menulist:-moz-focusring>menupopup>menuitem[_moz-menuactive="true"] {
 }
 
 menupopup>menu>menupopup {
-	margin-inline-start: 7px !important;
+	margin-inline-start: 4px !important;
 }
 
 #PlacesToolbarItems menupopup>menu>menupopup {
@@ -3979,6 +4135,7 @@ menupopup>menu>menupopup {
 */
 #PlacesToolbarItems>.bookmark-item {
 	margin-inline: -2px !important;
+
 }
 
 #PlacesToolbar toolbarseparator {
@@ -4008,7 +4165,7 @@ menupopup>menu>menupopup {
 #PersonalToolbar {
 	--uc-bm-height: 28px;
 	/* Might need to adjust if the toolbar has other buttons */
-	--uc-bm-padding: 7px;
+	--uc-bm-padding: 5px;
 	/* Vertical padding to be applied to bookmarks */
 	--uc-autohide-toolbar-delay: 400ms;
 	/* The toolbar is hidden after 0.6s */
@@ -4021,7 +4178,7 @@ menupopup>menu>menupopup {
 }
 
 :root[uidensity="compact"] #PersonalToolbar {
-	--uc-bm-padding: 0px;
+	--uc-bm-padding: 0px !important;
 }
 
 /*
@@ -4075,3 +4232,417 @@ menupopup>menu>menupopup {
   margin-bottom: 0px !important;
 }
 */
+::selection {
+	background: #1f90ff !important;
+	background-color: #1e90ff !important;
+	color: white !important;
+}
+
+p::-moz-selection {
+	background: #1f90ff !important;
+	background-color: #1e90ff !important;
+	color: white !important;
+}
+
+p::selection {
+	background: #1f90ff !important;
+	background-color: #1e90ff !important;
+	color: white !important;
+}
+
+::-moz-selection {
+	background: #1f90ff !important;
+	background-color: #1e90ff !important;
+	color: white !important;
+}
+
+/*
+#widget-overflow #PanelUI-webext-addon_darkreader_org-browser-action-view {
+	min-width: 276px !important;
+	max-width: 276px !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+*/
+/*** Tighten up drop-down/context/popup menu spacing (8 Sep 2021) ***/
+
+menupopup:not(.in-menulist)>menuitem,
+menupopup:not(.in-menulist)>menu {
+	padding-block: 3px !important;
+	/* reduce to 3px, 2px, 1px or 0px as needed */
+	min-height: unset !important;
+	/* v92.0 - for padding below 4px */
+}
+
+:root {
+	--arrowpanel-menuitem-padding: 4px 8px !important;
+}
+
+@-moz-document url("chrome://browser/content/places/bookmarkProperties.xhtml") {
+
+	.titleIcon {
+		background-color: transparent !important;
+	}
+}
+
+.titleIcon {
+	background-color: transparent !important;
+}
+
+#containers-panelmenu,
+#web-apps-button,
+#e10s-button,
+#panic-button,
+#stop-button,
+#stop-button .toolbarbutton-animatable-image,
+#stop-reload-button[animate]>#reload-button[displaystop]+#stop-button>.toolbarbutton-animatable-box>.toolbarbutton-animatable-image,
+#save-page-button,
+#back-button,
+#forward-button,
+#new-window-button,
+#tabs-newtab-button,
+#alltabs-button,
+#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) #alltabs-button,
+#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) #tabbrowser-arrowscrollbox>.scrollbutton-up,
+#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) #tabbrowser-arrowscrollbox>.scrollbutton-down,
+#downloads-button,
+#downloads-button[indicator="true"]:not([attention="success"]) #downloads-indicator-icon,
+#find-button,
+#sidebar-button,
+#PanelUI-customize,
+#password-notification-icon,
+#PanelUI-fxa-status,
+#sync-button,
+#tabview-button,
+#screenshot-button,
+#email-link-button,
+#reload-button,
+#reload-button .toolbarbutton-animatable-image,
+#add-ons-button,
+#open-file-button,
+#home-button,
+#feed-button,
+#history-button,
+#history-panelmenu,
+#library-button,
+#privatebrowsing-button,
+#print-button,
+#webide-button,
+#PanelUI-menu-button,
+#nav-bar-overflow-button,
+#bookmarks-menu-button,
+#bookmarks-button,
+#bookmarks-menu-button>.toolbarbutton-menubutton-dropmarker>.dropmarker-icon,
+#developer-button,
+#preferences-button,
+#characterencoding-button {
+	fill: #ffffff !important;
+	fill-opacity: 1 !important;
+	opacity: 1 !important;
+}
+
+@-moz-document url("chrome://mozapps/content/handling/appChooser.xhtml"),
+url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
+
+	richlistitem[selected="true"] {
+		background-color: dodgerblue !important;
+		color: white !important;
+	}
+
+	richlistbox {
+		background-color: #161a27 !important;
+		color: white !important;
+	}
+
+	/*
+	checkbox:not([disabled]):hover>.checkbox-check {
+		border-color: #1e90ff !important;
+		background-color: #1e90ff !important;
+		border-radius: 3px !important;
+		color: #ffffff !important;
+		fill: #ffffff !important;
+	}
+
+	checkbox[checked]>.checkbox-check {
+		list-style-image: url("chrome://global/skin/icons/check.svg");
+		-moz-context-properties: fill !important;
+		fill: #ffffff !important;
+		background-color: #1e90ff !important;
+	}
+
+	checkbox>.checkbox-check {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+		border-color: #1e90ff !important;
+		border-radius: 2px !important;
+
+	}
+*/
+	#description {
+		font-weight: bold;
+	}
+
+	#remember-text:not([visible]) {
+		visibility: hidden;
+	}
+
+	dialog {
+		padding: 16px calc(16px - 4px) !important;
+	}
+
+	#items,
+	label,
+	description {
+		margin: 0;
+	}
+
+	#items label {
+		margin-inline: 4px;
+	}
+
+	#description,
+	#description-box,
+	#rememberContainer,
+	#chooser {
+		margin: 0 4px 16px;
+	}
+
+	/* avoid double inline margins when #description is nested: */
+	#description-box>#description {
+		margin-inline: 0;
+	}
+
+	/* Parent selector to win on specificity against common.css */
+	#rememberContainer>.toggle-container-with-text {
+		align-items: baseline;
+		color: var(--in-content-deemphasized-text);
+	}
+
+	.toggle-container-with-text>html|input[type="checkbox"] {
+		margin-inline-end: 8px;
+		/* Ensure the checkbox is properly aligned with the text: */
+		translate: 0 calc(1px + max(60% - .6em, 0px));
+	}
+
+	#rememberContainer:not([hidden]) {
+		/* Ensure we don't get sized to the smallest child when the checkbox text wraps. */
+		display: block;
+	}
+
+	input[type="checkbox"]:disabled {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #161a27 !important;
+		border-radius: 2px;
+	}
+
+	input[type="checkbox"]:hover {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1e90ff80 !important;
+		border-radius: 2px;
+	}
+
+	input[type="checkbox"] {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #161a27 !important;
+		border-radius: 2px;
+	}
+
+	input[type="checkbox"]:checked {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1e90ff !important;
+		border-radius: 2px;
+		color: white !important;
+	}
+
+	checkbox:not([disabled]):hover>.checkbox-check {
+		border-color: #1e90ff !important;
+		background-color: #1e90ff !important;
+		border-radius: 3px !important;
+		color: #ffffff !important;
+		fill: #ffffff !important;
+	}
+
+	checkbox[checked]>.checkbox-check {
+		list-style-image: url("chrome://global/skin/icons/check.svg");
+		-moz-context-properties: fill !important;
+		fill: #ffffff !important;
+		background-color: #1e90ff !important;
+	}
+
+	checkbox>.checkbox-check {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+		border-color: #1e90ff !important;
+		border-radius: 2px !important;
+
+	}
+
+	button:hover,
+	input[type="button"]:hover {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+		box-shadow: none !important;
+	}
+
+	button,
+	input[type="button"] {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		box-shadow: none !important;
+	}
+}
+
+#TabsToolbar[brighttext] {
+	--attention-icon-color: yellow !important;
+}
+
+#tabbrowser-tabpanels {
+	background: #161a27 !important;
+}
+
+
+#navigator-toolbox {
+	--tabs-border-color: transparent !important;
+}
+
+#tabbrowser-tabs {
+	--tab-line-color: transparent !important;
+}
+
+/*menupopup>menuitem,
+menupopup>menu {
+	margin-bottom: 6px !important;
+}
+*/
+/*
+:root {
+	--arrowpanel-menuitem-padding: 5px !important;
+}
+*/
+#identity-box[pageproxystate="valid"].chromeUI #identity-icon {
+	list-style-image: url("firefox-5.svg") !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+
+#webextension-popup-browser,
+#webextension-popup-stack,
+.browser-extension-panel {
+	border-radius: inherit;
+	background: #161a27 !important;
+	font-family: Fira Sans !important;
+	color: white !important;
+}
+
+
+/*** Tighten up vertical drop-down(bookmark)/context/popup menu spacing ***
+menupopup>menuitem,
+menupopup>menu {
+	padding-block: 4px !important;
+}
+
+:root {
+	--arrowpanel-menuitem-padding: 1px 8px !important;
+}
+*/
+/*** Change right-click tab -> reload tab to be first context menu entry (for both single tab and multiple tab selections) ***/
+#tabContextMenu #context_reloadTab,
+#tabContextMenu #context_reloadSelectedTabs {
+	-moz-box-ordinal-group: 0 !important;
+}
+
+/* remove radius from buttons and tabs */
+*|*:root {
+	--toolbarbutton-border-radius: 3px !important;
+	--tab-border-radius: 3px !important;
+	/*--toolbarbutton-outer-padding: 0 !important;
+	--toolbarbutton-inner-padding: 8px !important;
+	--toolbar-start-end-padding: 0 !important;*/
+}
+
+
+.tabbrowser-tab {
+	padding-inline: 2px !important;
+}
+
+
+
+
+
+/* When hovering the mouse pointer over the item, instead of the normal message
+   we display a more detailed one. For blocked downloads the entire area shows
+   the hover message, for other downloads only the main area does. */
+.downloadMainArea {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	height: 60px !important;
+	border-radius: 0px !important;
+}
+
+.downloadMainArea:hover {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: #1e90ff80 !important;
+	border-radius: 0px !important;
+}
+
+#downloadsRichListBox>richlistitem {
+	background-color: #161a27 !important;
+	height: 60px !important;
+	background-image: none !important;
+	/*background-clip: none !important;*/
+	border-radius: 0px !important;
+	outline: none !important;
+}
+
+#downloadsRichListBox>richlistitem[selected] {
+	background-color: #1e90ff !important;
+	background-image: none !important;
+	height: 60px !important;
+	/*background-clip: none !important;*/
+	border-radius: 0px !important;
+	outline: none !important;
+
+}
+
+.downloadTypeIcon {
+	width: 32px;
+	height: 32px;
+	opacity: 1 !important;
+	display: block !important;
+}
+
+.downloadButton {
+	appearance: none !important;
+	background: transparent !important;
+	background-color: #161a27 !important;
+	border: none !important;
+}
+
+.downloadButton:hover {
+	appearance: none !important;
+	background: transparent !important;
+	background-color: #1e90ff !important;
+	border: none !important;
+
+}
+
+
+
+#clearDownloadsButton label {
+	margin-left: 6px !important;
+	margin-top: 1px !important;
+	opacity: 1 !important;
+	color: white !important;
+}
+
+#clearDownloadsButton {
+	background: #1e90ff !important;
+	color: white !important;
+}
