@@ -1,4 +1,7 @@
-/*--------------------About firefox --------------181a21----181c25--#1b1924-#131620--*/
+/* -------------------------------------------------------------------------- */
+/*                                About firefox                               */
+/* -------------------------------------------------------------------------- */
+/*--------------181a21----181c25--#1b1924-#131620--*/
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	#leftBox {
 		background-image: url("renardeau.gif") !important;
@@ -76,13 +79,9 @@ button::-moz-focus-inner,
 }
 
 /*
-#PlacesToolbar {
-	max-height: 2px !important;
-}
-*/
 :root[uidensity=compact] {
 	--tab-min-height: 32px !important;
-}
+}*/
 
 #protections-popup-tp-switch-breakage-link,
 #protections-popup-tp-switch-breakage-fixed-link,
@@ -136,7 +135,7 @@ tooltip,
 	appearance: none !important;
 	color: yellow !important;
 	width: 170px !important;
-	height: auto !important;
+	/*height: auto !important;*/
 	background: #161a27 !important;
 	border: none !important;
 	margin-inline: 2px !important;
@@ -222,7 +221,10 @@ menuitem {
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+}
 
+.titlebar-spacer[type="pre-tabs"] {
+	display: none !important;
 }
 
 #backForwardMenu-arrowscrollbox,
@@ -232,8 +234,6 @@ menuitem {
 	margin-top: 5px !important;
 	padding-left: 4px !important;
 	padding-right: 4px !important;
-	padding-bottom: 6px !important;
-	padding-top: 6px !important;
 	outline: none !important;
 	border: none !important;
 
@@ -248,7 +248,7 @@ menuitem:active {
 	appearance: none !important;
 	border: 0px !important;
 	background: #1e90ff !important;
-	border-radius: 2px !important;
+	border-radius: 3px !important;
 	outline: none !important;
 	outline-offset: none !important;
 }
@@ -256,13 +256,10 @@ menuitem:active {
 menulist[open="true"] {
 	border: 0px !important;
 	background: #1e90ff !important;
-	border-radius: 2.5px !important;
+	border-radius: 3px !important;
 	outline: none !important;
 	outline-offset: none !important;
-	padding-block: 4px !important;
-	min-height: 28px !important;
-	border: none !important;
-	outline: none !important;
+
 }
 
 menuitem[disabled="true"],
@@ -271,45 +268,71 @@ menuitem[disabled="true"]>.menu-text {
 	color: #999999 !important;
 }
 
-
 menupopup:not(.in-menulist)>menuitem,
 menupopup:not(.in-menulist)>menu {
-	padding-block: 4px !important;
-	min-height: 28px !important;
 	border: none !important;
 	outline: none !important;
 
 }
 
-:root {
-	--arrowpanel-menuitem-padding: 4px 8px !important;
+menupopup>menuitem,
+menupopup>menu {
+	padding-block: 3px !important;
+	min-height: 7px !important;
+	border: none !important;
+	outline: none !important;
 }
 
+:root {
+	--arrowpanel-menuitem-padding-block: 5px !important;
+}
+
+
+/*
 menulist {
 	max-width: auto !important;
 	min-width: auto !important;
-}
+
+}*/
 
 menugroup {
 	background-color: #161a27 !important;
 	color: #ffffff !important;
 	outline: none !important;
+
 	/*box-shadow: none !important;*/
 }
 
-menupopup menuitem {
-	padding-block: 4px !important;
-}
 
 /*
 menubar>menu[open] {
 	font-weight: bold !important;
 }
 */
+
 #context-navigation>.menuitem-iconic {
-	margin-top: 5px !important;
+	margin-bottom: 0px !important;
 	padding-right: 11px !important;
 	padding-left: 11px !important;
+	margin-top: 7px !important;
+	padding-bottom: 0px !important;
+}
+
+menulist:-moz-focusring>menupopup>menuitem[_moz-menuactive="true"] {
+	border: 0px !important;
+	outline: none !important;
+
+}
+
+menupopup>menu>menupopup {
+	margin-inline-start: 7px !important;
+
+
+}
+
+
+#PlacesToolbarItems menupopup>menu>menupopup {
+	margin-inline-start: 4px !important;
 }
 
 
@@ -670,18 +693,21 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	background: #000000 !important;
 	border: 0px !important;
 	outline: 0 !important;
+	height: 24px !important;
 }
 
 #editBMPanel_locationField {
 	background: #000000 !important;
 	border: 0px !important;
 	outline: 0 !important;
+	height: 24px !important;
 }
 
 #editBMPanel_keywordField {
 	background: #000000 !important;
 	border: 0px !important;
 	outline: 0 !important;
+	height: 24px !important;
 }
 
 #editBMPanel_tagsSelectorRow {
@@ -723,6 +749,13 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	color: #ffffff !important;
 }
 
+#editBookmarkPanel .expander-up,
+#editBookmarkPanel .expander-down {
+	min-width: 16px !important;
+	min-height: 22px !important;
+	border-radius: 2px !important;
+}
+
 #editBMPanel_keywordRow,
 #editBMPanel_locationRow {
 	visibility: visible !important;
@@ -735,6 +768,11 @@ panel #editBookmarkPanel,
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
 	background-color: #161a27 !important;
+
+}
+
+#editBookmarkPanel {
+	margin-top: 5px !important;
 }
 
 #editBMPanel_tagsSelector>richlistitem>image,
@@ -850,6 +888,7 @@ checkbox[disabled]>.checkbox-check {
 	border: none !important;
 	font-family: Fira Sans !important;
 	outline: none !important;
+
 }
 
 /*
@@ -1513,6 +1552,8 @@ spacer,
 .urlbarView-title-separator::before {
 	content: " ► " !important;
 	opacity: 1 !important;
+	margin-bottom: 1px !important;
+	padding-left: 1px !important;
 }
 
 /*
@@ -1738,35 +1779,37 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 	}
 }
 
+/*
 .tab-label-container {
-	display: grid;
-	justify-content: safe center
-}
 
+	text-align: center !important;
+}*/
+
+/*
 .tab-label,
 .tab-secondary-label {
 	overflow: hidden !important;
-}
+}*/
 
 
 #alltabs-button {
 	display: none !important;
 }
 
+/*
 .tabbrowser-tab[selected]:not(:hover) .tab-label-container,
 #tabbrowser-tabs:not([closebuttons="activetab"]) .tabbrowser-tab:not(:hover, [pinned]) .tab-label-container {
 	padding-inline: 0 !important;
-}
+}*/
 
 /* center tab text */
 .tab-text,
 .tab-label {
-	-moz-box-flex: 1 !important;
-	position: center !important;
+	/*-moz-box-flex: 1 !important;*/
+	text-align: center !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	margin-top: 1px !important;
-	padding-inline: 0 !important;
+
 }
 
 /* lock icon in urlbar */
@@ -2052,7 +2095,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 }*/
 
 .urlbarView-row {
-	padding: 0px 0px !important;
+	padding: 0px 2px !important;
 }
 
 .popup-notification-body .menulist-label-box {
@@ -2204,7 +2247,6 @@ input:not(#urlbar-input) {
 	#editBMPanel_locationRow,
 	#editBMPanel_tagsRow,
 	#editBMPanel_tagsSelectorRow {
-
 		background: #161a27 !important;
 		color: white !important;
 		border: none !important;
@@ -2518,7 +2560,33 @@ input:not(#urlbar-input) {
 
 		}
 	}
+
+	/* Remove tiny spacing in separators appearing after the twisty column */
+
+	.menu-iconic-icon {
+		fill: currentColor !important;
+		-moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
+		margin-inline-start: 0 !important;
+		margin-inline-end: 16px !important;
+		width: 24px !important;
+		height: 24px !important;
+		padding: 4px !important;
+	}
+
+	/*
+	#organizeButton {
+		max-width: 124px !important;
+
+	}
+
+	#placesMenu>menu>.menubar-text {
+		text-align: left !important;
+		
+		background: url(chrome://global/skin/icons/arrow-down-12.svg) 105% center no-repeat !important;
+		
+		background-size: 12px !important;}*/
 }
+
 
 .urlbar-input-box {
 	font-family: 'Fira Sans' !important;
@@ -3325,14 +3393,12 @@ findbar::before {
 /* "Do you really want to close all tabs?" dialogue */
 .dialogBox {
 	border-radius: 8px !important;
-
 }
 
 /*
 toolbarbutton.bookmark-item:not(.subviewbutton) {
 	margin-inline: 0 !important;
 	padding-inline: 3px !important;
-
 }*/
 /* ################################################################################################# */
 /* TAB ANIMATION: LOADING PROGRESS LINE INDICATOR */
@@ -4075,13 +4141,6 @@ browser[type="content"] {
 	background: #161a27 !important;
 }
 
-#editBookmarkPanel .expander-up,
-#editBookmarkPanel .expander-down {
-	min-width: 16px !important;
-	min-height: 16px !important;
-	border-radius: 2px !important;
-}
-
 #downloadsPanel-mainView {
 	background: #161a27 !important;
 	--arrowpanel-border-radius: 4px !important;
@@ -4092,19 +4151,6 @@ browser[type="content"] {
 	border-radius: 4px !important;
 }
 
-
-menulist:-moz-focusring>menupopup>menuitem[_moz-menuactive="true"] {
-	border: 0px !important;
-	outline: none !important;
-}
-
-menupopup>menu>menupopup {
-	margin-inline-start: 4px !important;
-}
-
-#PlacesToolbarItems menupopup>menu>menupopup {
-	margin-inline-start: 4px !important;
-}
 
 /*----------------autohide personal bar---------------------------
 #nav-bar {
@@ -4163,9 +4209,9 @@ menupopup>menu>menupopup {
 /* auto hide toolbar */
 
 #PersonalToolbar {
-	--uc-bm-height: 28px;
+	--uc-bm-height: 28px !important;
 	/* Might need to adjust if the toolbar has other buttons */
-	--uc-bm-padding: 5px;
+	--uc-bm-padding: 4px !important;
 	/* Vertical padding to be applied to bookmarks */
 	--uc-autohide-toolbar-delay: 400ms;
 	/* The toolbar is hidden after 0.6s */
@@ -4264,15 +4310,10 @@ p::selection {
 	border: none !important;
 }
 */
-/*** Tighten up drop-down/context/popup menu spacing (8 Sep 2021) ***/
 
-menupopup:not(.in-menulist)>menuitem,
-menupopup:not(.in-menulist)>menu {
-	padding-block: 3px !important;
-	/* reduce to 3px, 2px, 1px or 0px as needed */
-	min-height: unset !important;
-	/* v92.0 - for padding below 4px */
-}
+
+/* v92.0 - for padding below 4px */
+
 
 :root {
 	--arrowpanel-menuitem-padding: 4px 8px !important;
@@ -4549,13 +4590,18 @@ menupopup>menu {
 	--arrowpanel-menuitem-padding: 1px 8px !important;
 }
 */
-/*** Change right-click tab -> reload tab to be first context menu entry (for both single tab and multiple tab selections) ***/
+
+/* -------------------------------------------------------------------------- */
+/*                    change l'odre du reload dans l'onglet                   */
+/* -------------------------------------------------------------------------- */
 #tabContextMenu #context_reloadTab,
 #tabContextMenu #context_reloadSelectedTabs {
 	-moz-box-ordinal-group: 0 !important;
 }
 
-/* remove radius from buttons and tabs */
+/* -------------------------------------------------------------------------- */
+/*                     remove radius from buttons and tabs                    */
+/* -------------------------------------------------------------------------- */
 *|*:root {
 	--toolbarbutton-border-radius: 3px !important;
 	--tab-border-radius: 3px !important;
@@ -4564,23 +4610,21 @@ menupopup>menu {
 	--toolbar-start-end-padding: 0 !important;*/
 }
 
-
+/* space between tabs */
 .tabbrowser-tab {
-	padding-inline: 2px !important;
+	padding-inline: 3px !important;
 }
 
 
 
 
 
-/* When hovering the mouse pointer over the item, instead of the normal message
-   we display a more detailed one. For blocked downloads the entire area shows
-   the hover message, for other downloads only the main area does. */
+/*When hovering the mouse pointer over the item, instead of the normal message we display a more detailed one. For blocked downloads the entire area shows the hover message, for other downloads only the main area does.*/
 .downloadMainArea {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
-	height: 60px !important;
+	height: 50px !important;
 	border-radius: 0px !important;
 }
 
@@ -4594,7 +4638,7 @@ menupopup>menu {
 
 #downloadsRichListBox>richlistitem {
 	background-color: #161a27 !important;
-	height: 60px !important;
+	height: 50px !important;
 	background-image: none !important;
 	/*background-clip: none !important;*/
 	border-radius: 0px !important;
@@ -4604,7 +4648,7 @@ menupopup>menu {
 #downloadsRichListBox>richlistitem[selected] {
 	background-color: #1e90ff !important;
 	background-image: none !important;
-	height: 60px !important;
+	height: 50px !important;
 	/*background-clip: none !important;*/
 	border-radius: 0px !important;
 	outline: none !important;
@@ -4645,4 +4689,120 @@ menupopup>menu {
 #clearDownloadsButton {
 	background: #1e90ff !important;
 	color: white !important;
+}
+
+#webextension-popup-browser,
+#webextension-popup-stack,
+.browser-extension-panel {
+	border-radius: inherit !important;
+	background: #161a27 !important;
+	font-family: Fira Sans !important;
+	color: white !important;
+	outline: none !important;
+	box-shadow: none !important;
+	outline-offset: unset !important;
+}
+
+#downloads-button {
+	padding-top: 2px !important;
+}
+
+/*
+menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
+	-moz-context-properties: fill !important;
+	fill: white !important;
+	color: white !important;
+}
+*/
+
+.tab-label-container {
+	display: grid !important;
+	justify-content: safe center !important;
+}
+
+.tab-secondary-label {
+
+	display: none !important;
+}
+
+.tab-label {
+	padding-top: 5px !important;
+	/*position: center !important;*/
+	overflow: hidden !important;
+
+}
+
+/*
+
+.tabbrowser-tab[selected]:not(:hover) .tab-label-container,
+#tabbrowser-tabs:not([closebuttons="activetab"]) .tabbrowser-tab:not(:hover, [pinned]) .tab-label-container {
+	margin-inline-end: 7px !important;
+}
+*/
+/* TAB BAR HEIGHT 
+
+#TabsToolbar {
+	height: var(--tab-min-height) !important;
+}
+
+#tabbrowser-tab {
+	max-height: 28px !important;
+}
+
+#titlebar {
+	max-height: 28px !important;
+}
+
+#titlebar-spacer {
+	max-height: 24px !important;
+}
+
+#tabs-newtab-button {
+	max-height: 24px !important;
+}*/
+
+#tab-content {
+	max-height: 32px !important;
+	vertical-align: middle !important;
+}
+
+#tab-background {
+	max-height: 32px !important;
+}
+
+:root {
+	--tab-min-height: 32px !important;
+	--tab-max-height: 32px !important;
+}
+
+/*
+#scrollbox {
+	max-height: 24px !important;
+}
+*/
+/* URL BAR HEIGHT 
+
+#urlbar-input {
+	height: 20px !important;
+	font-size: 14px !important;
+}
+
+#urlbar-container {
+	--urlbar-container-height: 20px !important;
+}
+
+#urlbar {
+	margin-top: -2px !important;
+}
+*/
+/*
+menupopup>menuitem,
+menupopup>menu {
+
+	padding-inline-start: 12px !important;
+}
+
+*/
+.menupopup-arrowscrollbox {
+	box-shadow: 0px 2px 9px -3px black !important;
 }
