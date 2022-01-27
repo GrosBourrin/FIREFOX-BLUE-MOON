@@ -35,6 +35,10 @@
 		background: none !important;
 	}
 
+	#submit-feedback {
+		margin-left: -4px !important;
+	}
+
 	#updateButton,
 	#updateDeck>hbox>label {
 		color: white !important;
@@ -49,6 +53,7 @@
 	.text-link {
 		color: #ffffff !important;
 		font-style: normal !important;
+		text-decoration: none !important;
 	}
 }
 
@@ -134,17 +139,20 @@ tooltip,
 .places-tooltip {
 	appearance: none !important;
 	color: yellow !important;
-	width: 170px !important;
-	/*height: auto !important;*/
+	min-width: 230px !important;
+	max-width: 230px !important;
+	height: auto !important;
 	background: #161a27 !important;
-	border: none !important;
+	border: 0px dotted #1e90ff80 !important;
 	margin-inline: 2px !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	opacity: 1 !important;
-	padding: 6px !important;
-	border-radius: 6px !important;
-	box-shadow: none !important;
+	padding: 7px !important;
+	border-radius: 4px !important;
+	vertical-align: middle !important;
+	margin-top: 5px !important;
+
 }
 
 tooltip * {
@@ -152,6 +160,7 @@ tooltip * {
 	background-color: #161a27 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
+
 }
 
 #protections-popup-mainView-panel-header,
@@ -230,12 +239,13 @@ menuitem {
 #backForwardMenu-arrowscrollbox,
 .menupopup-arrowscrollbox {
 	background: #161a27 !important;
-	border-radius: 8px !important;
+	border-radius: 6px !important;
 	margin-top: 5px !important;
 	padding-left: 4px !important;
 	padding-right: 4px !important;
 	outline: none !important;
 	border: none !important;
+	box-shadow: none !important;
 
 }
 
@@ -272,6 +282,7 @@ menupopup:not(.in-menulist)>menuitem,
 menupopup:not(.in-menulist)>menu {
 	border: none !important;
 	outline: none !important;
+	box-shadow: none !important;
 
 }
 
@@ -281,6 +292,7 @@ menupopup>menu {
 	min-height: 7px !important;
 	border: none !important;
 	outline: none !important;
+	box-shadow: none !important;
 }
 
 :root {
@@ -300,9 +312,14 @@ menugroup {
 	color: #ffffff !important;
 	outline: none !important;
 
-	/*box-shadow: none !important;*/
+	box-shadow: none !important;
 }
 
+.menu-right {
+
+	color: #ffffff !important;
+
+}
 
 /*
 menubar>menu[open] {
@@ -324,12 +341,10 @@ menulist:-moz-focusring>menupopup>menuitem[_moz-menuactive="true"] {
 
 }
 
+/* push submenus to right side with a little gutter */
 menupopup>menu>menupopup {
 	margin-inline-start: 7px !important;
-
-
 }
-
 
 #PlacesToolbarItems menupopup>menu>menupopup {
 	margin-inline-start: 4px !important;
@@ -345,7 +360,6 @@ menuitem .menu-accel {
 	font-weight: bold !important;
 	color: #1e90ff !important;
 	filter: drop-shadow(0px 0px 4px #161a27) !important;
-
 }
 
 .menu-iconic-icon,
@@ -1014,6 +1028,14 @@ toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
 	/*text-align: left !important;*/
 }
 
+#PlacesToolbar menu>.menu-right {
+	-moz-context-properties: fill !important;
+	fill: white !important;
+	opacity: 1 !important;
+	filter: brightness(100%) !important;
+
+}
+
 .bookmark-item {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
@@ -1637,7 +1659,6 @@ tab:not([selected]):hover .tab-background {
 
 .tab-background {
 	background: transparent !important;
-	/*filter: drop-shadow(0px 0px 4px #1e90ff) !important;*/
 	border-radius: 3px !important;
 }
 
@@ -1717,7 +1738,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	-moz-box-ordinal-group: 0 !important;
 	/*margin: 0px !important;*/
 	padding-block: 0 !important;
-	margin-left: 6px !important;
+	margin-left: 8px !important;
 
 	/*paddingwidth: 28px !important;
 	height: 28px !important;*/
@@ -2791,9 +2812,9 @@ input:not(#urlbar-input) {
 
 .titlebar-button {
 	padding-left: 0px !important;
-	margin-right: 0px !important;
+	margin-right: -2px !important;
 	padding-top: 7px !important;
-	margin-left: 0px !important;
+	margin-left: -2px !important;
 }
 
 
@@ -2904,11 +2925,15 @@ input:not(#urlbar-input) {
 
 
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button {
-	list-style-image: url("closespin.svg") !important;
+	list-style-image: url("closespin1.svg") !important;
 	background: transparent !important;
 	width: 29px !important;
 	height: 29px !important;
 	margin-left: 2px !important;
+	margin-top: 1px !important;
+	/*-moz-context-properties: fill, stroke !important;
+	fill: #ffffff !important;*/
+	filter: drop-shadow(0px 0px 1px #161a26) !important;
 }
 
 .tab-close-button {
@@ -2943,7 +2968,7 @@ input:not(#urlbar-input) {
 	padding: 20px 10px 10px !important;
 	font-family: Fira Sans !important;
 	font-weight: bold !important;
-	background: #161a27b0 !important;
+	background: rgb(22, 26, 39) !important;
 	text-align: center !important;
 	text-shadow: none !important;
 }
@@ -3536,12 +3561,12 @@ toolbar #fullscreen-button {
 	background-repeat: no-repeat !important;
 	list-style-image: none !important;
 	width: 0 !important;
-	margin-top: 2px !important;
+	margin-top: 4px !important;
 	display: block !important;
 	visibility: visible !important;
 
-}*/
-
+}
+*/
 
 
 
@@ -4186,22 +4211,21 @@ browser[type="content"] {
 
 #PlacesToolbar toolbarseparator {
 	appearance: none !important;
-	width: 1px !important;
-	margin: 4px 4px 4px -2px !important;
+	width: 4px !important;
+	margin: 6px 4px 6px -2px !important;
+	/*padding: 1px !important;*/
 }
 
 #appMenu-fxa-separator {
 	appearance: none !important;
-	--panel-separator-zap-gradient: linear-gradient(90deg, #161a2750 0%, #9059FF 35%, #1f90ff 52.08%, #ffff00 75%, #ffffff 100%) !important;
+	--panel-separator-zap-gradient: linear-gradient(90deg, #161a2750 0%, #9059FF 45%, #1f90ff 60%, #ffff00 80%, #ffffff 100%) !important;
 }
 
 :root {
-	--toolbarseparator-color: #1e90ff90 !important;
+	--toolbarseparator-color: #1e90ff !important;
 	--download-progress-flare-color: yellow !important;
+
 }
-
-
-
 
 
 
@@ -4568,6 +4592,7 @@ menupopup>menu {
 	list-style-image: url("firefox-5.svg") !important;
 	width: 16px !important;
 	height: 16px !important;
+	margin-top: 2px !important;
 }
 
 #webextension-popup-browser,
@@ -4803,6 +4828,3 @@ menupopup>menu {
 }
 
 */
-.menupopup-arrowscrollbox {
-	box-shadow: 0px 2px 9px -3px black !important;
-}
