@@ -828,8 +828,34 @@ url(about:profiles) {
 		--card-shadow-hover: var(--card-shadow), 0 0 0 2px var(--card-outline-color) !important;
 		background-color: #161a27 !important;
 		font-family: "Fira Sans" !important;
+		/*--message-bar-background-color: #1e90ff80 !important;
+		--message-bar-text-color: #ffffff !important;*/
+		/*--message-bar-icon-url: var(--info-icon-url);*/
+
 	}
 
+	/*
+	message-bar-stack> *{
+		background: #000000 !important;
+		border: 1px solid #1e90ff !important;
+		color: #ffffff !important;
+	}*/
+
+	.container {
+		background-color: #1e90ff30 !important;
+		color: #ffffff !important;
+		border: 1px solid #1e90ff !important;
+	}
+
+	message-bar>button {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	message-bar>button:hover {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
 
 	html {
 		background: #161a27 !important;
@@ -1461,8 +1487,7 @@ url(about:profiles) {
 	.Card-footer-text,
 	.Card-header,
 	.Categories .Card-contents,
-	.DropdownMenu-items::after,
-	.DropdownMenu-items,
+	
 	.Hero .Card-contents,
 	.Home-SubjectShelf .Card-contents,
 	.LandingPage-header,
@@ -1480,13 +1505,14 @@ url(about:profiles) {
 
 	.AutoSearchInput-suggestions-item {
 		color: #ffffff !important;
-		font-size: 12px !important;
+		font-size: 14px !important;
 	}
 
 	input.AutoSearchInput-query {
-		font-size: 13px !important;
+		font-size: 14px !important;
 	}
-
+.DropdownMenu-items::after,
+.DropdownMenu-items { background-color: #161a27 !important;}
 	.Addon-author,
 	.Addon-author a,
 	.Addon-author a:link .Button--action,
@@ -1559,7 +1585,7 @@ url(about:profiles) {
 
 	.AutoSearchInput-suggestions-item {
 		color: #ffffff !important;
-		font-size: 13px !important;
+		font-size: 14px !important;
 	}
 
 	.popup-notification-learnmore-link {
@@ -1998,7 +2024,7 @@ url(about:profiles) {
 	}
 
 	input.AutoSearchInput-query {
-		font-size: 13px !important;
+		font-size: 14px !important;
 	}
 
 	.Addon-author,
@@ -2055,7 +2081,7 @@ url(about:profiles) {
 
 
 	input.AutoSearchInput-query {
-		font-size: 13px !important;
+		font-size: 14px !important;
 		background: #161a27 !important;
 		border: 1px solid #1e90ff !important;
 		border-bottom-left-radius: 4px !important;
@@ -2078,7 +2104,7 @@ url(about:profiles) {
 
 	.AutoSearchInput-suggestions-item {
 		color: #ffffff !important;
-		font-size: 13px !important;
+		font-size: 14px !important;
 		background-color: #161a27 !important;
 		border: 0px !important;
 		outline: none !important;
@@ -2088,7 +2114,7 @@ url(about:profiles) {
 
 	.AutoSearchInput-suggestions-item:hover {
 		color: #ffffff !important;
-		font-size: 13px !important;
+		font-size: 14px !important;
 		background-color: #1e90ff !important;
 		border-radius: 0px !important;
 		border: 0px !important;
@@ -2182,7 +2208,11 @@ url(about:profiles) {
 	.SearchResult-link:hover .SearchResult-name {
 		/*background-color: #1e90ff !important;*/
 		color: white !important;
+	}
 
+	.DropdownMenuItem-link a:hover {
+		background-color: #1e90ff !important;
+		color: white !important;
 	}
 
 	.AddonDescription-contents {
@@ -2395,9 +2425,14 @@ url(about:profiles) {
 }
 
 
-@-moz-document url(chrome://global/content/alerts/alert.xhtml) {
+@-moz-document url("chrome://global/content/alerts/alert.xhtml") {
+
+	* {
+		font-family: Fira Sans !important;
+	}
+
 	#tabmodalprompt-topContainer {
-		background-color: #1b192480 !important;
+		background-color: #161a2780 !important;
 		color: #ffffff !important;
 
 	}
@@ -2408,17 +2443,59 @@ url(about:profiles) {
 		/*border: none !important;*/
 	}
 
-	#alertBox {
-		background-color: #161a27 !important;
-		color: #ffffff !important;
-		font-family: Fira Sans !important;
-		/*border: none !important;*/
+	#alertSourceLabel {
+		color: white !important;
 	}
 
-	#alertSourceLabel {
-		color: #1e90ff !important;
-		font-family: Fira Sans !important;
-		/*border: none !important;*/
+	#alertBox,
+	image {
+		border-radius: 2px !important;
+	}
+
+	#alertSettings {
+		color: white !important;
+	}
+
+	menupopup,
+	menuitem#openSettingsMenuItem {
+		color: white !important;
+	}
+
+	menupopup,
+	menuitem#disableForOriginMenuItem {
+		color: white !important;
+	}
+
+	menupopup,
+	menuitem#doNotDisturbMenuItem {
+		color: white !important;
+	}
+
+	#alertBox {
+		color: white !important;
+		background-color: #161a27 !important;
+		border: none !important;
+		border-radius: 4px !important;
+		-moz-window-shadow: cliprounded !important;
+	}
+
+	/*
+	#alertSettings {
+		fill: currentColor !important;
+		color: inherit !important;
+		border-radius: 0 !important;
+		margin-inline: 0 !important;
+		margin-bottom: -4px !important;
+	}*/
+
+	.close-icon,
+	#alertSettings {
+		background: transparent !important
+	}
+
+	.close-icon:hover>.toolbarbutton-icon,
+	#alertSettings:is(:hover, [open])>.button-box>.box-inherit {
+		background-color: #1e90ff !important;
 	}
 }
 
