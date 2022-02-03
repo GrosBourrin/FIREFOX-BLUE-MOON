@@ -158,7 +158,7 @@ tooltip,
 
 tooltip * {
 	color: yellow !important;
-	background-color: #161a27 !important;
+	background: #161a27 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 
@@ -250,6 +250,7 @@ menuitem {
 
 }
 
+/*-*-----------------------------*/
 menu:hover,
 menulist:hover,
 menuitem:hover,
@@ -3865,6 +3866,7 @@ See the above repository for updates as well as full license text. */
 	appearance: none !important;
 	background-color: #1e90ff !important;
 	border-radius: 2px !important;
+	--download-progress-flare-color: yellow !important;
 }
 
 /* Make Bookmark Button Centred Again */
@@ -4443,6 +4445,7 @@ p::selection {
 	fill: #ffffff !important;
 	fill-opacity: 1 !important;
 	opacity: 1 !important;
+
 }
 
 @-moz-document url("chrome://mozapps/content/handling/appChooser.xhtml"),
@@ -4917,3 +4920,51 @@ menupopup>menu {
 	--panel-padding: 8px !important;
 	
 }
+/*
+#main-window:not([uidensity=compact]):not([uidensity=touch]) #nav-bar #back-button + #forward-button {
+	margin-inline-start: -4px !important;
+}
+#main-window[uidensity=compact] #nav-bar #back-button + #forward-button {
+	margin-inline-start: -6px !important;
+}
+#main-window[uidensity=touch] #nav-bar #back-button + #forward-button {
+	margin-inline-start: -4px !important;
+}*/
+#BMB_bookmarksPopup,
+panel[type="arrow"] {
+	transition-duration: 0.11ms !important;
+}
+/*
+/* ..... menu arrow box ..... */
+
+.menu-right {
+	appearance: auto !important; 
+	-moz-default-appearance: menuarrow !important;
+	margin-inline-end: -2px !important;
+	list-style-image: none !important;
+	min-width: 1.28em !important;
+	padding-top: 1px !important;
+}
+
+/* Override the native menu arrow with a custom one for Win10. */
+
+.menu-right {
+	appearance: none !important;
+	list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+	-moz-context-properties: fill, fill-opacity;
+	fill: white !important;
+	fill-opacity: 1 !important;
+	margin-inline-end: 1em !important;
+	padding-top: 0 !important;
+}
+
+.menu-right>image {
+	/* Do not make this smaller than the size of the svg, but upscale for
+     * people with large fonts. */
+	width: max(1em, 16px) !important;
+}
+
+.menu-right:-moz-locale-dir(rtl) {
+	list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+}
+
