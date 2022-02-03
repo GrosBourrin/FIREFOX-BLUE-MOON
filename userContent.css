@@ -5047,7 +5047,7 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 
 	/* history */
 	.revision-list-controls:before {
-		filter: invert(1);
+		filter: invert(1) !important;
 	}
 
 	.diff_add {
@@ -5064,11 +5064,11 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 
 
 	a {
-		color: #5ca0be !important
+		color: #5ca0be !important;
 	}
 
 	.metadata {
-		background: #222
+		background: #222 !important;
 	}
 
 	.search-button {
@@ -5077,7 +5077,7 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 
 	.logo,
 	.interactive {
-		filter: invert(.9)
+		filter: invert(.9) !important;
 	}
 
 	.main-page-content {
