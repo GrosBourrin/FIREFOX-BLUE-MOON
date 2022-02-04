@@ -10,6 +10,14 @@
 		background-repeat: no-repeat !important;
 	}
 
+	#rightBox {
+		background-image: url("firefox-wordmark.svg") !important;
+		background-repeat: no-repeat !important;
+		background-size: 230px auto !important;
+		bottom: 18px !important;
+		margin-left: 15px !important;
+	}
+
 	/*
 	#icons>.noUpdatesFound {
 		appearance: none;
@@ -20,6 +28,7 @@
 	*/
 
 	#aboutDialogContainer {
+
 		min-height: 350px !important;
 		max-height: 400px !important;
 		background-color: #161a27 !important;
@@ -54,6 +63,11 @@
 		color: #ffffff !important;
 		font-style: normal !important;
 		text-decoration: none !important;
+	}
+
+	#detailsBox {
+		margin-top: 25px !important;
+		margin-left: -2px !important;
 	}
 }
 
@@ -389,7 +403,7 @@ menuseparator {
 
 /*Alertbox customization code*/
 @-moz-document url("chrome://global/content/alerts/alert.xhtml") {
-	
+
 
 	#alertSourceLabel {
 		color: white !important;
@@ -418,6 +432,7 @@ menuseparator {
 	menuitem#doNotDisturbMenuItem {
 		color: white !important;
 	}
+
 	#alertBox {
 		color: white !important;
 		background-color: #161a27 !important;
@@ -425,7 +440,8 @@ menuseparator {
 		border-radius: 4px !important;
 		-moz-window-shadow: cliprounded !important;
 	}
-/*
+
+	/*
 	#alertSettings {
 		fill: currentColor !important;
 		color: inherit !important;
@@ -567,8 +583,34 @@ treechildren::-moz-tree-image(query) {
 
 .PanelUI-subView toolbarseparator {
 	display: visible !important;
-	margin: 4px 8px 4px 8px !important;
+	margin: 6px 8px 4px 8px !important;
 	border-color: #454545 !important;
+}
+
+/* Use account-button icon for signed in sync item */
+#appMenu-fxa-status2[fxastatus]>toolbarbutton::before {
+	display: -moz-box !important;
+	content: "";
+	width: 16px !important;
+	height: 16px !important;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: var(--avatar-image-url);
+	border-radius: 99px !important;
+	/*url("https://firefoxusercontent.com/a873192d18d42c51b77a1943d1e3ed7b") !important;*/
+}
+
+/* Add somewhat hacky separator to zoom controls so it looks consistent */
+#appMenu-protonMainView>.panel-subview-body::after {
+	content: "";
+	display: -moz-box;
+	border-bottom: 1px solid #454545 !important;
+	margin: 6px 8px 4px 8px !important;
+	/*var(--panel-separator-margin) !important;*/
+}
+
+#appMenu-find-button2~* {
+	-moz-box-ordinal-group: 2 !important;
 }
 
 #appMenu-zoomReset-button2,
@@ -578,7 +620,12 @@ treechildren::-moz-tree-image(query) {
 	border-color: transparent !important;
 	background: transparent !important;
 	color: #1e90ff !important;
+	stroke: none !important;
 	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+
+#appMenu-zoomReset-button2 {
+	border: 1px solid #1e90ff !important;
 }
 
 #appMenu-zoomReset-button2:hover,
@@ -639,6 +686,13 @@ panelmultiview .toolbaritem-combined-buttons>label {
 #appMenu-fxa-label2,
 .panel-header {
 	font-family: Fira Sans !important;
+	font-size: 14px !important;
+}
+
+.subview-subheader,
+#fxa-menu-header-description {
+	color: #1e90ff !important;
+
 }
 
 /* no zoom text */
@@ -1138,15 +1192,15 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	font-size: 14px !important;
 }
 
+/*#downloadsPanel,
+#downloadsPanel-mainview,
+#downloadMainArea,
+#downloadsPanel-multiview */
 #sidebar,
 #bookmarksPanel,
 #bookmarks-view,
 #history-panel,
-#historyTree,
-#downloadsPanel,
-#downloadsPanel-mainview,
-#downloadMainArea,
-#downloadsPanel-multiview {
+#historyTree {
 	background-color: #161a27 !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
@@ -1646,11 +1700,11 @@ spacer,
 
 .bookmark-item[label="Redémarrage"] image {
 	width: 0 !important;
-	height:0 !important;
+	height: 0 !important;
 	padding: 16px 16px 0 0 !important;
 	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCA4IDgiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxkZWZzPjxjbGlwUGF0aCBpZD0iX2NsaXBQYXRoX1Y4dHdtSkxTM2NscWRyeXhzckpkQkxCZFRlRmlsMjBCIj48cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF9WOHR3bUpMUzNjbHFkcnl4c3JKZEJMQmRUZUZpbDIwQikiPjxwYXRoIGQ9IiBNIDMuOTM1IDAuMDM0IEMgMy4wMzkgMC4wNDggMi4xMzcgMC4zNTggMS40MDIgMC45ODUgQyAwLjUxMiAxLjc0NiAwIDIuODU4IDAgNC4wMjkgQyAwIDQuMTQ2IC0wLjAwMSA0LjI2NCAwLjAxNiA0LjM5MyBMIDAuMDMzIDQuNTUgTCAxLjA4MSA0LjU1IEwgMS4wNjUgNC4zNTUgQyAwLjg4OSAyLjczMSAyLjA2MSAxLjI3NSAzLjY4NSAxLjA5OSBDIDQuNjgzIDAuOTkxIDUuNjY2IDEuNDAxIDYuMjk5IDIuMTgxIEwgNS40OTUgMi45ODUgTCA3LjgyNiAyLjk4NSBMIDcuODI2IDAuNjU0IEwgNy4wNDMgMS40MzYgQyA2LjIzNyAwLjQ5MSA1LjA4NyAwLjAxNiAzLjkzNSAwLjAzNCBMIDMuOTM1IDAuMDM0IFogIE0gNi45MTggMy41MDcgTCA2LjkzNSAzLjcwMyBDIDcuMTExIDUuMzI2IDUuOTM5IDYuNzgzIDQuMzE1IDYuOTU4IEMgMy4zMTcgNy4wNjYgMi4zMzQgNi42NTYgMS43MDEgNS44NzcgTCAyLjUwNSA1LjA3MiBMIDAuMTc0IDUuMDcyIEwgMC4xNzQgNy40MDQgTCAwLjk1NyA2LjYyMSBDIDIuMzkgOC4zMDIgNC45MTcgOC41MDYgNi41OTggNy4wNzIgQyA3LjQ4OCA2LjMxMiA4IDUuMTk5IDggNC4wMjkgQyA4IDMuOTEyIDguMDAxIDMuNzkzIDcuOTg0IDMuNjY1IEwgNy45NjcgMy41MDcgTCA2LjkxOCAzLjUwNyBaICIgZmlsbD0icmdiKDMwLDE0NCwyNTUpIi8+PC9nPjwvc3ZnPg==') !important;
 	background-size: cover !important;
-	
+
 }
 
 /* https COLORing trickin https thingy urlbar*/
@@ -2977,7 +3031,7 @@ input:not(#urlbar-input) {
 	/*-moz-context-properties: fill, stroke !important;
 	fill: #ffffff !important;*/
 	filter: drop-shadow(0px 0px 2px #161a2680) !important;
-	
+
 }
 
 .tab-close-button {
@@ -3594,7 +3648,7 @@ toolbar #fullscreen-button {
 
 
 
-.tab-icon-image:not([src]){
+.tab-icon-image:not([src]) {
 	/*background-image: url("firefox-5.svg") !important;*/
 	background-repeat: no-repeat !important;
 	list-style-image: url("firefox-5.svg") !important;
@@ -3813,53 +3867,30 @@ See the above repository for updates as well as full license text. */
 }
 
 #appMenu-save-file-button2 {
-	list-style-image: url("chrome://browser/skin/save.svg")
+	list-style-image: url("chrome://browser/skin/save.svg") !important;
 }
 
 #appMenu-find-button2 {
-	list-style-image: url("chrome://global/skin/icons/search-glass.svg")
+	list-style-image: url("chrome://global/skin/icons/search-glass.svg") !important;
 }
 
 #appMenu-settings-button {
-	list-style-image: url("chrome://global/skin/icons/settings.svg")
+	list-style-image: url("chrome://global/skin/icons/settings.svg") !important;
 }
 
 #appMenu-more-button2 {
-	list-style-image: url("chrome://global/skin/icons/developer.svg")
+	list-style-image: url("chrome://global/skin/icons/developer.svg") !important;
 }
 
 #appMenu-help-button2 {
-	list-style-image: url("chrome://global/skin/icons/info.svg")
+	list-style-image: url("chrome://global/skin/icons/info.svg") !important;
 }
 
 #appMenu-quit-button2 {
-	list-style-image: url("chrome://devtools/skin/images/search-clear.svg")
+	list-style-image: url("quit2.svg") !important;
+
 }
 
-/* Use account-button icon for signed in sync item */
-#appMenu-fxa-status2[fxastatus]>toolbarbutton::before {
-	display: -moz-box !important;
-	content: "";
-	width: 16px !important;
-	height: 16px !important;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-image: var(--avatar-image-url);
-	border-radius: 99px !important;
-	/*url("https://firefoxusercontent.com/a873192d18d42c51b77a1943d1e3ed7b") !important;*/
-}
-
-/* Add somewhat hacky separator to zoom controls so it looks consistent */
-#appMenu-protonMainView>.panel-subview-body::after {
-	content: "";
-	display: -moz-box;
-	border-bottom: 1px solid #454545 !important;
-	margin: var(--panel-separator-margin) !important;
-}
-
-#appMenu-find-button2~* {
-	-moz-box-ordinal-group: 2;
-}
 
 /* download progress color */
 .downloadProgress::-moz-progress-bar {
@@ -4208,7 +4239,7 @@ browser[type="content"] {
 }
 
 #downloadsPanel-mainView {
-	background: #161a27 !important;
+	background-color: #161a27 !important;
 	--arrowpanel-border-radius: 4px !important;
 }
 
@@ -4264,10 +4295,11 @@ browser[type="content"] {
 
 :root {
 	--toolbarseparator-color: #1e90ff !important;
-	--download-progress-flare-color: yellow !important;
+	--download-progress-flare-color: #ffff00 !important;
+	--download-progress-fill-color: #1e90ff !important;
+	--download-progress-paused-color: #1e90ff70 !important;
 
 }
-
 
 
 
@@ -4699,34 +4731,37 @@ menupopup>menu {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
-	background-color: #1e90ff80 !important;
+	/*background-color: #1e90ff80 !important;*/
+	border: 1px solide #1e90ff80 !important;
 	border-radius: 0px !important;
 }
 
 #downloadsRichListBox>richlistitem {
-	background-color: #161a27 !important;
+	/*background-color: #161a27 !important;*/
 	height: 50px !important;
-	background-image: none !important;
+	/*background-image: none !important;*/
 	/*background-clip: none !important;*/
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 	outline: none !important;
 }
 
 #downloadsRichListBox>richlistitem[selected] {
-	background-color: #1e90ff !important;
-	background-image: none !important;
+	/*background-color: #1e90ff !important;*/
+	/*background-image: none !important;*/
 	height: 50px !important;
 	/*background-clip: none !important;*/
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 	outline: none !important;
+	border: 1px solid #1e90ff !important;
 
 }
 
 .downloadTypeIcon {
-	width: 32px;
-	height: 32px;
+	width: 32px !important;
+	height: 32px !important;
 	opacity: 1 !important;
-	display: block !important;
+	margin-inline-end: 0.7em !important;
+	background-image: inherit !important;
 }
 
 .downloadButton {
@@ -4918,8 +4953,9 @@ menupopup>menu {
 }*/
 #contentAreaContextMenu {
 	--panel-padding: 8px !important;
-	
+
 }
+
 /*
 #main-window:not([uidensity=compact]):not([uidensity=touch]) #nav-bar #back-button + #forward-button {
 	margin-inline-start: -4px !important;
@@ -4934,11 +4970,12 @@ menupopup>menu {
 panel[type="arrow"] {
 	transition-duration: 0.11ms !important;
 }
+
 /*
 /* ..... menu arrow box ..... */
 
 .menu-right {
-	appearance: auto !important; 
+	appearance: auto !important;
 	-moz-default-appearance: menuarrow !important;
 	margin-inline-end: -2px !important;
 	list-style-image: none !important;
@@ -4967,4 +5004,3 @@ panel[type="arrow"] {
 .menu-right:-moz-locale-dir(rtl) {
 	list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
 }
-
