@@ -11,10 +11,10 @@
 	}
 
 	#rightBox {
-		background-image: url("firefox-wordmark.svg") !important;
+		background-image: url("firefoxlogo4.svg") !important;
 		background-repeat: no-repeat !important;
-		background-size: 230px auto !important;
-		bottom: 18px !important;
+		background-size: 420px auto !important;
+		bottom: 20px !important;
 		margin-left: 15px !important;
 	}
 
@@ -66,7 +66,7 @@
 	}
 
 	#detailsBox {
-		margin-top: 25px !important;
+		margin-top: 30px !important;
 		margin-left: -2px !important;
 	}
 }
@@ -1770,6 +1770,7 @@ tab[selected] .tab-background {
 }
 
 
+
 tab:not([beforeselected-visible])::after {
 	margin-top: 4px !important;
 	margin-bottom: 4px !important;
@@ -1865,7 +1866,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 toolbar .toolbarbutton-1>.toolbarbutton-icon,
 toolbar .toolbarbutton-1>.toolbarbutton-text,
 toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
-	padding: 2px;
+	/*padding: 2px;*/
 	border-radius: 2px !important;
 }
 
@@ -1896,7 +1897,6 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 
 /*
 .tab-label-container {
-
 	text-align: center !important;
 }*/
 
@@ -2394,7 +2394,7 @@ input:not(#urlbar-input) {
 	}*/
 
 	#places #downloadsRichListBox {
-		appearance: none !important;
+		/*appearance: none !important;*/
 		color: #ffffff !important;
 		background-color: #161a27 !important;
 	}
@@ -3706,6 +3706,11 @@ toolbar #fullscreen-button {
 
 	}
 
+	.downloadTypeIcon {
+		display: visible !important;
+
+	}
+
 }
 
 @-moz-document url("chrome://global/content/appPicker.xhtml") {
@@ -4243,6 +4248,7 @@ browser[type="content"] {
 	--arrowpanel-border-radius: 4px !important;
 }
 
+
 #downloadsPanel {
 	margin-top: 5px !important;
 	border-radius: 4px !important;
@@ -4723,45 +4729,43 @@ menupopup>menu {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
-	height: 50px !important;
-	border-radius: 0px !important;
+	border-radius: 6px !important;
 }
 
 .downloadMainArea:hover {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
-	/*background-color: #1e90ff80 !important;*/
-	border: 1px solide #1e90ff80 !important;
-	border-radius: 0px !important;
+	background-color: #1e90ff80 !important;
+	border: 1px solid #1e90ff80 !important;
+	border-radius: 6px !important;
 }
 
 #downloadsRichListBox>richlistitem {
 	/*background-color: #161a27 !important;*/
-	height: 50px !important;
-	/*background-image: none !important;*/
-	/*background-clip: none !important;*/
-	border-radius: 3px !important;
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 6px !important;
 	outline: none !important;
 }
 
 #downloadsRichListBox>richlistitem[selected] {
-	/*background-color: #1e90ff !important;*/
+	background-color: #1e90ff !important;
 	/*background-image: none !important;*/
-	height: 50px !important;
-	/*background-clip: none !important;*/
-	border-radius: 3px !important;
+	background-clip: none !important;
+	border-radius: 0px !important;
 	outline: none !important;
-	border: 1px solid #1e90ff !important;
+	/*border: 1px solid #1e90ff !important;*/
 
 }
 
-.downloadTypeIcon {
-	width: 32px !important;
-	height: 32px !important;
-	opacity: 1 !important;
-	margin-inline-end: 0.7em !important;
-	background-image: inherit !important;
+:root {
+	--downloads-item-height: 45px !important;
+}
+
+.downloadTypeIcon>image {
+	display: visible !important;
+
 }
 
 .downloadButton {
@@ -4968,7 +4972,7 @@ menupopup>menu {
 }*/
 #BMB_bookmarksPopup,
 panel[type="arrow"] {
-	transition-duration: 0.11ms !important;
+	transition-duration: 0.35ms !important;
 }
 
 /*
@@ -5003,4 +5007,57 @@ panel[type="arrow"] {
 
 .menu-right:-moz-locale-dir(rtl) {
 	list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+}
+
+/*
+.tab-icon-image:not([src]) {
+	content: url("chrome://global/skin/icons/defaultFavicon.svg");
+}*/
+
+.tab-icon-image[selected] {
+	animation: 0.6s linear tab-sharing-icon-pulse infinite;
+}
+
+.downloadTypeIcon {
+	display: visible !important;
+	color: white !important;
+	filter: opacity(1) !important;
+	filter: brightness(100%) !important;
+	background-size: cover !important;
+
+}
+
+/*
+.tab-stack {
+	transition: transform 10ms linear
+}
+
+.tabbrowser-tab:active .tab-stack {
+	transform: scale(0.8);
+}
+*/
+/*
+.tabbrowser-tab[fadein]:not([style^="max-width"]) {
+	max-width: 100vw !important
+}*/
+/* align tabs centrally 
+scrollbox[orient="horizontal"] {
+	-moz-box-pack: center !important;
+}
+*/
+
+:root {
+	--uc-active-tab-width: clamp(80px, 20vw, 230px);
+	--uc-inactive-tab-width: clamp(50px, 15vw, 175px);
+}
+
+/* adaptive tab width */
+.tabbrowser-tab[selected][fadein]:not([pinned]) {
+	max-width: var(--uc-active-tab-width) !important;
+	transition-duration: 200ms !important;
+}
+
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
+	max-width: var(--uc-inactive-tab-width) !important;
+	transition-duration: 200ms !important;
 }
