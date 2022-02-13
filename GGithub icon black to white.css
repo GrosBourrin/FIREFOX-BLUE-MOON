@@ -8,7 +8,7 @@
 
 }
 
-/* for bookmarks menu items , history ... */
+/* for bookmarks menu items , history ... white shadow around icons*/
 .menuitem-iconic.bookmark-item.menuitem-with-favicon image {
 	filter: drop-shadow(0px 0px 1px white) !important;
 }
