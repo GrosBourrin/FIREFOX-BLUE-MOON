@@ -1,0 +1,63 @@
+/* -------------------------------------------------------------------------- */
+/*                                About firefox                               */
+/* -------------------------------------------------------------------------- */
+
+@-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
+	#leftBox {
+		background-image: url("renardeau.gif") !important;
+
+		background-position: left !important;
+		background-repeat: no-repeat !important;
+	}
+
+	#rightBox {
+		background-image: url("firefoxlogo4.svg") !important;
+		background-repeat: no-repeat !important;
+		background-size: 420px auto !important;
+		bottom: 20px !important;
+		margin-left: 15px !important;
+	}
+
+	
+	#aboutDialogContainer {
+		min-height: 350px !important;
+		max-height: 400px !important;
+		background-color: #161a27 !important;
+		/*background-image: url("animation.gif") !important;*/
+		border: 0px !important;
+		font-family: Fira Sans !important;
+		font-size: inherit !important;
+		font-weight: normal !important;
+		color: #1e90ff !important;
+	}
+
+	#bottomBox {
+		background: none !important;
+	}
+
+	#submit-feedback {
+		margin-left: -4px !important;
+	}
+
+	#updateButton,
+	#updateDeck>hbox>label {
+		color: white !important;
+	}
+
+	#updateButton,
+	#updateDeck>hbox>label:hover {
+		color: white !important;
+	}
+
+	#update-available-whats-new,
+	.text-link {
+		color: #ffffff !important;
+		font-style: normal !important;
+		text-decoration: none !important;
+	}
+
+	#detailsBox {
+		margin-top: 30px !important;
+		margin-left: -2px !important;
+	}
+}
