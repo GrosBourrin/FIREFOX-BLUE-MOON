@@ -45,7 +45,9 @@
 
 	#updateButton,
 	#updateDeck>hbox>label:hover {
+		background-color: dodgerblue !important;
 		color: white !important;
+		border-radius: 2px !important;
 	}
 
 	#update-available-whats-new,
