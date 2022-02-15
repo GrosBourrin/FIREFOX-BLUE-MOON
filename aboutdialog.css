@@ -37,19 +37,21 @@
 	#submit-feedback {
 		margin-left: -4px !important;
 	}
-
+	
 	#updateButton,
 	#updateDeck>hbox>label {
-		color: white !important;
-	}
-
-	#updateButton,
-	#updateDeck>hbox>label:hover {
-		background-color: dodgerblue !important;
+		background-color: #1e90ff !important;
 		color: white !important;
 		border-radius: 2px !important;
 	}
-
+	
+	#updateButton:hover,
+	#updateDeck>hbox>label:hover {
+		background-color:#1e90ff80 !important;
+		color: white !important;
+		border-radius: 2px !important;
+	}
+	
 	#update-available-whats-new,
 	.text-link {
 		color: #ffffff !important;
