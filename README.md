@@ -25,9 +25,9 @@ about Firefox box
 ![2022-02-18_12h22_19](https://user-images.githubusercontent.com/40931468/154674245-ef8f7389-d7e6-4583-947e-c9c6607ec339.png)
 ![2022-02-18_12h23_01](https://user-images.githubusercontent.com/40931468/154674266-7714e916-3b7f-4e84-a577-e330e8daaa36.png)
 
-![Tabs anims](https://github.com/GrosBourrin/FIREFOX-BLUE-MOON/blob/master/icons/2022-02-18_12h24_59%20(online-video-cutter.com)(1).mp4?raw=true)
 
 
+![NW0cmaS0X9](https://user-images.githubusercontent.com/40931468/154704526-bd006d61-9787-46d7-8bf5-ba99716c7e8a.gif)
 
 
           
