@@ -74,285 +74,6 @@ menulist {
 
 
 
-/* see this to tweak : https://github.com/gorhill/uBlock/blob/master/src/css/cloud-ui.css*/
-/*---------------------------------UBLOCK ORIGIN ---------------------*/
-
-@-moz-document url-prefix("moz-extension://e4fdb54f-d559-4a7b-b967-bf80726855b8/") {
-
-	body,
-	#sticky,
-	#main {
-		font-family: Fira Sans !important;
-		background-color: #161a27 !important;
-		color: #ffffff !important;
-	}
-
-	hr {
-		display: none !important;
-	}
-
-	a {
-		color: #888 !important;
-	}
-
-	.fa-icon {
-		/* fill: #ffffff80 !important;
-		color: #ffffff80 !important;*/
-		fill: #1e90ff !important;
-		background: #161a27 !important;
-		border: none !important;
-	}
-
-	span.fa-icon {
-
-		fill: #ffffff !important;
-		background: transparent !important;
-		border: 0px !important;
-	}
-
-	h2 {
-		background-color: #161a27 !important;
-		color: #ffffff !important;
-	}
-
-	code {
-		background-color: #161a27 !important;
-	}
-
-	#switch .fa-icon {
-		background: transparent !important;
-		fill: #1e90ff !important;
-	}
-
-	#switch .fa-icon:hover {
-		background: #161a27 !important;
-		background-color: #161a27 !important;
-		fill: #1e90ff !important;
-	}
-
-	#switch .fa {
-		background: transparent !important;
-		fill: #1e90ff !important;
-	}
-
-	html#ublock0-epicker,
-	#ublock0-epicker body {
-		background: #161a27 !important;
-		color: #ffffff !important;
-	}
-
-	#ublock0-epicker aside {
-		background-color: #000000 !important;
-	}
-
-
-	body.off #switch .fa {
-		color: #161a27 !important;
-	}
-
-	.tool {
-		background-color: #161a27 !important;
-		color: #ffffff !important;
-	}
-
-	.tool.enabled:hover {
-		background: none !important;
-		background-color: #161a27 !important;
-		fill: #1e90ff !important;
-		color: #1e90ff !important;
-	}
-
-	.permatoolbar {
-		background-color: #161a27 !important;
-	}
-
-	.permatoolbar .button {
-		background-color: #161a27 !important;
-	}
-
-	.permatoolbar .button:hover {
-		fill: #1e90ff !important;
-		color: #1e90ff !important;
-		background-color: #161a27 !important;
-	}
-
-	#tooltip {
-		background-color: #000000 !important;
-		border: 1px solid #000000 !important;
-		color: #ffffff !important;
-	}
-
-	#firewall {
-		background: #161a27 !important;
-	}
-
-	#firewall>div {
-		background-color: #333 !important;
-	}
-
-	#firewall>div:hover {
-		background-color: #444 !important;
-	}
-
-	#firewall>div>span {
-		background-color: #161a27 !important;
-		color: #ffffff !important;
-
-	}
-
-	#firewall>div>span:first-of-type~span {
-		border-left: 1px solid #111 !important;
-	}
-
-	#extraTools {
-		background-color: #161a27 !important;
-	}
-
-	#extraTools>span:hover {
-		fill: #1e90ff !important;
-	}
-
-	#dashboard-nav {
-		background-color: #111 !important;
-		border-bottom: 1px solid #777 !important;
-	}
-
-	#dashboard-nav-widgets {
-		background-color: #111 !important;
-		border-bottom: 1px solid #777 !important;
-	}
-
-	.tabButton {
-		background-color: #161a27 !important;
-		border: 0px solid #1b192480 !important;
-		border-bottom: 0px solid #777 !important;
-		color: #ffffff !important;
-	}
-
-	.tabButton.selected {
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-		border-bottom: 0px solid #222 !important;
-	}
-
-	#diff li {
-		background-color: #555 !important;
-	}
-
-	#diff li:nth-child(even) {
-		background-color: #444 !important;
-	}
-
-	#diff textarea {
-		background-color: #333 !important;
-		color: #ffffff !important;
-	}
-
-	hr {
-		display: none !important;
-	}
-
-	.fieldset-header {
-		color: #ffffff !important;
-	}
-
-	#loggerSettingsDialog,
-	#modalOverlayContainer,
-	#netFilteringDialog,
-	#netFilteringDialog>.panes>.details>div,
-	#netFilteringDialog>div.panes>.dynamic .row {
-		background-color: #161a27 !important;
-		border-color: grey !important;
-	}
-
-	#domTree {
-		color: #ffffff !important;
-	}
-
-	#ruleFilter input,
-	input[type=number] {
-		-moz-appearance: none !important;
-		background-color: #161a27 !important;
-		border: 1px solid !important;
-		border-color: #161a27 !important;
-		color: #ffffff !important;
-	}
-
-	#cloudWidget {
-		background: #161a27 !important;
-		color: #ffffff !important;
-		color: #ffffff !important;
-	}
-
-	#cloudWidget>span {
-		background: #161a27 !important;
-		color: #ffffff !important;
-
-	}
-
-	#cloudinfo {
-		background: #161a27 !important;
-		color: #ffffff !important;
-	}
-
-
-	:root {
-		--checkmark: #ffffff !important;
-		--checkbox-checked-ink: #1e90ff !important;
-	}
-
-	button:hover {
-		background-color: #161a27 !important;
-		fill: #1e90ff80 !important;
-	}
-
-	button#cloudPush,
-	button#cloudPull,
-	button#cloudPullAndMerge {
-		background: #1e90ff !important;
-	}
-
-	span.counts {
-		color: #1e90ff !important;
-	}
-
-	#actions {
-		background: #161a27 !important;
-	}
-
-	#ublock0_raymondhill_net-browser-action label {
-		color: #ffffff !important;
-		background-color: #1e90ff !important;
-		opacity: 1 !important;
-	}
-
-	.CodeMirror-activeline-background {
-		background: #1e90ff !important;
-
-	}
-
-	/*****THIS IS A PLACEHOLDER COLOR CHOOSE SOMETHING NICER****/
-	#advancedSettings {
-		color: #f9f9fa !important;
-	}
-
-	.CodeMirror {
-		background: #161a27 !important;
-		color: #f9f9fb !important;
-	}
-
-	.CodeMirror-gutters {
-		background-color: #161a27 !important;
-		border-right: 1px solid #32313c !important;
-	}
-
-	.CodeMirror-merge-gap {
-		background: #161a27 !important;
-		border-left: 1px solid #32313c !important;
-		border-right: 1px solid #32313c !important;
-	}
-}
-
 /*-------------downloads sidebar webext tweaks dark ------------------*/
 
 @-moz-document url("moz-extension://8323b085-12c9-427f-af42-142a4a90bbb0/sidebar/panel.html") {
@@ -377,17 +98,17 @@ menulist {
 	}
 
 	.toolbar-bottom {
-		border-top: 0px solid #454545 !important;
+		border-top: 1px solid #1e90ff !important;
 	}
 
 	.item:hover {
-		background-image: linear-gradient(to top, #1e90ff, #1b1924) !important;
+		background-color: #1e90ff30 !important;
 		border-radius: 0px !important;
 		box-shadow: 0 0 0px 4px #161a27 !important;
 	}
 
 	.item:selected {
-		background-image: linear-gradient(to top, #1e90ff, #1b1924) !important;
+		background-color: #1e90ff80 !important;
 		border-radius: 0px !important;
 		box-shadow: 0 0 0px 4px #161a27 !important;
 	}
@@ -497,10 +218,50 @@ url(about:profiles) {
 		/*border-color: #1e90ff50 !important;*/
 	}
 
+	.tree-bodybox,
+	stack,
 	#handlersView,
-	#engineChildren {
-		background-color: #161a27 !important;
+	#engineChildren,
+	#engineList {
+		background: #161a27 !important;
 		border-color: #1e90ff !important;
+		border-radius: 4px !important;
+	}
+
+	/*
+	#engineList>treechildren:hover,
+	#blocklistsTree>treechildren:hover {
+		background-color: #1e90ff !important;
+	}
+*/
+	#engineList>treechildren::-moz-tree-image(engineShown, checked),
+	#blocklistsTree>treechildren::-moz-tree-image(selectionCol, checked) {
+		list-style-image: url("chrome://global/skin/icons/check.svg");
+		-moz-context-properties: fill, stroke;
+		fill: yellow !important;
+	}
+
+	#engineList>treechildren::-moz-tree-row(engineShown, checked, selected),
+	#blocklistsTree>treechildren::-moz-tree-row(selectionCol, checked, selected) {
+		fill: dodgerblue !important;
+		stroke: dodgerblue !important;
+		background: dodgerblue !important;
+		color: white !important;
+	}
+
+	@media (prefers-contrast) {
+
+		#engineList>treechildren::-moz-tree-row:hover,
+		#blocklistsTree>treechildren::-moz-tree-row:hover {
+			fill: dodgerblue !important;
+			stroke: dodgerblue !important;
+			background: dodgerblue !important;
+		}
+	}
+
+	#engineList>treechildren::-moz-tree-row,
+	#blocklistsTree>treechildren::-moz-tree-row {
+		min-height: 30px !important;
 	}
 
 	#browserContainersExtensionContent {
@@ -515,34 +276,35 @@ url(about:profiles) {
 
 	.content-blocking-category.selected {
 		border: 1px solid#1e90ff !important;
-		border-radius: 2px !important;
+		border-radius: 4px !important;
 		background-color: #1e90ff80 !important;
 	}
 
 	.content-blocking-category {
 		border: 1px solid#1e90ff !important;
-		border-radius: 2px !important;
+		border-radius: 4px !important;
 		background-color: #1e90ff20 !important;
 	}
 
 	#updateSettingsContainer {
-		border-radius: 2px !important;
+		border-radius: 4px !important;
 		background: #1e90ff80 !important;
 		border: 1px solid #1e90ff !important;
 	}
 
 	.sync-group.sync-configured {
-		border-radius: 2px !important;
+		border-radius: 4px !important;
 		background: #1e90ff80 !important;
 		border: 1px solid #1e90ff !important;
 	}
+
 
 	.dialogBox,
 	#PermissionsDialog,
 	box-inherit.dialog-content-box {
 		background-color: #161a27 !important;
 		color: #ffffff !important;
-		border: 1px solid transparent;
+		border: 1px solid transparent !important;
 		border-radius: 8px !important;
 		font-family: Fira Sans !important;
 	}
@@ -561,7 +323,6 @@ url(about:profiles) {
 
 
 	button:not([disabled]):hover {
-
 		background-color: #1e90ff80 !important;
 		box-shadow: none !important;
 	}
@@ -576,26 +337,26 @@ url(about:profiles) {
 	}
 
 	input[type="checkbox"].toggle-button:enabled:hover {
-		background: #1e90ffa0 !important;
+		background-color: #1e90ffa0 !important;
 		border-color: #ffffff !important;
 	}
 
 	input[type="checkbox"].toggle-button {
-		background: #1e90ff30 !important;
+		background-color: #1e90ff30 !important;
 		border-color: #ffffff !important;
 	}
 
 	input[type="checkbox"]:enabled:checked {
-		background-image: url("chrome://global/skin/icons/check.svg") !important;
+		/*background-image: url("chrome://global/skin/icons/check.svg") !important;
 		-moz-context-properties: fill !important;
-		fill: #ffffff !important;
+		fill: #000000 !important;
 		background-position: center !important;
-		background-repeat: no-repeat !important;
+		background-repeat: no-repeat !important;*/
 		background-color: #1e90ff !important;
 
-		border-color: #1e90ff !important;
+		border-color: white !important;
 		color: #ffffff !important;
-		fill: #ffffff !important;
+
 	}
 
 	input[type="checkbox"]:hover {
@@ -608,7 +369,7 @@ url(about:profiles) {
 		border-color: #1e90ff !important;
 	}
 
-	/*
+
 	checkbox:not([disabled]):hover>.checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
@@ -631,7 +392,7 @@ url(about:profiles) {
 		border-radius: 2px !important;
 
 	}
-*/
+
 	#handlersView>richlistitem:active,
 	#handlersView>richlistitem[selected],
 	#handlersView>richlistitem:hover {
@@ -639,6 +400,45 @@ url(about:profiles) {
 		background: #1e90ff !important;
 	}
 
+	/* treechildren*
+	#handlersView richlistitem,
+	#engineList treechildren::-moz-tree-row,
+	#blocklistsTree treechildren::-moz-tree-row {
+		min-height: 28px !important;
+	}
+*/
+	#engineList treechildren::-moz-tree-row(hover) {
+		color: #ffffff !important;
+		background: #1e90ff !important;
+	}
+
+
+	#engineList treechildren::-moz-tree-row(selected) {
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		border: 0px !important;
+
+	}
+
+	/*
+	treecols,
+	treecol {
+		min-height: unset !important;
+		height: 28px !important;
+	}*/
+
+	treecols:hover,
+	treecol:hover {
+		background: #1e90ff !important;
+		color: white !important;
+	}
+
+	/*
+	.autocomplete-tree treecols,
+	.autocomplete-tree treecol {
+		height: unset !important;
+	}
+*/
 	search-textbox {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
@@ -669,28 +469,25 @@ url(about:profiles) {
 	input[type="radio"]:checked,
 	*.radio-check[selected] {
 		-moz-context-properties: fill;
-		fill: currentColor;
+		fill: #ffffff;
 		color: #ffffff !important;
 		background-color: #1e90ff !important;
-		background-image: url("chrome://global/skin/icons/radio.svg");
-		border-color: #1e90ff !important;
+		/*background-image: url("chrome://global/skin/icons/radio.svg");*/
+		border-color: white !important;
 		color-adjust: exact;
 	}
 
 	input[type="radio"],
 	*.radio-check {
 		appearance: none !important;
-
 		border: 1px solid #1e90ff !important;
-
 		background-color: #161a27 !important;
-
 	}
 
 	#homePageUrl,
 	#fxaSyncComputerName {
 		background: #161a27 !important;
-		color: #ffffff;
+		color: #ffffff !important;
 		border-color: #1e90ff !important;
 	}
 
@@ -700,6 +497,7 @@ url(about:profiles) {
 		background-color: #1e90ff80 !important;
 		color: #ffffff !important;
 		border-radius: 0px !important;
+		padding: 2px !important;
 	}
 
 	/*
@@ -707,9 +505,6 @@ url(about:profiles) {
 		padding: 0px !important;
 	}
 */
-	menulist {
-		padding: 2px !important;
-	}
 
 	/*
 	button:not(.button-link):not(.close-icon):not(.spinbuttons-button) {
@@ -722,10 +517,6 @@ url(about:profiles) {
 	}
 */
 	/* menulist popup */
-
-
-
-
 	menupopup menuitem {
 		background: #161a27 !important;
 		padding-top: unset !important;
@@ -749,6 +540,14 @@ url(about:profiles) {
 		color: #ffffff !important;
 	}
 
+	.info-box-container {
+		background-color: #1e90ff80 !important;
+		border-radius: 4px !important;
+	}
+
+	treechildren:hover {
+		background-color: #1e90ff80 !important;
+	}
 }
 
 
@@ -1145,8 +944,8 @@ url(about:profiles) {
 	}
 
 	.tab-group[last-input-type="mouse"]>button.tab-button:-moz-focusring {
-		outline: none;
-		box-shadow: none;
+		outline: none !important;
+		box-shadow: none !important;
 	}
 
 	.ghost-button:not(.semi-transparent):enabled:hover {
@@ -1252,15 +1051,43 @@ url(about:profiles) {
 		color: #ccc !important
 	}
 
-	button,
+	.settings_block {
+
+		border-bottom: #1e90ff80 solid 0px !important;
+	}
+
+
 	input[type="button"] {
-		-moz-appearance: none !important;
+		appearance: none !important;
 		border-radius: 3px !important;
 		background-color: #555 !important;
 		color: #ffffff !important;
 		border: none !important;
 		padding: 5px !important;
-		margin: 3px !important
+		margin: 3px !important;
+	}
+
+
+	input[type="button"]:hover {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		box-shadow: none !important;
+	}
+
+	button {
+		appearance: none !important;
+		border-radius: 3px !important;
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		border: none !important;
+		padding: 5px !important;
+		margin: 3px !important;
+	}
+
+	button:hover {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+		box-shadow: none !important;
 	}
 
 	.logo-container img {
@@ -1274,35 +1101,28 @@ url(about:profiles) {
 		background-color: #161a27 !important;
 	}
 
-	button:hover,
-	input[type="button"]:hover {
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-		box-shadow: none !important;
-	}
-
 	a:link,
 	a {
 		color: #1e90ff !important;
 	}
 
 	a:visited {
-		color: #0070aa !important;
+		color: #1e90ff90 !important;
 	}
 
 	a:hover {
-		color: #0ff !important;
+		color: #ffffff !important;
 	}
 
 	a:active {
-		color: #0050aa !important;
+		color: #1e90ff60 !important;
 	}
 
 	input[type="text"] {
-		-moz-appearance: none !important;
-		background-color: #444 !important;
-		border: 1px solid #666 !important;
-		color: #fff !important;
+		appearance: none !important;
+		background-color: #161a27 !important;
+		border: 0px solid #1e90ff !important;
+		color: #ffffff !important;
 		margin: 3px !important;
 	}
 
@@ -1311,7 +1131,7 @@ url(about:profiles) {
 	}
 
 	input[type="text"][disabled] {
-		color: #aaa !important;
+		color: #888888 !important;
 	}
 }
 
@@ -1487,7 +1307,7 @@ url(about:profiles) {
 	.Card-footer-text,
 	.Card-header,
 	.Categories .Card-contents,
-	
+
 	.Hero .Card-contents,
 	.Home-SubjectShelf .Card-contents,
 	.LandingPage-header,
@@ -1511,8 +1331,12 @@ url(about:profiles) {
 	input.AutoSearchInput-query {
 		font-size: 14px !important;
 	}
-.DropdownMenu-items::after,
-.DropdownMenu-items { background-color: #161a27 !important;}
+
+	.DropdownMenu-items::after,
+	.DropdownMenu-items {
+		background-color: #161a27 !important;
+	}
+
 	.Addon-author,
 	.Addon-author a,
 	.Addon-author a:link .Button--action,
@@ -1799,6 +1623,13 @@ url(about:profiles) {
 		color: white !important;
 		background: #1e90ff80 !important;
 		border-radius: 4px !important;
+	}
+
+	.SearchResult-note {
+		background-color: #1e90ff30 !important;
+		border: 1px solid #1e90ff !important;
+		color: lightgray !important;
+
 	}
 
 }
@@ -2421,6 +2252,12 @@ url(about:profiles) {
 
 	}
 
+	.SearchResult-note {
+		background-color: #1e90ff30 !important;
+		border: 1px solid #1e90ff !important;
+		color: lightgray !important;
+
+	}
 
 }
 
@@ -3656,14 +3493,32 @@ url("about:newtab") {
 
 	}
 
-	.gb_Fd {
+	.gb_Fd,
+	.gb_Jd,
+	.gb_Qe {
 		background-color: #161a27 !important;
+		color: white !important;
+		box-shadow: none !important;
 	}
 
 	.gb_Ne {
-		background-color: black !important;
-		background-image: none;
-		border-color: transparent;
+		background-color: #161a27 !important;
+		background-image: none !important;
+		border-color: transparent !important;
+	}
+
+	.gb_Le {
+		background: #161a27 !important;
+		background-image: none !important;
+		border-color: transparent !important;
+	}
+
+	.gb_na.gb_Ke .gb_ad {
+		padding: 4px 2px;
+		padding-left: 2px;
+		background: #161a27 !important;
+		background-image: none !important;
+		border-color: transparent !important;
 	}
 
 	.ICsaqd {
@@ -3726,10 +3581,47 @@ url("about:newtab") {
 	c-wiz {
 		background-color: #161a27 !important;
 	}
+
+	.QmrVtf,
+	.bFymCe,
+	.QmrVtf.RD0gLb.kybdz,
+	.wsLqz,
+	a.SVJrMe {
+		color: dodgerblue !important;
+
+		filter: brightness(1) !important;
+		filter: opacity(100%) !important;
+	}
+
+	body.dm7YTc .dmaMHc .VfPpkd-StrnGf-rymPhb {
+		background-color: #161a27 !important;
+	}
+
+	.VfPpkd-StrnGf-rymPhb-ibnC6b,
+	.VfPpkd-BFbNVe-bF1uUb-NZp2ef {
+		background: #161a27 !important;
+		background-color: #161a27 !important;
+		color: white !important;
+	}
+
+	.VfPpkd-StrnGf-rymPhb-ibnC6b:hover {
+		background-color: #1e90ff !important;
+		color: white !important;
+	}
+
+	.VfPpkd-StrnGf-rymPhb-ibnC6b[selected] {
+		background-color: #1e90ff !important;
+		color: white !important;
+	}
+
+	.VfPpkd-TkwUic {
+		outline: #1e90ff 1px !important;
+		border-radius: 4px !important;
+	}
 }
 
 
-
+/*
 .downloadProgress {
 	appearance: none !important;
 	margin: 3px 0 -2px 0 !important;
@@ -3749,14 +3641,14 @@ url("about:newtab") {
 	height: 100% !important;
 }
 
-/*
+
 .downloadProgress::-moz-progress-bar {
 	background-color: var(--toolbarbutton-icon-fill-attention) !important;
 }
-*/
+
 .downloadProgress[paused]::-moz-progress-bar {
 	background-color: var(--desaturate-dimmed-further) !important;
-}
+}*/
 
 
 
@@ -3810,36 +3702,35 @@ popup-notification-button:hover {
 	}
 }
 */
-/*
-:root {
+
+* {
 	--checkmark: #ffffff !important;
 	--checkbox-checked-ink: #1e90ff !important;
 	--checkbox-border-color: #1e90ff !important;
-	--checkbox-checked-color: #ffffff !important;
+	--checkbox-checked-color: #fff000 !important;
 	--checkbox-checked-bgcolor: #1e90ff !important;
-	--checkbox-unchecked-bgcolor: #161a27!important;
+	--checkbox-unchecked-bgcolor: #161a27 !important;
 }
 
 #checkbox-check[checked] {
 	border-color: var(--checkbox-checked-border-color) !important;
-	background: var(--checkbox-checked-bgcolor) !important;*/
-/*background-image: url("chrome://global/skin/icons/check.svg") !important;*/
-*
-/*background-position: center !important;
-	background-repeat: no-repeat !important;
-	-moz-context-properties: fill !important;
-	fill: #ffffff !important;
-	color: #ffffff !important;*/
+	background-color: var(--checkbox-checked-bgcolor) !important;
+	/*background-image: url("chrome://global/skin/icons/check.svg") !important;*/
 
-/*var(--checkbox-checked-color, -moz-accent-color-foreground);*/
+	/*background-position: center !important;
+	background-repeat: no-repeat !important;*/
+	/*-moz-context-properties: fill !important;
+	fill: #ffffff !important;*/
+	color: #ffffff !important;
+	/*var(--checkbox-checked-color, -moz-accent-color-foreground);*/
 
-/*color-adjust: exact !important;
-}*/
-/*
+	color-adjust: exact !important;
+}
+
 #checkbox-check {
-	appearance: none !important;
-	color: var(--checkbox-border-color) !important;
-	background: #161a27!important;
+	/*ppearance: none !important;*/
+	color: white !important;
+	background: #1e90ff !important;
 	border: 1px solid #1e90ff !important;
 
 	border-radius: 2px !important;
@@ -3847,17 +3738,15 @@ popup-notification-button:hover {
 }
 
 #checkbox:hover {
-	appearance: none !important;
+	/*appearance: none !important;*/
 	color: var(--checkbox-border-color) !important;
-	background: #1e90ff80 !important;
+	background-color: #1e90ff80 !important;
 	border: 1px solid #1e90ff !important;
-	
-
 	border-radius: 2px !important;
 	margin-inline-end: 6px !important;
 }
 
-*/
+
 #commonDialog {
 	background: #161a27 !important;
 	color: #ffffff !important;
@@ -4092,9 +3981,25 @@ textbox {
 		display: none !important;
 	}
 
+	#form-edit, .cell-edit {
+		background: #161a27 !important;
+	}
+
+	td.cell-value>form>input[type="text"],
+	td.cell-value>form>input[type="number"] {
+		background: #161a27 !important;
+	}
+
+	#prefs>tr>td:hover,
+	#prefs>tr>th:hover,
+	#prefs>tr:hover,
+	#prefs>th:hover,
+	#prefs>td:hover {
+		background-color: #1e90ff !important;
+	}
 }
 
-checkbox:not([disabled]):hover>.checkbox-check {
+.checkbox:not([disabled]):hover>.checkbox-check {
 	border-color: #1e90ff !important;
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
@@ -4102,15 +4007,15 @@ checkbox:not([disabled]):hover>.checkbox-check {
 	fill: #ffffff !important;
 }
 
-checkbox[checked]>.checkbox-check {
-	/*list-style-image: url("chrome://global/skin/icons/check.svg");*/
+.checkbox[checked]>.checkbox-check {
+	list-style-image: url("chrome://global/skin/icons/check.svg");
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
 	background-color: #1e90ff !important;
 }
 
-checkbox>.checkbox-check {
-	background-color: #161a27 !important;
+.checkbox>.checkbox-check {
+	background-color: #1e90ff !important;
 	color: #ffffff !important;
 	border-color: #1e90ff !important;
 	border-radius: 2px !important;
@@ -4600,28 +4505,28 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
 		background-color: #161a27 !important;
-		border-radius: 2px;
+		border-radius: 2px !important;
 	}
 
 	input[type="checkbox"]:hover {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
 		background-color: #1e90ff80 !important;
-		border-radius: 2px;
+		border-radius: 2px !important;
 	}
 
 	input[type="checkbox"] {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
 		background-color: #161a27 !important;
-		border-radius: 2px;
+		border-radius: 2px !important;
 	}
 
 	input[type="checkbox"]:checked {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
 		background-color: #1e90ff !important;
-		border-radius: 2px;
+		border-radius: 2px !important;
 		color: #ffffff !important;
 	}
 
@@ -4895,7 +4800,7 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 	input,
 	select,
 	textarea {
-		-moz-appearance: none !important;
+		appearance: none !important;
 	}
 
 	input[type="radio"],
@@ -5093,4 +4998,350 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 		transform: translateX(40px);
 	}
 
+}
+
+/* see this to tweak : https://github.com/gorhill/uBlock/blob/master/src/css/cloud-ui.css*/
+/*---------------------------------UBLOCK ORIGIN ---------------------*/
+
+@-moz-document url-prefix("moz-extension://e4fdb54f-d559-4a7b-b967-bf80726855b8/") {
+
+	body,
+	#sticky,
+	#main {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	* {
+		font-family: Fira Sans !important;
+	}
+
+	hr {
+		display: none !important;
+	}
+
+	a {
+		color: #888 !important;
+	}
+
+	.fa-icon {
+		/* fill: #ffffff80 !important;
+		color: #ffffff80 !important;*/
+		fill: #1e90ff !important;
+		background: #161a27 !important;
+		border: none !important;
+		stroke: #1e90ff80 !important;
+	}
+
+	span.fa-icon {
+		fill: #ffffff !important;
+		background: transparent !important;
+		border: 0px !important;
+	}
+
+	.toolRibbon {
+		background-color: #161a27 !important;
+	}
+
+	h2 {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	code {
+		background-color: #161a27 !important;
+	}
+
+	#switch .fa-icon {
+		background: transparent !important;
+		fill: #1e90ff !important;
+		stroke: none !important;
+	}
+
+	#switch .fa-icon:hover {
+		background: #161a27 !important;
+		background-color: #161a27 !important;
+		fill: #1e90ff !important;
+		filter: drop-shadow(0px 0px 4px white) !important;
+		/*stroke: white !important;*/
+	}
+
+	#switch .fa {
+		background: transparent !important;
+		fill: #1e90ff !important;
+	}
+
+	html#ublock0-epicker,
+	#ublock0-epicker body {
+		background: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	#ublock0-epicker aside {
+		background-color: #000000 !important;
+	}
+
+
+	body.off #switch .fa {
+		color: #161a27 !important;
+	}
+
+	.tool {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	.tool.enabled:hover {
+		background: none !important;
+		background-color: #161a27 !important;
+		fill: #1e90ff !important;
+		color: #1e90ff !important;
+	}
+
+	.permatoolbar {
+		background-color: #161a27 !important;
+	}
+
+	.permatoolbar .button {
+		background-color: #161a27 !important;
+	}
+
+	.permatoolbar .button:hover {
+		fill: #1e90ff !important;
+		color: #1e90ff !important;
+		background-color: #161a27 !important;
+	}
+
+	#tooltip {
+		background-color: #000000 !important;
+		border: 1px solid #000000 !important;
+		color: #ffffff !important;
+	}
+
+	#firewall {
+		background: #161a27 !important;
+	}
+
+	#firewall>div {
+		background-color: #333 !important;
+	}
+
+	#firewall>div:hover {
+		background-color: #444 !important;
+	}
+
+	#firewall>div>span {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+
+	}
+
+	#firewall>div>span:first-of-type~span {
+		border-left: 1px solid #111 !important;
+	}
+
+	#extraTools {
+		background-color: #161a27 !important;
+	}
+
+	#extraTools>span:hover {
+		fill: #1e90ff !important;
+	}
+
+	#dashboard-nav {
+		background-color: #161a27 !important;
+		border-bottom: 1px solid #777 !important;
+	}
+
+	#dashboard-nav-widgets {
+		background-color: #161a27 !important;
+		border-bottom: 1px solid #777 !important;
+	}
+
+	.tabButton {
+		background-color: #161a27 !important;
+		border: 0px solid #1b192480 !important;
+		border-bottom: 0px solid #777 !important;
+		color: #ffffff !important;
+	}
+
+	.tabButton.selected {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		border-bottom: 0px solid #222 !important;
+	}
+
+	#diff li {
+		background-color: #555 !important;
+	}
+
+	#diff li:nth-child(even) {
+		background-color: #444 !important;
+	}
+
+	#diff textarea {
+		background-color: #333 !important;
+		color: #ffffff !important;
+	}
+
+	hr {
+		display: none !important;
+	}
+
+	.fieldset-header {
+		color: #ffffff !important;
+	}
+
+	#loggerSettingsDialog,
+	#modalOverlayContainer,
+	#netFilteringDialog,
+	#netFilteringDialog>.panes>.details>div,
+	#netFilteringDialog>div.panes>.dynamic .row {
+		background-color: #161a27 !important;
+		border-color: grey !important;
+	}
+
+	#domTree {
+		color: #ffffff !important;
+	}
+
+	#ruleFilter input,
+	input[type=number] {
+		appearance: none !important;
+		background-color: #161a27 !important;
+		border: 1px solid !important;
+		border-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	#cloudWidget {
+		background: #161a27 !important;
+		color: #ffffff !important;
+		color: #ffffff !important;
+	}
+
+	#cloudWidget>span {
+		background: #161a27 !important;
+		color: #ffffff !important;
+
+	}
+
+	#cloudinfo {
+		background: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	#fa-icon>svg,
+	#fa-icon>.fa-icon_cog,
+	.fa-icon>.fa-icon_clock-o,
+	.fa-icon>.fa-icon_floppy-o,
+	.fa-icon>.fa-icon_info-circle,
+	.fa-icon>.fa-icon_pause-circle-o,
+	.fa-icon>.fa-icon_play-circle-o,
+	.fa-icon>.fa-icon_power-off,
+	.fa-icon>.fa-icon_question-circle,
+	.fa-icon>.fa-icon_refresh,
+	.fa-icon>.fa-icon_save,
+	.fa-icon>.fa-icon_sliders,
+	.fa-icon>.fa-icon_undo {
+		background: transparent !important;
+	}
+
+	:root {
+		--checkmark: #ffffff !important;
+		--checkbox-checked-ink: #1e90ff !important;
+	}
+
+	button:hover {
+		background-color: #161a27 !important;
+		fill: #1e90ff80 !important;
+	}
+
+	button#cloudPush,
+	button#cloudPull,
+	button#cloudPullAndMerge {
+		background-color: #161a27 !important;
+	}
+
+	button#cloudPush:hover,
+	button#cloudPull:hover,
+	button#cloudPullAndMerge:hover {
+		background-color: #1e90ff !important;
+	}
+
+	span.counts {
+		color: #1e90ff !important;
+	}
+
+	#actions {
+		background: #161a27 !important;
+	}
+
+	#ublock0_raymondhill_net-browser-action label {
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		opacity: 1 !important;
+	}
+
+	.CodeMirror-activeline-background {
+		background: #1e90ff !important;
+
+	}
+
+	/*****THIS IS A PLACEHOLDER COLOR CHOOSE SOMETHING NICER****/
+	#advancedSettings {
+		color: #f9f9fa !important;
+	}
+
+	.CodeMirror * {
+		font-family: Operator Mono Light !important;
+		font-size: 14px !important;
+		background: #161a27 !important;
+		/*color: #f9f9fb !important;*/
+	}
+
+	.CodeMirror-gutters {
+		background-color: #161a27 !important;
+		border-right: 1px solid #32313c !important;
+	}
+
+	.CodeMirror-merge-gap {
+		background: #161a27 !important;
+		border-left: 1px solid #32313c !important;
+		border-right: 1px solid #32313c !important;
+	}
+
+
+	#exportUserFiltersToFile {
+		background: #1e90ff !important;
+	}
+
+	#exportUserFiltersToFile:hover {
+		background: #1e90ff80 !important;
+	}
+
+
+	:root {
+		--checkmark: #ffffff !important;
+		--checkbox-checked-ink: #1e90ff !important;
+		--checkbox-ink: #ffffff !important;
+	}
+
+	.checkbox>input[type="checkbox"]+svg {
+		background-color: transparent !important;
+		border: 1px solid white !important;
+
+	}
+
+	.checkbox>input[type="checkbox"]:checked+svg {
+		background-color: #1e90ff !important;
+		border-color: white !important;
+
+		stroke: white !important;
+	}
+
+	.checkbox[disabled],
+	.checkbox[disabled]~span {
+		filter: var(--checkbox-disabled-filter);
+	}
 }
