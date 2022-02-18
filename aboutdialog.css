@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                                About firefox                               */
 /* -------------------------------------------------------------------------- */
-/*--------------181a21----181c25--#1b1924-#131620--*/
+
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
           #leftBox {
                     background-image: url("renardeau.gif") !important;
