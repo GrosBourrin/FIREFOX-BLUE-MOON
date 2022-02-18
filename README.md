@@ -15,6 +15,7 @@ about Firefox box
 ![firefox_hIUBu5SEjF](https://user-images.githubusercontent.com/40931468/154450639-aa368cbf-efc2-4da2-b2c7-65631bf8150d.gif)
 
 ** Submenus not sticking **
+
 ![2022-02-18_12h18_16](https://user-images.githubusercontent.com/40931468/154674119-3c010bd8-05c5-4759-a8ef-ee68007e9ca6.png)
 
 ** Preferences/option page **
