@@ -24,13 +24,23 @@ about Firefox box
 ![2022-02-18_12h21_57](https://user-images.githubusercontent.com/40931468/154674234-1b9e5987-8556-4345-b269-b04eb47b2ab0.png)
 ![2022-02-18_12h22_19](https://user-images.githubusercontent.com/40931468/154674245-ef8f7389-d7e6-4583-947e-c9c6607ec339.png)
 ![2022-02-18_12h23_01](https://user-images.githubusercontent.com/40931468/154674266-7714e916-3b7f-4e84-a577-e330e8daaa36.png)
-https://imgur.com/8mMu0iB
 
-[url=https://imgur.com/8mMu0iB][img]http://i.imgur.com/8mMu0iB.mp4[/img][/url]
-
+![Tabs anims](https://github.com/GrosBourrin/FIREFOX-BLUE-MOON/blob/master/icons/2022-02-18_12h24_59%20(online-video-cutter.com)(1).mp4)
 
 
 
 
+          
+          
+
+
+
+
+
+      
+          View raw
+      
+
+  
 
 
