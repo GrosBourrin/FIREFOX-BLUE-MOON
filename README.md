@@ -41,7 +41,8 @@ Note: it's a work in progress not a final theme, just for my using and fun
 ![2022-02-18_12h23_54](https://user-images.githubusercontent.com/40931468/154674213-9c4349b9-ac57-44ed-8d29-6a2d1754383d.png)
 ![2022-02-18_12h21_29](https://user-images.githubusercontent.com/40931468/154674227-d29116bf-83f9-42f1-b641-a3bdcbd481ab.png)
 ![2022-02-18_12h21_57](https://user-images.githubusercontent.com/40931468/154674234-1b9e5987-8556-4345-b269-b04eb47b2ab0.png)
-![2022-02-18_12h22_19](https://user-images.githubusercontent.com/40931468/154674245-ef8f7389-d7e6-4583-947e-c9c6607ec339.png)
+![2022-02-18_12h22_19](https://user-images.githubusercontent.com/40931468/154842789-a9931756-15ef-4e59-a1f9-623197cd017f.png)
+
 
 **HTTPs Anywhere addon panel**
 
