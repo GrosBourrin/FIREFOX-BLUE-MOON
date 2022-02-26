@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="control" viewBox="0 0 769 769" width="500" height="500"
+  shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1">
+  <style id="up_down">
+    @keyframes button1_animation__to {
+
+      0%,
+      to {
+        transform: translate(0, 0)
+      }
+
+      3.333333% {
+        transform: translate(-.01px, -32.621792px)
+      }
+
+      20% {
+        transform: translate(-.01px, 98.534615px)
+      }
+
+      36.666667% {
+        transform: translate(-.01px, -38.05px)
+      }
+
+      53.333333% {
+        transform: translate(-.01px, 96.256316px)
+      }
+
+      70% {
+        transform: translate(-.01px, -31.444042px)
+      }
+
+      86.666667% {
+        transform: translate(2.060226px, 95.25762px)
+      }
+    }
+
+    @keyframes button2_animation__to {
+
+      0%,
+      to {
+        transform: translate(0, 0)
+      }
+
+      3.333333% {
+        transform: translate(.001446px, 43.151611px)
+      }
+
+      13.333333% {
+        transform: translate(.001446px, -88.780827px)
+      }
+
+      23.333333% {
+        transform: translate(-.232752px, 43.977479px)
+      }
+
+      33.333333% {
+        transform: translate(.001446px, -84.651486px)
+      }
+
+      43.333333% {
+        transform: translate(-.232752px, 43.923951px)
+      }
+
+      53.333333% {
+        transform: translate(.001446px, -88.008155px)
+      }
+
+      63.333333% {
+        transform: translate(.001446px, 42.012079px)
+      }
+
+      73.333333% {
+        transform: translate(.001446px, -88.529091px)
+      }
+
+      83.333333% {
+        transform: translate(.001446px, 42.354551px)
+      }
+
+      93.333333% {
+        transform: translate(.001446px, -87.14624px)
+      }
+    }
+
+    @keyframes button3_animation__to {
+
+      0%,
+      to {
+        transform: translate(0, 0)
+      }
+
+      30% {
+        transform: translate(0, 77.75px)
+      }
+
+      80% {
+        transform: translate(0, -47.841157px)
+      }
+    }
+
+    #button1_animation {
+      animation: button1_animation__to 8000ms linear infinite normal forwards
+    }
+
+    #button2_animation {
+      animation: button2_animation__to 8000ms linear infinite normal forwards
+    }
+
+    #button3_animation {
+      animation: button3_animation__to 3000ms linear infinite normal forwards
+    }
+  </style>
+  <g id="background" transform="matrix(4 0 0 4 -825.446 -2258.583)">
+    <path id="square"
+      d="M398.61 660.79v72.19c0 11.03-8.32 21.11-19.18 23.18-1.61.31-3.27.48-4.9.48-47.97.03-95.93.02-143.9.02-11.76 0-22.02-9.02-23.56-20.72a23.27 23.27 0 01-.23-3.12c-.01-48.09-.01-96.18-.01-144.26 0-11.03 8.32-21.12 19.18-23.18 1.61-.31 3.27-.48 4.9-.48 48.01-.02 96.02-.02 144.02-.02 11.03 0 21.13 8.33 23.18 19.18.3 1.61.48 3.27.48 4.9.03 23.94.02 47.89.02 71.83z"
+      fill="transparent" stroke="none" stroke-width="0" />
+  </g>
+  <g id="control_top" transform="matrix(4 0 0 4 -825.429 -2258.566)">
+    <g id="control_group">
+      <path id="line1"
+        d="M249.98 730.88h-6.29c-2.7 0-4.92-2.21-4.92-4.92V595.57c0-2.7 2.21-4.92 4.92-4.92h6.29c2.7 0 4.92 2.21 4.92 4.92v130.39a4.93 4.93 0 01-4.92 4.92z"
+        fill="#1e90ff" stroke="dodgerblue" stroke-width="5" stroke-miterlimit="15" />
+      <g id="button1_animation">
+        <path id="button1"
+          d="M257.23 650.09h-20.77c-6.24 0-11.34-5.1-11.34-11.34v-20.1c0-6.24 5.1-11.34 11.34-11.34h20.77c6.24 0 11.34 5.1 11.34 11.34v20.1c0 6.24-5.11 11.34-11.34 11.34z"
+          fill="#FFF" stroke="none" stroke-width="1" />
+      </g>
+      <path id="line2"
+        d="M305.86 730.88h-6.29c-2.7 0-4.92-2.21-4.92-4.92V595.57c0-2.7 2.21-4.92 4.92-4.92h6.29c2.7 0 4.92 2.21 4.92 4.92v130.39c-.01 2.71-2.22 4.92-4.92 4.92z"
+        fill="#1e90ff" stroke="dodgerblue" stroke-width="5" stroke-miterlimit="15" />
+      <g id="button2_animation">
+        <path id="button2"
+          d="M313.1 703.38h-20.77c-6.24 0-11.34-5.1-11.34-11.34v-20.1c0-6.24 5.1-11.34 11.34-11.34h20.77c6.24 0 11.34 5.1 11.34 11.34v20.1c0 6.24-5.1 11.34-11.34 11.34z"
+          fill="#FFF" stroke="none" stroke-width="1" />
+      </g>
+      <path id="line3"
+        d="M361.73 730.88h-6.29c-2.7 0-4.92-2.21-4.92-4.92V595.57c0-2.7 2.21-4.92 4.92-4.92h6.29c2.7 0 4.92 2.21 4.92 4.92v130.39c0 2.71-2.22 4.92-4.92 4.92z"
+        fill="#1e90ff" stroke="dodgerblue" stroke-width="5" stroke-miterlimit="15" />
+      <g id="button3_animation">
+        <path id="button3"
+          d="M368.97 668.41H348.2c-6.24 0-11.34-5.1-11.34-11.34v-20.1c0-6.24 5.1-11.34 11.34-11.34h20.77c6.24 0 11.34 5.1 11.34 11.34v20.1c0 6.24-5.1 11.34-11.34 11.34z"
+          fill="#FFF" stroke="none" stroke-width="1" />
+      </g>
+    </g>
+  </g>
+</svg>
