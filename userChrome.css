@@ -430,12 +430,12 @@ toolbarbutton.bookmark-item .toolbarbutton-text {
 }
 
 toolbarbutton.bookmark-item .toolbarbutton-icon {
-	margin-left: 1.5px !important;
+	margin-left: 2px !important;
 }
 
 #bookmarks-toolbar-placeholder>.toolbarbutton-icon,
 #PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon[label]:not([label=""]) {
-	margin-inline-end: 1.5px !important;
+	margin-inline-end: 2px !important;
 }
 
 .toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text {
@@ -3247,7 +3247,6 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 }
 
 #forward-button .toolbarbutton-icon {
-	padding: 12px !important;
 	margin-left: -5px !important;
 }
 
