@@ -101,16 +101,25 @@ menulist {
 	}
 
 	.item:hover {
-		background-color: #1e90ff30 !important;
+		background: linear-gradient(#1e90ff, #161a27) !important;
 		border-radius: 0px !important;
 		box-shadow: 0 0 0px 4px #161a27 !important;
 	}
 
 	.item:selected {
-		background-color: #1e90ff80 !important;
+		background: linear-gradient(#161a27, #1e90ff) !important;
 		border-radius: 0px !important;
 		box-shadow: 0 0 0px 4px #161a27 !important;
 	}
+}
+
+/*input[type="checkbox"]:checked {
+	background: #444 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 16 16" ><path fill="rgb(200,200,200)" d="M 13.09,2.87 C 13.09,2.87 6.00,11.00 6.00,11.00 6.00,11.00 2.00,9.00 2.00,9.00 4.25,12.81 7.00,14.00 7.00,14.00 9.24,10.42 12.04,7.39 13.09,2.87 Z" /></svg>') no-repeat center center !important
+}
+*/
+#downloadsRichListBox {
+	background: #444 !important;
+	color: #ccc !important;
 }
 
 /* about:support*/
@@ -133,6 +142,15 @@ url(about:profiles) {
 	a {
 		color: #1e90ff !important;
 	}
+
+	a:hover {
+		color: #1e90ff90 !important;
+	}
+
+	th {
+		background-color: dodgerblue !important;
+	}
+
 }
 
 /* about:preferences */
@@ -2276,80 +2294,6 @@ url(about:profiles) {
 }
 
 
-@-moz-document url("chrome://global/content/alerts/alert.xhtml") {
-
-	* {
-		font-family: Fira Sans !important;
-	}
-
-	#tabmodalprompt-topContainer {
-		background-color: #161a2780 !important;
-		color: #ffffff !important;
-
-	}
-
-	#tabmodalprompt-infoContainer {
-		background-color: #161a27 !important;
-		color: #ffffff !important;
-		/*border: none !important;*/
-	}
-
-	#alertSourceLabel {
-		color: white !important;
-	}
-
-	#alertBox,
-	image {
-		border-radius: 2px !important;
-	}
-
-	#alertSettings {
-		color: white !important;
-	}
-
-	menupopup,
-	menuitem#openSettingsMenuItem {
-		color: white !important;
-	}
-
-	menupopup,
-	menuitem#disableForOriginMenuItem {
-		color: white !important;
-	}
-
-	menupopup,
-	menuitem#doNotDisturbMenuItem {
-		color: white !important;
-	}
-
-	#alertBox {
-		color: white !important;
-		background-color: #161a27 !important;
-		border: none !important;
-		border-radius: 4px !important;
-		-moz-window-shadow: cliprounded !important;
-	}
-
-	/*
-	#alertSettings {
-		fill: currentColor !important;
-		color: inherit !important;
-		border-radius: 0 !important;
-		margin-inline: 0 !important;
-		margin-bottom: -4px !important;
-	}*/
-
-	.close-icon,
-	#alertSettings {
-		background: transparent !important
-	}
-
-	.close-icon:hover>.toolbarbutton-icon,
-	#alertSettings:is(:hover, [open])>.button-box>.box-inherit {
-		background-color: #1e90ff !important;
-	}
-}
-
 @-moz-document url("about:memory") {
 
 	html,
@@ -2984,6 +2928,7 @@ url("about:newtab") {
 	html:not(#ublock0-epicker) body,
 	#newtab-customize-overlay {
 		background: #161a27 !important;
+
 		/*#232324*/
 	}
 }
@@ -3401,14 +3346,14 @@ url("about:newtab") {
 	}
 }
 
-/*
+
 .pip-wrapper {
-	
+
 	top: inherit !important;
 	left: 15px !important;
 	border: none !important;
 }
-*/
+
 @-moz-document url-prefix("about:httpsonlyerror") {
 	body {
 		background-color: #161a27 !important;
@@ -3459,20 +3404,11 @@ url("about:newtab") {
 	background-color: #161a27 !important;
 }
 
-
-
-
-
-
 @-moz-document domain(facebook.com) {
 	* {
 		font-family: "Fira Sans" !important;
 	}
 }
-
-
-
-
 
 /*
 .downloadProgress {
@@ -3510,12 +3446,10 @@ url("about:newtab") {
 	/* ADD ROW HIGHLIGHTS */
 	table.zt tr.yO:hover {
 		background-color: #1e90ff80 !important;
-
 	}
 
 	table.zt tr.zE:hover {
 		background-color: #1e90ff80 !important;
-
 	}
 
 }
@@ -3618,7 +3552,6 @@ textbox {
 /*****************************************************************************************/
 
 @-moz-document url-prefix(about:config) {
-
 	* {
 		font-size: 15px !important;
 		font-family: Fira Sans !important;
@@ -3660,7 +3593,6 @@ textbox {
 	}
 */
 	#prefs {
-
 		border: none !important;
 	}
 
@@ -3830,7 +3762,7 @@ textbox {
 		font-size: 12px !important;
 	}
 
-	scrollbar[orient="horizontal"] {
+	.scrollbar[orient="horizontal"] {
 		display: none !important;
 	}
 
@@ -4190,7 +4122,6 @@ p::selection {
 
 
 #netErrorButtonContainer>.try-again {
-
 	background: #1e90ff !important;
 	color: #ffffff !important;
 
@@ -4199,7 +4130,6 @@ p::selection {
 #netErrorButtonContainer>.try-again:hover {
 	background: #1e90ff80 !important;
 	color: #ffffff !important;
-
 }
 
 @-moz-document url-prefix("about:neterror") {
@@ -4439,13 +4369,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	outline-offset: unset !important;
 }
 
-/*
-menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
-	-moz-context-properties: fill !important;
-	fill: #ffffff !important;
-	color: #ffffff !important;
-}
-*/
+
 @-moz-document domain("developer.mozilla.org") {
 
 	html {
@@ -4921,7 +4845,9 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 		background-color: #161a27 !important;
 		fill: #1e90ff !important;
 		/*filter: drop-shadow(0px 0px 4px white) !important;*/
-		stroke: #1e90ff80 !important;
+		stroke: #454545 !important;
+		stroke-width: thin !important;
+		stroke-opacity: 1 !important;
 	}
 
 	#switch .fa {
@@ -5512,8 +5438,6 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 		background-clip: padding-box !important;
 		border-radius: 4px !important;
 		outline: none !important;
-
-
 	}
 }
 
@@ -5528,64 +5452,3 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 	}
 }
 
-
-/* Tab bar *
-@-moz-document url-prefix("about:devtools-toolbox") {
-	* {
-		color: pink !important;
-	}
-}
-
-
-@-moz-document url-prefix("chrome://devtools/content/") {
-	* {
-		color: dodgerblue !important;
-	}
-
-	:root {
-		--theme-body-font-size: 14px !important;
-		--theme-code-font-size: 14px !important;
-	}
-}
-
-
-@-moz-document regexp("^(?!(about:|chrome:\/\/)devtools).*") {
-	input[type="checkbox"] {
-		appearance: none !important;
-		background-color: #fff !important;
-	}
-
-	input[type="checkbox"] {
-		position: relative !important;
-		width: 1em !important;
-		height: 1em !important;
-		border: 1px solid gray !important;
-		border-radius: 2px !important;
-		/* Adjusts the position of the checkboxes on the text baseline 
-		vertical-align: -2px !important;
-		/* Set here so that Windows' High-Contrast Mode can override 
-		color: green !important;
-	}
-
-	input[type="checkbox"]::before {
-		content: "✔" !important;
-		position: absolute !important;
-		font-size: 0.9em !important;
-		font-weight: 900 !important;
-		right: 0.1em !important;
-		top: -0.25em !important;
-		color: #0060df !important;
-		visibility: hidden !important;
-	}
-
-	input[type="checkbox"]:checked::before {
-		/* Use `visibility` instead of `display` to avoid recalculating layout 
-		visibility: visible !important;
-	}
-
-	input[type="checkbox"]:disabled {
-		border-color: black !important;
-		background: #ddd !important;
-		color: gray !important;
-	}
-}*/
