@@ -1,5 +1,8 @@
 @import url("aboutdialog.css");
 @import url("throbber.css");
+/*@import url("responsive.css");*/
+/*@import url("downloads1.css");*/
+
 /*@import url("sidebar hover.css");*/
 
 /* -------------------------------------------------------------------------- */
@@ -46,6 +49,23 @@ button::-moz-focus-inner,
 
 #permission-popup-menulist {
 	background-color: #1e90ff !important;
+}
+
+.protections-popup-category:focus-visible,
+.protections-popup-category:hover,
+.protections-popup-footer-button:focus-visible,
+.protections-popup-footer-button:hover,
+#protections-popup-not-blocking-section-why:hover,
+#protections-popup-show-report-stack:hover>.protections-popup-footer-button {
+	background-color: dodgerblue !important;
+	outline: none;
+}
+
+
+#protections-popup-blocking-section-header,
+#protections-popup-not-blocking-section-header,
+#protections-popup-not-found-section-header {
+	color: dodgerblue !important;
 }
 
 #navigator-toolbox {
@@ -222,6 +242,7 @@ menulist[open="true"] {
 	outline: none !important;
 	outline-offset: none !important;
 
+
 }
 
 menuitem[disabled="true"],
@@ -245,6 +266,7 @@ menupopup>menu {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
+
 }
 
 :root {
@@ -387,7 +409,7 @@ menuseparator {
 
 	.close-icon,
 	#alertSettings {
-		background: transparent !important
+		background-color: transparent !important
 	}
 
 	.close-icon:hover>.toolbarbutton-icon,
@@ -408,12 +430,12 @@ toolbarbutton.bookmark-item .toolbarbutton-text {
 }
 
 toolbarbutton.bookmark-item .toolbarbutton-icon {
-	margin-left: 2px !important;
+	margin-left: 1.5px !important;
 }
 
 #bookmarks-toolbar-placeholder>.toolbarbutton-icon,
 #PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon[label]:not([label=""]) {
-	margin-inline-end: 2px !important;
+	margin-inline-end: 1.5px !important;
 }
 
 .toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text {
@@ -1651,7 +1673,7 @@ spacer,
 	width: 0px !important;
 	height: 0px !important;
 	padding: 17px 17px 0 0 !important;
-	background-image: url("messenger3.svg") !important;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5OC45NzUiIGhlaWdodD0iOTkuNTkiIHZpZXdCb3g9IjAgMCA5OC45NzUgOTkuNTkiPjxwYXRoIGZpbGw9IiMwMDg0ZmYiIGQ9Ik0xNDUuNDg3LDkzQzExOC4xNTYsOTMsOTYsMTEzLjY0Miw5NiwxMzkuMTA2YzAsMTQuNTEsNy4yLDI3LjQ1MiwxOC40NDMsMzUuOXYxNy41OGwxNi44NS05LjMwNWE1Mi44NjYsNTIuODY2LDAsMCwwLDE0LjE5NSwxLjkyOGMyNy4zMzEsMCw0OS40ODctMjAuNjQyLDQ5LjQ4Ny00Ni4xMDZTMTcyLjgxOSw5MywxNDUuNDg3LDkzWm00LjkxOCw2Mi4wOS0xMi42LTEzLjUyNS0yNC41OSwxMy41MjVMMTQwLjI2MiwxMjYuMmwxMi45MSwxMy41MjVMMTc3LjQ1NCwxMjYuMloiIGRhdGEtbmFtZT0iZmFjZWJvb2sgbWVzc2VuZ2VyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOTYgLTkzKSIvPjwvc3ZnPg==") !important;
 	background-size: cover !important;
 }
 
@@ -1729,6 +1751,7 @@ tab[beforehovered]::after,
 tab:hover::after {
 	border-color: transparent !important;
 	margin-top: 20px !important;
+	transition: border-color 300ms, margin-top 3000ms !important;
 }
 
 #navigator-toolbox {
@@ -1750,7 +1773,7 @@ tab:hover::after {
 .urlbar-icon,
 .toolbarbutton-icon,
 .menuitem-iconic .menu-iconic-icon {
-	transition: transform 83ms linear !important;
+	transition: transform 90ms linear !important;
 }
 
 toolbar .toolbarbutton-1>.toolbarbutton-icon {
@@ -1763,14 +1786,17 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-badge-stack>.tool
 .menuitem-iconic:active .menu-iconic-icon,
 .urlbar-page-action:active>.urlbar-icon {
 	transform: scale(0.5) !important;
+	transition: transform 90ms linear !important;
 }
 
 toolbarbutton#scrollbutton-down:active>.toolbarbutton-icon {
 	transform: scale(-0.5) !important;
+	transition: transform 90ms linear !important;
 }
 
 toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	padding: calc(var(--toolbarbutton-inner-padding) + 1px) !important;
+	transition: padding 90ms linear !important;
 }
 
 
@@ -1953,6 +1979,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	background-color: transparent !important;
 	border-color: none !important;
 	margin-inline: -2px !important;
+
 }
 
 #nav-bar {
@@ -2100,7 +2127,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 
 /* for actions e.g. "visit", "search with x", "switch to tab" etc. */
 .urlbarView-action {
-	color: #000000 !important;
+	color: yellow !important;
 	background-color: #1e90ff !important;
 }
 
@@ -2930,11 +2957,13 @@ input:not(#urlbar-input) {
 
 .urlbarView-type-icon {
 	display: none !important;
-	/*min-width: 16px !important;
+}
+
+/*min-width: 16px !important;
 		height: 16px !important;
 		margin-bottom: 0px !important;
 		margin-inline-start: 0px !important;*/
-}
+
 
 /*
 .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]) {
@@ -3217,6 +3246,10 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	margin-left: -5px !important;
 }
 
+#forward-button .toolbarbutton-icon {
+	padding: 12px !important;
+	margin-left: -5px !important;
+}
 
 /* adds a right shadow to the sidebar 
 @-moz-document url(chrome://browser/content/browser.xhtml) {
@@ -3655,10 +3688,15 @@ toolbar #fullscreen-button {
 
 	.downloadTypeIcon {
 		display: -moz-box !important;
-
+		opacity: 1 !important;
 	}
 
+	#downloadsPanel[keyfocus] #downloadsListBox:focus>richlistitem[selected] {
+		outline: 0px -moz-dialogtext dotted !important;
+		outline-offset: 0px !important;
+	}
 }
+
 
 @-moz-document url("chrome://global/content/appPicker.xhtml") {
 
@@ -4186,7 +4224,7 @@ checkbox>.checkbox-check {
 
 
 #downloadsPanel-mainView {
-
+	margin-top: 10px !important;
 	--arrowpanel-border-radius: 4px !important;
 }
 
@@ -4253,7 +4291,7 @@ checkbox>.checkbox-check {
 /* auto hide toolbar */
 
 #PersonalToolbar {
-	--uc-bm-height: 27px !important;
+	--uc-bm-height: 30px !important;
 	/* Might need to adjust if the toolbar has other buttons */
 	--uc-bm-padding: 4px !important;
 	/* Vertical padding to be applied to bookmarks */
@@ -4281,7 +4319,7 @@ checkbox>.checkbox-check {
 	margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
 	transform: rotateX(90deg);
 	transform-origin: top;
-	transition: transform 130ms linear var(--uc-autohide-toolbar-delay) !important;
+	transition: transform 130ms ease var(--uc-autohide-toolbar-delay) !important;
 	z-index: 1;
 	/* The following properties should allow the themes with trasparent toolbars to work */
 	/*background-color: transparent !important;*/
@@ -4289,6 +4327,7 @@ checkbox>.checkbox-check {
 	--uc-bg-y: calc(-2 * (var(--tab-block-margin) + var(--toolbarbutton-inner-padding) + var(--toolbarbutton-outer-padding)) - var(--tab-min-height) - 16px - var(--bookmark-block-padding));
 	background-position: top left, top left, var(--lwt-background-alignment, top left);
 	background-position-y: top, top, var(--uc-bg-y), var(--uc-bg-y), var(--uc-bg-y) !important;
+	transition-delay: 130ms !important;
 	background-color: #161a27 !important;
 }
 
@@ -4296,6 +4335,7 @@ checkbox>.checkbox-check {
 #OtherBookmarks,
 #PersonalToolbar>#import-button {
 	padding-block: var(--uc-bm-padding) !important;
+	transition-delay: 130ms !important;
 }
 
 /*
@@ -4305,11 +4345,12 @@ checkbox>.checkbox-check {
 }
 */
 #navigator-toolbox:hover>#PersonalToolbar {
-	transition-delay: 90ms !important;
+	transition-delay: 130ms !important;
 	transform: rotateX(var(--uc-autohide-toolbar-hover-rotation, 0));
 }
 
 #navigator-toolbox:hover>#nav-bar:focus-within+#PersonalToolbar {
+	transition-delay: 130ms !important;
 	transform: rotateX(0);
 }
 
@@ -5048,8 +5089,9 @@ tab>.tab-stack>.tab-background {
 
 .menu-left>.menu-iconic-icon[src^="page-icon:https://github.com/*.*"] image,
 .menuitem-iconic.bookmark-item.menuitem-with-favicon[src^="page-icon:https://github.com/*.*"],
-.toolbarbutton-icon[src^="page-icon:https://github.com/*.*"],
+.toolbarbutton-icon[src^="page-icon:https://github.com.*"],
 .menuitem-iconic.bookmark-item.menuitem-with-favicon[label="GitHub"] image,
+.menuitem-iconic-icon[src^="page-icon:https://github.com/*.*"] image,
 .bookmark-item[label="GitHub"]>.toolbarbutton-icon {
 	width: 0px !important;
 	height: 0px !important;
@@ -5064,7 +5106,7 @@ tab>.tab-stack>.tab-background {
 	filter: drop-shadow(0px 0px 1px white) !important;
 }
 */
-
+/*
 .titlebar-button:hover {
 	opacity: 1 !important;
 	transition: opacity 0.2s ease-in-out !important;
@@ -5074,7 +5116,7 @@ tab>.tab-stack>.tab-background {
 	opacity: 0.4 !important;
 	transition: opacity 0.4s ease-in-out !important;
 }
-
+*/
 @-moz-document url-prefix("chrome://global/content/print.html") {
 	:root {
 		--checkmark: #ffffff !important;
@@ -5188,4 +5230,24 @@ menu[label="Livemarks"]>.menu-iconic-left {
 	display: inline-block;
 }
 
+/*
+#PanelUI-menu-button>stack>.toolbarbutton-icon,
+#PanelUI-menu-button>.toolbarbutton-icon {
+	-moz-binding: url("data:text/xml,<bindings xmlns='http://www.mozilla.org/xbl' xmlns:xul='http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul' xmlns:xbl='http://www.mozilla.org/xbl'><binding id='name'><implementation><field name='button'>document.getElementById('PanelUI-menu-button');</field><constructor><![CDATA[ var Cc = Components.classes, Ci = Components.interfaces, cpd; try { cpd = Cc['@mozilla.org/file/directory_service;1'].getService(Ci.nsIProperties).get('ProfD', Ci.nsIFile); } catch (e) {} if (!cpd) return; var itr = Cc['@mozilla.org/toolkit/profile-service;1'].createInstance(Ci.nsIToolkitProfileService).profiles; while (itr.hasMoreElements()) { var profile = itr.getNext().QueryInterface(Ci.nsIToolkitProfile); if (profile.rootDir.path == cpd.path) { this.button.label = profile.name; break; } } ]]></constructor></implementation></binding></bindings>#name") !important;
+}
 
+#PanelUI-menu-button>.toolbarbutton-text {
+	display: -moz-box !important;
+	-moz-box-ordinal-group: 0 !important;
+}
+*/
+#context-viewinfo,
+#context-sep-sendlinktodevice,
+#context-savelinktopocket {
+	display: none !important;
+}
+
+.downloadTypeIcon {
+	display: -moz-box !important;
+	opacity: 1 !important;
+}
