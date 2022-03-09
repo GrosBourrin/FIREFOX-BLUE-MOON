@@ -1,0 +1,106 @@
+:root {
+  --wmaker-window-decoration-height: 28px;
+  --wmaker-window-decoration-fg: #25282f;
+  --wmaker-window-decoration-font-family: "Inter";
+  --wmaker-window-decoration-font-size: 14px;
+  --wmaker-tabsbar-bg: #e3e3e3;
+  --wmaker-unselected-col1: white;
+  --wmaker-unselected-col2: #717171;
+  --wmaker-unselected-tile-border: var(--wmaker-unselected-col1) var(--wmaker-unselected-col2) var(--wmaker-unselected-col2) var(--wmaker-unselected-col1);
+  --wmaker-selected-col1: #c9b8a7;
+  --wmaker-selected-col2: #ffead4;
+  --wmaker-selected-col3: #645b53;
+  --wmaker-selected-tile-border: var(--wmaker-selected-col2) var(--wmaker-selected-col3) var(--wmaker-selected-col3) var(--wmaker-selected-col2);
+  --tab-icon-size: 12px;
+}
+
+#tabbrowser-tabs, #tabbrowser-arrowscrollbox, #tabbrowser-tabs[positionpinnedtabs] > #tabbrowser-arrowscrollbox > .tabbrowser-tab[pinned] {
+	min-height: var(--wmaker-window-decoration-height) !important;
+	height: var(--wmaker-window-decoration-height) !important;
+  border-bottom: 1px solid var(--wmaker-tabsbar-bg) !important;
+}
+
+#titlebar {
+  background-color: var(--wmaker-tabsbar-bg) !important;
+  margin-bottom: -1px;
+  position: relative;
+}
+
+#tabbrowser-tabs {
+  border-bottom: 1px solid var(--wmaker-tabsbar-bg) !important;
+}
+
+.tabbrowser-tab {
+  border-style: solid !important;
+  border-width: 0px 1px 1px 0px !important;
+  border-color: transparent black black transparent !important;
+  padding-inline: 0px !important;
+}
+
+.tabbrowser-tab > .tab-stack,
+#tabs-newtab-button .toolbarbutton-icon {
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: var(--wmaker-unselected-tile-border) !important;
+}
+
+.tab-background {
+  margin-block: 0 !important;
+  border-radius: 0 !important;
+}
+  
+#tabbrowser-tabs:not([noshadowfortests]) .tab-background:is([selected], [multiselected]) {
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab {
+  background-color: var(--wmaker-tabsbar-bg) !important;
+  min-height: 1px !important;
+  color: var(--wmaker-window-decoration-fg) !important;
+}
+
+.tab-background:is([selected], [multiselected]) {
+	background-color: var(--wmaker-selected-col1) !important;
+}
+
+.tabbrowser-tab:is([selected], [multiselected]) > .tab-stack {
+  border-color: var(--wmaker-selected-tile-border) !important;
+}
+
+#nav-bar:not([tabs-hidden="true"]) {
+	box-shadow: unset !important;;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0px !important;
+}
+
+.tab-text.tab-label {
+  font-family: var(--wmaker-window-decoration-font-family);
+  font-size: var(--wmaker-window-decoration-font-size);
+}
+
+.tab-icon-image {
+  width: var(--tab-icon-size) !important;
+  height: var(--tab-icon-size) !important;
+}
+
+.tab-secondary-label {
+  display: none;
+}
+
+#tabs-newtab-button {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 1px 1px 0;
+}
+
+#tabs-newtab-button .toolbarbutton-icon {
+  padding: 5px !important;
+  width: var(--wmaker-window-decoration-height) !important;
+  height: var(--wmaker-window-decoration-height) !important;
+  border-radius: 0 !important;
+}
