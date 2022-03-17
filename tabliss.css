@@ -83,7 +83,7 @@ color: #ffffff60;
     background:rgba(30,144,255,20%);
     box-shadow:0px 0px 40px rgba(25, 25, 31, 0.774);
     animation:opacidadanimama 2s infinite ease-in;
-}*/
+}
 @keyframes opacidadanimama{
     0%{
         border-bottom:1px solid rgb(255, 255, 255);
@@ -116,6 +116,7 @@ color: #ffffff60;
         border-top:1px solid rgba(0, 0, 0, 0);
     }
 }
+*/
 .Widgets h1, .Widgets h2, .Widgets h3, .Widgets h4{
     text-shadow:1px 3px 10px rgba(39,39,48,53%);
     -moz-user-select: none;
