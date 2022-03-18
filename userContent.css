@@ -4,7 +4,7 @@
 	--in-content-border-active-shadow: #1e90ff40 !important;
 	font-family: "Fira Sans" !important;
 	outline: none !important;
-	--button-corner-rounding: 2px !important;
+	--button-corner-rounding: 4px !important;
 	--toolbarbutton-hover-background: #1e90ff80 !important;
 	--focus-outline: 0px !important;
 }
@@ -778,13 +778,13 @@ url(about:profiles) {
 		}
 	}
 
-	.addon-updates-manual-updates-found {
+	addon-updates-manual-updates-found {
 		background: #1e90ff !important;
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}
 
-	.addon-updates-manual-updates-found:hover {
+	addon-updates-manual-updates-found:hover {
 		background: #1e90ff80 !important;
 		background-color: #1e90ff80 !important;
 		color: #ffffff !important;
@@ -2790,7 +2790,7 @@ url('about:newtab') {
 		flex-direction: column !important;
 		background-position: right 0% bottom 15% !important;
 		background-repeat: no-repeat;
-		background-size: 22% !important;
+		background-size: 35% !important;
 		background-image: url("renardeau.gif") !important;
 		/*background-image: url("fox-gif-transparent-2.gif") !important;*/
 		position: 30px 0px !important;
@@ -3775,6 +3775,14 @@ textbox {
 		background: #161a27 !important;
 	}
 
+	#prefs>tr>td,
+	#prefs>tr>th,
+	#prefs>tr,
+	#prefs>th,
+	#prefs>td {
+		background-color: #161a27 !important;
+	}
+
 	#prefs>tr>td:hover,
 	#prefs>tr>th:hover,
 	#prefs>tr:hover,
@@ -4370,418 +4378,6 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 }
 
 
-@-moz-document domain("developer.mozilla.org") {
-
-	html {
-		background: #17171a !important;
-	}
-
-	html>body,
-	table,
-	tbody,
-	tr,
-	td:not([style*="background"]),
-	h1,
-	h2,
-	h3,
-	ul,
-	ol,
-	li,
-	dl,
-	dt,
-	dd,
-	p,
-	blockquote,
-	q,
-	cite,
-	fieldset,
-	form,
-	label,
-	iframe,
-	header,
-	main,
-	footer,
-	nav,
-	article,
-	section,
-	caption,
-	center,
-	abbr,
-	sub,
-	sup,
-	font,
-	code,
-	/* images */
-	.lwrap {
-		background: none !important;
-	}
-
-	ul.technologies,
-	.references-guides,
-	.feedback {
-		background-color: #111 !important;
-	}
-
-	div,
-	tt,
-	a,
-	span,
-	img {
-		background-color: transparent !important;
-	}
-
-	#content,
-	#tabzilla-panel,
-	#toc,
-	table.diff {
-		background: #0f0f11 !important;
-		border-radius: 12px !important;
-	}
-
-	option,
-	kbd,
-	pre,
-	th,
-	#main-header,
-	.submenu,
-	.from-search-toc {
-		background: #181818 !important;
-	}
-
-	.diff_add,
-	.diff_sub,
-	.diff_chg {
-		background: #111 !important;
-	}
-
-	mark,
-	.warning {
-		background: #933 !important;
-		border-color: transparent !important;
-	}
-
-	/* example; .experimental: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
-	.notice.experimental,
-	.experimental,
-	.draft,
-	.overheadIndicator.draft {
-		background: #332 !important;
-		border-color: #664 !important;
-	}
-
-	/* header search */
-	.search-wrap,
-	.reviews,
-	.warning-review,
-	.note,
-	/* Eyedropper */
-	.geckoVersionNote,
-	/* nsILocalFile */
-	.geckoVersionHeading {
-		background: #333 !important;
-		border-color: #555 !important;
-	}
-
-	/* example; obsolete content: https://developer.mozilla.org/en-US/docs/E4X */
-	.line-highlight {
-		background: rgba(140, 140, 140, .2) !important;
-	}
-
-	/* example: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULRuntime OR ./nsILocalFile */
-	div[style*="background: #dd0000;"] {
-		background: #700 !important;
-	}
-
-	/* red: nonexistent */
-	div[style*="background: #00dd00;"] {
-		background: #070 !important;
-	}
-
-	/* green: supported */
-	div[style*="background: #ff8000;"] {
-		background: #f80 !important;
-	}
-
-	/* orange: deprecated */
-	div[style*="background: #eeee00;"] {
-		background: #ff0 !important;
-	}
-
-	/* yellow: last changed */
-
-	* {
-		color: inherit !important;
-		border-color: #555 !important;
-		text-shadow: none !important;
-		box-shadow: none !important;
-		font-family: Fira Sans !important;
-	}
-
-	html {
-		color: #ccc !important;
-	}
-
-	hr {
-		height: 0 !important;
-		border: 0 solid #555 !important;
-		border-width: 1px 0 0 !important;
-	}
-
-	a {
-		color: #4be !important;
-	}
-
-	a:hover {
-		color: #7df !important;
-	}
-
-	a:visited {
-		color: #98f !important;
-	}
-
-	a:visited:hover {
-		color: #baf !important;
-	}
-
-	a.new,
-	.newpage {
-		color: #f55 !important;
-	}
-
-	a.new:hover {
-		color: #f77 !important;
-	}
-
-	/* don't use .error, because of body.error 
-	dl,
-	ul,
-	ol {
-		-moz-column-rule-color: #555 !important;
-	}
-*/
-	::-moz-selection {
-		background: #184880 !important;
-	}
-
-	::selection {
-		background: #184880 !important;
-	}
-
-
-	input[type="submit"]:hover,
-	input[type="button"]:hover,
-	input[type="file"]:hover,
-	input[type="reset"]:hover,
-	button:hover {
-		border-color: #158 !important;
-		background-color: #158 !important;
-		color: #fff !important;
-	}
-
-	button,
-	input,
-	select,
-	textarea {
-		appearance: none !important;
-	}
-
-	input[type="radio"],
-	input[type="checkbox"] {
-		color: #4be !important;
-		background: #222 !important;
-		border-color: #999 !important;
-	}
-
-	input,
-	select,
-	textarea {
-		background: #181818 !important;
-		color: #ccc !important;
-	}
-
-	input[type] {
-		border-width: 1px !important;
-		border-style: solid !important;
-	}
-
-	textarea:hover,
-	input:hover,
-	select:hover,
-	textarea:focus,
-	input:focus,
-	select:focus {
-		border-color: #09f !important;
-	}
-
-	select>button,
-	.search-wrap>input[type="search"] {
-		background-color: transparent !important;
-		border: none !important;
-	}
-
-	option:hover,
-	option:focus,
-	option:active,
-	option:checked {
-		background: #158 !important;
-	}
-
-	#wiki-left,
-	#toc {
-		opacity: .6 !important;
-	}
-
-	#wiki-content img:not(:hover) {
-		opacity: .7 !important;
-	}
-
-	.cssprop {
-		background:
-		/*#320*/
-		#431 !important;
-		border-left-color: #960 !important;
-	}
-
-	:not(pre)>code[class*="language-"],
-	pre[class*="language-"] {
-		border-left-color: #158 !important;
-	}
-
-	/* comments */
-	.token.comment,
-	.token.prolog,
-	.token.doctype,
-	.token.cdata {
-		color: #777 !important;
-	}
-
-	/* blue */
-	.token.atrule,
-	.token.attr-value,
-	.token.keyword {
-		color: #5bf !important;
-	}
-
-	/* green */
-	.token.selector,
-	.token.attr-name,
-	.token.string {
-		color: #5f5 !important;
-	}
-
-	/* gray */
-	.token.punctuation,
-	.token.operator {
-		color: #fa0 !important;
-	}
-
-	/* red/magenta */
-	.token.property,
-	.token.tag,
-	.token.boolean,
-	.token.number,
-	.token.function {
-		color: #f5f !important;
-	}
-
-	span[title="Recommendation"] {
-		color: #ccc !important;
-		background: #262 !important;
-	}
-
-	span[title="Working Draft"] {
-		color: #ccc !important;
-		background: #851 !important;
-	}
-
-	span[title^="Editor's Draft"],
-	span[title="Editor's Draft (unofficial)"] {
-		color: #ccc !important;
-		background: #933 !important;
-	}
-
-	.inlineIndicator,
-	.indicatorInHeadline,
-	.blockIndicator,
-	.overheadIndicator {
-		background: none !important;
-	}
-
-	.readOnly {
-		background: #333 !important;
-		color: #ccc !important;
-	}
-
-	.unimplemented,
-	.obsolete {
-		background: #522 !important;
-		color: #ccc !important;
-	}
-
-	/* requires min version */
-	.minVer,
-	.jsMinVer,
-	.mbMinVer,
-	/* -moz-; -webkit- */
-	.prefixBox,
-	/* requires Gecko x.y */
-	.standardNote,
-	.optional,
-	.renamed {
-		background: #345 !important;
-		color: #ccc !important;
-	}
-
-	/* history */
-	.revision-list-controls:before {
-		filter: invert(1) !important;
-	}
-
-	.diff_add {
-		color: #7f7 !important;
-	}
-
-	.diff_sub {
-		color: #f77 !important;
-	}
-
-	.diff_chg {
-		color: #ff7 !important;
-	}
-
-
-	a {
-		color: #5ca0be !important;
-	}
-
-	.metadata {
-		background: #222 !important;
-	}
-
-	.search-button {
-		display: none !important;
-	}
-
-	.logo,
-	.interactive {
-		filter: invert(.9) !important;
-	}
-
-	.main-page-content {
-		padding: 3rem;
-	}
-
-	button::before {
-		filter: invert(1) !important;
-	}
-
-	#main-q {
-		border-radius: 1px !important;
-		transform: translateX(40px);
-	}
-
-}
-
 /* see this to tweak : https://github.com/gorhill/uBlock/blob/master/src/css/cloud-ui.css*/
 /*---------------------------------UBLOCK ORIGIN ---------------------*/
 
@@ -5311,7 +4907,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 @-moz-document url-prefix("about:downloads") {
 	:root {
-		--downloads-item-height: 36px !important;
+		--downloads-item-height: 50px !important;
 	}
 
 	.downloadTypeIcon {
@@ -5359,15 +4955,15 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	}
 
-	/*
+
 	:root {
 		--downloads-item-height: 50px !important;
 	}
-*/
 
 	.downloadTypeIcon image {
 		background-size: cover !important;
 		/*display: -moz-box !important;*/
+		margin-left: 10px !important;
 	}
 
 	.downloadButton {
@@ -5382,10 +4978,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background: transparent !important;
 		background-color: #1e90ff !important;
 		border: none !important;
-
 	}
-
-
 
 	#clearDownloadsButton label {
 		margin-left: 6px !important;
@@ -5427,7 +5020,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	#downloadsRichListBox>richlistitem:hover {
 		background-color: #1e90ff80 !important;
 		background-image: none !important;
-		background-clip: padding-box !important;
+		background-clip: none !important;
 		border-radius: 4px !important;
 		outline: none !important;
 	}
@@ -5435,7 +5028,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	#downloadsRichListBox>richlistitem[selected] {
 		background-color: #1e90ff80 !important;
 		background-image: none !important;
-		background-clip: padding-box !important;
+		background-clip: none !important;
 		border-radius: 4px !important;
 		outline: none !important;
 	}
@@ -5451,4 +5044,3 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		font-family: Fira Sans !important;
 	}
 }
-
