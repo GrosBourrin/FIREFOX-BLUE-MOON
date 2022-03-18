@@ -3,7 +3,6 @@
 @import url("download.css");
 @import url("ctrltab1.css");
 
-/*@import url("sidebar hover.css");*/
 :root {
 	--default-search-identity-icon: url(chrome://userchrome/content/engines/my-engine-icon.svg) !important;
 }
