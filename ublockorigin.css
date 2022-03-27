@@ -1,0 +1,352 @@
+/*---------------------------------UBLOCK ORIGIN ---------------------*/
+
+@-moz-document url-prefix("moz-extension://e4fdb54f-d559-4a7b-b967-bf80726855b8/") {
+
+	body,
+	#sticky,
+	#main {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	* {
+		font-family: Fira Sans !important;
+	}
+	::selection {
+		background: #1f90ff !important;
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	
+	hr {
+		display: none !important;
+	}
+
+	a {
+		color: #888 !important;
+	}
+
+	.fa-icon {
+		/* fill: #ffffff80 !important;
+		color: #ffffff80 !important;*/
+		fill: #1e90ff !important;
+		background: #161a27 !important;
+		border: none !important;
+
+	}
+
+	span.fa-icon {
+		fill: #ffffff !important;
+		background: transparent !important;
+		border: 0px !important;
+	}
+
+	.toolRibbon {
+		background-color: #161a27 !important;
+	}
+
+	h2 {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	code {
+		background-color: #161a27 !important;
+	}
+
+	#switch .fa-icon {
+		background: transparent !important;
+		fill: #1e90ff !important;
+		stroke: none !important;
+	}
+
+	#switch .fa-icon:hover {
+		background: #161a27 !important;
+		background-color: #161a27 !important;
+		fill: #1e90ff !important;
+		/*filter: drop-shadow(0px 0px 4px white) !important;*/
+		stroke: #454545 !important;
+		stroke-width: thin !important;
+		stroke-opacity: 1 !important;
+	}
+
+	#switch .fa {
+		background: transparent !important;
+		fill: #1e90ff !important;
+	}
+
+	html#ublock0-epicker,
+	#ublock0-epicker body {
+		background: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	#ublock0-epicker aside {
+		background-color: #000000 !important;
+	}
+
+
+	body.off #switch .fa {
+		color: #161a27 !important;
+	}
+
+	.tool {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	.tool.enabled:hover {
+		background: none !important;
+		background-color: #161a27 !important;
+		fill: #1e90ff !important;
+		color: #1e90ff !important;
+	}
+
+	.permatoolbar {
+		background-color: #161a27 !important;
+	}
+
+	.permatoolbar .button {
+		background-color: #161a27 !important;
+	}
+
+	.permatoolbar .button:hover {
+		fill: #1e90ff !important;
+		color: #1e90ff !important;
+		background-color: #161a27 !important;
+	}
+
+	#tooltip {
+		background-color: #000000 !important;
+		border: 1px solid #000000 !important;
+		color: #ffffff !important;
+	}
+
+	#firewall {
+		background: #161a27 !important;
+	}
+
+	#firewall>div {
+		background-color: #333 !important;
+	}
+
+	#firewall>div:hover {
+		background-color: #444 !important;
+	}
+
+	#firewall>div>span {
+		background-color: #161a27 !important;
+		color: #ffffff !important;
+
+	}
+
+	#firewall>div>span:first-of-type~span {
+		border-left: 1px solid #111 !important;
+	}
+
+	#extraTools {
+		background-color: #161a27 !important;
+	}
+
+	#extraTools>span:hover {
+		fill: #1e90ff !important;
+	}
+
+	#dashboard-nav {
+		background-color: #161a27 !important;
+		border-bottom: 1px solid #777 !important;
+	}
+
+	#dashboard-nav-widgets {
+		background-color: #161a27 !important;
+		border-bottom: 1px solid #777 !important;
+	}
+
+	.tabButton {
+		background-color: #161a27 !important;
+		border: 0px solid #1b192480 !important;
+		border-bottom: 0px solid #777 !important;
+		color: #ffffff !important;
+	}
+
+	.tabButton.selected {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		border-bottom: 0px solid #222 !important;
+	}
+
+	#diff li {
+		background-color: #555 !important;
+	}
+
+	#diff li:nth-child(even) {
+		background-color: #444 !important;
+	}
+
+	#diff textarea {
+		background-color: #333 !important;
+		color: #ffffff !important;
+	}
+
+	hr {
+		display: none !important;
+	}
+
+	.fieldset-header {
+		color: #ffffff !important;
+	}
+
+	#loggerSettingsDialog,
+	#modalOverlayContainer,
+	#netFilteringDialog,
+	#netFilteringDialog>.panes>.details>div,
+	#netFilteringDialog>div.panes>.dynamic .row {
+		background-color: #161a27 !important;
+		border-color: grey !important;
+	}
+
+	#domTree {
+		color: #ffffff !important;
+	}
+
+	#ruleFilter input,
+	input[type=number] {
+		appearance: none !important;
+		background-color: #161a27 !important;
+		border: 1px solid !important;
+		border-color: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	#cloudWidget {
+		background: #161a27 !important;
+		color: #ffffff !important;
+		color: #ffffff !important;
+	}
+
+	#cloudWidget>span {
+		background: #161a27 !important;
+		color: #ffffff !important;
+
+	}
+
+	#cloudinfo {
+		background: #161a27 !important;
+		color: #ffffff !important;
+	}
+
+	#fa-icon>svg,
+	#fa-icon>.fa-icon_cog,
+	.fa-icon>.fa-icon_clock-o,
+	.fa-icon>.fa-icon_floppy-o,
+	.fa-icon>.fa-icon_info-circle,
+	.fa-icon>.fa-icon_pause-circle-o,
+	.fa-icon>.fa-icon_play-circle-o,
+	.fa-icon>.fa-icon_power-off,
+	.fa-icon>.fa-icon_question-circle,
+	.fa-icon>.fa-icon_refresh,
+	.fa-icon>.fa-icon_save,
+	.fa-icon>.fa-icon_sliders,
+	.fa-icon>.fa-icon_undo {
+		background: transparent !important;
+	}
+
+	:root {
+		--checkmark: #ffffff !important;
+		--checkbox-checked-ink: #1e90ff !important;
+	}
+
+	button:hover {
+		background-color: #161a27 !important;
+		fill: #1e90ff80 !important;
+	}
+
+	button#cloudPush,
+	button#cloudPull,
+	button#cloudPullAndMerge {
+		background-color: #161a27 !important;
+	}
+
+	button#cloudPush:hover,
+	button#cloudPull:hover,
+	button#cloudPullAndMerge:hover {
+		background-color: #1e90ff !important;
+	}
+
+	span.counts {
+		color: #1e90ff !important;
+	}
+
+	#actions {
+		background: #161a27 !important;
+	}
+
+	#ublock0_raymondhill_net-browser-action label {
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		opacity: 1 !important;
+	}
+
+	.CodeMirror-activeline-background {
+		background-color: #1e90ff !important;
+
+	}
+
+	/*****THIS IS A PLACEHOLDER COLOR CHOOSE SOMETHING NICER****/
+	#advancedSettings {
+		color: #f9f9fa !important;
+	}
+
+	.CodeMirror * {
+		font-family: Operator Mono Light !important;
+		font-size: 14px !important;
+		background: #161a27 !important;
+		/*color: #f9f9fb !important;*/
+	}
+
+	.CodeMirror-gutters {
+		background-color: #161a27 !important;
+		border-right: 1px solid #32313c !important;
+	}
+
+	.CodeMirror-merge-gap {
+		background: #161a27 !important;
+		border-left: 1px solid #32313c !important;
+		border-right: 1px solid #32313c !important;
+	}
+
+
+	#exportUserFiltersToFile {
+		background: #1e90ff !important;
+	}
+
+	#exportUserFiltersToFile:hover {
+		background: #1e90ff80 !important;
+	}
+
+
+	:root {
+		--checkmark: #ffffff !important;
+		--checkbox-checked-ink: #1e90ff !important;
+		--checkbox-ink: #ffffff !important;
+	}
+
+	.checkbox>input[type="checkbox"]+svg {
+		background-color: transparent !important;
+		border: 1px solid white !important;
+
+	}
+
+	.checkbox>input[type="checkbox"]:checked+svg {
+		background-color: #1e90ff !important;
+		border-color: white !important;
+
+		stroke: white !important;
+	}
+
+	.checkbox[disabled],
+	.checkbox[disabled]~span {
+		filter: var(--checkbox-disabled-filter);
+	}
+}
