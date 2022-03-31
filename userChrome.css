@@ -1,6 +1,5 @@
 @import url("aboutdialog.css");
 @import url("throbber.css");
-/*@import url("responsive.css");*/
 @import url("download.css");
 @import url("ctrltab1.css");
 
@@ -34,9 +33,7 @@ printpreview-pagination {
 :root {
 	/* ---------- 😉--------- 🎨 Customization 🎨 -------------------- */
 	--tab-corner-rounding: 3px !important;
-	--button-corner-rounding: 3px !important;
-	/*--menu-corner-rounding: 11px;*/
-	/*--toolbarbutton-hover-background: #1e90ff80 !important;*/
+	--button-corner-rounding: 3px !important;	
 	--focus-outline: 0px !important;
 	--arrowpanel-background-color: transparent !important;
 	--arrowpanel-border-color: transparent !important;
@@ -90,14 +87,17 @@ scrollbox[part="scrollbox"][flex="1"][orient="horizontal"][smoothscroll="false"]
 	padding-left: 0px !important;
 }
 
-/* -------------------------------------------------------------------------- */
-/* align tabs centrally 
+/* -------------------------uncomment at will------------------------------------------------- */
+/* align tabs centrally */
+/*
 scrollbox[orient="horizontal"] {
 	-moz-box-pack: center !important;
 }
 */
+
 /* -------------------------------------------------------------------------- */
 /* -------------------------------- tooltips -------------------------------- */
+/* -------------------------------------------------------------------------- */
 #tabbrowser-tab-tooltip,
 #places-tooltip-insecure-icon,
 #btTooltip,
@@ -169,7 +169,7 @@ tooltip * {
 	text-align: center !important;
 }
 
-/* -------------------------------------------------------------------------- */
+/* --------------------------same font everywhere---------------------------- */
 * {
 	font-family: Fira Sans !important;
 }
@@ -223,9 +223,7 @@ menuitem {
 	padding-right: 4px !important;
 	outline: none !important;
 	border: none !important;
-	box-shadow: none !important;
-
-	/*box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.5) !important;*/
+	box-shadow: none !important;	
 }
 
 menu:hover,
@@ -356,7 +354,7 @@ menuseparator {
 	background-color: #454545 !important;
 }
 
-/*Alertbox customization code*/
+/*-----------Alertbox customization code------------------------*/
 @-moz-document url("chrome://global/content/alerts/alert.xhtml") {
 	#alertSourceLabel {
 		color: #ffffff !important;
