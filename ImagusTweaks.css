@@ -1,4 +1,5 @@
-/* imagus - go to about:debugging & search for imagus for ID */
+
+/* imagus */
 @-moz-document url("moz-extension://fa0c04ad-ce95-4ccf-a163-badf1fc7f6f9/options.html") {
 	html {
 		background-color: #161a27 !important;
@@ -13,9 +14,9 @@
 	}
 
 	textarea {
-		background: #0E0F12 !important;
-		background-color: #0E0F12 !important;
-		color: #C7C7C7 !important;
+		background: #000000 !important;
+		background-color: #000000 !important;
+		color: #ffffff !important;
 	}
 
 	#sieve_container>.disabled>span {
@@ -24,19 +25,19 @@
 	}
 
 	#sieve_container>.selected>span {
-		background-image: linear-gradient(to bottom, #1e90ff, #2A2A2A 90%) !important;
+		background-image: linear-gradient(to bottom, #1e90ff, #1e90ff80 90%) !important;
 	}
 
 	#sieve_container>div:not(.opened)>span:hover {
-		background-image: linear-gradient(to bottom, #2A2A2A, #1e90ff 90%) !important;
+		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
 	}
 
 	#sieve_container>div.opened {
-		background-image: linear-gradient(to bottom, #2A2A2A, #1e90ff 90%) !important;
+		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
 	}
 
 	#sieve_container>.opened>span {
-		background-image: linear-gradient(to bottom, #2A2A2A, #1e90ff 90%) !important;
+		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
 	}
 
 	*|*:any-link:not(svg) {
@@ -50,4 +51,19 @@
 	* {
 		font-family: Fira Sans !important;
 	}
-}
+
+	input,
+	textarea,
+	select,
+	code,
+	.checkbox {
+		background-image: -webkit-linear-gradient(top, #000000, #000000) !important;
+		background-image: linear-gradient(to bottom, #000000, #000000) !important;
+		background-color: black !important;
+		color: white !important;
+		fill: white !important;
+	}
+
+	#hz_css {
+		font-family: Fira Code !important;
+	}
