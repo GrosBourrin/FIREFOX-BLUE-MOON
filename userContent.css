@@ -40,29 +40,6 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 }
 
 
-/*
-menulist {
-	appearance: none !important;
-	color: #ffffff !important;
-	border: 0px solid var(--in-content-button-border-color);
-	border-radius: 4px !important;
-	background-color: #161a27 !important;
-	
-	padding: 7px 15px !important;
-	text-decoration: none !important;
-	margin: 4px 8px !important;
-	font-size: 14px !important;
-}
-
-.menupopup-arrowscrollbox {
-	border-radius: 8px !important;
-	margin-top: 5px !important;
-	padding-left: 4px !important;
-	padding-right: 4px !important;
-	box-shadow: none !important;
-	outline: none !important;
-}
-*/
 @-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
 	* {
 		background-color: #161a27 !important;
@@ -113,14 +90,11 @@ menulist {
 	}
 }
 
-/*input[type="checkbox"]:checked {
-	background: #444 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 16 16" ><path fill="rgb(200,200,200)" d="M 13.09,2.87 C 13.09,2.87 6.00,11.00 6.00,11.00 6.00,11.00 2.00,9.00 2.00,9.00 4.25,12.81 7.00,14.00 7.00,14.00 9.24,10.42 12.04,7.39 13.09,2.87 Z" /></svg>') no-repeat center center !important
+/*
+input[type="checkbox"]:checked {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjQzhDOEM4IiBkPSJNMTMuMDkgMi44N0w2IDExIDIgOWMyLjI1IDMuODEgNSA1IDUgNSAyLjI0LTMuNTggNS4wNC02LjYxIDYuMDktMTEuMTN6Ii8+PC9zdmc+") no-repeat center center !important
 }
 */
-#downloadsRichListBox {
-	background: #444 !important;
-	color: #ccc !important;
-}
 
 /* about:support*/
 @-moz-document url(about:support),
@@ -292,15 +266,15 @@ url(about:profiles) {
 	}
 
 	.content-blocking-category.selected {
-		border: 1px solid#1e90ff !important;
+		border: 1px solid #1e90ff !important;
 		border-radius: 4px !important;
-		background-color: #1e90ff80 !important;
+		background-color: #1e90ff !important;
 	}
 
 	.content-blocking-category {
-		border: 1px solid#1e90ff !important;
+		border: 1px solid #1e90ff !important;
 		border-radius: 4px !important;
-		background-color: #1e90ff20 !important;
+		background-color: #1e90ff10 !important;
 	}
 
 	#updateSettingsContainer {
@@ -730,7 +704,8 @@ url(about:profiles) {
 		recommended-addon-list {
 			padding: 1em !important;
 			display: grid !important;
-			grid-template-areas: "hd hd""cd cd" !important;
+			grid-template-areas: "hd hd"
+				"cd cd" !important;
 			grid-template-columns: 1fr 1fr !important;
 			column-gap: 1em !important;
 
@@ -757,6 +732,7 @@ url(about:profiles) {
 
 		addon-card .addon-description {
 			max-height: 3em !important;
+			scrollbar-color: #1e90ff #000000 !important;
 			scrollbar-width: thin !important;
 			color: #ffffff !important;
 			text-align: inherit !important;
@@ -778,18 +754,23 @@ url(about:profiles) {
 		}
 	}
 
-	addon-updates-manual-updates-found {
+	.addon-updates-manual-updates-found {
 		background: #1e90ff !important;
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}
 
-	addon-updates-manual-updates-found:hover {
+	.addon-updates-manual-updates-found:hover {
 		background: #1e90ff80 !important;
 		background-color: #1e90ff80 !important;
 		color: #ffffff !important;
 	}
 
+	/*#updates-message {
+	display: flex;
+	align-items: center;
+	margin-inline-end: 8px;
+}*/
 	.addon-badge-recommended,
 	.addon-badge-private-browsing-allowed {
 		transform: scale(0.85) !important;
@@ -945,6 +926,43 @@ url(about:profiles) {
 	input[type="checkbox"].toggle-button {
 		background: #1e90ff !important;
 
+	}
+
+	input[type="radio"]:checked,
+	*.radio-check[selected] {
+		-moz-context-properties: fill;
+		fill: #ffffff;
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		/*background-image: url("chrome://global/skin/icons/radio.svg");*/
+		border-color: white !important;
+		color-adjust: exact;
+	}
+
+	input[type="radio"],
+	*.radio-check {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #161a27 !important;
+	}
+
+	input[type="radio"]:hover,
+	*.radio-check:hover {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1e90ff50 !important;
+	}
+
+	radio:not([disabled="true"]):hover>.radio-check {
+		border-color: #1e90ff !important;
+	}
+
+	radio:hover>.radio-check {
+		fill: #1e90ff80 !important;
+	}
+
+	radio:hover {
+		fill: #1e90ff80 !important;
 	}
 
 	@media (prefers-contrast) {
@@ -1144,7 +1162,7 @@ url(about:profiles) {
 	}
 
 	input[type="text"]:focus {
-		border: 1px solid#1e90ff !important;
+		border: 1px solid #1e90ff !important;
 	}
 
 	input[type="text"][disabled] {
@@ -2777,10 +2795,7 @@ url('about:newtab') {
 
 
 @-moz-document url-prefix("about:restartrequired") {
-
 	body {
-		/*background-image: url("Animation.gif") !important;
-		background-size: cover !important;*/
 		background: #161a27 !important;
 	}
 
@@ -2792,15 +2807,7 @@ url('about:newtab') {
 		background-repeat: no-repeat;
 		background-size: 35% !important;
 		background-image: url("renardeau.gif") !important;
-		/*background-image: url("fox-gif-transparent-2.gif") !important;*/
 		position: 30px 0px !important;
-		/*
-		position: fixed;
-		margin-inline: -300px !important;
-		margin-top: -50px !important;
-
-		display: inline !important;*/
-
 	}
 
 	#restart {
@@ -2842,7 +2849,7 @@ html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#t
 url-prefix(chrome: //browser) {
 
 	browser[type="content"], tabpanels {
-		background: #161a27 !important;
+		/*background: #161a27 !important;*/
 		background-color: #161a27 !important;
 		color: #ffffff !important;
 	}
@@ -3558,7 +3565,8 @@ textbox {
 	}
 
 	html, body {
-		background: #161a27 !important;
+		background-color: #161a27 !important;
+		color: white !important;
 	}
 
 	#prefs {
@@ -4673,8 +4681,8 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #f9f9fa !important;
 	}
 
-	.CodeMirror * {
-		font-family: Operator Mono Light !important;
+	.CodeMirror {
+		font-family: Fira Sans !important;
 		font-size: 14px !important;
 		background: #161a27 !important;
 		/*color: #f9f9fb !important;*/
@@ -4691,7 +4699,22 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		border-right: 1px solid #32313c !important;
 	}
 
+	/*
 
+	.CodeMirror pre.CodeMirror-line::selection,
+	.CodeMirror pre.CodeMirror-line-like::selection,
+	.CodeMirror-line::selection,
+	.CodeMirror-line>span::selection,
+	.CodeMirror-line>span>span::selection {
+		background: #1e90ff !important;
+	}
+
+	.CodeMirror[selected] {
+		background-color: #1e90ff !important;
+		color: #000000 !important;
+	}
+
+*/
 	#exportUserFiltersToFile {
 		background: #1e90ff !important;
 	}
@@ -4700,6 +4723,29 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background: #1e90ff80 !important;
 	}
 
+	::selection * {
+		background: #1f90ff !important;
+		background-color: #1e90ff !important;
+		/*color: #ffffff !important;*/
+	}
+
+	p::-moz-selection * {
+		background: #1f90ff !important;
+		background-color: #1e90ff !important;
+		/*color: #ffffff !important;*/
+	}
+
+	p::selection * {
+		background: #1f90ff !important;
+		background-color: #1e90ff !important;
+		/*color: #ffffff !important;*/
+	}
+
+	::-moz-selection * {
+		background: #1f90ff !important;
+		background-color: #1e90ff !important;
+		/*color: #ffffff !important;*/
+	}
 
 	:root {
 		--checkmark: #ffffff !important;
@@ -4726,7 +4772,29 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 }
 
+::selection * {
+	background: #1f90ff !important;
+	background-color: #1e90ff !important;
+	color: #ffffff !important;
+}
 
+p::-moz-selection * {
+	background: #1f90ff !important;
+	background-color: #1e90ff !important;
+	color: #ffffff !important;
+}
+
+p::selection * {
+	background: #1f90ff !important;
+	background-color: #1e90ff !important;
+	color: #ffffff !important;
+}
+
+::-moz-selection * {
+	background: #1f90ff !important;
+	background-color: #1e90ff !important;
+	color: #ffffff !important;
+}
 
 @-moz-document domain(news.google.com) {
 
@@ -4779,6 +4847,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	}
 
+	.gb_Md,
 	.gb_Fd,
 	.gb_Jd,
 	.gb_Qe {
@@ -4787,13 +4856,17 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		box-shadow: none !important;
 	}
 
+	.gb_Te {
+		background-color: #000000 !important;
+	}
+
 	.gb_Ne {
 		background-color: #161a27 !important;
 		background-image: none !important;
 		border-color: transparent !important;
 	}
 
-	.gb_Le {
+	.gb_Md .gb_Le {
 		background: #161a27 !important;
 		background-image: none !important;
 		border-color: transparent !important;
@@ -4905,139 +4978,54 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 }
 
 
-@-moz-document url-prefix("about:downloads") {
-	:root {
-		--downloads-item-height: 50px !important;
-	}
-
-	.downloadTypeIcon {
-		margin-block: 2px !important;
-	}
-
-	.downloadMainArea {
-		border: none !important;
-		outline: none !important;
-		box-shadow: none !important;
-		border-radius: 4px !important;
-	}
-
-	.downloadMainArea:hover {
-		border: none !important;
-		outline: none !important;
-		box-shadow: none !important;
-		background-color: #1e90ff80 !important;
-		border-radius: 4px !important;
-	}
-
-
-	#downloadsRichListBox>richlistitem {
-		background-image: none !important;
-		/*background: padding-box !important;*/
-		border-radius: 4px !important;
-		outline: none !important;
-	}
-
-	#downloadsRichListBox>richlistitem:hover {
-		background-color: #1e90ff80 !important;
-		background-image: none !important;
-		background-clip: padding-box !important;
-		border-radius: 4px !important;
-		outline: none !important;
-	}
-
-	#downloadsRichListBox>richlistitem[selected] {
-		background-color: #1e90ff80 !important;
-		background-image: none !important;
-		background-clip: padding-box !important;
-		border-radius: 4px !important;
-		outline: none !important;
-
-
-	}
-
-
-	:root {
-		--downloads-item-height: 50px !important;
-	}
-
-	.downloadTypeIcon image {
-		background-size: cover !important;
-		/*display: -moz-box !important;*/
-		margin-left: 10px !important;
-	}
-
-	.downloadButton {
-		/*appearance: none !important;*/
-		background: transparent !important;
-		background-color: #161a27 !important;
-		border: none !important;
-	}
-
-	.downloadButton:hover {
-		/*appearance: none !important;*/
-		background: transparent !important;
-		background-color: #1e90ff !important;
-		border: none !important;
-	}
-
-	#clearDownloadsButton label {
-		margin-left: 6px !important;
-		margin-top: 1px !important;
-		opacity: 1 !important;
-		color: #ffffff !important;
-	}
-
-	#clearDownloadsButton {
-		background: #1e90ff !important;
-		color: #ffffff !important;
-		border: 2px solid #1e90ff !important;
-		border-radius: 2px !important;
-	}
-
-	.downloadMainArea {
-		border: none !important;
-		outline: none !important;
-		box-shadow: none !important;
-		border-radius: 4px !important;
-	}
-
-	.downloadMainArea:hover {
-		border: none !important;
-		outline: none !important;
-		box-shadow: none !important;
-		background-color: #1e90ff80 !important;
-		border-radius: 4px !important;
-	}
-
-
-	#downloadsRichListBox>richlistitem {
-		background-image: none !important;
-		background-image: none !important;
-		border-radius: 4px !important;
-		outline: none !important;
-	}
-
-	#downloadsRichListBox>richlistitem:hover {
-		background-color: #1e90ff80 !important;
-		background-image: none !important;
-		background-clip: none !important;
-		border-radius: 4px !important;
-		outline: none !important;
-	}
-
-	#downloadsRichListBox>richlistitem[selected] {
-		background-color: #1e90ff80 !important;
-		background-image: none !important;
-		background-clip: none !important;
-		border-radius: 4px !important;
-		outline: none !important;
-	}
-}
 
 /* imagus */
-@-moz-document url("moz-extension://4989f7f0-85ae-4f7a-9092-86c05b297bff/options.html") {
-	html, body {
+@-moz-document url("moz-extension://fa0c04ad-ce95-4ccf-a163-badf1fc7f6f9/options.html") {
+	html {
 		background-color: #161a27 !important;
+	}
+
+	body,
+	aside,
+	#importer {
+		background: #161a27 !important;
+		background-color:#161a27 !important;
+		color: white !important;
+	}
+
+	textarea {
+		background: #0E0F12 !important;
+		background-color: #0E0F12 !important;
+		color: #C7C7C7 !important;
+	}
+
+	#sieve_container>.disabled>span {
+		text-shadow: 0 0 5px #000000 !important;
+		color: #FF5050 !important;
+	}
+
+	#sieve_container>.selected>span {
+		background-image: linear-gradient(to bottom, #1e90ff, #2A2A2A 90%) !important;
+	}
+
+	#sieve_container>div:not(.opened)>span:hover {
+		background-image: linear-gradient(to bottom, #2A2A2A, #1e90ff 90%) !important;
+	}
+
+	#sieve_container>div.opened {
+		background-image: linear-gradient(to bottom, #2A2A2A, #1e90ff 90%) !important;
+	}
+
+	#sieve_container>.opened>span {
+		background-image: linear-gradient(to bottom, #2A2A2A, #1e90ff 90%) !important;
+	}
+
+	*|*:any-link:not(svg) {
+		color: #1e90ff !important
+	}
+
+	*|*:any-link:not(svg):visited {
+		color: #1e90ff90 !important
 	}
 
 	* {
