@@ -1,0 +1,414 @@
+
+/* about:preferences */
+
+@-moz-document url-prefix("about:preferences") {
+	.sticky-container {
+		background-color: #1E1D2D !important;
+	}
+
+
+	:root {
+		font-family: Fira Sans !important;
+		background-color: #1E1D2D !important;
+
+	}
+
+	a,
+	.text-link {
+		color: #1e90ff !important;
+		text-decoration: none !important;
+	}
+
+	a:hover,
+	.text-link:hover {
+		color: #1e90ff80 !important;
+		text-decoration: none !important;
+	}
+
+	.category[selected],
+	.category.selected {
+		fill: #1e90ff !important;
+		color: #1e90ff !important;
+	}
+
+	/*
+	#categories>.category[selected],
+	#categories>.category.selected {
+		color: #1e90ff !important;
+		border-radius: 0px !important;
+		color: #ffffff !important;
+	}
+*/
+	#categories>.category:hover {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		border-radius: 2px !important;
+	}
+
+	checkbox:not([disabled="true"]):hover>.checkbox-check,
+	input[type="checkbox"]:not(:disabled):hover {
+		border-color: #1e90ff !important;
+	}
+
+	radio:not([disabled="true"]):hover>.radio-check {
+		border-color: #1e90ff !important;
+	}
+
+	radio:hover>.radio-check {
+		fill: #1e90ff80 !important;
+	}
+
+	radio:hover {
+		fill: #1e90ff80 !important;
+	}
+
+	.text-link {
+		color: #1e90ff !important;
+	}
+
+
+	button {
+		appearance: none !important;
+		background-color: #1e90ff !important;
+		border: 0px solid !important;
+		border-radius: 3px !important;
+		color: #ffffff !important;
+		/*border-color: #1e90ff !important;*/
+	}
+
+	button:hover {
+		background-color: #1e90ff50 !important;
+		/*border-color: #1e90ff50 !important;*/
+	}
+
+	.tree-bodybox,
+	stack,
+	#handlersView,
+	#engineChildren,
+	#engineList {
+		background: #1E1D2D !important;
+		border-color: #1e90ff !important;
+		border-radius: 4px !important;
+	}
+
+	/*
+	#engineList>treechildren:hover,
+	#blocklistsTree>treechildren:hover {
+		background-color: #1e90ff !important;
+	}
+*/
+	#engineList>treechildren::-moz-tree-image(engineShown, checked),
+	#blocklistsTree>treechildren::-moz-tree-image(selectionCol, checked) {
+		list-style-image: url("chrome://global/skin/icons/check.svg");
+		-moz-context-properties: fill, stroke;
+		fill: yellow !important;
+	}
+
+	#engineList>treechildren::-moz-tree-row(engineShown, checked, selected),
+	#blocklistsTree>treechildren::-moz-tree-row(selectionCol, checked, selected) {
+		fill: dodgerblue !important;
+		stroke: dodgerblue !important;
+		background: dodgerblue !important;
+		color: white !important;
+	}
+
+	@media (prefers-contrast) {
+
+		#engineList>treechildren::-moz-tree-row:hover,
+		#blocklistsTree>treechildren::-moz-tree-row:hover {
+			fill: dodgerblue !important;
+			stroke: dodgerblue !important;
+			background: dodgerblue !important;
+		}
+	}
+
+	#engineList>treechildren::-moz-tree-row,
+	#blocklistsTree>treechildren::-moz-tree-row {
+		min-height: 30px !important;
+	}
+
+	#browserContainersExtensionContent {
+		background-color: #1e90ff20 !important;
+	}
+
+	.extension-controlled-icon {
+		fill: #ffffff !important;
+		opacity: 1 !important;
+		filter: invert(100%) !important;
+	}
+
+	.content-blocking-category.selected {
+		border: 1px solid #1e90ff !important;
+		border-radius: 4px !important;
+		background-color: #1e90ff !important;
+	}
+
+	.content-blocking-category {
+		border: 1px solid #1e90ff !important;
+		border-radius: 4px !important;
+		background-color: #1e90ff10 !important;
+	}
+
+	#updateSettingsContainer {
+		border-radius: 4px !important;
+		background: #1e90ff80 !important;
+		border: 1px solid #1e90ff !important;
+	}
+
+	.sync-group.sync-configured {
+		border-radius: 4px !important;
+		background: #1e90ff80 !important;
+		border: 1px solid #1e90ff !important;
+	}
+
+
+	.dialogBox,
+	#PermissionsDialog,
+	box-inherit.dialog-content-box {
+		background-color: #1E1D2D !important;
+		color: #ffffff !important;
+		border: 1px solid transparent !important;
+		border-radius: 8px !important;
+		font-family: Fira Sans !important;
+	}
+
+
+	button {
+		appearance: none !important;
+		color: inherit !important;
+		background-color: #1e90ff !important;
+		border: 0px solid #1e90ff !important;
+	}
+
+	button[disabled] {
+		opacity: 0.8 !important;
+	}
+
+
+	button:not([disabled]):hover {
+		background-color: #1e90ff80 !important;
+		box-shadow: none !important;
+	}
+
+	button:not([disabled]):active {
+		box-shadow: none !important;
+	}
+
+	input[type="checkbox"].toggle-button:checked:hover {
+		background: #1e90ff70 !important;
+		border-color: #ffffff !important;
+	}
+
+	input[type="checkbox"].toggle-button:enabled:hover {
+		background-color: #1e90ffa0 !important;
+		border-color: #ffffff !important;
+	}
+
+	input[type="checkbox"].toggle-button {
+		background-color: #1e90ff30 !important;
+		border-color: #ffffff !important;
+	}
+
+	input[type="checkbox"]:enabled:checked {
+		/*background-image: url("chrome://global/skin/icons/check.svg") !important;
+		-moz-context-properties: fill !important;
+		fill: #000000 !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;*/
+		background-color: #1e90ff !important;
+
+		border-color: white !important;
+		color: #ffffff !important;
+
+	}
+
+	input[type="checkbox"]:hover {
+		background: #1e90ffa0 !important;
+		border-color: #1e90ff !important;
+	}
+
+	input[type="checkbox"] {
+		background: #1E1D2D !important;
+		border-color: #1e90ff !important;
+	}
+
+
+	checkbox:not([disabled]):hover>.checkbox-check {
+		border-color: #1e90ff !important;
+		background-color: #1e90ff !important;
+		border-radius: 3px !important;
+		color: #ffffff !important;
+		fill: #ffffff !important;
+	}
+
+	checkbox[checked]>.checkbox-check {
+		list-style-image: url("chrome://global/skin/icons/check.svg");
+		-moz-context-properties: fill !important;
+		fill: #ffffff !important;
+		background-color: #1e90ff !important;
+	}
+
+	checkbox>.checkbox-check {
+		background-color: #1E1D2D !important;
+		color: #ffffff !important;
+		border-color: #1e90ff !important;
+		border-radius: 2px !important;
+
+	}
+
+	#handlersView>richlistitem:active,
+	#handlersView>richlistitem[selected],
+	#handlersView>richlistitem:hover {
+		color: #ffffff !important;
+		background: #1e90ff !important;
+	}
+
+	/* treechildren*
+	#handlersView richlistitem,
+	#engineList treechildren::-moz-tree-row,
+	#blocklistsTree treechildren::-moz-tree-row {
+		min-height: 28px !important;
+	}
+*/
+	#engineList treechildren::-moz-tree-row(hover) {
+		color: #ffffff !important;
+		background: #1e90ff !important;
+	}
+
+
+	#engineList treechildren::-moz-tree-row(selected) {
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		border: 0px !important;
+
+	}
+
+	/*
+	treecols,
+	treecol {
+		min-height: unset !important;
+		height: 28px !important;
+	}*/
+
+	treecols:hover,
+	treecol:hover {
+		background: #1e90ff !important;
+		color: white !important;
+	}
+
+	/*
+	.autocomplete-tree treecols,
+	.autocomplete-tree treecol {
+		height: unset !important;
+	}
+*/
+	search-textbox {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		border-radius: 4px !important;
+		color: #ffffff !important;
+		background: #1E1D2D !important;
+		outline: 0px !important;
+		padding-top: 4px !important;
+	}
+
+	#listheader,
+	treecol {
+		border-color: #1e90ff !important;
+		background-color: #1e90ff50 !important;
+		box-shadow: inset 0 -1px #1e90ff !important;
+
+	}
+
+	listheader {
+		border-color: #1e90ff !important;
+	}
+
+	#downloadFolder {
+		border-color: #1e90ff !important;
+		background-color: #1E1D2D !important;
+	}
+
+	input[type="radio"]:checked,
+	*.radio-check[selected] {
+		-moz-context-properties: fill;
+		fill: #ffffff;
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		/*background-image: url("chrome://global/skin/icons/radio.svg");*/
+		border-color: white !important;
+		color-adjust: exact;
+	}
+
+	input[type="radio"],
+	*.radio-check {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1E1D2D !important;
+	}
+
+	#homePageUrl,
+	#fxaSyncComputerName {
+		background: #1E1D2D !important;
+		color: #ffffff !important;
+		border-color: #1e90ff !important;
+	}
+
+	menulist {
+		min-height: unset !important;
+		height: unset !important;
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+		border-radius: 0px !important;
+		padding: 2px !important;
+	}
+
+	/*
+	button:not(.button-link):not(.close-icon):not(#contentBlockingToggle) {
+		padding: 0px !important;
+	}
+*/
+
+	/*
+	button:not(.button-link):not(.close-icon):not(.spinbuttons-button) {
+		appearance: button !important;
+	}
+*/
+	/*
+	menulist {
+		appearance: menulist !important;
+	}
+*/
+	/* menulist popup */
+	menupopup menuitem {
+		background: #1E1D2D !important;
+		padding-top: unset !important;
+		padding-bottom: unset !important;
+	}
+
+	menupopup menuitem:not([disabled="true"]) {
+		background: #1E1D2D !important;
+		color: #ffffff !important;
+	}
+
+	menupopup menuitem[selected],
+	menupopup menuitem[_moz-menuactive="true"] {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	menupopup menuitem:not([disabled="true"])[selected],
+	menupopup menuitem:not([disabled="true"])[_moz-menuactive="true"] {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.info-box-container {
+		background-color: #1e90ff80 !important;
+		border-radius: 4px !important;
+	}
+
+	treechildren:hover {
+		background-color: #1e90ff80 !important;
+	}
+}
