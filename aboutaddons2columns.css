@@ -1,0 +1,451 @@
+@-moz-document url("about:addons") {
+
+	:root {
+		overflow-x: hidden;
+		--in-content-border-hover: #1e90ff !important;
+		--card-outline-color: #1e90ff !important;
+		--in-content-item-hover: rgba(30, 144, 255, 0.5) !important;
+		--in-content-item-selected: #1e90ff !important;
+		--in-content-item: #ffffff !important;
+		--in-content-border: 1px !important;
+		--card-outline-color: #1e90ff !important;
+		--card-shadow-hover: var(--card-shadow), 0 0 0 2px var(--card-outline-color) !important;
+		background-color: #1E1D2D !important;
+		font-family: "Fira Sans" !important;
+		/*--message-bar-background-color: #1e90ff80 !important;
+		--message-bar-text-color: #ffffff !important;*/
+		/*--message-bar-icon-url: var(--info-icon-url);*/
+
+	}
+
+	/*
+	message-bar-stack> *{
+		background: #000000 !important;
+		border: 1px solid #1e90ff !important;
+		color: #ffffff !important;
+	}*/
+
+	.container {
+		background-color: #1e90ff30 !important;
+		color: #ffffff !important;
+		border: 1px solid #1e90ff !important;
+	}
+
+	message-bar>button {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	message-bar>button:hover {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	html {
+		background: #1E1D2D !important;
+		background-color: #1E1D2D !important;
+		color: #ffffff !important;
+		font-family: Fira Sans !important;
+	}
+
+	.inline-options-stack {
+		background-color: #1E1D2D !important;
+		color: #ffffff !important;
+	}
+
+	#addons-inline-options {
+		color: #ffffff !important;
+	}
+
+	a {
+		color: #1e90ff !important;
+	}
+
+	.back-button,
+	.forward-button {
+		background-color: #1e90ff80 !important;
+	}
+
+	.back-button:hover,
+	.forward-button:hover {
+		background-color: #1e90ff !important;
+	}
+
+	addon-details {
+		color: #ffffff !important;
+	}
+
+	.button#updates-message {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.button#updates-message:hover {
+		background: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	/* Remove this if it causes horizontal scrolling problems */
+
+	@media (min-width:720px) {
+		#main {
+			max-width: unset !important;
+			padding-right: 28px !important;
+		}
+
+
+		addon-list>section,
+		recommended-addon-list {
+			padding: 1em !important;
+			display: grid !important;
+			grid-template-areas: "hd hd"
+				"cd cd" !important;
+			grid-template-columns: 1fr 1fr !important;
+			column-gap: 1em !important;
+
+		}
+
+		addon-card .card-contents {
+			width: unset !important;
+			white-space: initial !important;
+		}
+
+		.card-heading-image {
+			max-width: calc(100% + 32px) !important;
+		}
+
+		section>h2 {
+			grid-area: hd !important;
+		}
+
+		addon-card {
+			padding-bottom: 0px !important;
+			padding-top: 0px !important;
+			grid-area: auto !important;
+		}
+
+		addon-card .addon-description {
+			max-height: 3em !important;
+			scrollbar-color: #1e90ff #000000 !important;
+			scrollbar-width: thin !important;
+			color: #ffffff !important;
+			text-align: inherit !important;
+		}
+
+
+		.stack.inline-options-stack {
+			background-color: #1E1D2D !important;
+			color: #ffffff !important;
+			font-size: 14px !important;
+			border: none !important;
+		}
+
+
+		addon-card .addon-description {
+			height: 3em !important;
+			scrollbar-color: #1e90ff #000000 !important;
+			scrollbar-width: thin !important;
+		}
+	}
+
+	.addon-updates-manual-updates-found {
+		background: #1e90ff !important;
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.addon-updates-manual-updates-found:hover {
+		background: #1e90ff80 !important;
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	/*#updates-message {
+	display: flex;
+	align-items: center;
+	margin-inline-end: 8px;
+}*/
+	.addon-badge-recommended,
+	.addon-badge-private-browsing-allowed {
+		transform: scale(0.85) !important;
+		margin-bottom: 0px !important;
+	}
+
+	#page-options panel-list {
+		background-color: #1E1D2D !important;
+		font-size: 14px !important;
+		border: none !important;
+		color: #ffffff !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+
+	.details-deck {
+		color: inherit !important;
+	}
+
+	.details-deck-button {
+		color: #ffffff !important;
+	}
+
+
+	.addon-detail-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center !important;
+		border-top: 1px solid var(--in-content-border-color);
+		margin: 0 calc(var(--card-padding) * -1);
+		padding: var(--card-padding);
+		color: #ffffff !important;
+	}
+
+	search-textbox {
+		background-color: #1E1D2D !important;
+	}
+
+	.addon-detail-contribute-button {
+		-moz-context-properties: fill;
+		fill: #ffffff !important;
+		background-image: url("chrome://global/skin/icons/heart.svg");
+		background-color: #1e90ff !important;
+
+	}
+
+	.addon-detail-contribute-button:hover {
+		-moz-context-properties: fill;
+		fill: #ffffff !important;
+		background-image: url("chrome://global/skin/icons/heart.svg");
+		background-color: #1e90ff80 !important;
+
+	}
+
+	/*.category.selected */
+	.category[selected] {
+		fill: #1e90ff !important;
+		color: #1e90ff !important;
+	}
+
+	#categories>.category:hover {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		fill: #ffffff !important;
+
+		border-radius: 4px !important;
+	}
+
+	button[role=menuitem]:focus,
+	button[role=menuitem]:enabled:hover {
+		background: #1e90ff !important;
+	}
+
+	.theme-enable-button {
+		background: #1e90ff80 !important;
+	}
+
+	.theme-enable-button:hover {
+		background: #1e90ff !important;
+	}
+
+	.disco-cta-button {
+		background: #1e90ff80 !important;
+	}
+
+	.disco-cta-button:hover {
+		background: #1e90ff !important;
+	}
+
+	/*
+	button {
+		background: #1e90ff !important;
+	}
+
+	button:hover {
+		background: #1e90ff80 !important;
+	}
+*/
+	panel-item-separator {
+		background-color: #454545 !important;
+		margin-inline: 5px !important;
+	}
+
+	.more-options-button {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	.more-options-button:hover {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.more-options-button menulist {
+		background: #1E1D2D !important;
+		box-shadow: none !important;
+	}
+
+	.sticky-container,
+	.main-search,
+	.main-heading,
+	.main-page-content {
+		background-color: #1E1D2D !important;
+	}
+
+	.addon-name-link {
+		color: #1e90ff !important;
+	}
+
+
+	.addon.card {
+		border-radius: 4px !important;
+		background-color: #1e90ff15 !important;
+		color: #ffffff !important;
+	}
+
+	/*
+	.addon.card:hover {
+		outline: 1px !important;
+		border: 1px !important;
+	}*/
+
+	input[type="checkbox"].toggle-button:checked:hover {
+		background: #1e90ff80 !important;
+		/*border-color: var(--in-content-primary-button-background-active);*/
+	}
+
+	input[type="checkbox"].toggle-button:enabled:hover {
+		background: #1e90ff80 !important;
+
+	}
+
+	input[type="checkbox"].toggle-button {
+		background: #1e90ff !important;
+
+	}
+
+	input[type="radio"]:checked,
+	*.radio-check[selected] {
+		-moz-context-properties: fill;
+		fill: #ffffff;
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		/*background-image: url("chrome://global/skin/icons/radio.svg");*/
+		border-color: white !important;
+		color-adjust: exact;
+	}
+
+	input[type="radio"],
+	*.radio-check {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1E1D2D !important;
+	}
+
+	input[type="radio"]:hover,
+	*.radio-check:hover {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1e90ff50 !important;
+	}
+
+	radio:not([disabled="true"]):hover>.radio-check {
+		border-color: #1e90ff !important;
+	}
+
+	radio:hover>.radio-check {
+		fill: #1e90ff80 !important;
+	}
+
+	radio:hover {
+		fill: #1e90ff80 !important;
+	}
+
+	@media (prefers-contrast) {
+
+		button.tab-button[selected],
+		button.tab-button[selected]:hover {
+			color: #ffffff !important;
+			background-color: #1e90ff !important;
+		}
+	}
+
+	button.tab-button:-moz-focusring {
+		outline-offset: -1px !important;
+	}
+
+	.tab-group[last-input-type="mouse"]>button.tab-button:-moz-focusring {
+		outline: none !important;
+		box-shadow: none !important;
+	}
+
+	.ghost-button:not(.semi-transparent):enabled:hover {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	tab-button[selected],
+	.tab-button[selected]:hover,
+	.tab-button[selected] {
+		border-top-color: #ffffff !important;
+		color: #ffffff !important;
+		background-color: #1e90ff80 !important;
+	}
+
+	.tab-button:hover {
+		border-top-color: #1e90ff80 !important;
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	tab-button {
+		appearance: none !important;
+		border-inline: none !important;
+		border-block: 2px solid transparent !important;
+		border-radius: 2px !important;
+		background: transparent !important;
+		background-color: transparent !important;
+		font-size: 14px !important;
+		line-height: 20px !important;
+		margin: 0 !important;
+		padding: 4px 16px !important;
+	}
+
+	plugin-options>panel-list,
+	addon-options>panel-list {
+		box-shadow: none !important;
+		background-color: #1E1D2D !important;
+		outline: none !important;
+		border: none !important;
+		color: #ffffff !important;
+		/* Having a backdrop-filter leads to some unexpected layering issues */
+	}
+
+	button.primary {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	button.primary:hover {
+		background: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	button.addon-updates-manual-updates-found {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	button.addon-updates-manual-updates-found:hover {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	button.install-postponed {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	button.install-postponed:hover {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+}
