@@ -126,7 +126,7 @@
 	outline-offset: none !important;
 }
 
-.downloadMainArea[selected] {
+.downloadMainArea[selected="true"] {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
@@ -171,7 +171,7 @@
 
 .downloadButton:hover {
 	/*appearance: none !important;*/
-	background: transparent !important;
+	/*background: transparent !important;*/
 	background-color: #1e90ff !important;
 	border: none !important;
 
@@ -212,12 +212,12 @@
 	border-radius: 0px !important;
 }
 */
-.downloadMainArea[selected] {
+.downloadMainArea[selected="true"] {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
 	background-color: #1e90ff !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 }
 
 /*
@@ -318,10 +318,10 @@
 	background-clip: none !important;
 }
 */
-#downloadsListBox:focus>richlistitem[selected] {
+#downloadsListBox:focus>richlistitem[selected="true"] {
 	background-image: none !important;
 	background-clip: none !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 	outline: none !important;
 	background-color: #1e90ff !important;
 	border: none !important;
@@ -330,7 +330,7 @@
 richlistbox:where(:focus)>richlistitem[selected="true"] {
 	background-image: none !important;
 	background-clip: none !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 	outline: none !important;
 	background-color: #1e90ff !important;
 }
@@ -338,7 +338,7 @@ richlistbox:where(:focus)>richlistitem[selected="true"] {
 richlistitem[selected="true"] {
 	background-image: none !important;
 	background-clip: none !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 	outline: none !important;
 	background: #1e90ff !important;
 }
@@ -348,7 +348,7 @@ richlistitem[selected="true"] {
 
 	background-image: none !important;
 	background-clip: none !important;
-	border-radius: 4px !important;
+	border-radius: 3px !important;
 	outline: none !important;
 	background-color: #1e90ff80 !important;
 }
@@ -357,7 +357,7 @@ richlistitem[selected="true"] {
 
 	background-image: none !important;
 	background-clip: none !important;
-	border-radius: 0px !important;
+	border-radius: 3px !important;
 	outline: none !important;
 	background-color: #1e90ff !important;
 }
@@ -373,6 +373,8 @@ richlistitem[selected="true"] {
 
 
 }
+*/
+/*
 #downloadsListBox .download-state[exists] .downloadDetails {
 	color: white !important;
 }
@@ -380,7 +382,7 @@ richlistitem[selected="true"] {
 #downloadsListBox .download-state[exists] .downloadDetails.downloadDetailsHover {
 	color: var(--button-primary-hover-bgcolor);
 }
-
+*/
 /* File moved or missing 
 #downloadsListBox .download-state:not([exists], [state="0"]) .downloadTarget {
 	text-decoration: line-through;
