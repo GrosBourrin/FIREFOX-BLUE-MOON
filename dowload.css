@@ -1,0 +1,408 @@
+:root {
+	--download-item-height: 46px !important;
+	--highlight: #1e90ff !important;
+	--highlight-low: #1e90ff60 !important;
+
+}
+
+/* Download throbber 
+@keyframes anim-download {
+	0% {
+		background-position: 0% 0%
+	}
+
+	50% {
+		background-position: 100% 0%
+	}
+
+	100% {
+		background-position: 0% 0%
+	}
+}
+
+#PersonalToolbar #downloads-button::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-bottom-right-radius: 2px !important;
+	height: 100% !important;
+	width: calc(20vw - 10px) !important;
+	opacity: 1 !important;
+	transition: opacity 350ms var(--animation-easing-function) 0.5s,
+		width 350ms var(--animation-easing-function) 0.5s,
+		height 350ms var(--animation-easing-function) 0.5s,
+		background-size 350ms var(--animation-easing-function) 0.5s !important;
+}
+
+#PersonalToolbar #downloads-button[progress]::after {
+	background: linear-gradient(90deg, transparent, var(--highlight), transparent) !important;
+	background-size: 200% 100% !important;
+	animation: anim-download 2s ease infinite !important;
+}
+
+#PersonalToolbar #downloads-button[attention="success"]::after {
+	background: linear-gradient(90deg, var(--highlight) 0 75%, transparent) !important;
+	background-size: 100% 100%;
+	animation: unset;
+}
+
+#PersonalToolbar:hover #downloads-button::after,
+#nav-bar:hover+#PersonalToolbar #downloads-button::after {
+	background-size: 100% 100% !important;
+	opacity: 0 !important;
+	transition: opacity 2000ms var(--animation-easing-function) 0.2s,
+		width 350ms var(--animation-easing-function) 0.2s,
+		height 2000ms var(--animation-easing-function) 0.2s,
+		background-size 350ms var(--animation-easing-function) 0.2s;
+	width: 48px !important;
+	border-radius: 2px !important;
+}
+
+#downloads-button[progress] #downloads-indicator-icon,
+#downloads-button[progress] #downloads-indicator-progress-outer,
+#downloads-button[progress] #downloads-indicator-progress-inner,
+#downloads-button[attention="success"] #downloads-indicator-icon,
+#downloads-button[attention="success"] #downloads-indicator-progress-outer,
+#downloads-button[attention="success"] #downloads-indicator-progress-inner {
+	fill: var(--highlight) !important;
+	--toolbarbutton-icon-fill-attention: var(--highlight) !important;
+}
+
+#PersonalToolbar:hover #downloads-button[attention="success"]:hover #downloads-indicator-icon,
+#PersonalToolbar:hover #downloads-button[attention="success"]:hover #downloads-indicator-progress-outer,
+#PersonalToolbar:hover #downloads-button[attention="success"]:hover #downloads-indicator-progress-inner,
+#PersonalToolbar:hover #downloads-button[progress]:hover #downloads-indicator-icon,
+#PersonalToolbar:hover #downloads-button[progress]:hover #downloads-indicator-progress-outer,
+#PersonalToolbar:hover #downloads-button[progress]:hover #downloads-indicator-progress-inner {
+	fill: #ffffff !important;
+	--toolbarbutton-icon-fill-attention: #ffffff !important;
+}
+*/
+/*----------------------------------------------------------------*/
+#downloadsListBox>richlistitem {
+	height: var(--downloads-item-height) !important;
+}
+
+#downloadsListBox {
+	background-color: #1E1D2D !important;
+	border: 0px !important;
+	outline: none !important;
+}
+
+#downloadsPanel-mainView {
+	margin-top: 10px !important;
+	--arrowpanel-border-radius: 0px !important;
+	background-color: #1E1D2D !important;
+	background: #1E1D2D !important;
+	outline: none !important;
+}
+
+/*
+.downloadTypeIcon {
+	margin-block: 5px !important;
+}
+*/
+.downloadMainArea {
+	/*appearance: none !important;*/
+	background-image: none !important;
+	background-clip: none !important;
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	border-radius: 0px !important;
+	background-color: #1E1D2D !important;
+	height: var(--downloads-item-height) !important;
+}
+
+.downloadMainArea:hover {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: #1e90ff80 !important;
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 0px !important;
+	outline-offset: none !important;
+}
+
+.downloadMainArea[selected] {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: #1e90ff !important;
+	border-radius: 0px !important;
+	outline-offset: none !important;
+}
+
+
+#downloadsRichListBox>richlistitem {
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 0px !important;
+	outline: none !important;
+
+}
+
+/*
+#downloadsRichListBox>richlistitem[selected] {
+	background-image: none !important;
+	background-color: rgb(30, 90, 70) !important;
+}
+*/
+/*
+	:root {
+		--downloads-item-height: 50px !important;
+	}
+*/
+
+.downloadTypeIcon image {
+	background-size: cover !important;
+	/*display: -moz-box !important;*/
+	margin-left: 16px !important;
+}
+
+.downloadButton {
+	/*appearance: none !important;*/
+	background: transparent !important;
+	background-color: #1E1D2D !important;
+	border: none !important;
+}
+
+.downloadButton:hover {
+	/*appearance: none !important;*/
+	background: transparent !important;
+	background-color: #1e90ff !important;
+	border: none !important;
+
+}
+
+#clearDownloadsButton label {
+	margin-left: 6px !important;
+	margin-top: 1px !important;
+	opacity: 1 !important;
+	color: #ffffff !important;
+}
+
+#clearDownloadsButton.tabbable {
+	background-color: #1e90ff !important;
+	color: #ffffff !important;
+	border-radius: 3px !important;
+}
+
+#clearDownloadsButton.tabbable:hover {
+	background-color: #1e90ff80 !important;
+	color: #ffffff !important;
+	border-radius: 3px !important;
+}
+
+/*
+.downloadMainArea {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	border-radius: 0px !important;
+}
+
+.downloadMainArea:hover {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: #1e90ff80 !important;
+	border-radius: 0px !important;
+}
+*/
+.downloadMainArea[selected] {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: #1e90ff !important;
+	border-radius: 0px !important;
+}
+
+/*
+#downloadsRichListBox>richlistitem {
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 4px !important;
+	outline: none !important;
+}
+
+#downloadsRichListBox>richlistitem:hover {
+	background-color: #1e90ff80 !important;
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 4px !important;
+	outline: none !important;
+}
+
+#downloadsRichListBox>richlistitem[selected] {
+	background-color: #1e90ff80 !important;
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 4px !important;
+	outline: none !important;
+
+
+}
+*/
+.downloadTypeIcon image {
+	display: -moz-box !important;
+	color: #ffffff !important;
+	filter: opacity(1) !important;
+	filter: brightness(100%) !important;
+	background-size: cover !important;
+
+}
+
+#downloadsListBox .downloadTypeIcon {
+	margin-inline-end: 10px !important;
+}
+
+.downloadTypeIcon {
+	display: -moz-box !important;
+	opacity: 1 !important;
+
+}
+
+#downloads-button {
+	padding-top: 2px !important;
+}
+
+
+
+.downloadButton {
+	appearance: none !important;
+	background: transparent !important;
+	background-color: #1E1D2D !important;
+	border: none !important;
+}
+
+.downloadButton:hover {
+	appearance: none !important;
+	background: transparent !important;
+	background-color: #1e90ff !important;
+	border: none !important;
+}
+
+#clearDownloadsButton label {
+	margin-left: 6px !important;
+	margin-top: 1px !important;
+	opacity: 1 !important;
+	color: #ffffff !important;
+}
+
+#clearDownloadsButton {
+	background: #1e90ff !important;
+	color: #ffffff !important;
+	border: 2px solid #1e90ff !important;
+	border-radius: 2px !important;
+}
+
+/*
+#downloadsPanel:not([hasdownloads]) #emptyDownloads {
+	line-height: 1.1em !important;
+	padding-block: 0 !important;
+	color: var(--panel-description-color);
+}
+
+#downloadsPanel:not([hasdownloads]) .panel-view-body-unscrollable {
+	-moz-box-align: center !important;
+	-moz-box-pack: center !important;
+	height: 44px !important;
+}
+
+#downloadsPanel[keyfocus] #downloadsListBox:focus>richlistitem[selected] {
+	outline: none !important;
+	outline-offset: 0px !important;
+	background-clip: none !important;
+}
+*/
+#downloadsListBox:focus>richlistitem[selected] {
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 0px !important;
+	outline: none !important;
+	background-color: #1e90ff !important;
+	border: none !important;
+}
+
+richlistbox:where(:focus)>richlistitem[selected="true"] {
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 0px !important;
+	outline: none !important;
+	background-color: #1e90ff !important;
+}
+
+richlistitem[selected="true"] {
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 0px !important;
+	outline: none !important;
+	background: #1e90ff !important;
+}
+
+
+#downloadsRichListBox>richlistitem:hover {
+
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 4px !important;
+	outline: none !important;
+	background-color: #1e90ff80 !important;
+}
+
+#downloadsRichListBox>richlistitem[selected="true"] {
+
+	background-image: none !important;
+	background-clip: none !important;
+	border-radius: 0px !important;
+	outline: none !important;
+	background-color: #1e90ff !important;
+}
+
+/*
+#downloadsRichListBox>richlistitem[selected] {
+
+
+	border-radius: 4px !important;
+	outline: none !important;
+	outline-offset: none !important;
+	background-color: #1e90ff !important;
+
+
+}
+#downloadsListBox .download-state[exists] .downloadDetails {
+	color: white !important;
+}
+
+#downloadsListBox .download-state[exists] .downloadDetails.downloadDetailsHover {
+	color: var(--button-primary-hover-bgcolor);
+}
+
+/* File moved or missing 
+#downloadsListBox .download-state:not([exists], [state="0"]) .downloadTarget {
+	text-decoration: line-through;
+	text-decoration-color: color-mix(in srgb, currentColor 65%, transparent);
+}
+
+#downloadsListBox .download-state:not([exists], [state="0"]) .downloadTypeIcon {
+	filter: grayscale(100%) !important;
+}
+
+/* Download Item margin 
+:root[uidensity="compact"] #downloadsListBox {
+	margin: 0 !important;
+}
+
+richlistitem[selected="true"],
+richlistitem:hover {
+	background-color: #1e90ff !important;
+	color: white !important;
+}
+
+richlistbox:where(:focus)>richlistitem[selected="true"] {
+	background-color: #1e90ff !important;
+}
+*/
