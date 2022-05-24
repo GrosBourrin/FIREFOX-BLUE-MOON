@@ -1,0 +1,75 @@
+#PersonalToolbar {
+	--uc-bm-height: 30px !important;
+	/* Might need to adjust if the toolbar has other buttons */
+	--uc-bm-padding: 4px !important;
+	/* Vertical padding to be applied to bookmarks */
+	--uc-autohide-toolbar-delay: 400ms;
+	/* The toolbar is hidden after 0.6s */
+
+	/* 0deg = "show" ; 90deg = "hide" ;  Set the following to control when bookmarks are shown */
+	--uc-autohide-toolbar-focus-rotation: 0deg;
+	/* urlbar is focused */
+	--uc-autohide-toolbar-hover-rotation: 0deg;
+	/* cursor is over the toolbar area */
+}
+
+:root[uidensity="compact"] #PersonalToolbar {
+	--uc-bm-padding: 0px !important;
+}
+
+/*
+:root[uidensity="touch"] #PersonalToolbar {
+	--uc-bm-padding: 7px
+}
+*/
+#PersonalToolbar:not([customizing]) {
+	position: relative;
+	margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+	transform: rotateX(90deg);
+	transform-origin: top;
+	transition: transform 140ms ease var(--uc-autohide-toolbar-delay) !important;
+	z-index: 1;
+	/* The following properties should allow the themes with trasparent toolbars to work */
+	/*background-color: transparent !important;*/
+	/*background-repeat: no-repeat, no-repeat, var(--lwt-background-tiling);*/
+	--uc-bg-y: calc(-2 * (var(--tab-block-margin) + var(--toolbarbutton-inner-padding) + var(--toolbarbutton-outer-padding)) - var(--tab-min-height) - 16px - var(--bookmark-block-padding));
+	background-position: top left, top left,
+		var(--lwt-background-alignment, top left);
+	background-position-y: top, top, var(--uc-bg-y), var(--uc-bg-y),
+		var(--uc-bg-y) !important;
+	transition-delay: 140ms !important;
+	background-color: #161a27 !important;
+}
+
+#PlacesToolbarItems>.bookmark-item,
+#OtherBookmarks,
+#PersonalToolbar>#import-button {
+	padding-block: var(--uc-bm-padding) !important;
+	transition-delay: 140ms !important;
+}
+
+/*
+#nav-bar:focus-within+#PersonalToolbar {
+	transition-delay: 90ms !important;
+	transform: rotateX(var(--uc-autohide-toolbar-focus-rotation, 0));
+}
+*/
+#navigator-toolbox:hover>#PersonalToolbar {
+	transition-delay: 140ms !important;
+	transform: rotateX(var(--uc-autohide-toolbar-hover-rotation, 0));
+}
+
+#navigator-toolbox:hover>#nav-bar:focus-within+#PersonalToolbar {
+	transition-delay: 140ms !important;
+	transform: rotateX(0);
+}
+
+/* Uncomment to enable compatibility for multi-row_bookmarks.css */
+/* This would break buttons placed in the toolbar but that is likely not happening if you are using multi-row setup  */
+/*
+#PersonalToolbar:not([customizing]){
+	position: fixed;
+	display: block;
+	margin-bottom: 0px !important;
+}
+*/
