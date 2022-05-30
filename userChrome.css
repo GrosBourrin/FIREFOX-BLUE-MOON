@@ -27,7 +27,7 @@ button::-moz-focus-inner,
 
 .printpreview-pagination {
 	--shadow-30: 0 0 15px 0 #1a1a1a80 !important;
-	--border-active-shadow: dodgerblue !important;
+	--border-active-shadow: #1e90ff !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -49,7 +49,7 @@ button::-moz-focus-inner,
 #protections-popup-tp-switch-breakage-link,
 #protections-popup-tp-switch-breakage-fixed-link,
 #permission-popup-storage-access-permission-learn-more {
-	color: #1E90FF !important;
+	color: #1e90ff !important;
 }
 
 #protections-popup-tp-switch-breakage-link:hover,
@@ -68,14 +68,14 @@ button::-moz-focus-inner,
 .protections-popup-footer-button:hover,
 #protections-popup-not-blocking-section-why:hover,
 #protections-popup-show-report-stack:hover>.protections-popup-footer-button {
-	background-color: dodgerblue !important;
+	background-color: #1e90ff !important;
 	outline: none !important;
 }
 
 #protections-popup-blocking-section-header,
 #protections-popup-not-blocking-section-header,
 #protections-popup-not-found-section-header {
-	color: dodgerblue !important;
+	color: #1e90ff !important;
 }
 
 #navigator-toolbox {
@@ -357,6 +357,21 @@ menuseparator {
 
 /*Alertbox customization code*/
 @-moz-document url("chrome://global/content/alerts/alert.xhtml") {
+	
+	#alertBox {
+		color: var(--uwp-context-item-color) !important;
+		
+		background-color: var(--uwp-context-background) !important;
+		
+	}
+}
+@-moz-document url("chrome://global/content/alerts/alert.xhtml") {
+	#alertNotification {		
+		padding-top: 8px !important;
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+		padding-bottom: 12px !important;
+	}
 	#alertSourceLabel {
 		color: #FFFFFF !important;
 	}
@@ -392,6 +407,9 @@ menuseparator {
 		background-color: #1E1D2D !important;
 		border: none !important;
 		border-radius: 4px !important;
+		padding: 8px !important;
+		background-clip: padding-box !important;		
+		box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, .32) !important;
 	}
 
 	menupopup {
@@ -418,7 +436,7 @@ menuseparator {
 	}
 
 	#alertBox[animate] {
-		animation-duration: 8s !important;
+		animation-duration: 18s !important;
 	}
 
 	#alertImage {
@@ -802,7 +820,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	font-family: Fira Sans !important;
 }
 
-/*  #FFFFFF text in star menu */
+/*	#FFFFFF text in star menu */
 #editBMPanel_folderMenuList {
 	appearance: none !important;
 	background: #1E1D2D !important;
@@ -1566,7 +1584,7 @@ treechildren::-moz-tree-image(query) {
 	(-moz-os-version: windows-win7),
 	(-moz-os-version: windows-win10) {
 		:root[sizemode="maximized"]>head>title {
-			margin-top: 9px;
+			margin-top: 10px;
 			/*padding-top: 6px !important;*/
 		}
 	}
@@ -2012,7 +2030,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 }
 
 #nav-bar {
-	height: 36px !important;
+	height: 34px !important;
 }
 
 /*
@@ -2272,9 +2290,6 @@ input:not(#urlbar-input) {
 		font-weight: inherit !important;
 		font-size: 14px !important;
 		color: #FFFFFF !important;
-	}
-
-	:root {
 		--organizer-border-color: #454545 !important;
 		--organizer-separator-color: #454545 !important;
 	}
@@ -2369,10 +2384,10 @@ input:not(#urlbar-input) {
 		background-color: #000000 !important;
 		color: #FFFFFF !important;
 		/*border: 1px solid var(--organizer-toolbar-field-border-color);
-	border-radius: 4px;
-	margin: 0;
-	padding-block: 2px;
-	min-height: 24px;*/
+		border-radius: 4px;
+		margin: 0;
+		padding-block: 2px;
+		min-height: 24px;*/
 	}
 
 	/*
@@ -2756,7 +2771,7 @@ input:not(#urlbar-input) {
 }*/
 
 /* Make Pinned Tabs Have Equal Favicon Padding */
-/* Fixed By Bred For Brave-Fox                 
+/* Fixed By Bred For Brave-Fox				   
 :root:not([uidensity="compact"]) .tab-content[pinned] {
 	padding-top: 0px !important;
 	padding-right: 0px !important;
@@ -2850,23 +2865,25 @@ input:not(#urlbar-input) {
 .titlebar-buttonbox {
 	position: relative;	
 }
-
+*/
 .titlebar-button {
 	transition: all 0.3s ease !important;
-	padding: 8px 10px !important;
-	background: rgba(var(--dark-color), 1) !important;
+	/*padding: 8px 10px !important;
+	background: rgba(var(--dark-color), 1) !important;*/
 }
 
+/*
 .titlebar-button.titlebar-close {
 	padding-right: 26px !important;
 }
-
+*/
 .titlebar-button>.toolbarbutton-icon {
 	transition: all 0.3s ease !important;
-	list-style-image: none;
-	border-radius: 06px !important;
+	/*list-style-image: none;
+	border-radius: 06px !important;*/
 }
 
+/*
 .titlebar-button.titlebar-min>.toolbarbutton-icon {
 	background: rgba(var(--caption-min-color), 1) !important;
 }
@@ -2893,22 +2910,23 @@ input:not(#urlbar-input) {
 /*-min max close */
 
 .titlebar-button>.toolbarbutton-icon {
-	height: 17px !important;
-	min-height: 17px !important;
-	width: 17px !important;
-	min-width: 17px !important;
+	height: 16px !important;
+	min-height: 16px !important;
+	width: 16px !important;
+	min-width: 16px !important;
 }
 
 .titlebar-button {
-	padding-left: 5px !important;
-	padding-right: 6px !important;
+	padding-left: 7px !important;
+	padding-right: 8px !important;
 
 }
 
 .titlebar-buttonbox-container {
 	-moz-appearance: none !important;
 	margin-left: 21px !important;
-	padding-top: 0px !important;
+	margin-right: 5px !important;
+	padding-top: 1px !important;
 }
 
 .titlebar-min {
@@ -3548,17 +3566,19 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 /* zoom buttons */
 #zoom-reset-button label {
-	padding-top: 6px !important;
+	padding-top: 5px !important;
 	font-family: "Fira Sans" !important;
 	font-weight: bold !important;
 	color: #FFFFFF !important;
 }
 
 #zoom-in-button {
+	margin-top: -3px !important;
 	fill: #1E90FF !important;
 }
 
 #zoom-out-button {
+	margin-top: -3px !important;
 	fill: #1E90FF !important;
 }
 
@@ -3580,6 +3600,10 @@ toolbar #fullscreen-button {
 
 .toolbaritem-combined-buttons>separator {
 	display: none !important;
+}
+
+#zoom-controls {
+	margin-bottom: 2px !important;
 }
 
 #bookmarkpropertiesdialog {
@@ -3642,6 +3666,7 @@ toolbar #fullscreen-button {
 }
 
 @-moz-document url("chrome://mozapps/content/downloads/unknownContentType.xhtml") {
+
 	#unknownContentType {
 		color: #FFFFFF !important;
 		background-color: #1E1D2D !important;
@@ -3779,7 +3804,7 @@ toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active)>.too
 	transition: background linear 250ms !important;
 }
 
-/* Pin / Un-Pin Tab Animation    */
+/* Pin / Un-Pin Tab Animation	 */
 /* Thanks u/It_Was_The_Other_Guy */
 .tabbrowser-tab[fadein] {
 	transition: min-width 250ms linear, max-width 250ms linear !important;
@@ -4258,7 +4283,7 @@ checkbox>.checkbox-check {
 	--download-progress-paused-color: #1E90FF70 !important;
 }
 
-/* auto hide toolbar */
+
 
 /*---------------------------------*/
 ::selection {
@@ -4358,7 +4383,10 @@ p::selection {
 #bookmarks-menu-button>.toolbarbutton-menubutton-dropmarker>.dropmarker-icon,
 #developer-button,
 #preferences-button,
-#characterencoding-button {
+#characterencoding-button,
+#page-action-buttons,
+#pageActionButton,
+.urlbar-page-action {
 	color: white !important;
 	fill: #FFFFFF !important;
 	fill-opacity: 1 !important;
@@ -4369,7 +4397,7 @@ p::selection {
 @-moz-document url("chrome://mozapps/content/handling/appChooser.xhtml"),
 url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	richlistitem[selected="true"] {
-		background-color: dodgerblue !important;
+		background-color: #1e90ff !important;
 		color: #FFFFFF !important;
 	}
 
@@ -4585,7 +4613,7 @@ menupopup>menu {
 */
 
 /* -------------------------------------------------------------------------- */
-/*                    change l'odre du reload dans l'onglet                   */
+/*					  change l'odre du reload dans l'onglet 				  */
 /* -------------------------------------------------------------------------- */
 #tabContextMenu #context_reloadTab,
 #tabContextMenu #context_reloadSelectedTabs {
@@ -4593,7 +4621,7 @@ menupopup>menu {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                     add radius from buttons and tabs                    */
+/*					   add radius from buttons and tabs 				   */
 /* -------------------------------------------------------------------------- */
 *|*:root {
 	--toolbarbutton-border-radius: 3px !important;
@@ -4889,11 +4917,11 @@ scrollbox[orient="horizontal"] {
 /* Internal about: and chrome:// urls (includes reader-view) */
 #identity-box[pageproxystate="valid"].localResource~.urlbar-input-box,
 #identity-box[pageproxystate="valid"].chromeUI~.urlbar-input-box {
-	color: dodgerblue !important;
+	color: #1e90ff !important;
 }
 
 #urlbar-search-mode-indicator {
-	background-color: dodgerblue !important;
+	background-color: #1e90ff !important;
 	color: #FFFFFF !important;
 	font-weight: bold !important;
 	font-family: Fira Sans !important;
@@ -5172,7 +5200,7 @@ and by default removes the tab secondary line
 	}
 }
 */
-/* dodgerblue */
+/* #1e90ff */
 #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon {
 	fill: #1E90FF !important;
 	fill-opacity: 1 !important;
@@ -5264,3 +5292,62 @@ and by default removes the tab secondary line
 	margin-bottom: var(--navbar-margin);
 }
 */
+#appMenu-zoom-controls2>.toolbarbutton-text {
+	padding-left: 25px !important;
+
+}
+
+
+/*? slide in animation when clicking on urlbar */
+#urlbar[breakout-extend] .urlbarView {
+	animation-name: urlbarExtend;
+	animation-duration: .45s;
+	animation-iteration-count: 0.9;
+	animation-timing-function: ease;
+}
+
+@keyframes urlbarExtend {
+	0% {
+		transform: translateY(-2.5%);
+		opacity: 0;
+	}
+
+	50% {
+		transform: translateY(-.5%);
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+
+
+/*? urlbar icons opacity change on hover (cool transitions from above included :3) 
+#identity-box *,
+#tracking-protection-icon-container *,
+#urlbar-search-button *,
+#remote-control-box *,
+#page-action-buttons * {
+   opacity: 1.0 !important;
+   fill: white !important;
+   transition: opacity .15s ease, background .15s ease, background-color .15s ease !important;
+   filter: brightness(100%) !important;
+}
+*/
+
+/*! ====== urlbar ====== 
+#urlbar:is(:focus, :hover) #identity-box *,
+#urlbar:is(:focus, :hover) #tracking-protection-icon-container *,
+#urlbar:is(:focus, :hover) #urlbar-search-button *,
+#urlbar:is(:focus, :hover) #remote-control-box *,
+#urlbar:is(:focus, :hover) #page-action-buttons * {
+   opacity: 1 !important;
+   transition: opacity .15s ease, background .15s ease, background-color .15s ease !important;
+}
+*/
+
+/* Hides the first item in the urlbar dropdown if it is a "search with" or "visit" or "tab-to-search" item.  Does not hide "search in private window item", probably */
+
