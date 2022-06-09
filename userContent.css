@@ -1,5 +1,5 @@
 @import url("google.css");
-@import url("devtools.css");
+
 
 :root {
 	--in-content-border-hover: #1e90ff80 !important;
@@ -10,6 +10,9 @@
 	--button-corner-rounding: 4px !important;
 	--toolbarbutton-hover-background: #1e90ff80 !important;
 	--focus-outline: 0px !important;
+	--default-focusring: 0 !important;
+	--toolbar-field-focus-border-color: transparent !important;
+
 }
 
 :-moz-focusring,
@@ -33,7 +36,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	#newtab-window,
 	#newtab-customize-overlay,
 	#toolbar {
-		/*background: #1e1d2d!important;*/
+		/*background: #1e1d2d !important;*/
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
@@ -45,7 +48,8 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 /* about:preferences */
 @-moz-document url-prefix("about:preferences") {
 	.sticky-container {
-		background-color: #1E1D2D !important;	}
+		background-color: #1E1D2D !important;
+	}
 
 
 	:root {
@@ -389,7 +393,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		background-color: #1e90ff !important;
 		/*background-image: url("chrome://global/skin/icons/radio.svg");*/
 		border-color: white !important;
-		print-color-adjust: exact !important;
+		/*print-color-adjust: exact !important;*/
 	}
 
 	input[type="radio"],
@@ -516,7 +520,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 
 	.progress {
-		border: 0px solid #454545 !important;
+		border: 0px solid #4F4F4F !important;
 		background-color: rgba(30, 144, 255, 0.5) !important;
 	}
 
@@ -923,7 +927,7 @@ url(about:profiles) {
 	}
 */
 	panel-item-separator {
-		background-color: #454545 !important;
+		background-color: #4F4F4F !important;
 		margin-inline: 5px !important;
 	}
 
@@ -989,7 +993,7 @@ url(about:profiles) {
 		background-color: #1e90ff !important;
 		/*background-image: url("chrome://global/skin/icons/radio.svg");*/
 		border-color: white !important;
-		print-color-adjust: exact;
+		/*print-color-adjust: exact;*/
 	}
 
 	input[type="radio"],
@@ -1116,7 +1120,7 @@ url(about:profiles) {
 	body,
 	header {
 		font-family: Fira Sans !important;
-		background: rgb(22, 26, 39) !important;
+		background: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
@@ -1219,7 +1223,7 @@ url(about:profiles) {
 	}
 
 	input[type="text"][disabled] {
-		color: #888888 !important;
+		color: #4F4F4F !important;
 	}
 }
 
@@ -2994,7 +2998,7 @@ url("about:newtab") {
 }
 
 /* free download manager */
-@-moz-document url-prefix("moz-extension://ba514fa4-1ca3-4aa4-acf0-c36db7718c86/") {
+@-moz-document url-prefix("moz-extension://e82498ba-03f1-4c10-be0c-9441111ccc84/") {
 	html, head, body {
 		background-color: #1e1d2d !important;
 		background: #1e1d2d !important;
@@ -3020,11 +3024,12 @@ url("about:newtab") {
 	#activeTabInSkipList:hover,
 	#optionsLink:hover,
 	#feedbackLink:hover {
-		background: #1e90ff !important; color: #ffffff !important;
+		background: #1e90ff !important;
+		color: #ffffff !important;
 	}
 }
 
-
+/* share backported */
 @-moz-document url-prefix("moz-extension://0c824817-ed87-462e-bbf5-aa77c08dc4db/") {
 
 	body {
@@ -3100,6 +3105,7 @@ url("about:newtab") {
 		max-width: 90% !important;
 		margin: auto !important;
 		outline: 0px !important;
+		border: 0px !important;
 	}
 
 }
@@ -3408,7 +3414,6 @@ url("about:newtab") {
 
 
 .pip-wrapper {
-
 	top: inherit !important;
 	left: 15px !important;
 	border: none !important;
@@ -3469,36 +3474,6 @@ url("about:newtab") {
 		font-family: "Fira Sans" !important;
 	}
 }
-
-/*
-.downloadProgress {
-	appearance: none !important;
-	margin: 3px 0 -2px 0 !important;
-	border: 1px solid transparent !important;
-	border-radius: 100px !important;
-	height: 8px !important;
-	background-color: var(--arrowpanel-dimmed) !important;
-	overflow: hidden !important;
-}
-
-.downloadProgress[paused] {
-	background-color: var(--desaturate-dimmed) !important;
-}
-
-.downloadProgress:not([value="0"])::-moz-progress-bar {
-	margin: 0 !important;
-	height: 100% !important;
-}
-
-
-.downloadProgress::-moz-progress-bar {
-	background-color: var(--toolbarbutton-icon-fill-attention) !important;
-}
-
-.downloadProgress[paused]::-moz-progress-bar {
-	background-color: var(--desaturate-dimmed-further) !important;
-}*/
-
 
 
 @-moz-document domain("mail.google.com") {
@@ -3569,7 +3544,7 @@ popup-notification-button:hover {
 	fill: #ffffff !important;*/
 	color: #ffffff !important;
 	/*var(--checkbox-checked-color, -moz-accent-color-foreground);*/
-	print-color-adjust: exact !important;
+	/*print-color-adjust: exact !important;*/
 }
 
 #checkbox-check {
@@ -3908,10 +3883,8 @@ textbox {
 	--download-progress-paused-color: #1e90ff80 !important;
 	--download-progress-flare-color: rgba(255, 255, 255, 0.75);
 }
-
-
-
 */
+
 @-moz-document domain(google.fr) {
 	:root {
 		font-family: Fira Sans !important;
@@ -4500,7 +4473,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-color: #1E1D2D !important;
 		fill: #1e90ff !important;
 		/*filter: drop-shadow(0px 0px 4px white) !important;*/
-		stroke: #454545 !important;
+		stroke: #4F4F4F !important;
 		stroke-width: thin !important;
 		stroke-opacity: 1 !important;
 	}
@@ -4957,3 +4930,4 @@ p::selection * {
 
 	}
 }
+
