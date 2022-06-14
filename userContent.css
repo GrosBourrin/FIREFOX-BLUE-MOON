@@ -1,5 +1,5 @@
 @import url("google.css");
-
+/*@import url("devtools.css");*/
 
 :root {
 	--in-content-border-hover: #1e90ff80 !important;
@@ -145,6 +145,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		background: #1E1D2D !important;
 		border-color: #1e90ff !important;
 		border-radius: 4px !important;
+		color: #ffffff !important;
 	}
 
 	/*
@@ -160,21 +161,25 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		fill: yellow !important;
 	}
 
-	#engineList>treechildren::-moz-tree-row(engineShown, checked, selected),
-	#blocklistsTree>treechildren::-moz-tree-row(selectionCol, checked, selected) {
+	#engineList>treechildren::-moz-tree-row(engineShown, checked, selected, focus, active),
+	#blocklistsTree>treechildren::-moz-tree-row(selectionCol, checked, selected, focus, active),
+	#engineChildren::-moz-tree-row(engineShown, checked, selected, focus, active),
+	treechildren>#engineChildren {
 		fill: #1e90ff !important;
 		stroke: #1e90ff !important;
 		background: #1e90ff !important;
-		color: white !important;
+		color: #ffffff !important;
 	}
 
 	@media (prefers-contrast) {
 
 		#engineList>treechildren::-moz-tree-row:hover,
+		#engineChildren>treechildren::-moz-tree-row:selected,
 		#blocklistsTree>treechildren::-moz-tree-row:hover {
 			fill: #1e90ff !important;
 			stroke: #1e90ff !important;
 			background: #1e90ff !important;
+			color: white !important;
 		}
 	}
 
@@ -549,50 +554,50 @@ input[type="checkbox"]:checked {
 
 /* about:support*/
 @-moz-document url(about:support),
-url(about:profiles) {
-	body.wide-container {
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-	}
+url(about:profiles){
+body.wide-container {
+	background-color: #1e1d2d !important;
+	color: #ffffff !important;
+}
 
-	th.column,
-	button {
-		background: #1e90ff !important;
-		color: white !important;
-	}
+th.column,
+button {
+	background: #1e90ff !important;
+	color: white !important;
+}
 
-	button:hover {
-		background: #1e90ff80 !important;
-	}
+button:hover {
+	background: #1e90ff80 !important;
+}
 
-	a {
-		color: #1e90ff !important;
-	}
+a {
+	color: #1e90ff !important;
+}
 
-	a:hover {
-		color: #1e90ff90 !important;
-	}
+a:hover {
+	color: #1e90ff90 !important;
+}
 
-	th {
-		background-color: dodgerblue !important;
-	}
+th {
+	background-color: dodgerblue !important;
+}
 
-	.action-box {
+.action-box {
 
-		background-color: #1e1d2d !important;
-		border: 1px solid #1e90ff !important;
+	background-color: #1e1d2d !important;
+	border: 1px solid #1e90ff !important;
 
-	}
+}
 
-	table {
-		background-color: #1e1d2d !important;
+table {
+	background-color: #1e1d2d !important;
 
-		border: 1px solid #1e90ff !important;
-	}
+	border: 1px solid #1e90ff !important;
+}
 
-	td {
-		border: 1px solid #1e90ff40 !important;
-	}
+td {
+	border: 1px solid #1e90ff40 !important;
+}
 
 }
 
@@ -789,7 +794,7 @@ url(about:profiles) {
 
 		addon-card .addon-description {
 			max-height: 3em !important;
-			scrollbar-color: #1e90ff #000000 !important;
+			scrollbar-color: #1e90ff black !important;
 			scrollbar-width: thin !important;
 			color: #ffffff !important;
 			text-align: inherit !important;
@@ -806,7 +811,7 @@ url(about:profiles) {
 
 		addon-card .addon-description {
 			height: 3em !important;
-			scrollbar-color: #1e90ff #000000 !important;
+			scrollbar-color: #1e90ff black !important;
 			scrollbar-width: thin !important;
 		}
 	}
@@ -2717,10 +2722,10 @@ browser[type="content"] {
 
 
 /* about:support*/
-@-moz-document url(about:support) {
-	body.wide-container {
-		background-color: #1e1d2d !important;
-	}
+@-moz-document url(about:support){
+body.wide-container {
+	background-color: #1e1d2d !important;
+}
 }
 
 
@@ -2839,14 +2844,14 @@ url('about:newtab') {
 	html,
 	.main-content,
 	scrollbar {
-		scrollbar-color: #1e90ff #000000 !important;
+		scrollbar-color: #1e90ff black !important;
 		scrollbar-width: thin !important;
 		color: #ffffff !important;
 	}
 }
 
 * {
-	scrollbar-color: #1e90ff #000000 !important;
+	scrollbar-color: #1e90ff black !important;
 	scrollbar-width: thin !important;
 }
 
@@ -3448,20 +3453,20 @@ url("about:newtab") {
 
 
 
-@-moz-document url(chrome://browser/content/browser.xhtml) {
-	browser[type="content-primary"] {
-		/*background: #1e1d2d !important;*/
-		color: #ffffff !important;
-	}
+@-moz-document url(chrome://browser/content/browser.xhtml){
+browser[type="content-primary"] {
+	/*background: #1e1d2d !important;*/
+	color: #ffffff !important;
+}
 }
 
-@-moz-document url(about:newtab) {
+@-moz-document url(about:newtab){
 
-	body,
-	#newtab-customize-overlay {
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-	}
+body,
+#newtab-customize-overlay {
+	background-color: #1e1d2d !important;
+	color: #ffffff !important;
+}
 }
 
 
@@ -4930,4 +4935,3 @@ p::selection * {
 
 	}
 }
-
