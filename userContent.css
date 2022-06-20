@@ -618,6 +618,7 @@ td {
 @-moz-document url("about:home") {
 	.outer-wrapper {
 		background-color: #1e1d2d !important;
+
 	}
 
 	#newtab-search-text,
@@ -683,6 +684,7 @@ td {
 		/*--message-bar-background-color: #1e90ff80 !important;
 		--message-bar-text-color: #ffffff !important;*/
 		/*--message-bar-icon-url: var(--info-icon-url);*/
+		color:  white !important;
 
 	}
 
@@ -743,15 +745,13 @@ td {
 		color: #ffffff !important;
 	}
 
-	.button#updates-message {
-		background: #1e90ff !important;
-		color: #ffffff !important;
+	addon-updates-message#updates-message {
+		
+		color: #1e90ff !important;
+		
 	}
 
-	.button#updates-message:hover {
-		background: #1e90ff80 !important;
-		color: #ffffff !important;
-	}
+	
 
 	/* Remove this if it causes horizontal scrolling problems */
 
@@ -816,16 +816,18 @@ td {
 		}
 	}
 
-	.addon-updates-manual-updates-found {
+	button.addon-updates-manual-updates-found {
 		background: #1e90ff !important;
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
+		border-radius:  4px !important;
 	}
 
-	.addon-updates-manual-updates-found:hover {
+	button.addon-updates-manual-updates-found:hover {
 		background: #1e90ff80 !important;
 		background-color: #1e90ff80 !important;
 		color: #ffffff !important;
+		border-radius:  4px !important;
 	}
 
 	/*#updates-message {
@@ -931,6 +933,12 @@ td {
 		background: #1e90ff80 !important;
 	}
 */
+	#preferencesButton:hover,
+	#help-button:hover {
+		background-color: #1e90ff!important;
+		color: white !important; 
+	}
+
 	panel-item-separator {
 		background-color: #4F4F4F !important;
 		margin-inline: 5px !important;
@@ -956,6 +964,7 @@ td {
 	.main-heading,
 	.main-page-content {
 		background-color: #1e1d2d !important;
+
 	}
 
 	.addon-name-link {
@@ -3867,11 +3876,51 @@ textbox {
 		color: #1e90ff !important;
 		fill: #1e90ff !important;
 	}
-
+	
+	/*.icon:hover, .icon:focus {
+		/
+		color: white !important;
+		fill: white !important;
+		background:  #1e90ff !important;
+	}*/
+	._3dZnYgFFpifT-M_Vs2FAq6:focus, ._3dZnYgFFpifT-M_Vs2FAq6:hover, 
+	._1x6pySZ2CoUnAfsFhGe7J1:focus, ._1x6pySZ2CoUnAfsFhGe7J1:hover,
+	.FOioVk_DUTmZIKKa82Mm1:focus, .FOioVk_DUTmZIKKa82Mm1:hover,
+	._2I12Htze2UzJmmfnrgYJOn._1dBtowHdRHcGyLbVEaOL8t ._24UNt1hkbrZxLzs5vkvuDh:focus,
+	._2I12Htze2UzJmmfnrgYJOn._1dBtowHdRHcGyLbVEaOL8t ._24UNt1hkbrZxLzs5vkvuDh:hover{
+  		background-color: #1e90ffc0 !important;
+  		border-radius: 50px !important;
+  		outline: none;
+	}
 	/* reduce margin above post buttons 
 	#SHORTCUT_FOCUSABLE_DIV>div:nth-child(4)>div>div>div>div>div>div>div>div>div>div>div>div>div>div:nth-child(3) {
 		margin-top: 0px;
 	}*/
+	/*._2rszc84L136gWQrkwH6IaM,*/
+	.wBtTDilkW_rtT2k5x3eie,
+	._2jJNpBqXMbbyOiGCElTYxZ,
+	.uI_hDmU5GSiudtABRz_37,	
+	._1G4yU68P50vRZ4USXfaceV._2QeqBqfT5UbHBoViZUt-wX,	
+ 	._1RYN-7H8gYctjOQeL8p2Q7 {
+  		background-color: #1e1d2d !important;
+  		border: 1px solid #1e90ff !important;  		
+	}
+	._ZhON3a3vplThB8NFwuJn,
+	._2M2wOqmeoPVvcSsJ6Po9-V,
+	.Pbz3gpOA6rvqdYoX_pOjn,	
+	._1poyrkZ7g36PawDueRza-J {
+  		background-color: #1e1d2d !important;
+ 	}
+ 	._34q3PgLsx9zIU5BiSOjFoM,	
+	._3GnarIQX9tD_qsgXkfSDz1 {
+  		background-color: #000000 !important;
+  		font-family:  Fira Code !important;
+  		font-size:  13px !important;
+ 	}
+ 	._1r4smTyOEZFO91uFIdWW6T .public-DraftEditor-content {
+ 		background-color: #000000 !important;
+ 		color:  #ffffff !important;
+ 	}
 }
 
 
