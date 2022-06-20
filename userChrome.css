@@ -136,7 +136,7 @@ tooltip,
 	border-radius: 4px !important;
 	vertical-align: middle !important;
 	margin-top: 5px !important;
-	-webkit-font-smoothing: antialiased !important;
+
 	/*overflow: hidden !important;*/
 }
 
@@ -148,7 +148,7 @@ tooltip * {
 	font-size: 14px !important;
 	width: auto !important;
 	height: auto !important;
-	-webkit-font-smoothing: antialiased !important;
+
 	/*overflow: hidden !important;*/
 }
 
@@ -208,7 +208,7 @@ tooltip * {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	text-align: left !important;
-	-webkit-font-smoothing: antialiased !important;
+
 }
 
 .menubar-text {
@@ -364,6 +364,7 @@ menuitem .menu-accel {
 	color: #FFFFFF !important;
 }
 
+
 menuseparator {
 	appearance: none !important;
 	border: none !important;
@@ -373,7 +374,6 @@ menuseparator {
 }
 
 /*Alertbox customization code*/
-
 @-moz-document url("chrome://global/content/alerts/alert.xhtml") {
 	#alertNotification {
 		padding-top: 8px !important;
@@ -812,7 +812,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 }
 
 #editBMPanel_tagsField {
-	height: 22px !important;
+	height: 24px !important;
 	border: none !important;
 	font-family: Fira Sans !important;
 	background: #000000 !important;
@@ -1575,42 +1575,42 @@ treechildren::-moz-tree-image(query) {
 /* Shows window title in menubar */
 /* Enable menubar for correct behavior */
 @-moz-document url(chrome://browser/content/browser.xhtml){
-:root:not([sizemode="fullscreen"])>head {
-	display: block;
-	position: fixed;
-	right: 140px;
-	width: calc(100vw - 855px);
-	text-align: left;
-	z-index: 1;
-	pointer-events: none;
-}
-
-head>* {
-	display: none;
-}
-
-head>title {
-	display: -moz-box;
-	padding-top: 6px;
-	margin-top: 6px;
-	max-width: 58vw;
-	overflow-x: -moz-hidden-unscrollable;
-	text-overflow: ellipsis;
-	-moz-box-pack: left;
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	font-weight: bold !important;
-	color: #1E90FF !important;
-}
-
-@media (-moz-platform: windows),
-(-moz-os-version: windows-win7),
-(-moz-os-version: windows-win10) {
-	:root[sizemode="maximized"]>head>title {
-		margin-top: 6px;
-		/*padding-top: 6px !important;*/
+	:root:not([sizemode="fullscreen"])>head {
+		display: block;
+		position: fixed;
+		right: 140px;
+		width: calc(100vw - 855px);
+		text-align: left;
+		z-index: 1;
+		pointer-events: none;
 	}
-}
+
+	head>* {
+		display: none;
+	}
+
+	head>title {
+		display: -moz-box;
+		padding-top: 6px;
+		margin-top: 6px;
+		max-width: 58vw;
+		overflow-x: -moz-hidden-unscrollable;
+		text-overflow: ellipsis;
+		-moz-box-pack: left;
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		font-weight: bold !important;
+		color: #1E90FF !important;
+	}
+
+	@media (-moz-platform: windows),
+	(-moz-os-version: windows-win7),
+	(-moz-os-version: windows-win10) {
+		:root[sizemode="maximized"]>head>title {
+			margin-top: 6px;
+			/*padding-top: 6px !important;*/
+		}
+	}
 }
 
 
@@ -1765,7 +1765,7 @@ spacer,
 	height: 100% !important;
 	color: #1E90FF !important;
 	text-shadow: 0 0 3px #000000 !important;
-	margin-top: -2px !important;
+	margin-top: -1px !important;
 	pointer-events: none !important;
 	font-family: Fira Sans !important;
 	font-weight: bold !important;
@@ -2275,6 +2275,8 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 .urlbarView-row:hover {
 	background-color: #1E90FF !important;
 	border-radius: 3px !important;
+	margin-right: 4px !important;
+
 }
 
 #urlbar {
@@ -2737,8 +2739,8 @@ treechildren {
 }
 
 #reader-mode-button>.urlbar-icon {
-	margin-left: 1px !important;
-	transform: scale(1.1) !important;
+	margin-left: 0px !important;
+	transform: scale(1.2) !important;
 }
 
 .urlbar-input-box {
@@ -5429,3 +5431,15 @@ and by default removes the tab secondary line
 		min-height: calc((95vw - 250px) / 1.5) !important;
 	}
 }
+
+.tabbrowser-tab:hover .tab-icon-stack[activemedia-blocked] .tab-icon-image {
+	opacity: 1 !important;
+}
+/*
+.tabbrowser-tab:-moz-any([image], [pinned])>.tab-stack>.tab-content[attention]:not([selected=“true”]),
+.tabbrowser-tab>.tab-stack>.tab-content[pinned][titlechanged]:not([selected=“true”]) {
+	border-top: 2px solid #e83535 !important;
+	background-image: none !important;
+}
+
+*/
