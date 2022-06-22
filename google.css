@@ -1,0 +1,241 @@
+@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*") {
+	* {
+		font-family: "Fira Sans" !important;
+	}
+
+	a:link {
+		color: #1e90ff !important;
+	}
+
+	a:visited {
+		color: #1e90ff50 !important;
+	}
+
+	a:hover {
+		color: #1e90ff80 !important;
+	}
+
+	a:active {
+		color: #1e90ff !important;
+	}
+
+
+}
+
+@-moz-document domain("mail.google.com") {
+	* {
+		font-family: "Fira Sans" !important;
+	}
+
+
+	/* ADD ROW HIGHLIGHTS */
+	table.zt tr.yO:hover {
+		background-color: #1e90ff80 !important;
+	}
+
+	table.zt tr.zE:hover {
+		background-color: #1e90ff80 !important;
+	}
+
+}
+
+@-moz-document domain(google.fr) {
+	:root {
+		font-family: Fira Sans !important;
+	}
+
+	/*
+	html, body {
+		background-color: inherit !important;
+		background: inherit !important;
+	}*/
+
+
+}
+
+@-moz-document domain(news.google.com) {
+
+	html,
+	body {
+		background: #1E1D2D !important;
+	}
+
+	/*a:link {
+		color: #1e90ff !important;
+	}
+
+	a:visited {
+		color: #1e90ff50 !important;
+	}
+
+	a:hover {
+		color: #1e90ff80 !important;
+	}
+
+	a:active {
+		color: #1e90ff !important;
+	}*/
+	.pjBVq,
+	div,
+	article,
+	footer,
+	.FKF6mc,
+	.FKF6mc:focus,
+	.FKF6mc:hover,
+	.iDvCIf,
+	.rdp59b {
+		white-space: normal !important;
+		font-family: Fira Sans !important;
+		border-color: #1e90ff !important;
+		background-color: transparent !important;
+
+	}
+
+	.FKF6mc.TpQm9d.ZqhUjb.ztUP4e.tHCKTc.kTeh9.cd29Sd.dHeVVb.lSLCF.Xcw0p,
+	.rdp59b {
+		color: #1e90ff !important;
+	}
+
+	a.FKF6mc.TpQm9d.ZqhUjb.ztUP4e.tHCKTc.kTeh9.cd29Sd.dHeVVb.lSLCF.Xcw0p:hover,
+	.rdp59b:hover,
+	.rdp59b:focus,
+	a.FKF6mc.TpQm9d.ZqhUjb.ztUP4e.tHCKTc.kTeh9.cd29Sd.dHeVVb.lSLCF.Xcw0p:focus {
+		color: #1e90ff80 !important;
+
+	}
+
+	.gb_Md,
+	.gb_Fd,
+	.gb_Jd,
+	.gb_Qe {
+		background-color: #1E1D2D !important;
+		color: white !important;
+		box-shadow: none !important;
+	}
+
+	.gb_Re {
+		background: #1E1D2D !important;
+		border: none !important;
+
+	}
+
+	.gb_Te {
+		background-color: #000000 !important;
+	}
+
+	.gb_Ne {
+		background-color: #1E1D2D !important;
+		background-image: none !important;
+		border-color: transparent !important;
+	}
+
+	.gb_Md .gb_Le {
+		background: #1E1D2D !important;
+		background-image: none !important;
+		border-color: transparent !important;
+	}
+
+	.gb_na.gb_Ke .gb_ad {
+		padding: 4px 2px;
+		padding-left: 2px;
+		background: #1E1D2D !important;
+		background-image: none !important;
+		border-color: transparent !important;
+	}
+
+	.ICsaqd {
+		color: #ffffff !important;
+	}
+
+	.YtXOzd,
+	.pjBVq {
+		outline: #1e90ff 1px !important;
+		font-family: Fira Sans !important;
+		border-color: #1e90ff !important;
+		background-color: #1e90ff40 !important;
+	}
+
+	.MkjOTb:hover {
+		background-color: #1e90ff70 !important;
+	}
+
+	.T4LgNb {
+		background: #1E1D2D !important;
+		border-color: #1e90ff !important;
+	}
+
+	.boy4he {
+		background-color: #1e90ff70 !important;
+		fill: #ffffff !important;
+	}
+
+	.To2ZZb.DbQnIe,
+	.To2ZZb.DbQnIe .Ix4NZd {
+
+		color: #ffffff !important;
+		white-space: nowrap;
+	}
+
+	.boy4he:hover {
+		background-color: #1e90ff50 !important;
+		fill: #ffffff !important;
+	}
+
+	.u3WVdc {
+		background: #1E1D2D !important;
+		border-radius: 4px !important;
+	}
+
+	.gb_Le {
+		background-color: transparent !important;
+		background-image: none;
+		border-color: transparent;
+	}
+
+	.b42OPe {
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 5px 0px, rgba(0, 0, 0, 0.26) 0px 1px 2px 0px;
+		background-color: #1E1D2D !important;
+
+	}
+
+	c-wiz {
+		background-color: #1E1D2D !important;
+	}
+
+	.QmrVtf,
+	.bFymCe,
+	.QmrVtf.RD0gLb.kybdz,
+	.wsLqz,
+	a.SVJrMe {
+		color: dodgerblue !important;
+
+		filter: brightness(1) !important;
+		filter: opacity(100%) !important;
+	}
+
+	body.dm7YTc .dmaMHc .VfPpkd-StrnGf-rymPhb {
+		background-color: #1E1D2D !important;
+	}
+
+	.VfPpkd-StrnGf-rymPhb-ibnC6b,
+	.VfPpkd-BFbNVe-bF1uUb-NZp2ef {
+		background: #1E1D2D !important;
+		background-color: #1E1D2D !important;
+		color: white !important;
+	}
+
+	.VfPpkd-StrnGf-rymPhb-ibnC6b:hover {
+		background-color: #1e90ff !important;
+		color: white !important;
+	}
+
+	.VfPpkd-StrnGf-rymPhb-ibnC6b[selected] {
+		background-color: #1e90ff !important;
+		color: white !important;
+	}
+
+	.VfPpkd-TkwUic {
+		outline: #1e90ff 1px !important;
+		border-radius: 4px !important;
+	}
+}
