@@ -11,6 +11,7 @@
 	--default-search-identity-icon: url("Google.svg") !important;
 }
 
+
 /* -------------------------------------------------------------------------- */
 :-moz-focusring,
 :focus,
@@ -55,6 +56,7 @@ button::-moz-focus-inner,
 	--toolbar-field-focus-border-color: transparent !important;
 	--default-focusring: 0 !important;
 	/*--toolbar-field-focus-background-color: blue !important;*/
+	caret-color: #1E90FF !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -140,7 +142,8 @@ tooltip,
 	/*overflow: hidden !important;*/
 }
 
-tooltip * {
+tooltip *{
+	appearance:  none !important;
 	color: yellow !important;
 	background: #1E1D2D !important;
 	border: 1px solid #1E1D2D !important;
@@ -148,7 +151,7 @@ tooltip * {
 	font-size: 14px !important;
 	width: auto !important;
 	height: auto !important;
-
+	border-radius: 4px !important;
 	/*overflow: hidden !important;*/
 }
 
@@ -164,9 +167,10 @@ tooltip * {
 
 /* ------------------------------ status panel ------------------------------ */
 #statuspanel {
-	bottom: -16px !important;
+	bottom: -13px !important;
 	margin-left: 50% !important;
 	max-width: 45% !important;
+	transition: bottom .25s ease-in !important;
 }
 
 #statuspanel-inner {
@@ -183,7 +187,47 @@ tooltip * {
 	border: 2px solid #1E1D2D !important;
 	border-radius: 0px !important;
 	text-align: center !important;
+	transition: color linear .5s !important;
+	margin-inline: 0 !important;
 }
+
+#statuspanel:not([inactive]) {
+	transition: bottom .25s ease-out !important;
+}
+#statuspanel[mirror] {
+	inset-inline-start: auto;
+	inset-inline-end: 0;
+}
+
+/*#statuspanel {
+visibility: visible !important;
+opacity: 1 !important;
+position: absolute !important;
+width: calc(100% - 2px) !important;
+max-width: calc(100% - 2px) !important;
+left: 0 !important;
+right: 0 !important;
+bottom: -36px;
+transition: bottom .25s ease-in !important;
+}
+#statuspanel:not([inactive]) {
+bottom: 0px;
+transition: bottom .25s ease-out !important;
+}
+#statuspanel #statuspanel-label {
+appearance: none !important;
+background: var(--background) !important;
+font-size: 14px !important;
+color: var(--text) !important;
+transition: color linear .5s !important;
+border: solid 1px var(--hovercolor) !important;
+border-left: none !important;
+border-right: none !important;
+border-bottom: none !important;
+text-align: center !important;
+}*/
+
+
 
 /* -------------------------------------------------------------------------- */
 * {
@@ -1929,10 +1973,10 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 	display: none !important;
 }
 */
-/*
+
 .tab-label-container {
 	text-align: center !important;
-}*/
+}
 
 /*
 .tab-label,
@@ -4821,6 +4865,7 @@ menupopup>menu {
 	font-size: 12px !important;
 	background: #FFFFFF !important;
 }*/
+
 #contentAreaContextMenu {
 	--panel-padding: 8px !important;
 }
@@ -5443,3 +5488,11 @@ and by default removes the tab secondary line
 }
 
 */
+/*
+#urlbar{
+    background: #1e1d2d !important;
+}
+#urlbar-input{
+    color: dodgerblue !important;
+    filter: brightness(1.8) hue-rotate(-20deg) contrast(1.5) !important;
+}*/
