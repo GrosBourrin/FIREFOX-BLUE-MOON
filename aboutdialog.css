@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                                About firefox                               */
 /* -------------------------------------------------------------------------- */
-
+/*--------------181a21----181c25--#1b1924-#131620--*/
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	#leftBox {
 		background-image: url("renardeau.gif") !important;
@@ -15,17 +15,21 @@
 		background-repeat: no-repeat !important;
 		background-size: 420px auto !important;
 		bottom: 20px !important;
-		margin-left: 15px !important;
+		margin-left: 20px !important;
 	}
 
 
 	.noUpdatesFound {
-		appearance: none !important;
+		/*appearance: none !important;*/
 		fill: yellow !important;
 		margin-top: 0px !important;
-		margin-left: -1px !important;
+		/*margin-left: -1px !important;*/
 	}
 
+	/*
+	#icons.noUpdatesFound {
+		margin-left: -1px !important;
+	}*/
 
 	#aboutDialogContainer {
 		min-height: 350px !important;
@@ -42,7 +46,10 @@
 		background: none !important;
 	}
 
-
+	#updateBox {
+		margin-left: -3px !important;
+		;
+	}
 
 	#updateButton,
 	#updateDeck>hbox>label {
@@ -63,12 +70,30 @@
 		/*margin-right: 4px !important;*/
 	}
 
+	#submit-feedback.text-link:hover,
+	#releasenotes.text-link:hover,
+	.text-link:hover {
+		color: #1e90ff !important;
+		font-style: normal !important;
+		text-decoration: none !important;
+		/*margin-right: 4px !important;*/
+	}
+
 	#submit-feedback.text-link {
 		margin-left: 8.5px !important;
 	}
 
 	#detailsBox {
 		margin-top: 30px !important;
+		margin-left: 0px !important;
+
+	}
+
+	description {
+		margin-left: 8px !important;
+	}
+
+	.text-blurb {
 		margin-left: 0px !important;
 	}
 }
