@@ -1,0 +1,87 @@
+
+@-moz-document domain(reddit.com) {
+	* {
+		font-family: "Fira Sans" !important;
+	}
+
+	.icon {
+		/* improve visibility */
+		/*font-size: px;*/
+		/*font-weight: 100 !important;*/
+		color: #1e90ff !important;
+		fill: #1e90ff !important;
+	}
+	
+	/*.icon:hover, .icon:focus {
+		/
+		color: white !important;
+		fill: white !important;
+		background:  #1e90ff !important;
+	}*/
+	._3dZnYgFFpifT-M_Vs2FAq6:focus, ._3dZnYgFFpifT-M_Vs2FAq6:hover, 
+	._1x6pySZ2CoUnAfsFhGe7J1:focus, ._1x6pySZ2CoUnAfsFhGe7J1:hover,
+	.FOioVk_DUTmZIKKa82Mm1:focus, .FOioVk_DUTmZIKKa82Mm1:hover,
+	._2I12Htze2UzJmmfnrgYJOn._1dBtowHdRHcGyLbVEaOL8t ._24UNt1hkbrZxLzs5vkvuDh:focus,
+	._2I12Htze2UzJmmfnrgYJOn._1dBtowHdRHcGyLbVEaOL8t ._24UNt1hkbrZxLzs5vkvuDh:hover{
+  		background-color: #1e90ffc0 !important;
+  		border-radius: 50px !important;
+  		outline: none;
+	}
+	/* reduce margin above post buttons 
+	#SHORTCUT_FOCUSABLE_DIV>div:nth-child(4)>div>div>div>div>div>div>div>div>div>div>div>div>div>div:nth-child(3) {
+		margin-top: 0px;
+	}*/
+	/*._2rszc84L136gWQrkwH6IaM,*/
+	.wBtTDilkW_rtT2k5x3eie,
+	._2jJNpBqXMbbyOiGCElTYxZ,
+	.uI_hDmU5GSiudtABRz_37,	
+	._1G4yU68P50vRZ4USXfaceV._2QeqBqfT5UbHBoViZUt-wX,	
+ 	._1RYN-7H8gYctjOQeL8p2Q7,
+ 	._3xuFbFM3vrCqdGuKGhhhn0 {
+  		background-color: #1e1d2d !important;
+  		border: 1px solid #1e90ff !important;  		
+	}
+	._ZhON3a3vplThB8NFwuJn,
+	._2M2wOqmeoPVvcSsJ6Po9-V,
+	.Pbz3gpOA6rvqdYoX_pOjn,	
+	._1poyrkZ7g36PawDueRza-J,
+	._20fGT0XJD3MvX9yBsVeKMn,
+	._2YcMhGs5-uIg9Fj4a9J2Xr,
+	._3SNMf5ZJL_5F1qxcZkD0Cp,
+	._17TqawK-44tH0psnHPIhzS,
+	._2ulKn_zs7Y3LWsOqoFLHPo,
+	._2vkeRJojnV7cb9pMlPHy7d,
+	._2u8LqkbMtzd0lpblMFbJq5 {
+  		background-color: #1e1d2d !important;
+  		/*border: 1px solid #1e90ff !important;*/
+  		border-color:  transparent !important;
+ 	}
+ 	._34q3PgLsx9zIU5BiSOjFoM,	
+	._3GnarIQX9tD_qsgXkfSDz1 {
+  		background-color: #000000 !important;
+  		font-family:  Fira Code !important;
+  		font-size:  13px !important;	 		
+ 	}
+ 	._1r4smTyOEZFO91uFIdWW6T .public-DraftEditor-content,
+ 	.zgT5MfUrDMC54cpiCpZFu,
+ 	._1DeR7_QiQnu2UK0e2dDfYD, 	
+ 	._1K7ubH9z5v9E6C19j2fjQU,
+ 	.h-jI8r2f9ozTNqu_2TBeY,
+ 	._37tmRmxaFMjRRrvwcY2JmY {
+ 		background-color: #000000 !important;
+ 		color:  #ffffff !important; 		
+ 	}
+ 	._3wl1bRnSzxHkKJfvqakrNI,
+ 	._3GnarIQX9tD_qsgXkfSDz1 {
+ 		border: 1px solid #1e90ff !important;
+ 	}
+ 	.XEkFoehJNxIH9Wlr5Ilzd:hover,
+ 	._26MVepkxZHzpNv1cuAA4JA:hover {
+ 		background-color: #1e90ff80 !important; 
+ 		
+
+ 	}
+ 	input, textarea, [contenteditable] {  		
+  		margin-top:  1px !important;
+	}
+}
