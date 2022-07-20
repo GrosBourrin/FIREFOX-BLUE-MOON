@@ -172,6 +172,44 @@ tooltip *{
 
 }*/
 
+
+tooltip {
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	border: 3px solid #1e1d2d !important;
+	padding: 4px 4px 4px 4px !important;
+	max-width: auto !important;
+	max-height: auto !important;
+	background-color: #1e1d2d !important;
+	color: yellow !important;
+	border-radius: 3px !important;
+	font-weight: 450 !important;
+	vertical-align: middle !important;
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+	tooltip {
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		border: 3px solid #1e1d2d !important;
+		padding: 4px 4px 4px 4px !important;
+		max-width: auto !important;
+		max-height: auto !important;
+		background-color: #1e1d2d !important;
+		color: yellow !important;
+		border-radius: 3px !important;
+		font-weight: 450 !important;
+		vertical-align: middle !important;
+
+	}
+}
+
+tooltip:not([position]) {
+	margin-top: 21px !important;
+}
+
 /* -------------------------------------------------------------------------- */
 #protections-popup-mainView-panel-header,
 #protections-popup-tp-switch-section,
@@ -388,7 +426,7 @@ menulist:-moz-focusring>menupopup>menuitem[_moz-menuactive="true"] {
 
 /* push submenus to right side with a little gutter */
 menupopup>menu>menupopup {
-	margin-inline-start: 7px !important;
+	margin-inline-start: 3px !important;
 }
 
 #PlacesToolbarItems menupopup>menu>menupopup {
@@ -834,8 +872,16 @@ panelmultiview .toolbaritem-combined-buttons>label {
 
 #editBookmarkHeaderSeparator,
 #editBookmarkSeparator {
-	background: #4F4F4F !important;
+	background: #4f4f4f !important;
 }
+
+/* hide separators arounf preview image */
+#editBookmarkPanel>#editBookmarkHeaderSeparator,
+#editBookmarkPanel>.panel-subview-body>#editBookmarkSeparator {
+	display: none !important;
+}
+
+/*--------------------------------------*/
 
 #editBMPanel_namePicker {
 	appearance: none !important;
@@ -1004,14 +1050,25 @@ checkbox[disabled]>.checkbox-check {
 
 #editBMPanel_newFolderButton {
 	appearance: none !important;
-	border-radius: 2px !important;
+	border-radius: 3px !important;
 	background: #1E90FF !important;
 	color: #FFFFFF !important;
-	padding: 0.1em !important;
+	/*padding: 0.1em !important;*/
 	margin-top: 0.1em !important;
 	margin-bottom: 0.1em !important;
-	border: none !important;
+	min-width: 0 !important;
+	padding: 8px 16px !important;
+	font-size: 14px !important;
+	margin-inline-start: 4px !important;
 }
+
+#editBMPanel_newFolderButton:hover {
+	background-color: #1e90ff80 !important;
+}
+
+
+
+
 
 /*#editBookmarkPanel button,*/
 #editBookmarkPanel textbox,
@@ -1055,6 +1112,7 @@ checkbox[disabled]>.checkbox-check {
 	border: none !important;
 	font-family: Fira Sans !important;
 	outline: none !important;
+	font-size: 14px !important;
 }
 
 /*
@@ -1064,6 +1122,12 @@ checkbox[disabled]>.checkbox-check {
 	border: none !important;
 }
 */
+#editBMPanel_folderTree treechildren::-moz-tree-cell-text {
+	font-family: Fira Sans !important;
+	outline: none !important;
+	font-size: 14px !important;
+}
+
 #editBMPanel_folderTree treechildren::-moz-tree-row(hover) {
 	background-color: #1E90FF80 !important;
 	background: #1E90FF80 !important;
@@ -1885,11 +1949,11 @@ tab:hover::after {
 	mask-image: unset !important;
 }
 */
-/*
+
 .tabbrowser-tab {
 	--tab-label-mask-size: 2em !important;
 }
-*/
+
 /* Effect */
 .urlbar-icon {
 	margin-top: 1px !important;
@@ -1979,6 +2043,7 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 
 .tab-label-container {
 	text-align: center !important;
+	/*padding-inline: 7px !important;*/
 }
 
 /*
@@ -2004,6 +2069,7 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	vertical-align: middle !important;
+	/*text-align: center !important;*/
 }
 
 /* lock icon in urlbar */
@@ -2353,12 +2419,12 @@ input:not(#urlbar-input) {
 
 .urlbarView,
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
-	background-image: url(noise-512x512.png) !important;
+	background-image: url("noise-512x512.png") !important;
 	background-position: center !important;
 	background-size: cover !important;
 	/*background-color: #ffffff70 !important;*/
-	background-color: #1E1D2Df0 !important;
-	backdrop-filter: blur(8px) !important;
+	background-color: #1E1D2De0 !important;
+	/*backdrop-filter: blur(8px) !important;*/
 	border-radius: 6px !important;
 }
 
@@ -2890,12 +2956,13 @@ treechildren {
 	text-shadow: 1px 1px 1px #000000, 0 0 2px #000000, 0 0 2px #000000 !important;
 	/*font-weight: bold !important;*/
 	vertical-align: middle !important;
+	/*text-align: center !important;*/
 }
 
 .tab-text {
 	color: #9e9e9e !important;
 	vertical-align: middle !important;
-	text-align: center !important;
+	/*text-align: center !important;*/
 }
 
 /*
@@ -3084,17 +3151,16 @@ treechildren {
 
 
 .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]) {
-
 	border-radius: 0px !important;
 }
 
 .tab-icon-overlay:is([soundplaying], [activemedia-blocked]):hover {
-	/*background-color: rgba(255, 0, 0, 0.5) !important;*/
+	background: none !important;
 	fill-opacity: 0.95 !important;
 }
 
 .tab-icon-overlay:is([muted], [activemedia-blocked]):hover {
-	background-color: transparent !important;
+	background: none !important;
 	/*fill-opacity: 0.95 !important;*/
 }
 
@@ -3115,31 +3181,31 @@ treechildren {
 	background: transparent !important;
 	width: 16px !important;
 	height: 30px !important;
-	margin-right: 0px !important;
+	margin-right: 0.5px !important;
 	vertical-align: middle !important;
 	filter: drop-shadow(0px 0px 2px #1e1d2d80) !important;
 }
 
 .tab-close-button {
-	/*width: unset !important;*/
 	padding-inline: 0 !important;
 }
 
+/*
 .tab-label,
 .tab-text {
 	padding-right: 4px !important;
-}
+}*/
 
 #tabbrowser-tabs .tabbrowser-tab:hover .tab-close-button {
 	transform: rotate(-90deg) !important;
 	transition: transform ease 0.4s !important;
 }
 
-
+/*
 #tabbrowser-tabs .tabbrowser-tab:hover .tab-label {
 	padding-inline: 0px !important;
 
-}
+}*/
 
 /* Ctrl-Tab *
 #ctrlTab-panel {
@@ -4696,7 +4762,7 @@ menupopup>menu {
 */
 
 /* -------------------------------------------------------------------------- */
-/*					  change l'odre du reload dans l'onglet 				  */
+/*change l'odre du reload dans l'onglet 			        */
 /* -------------------------------------------------------------------------- */
 #tabContextMenu #context_reloadTab,
 #tabContextMenu #context_reloadSelectedTabs {
@@ -4704,7 +4770,7 @@ menupopup>menu {
 }
 
 /* -------------------------------------------------------------------------- */
-/*					   add radius from buttons and tabs				   */
+/*	add radius from buttons and tabs			        */
 /* -------------------------------------------------------------------------- */
 *|*:root {
 	--toolbarbutton-border-radius: 3px !important;
@@ -4750,8 +4816,9 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 
 .tab-label-container {
 	display: grid !important;
-	/*justify-content: safe center !important;*/
+	justify-content: safe center !important;
 	text-align: center !important;
+
 }
 
 .tab-secondary-label {
@@ -4798,6 +4865,7 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 	max-height: 32px !important;
 	vertical-align: middle !important;
 	text-align: center !important;
+
 }
 
 #tab-background {
@@ -4887,6 +4955,10 @@ menupopup>menu {
 	--panel-padding: 8px !important;
 }
 
+#contentAreaContextMenu menuseparator:last-of-type {
+	display: none !important;
+}
+
 /*
 #main-window:not([uidensity=compact]):not([uidensity=touch]) #nav-bar #back-button + #forward-button {
 	margin-inline-start: -4px !important;
@@ -4964,7 +5036,7 @@ scrollbox[orient="horizontal"] {
 */
 /* .toolbarbutton-icon[src^="page-icon:https://github.com/*.*"]*/
 :root {
-	--uc-active-tab-width: clamp(180px, 30vw, 230px);
+	--uc-active-tab-width: clamp(180px, 30vw, 250px);
 	--uc-inactive-tab-width: clamp(80px, 30vw, 150px);
 }
 
@@ -5294,9 +5366,9 @@ and by default removes the tab secondary line
 /*? slide in animation when clicking on urlbar */
 #urlbar[breakout-extend] .urlbarView {
 	animation-name: urlbarExtend;
-	animation-duration: .45s;
+	animation-duration: .50s;
 	animation-iteration-count: 0.9;
-	animation-timing-function: ease;
+	animation-timing-function: ease-in-out;
 }
 
 @keyframes urlbarExtend {
@@ -5323,8 +5395,6 @@ and by default removes the tab secondary line
 		--checkmark: #FFFFFF !important;
 		--checkbox-checked-ink: #1E90FF !important;
 	}
-
-
 
 	html,
 	body,
@@ -5563,41 +5633,7 @@ tooltip {
 #urlTooltip,
 .places-tooltip,*/
 
-tooltip {
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	border: 3px solid #1e1d2d !important;
-	padding: 4px 4px 4px 4px !important;
-	max-width: auto !important;
-	max-height: auto !important;
-	background-color: #1e1d2d !important;
-	color: yellow !important;
-	border-radius: 3px !important;
-	font-weight: 450 !important;
-	vertical-align: middle !important;
-}
 
-@media (prefers-color-scheme: dark) {
-
-	tooltip {
-		font-family: Fira Sans !important;
-		font-size: 14px !important;
-		border: 3px solid #1e1d2d !important;
-		padding: 4px 4px 4px 4px !important;
-		max-width: auto !important;
-		max-height: auto !important;
-		background-color: #1e1d2d !important;
-		color: yellow !important;
-		border-radius: 3px !important;
-		font-weight: 450 !important;
-		vertical-align: middle !important;
-	}
-}
-
-
-tooltip:not([position]) {
-	margin-top: 21px !important;
-}
 
 /*
 @media (-moz-windows-default-theme) {
@@ -5608,13 +5644,10 @@ tooltip:not([position]) {
 		border-radius: 2px;
 	}
 */
-/* hide the last separator in contextual menus */
-#contentAreaContextMenu menuseparator:last-of-type {
-	display: none !important;
-}
 
 
+/* highlight color url address selected */
 #urlbar-input:-moz-lwtheme::selection,
 .searchbar-textbox:-moz-lwtheme::selection {
-	background-color: dodgerblue !important;
+	background-color: #1e90ff !important;
 }
