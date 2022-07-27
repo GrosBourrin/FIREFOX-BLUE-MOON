@@ -34,16 +34,17 @@
 	/*._2rszc84L136gWQrkwH6IaM,*/
 	.wBtTDilkW_rtT2k5x3eie,
 	._2jJNpBqXMbbyOiGCElTYxZ,
-	.uI_hDmU5GSiudtABRz_37,	
-	._1G4yU68P50vRZ4USXfaceV._2QeqBqfT5UbHBoViZUt-wX,	
- 	._1RYN-7H8gYctjOQeL8p2Q7,
- 	._3xuFbFM3vrCqdGuKGhhhn0 {
-  		background-color: #1e1d2d !important;
-  		border: 1px solid #1e1d2d !important;  		
+	.uI_hDmU5GSiudtABRz_37,
+	._1G4yU68P50vRZ4USXfaceV._2QeqBqfT5UbHBoViZUt-wX,
+	._1RYN-7H8gYctjOQeL8p2Q7,
+	._3xuFbFM3vrCqdGuKGhhhn0 {
+		background-color: #1e1d2d !important;
+		border: 1px solid #1e1d2d !important;
 	}
+
 	._ZhON3a3vplThB8NFwuJn,
 	._2M2wOqmeoPVvcSsJ6Po9-V,
-	.Pbz3gpOA6rvqdYoX_pOjn,	
+	.Pbz3gpOA6rvqdYoX_pOjn,
 	._1poyrkZ7g36PawDueRza-J,
 	._20fGT0XJD3MvX9yBsVeKMn,
 	._2YcMhGs5-uIg9Fj4a9J2Xr,
@@ -54,10 +55,10 @@
 	._2u8LqkbMtzd0lpblMFbJq5,
 	._3Oa0THmZ3f5iZXAQ0hBJ0k,
 	.m3aNC6yp8RrNM_-a0rrfa,
-	figure._3BxRNDoASi9FbGX01ewiLg  {
-  		background-color: #1e1d2d !important;  		
-  		border-color:  transparent !important;
- 	}
+	figure._3BxRNDoASi9FbGX01ewiLg {
+		background-color: #1e1d2d !important;
+		border-color: transparent !important;
+	}
 
 	._34q3PgLsx9zIU5BiSOjFoM,
 	._3GnarIQX9tD_qsgXkfSDz1 {
@@ -72,11 +73,17 @@
 	._1K7ubH9z5v9E6C19j2fjQU,
 	.h-jI8r2f9ozTNqu_2TBeY,
 	.header-subreddit-filter,
-	._37tmRmxaFMjRRrvwcY2JmY *{  		
+	._37tmRmxaFMjRRrvwcY2JmY * {
 		background: #000000 !important;
 		color: #ffffff !important;
 		border-radius: 6px important;
-		border:  none !important;
+		border: none !important;
+	}
+
+	._2ED-O3JtIcOqp8iIL1G5cg {
+		background: #000000 !important;
+		border: none !important;
+
 	}
 
 	._3wl1bRnSzxHkKJfvqakrNI,
@@ -142,17 +149,20 @@
 		--postTitle-VisitedLinkColor: dodgerblue !important;
 		--postTitleLink-VisitedLinkColor: dodgerblue !important;
 	}
+
 	._2Mq93X6GCESH9CsQ6XVqOS {
-  	         color: #ffffff !important;
-  	         background-color:  transparent !important;
+		color: #ffffff !important;
+		background-color: transparent !important;
 	}
+
 	._2Mq93X6GCESH9CsQ6XVqOS:hover {
-  	         color: #ffffff !important;
-  	         background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+		background-color: #1e90ff80 !important;
 	}
+
 	._2Mq93X6GCESH9CsQ6XVqOS:focus {
-  	         color: #ffffff !important;
-  	         background-color: #1e90ff !important;
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
 	}
 
 }
