@@ -58,6 +58,7 @@ button::-moz-focus-inner,
 	/*--toolbar-field-focus-background-color: blue !important;*/
 	caret-color: #1E90FF !important;
 	--default-search-identity-icon: url("Google.svg") !important;
+
 }
 
 /* -------------------------------------------------------------------------- */
@@ -115,99 +116,55 @@ scrollbox[orient="horizontal"] {
 /* -------------------------------------------------------------------------- */
 /* -------------------------------- tooltips -------------------------------- */
 /* -------------------------------------------------------------------------- */
-/*
-#places-tooltip-insecure-icon,
-#btTooltip,
-#bhTooltip,
-#un-toolbar-tooltip,
-#tooltip,
-.tooltip,
-#aHTMLTooltip,
-#urlTooltip,
-.places-tooltip,
-#tabbrowser-tab-tooltip,
-tooltip {
-	appearance: none !important;
-	color: yellow !important;
-	width: auto !important;
-	height: auto !important;
-	background: #1E1D2D !important;
-	border: 3px solid #1E1D2D !important;
-
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	opacity: 1 !important;
-
-	border-radius: 4px !important;
-	vertical-align: middle !important;
-	margin-bottom: 0px !important;
-	margin-left: 4px !important;
-	margin-right: 4px !important;
-}*/
-/*
-.tooltip-label {
-	margin-left: 4px !important;
-	margin-right:  4px !important;
-	margin-inline:  4px !important;
-	vertical-align: middle !important;
-}
-*/
-/*
-tooltip *{
-	color: yellow !important;
-	width: auto !important;
-	height: auto !important;
-	background: #1E1D2D !important;
-	border: 1px solid #1E1D2D !important;
-
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	opacity: 1 !important;
-
-	border-radius: 4px !important;
-	vertical-align: middle !important;
-	overflow: hidden !important;
-	margin-bottom: 0px !important;
-
-
-}*/
-
 
 tooltip {
 	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	border: 3px solid #1e1d2d !important;
-	padding: 4px 4px 4px 4px !important;
+	font-size: 13px !important;
+	border: 2px solid #1e1d2d !important;
+	padding: 5px 5px 5px 5px !important;
 	max-width: auto !important;
 	max-height: auto !important;
 	background-color: #1e1d2d !important;
 	color: yellow !important;
 	border-radius: 3px !important;
-	font-weight: 450 !important;
+	/*font-weight: 450 !important;*/
 	vertical-align: middle !important;
 
 }
 
-@media (prefers-color-scheme: dark) {
 
-	tooltip {
-		font-family: Fira Sans !important;
-		font-size: 14px !important;
-		border: 3px solid #1e1d2d !important;
-		padding: 4px 4px 4px 4px !important;
-		max-width: auto !important;
-		max-height: auto !important;
-		background-color: #1e1d2d !important;
-		color: yellow !important;
-		border-radius: 3px !important;
-		font-weight: 450 !important;
-		vertical-align: middle !important;
-
-	}
-}
 
 tooltip:not([position]) {
 	margin-top: 21px !important;
+}
+
+#tab-nav-popup {
+	--tooltip-border-radius: 3px !important;
+
+}
+
+.places-tooltip-box,
+tooltip .uc-tooltip-box {
+	--uc-tooltip-inner-padding: 5px 5px 5px 5px !important;
+}
+
+.places-tooltip description:not([value], [id]):empty,
+.places-tooltip description[value=""]:not([id]):empty {
+	display: none !important;
+}
+
+.places-tooltip-box>hbox {
+	display: flex !important;
+	align-items: center !important;
+}
+
+tooltip-title,
+.places-tooltip-title {
+	font-weight: 600 !important;
+	font-size: 15px !important;
+	max-height: auto !important;
+	overflow-y: clip !important;
+	max-width: auto !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -327,6 +284,8 @@ menuitem {
 	border: none !important;
 	box-shadow: none !important;
 	/*box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.5) !important;*/
+
+
 }
 
 menu:hover,
@@ -349,12 +308,13 @@ menulist[open="true"] {
 	border-radius: 3px !important;
 	outline: none !important;
 	outline-offset: none !important;
+
 }
 
 menuitem[disabled="true"],
 menuitem[disabled="true"]>.menu-text {
 	appearance: none !important;
-	color: #9e9e9e !important;
+	color: #9f9f9f !important;
 	filter: drop-shadow(0px 0px 2px #1E1D2D) !important;
 }
 
@@ -446,7 +406,6 @@ menuitem .menu-accel {
 .menu-iconic-icon,
 .menu-iconic-left {
 	margin-bottom: 1px !important;
-	color: #FFFFFF !important;
 }
 
 
@@ -1208,7 +1167,7 @@ checkbox[disabled]>.checkbox-check {
 
 #editBookmarkPanelRows>vbox>html|input:focus-visible,
 #editBookmarkPanelRows>vbox>hbox>html|input:focus-visible {
-	outline: 0px solid var(--focus-outline-color) !important;
+	outline: 0px !important;
 	color: #FFFFFF !important;
 	background: #000000 !important;
 }
@@ -1582,6 +1541,7 @@ treechildren::-moz-tree-image(query) {
 #sidebar-close {
 	list-style-image: url("KnobCancel.ico") !important;
 	background-color: transparent !important;
+	width: 14px !important;
 	transform: scale(70%) !important;
 	margin-right: 6px !important;
 }
@@ -2419,9 +2379,9 @@ input:not(#urlbar-input) {
 
 .urlbarView,
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
-	background-image: url("noise-512x512.png") !important;
+	/*background-image: url("noise-512x512.png") !important;
 	background-position: center !important;
-	background-size: cover !important;
+	background-size: cover !important;*/
 	/*background-color: #ffffff70 !important;*/
 	background-color: #1E1D2De0 !important;
 	/*backdrop-filter: blur(8px) !important;*/
@@ -4229,7 +4189,7 @@ button.panel-button {
 }
 */
 #tabbrowser-tabpanels {
-	background-color: #1E1D2D !important;
+	background-color: #1e1d2d !important;
 	color: #FFFFFF !important;
 }
 
@@ -5128,9 +5088,8 @@ tab>.tab-stack>.tab-background {
 
 }
 */
-
-.menu-left>.menu-iconic-icon[src^="page-icon:https://github.com/*.*"] image,
-.menuitem-iconic.bookmark-item.menuitem-with-favicon[src^="page-icon:https://github.com/*.*"],
+.menu-left>.menu-iconic-left[src^="page-icon:https://github.com/"] image,
+.menuitem-iconic.bookmark-item.menuitem-with-favicon[src^="page-icon:https://github.com/"] image,
 .toolbarbutton-icon[src^="page-icon:https://github.com.*"],
 .menuitem-iconic.bookmark-item.menuitem-with-favicon[label="GitHub"] image,
 .menuitem-iconic-icon[src^="page-icon:https://github.com/*.*"] image,
@@ -5140,6 +5099,7 @@ tab>.tab-stack>.tab-background {
 	padding: 0 0 16px 16px !important;
 	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDQzOC41NDkgNDM4LjU0OSIgd2lkdGg9IjQzOC41NDlwdCIgaGVpZ2h0PSI0MzguNTQ5cHQiPjxkZWZzPjxjbGlwUGF0aCBpZD0iX2NsaXBQYXRoXzg3QXhvTjhPanFCRmEzQ3dVTlAwTzMxZ1U1Z2JteUNwIj48cmVjdCB3aWR0aD0iNDM4LjU0OSIgaGVpZ2h0PSI0MzguNTQ5Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF84N0F4b044T2pxQkZhM0N3VU5QME8zMWdVNWdibXlDcCkiPjxwYXRoIGQ9IiBNIDQwOS4xMzIgMTE0LjU3MyBDIDM4OS41MjQgODAuOTc3IDM2Mi45MjcgNTQuMzc5IDMyOS4zMzQgMzQuNzczIEMgMjk1LjczNiAxNS4xNjYgMjU5LjA1NyA1LjM2NSAyMTkuMjcxIDUuMzY1IEMgMTc5LjQ5IDUuMzY1IDE0Mi43OTkgMTUuMTY5IDEwOS4yMDggMzQuNzczIEMgNzUuNjEyIDU0LjM3OCA0OS4wMTYgODAuOTc3IDI5LjQwOCAxMTQuNTczIEMgOS44MDMgMTQ4LjE2OCAwIDE4NC44NTQgMCAyMjQuNjMgQyAwIDI3Mi40MSAxMy45NCAzMTUuMzc1IDQxLjgyNyAzNTMuNTM2IEMgNjkuNzExIDM5MS43IDEwNS43MzMgNDE4LjEwOCAxNDkuODkgNDMyLjc2MyBDIDE1NS4wMyA0MzMuNzE3IDE1OC44MzUgNDMzLjA0NiAxNjEuMzA5IDQzMC43NjcgQyAxNjMuNzg0IDQyOC40ODUgMTY1LjAyIDQyNS42MjcgMTY1LjAyIDQyMi4yMDUgQyAxNjUuMDIgNDIxLjYzNCAxNjQuOTcxIDQxNi40OTcgMTY0Ljg3NiA0MDYuNzg4IEMgMTY0Ljc3OCAzOTcuMDc5IDE2NC43MzIgMzg4LjYwOSAxNjQuNzMyIDM4MS4zODIgTCAxNTguMTY1IDM4Mi41MTggQyAxNTMuOTc4IDM4My4yODUgMTQ4LjY5NiAzODMuNjEgMTQyLjMxOSAzODMuNTE4IEMgMTM1Ljk0NSAzODMuNDI5IDEyOS4zMjggMzgyLjc2MSAxMjIuNDc3IDM4MS41MTkgQyAxMTUuNjIzIDM4MC4yODggMTA5LjI0OCAzNzcuNDMzIDEwMy4zNDcgMzcyLjk2IEMgOTcuNDQ5IDM2OC40ODcgOTMuMjYyIDM2Mi42MzIgOTAuNzg3IDM1NS40MDQgTCA4Ny45MzIgMzQ4LjgzNCBDIDg2LjAyOSAzNDQuNDYgODMuMDMzIDMzOS42MDEgNzguOTQgMzM0LjI3NSBDIDc0Ljg0NyAzMjguOTQ0IDcwLjcwOCAzMjUuMzMgNjYuNTIxIDMyMy40MjcgTCA2NC41MjIgMzIxLjk5NiBDIDYzLjE5IDMyMS4wNDUgNjEuOTU0IDMxOS44OTggNjAuODExIDMxOC41NjcgQyA1OS42NjkgMzE3LjIzNiA1OC44MTQgMzE1LjkwNCA1OC4yNDMgMzE0LjU3IEMgNTcuNjcxIDMxMy4yMzUgNTguMTQ1IDMxMi4xNCA1OS42NyAzMTEuMjgxIEMgNjEuMTk1IDMxMC40MjIgNjMuOTUxIDMxMC4wMDUgNjcuOTUgMzEwLjAwNSBMIDczLjY1OCAzMTAuODU4IEMgNzcuNDY1IDMxMS42MjEgODIuMTc0IDMxMy45IDg3Ljc5MSAzMTcuNzA5IEMgOTMuNDA1IDMyMS41MTUgOTguMDIgMzI2LjQ2MyAxMDEuNjM3IDMzMi41NTEgQyAxMDYuMDE3IDM0MC4zNTcgMTExLjI5NCAzNDYuMzA1IDExNy40ODMgMzUwLjM5OCBDIDEyMy42NjcgMzU0LjQ5MSAxMjkuOTAyIDM1Ni41MzQgMTM2LjE4MiAzNTYuNTM0IEMgMTQyLjQ2MiAzNTYuNTM0IDE0Ny44ODYgMzU2LjA1OCAxNTIuNDU2IDM1NS4xMTEgQyAxNTcuMDIxIDM1NC4xNTkgMTYxLjMwNCAzNTIuNzI4IDE2NS4zMDMgMzUwLjgyNiBDIDE2Ny4wMTYgMzM4LjA2OCAxNzEuNjggMzI4LjI2NyAxNzkuMjkxIDMyMS40MTYgQyAxNjguNDQzIDMyMC4yNzYgMTU4LjY5IDMxOC41NTkgMTUwLjAyNyAzMTYuMjc2IEMgMTQxLjM2OSAzMTMuOTkgMTMyLjQyMiAzMTAuMjggMTIzLjE5MiAzMDUuMTM2IEMgMTEzLjk1NyAyOTkuOTk5IDEwNi4yOTYgMjkzLjYyIDEwMC4yMDcgMjg2LjAxIEMgOTQuMTE3IDI3OC4zOTYgODkuMTE5IDI2OC40IDg1LjIyIDI1Ni4wMzEgQyA4MS4zMTkgMjQzLjY1NyA3OS4zNjggMjI5LjM4MyA3OS4zNjggMjEzLjIwNSBDIDc5LjM2OCAxOTAuMTcgODYuODg4IDE3MC41NjggMTAxLjkyNSAxNTQuMzg4IEMgOTQuODgxIDEzNy4wNyA5NS41NDYgMTE3LjY1NiAxMDMuOTIyIDk2LjE0OCBDIDEwOS40NDIgOTQuNDMzIDExNy42MjggOTUuNzIgMTI4LjQ3NiAxMDAuMDAxIEMgMTM5LjMyNiAxMDQuMjg0IDE0Ny4yNyAxMDcuOTUzIDE1Mi4zMTYgMTEwLjk5NSBDIDE1Ny4zNjIgMTE0LjAzNiAxNjEuNDA1IDExNi42MTMgMTY0LjQ1MSAxMTguNzAzIEMgMTgyLjE1NiAxMTMuNzU2IDIwMC40MjcgMTExLjI4MiAyMTkuMjY5IDExMS4yODIgQyAyMzguMTExIDExMS4yODIgMjU2LjM4NiAxMTMuNzU2IDI3NC4wOTIgMTE4LjcwMyBMIDI4NC45NDEgMTExLjg1NCBDIDI5Mi4zNiAxMDcuMjg0IDMwMS4xMjEgMTAzLjA5NiAzMTEuMjAzIDk5LjI4OSBDIDMyMS4yOTEgOTUuNDg0IDMyOS4wMDUgOTQuNDM2IDMzNC4zMzcgOTYuMTUxIEMgMzQyLjg5OSAxMTcuNjYgMzQzLjY2MiAxMzcuMDczIDMzNi42MTYgMTU0LjM5MSBDIDM1MS42NTIgMTcwLjU3MSAzNTkuMTc1IDE5MC4xNzggMzU5LjE3NSAyMTMuMjA4IEMgMzU5LjE3NSAyMjkuMzg2IDM1Ny4yMTcgMjQzLjcwNSAzNTMuMzIyIDI1Ni4xNzQgQyAzNDkuNDIyIDI2OC42NDUgMzQ0LjM4MSAyNzguNjMxIDMzOC4xOTcgMjg2LjE1MyBDIDMzMi4wMDYgMjkzLjY3NCAzMjQuMjk2IDMwMC4wMDMgMzE1LjA2NiAzMDUuMTM5IEMgMzA1LjgzNCAzMTAuMjc5IDI5Ni44ODQgMzEzLjk4OSAyODguMjI2IDMxNi4yNzUgQyAyNzkuNTY0IDMxOC41NjEgMjY5LjgxMSAzMjAuMjc5IDI1OC45NjMgMzIxLjQyMSBDIDI2OC44NTcgMzI5Ljk4MyAyNzMuODA1IDM0My40OTggMjczLjgwNSAzNjEuOTYgTCAyNzMuODA1IDQyMi4xOTcgQyAyNzMuODA1IDQyNS42MTkgMjc0Ljk5NSA0MjguNDc2IDI3Ny4zNzcgNDMwLjc1OSBDIDI3OS43NTYgNDMzLjAzOCAyODMuNTEzIDQzMy43MDkgMjg4LjY1MyA0MzIuNzU0IEMgMzMyLjgxNiA0MTguMTAxIDM2OC44MzggMzkxLjY5MiAzOTYuNzIxIDM1My41MjggQyA0MjQuNjAxIDMxNS4zNjcgNDM4LjU0NiAyNzIuNDAyIDQzOC41NDYgMjI0LjYyMiBDIDQzOC41MzYgMTg0Ljg1MSA0MjguNzI4IDE0OC4xNjggNDA5LjEzMiAxMTQuNTczIFogIiBmaWxsPSJyZ2IoMjU1LDI1NSwyNTUpIi8+PC9nPjwvc3ZnPg==") !important;
 	background-size: cover !important;
+	filter: drop-shadow(0px 0px 8px #ffffff) !important;
 }
 
 /*
@@ -5273,7 +5233,7 @@ and by default removes the tab secondary line
 }
 
 #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
-	fill: #1fa2ff !important;
+	fill: #1e90ff !important;
 	fill-opacity: 1 !important;
 	transition: 100ms linear !important;
 }
@@ -5286,6 +5246,8 @@ and by default removes the tab secondary line
 
 #identity-popup[connection^="secure"] .identity-popup-security-connection {
 	fill: #12bc00 !important;
+	fill-opacity: 1 !important;
+	transition: 100ms linear !important;
 }
 
 /* Red */
@@ -5308,7 +5270,9 @@ and by default removes the tab secondary line
 }
 
 .identity-popup-security-connection {
-	fill: #de0000;
+	fill: #de0000 !important;
+	fill-opacity: 1 !important;
+	transition: 100ms linear !important;
 }
 
 /* Orange */
@@ -5319,12 +5283,14 @@ and by default removes the tab secondary line
 }
 
 #identity-popup[mixedcontent~="passive-loaded"][isbroken] .identity-popup-security-connection {
-	fill: #ff9900 !important;
+	fill: #ff6000 !important;
+	fill-opacity: 1 !important;
+	transition: 100ms linear !important;
 }
 
 /* Yellow */
 #identity-box[pageproxystate="valid"].mixedDisplayContentLoadedActiveBlocked #identity-icon {
-	fill: #e6b000 !important;
+	fill: #e60150 !important;
 	fill-opacity: 1 !important;
 	transition: 100ms linear !important;
 }
@@ -5361,6 +5327,7 @@ and by default removes the tab secondary line
 	padding-left: 25px !important;
 
 }
+
 
 
 /*? slide in animation when clicking on urlbar */
@@ -5571,83 +5538,41 @@ and by default removes the tab secondary line
 	opacity: 1 !important;
 }
 
-/*
-.tabbrowser-tab:-moz-any([image], [pinned])>.tab-stack>.tab-content[attention]:not([selected=“true”]),
-.tabbrowser-tab>.tab-stack>.tab-content[pinned][titlechanged]:not([selected=“true”]) {
-	border-top: 2px solid #e83535 !important;
-	background-image: none !important;
-}
-
-*/
-/*
-#urlbar{
-	background: #1e1d2d !important;
-}
-#urlbar-input{
-	color: dodgerblue !important;
-	filter: brightness(1.8) hue-rotate(-20deg) contrast(1.5) !important;
-}*/
-/* fake tooltips
-.tabbrowser-tab:hover::after {
-	display: block;
-	content: attr(label);
-	background: #1e1d2d;
-	border: 1px solid var(--arrowpanel-border-color);
-	color: yellow;
-	padding: 0.3em;
-	position: fixed;
-	transform: translateY(calc(var(--tab-min-height) + 2 * var(--tab-block-margin)));
-	z-index: 2;
-	color-scheme: dark;
-	border-radius: 5px;
-	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
-}
-*/
-/*
-tooltip {
-	appearance:  none !important;
-	border: 0px solid !important;
-	margin-inline: 4px !important;
-	padding: 4px !important;
-	width: auto !important;
-	background-color: #1e1d2d !important;
-	color: yellow !important;
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	font-weight: 400  !important;
-	overflow:  hidden !important;
-}
-*/
-/*
-.tooltip-label {
-  min-width: unset;
-  width: 225px;
-}*/
-/*#places-tooltip-insecure-icon,
-#btTooltip,
-#bhTooltip,
-#un-toolbar-tooltip,
-#tooltip,
-.tooltip,
-#aHTMLTooltip,
-#urlTooltip,
-.places-tooltip,*/
-
-
-
-/*
-@media (-moz-windows-default-theme) {
-	tooltip {
-		background-color: #f9f9fb;
-		color: black;
-		border-color: #67676c;
-		border-radius: 2px;
-	}
-*/
-
-
-/* highlight color url address selected */
 #urlbar-input:-moz-lwtheme::selection,
 .searchbar-textbox:-moz-lwtheme::selection {
 	background-color: #1e90ff !important;
+}
+
+/* hide the last separator in contextual menus */
+.urlbar[usertyping] .urlbarView-row:not([type]):first-child,
+.urlbar[usertyping] .urlbarView-row[type="search"]:first-of-a-child,
+.urlbarView-row[type="tabtosearch"] {
+	display: none !important;
+}
+
+
+/* github icon white on dark */
+.bookmark-item[image*="page-icon:https://github.com/"]>.toolbarbutton-icon {
+
+	display: none !important;
+
+}
+
+.bookmark-item[image*="page-icon:https://github.com/"]::before {
+
+	content: '' !important;
+	display: block !important;
+	width: 16px !important;
+	height: 16px !important;
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDQzOC41NDkgNDM4LjU0OSIgd2lkdGg9IjQzOC41NDlwdCIgaGVpZ2h0PSI0MzguNTQ5cHQiPjxkZWZzPjxjbGlwUGF0aCBpZD0iX2NsaXBQYXRoXzg3QXhvTjhPanFCRmEzQ3dVTlAwTzMxZ1U1Z2JteUNwIj48cmVjdCB3aWR0aD0iNDM4LjU0OSIgaGVpZ2h0PSI0MzguNTQ5Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF84N0F4b044T2pxQkZhM0N3VU5QME8zMWdVNWdibXlDcCkiPjxwYXRoIGQ9IiBNIDQwOS4xMzIgMTE0LjU3MyBDIDM4OS41MjQgODAuOTc3IDM2Mi45MjcgNTQuMzc5IDMyOS4zMzQgMzQuNzczIEMgMjk1LjczNiAxNS4xNjYgMjU5LjA1NyA1LjM2NSAyMTkuMjcxIDUuMzY1IEMgMTc5LjQ5IDUuMzY1IDE0Mi43OTkgMTUuMTY5IDEwOS4yMDggMzQuNzczIEMgNzUuNjEyIDU0LjM3OCA0OS4wMTYgODAuOTc3IDI5LjQwOCAxMTQuNTczIEMgOS44MDMgMTQ4LjE2OCAwIDE4NC44NTQgMCAyMjQuNjMgQyAwIDI3Mi40MSAxMy45NCAzMTUuMzc1IDQxLjgyNyAzNTMuNTM2IEMgNjkuNzExIDM5MS43IDEwNS43MzMgNDE4LjEwOCAxNDkuODkgNDMyLjc2MyBDIDE1NS4wMyA0MzMuNzE3IDE1OC44MzUgNDMzLjA0NiAxNjEuMzA5IDQzMC43NjcgQyAxNjMuNzg0IDQyOC40ODUgMTY1LjAyIDQyNS42MjcgMTY1LjAyIDQyMi4yMDUgQyAxNjUuMDIgNDIxLjYzNCAxNjQuOTcxIDQxNi40OTcgMTY0Ljg3NiA0MDYuNzg4IEMgMTY0Ljc3OCAzOTcuMDc5IDE2NC43MzIgMzg4LjYwOSAxNjQuNzMyIDM4MS4zODIgTCAxNTguMTY1IDM4Mi41MTggQyAxNTMuOTc4IDM4My4yODUgMTQ4LjY5NiAzODMuNjEgMTQyLjMxOSAzODMuNTE4IEMgMTM1Ljk0NSAzODMuNDI5IDEyOS4zMjggMzgyLjc2MSAxMjIuNDc3IDM4MS41MTkgQyAxMTUuNjIzIDM4MC4yODggMTA5LjI0OCAzNzcuNDMzIDEwMy4zNDcgMzcyLjk2IEMgOTcuNDQ5IDM2OC40ODcgOTMuMjYyIDM2Mi42MzIgOTAuNzg3IDM1NS40MDQgTCA4Ny45MzIgMzQ4LjgzNCBDIDg2LjAyOSAzNDQuNDYgODMuMDMzIDMzOS42MDEgNzguOTQgMzM0LjI3NSBDIDc0Ljg0NyAzMjguOTQ0IDcwLjcwOCAzMjUuMzMgNjYuNTIxIDMyMy40MjcgTCA2NC41MjIgMzIxLjk5NiBDIDYzLjE5IDMyMS4wNDUgNjEuOTU0IDMxOS44OTggNjAuODExIDMxOC41NjcgQyA1OS42NjkgMzE3LjIzNiA1OC44MTQgMzE1LjkwNCA1OC4yNDMgMzE0LjU3IEMgNTcuNjcxIDMxMy4yMzUgNTguMTQ1IDMxMi4xNCA1OS42NyAzMTEuMjgxIEMgNjEuMTk1IDMxMC40MjIgNjMuOTUxIDMxMC4wMDUgNjcuOTUgMzEwLjAwNSBMIDczLjY1OCAzMTAuODU4IEMgNzcuNDY1IDMxMS42MjEgODIuMTc0IDMxMy45IDg3Ljc5MSAzMTcuNzA5IEMgOTMuNDA1IDMyMS41MTUgOTguMDIgMzI2LjQ2MyAxMDEuNjM3IDMzMi41NTEgQyAxMDYuMDE3IDM0MC4zNTcgMTExLjI5NCAzNDYuMzA1IDExNy40ODMgMzUwLjM5OCBDIDEyMy42NjcgMzU0LjQ5MSAxMjkuOTAyIDM1Ni41MzQgMTM2LjE4MiAzNTYuNTM0IEMgMTQyLjQ2MiAzNTYuNTM0IDE0Ny44ODYgMzU2LjA1OCAxNTIuNDU2IDM1NS4xMTEgQyAxNTcuMDIxIDM1NC4xNTkgMTYxLjMwNCAzNTIuNzI4IDE2NS4zMDMgMzUwLjgyNiBDIDE2Ny4wMTYgMzM4LjA2OCAxNzEuNjggMzI4LjI2NyAxNzkuMjkxIDMyMS40MTYgQyAxNjguNDQzIDMyMC4yNzYgMTU4LjY5IDMxOC41NTkgMTUwLjAyNyAzMTYuMjc2IEMgMTQxLjM2OSAzMTMuOTkgMTMyLjQyMiAzMTAuMjggMTIzLjE5MiAzMDUuMTM2IEMgMTEzLjk1NyAyOTkuOTk5IDEwNi4yOTYgMjkzLjYyIDEwMC4yMDcgMjg2LjAxIEMgOTQuMTE3IDI3OC4zOTYgODkuMTE5IDI2OC40IDg1LjIyIDI1Ni4wMzEgQyA4MS4zMTkgMjQzLjY1NyA3OS4zNjggMjI5LjM4MyA3OS4zNjggMjEzLjIwNSBDIDc5LjM2OCAxOTAuMTcgODYuODg4IDE3MC41NjggMTAxLjkyNSAxNTQuMzg4IEMgOTQuODgxIDEzNy4wNyA5NS41NDYgMTE3LjY1NiAxMDMuOTIyIDk2LjE0OCBDIDEwOS40NDIgOTQuNDMzIDExNy42MjggOTUuNzIgMTI4LjQ3NiAxMDAuMDAxIEMgMTM5LjMyNiAxMDQuMjg0IDE0Ny4yNyAxMDcuOTUzIDE1Mi4zMTYgMTEwLjk5NSBDIDE1Ny4zNjIgMTE0LjAzNiAxNjEuNDA1IDExNi42MTMgMTY0LjQ1MSAxMTguNzAzIEMgMTgyLjE1NiAxMTMuNzU2IDIwMC40MjcgMTExLjI4MiAyMTkuMjY5IDExMS4yODIgQyAyMzguMTExIDExMS4yODIgMjU2LjM4NiAxMTMuNzU2IDI3NC4wOTIgMTE4LjcwMyBMIDI4NC45NDEgMTExLjg1NCBDIDI5Mi4zNiAxMDcuMjg0IDMwMS4xMjEgMTAzLjA5NiAzMTEuMjAzIDk5LjI4OSBDIDMyMS4yOTEgOTUuNDg0IDMyOS4wMDUgOTQuNDM2IDMzNC4zMzcgOTYuMTUxIEMgMzQyLjg5OSAxMTcuNjYgMzQzLjY2MiAxMzcuMDczIDMzNi42MTYgMTU0LjM5MSBDIDM1MS42NTIgMTcwLjU3MSAzNTkuMTc1IDE5MC4xNzggMzU5LjE3NSAyMTMuMjA4IEMgMzU5LjE3NSAyMjkuMzg2IDM1Ny4yMTcgMjQzLjcwNSAzNTMuMzIyIDI1Ni4xNzQgQyAzNDkuNDIyIDI2OC42NDUgMzQ0LjM4MSAyNzguNjMxIDMzOC4xOTcgMjg2LjE1MyBDIDMzMi4wMDYgMjkzLjY3NCAzMjQuMjk2IDMwMC4wMDMgMzE1LjA2NiAzMDUuMTM5IEMgMzA1LjgzNCAzMTAuMjc5IDI5Ni44ODQgMzEzLjk4OSAyODguMjI2IDMxNi4yNzUgQyAyNzkuNTY0IDMxOC41NjEgMjY5LjgxMSAzMjAuMjc5IDI1OC45NjMgMzIxLjQyMSBDIDI2OC44NTcgMzI5Ljk4MyAyNzMuODA1IDM0My40OTggMjczLjgwNSAzNjEuOTYgTCAyNzMuODA1IDQyMi4xOTcgQyAyNzMuODA1IDQyNS42MTkgMjc0Ljk5NSA0MjguNDc2IDI3Ny4zNzcgNDMwLjc1OSBDIDI3OS43NTYgNDMzLjAzOCAyODMuNTEzIDQzMy43MDkgMjg4LjY1MyA0MzIuNzU0IEMgMzMyLjgxNiA0MTguMTAxIDM2OC44MzggMzkxLjY5MiAzOTYuNzIxIDM1My41MjggQyA0MjQuNjAxIDMxNS4zNjcgNDM4LjU0NiAyNzIuNDAyIDQzOC41NDYgMjI0LjYyMiBDIDQzOC41MzYgMTg0Ljg1MSA0MjguNzI4IDE0OC4xNjggNDA5LjEzMiAxMTQuNTczIFogIiBmaWxsPSJyZ2IoMjU1LDI1NSwyNTUpIi8+PC9nPjwvc3ZnPg==") !important;
+	background-size: 16px !important;
+	margin-right: 4px !important;
+}
+
+.bookmark-item[image*="page-icon:https://github.com/"]>.menu-iconic-left {
+	display: none !important;
+}
+
+.bookmark-item[image*="page-icon:https://github.com/"]>.menu-iconic-text {
+	padding-inline-start: 4px !important;
 }
