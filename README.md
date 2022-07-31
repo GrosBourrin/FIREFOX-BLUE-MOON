@@ -9,7 +9,8 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) f
 
 **about Firefox box**
 
-![firefox_1KizBbtuHy](https://user-images.githubusercontent.com/40931468/154449012-f5b0ee16-117d-45be-9314-b44b8a460825.gif)
+![firefox_7nuseyYEDg](https://user-images.githubusercontent.com/40931468/182013803-396c9607-bc57-485c-b754-4781cc87a966.gif)
+
 
 **AutoHide bookmarks bar**
 
