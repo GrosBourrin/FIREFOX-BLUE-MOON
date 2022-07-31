@@ -5,7 +5,7 @@
 
 **Note: it's a work in progress not a final theme, just for my using and fun**
 
-I want to thank https://github.com/MrOtherGuy for its help and folks of Reddit https://www.reddit.com/r/FirefoxCSS/ for their help and inspiration
+I want to thank (https://github.com/MrOtherGuy) for its help and folks of Reddit https://www.reddit.com/r/FirefoxCSS/ for their help and inspiration
 
 **about Firefox box**
 
