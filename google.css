@@ -59,22 +59,23 @@
 	body {
 		background: #1E1D2D !important;
 	}
-
-	/*a:link {
+/*
+	a:link * {
 		color: #1e90ff !important;
 	}
 
-	a:visited {
+	a:visited * {
 		color: #1e90ff50 !important;
 	}
 
-	a:hover {
+	a:hover * {
 		color: #1e90ff80 !important;
 	}
 
-	a:active {
+	a:active * {
 		color: #1e90ff !important;
 	}*/
+
 	.pjBVq,
 	div,
 	article,
@@ -92,7 +93,8 @@
 	}
 
 	.FKF6mc.TpQm9d.ZqhUjb.ztUP4e.tHCKTc.kTeh9.cd29Sd.dHeVVb.lSLCF.Xcw0p,
-	.rdp59b {
+	.rdp59b,
+	article.IFHyqb {
 		color: #1e90ff !important;
 	}
 
@@ -107,7 +109,8 @@
 	.gb_Md,
 	.gb_Fd,
 	.gb_Jd,
-	.gb_Qe {
+	.gb_Qe,
+	.gb_Se {
 		background-color: #1E1D2D !important;
 		color: white !important;
 		box-shadow: none !important;
@@ -200,6 +203,7 @@
 
 	c-wiz {
 		background-color: #1E1D2D !important;
+		font-family: Fira Sans !important;
 	}
 
 	.QmrVtf,
@@ -208,7 +212,6 @@
 	.wsLqz,
 	a.SVJrMe {
 		color: dodgerblue !important;
-
 		filter: brightness(1) !important;
 		filter: opacity(100%) !important;
 	}
@@ -238,4 +241,199 @@
 		outline: #1e90ff 1px !important;
 		border-radius: 4px !important;
 	}
+
+	h2,
+	a * {
+		font-family: Fira Sans !important;
+	}
+
+	
+	.jKHa4e {
+		text-decoration: none !important;
+		background: #1e90ff !important;
+		color: white !important;
+		font-size: 14px !important;
+
+	}
+
+	
+	.jKHa4e:hover {
+		text-decoration: none !important;
+		background: #1e90ff80 !important;
+		color: white !important;
+	}
+
+	.dm7YTc .kyvwAb {
+		text-decoration: none !important;
+		background: #1e90ff !important;
+		color: white !important;
+		font-size: 14px !important;
+
+	}
+	.dm7YTc .kyvwAb:hover {
+		text-decoration: none !important;
+		background: #1e90ff80 !important;
+		color: white !important;
+		font-size: 14px !important;
+	}*
+
+	/**|*:any-link:not(svg|a) {
+		text-decoration: none !important;
+		font-family: Fira Sans !important;
+
+	}*/
+
+	.DPvwYc {
+		font-family: "Material Icons Extended" !important;
+
+	}
+
+	.IFHyqb,
+	.m5k28,
+	.B6pJDd * {
+		font-family: Fira Sans !important;
+		color: white !important;
+	}
+
+	/*.IFHyqb:hover *,*/
+	.m5k28:hover *,
+	.B6pJDd:hover * {
+		color: dodgerblue !important;
+		text-decoration: none !important;
+	}
+
+	.EctEBd {
+		color: white !important;
+		font-family: Fira Sans !important;
+	}
+
+	.EctEBd.KKjvXb:hover * {
+		color: #1e90ff !important;
+		font-family: Fira Sans !important;
+	}
+
+	hr *,
+	.n0uym {
+		background: dodgerblue !important;
+	}
+
+	.dSBEqc {
+		background-image: linear-gradient(to right, #1e1d2d, #1e1d2d 4px) !important;
+		border: none !important;
+	}
+
+	.dm7YTc .HDbYSe {
+		color: transparent !important;
+		background: #1e1d2d !important;
+		border: none ! !important;
+	}
+
+	.brSCsc[selected="true"] * {
+		fill: #1e90ff !important;
+	}
+
 }
+
+
+
+@-moz-document domain(github.com) {
+	* {
+		font-family: Fira Sans !important;
+	}
+
+
+	a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block {
+		font-weight: bold !important;
+		color: #1e90ff !important;
+		font-size: 16px !important;
+	}
+
+	a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block:hover {
+		font-weight: bold !important;
+		color: #1e90ff80 !important;
+		font-size: 16px !important;
+	}
+
+	.branch-name,
+	.commit-ref,
+	.commit .sha,
+	.commit .sha-block,
+	.commit-desc pre,
+	.commit-tease-sha,
+	.blob-num,
+	.blob-code-inner *,
+	kbd,
+	.credit-card .cvv,
+	.credit-card .text,
+	.CommunityTemplate-highlight,
+	.file-info,
+	.hook-delivery-guid,
+	.hook-delivery-response-status,
+	.news .alert .branch-link,
+	.export-phrase pre,
+	.oauth-app-info-container dl.keys dd *,
+	.two-factor-recovery-codes *,
+	.CodeMirror *,
+	.CodeMirror-dialog input *,
+	.cm-s-github-light .CodeMirror-lines *,
+	.file-editor-textarea,
+	.blob-code *,
+	code *,
+	pre,
+	samp,
+	tt,
+	td,
+	pre *,
+	.highlight *,
+	.diff-table *,
+	.tab-size *,
+	.input-monospace *,
+	.text-mono * {
+		font-family: "Fira Code" !important;
+		line-height: 1.7em !important;
+		/*font-weight: 100 !important;*/
+		font-size: 13.5px !important;
+		opacity: 1 !important;
+	}
+
+	/*
+	td:hover,
+	td:focus {
+		background: #1e90ff50 !important;
+	}*/
+	/*.blob-num.js-line-number js-code-nav-line-number js-blob-rnum:hover,
+	tr:hover {
+		background: #1e90ff50 !important;
+	}*/
+
+
+	/*td>span:hover {
+		background-color: #1e90ff !important;
+		color: white !important;
+	}*/
+
+
+
+	.diff-table tr:hover>pre,
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
+	.highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
+		background-color: #1e90ff80 !important;
+	}
+
+	/*.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
+		background: #103810 !important;
+	}
+
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
+		background: #481010 !important;
+	}*/
+	/*td {
+		background: #121212 !important;
+	}*/
+
+}
+
+
