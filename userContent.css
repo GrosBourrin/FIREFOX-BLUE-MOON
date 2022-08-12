@@ -16,6 +16,7 @@
 	--toolbar-field-focus-border-color: transparent !important;
 	caret-color: #1E90FF !important;
 
+
 }
 
 :-moz-focusring,
@@ -2966,9 +2967,19 @@ url("about:newtab") {
 
 
 .pip-wrapper {
+	color: white !important;
+	background-color: transparent !important;
+	stroke: none !important;
 	top: inherit !important;
 	left: 15px !important;
 	border: none !important;
+	transform: scale(70%) !important;
+}
+
+.pip-small {
+	background-color: transparent !important;
+	box-shadow: none !important;
+	border-radius: 0px !important;
 }
 
 @-moz-document url-prefix("about:httpsonlyerror") {
@@ -4413,6 +4424,7 @@ tooltip {
 
 	search-textbox {
 		background-color: #1E1D2D !important;
+		border: 1px solid #1e90ff !important;
 	}
 
 	.addon-detail-contribute-button {
@@ -4431,6 +4443,10 @@ tooltip {
 
 	}
 
+	.category-name {
+		margin-top: 4px !important;
+	}
+
 	/*.category.selected */
 	.category[selected] {
 		fill: #1e90ff !important;
@@ -4441,7 +4457,6 @@ tooltip {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
-
 		border-radius: 4px !important;
 	}
 
@@ -4659,4 +4674,12 @@ tooltip {
 		background: #1e90ff !important;
 		color: #ffffff !important;
 	}
+}
+
+
+@-moz-document url(about:blank), url(about:newtab){
+body {
+	background-color: #1e1d2d !important;
+	background: #1e1d2d !important;
+}
 }
