@@ -8,51 +8,8 @@ See the above repository for updates as well as full license text. */
 url-prefix("chrome://devtools/content/") {
 	@media(prefers-color-scheme: dark) {
 
-		.ruleview-rule.unmatched,
-		.ruleview-rule.uneditable,
-		.ruleview-rule[unmatched="true"],
-		.ruleview-rule[uneditable="true"] {
-			background: #000000 !important;
-			color: white !important;
-		}
-
-		.ruleview-expandable-header {
-			background-color: #1e90ff20 !important;
-			color: white !important;
-		}
-
-		.ruleview-expandable-header:hover {
-			background-color: #1e90ff !important;
-			color: white !important;
-		}
-
-		.ruleview-header {
-			background-color: #1e90ff20 !important;
-			color: white !important;
-		}
-
-		:root[platform="win"] .ruleview-enableproperty,
-		:root[platform="linux"] .ruleview-enableproperty {
-			appearance: none;
-
-			/*left: -27px;
-			box-sizing: content-box;
-			margin-inline-start: 0;
-			margin-inline-end: 10px;
-			display: inline-block;
-			width: 14px;
-			height: 14px;
-			border: 0;
-			padding: 0;
-			outline: none;*/
-			background: url("chrome://devtools/skin/images/checkbox.svg") center no-repeat content-box;
-			-moz-context-properties: fill, stroke;
-			fill: #aaaaaa !important;
-			stroke: transparent !important;
-		}
-
 		:root {
-			--badge-active-background-color: var(--blue-60) !important;
+			--badge-active-background-color: #1e90ff !important;
 			--badge-active-border-color: #FFF6 !important;
 			--badge-background-color: var(--grey-80) !important;
 			--badge-border-color: var(--grey-50) !important;
@@ -100,9 +57,9 @@ url-prefix("chrome://devtools/content/") {
 			--theme-toolbar-separator: var(--grey-10-a20) !important;
 
 			/* Toolbar buttons */
-			--toolbarbutton-background: var(--grey-70) !important;
-			--toolbarbutton-hover-background: var(--grey-70) !important;
-			--toolbarbutton-focus-background: var(--grey-60) !important;
+			--toolbarbutton-background: transparent !important;
+			--toolbarbutton-hover-background: #1e90ff80 !important;
+			--toolbarbutton-focus-background: #1e90ff !important;
 			--toolbarbutton-focus-color: #1e90ff80 !important;
 			--toolbarbutton-checked-background: #1e1d2d !important;
 			--toolbarbutton-checked-focus-background: #1e1d2d !important;
@@ -110,7 +67,7 @@ url-prefix("chrome://devtools/content/") {
 
 			/* Buttons */
 			--theme-button-background: #1e1d2d !important;
-			--theme-button-active-background: #1e90ff80 !important;
+			--theme-button-active-background: #1e90ff70 !important;
 
 			/* Accordion headers */
 			--theme-accordion-header-background: #1e1d2d !important;
@@ -129,7 +86,7 @@ url-prefix("chrome://devtools/content/") {
 
 			/* Icon colors */
 			--theme-icon-color: #ffffff !important;
-			--theme-icon-dimmed-color: rgba(147, 147, 149, 0.9) !important;
+			--theme-icon-dimmed-color: #939395 !important;
 			--theme-icon-checked-color: #1e90ff !important;
 			--theme-icon-error-color: var(--red-40) !important;
 			--theme-icon-warning-color: var(--yellow-60) !important;
@@ -161,38 +118,38 @@ url-prefix("chrome://devtools/content/") {
 			--theme-focus-outline-color: #ced3d9 !important;
 
 			/* Colors used in Graphs, like performance tools. Mostly similar to some "highlight-*" colors. */
-			--theme-graphs-green: green !important;
-			--theme-graphs-blue: #0084ff !important;
+			--theme-graphs-green: #70bf53 !important;
+			--theme-graphs-blue: #46afe3 !important;
 			--theme-graphs-bluegrey: #5e88b0 !important;
 			--theme-graphs-purple: #df80ff !important;
-			--theme-graphs-yellow: #d6d928 !important;
-			--theme-graphs-orange: #ff8800 !important;
+			--theme-graphs-yellow: #d99b28 !important;
+			--theme-graphs-orange: #d96629 !important;
 			--theme-graphs-red: #eb5368 !important;
-			--theme-graphs-grey: #777777 !important;
+			--theme-graphs-grey: #757873 !important;
 			--theme-graphs-full-red: #f00 !important;
 			--theme-graphs-full-blue: #00f !important;
 
 			/* Common popup styles(used by HTMLTooltip and autocomplete) */
 			--theme-popup-background: #1e1d2d !important;
-			--theme-popup-color: #ffffff !important;
-			--theme-popup-border-color: #1e1d2d !important;
+			--theme-popup-color: rgb(249, 249, 250) !important;
+			--theme-popup-border-color: #27272b !important;
 			--theme-popup-dimmed: rgba(249, 249, 250, 0.1) !important;
 
 			/* Styling for devtool buttons */
-			--theme-toolbarbutton-background: none !important;
+			--theme-toolbarbutton-background: #1e1d2d !important;
 			--theme-toolbarbutton-color: #ffffff !important;
-			--theme-toolbarbutton-hover-background: #1e90ff80 !important;
-			--theme-toolbarbutton-checked-background: #1e90ff !important;
+			--theme-toolbarbutton-hover-background: #1e90ff30 !important;
+			--theme-toolbarbutton-checked-background: #1e90ff80 !important;
 			--theme-toolbarbutton-checked-color: #ffffff !important;
-			--theme-toolbarbutton-checked-hover-background: #1e90ff30 !important;
+			--theme-toolbarbutton-checked-hover-background: #1e90ff80 !important;
 			--theme-toolbarbutton-checked-hover-color: #ffffff !important;
 			--theme-toolbarbutton-active-background: #1e90ff !important;
 			--theme-toolbarbutton-active-color: #ffffff !important;
 
 			/* Used for select elements */
-			--theme-select-background: #1e90ff !important;
-			--theme-select-color: #ffffff !important;
-			--theme-select-hover-border-color: #1e90ff !important;
+			--theme-select-background: #1e90ff80 !important;
+			--theme-select-color: #fff !important;
+			--theme-select-hover-border-color: #1e90ff80 !important;
 
 			/* Warning colors */
 			--theme-warning-background: hsl(42, 37%, 19%) !important;
@@ -229,6 +186,77 @@ url-prefix("chrome://devtools/content/") {
 			--console-repeat-bubble-background: var(--blue-60) !important;
 			--error-color: var(--red-20) !important;
 			--console-output-color: white !important;
+			--theme-code-font-size: 12px !important;
 		}
+
+		.devtools-tab,
+		.toolbox-tabs {
+			font-family: Fira Sans !important;
+		}
+
+		.devtools-monospace * {
+			font-family: Fira Code !important;
+			
+		}
+
+		li.menuitem:hover {
+			background-color: #1e90ff !important;
+			border-radius: 3px !important;
+			font-family: Fira Sans !important;
+		}
+
+		li.menuitem {
+			font-family: Fira Sans !important;
+		}
+
+		.ruleview-rule.unmatched,
+		.ruleview-rule.uneditable,
+		.ruleview-rule[unmatched="true"],
+		.ruleview-rule[uneditable="true"] {
+			background: #000000 !important;
+			color: white !important;
+		}
+
+		.ruleview-expandable-header {
+			background-color: #1e90ff20 !important;
+			color: white !important;
+		}
+
+		.ruleview-expandable-header:hover {
+			background-color: #1e90ff !important;
+			color: white !important;
+		}
+
+		.ruleview-header {
+			background-color: #1e90ff20 !important;
+			color: white !important;
+		}
+
+		:root[platform="win"] .ruleview-enableproperty,
+		:root[platform="linux"] .ruleview-enableproperty {
+			appearance: none;
+			background: url("chrome://devtools/skin/images/checkbox.svg") center no-repeat content-box !important;
+			filter: grayscale(100%) !important;
+			-moz-context-properties: fill, stroke;
+			fill: #aaaaaa !important;
+			/*stroke: transparent;*/
+		}
+
+		#command-button-pick {
+			fill: white !important;
+			background: #1e1d2d !important;
+		}
+
+		#command-button-pick:hover {
+			fill: white !important;
+			background: #1e90ff !important;
+		}
+
+		.splitview-nav {
+			width: 400px !important;
+		}
+
+		
+
 	}
 }
