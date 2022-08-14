@@ -14,9 +14,7 @@
 	--focus-outline: 0px !important;
 	--default-focusring: 0 !important;
 	--toolbar-field-focus-border-color: transparent !important;
-	caret-color: #1E90FF !important;
-
-
+	caret-color: #1e90ff !important;
 }
 
 :-moz-focusring,
@@ -25,18 +23,17 @@ button::-moz-focus-inner,
 :-moz-focusring *,
 :focus *,
 :-moz-focusring:focus:not(:focus-visible),
-:-moz-focusring:focus:not(:focus-visible)>* {
+:-moz-focusring:focus:not(:focus-visible) > * {
 	outline: unset !important;
 	outline-offset: unset !important;
 	-moz-outline-radius: unset !important;
 }
 
-
 @-moz-document url(about:blank),
 url-prefix(about:newtab),
 url(about:config),
-url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
-
+url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
+{
 	#newtab-window,
 	#newtab-customize-overlay,
 	#toolbar {
@@ -44,19 +41,18 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		color: #ffffff !important;
 		fill: #ffffff !important;
 		font-family: Fira Sans !important;
-
 	}
 }
 
 /* about:preferences */
 @-moz-document url-prefix("about:preferences") {
 	.sticky-container {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	:root {
 		font-family: Fira Sans !important;
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	vbox.homepageMenuItemContainer {
@@ -96,22 +92,22 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		color: #ffffff !important;
 	}
 */
-	#categories>.category:hover {
+	#categories > .category:hover {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 		border-radius: 2px !important;
 	}
 
-	checkbox:not([disabled="true"]):hover>.checkbox-check,
+	checkbox:not([disabled="true"]):hover > .checkbox-check,
 	input[type="checkbox"]:not(:disabled):hover {
 		border-color: #1e90ff !important;
 	}
 
-	radio:not([disabled="true"]):hover>.radio-check {
+	radio:not([disabled="true"]):hover > .radio-check {
 		border-color: #1e90ff !important;
 	}
 
-	radio:hover>.radio-check {
+	radio:hover > .radio-check {
 		fill: #1e90ff80 !important;
 	}
 
@@ -122,7 +118,6 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	.text-link {
 		color: #1e90ff !important;
 	}
-
 
 	button {
 		appearance: none !important;
@@ -143,7 +138,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	#handlersView,
 	#engineChildren,
 	#engineList {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		border-color: #1e90ff !important;
 		border-radius: 4px !important;
 		color: #ffffff !important;
@@ -155,17 +150,20 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		background-color: #1e90ff !important;
 	}
 */
-	#engineList>treechildren::-moz-tree-image(engineShown, checked),
-	#blocklistsTree>treechildren::-moz-tree-image(selectionCol, checked) {
+	#engineList > treechildren::-moz-tree-image(engineShown, checked),
+	#blocklistsTree
+		> treechildren::-moz-tree-image(selectionCol, checked) {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill, stroke;
 		fill: yellow !important;
 	}
 
-	#engineList>treechildren::-moz-tree-row(engineShown, checked, selected, focus, active),
-	#blocklistsTree>treechildren::-moz-tree-row(selectionCol, checked, selected, focus, active),
+	#engineList
+		> treechildren::-moz-tree-row(engineShown, checked, selected, focus, active),
+	#blocklistsTree
+		> treechildren::-moz-tree-row(selectionCol, checked, selected, focus, active),
 	#engineChildren::-moz-tree-row(engineShown, checked, selected, focus, active),
-	treechildren>#engineChildren {
+	treechildren > #engineChildren {
 		fill: #1e90ff !important;
 		stroke: #1e90ff !important;
 		background: #1e90ff !important;
@@ -173,10 +171,9 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 
 	@media (prefers-contrast) {
-
-		#engineList>treechildren::-moz-tree-row:hover,
-		#engineChildren>treechildren::-moz-tree-row:selected,
-		#blocklistsTree>treechildren::-moz-tree-row:hover {
+		#engineList > treechildren::-moz-tree-row:hover,
+		#engineChildren > treechildren::-moz-tree-row:selected,
+		#blocklistsTree > treechildren::-moz-tree-row:hover {
 			fill: #1e90ff !important;
 			stroke: #1e90ff !important;
 			background: #1e90ff !important;
@@ -184,8 +181,8 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		}
 	}
 
-	#engineList>treechildren::-moz-tree-row,
-	#blocklistsTree>treechildren::-moz-tree-row {
+	#engineList > treechildren::-moz-tree-row,
+	#blocklistsTree > treechildren::-moz-tree-row {
 		min-height: 30px !important;
 	}
 
@@ -223,17 +220,15 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		border: 1px solid #1e90ff !important;
 	}
 
-
 	.dialogBox,
 	#PermissionsDialog,
 	box-inherit.dialog-content-box {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border: 1px solid transparent !important;
 		border-radius: 8px !important;
 		font-family: Fira Sans !important;
 	}
-
 
 	button {
 		appearance: none !important;
@@ -245,7 +240,6 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	button[disabled] {
 		opacity: 0.8 !important;
 	}
-
 
 	button:not([disabled]):hover {
 		background-color: #1e90ff80 !important;
@@ -281,7 +275,6 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 
 		border-color: white !important;
 		color: #ffffff !important;
-
 	}
 
 	input[type="checkbox"]:hover {
@@ -290,12 +283,11 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 
 	input[type="checkbox"] {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		border-color: #1e90ff !important;
 	}
 
-
-	checkbox:not([disabled]):hover>.checkbox-check {
+	checkbox:not([disabled]):hover > .checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -303,24 +295,23 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked]>.checkbox-check {
+	checkbox[checked] > .checkbox-check {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill !important;
 		fill: #ffffff !important;
 		background-color: #1e90ff !important;
 	}
 
-	checkbox>.checkbox-check {
-		background-color: #1E1D2D !important;
+	checkbox > .checkbox-check {
+		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
 		border-radius: 2px !important;
-
 	}
 
-	#handlersView>richlistitem:active,
-	#handlersView>richlistitem[selected],
-	#handlersView>richlistitem:hover {
+	#handlersView > richlistitem:active,
+	#handlersView > richlistitem[selected],
+	#handlersView > richlistitem:hover {
 		color: #ffffff !important;
 		background: #1e90ff !important;
 	}
@@ -337,12 +328,10 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		background: #1e90ff !important;
 	}
 
-
 	#engineList treechildren::-moz-tree-row(selected) {
 		color: #ffffff !important;
 		background-color: #1e90ff !important;
 		border: 0px !important;
-
 	}
 
 	/*
@@ -369,7 +358,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		border: 1px solid #1e90ff !important;
 		border-radius: 4px !important;
 		color: #ffffff !important;
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		outline: 0px !important;
 		padding-top: 4px !important;
 	}
@@ -379,7 +368,6 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff50 !important;
 		box-shadow: inset 0 -1px #1e90ff !important;
-
 	}
 
 	listheader {
@@ -388,7 +376,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 
 	#downloadFolder {
 		border-color: #1e90ff !important;
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	input[type="radio"]:checked,
@@ -406,12 +394,12 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	*.radio-check {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	#homePageUrl,
 	#fxaSyncComputerName {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
 	}
@@ -447,15 +435,16 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		border: 1px solid dodgerblue !important;
 	}
 
-	.web-appearance-choice>.web-appearance-choice-image-container {
+	.web-appearance-choice > .web-appearance-choice-image-container {
 		background-color: #1e90ff40 !important;
 	}
 
-	.web-appearance-choice:hover>.web-appearance-choice-image-container {
+	.web-appearance-choice:hover
+		> .web-appearance-choice-image-container {
 		background-color: #1e90ff !important;
 	}
 
-	.subcategory:not([hidden])~.subcategory {
+	.subcategory:not([hidden]) ~ .subcategory {
 		border-top: 1px solid #1e90ff80 !important;
 	}
 
@@ -464,13 +453,13 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 
 	menupopup menuitem {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		padding-top: unset !important;
 		padding-bottom: unset !important;
 	}
 
 	menupopup menuitem:not([disabled="true"]) {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
@@ -496,8 +485,8 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 }
 
-
-@-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
+@-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/")
+{
 	* {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
@@ -506,11 +495,9 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 }
 
-
-
 /*-------------downloads sidebar webext tweaks dark ------------------*/
-@-moz-document url("moz-extension://8323b085-12c9-427f-af42-142a4a90bbb0/sidebar/panel.html") {
-
+@-moz-document url("moz-extension://8323b085-12c9-427f-af42-142a4a90bbb0/sidebar/panel.html")
+{
 	html,
 	body {
 		font-family: Fira Sans !important;
@@ -526,7 +513,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 
 	.progress {
-		border: 0px solid #4F4F4F !important;
+		border: 0px solid #4f4f4f !important;
 		background-color: rgba(30, 144, 255, 0.5) !important;
 	}
 
@@ -555,57 +542,52 @@ input[type="checkbox"]:checked {
 
 /* about:support*/
 @-moz-document url(about:support),
-url(about:profiles){
-body.wide-container {
-	background-color: #1e1d2d !important;
-	color: #ffffff !important;
+url(about:profiles) {
+	body.wide-container {
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+	}
+
+	th.column,
+	button {
+		background: #1e90ff !important;
+		color: white !important;
+	}
+
+	button:hover {
+		background: #1e90ff80 !important;
+	}
+
+	a {
+		color: #1e90ff !important;
+	}
+
+	a:hover {
+		color: #1e90ff90 !important;
+	}
+
+	th {
+		background-color: dodgerblue !important;
+	}
+
+	.action-box {
+		background-color: #1e1d2d !important;
+		border: 1px solid #1e90ff !important;
+	}
+
+	table {
+		background-color: #1e1d2d !important;
+
+		border: 1px solid #1e90ff !important;
+	}
+
+	td {
+		border: 1px solid #1e90ff40 !important;
+	}
 }
 
-th.column,
-button {
-	background: #1e90ff !important;
-	color: white !important;
-}
-
-button:hover {
-	background: #1e90ff80 !important;
-}
-
-a {
-	color: #1e90ff !important;
-}
-
-a:hover {
-	color: #1e90ff90 !important;
-}
-
-th {
-	background-color: dodgerblue !important;
-}
-
-.action-box {
-
-	background-color: #1e1d2d !important;
-	border: 1px solid #1e90ff !important;
-
-}
-
-table {
-	background-color: #1e1d2d !important;
-
-	border: 1px solid #1e90ff !important;
-}
-
-td {
-	border: 1px solid #1e90ff40 !important;
-}
-
-}
-
-
-
-
-@-moz-document url("chrome://global/content/config.xhtml") {
+@-moz-document url("chrome://global/content/config.xhtml")
+{
 	:root {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
@@ -619,15 +601,14 @@ td {
 @-moz-document url("about:home") {
 	.outer-wrapper {
 		background-color: #1e1d2d !important;
-
 	}
 
 	#newtab-search-text,
 	#searchSuggestionTable,
-	#searchSuggestionTable>tr,
-	#searchSuggestionTable>tr>td,
-	#searchSuggestionTable>table>tr>td,
-	#searchSuggestionTable>button {
+	#searchSuggestionTable > tr,
+	#searchSuggestionTable > tr > td,
+	#searchSuggestionTable > table > tr > td,
+	#searchSuggestionTable > button {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
@@ -658,8 +639,8 @@ td {
 	}
 }
 
-@-moz-document url-prefix("chrome: //global/content/httpsonlyerror/errorpage.html") {
-
+@-moz-document url-prefix("chrome: //global/content/httpsonlyerror/errorpage.html")
+{
 	html,
 	body.container {
 		font-family: Fira Sans !important;
@@ -668,10 +649,9 @@ td {
 	}
 }
 
-
 /*------ HTTPS EVERYWHERE ADDON ------*/
-@-moz-document url-prefix("moz-extension://c36e8fbe-ae73-46bc-aef1-79a6938f3366/") {
-
+@-moz-document url-prefix("moz-extension://c36e8fbe-ae73-46bc-aef1-79a6938f3366/")
+{
 	html,
 	body,
 	header {
@@ -686,24 +666,21 @@ td {
 		font-family: Fira Sans !important;
 		background: #1e1d2d !important;
 		color: #ffffff !important;
-
 	}
 
 	h1,
 	h2,
 	h3 {
-		color: #fff !important
+		color: #fff !important;
 	}
 
 	label {
-		color: #ccc !important
+		color: #ccc !important;
 	}
 
 	.settings_block {
-
 		border-bottom: #1e90ff80 solid 0px !important;
 	}
-
 
 	input[type="button"] {
 		appearance: none !important;
@@ -714,7 +691,6 @@ td {
 		padding: 5px !important;
 		margin: 3px !important;
 	}
-
 
 	input[type="button"]:hover {
 		background-color: #1e90ff !important;
@@ -779,11 +755,9 @@ td {
 	}
 
 	input[type="text"][disabled] {
-		color: #4F4F4F !important;
+		color: #4f4f4f !important;
 	}
 }
-
-
 
 @-moz-document url-prefix("about:debugging") {
 	body {
@@ -797,7 +771,6 @@ td {
 		border-radius: 4px !important;
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
-
 	}
 
 	a.qa-manifest-url {
@@ -812,7 +785,6 @@ td {
 
 	.card,
 	.card *:not(button) {
-
 		background-color: #1e1d2d !important;
 	}
 
@@ -845,7 +817,6 @@ td {
 		background-color: #1e1d2d !important;
 	}
 
-
 	.icon-label__icon,
 	.sidebar__footer__icon {
 		fill: grey !important;
@@ -869,29 +840,29 @@ td {
 }
 
 /**************************-*/
-@-moz-document url-prefix("https://addons.mozilla.org") {
-
+@-moz-document url-prefix("https://addons.mozilla.org")
+{
 	:root {
-		--nordp-0: #2E3440;
-		--nordp-1: #3B4253;
-		--nordp-2: #434c5E;
-		--nordp-3: #4C566A;
+		--nordp-0: #2e3440;
+		--nordp-1: #3b4253;
+		--nordp-2: #434c5e;
+		--nordp-3: #4c566a;
 
-		--nords-0: #d8DEE9;
-		--nords-1: #E5e9f0;
-		--nords-2: #ECEFF4;
+		--nords-0: #d8dee9;
+		--nords-1: #e5e9f0;
+		--nords-2: #eceff4;
 
-		--nordf-0: #8FBCBB;
-		--nordf-1: #88C0D0;
-		--nordf-2: #81A1C1;
-		--nordf-3: #5E81AC;
+		--nordf-0: #8fbcbb;
+		--nordf-1: #88c0d0;
+		--nordf-2: #81a1c1;
+		--nordf-3: #5e81ac;
 		--nordf-4: #8ad;
 
-		--norda-0: #BF616A;
-		--norda-1: #D08770;
-		--norda-2: #EBCB8B;
-		--norda-3: #A3Be8C;
-		--norda-4: #B48EAD;
+		--norda-0: #bf616a;
+		--norda-1: #d08770;
+		--norda-2: #ebcb8b;
+		--norda-3: #a3be8c;
+		--norda-4: #b48ead;
 	}
 
 	:root {
@@ -942,7 +913,9 @@ td {
 	}
 
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
-	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
+	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme)
+		.Card-contents
+		.AddonsCard-list,
 	.AddonsByAuthorsCard .Card-contents .AddonsCard-list,
 	.AddonsCard--horizontal .Card-contents,
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
@@ -955,7 +928,6 @@ td {
 	.Card-footer-text,
 	.Card-header,
 	.Categories .Card-contents,
-
 	.Hero .Card-contents,
 	.Home-SubjectShelf .Card-contents,
 	.LandingPage-header,
@@ -1010,7 +982,9 @@ td {
 	.Footer a:hover,
 	.Footer-links-header a:link,
 	.GuidesAddonCard .AddonTitle a,
-	.GuidesAddonCard .GuidesAddonCard-content-header-title .AddonTitle-author,
+	.GuidesAddonCard
+		.GuidesAddonCard-content-header-title
+		.AddonTitle-author,
 	.Home-SubjectShelf-link:link,
 	.Home-SubjectShelf-link:visited,
 	.Home-SubjectShelf-subheading,
@@ -1023,7 +997,9 @@ td {
 	.Paginate .Button.Paginate-item:link:first-child,
 	.Paginate .Button.Paginate-item:link:last-child,
 	.Paginate .Button.Paginate-item:visited:first-child,
-	.Paginate .Button.Paginate-item:visited:last-child .Paginate-page-number,
+	.Paginate
+		.Button.Paginate-item:visited:last-child
+		.Paginate-page-number,
 	.PermissionsCard-subhead,
 	.ReportAbuseButton-show-more,
 	.SearchContextCard-header,
@@ -1065,7 +1041,7 @@ td {
 	}
 
 	.addon-webext-perm-info,
-	.popup-notification-learnmore-link>text-link {
+	.popup-notification-learnmore-link > text-link {
 		color: #1e90ff !important;
 	}
 
@@ -1082,14 +1058,20 @@ td {
 */
 	.AddonMeta .MetadataCard-content a,
 	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link,
-	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:link,
-	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta
+		.MetadataCard-content
+		a.AddonMeta-reviews-content-link:link,
+	.AddonMeta
+		.MetadataCard-content
+		a.AddonMeta-reviews-content-link:visited,
 	.AddonMeta .MetadataCard-content a:link,
 	.AddonMeta .MetadataCard-content a:visited,
 	.AddonMeta .MetadataCard-title a,
 	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link,
 	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:link,
-	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta
+		.MetadataCard-title
+		a.AddonMeta-reviews-content-link:visited,
 	.AddonMeta .MetadataCard-title a:link,
 	.AddonMeta .MetadataCard-title a:visited,
 	.RatingsByStar-count a:active,
@@ -1101,9 +1083,11 @@ td {
 		color: white !important;
 	}
 
-
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0), #1b1924) !important;
+		background: linear-gradient(
+			rgba(255, 255, 255, 0),
+			#1b1924
+		) !important;
 	}
 
 	.Addon-details .AddonDescription-contents a:link,
@@ -1124,7 +1108,6 @@ td {
 	.SearchResult-link:hover .SearchResult-name {
 		/*background-color: #1e90ff !important;*/
 		color: white !important;
-
 	}
 
 	.Button--action.Button--outline-only {
@@ -1151,7 +1134,9 @@ td {
 
 	.SearchForm-query:focus {
 		box-shadow: 0 0 5px 0 var(--in-content-border-highlight) !important;
-		border-color: var(--in-content-primary-button-background) !important;
+		border-color: var(
+			--in-content-primary-button-background
+		) !important;
 	}
 
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
@@ -1195,13 +1180,16 @@ td {
 		color: #1e90ff !important;
 	}
 
-	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:focus,
-	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:hover {
+	.AddonsCard--horizontal
+		ul.AddonsCard-list
+		.SearchResult-wrapper:focus,
+	.AddonsCard--horizontal
+		ul.AddonsCard-list
+		.SearchResult-wrapper:hover {
 		background: transparent !important;
 		color: dodgerblue !important;
 		/*border-radius: 9px !important;*/
 	}
-
 
 	.UserReview-reply-header,
 	.AddonReviewCard-authorByLine {
@@ -1214,7 +1202,6 @@ td {
 	}
 
 	.Icon-reply-arrow {
-
 		filter: invert(100%) !important;
 	}
 
@@ -1250,8 +1237,6 @@ td {
 		border-radius: 4px !important;
 	}
 
-
-
 	.AddonDescription-contents a:link:hover {
 		color: dodgerblue !important;
 	}
@@ -1277,12 +1262,11 @@ td {
 		background-color: #1e90ff30 !important;
 		border: 1px solid #1e90ff !important;
 		color: lightgray !important;
-
 	}
-
 }
 
-@-moz-document url-prefix("https://addons.mozilla.org") {
+@-moz-document url-prefix("https://addons.mozilla.org")
+{
 	:root {
 		--pale-blue: #728cbb;
 		--custom-bg: #333333;
@@ -1340,13 +1324,13 @@ td {
 		--grey-80: #1b1924;
 		--grey-90: #0c0c0d;
 		--code-green: #86de74 !important;
-		--warning-color: #FCE19F;
-		--warning-background-color: #44391F;
-		--theme-highlight-green: #86DE74;
-		--theme-highlight-blue: #75BFFF;
-		--theme-highlight-purple: #B98EFF;
-		--theme-highlight-red: #FF7DE9;
-		--theme-highlight-yellow: #FFF89E;
+		--warning-color: #fce19f;
+		--warning-background-color: #44391f;
+		--theme-highlight-green: #86de74;
+		--theme-highlight-blue: #75bfff;
+		--theme-highlight-purple: #b98eff;
+		--theme-highlight-red: #ff7de9;
+		--theme-highlight-yellow: #fff89e;
 		--theme-highlight-bluegrey: #5e88b0;
 		--theme-highlight-lightorange: #d99b28;
 		--theme-highlight-orange: #d96629;
@@ -1371,7 +1355,9 @@ td {
 		--in-content-box-background: var(--tone-7) !important;
 		--in-content-box-background-odd: #f3f6fa;
 		--in-content-box-background-hover: var(--tone-6) !important;
-		--in-content-box-background-active: var(--tone-6) !important;
+		--in-content-box-background-active: var(
+			--tone-6
+		) !important;
 		--in-content-box-border-color: var(--tone-5) !important;
 		--in-content-item-hover: rgba(0, 149, 221, 0.25);
 		--in-content-item-selected: var(--tone-8) !important;
@@ -1381,40 +1367,85 @@ td {
 		--in-content-category-outline-focus: 1px dotted #0a84ff;
 		--in-content-category-text: var(--tone-2) !important;
 		--in-content-category-text-active: #0c0c0d;
-		--in-content-category-text-selected: var(--accent-1) !important;
+		--in-content-category-text-selected: var(
+			--accent-1
+		) !important;
 		--in-content-category-text-selected-active: #1e90ff;
-		--in-content-category-background-hover: rgba(12, 12, 13, 0.1);
-		--in-content-category-background-active: rgba(12, 12, 13, 0.15);
-		--in-content-category-background-selected-hover: rgba(12, 12, 13, 0.15);
-		--in-content-category-background-selected-active: rgba(12, 12, 13, 0.2);
+		--in-content-category-background-hover: rgba(
+			12,
+			12,
+			13,
+			0.1
+		);
+		--in-content-category-background-active: rgba(
+			12,
+			12,
+			13,
+			0.15
+		);
+		--in-content-category-background-selected-hover: rgba(
+			12,
+			12,
+			13,
+			0.15
+		);
+		--in-content-category-background-selected-active: rgba(
+			12,
+			12,
+			13,
+			0.2
+		);
 		--in-content-tab-color: #424f5a;
 		--in-content-link-color: #ffffff !important;
 		--in-content-link-color-hover: #1e90ff !important;
 		--in-content-link-color-active: white !important;
 		--in-content-link-color-visited: white !important;
-		--in-content-primary-button-background: var(--accent-2) !important;
-		--in-content-primary-button-background-hover: var(--accent-3) !important;
-		--in-content-primary-button-background-active: var(--accent-3) !important;
-		--in-content-table-border-dark-color: var(--tone-7) !important;
-		--in-content-table-header-background: var(--accent-2) !important;
+		--in-content-primary-button-background: var(
+			--accent-2
+		) !important;
+		--in-content-primary-button-background-hover: var(
+			--accent-3
+		) !important;
+		--in-content-primary-button-background-active: var(
+			--accent-3
+		) !important;
+		--in-content-table-border-dark-color: var(
+			--tone-7
+		) !important;
+		--in-content-table-header-background: var(
+			--accent-2
+		) !important;
 		--theme-selection-background: var(--accent-2) !important;
-		--theme-selection-background-hover: var(--accent-1) !important;
-		--in-content-category-header-background: var(--tone-8) !important;
+		--theme-selection-background-hover: var(
+			--accent-1
+		) !important;
+		--in-content-category-header-background: var(
+			--tone-8
+		) !important;
 		--selected-icon-fill-color: var(--tone-2) !important;
-		--in-content-dark-header-background: var(--tone-9) !important;
+		--in-content-dark-header-background: var(
+			--tone-9
+		) !important;
 		--tab-line-selected-color: var(--accent-2) !important;
 		--secure-connection-color: var(--accent-1);
 		--tab-background-color: var(--tone-9) !important;
 		--tab-color: var(--in-content-selected-text);
-		--theme-sidebar-background: #1B1B1D !important;
-		--card-outline-color: var(--in-content-box-border-color) !important;
+		--theme-sidebar-background: #1b1b1d !important;
+		--card-outline-color: var(
+			--in-content-box-border-color
+		) !important;
 		--cm-background: var(--tone-8) !important;
 		--cm-selection: #353b48 !important;
 		--cm-marker: #555 !important;
 		--cm-linenumber: #58575c !important;
 		--cm-cursor: #fff !important;
-		--cm-active-line-background: rgba(185, 215, 253, .15) !important;
-		--cm-matching-bracket: rgba(255, 255, 255, .25) !important;
+		--cm-active-line-background: rgba(
+			185,
+			215,
+			253,
+			0.15
+		) !important;
+		--cm-matching-bracket: rgba(255, 255, 255, 0.25) !important;
 		--cm-search-background: rgba(24, 29, 32, 1) !important;
 		--cm-red: #de7474 !important;
 
@@ -1434,7 +1465,9 @@ td {
 	.Footer-wrapper,
 	.LanguageTools-header-row,
 	.amo {
-		background: var(--in-content-category-header-background) !important;
+		background: var(
+			--in-content-category-header-background
+		) !important;
 	}
 
 	h1,
@@ -1466,7 +1499,9 @@ td {
 	}
 */
 	.Select {
-		background-color: var(--in-content-page-background) !important;
+		background-color: var(
+			--in-content-page-background
+		) !important;
 	}
 
 	.SearchForm-icon-magnifying-glass {
@@ -1479,7 +1514,9 @@ td {
 	}
 
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
-	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
+	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme)
+		.Card-contents
+		.AddonsCard-list,
 	.AddonsByAuthorsCard .Card-contents .AddonsCard-list,
 	.AddonsCard--horizontal .Card-contents,
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
@@ -1535,7 +1572,9 @@ td {
 	.Footer a:hover,
 	.Footer-links-header a:link,
 	.GuidesAddonCard .AddonTitle a,
-	.GuidesAddonCard .GuidesAddonCard-content-header-title .AddonTitle-author,
+	.GuidesAddonCard
+		.GuidesAddonCard-content-header-title
+		.AddonTitle-author,
 	.Home-SubjectShelf-link:link,
 	.Home-SubjectShelf-link:visited,
 	.Home-SubjectShelf-subheading,
@@ -1548,7 +1587,9 @@ td {
 	.Paginate .Button.Paginate-item:link:first-child,
 	.Paginate .Button.Paginate-item:link:last-child,
 	.Paginate .Button.Paginate-item:visited:first-child,
-	.Paginate .Button.Paginate-item:visited:last-child .Paginate-page-number,
+	.Paginate
+		.Button.Paginate-item:visited:last-child
+		.Paginate-page-number,
 	.PermissionsCard-subhead,
 	.ReportAbuseButton-show-more,
 	.SearchContextCard-header,
@@ -1563,7 +1604,6 @@ td {
 		color: #ffffff !important;
 	}
 
-
 	input.AutoSearchInput-query {
 		font-size: 14px !important;
 		background: #1e1d2d !important;
@@ -1577,14 +1617,12 @@ td {
 		line-height: 150% !important;
 		/*text-align: justify !important;*/
 		font-weight: normal !important;
-
 	}
 
 	.Paginate .Button.Paginate-item:active,
 	.Paginate .Button.Paginate-item:hover {
 		background-color: #1e1d2d !important;
 	}
-
 
 	.AutoSearchInput-suggestions-item {
 		color: #ffffff !important;
@@ -1593,7 +1631,6 @@ td {
 		border: 0px !important;
 		outline: none !important;
 		box-shadow: none !important;
-
 	}
 
 	.AutoSearchInput-suggestions-item:hover {
@@ -1633,7 +1670,6 @@ td {
 		color: white !important;
 	}
 
-
 	.Card-contents li .Rating-star-group,
 	.Paginate-next::after,
 	.Paginate-previous::before {
@@ -1642,14 +1678,20 @@ td {
 
 	.AddonMeta .MetadataCard-content a,
 	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link,
-	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:link,
-	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta
+		.MetadataCard-content
+		a.AddonMeta-reviews-content-link:link,
+	.AddonMeta
+		.MetadataCard-content
+		a.AddonMeta-reviews-content-link:visited,
 	.AddonMeta .MetadataCard-content a:link,
 	.AddonMeta .MetadataCard-content a:visited,
 	.AddonMeta .MetadataCard-title a,
 	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link,
 	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:link,
-	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta
+		.MetadataCard-title
+		a.AddonMeta-reviews-content-link:visited,
 	.AddonMeta .MetadataCard-title a:link,
 	.AddonMeta .MetadataCard-title a:visited,
 	.RatingsByStar-count a:active,
@@ -1662,7 +1704,10 @@ td {
 	}
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0), #1b1924) !important;
+		background: linear-gradient(
+			rgba(255, 255, 255, 0),
+			#1b1924
+		) !important;
 	}
 
 	.SecondaryHero-module {
@@ -1673,7 +1718,6 @@ td {
 	.SectionLinks-link,
 	.SectionLinks-link:link {
 		color: #ffffff !important;
-
 	}
 
 	.SecondaryHero-module-icon {
@@ -1744,7 +1788,9 @@ td {
 
 	.SearchForm-query:focus {
 		box-shadow: 0 0 5px 0 var(--in-content-border-highlight) !important;
-		border-color: var(--in-content-primary-button-background) !important;
+		border-color: var(
+			--in-content-primary-button-background
+		) !important;
 	}
 
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
@@ -1789,15 +1835,19 @@ td {
 		color: #1e90ff !important;
 	}
 
-	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:focus,
-	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:hover {
+	.AddonsCard--horizontal
+		ul.AddonsCard-list
+		.SearchResult-wrapper:focus,
+	.AddonsCard--horizontal
+		ul.AddonsCard-list
+		.SearchResult-wrapper:hover {
 		background: transparent !important;
 		color: dodgerblue !important;
 		/*border-radius: 9px !important;*/
 	}
 
 	.addon-webext-perm-info,
-	.popup-notification-learnmore-lin>text-link {
+	.popup-notification-learnmore-lin > text-link {
 		color: #1e90ff !important;
 	}
 
@@ -1875,7 +1925,6 @@ td {
 	}
 
 	a.Addon-all-reviews-link {
-
 		color: white !important;
 		background-color: dodgerblue !important;
 		border-radius: 4px !important;
@@ -1892,7 +1941,7 @@ td {
 	}
 
 	.AddonSummaryCard-header-text a,
-	.Addon-Title>a,
+	.Addon-Title > a,
 	.AddonTitle-author a {
 		color: #1e90ff !important;
 		text-decoration: none !important;
@@ -1901,7 +1950,6 @@ td {
 	.UserReview-byLine a,
 	.UserReview-byLine a:link {
 		color: #1e90ff !important;
-
 	}
 
 	.UserReview-byLine a:hover,
@@ -1912,28 +1960,22 @@ td {
 	.AddonReviewCard-reply {
 		background: transparent !important;
 		border: 1px solid #1e90ff !important;
-
 	}
 
 	.SearchResult-note {
 		background-color: #1e90ff30 !important;
 		border: 1px solid #1e90ff !important;
 		color: lightgray !important;
-
 	}
-
 }
 
-
 @-moz-document url("about:memory") {
-
 	html,
 	body {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 }
-
 
 /* Dark Mode page between loading*/
 @-moz-document url("about:home"),
@@ -1998,7 +2040,7 @@ browser[type="content"] {
 		transition: opacity 150ms, visibility 0s 2s !important;
 	}
 
-	.open>.dropdown-popup {
+	.open > .dropdown-popup {
 		opacity: 1 !important;
 		transition: opacity 150ms !important;
 	}
@@ -2015,8 +2057,8 @@ browser[type="content"] {
 		border: none !important;
 	}
 
-	.font-type-buttons>button>.description {
-		color: #BEBEBE !important;
+	.font-type-buttons > button > .description {
+		color: #bebebe !important;
 	}
 }
 
@@ -2026,9 +2068,7 @@ browser[type="content"] {
 	transform: scale(1.25) !important;
 }
 
-
 @-moz-document url-prefix("about:logins") {
-
 	.fxaccounts-avatar-button,
 	.fxaccounts-avatar-button:hover:active {
 		background: transparent !important;
@@ -2046,7 +2086,6 @@ browser[type="content"] {
 		padding-left: 32px !important;
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
-
 	}
 
 	.copy-button,
@@ -2070,7 +2109,6 @@ browser[type="content"] {
 
 	.login-list-item {
 		border: none !important;
-
 	}
 
 	.container[role="dialog"] {
@@ -2078,7 +2116,7 @@ browser[type="content"] {
 		border: 1px solid #333333 !important;
 		border-radius: 0px !important;
 		color: #ffffff !important;
-		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .32) !important;
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.32) !important;
 	}
 
 	.login-list-item.selected {
@@ -2191,7 +2229,7 @@ browser[type="content"] {
 		border-left: 2px solid #073642 !important;
 	}
 
-	pre> :first-child {
+	pre > :first-child {
 		padding-right: 1ch;
 	}
 
@@ -2239,8 +2277,9 @@ browser[type="content"] {
 	}
 
 	.highlight .error,
-	.highlight .error> :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype,
-		.pi, .entity, .attribute-name, .attribute-value) {
+	.highlight
+		.error
+		> :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
 		color: #002b36 !important;
 		background-color: #dc322f !important;
 	}
@@ -2248,11 +2287,15 @@ browser[type="content"] {
 
 @-moz-document url-prefix(about:) {
 	:root {
-		--in-content-border-hover: rgba(30, 144, 255, 0.5) !important;
+		--in-content-border-hover: rgba(
+			30,
+			144,
+			255,
+			0.5
+		) !important;
 		--in-content-border-active: #1e90ff !important;
 		--in-content-border-active-shadow: transparent !important;
 		color: #ffffff !important;
-
 	}
 
 	* {
@@ -2270,15 +2313,12 @@ browser[type="content"] {
 	border: 1px dashed transparent !important;
 }
 
-
-
 /* about:support*/
-@-moz-document url(about:support){
-body.wide-container {
-	background-color: #1e1d2d !important;
+@-moz-document url(about:support) {
+	body.wide-container {
+		background-color: #1e1d2d !important;
+	}
 }
-}
-
 
 /* Changes colors on the page 
 :root {
@@ -2314,7 +2354,8 @@ body.wide-container {
 }*/
 
 @-moz-document url('chrome://global/content/config.xhtml'),
-url('chrome://userchromejs/content/aboutconfig/config.xhtml') {
+url('chrome://userchromejs/content/aboutconfig/config.xhtml')
+{
 	:root {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
@@ -2323,7 +2364,6 @@ url('chrome://userchromejs/content/aboutconfig/config.xhtml') {
 		color: #ffffff !important;
 		fill: #ffffff !important;
 		opacity: 1 !important;
-
 	}
 
 	/*
@@ -2342,19 +2382,19 @@ url('about:newtab') {
 
 	#newtab-search-text,
 	#searchSuggestionTable,
-	#searchSuggestionTable>tr,
-	#searchSuggestionTable>tr>td,
-	#searchSuggestionTable>table>tr>td,
-	#searchSuggestionTable>button {
+	#searchSuggestionTable > tr,
+	#searchSuggestionTable > tr > td,
+	#searchSuggestionTable > table > tr > td,
+	#searchSuggestionTable > button {
 		background-color: #1e1d2d !important;
-		color: #F8F8F2 !important;
-		fill: #F8F8F2 !important;
+		color: #f8f8f2 !important;
+		fill: #f8f8f2 !important;
 	}
 
 	.search-wrapper input {
-		box-shadow: rgba(248, 248, 242, 0.2) 0px 1px 4px 0px, rgba(238, 238, 232, 0.15) 0px 0px 0px 1px !important;
+		box-shadow: rgba(248, 248, 242, 0.2) 0px 1px 4px 0px,
+			rgba(238, 238, 232, 0.15) 0px 0px 0px 1px !important;
 	}
-
 
 	body {
 		background-color: #1e1d2d !important;
@@ -2374,8 +2414,6 @@ url('about:newtab') {
 	}
 }
 
-
-
 /*
 @-moz-document url("http://www.w3.org/1999/xhtml") {
 	html|input.urlbar-scheme {
@@ -2384,8 +2422,8 @@ url('about:newtab') {
 }
 */
 @-moz-document url-prefix("about:"),
-@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
-
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html")
+{
 	window,
 	page,
 	html,
@@ -2401,7 +2439,6 @@ url('about:newtab') {
 	scrollbar-color: #1e90ff black !important;
 	scrollbar-width: thin !important;
 }
-
 
 @-moz-document url-prefix("about:restartrequired") {
 	body {
@@ -2455,9 +2492,10 @@ body::before {
 }
 
 @-moz-document url-prefix(about:),
-url-prefix(chrome: //browser) {
-
-	browser[type="content"], tabpanels {
+url-prefix(chrome: //browser)
+{
+	browser[type="content"],
+	tabpanels {
 		/*background: #1e1d2d !important;*/
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
@@ -2467,7 +2505,8 @@ url-prefix(chrome: //browser) {
 		box-shadow: none !important;
 	}
 
-	menu, menulist {
+	menu,
+	menulist {
 		border: 0px !important;
 		outline: none !important;
 		box-shadow: none !important;
@@ -2475,14 +2514,12 @@ url-prefix(chrome: //browser) {
 }
 
 @-moz-document url("about:memory") {
-
 	html,
 	body {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 }
-
 
 #tabmodalprompt-topContainer {
 	background-color: #1e1d2d !important;
@@ -2497,7 +2534,6 @@ url-prefix(chrome: //browser) {
 /*
 /* Dark Mode page between loading */
 @-moz-document url("about:privatebrowsing") {
-
 	html:not(#ublock0-epicker),
 	html:not(#ublock0-epicker) body,
 	#newtab-customize-overlay {
@@ -2517,13 +2553,12 @@ url-prefix(chrome: //browser) {
 		color: #ffffff !important;
 	}
 
-	#search-handoff-button:active>.fake-textbox,
-	#search-handoff-button:hover>.fake-textbox,
-	#search-handoff-button:focus>.fake-textbox,
-	#search-handoff-button:focus-within>.fake-textbox {
+	#search-handoff-button:active > .fake-textbox,
+	#search-handoff-button:hover > .fake-textbox,
+	#search-handoff-button:focus > .fake-textbox,
+	#search-handoff-button:focus-within > .fake-textbox {
 		color: #ffffff !important;
 		opacity: 0.8 !important;
-
 	}
 
 	.fake-caret {
@@ -2532,14 +2567,12 @@ url-prefix(chrome: //browser) {
 
 	.logo-and-wordmark .wordmark {
 		fill: #b821ec !important;
-
 	}
 }
 
 @-moz-document url("about:home"),
 url("about:blank"),
 url("about:newtab") {
-
 	html:not(#ublock0-epicker),
 	html:not(#ublock0-epicker) body,
 	#newtab-customize-overlay {
@@ -2551,8 +2584,11 @@ url("about:newtab") {
 }
 
 /* free download manager */
-@-moz-document url-prefix("moz-extension://e82498ba-03f1-4c10-be0c-9441111ccc84/") {
-	html, head, body {
+@-moz-document url-prefix("moz-extension://e82498ba-03f1-4c10-be0c-9441111ccc84/")
+{
+	html,
+	head,
+	body {
 		background-color: #1e1d2d !important;
 		background: #1e1d2d !important;
 		color: #ffffff !important;
@@ -2583,8 +2619,8 @@ url("about:newtab") {
 }
 
 /* share backported */
-@-moz-document url-prefix("moz-extension://0c824817-ed87-462e-bbf5-aa77c08dc4db/") {
-
+@-moz-document url-prefix("moz-extension://0c824817-ed87-462e-bbf5-aa77c08dc4db/")
+{
 	body {
 		background: #1e1d2d !important;
 	}
@@ -2624,9 +2660,7 @@ url("about:newtab") {
 		background-color: #1e90ff80 !important;
 		border-radius: 2px !important;
 		outline: 0px !important;
-
 	}
-
 
 	button:active,
 	button:focus {
@@ -2660,12 +2694,10 @@ url("about:newtab") {
 		outline: 0px !important;
 		border: 0px !important;
 	}
-
 }
 
-
-
-@-moz-document url-prefix("https://www.youtube.com") {
+@-moz-document url-prefix("https://www.youtube.com")
+{
 	* {
 		font-family: Fira Sans !important;
 	}
@@ -2673,7 +2705,7 @@ url("about:newtab") {
 	/* imo, Roboto is too narrow, this spaces it more nicely */
 	html,
 	body,
-	ytd-page-manager>*.ytd-page-manager {
+	ytd-page-manager > *.ytd-page-manager {
 		letter-spacing: 0.2px !important;
 		background-color: #1e1d2d !important;
 	}
@@ -2707,7 +2739,8 @@ url("about:newtab") {
 	}
 
 	/* VIDEO MENU BTN TEXT */
-	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer {
+	ytd-toggle-button-renderer.force-icon-button
+		a.ytd-toggle-button-renderer {
 		font-size: 15px !important;
 	}
 
@@ -2734,7 +2767,6 @@ url("about:newtab") {
 	ytd-author-comment-badge-renderer.creator yt-formatted-string {
 		color: #ffffff !important;
 	}
-
 
 	/* NAVBAR, CHANNEL HEADER, NOTIFICATIONS BOX */
 	#chips.ytd-feed-filter-chip-bar-renderer,
@@ -2769,7 +2801,7 @@ url("about:newtab") {
 	}
 
 	/* SEARCH */
-	ytd-searchbox[mode=legacy] #container.ytd-searchbox {
+	ytd-searchbox[mode="legacy"] #container.ytd-searchbox {
 		background-color: rgba(255, 255, 255, 0.1) !important;
 		border: 1px solid transparent !important;
 		box-shadow: none !important;
@@ -2783,11 +2815,13 @@ url("about:newtab") {
 		width: 50px;
 	}
 
-	ytd-searchbox[mode=legacy] #search-icon-legacy.ytd-searchbox:hover>yt-icon {
+	ytd-searchbox[mode="legacy"]
+		#search-icon-legacy.ytd-searchbox:hover
+		> yt-icon {
 		color: rgba(255, 255, 255, 0.8) !important;
 	}
 
-	ytd-searchbox[mode=legacy] #search-icon-legacy.ytd-searchbox:hover {
+	ytd-searchbox[mode="legacy"] #search-icon-legacy.ytd-searchbox:hover {
 		background-color: transparent;
 	}
 
@@ -2807,9 +2841,8 @@ url("about:newtab") {
 		background-color: #1e90ff !important;
 	}
 
-
 	/* MINOR TEXT (off- #ffffff) */
-	#published-time-text.ytd-comment-renderer [is=yt-endpoint],
+	#published-time-text.ytd-comment-renderer [is="yt-endpoint"],
 	ytd-button-renderer #button.ytd-button-renderer,
 	yt-icon,
 	#metadata-line.ytd-grid-video-renderer,
@@ -2824,31 +2857,38 @@ url("about:newtab") {
 	#byline.ytd-video-meta-block,
 	#metadata-line.ytd-video-meta-block,
 	#label.ytd-pinned-comment-badge-renderer,
-	paper-tab:not(.iron-selected)>.tab-content.paper-tab,
+	paper-tab:not(.iron-selected) > .tab-content.paper-tab,
 	#footer.ytd-guide-renderer #guide-links-primary a,
 	#footer.ytd-guide-renderer #guide-links-secondary a,
 	#autoplay.ytd-compact-autoplay-renderer,
 	#title-annotation.ytd-shelf-renderer,
 	paper-button.yt-next-continuation,
 	#description-text.ytd-video-renderer,
-	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer,
+	ytd-toggle-button-renderer.force-icon-button
+		a.ytd-toggle-button-renderer,
 	#subtitle.ytd-shelf-renderer,
 	#published-time-text.ytd-comment-renderer {
 		color: rgba(180, 190, 200, 0.8) !important;
 	}
 
 	/* LIKE BTN */
-	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer .style-default-active {
+	ytd-toggle-button-renderer.force-icon-button
+		a.ytd-toggle-button-renderer
+		.style-default-active {
 		color: #ffffff !important;
 	}
 
-	#top-level-buttons ytd-toggle-button-renderer.style-default-active:first-child yt-icon,
-	#like-button .style-default-active>yt-icon {
+	#top-level-buttons
+		ytd-toggle-button-renderer.style-default-active:first-child
+		yt-icon,
+	#like-button .style-default-active > yt-icon {
 		color: #1e90ff !important;
 	}
 
-	#top-level-buttons ytd-toggle-button-renderer.style-default-active:nth-child(2) yt-icon,
-	#dislike-button .style-default-active>yt-icon {
+	#top-level-buttons
+		ytd-toggle-button-renderer.style-default-active:nth-child(2)
+		yt-icon,
+	#dislike-button .style-default-active > yt-icon {
 		color: hsl(3, 100%, 66%) !important;
 	}
 
@@ -2867,7 +2907,8 @@ url("about:newtab") {
 	}
 
 	/* RED ICON */
-	ytd-guide-entry-renderer[active] .guide-icon.ytd-guide-entry-renderer {
+	ytd-guide-entry-renderer[active]
+		.guide-icon.ytd-guide-entry-renderer {
 		color: rgba(255, 78, 78, 0.83) !important;
 	}
 
@@ -2878,20 +2919,24 @@ url("about:newtab") {
 	}
 
 	/* LINKS */
-	[is=yt-endpoint],
+	[is="yt-endpoint"],
 	.yt-simple-endpoint,
-	paper-tab:not(.iron-selected):hover>.tab-content {
+	paper-tab:not(.iron-selected):hover > .tab-content {
 		color: rgba(140, 202, 255, 0.9);
 	}
 
-	[is=yt-endpoint]:hover,
+	[is="yt-endpoint"]:hover,
 	.yt-simple-endpoint:hover {
 		color: rgba(180, 230, 255, 1);
 	}
 
 	/* SUBSCRIBE BTN */
 	paper-button.ytd-subscribe-button-renderer {
-		background: linear-gradient(90deg, #e11958, hsl(3, 81.8%, 49.6%));
+		background: linear-gradient(
+			90deg,
+			#e11958,
+			hsl(3, 81.8%, 49.6%)
+		);
 		transition: all 0.2s ease;
 	}
 
@@ -2922,13 +2967,10 @@ url("about:newtab") {
 	ytd-app {
 		--app-drawer-content-container-background-color: #1e1d2d !important;
 		background: #1e1d2d !important;
-
 	}
 
 	ytd-settings-sidebar-renderer {
-
 		background-color: #1e1d2d !important;
-
 	}
 
 	yt-icon,
@@ -2937,7 +2979,8 @@ url("about:newtab") {
 	}
 }
 
-@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*") {
+@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*")
+{
 	* {
 		font-family: "Fira Sans" !important;
 	}
@@ -2965,7 +3008,6 @@ url("about:newtab") {
 	}
 }
 
-
 .pip-wrapper {
 	color: white !important;
 	background-color: transparent !important;
@@ -2986,7 +3028,6 @@ url("about:newtab") {
 	body {
 		background-color: #1e1d2d !important;
 	}
-
 
 	.title {
 		background-image: url("Lock.svg") !important;
@@ -3009,21 +3050,13 @@ url("about:newtab") {
 	color: white !important;
 }
 
-
-
-
-
-
-@-moz-document url(about:newtab){
-
-body,
-#newtab-customize-overlay {
-	background-color: #1e1d2d !important;
-	color: #ffffff !important;
+@-moz-document url(about:newtab) {
+	body,
+	#newtab-customize-overlay {
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+	}
 }
-}
-
-
 
 @-moz-document domain(facebook.com) {
 	* {
@@ -3031,9 +3064,7 @@ body,
 	}
 }
 
-
 @-moz-document domain("mail.google.com") {
-
 	/* ADD ROW HIGHLIGHTS */
 	table.zt tr.yO:hover {
 		background-color: #1e90ff80 !important;
@@ -3042,10 +3073,7 @@ body,
 	table.zt tr.zE:hover {
 		background-color: #1e90ff80 !important;
 	}
-
 }
-
-
 
 :where(textarea, input[type="text"], input[type="search"], input[type="password"], input[type="url"]) {
 	appearance: none !important;
@@ -3114,7 +3142,6 @@ popup-notification-button:hover {
 	margin-inline-end: 6px !important;
 }
 
-
 #commonDialog {
 	background: #1e1d2d !important;
 	color: #ffffff !important;
@@ -3126,11 +3153,7 @@ textbox {
 	outline: none !important;
 }
 
-
-
-
-
-.checkbox:not([disabled]):hover>.checkbox-check {
+.checkbox:not([disabled]):hover > .checkbox-check {
 	border-color: #1e90ff !important;
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
@@ -3138,22 +3161,19 @@ textbox {
 	fill: #ffffff !important;
 }
 
-.checkbox[checked]>.checkbox-check {
+.checkbox[checked] > .checkbox-check {
 	list-style-image: url("chrome://global/skin/icons/check.svg");
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
 	background-color: #1e90ff !important;
 }
 
-.checkbox>.checkbox-check {
+.checkbox > .checkbox-check {
 	background-color: #1e90ff !important;
 	color: #ffffff !important;
 	border-color: #1e90ff !important;
 	border-radius: 2px !important;
-
 }
-
-
 
 /*
 :root {
@@ -3178,7 +3198,6 @@ textbox {
 		background-color: inherit !important;
 		background: inherit !important;
 	}*/
-
 }
 
 /*
@@ -3189,20 +3208,22 @@ url("about:newtab") {
 	}
 }
 */
-@-moz-document url-prefix("https://accounts.firefox.com") {
+@-moz-document url-prefix("https://accounts.firefox.com")
+{
 	* {
 		font-family: Fira Sans !important;
 	}
 
 	/* Basic */
-	body, .unit-row, .bg-#ffffff {
-
+	body,
+	.unit-row,
+	.bg-#ffffff {
 		color: #ffffff !important;
 		background: #1e1d2d !important;
 	}
 
 	.tablet\:rounded-xl {
-		border-radius: .75rem !important;
+		border-radius: 0.75rem !important;
 	}
 
 	.button.primary-button,
@@ -3222,7 +3243,6 @@ url("about:newtab") {
 	.faint a:hover,
 	.cta-neutral:hover {
 		color: #ffffff !important;
-
 	}
 
 	.cta-caution label,
@@ -3274,7 +3294,7 @@ url("about:newtab") {
 	.input-row input[type="tel"],
 	.input-row input[type="text"],
 	.input-row input::placeholder,
-	.firefox-family-services>ul>.firefox-service,
+	.firefox-family-services > ul > .firefox-service,
 	.faint,
 	.faint a,
 	.text-grey-400 {
@@ -3389,7 +3409,8 @@ url("about:newtab") {
 	.input-row input[type="password"]:focus,
 	.input-row input[type="tel"]:focus,
 	.input-row input[type="text"]:focus {
-		box-shadow: 0 0 0 3px color-mix(in srgb, #1e90ff 80%, transparent) !important;
+		box-shadow: 0 0 0 3px
+			color-mix(in srgb, #1e90ff 80%, transparent) !important;
 	}
 
 	.drop-down-menu {
@@ -3404,7 +3425,6 @@ url("about:newtab") {
 		box-shadow: none !important;
 	}
 }
-
 
 ::selection {
 	background: #1f90ff !important;
@@ -3430,21 +3450,19 @@ p::selection {
 	color: #ffffff !important;
 }
 
-
-
-#netErrorButtonContainer>.try-again {
+#netErrorButtonContainer > .try-again {
 	background: #1e90ff !important;
 	color: #ffffff !important;
-
 }
 
-#netErrorButtonContainer>.try-again:hover {
+#netErrorButtonContainer > .try-again:hover {
 	background: #1e90ff80 !important;
 	color: #ffffff !important;
 }
 
 @-moz-document url-prefix("about:neterror") {
-	html, body {
+	html,
+	body {
 		/*background-image: url("Animation.gif") !important;
 		background-size: cover !important;*/
 		background: #1e1d2d !important;
@@ -3483,13 +3501,13 @@ p::selection {
 	outline: none !important;
 }
 */
-@-moz-document url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
-
+@-moz-document url("chrome://mozapps/content/handling/permissionDialog.xhtml")
+{
 	/*richlistitem[selected="true"] {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}*/
-	checkbox:not([disabled]):hover>.checkbox-check {
+	checkbox:not([disabled]):hover > .checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -3497,24 +3515,22 @@ p::selection {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked]>.checkbox-check {
-
+	checkbox[checked] > .checkbox-check {
 		color: #ffffff !important;
 		background: #1e90ff !important;
 	}
 
-	checkbox>.checkbox-check {
+	checkbox > .checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
 		border-radius: 2px !important;
-
 	}
 }
 
 @-moz-document url("chrome://mozapps/content/handling/appChooser.xhtml"),
-url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
-
+url("chrome://mozapps/content/handling/permissionDialog.xhtml")
+{
 	richlistitem[selected="true"] {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
@@ -3576,20 +3592,20 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	/* avoid double inline margins when #description is nested: */
-	#description-box>#description {
+	#description-box > #description {
 		margin-inline: 0;
 	}
 
 	/* Parent selector to win on specificity against common.css */
-	#rememberContainer>.toggle-container-with-text {
+	#rememberContainer > .toggle-container-with-text {
 		align-items: baseline;
 		color: var(--in-content-deemphasized-text);
 	}
 
-	.toggle-container-with-text>html|input[type="checkbox"] {
+	.toggle-container-with-text > html|input[type="checkbox"] {
 		margin-inline-end: 8px;
 		/* Ensure the checkbox is properly aligned with the text: */
-		translate: 0 calc(1px + max(60% - .6em, 0px));
+		translate: 0 calc(1px + max(60% - 0.6em, 0px));
 	}
 
 	#rememberContainer:not([hidden]) {
@@ -3626,7 +3642,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	checkbox:not([disabled]):hover>.checkbox-check {
+	checkbox:not([disabled]):hover > .checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -3634,19 +3650,18 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked]>.checkbox-check {
+	checkbox[checked] > .checkbox-check {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill !important;
 		fill: #ffffff !important;
 		background-color: #1e90ff !important;
 	}
 
-	checkbox>.checkbox-check {
+	checkbox > .checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
 		border-radius: 2px !important;
-
 	}
 
 	button:hover,
@@ -3682,12 +3697,12 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 /* see this to tweak : https://github.com/gorhill/uBlock/blob/master/src/css/cloud-ui.css*/
 /*---------------------------------UBLOCK ORIGIN ---------------------*/
 
-@-moz-document url-prefix("moz-extension://e4fdb54f-d559-4a7b-b967-bf80726855b8/") {
-
+@-moz-document url-prefix("moz-extension://e4fdb54f-d559-4a7b-b967-bf80726855b8/")
+{
 	body,
 	#sticky,
 	#main {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
@@ -3707,9 +3722,8 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		/* fill: #ffffff80 !important;
 		color: #ffffff80 !important;*/
 		fill: #1e90ff !important;
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		border: none !important;
-
 	}
 
 	span.fa-icon {
@@ -3719,16 +3733,16 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	.toolRibbon {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	h2 {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
 	code {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	#switch .fa-icon {
@@ -3738,11 +3752,11 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	#switch .fa-icon:hover {
-		background: #1E1D2D !important;
-		background-color: #1E1D2D !important;
+		background: #1e1d2d !important;
+		background-color: #1e1d2d !important;
 		fill: #1e90ff !important;
 		/*filter: drop-shadow(0px 0px 4px white) !important;*/
-		stroke: #4F4F4F !important;
+		stroke: #4f4f4f !important;
 		stroke-width: thin !important;
 		stroke-opacity: 1 !important;
 	}
@@ -3754,7 +3768,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	html#ublock0-epicker,
 	#ublock0-epicker body {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
@@ -3762,35 +3776,34 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-color: #000000 !important;
 	}
 
-
 	body.off #switch .fa {
-		color: #1E1D2D !important;
+		color: #1e1d2d !important;
 	}
 
 	.tool {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
 	.tool.enabled:hover {
 		background: none !important;
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		fill: #1e90ff !important;
 		color: #1e90ff !important;
 	}
 
 	.permatoolbar {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	.permatoolbar .button {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	.permatoolbar .button:hover {
 		fill: #1e90ff !important;
 		color: #1e90ff !important;
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	#tooltip {
@@ -3800,47 +3813,46 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	#firewall {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 	}
 
-	#firewall>div {
+	#firewall > div {
 		background-color: #333 !important;
 	}
 
-	#firewall>div:hover {
+	#firewall > div:hover {
 		background-color: #444 !important;
 	}
 
-	#firewall>div>span {
-		background-color: #1E1D2D !important;
+	#firewall > div > span {
+		background-color: #1e1d2d !important;
 		color: #ffffff !important;
-
 	}
 
-	#firewall>div>span:first-of-type~span {
+	#firewall > div > span:first-of-type ~ span {
 		border-left: 1px solid #111 !important;
 	}
 
 	#extraTools {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
-	#extraTools>span:hover {
+	#extraTools > span:hover {
 		fill: #1e90ff !important;
 	}
 
 	#dashboard-nav {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		border-bottom: 1px solid #777 !important;
 	}
 
 	#dashboard-nav-widgets {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		border-bottom: 1px solid #777 !important;
 	}
 
 	.tabButton {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		border: 0px solid #1b192480 !important;
 		border-bottom: 0px solid #777 !important;
 		color: #ffffff !important;
@@ -3876,9 +3888,9 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	#loggerSettingsDialog,
 	#modalOverlayContainer,
 	#netFilteringDialog,
-	#netFilteringDialog>.panes>.details>div,
-	#netFilteringDialog>div.panes>.dynamic .row {
-		background-color: #1E1D2D !important;
+	#netFilteringDialog > .panes > .details > div,
+	#netFilteringDialog > div.panes > .dynamic .row {
+		background-color: #1e1d2d !important;
 		border-color: grey !important;
 	}
 
@@ -3887,44 +3899,43 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	#ruleFilter input,
-	input[type=number] {
+	input[type="number"] {
 		appearance: none !important;
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		border: 1px solid !important;
-		border-color: #1E1D2D !important;
+		border-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
 	#cloudWidget {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		color: #ffffff !important;
 		color: #ffffff !important;
 	}
 
-	#cloudWidget>span {
-		background: #1E1D2D !important;
+	#cloudWidget > span {
+		background: #1e1d2d !important;
 		color: #ffffff !important;
-
 	}
 
 	#cloudinfo {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
-	#fa-icon>svg,
-	#fa-icon>.fa-icon_cog,
-	.fa-icon>.fa-icon_clock-o,
-	.fa-icon>.fa-icon_floppy-o,
-	.fa-icon>.fa-icon_info-circle,
-	.fa-icon>.fa-icon_pause-circle-o,
-	.fa-icon>.fa-icon_play-circle-o,
-	.fa-icon>.fa-icon_power-off,
-	.fa-icon>.fa-icon_question-circle,
-	.fa-icon>.fa-icon_refresh,
-	.fa-icon>.fa-icon_save,
-	.fa-icon>.fa-icon_sliders,
-	.fa-icon>.fa-icon_undo {
+	#fa-icon > svg,
+	#fa-icon > .fa-icon_cog,
+	.fa-icon > .fa-icon_clock-o,
+	.fa-icon > .fa-icon_floppy-o,
+	.fa-icon > .fa-icon_info-circle,
+	.fa-icon > .fa-icon_pause-circle-o,
+	.fa-icon > .fa-icon_play-circle-o,
+	.fa-icon > .fa-icon_power-off,
+	.fa-icon > .fa-icon_question-circle,
+	.fa-icon > .fa-icon_refresh,
+	.fa-icon > .fa-icon_save,
+	.fa-icon > .fa-icon_sliders,
+	.fa-icon > .fa-icon_undo {
 		background: transparent !important;
 	}
 
@@ -3934,14 +3945,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	button:hover {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		fill: #1e90ff80 !important;
 	}
 
 	button#cloudPush,
 	button#cloudPull,
 	button#cloudPullAndMerge {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	button#cloudPush:hover,
@@ -3955,7 +3966,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	#actions {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 	}
 
 	#ublock0_raymondhill_net-browser-action label {
@@ -3966,7 +3977,6 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	.CodeMirror-activeline-background {
 		background: #1e90ff !important;
-
 	}
 
 	/*****THIS IS A PLACEHOLDER COLOR CHOOSE SOMETHING NICER****/
@@ -3977,17 +3987,17 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	.CodeMirror {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		/*color: #f9f9fb !important;*/
 	}
 
 	.CodeMirror-gutters {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		border-right: 1px solid #32313c !important;
 	}
 
 	.CodeMirror-merge-gap {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		border-left: 1px solid #32313c !important;
 		border-right: 1px solid #32313c !important;
 	}
@@ -4043,13 +4053,12 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		--checkbox-ink: #ffffff !important;
 	}
 
-	.checkbox>input[type="checkbox"]+svg {
+	.checkbox > input[type="checkbox"] + svg {
 		background-color: transparent !important;
 		border: 1px solid white !important;
-
 	}
 
-	.checkbox>input[type="checkbox"]:checked+svg {
+	.checkbox > input[type="checkbox"]:checked + svg {
 		background-color: #1e90ff !important;
 		border-color: white !important;
 
@@ -4057,14 +4066,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	.checkbox[disabled],
-	.checkbox[disabled]~span {
+	.checkbox[disabled] ~ span {
 		filter: var(--checkbox-disabled-filter) !important;
 	}
 }
 
-
 /* imagus */
-@-moz-document url("moz-extension://fa0c04ad-ce95-4ccf-a163-badf1fc7f6f9/options.html") {
+@-moz-document url("moz-extension://fa0c04ad-ce95-4ccf-a163-badf1fc7f6f9/options.html")
+{
 	html {
 		background-color: #1e1d2d !important;
 	}
@@ -4083,33 +4092,49 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#sieve_container>.disabled>span {
+	#sieve_container > .disabled > span {
 		text-shadow: 0 0 5px #000000 !important;
-		color: #FF5050 !important;
+		color: #ff5050 !important;
 	}
 
-	#sieve_container>.selected>span {
-		background-image: linear-gradient(to bottom, #1e90ff, #1e90ff80 90%) !important;
+	#sieve_container > .selected > span {
+		background-image: linear-gradient(
+			to bottom,
+			#1e90ff,
+			#1e90ff80 90%
+		) !important;
 	}
 
-	#sieve_container>div:not(.opened)>span:hover {
-		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
+	#sieve_container > div:not(.opened) > span:hover {
+		background-image: linear-gradient(
+			to bottom,
+			#1e90ff80,
+			#1e90ff 90%
+		) !important;
 	}
 
-	#sieve_container>div.opened {
-		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
+	#sieve_container > div.opened {
+		background-image: linear-gradient(
+			to bottom,
+			#1e90ff80,
+			#1e90ff 90%
+		) !important;
 	}
 
-	#sieve_container>.opened>span {
-		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
+	#sieve_container > .opened > span {
+		background-image: linear-gradient(
+			to bottom,
+			#1e90ff80,
+			#1e90ff 90%
+		) !important;
 	}
 
 	*|*:any-link:not(svg) {
-		color: #1e90ff !important
+		color: #1e90ff !important;
 	}
 
 	*|*:any-link:not(svg):visited {
-		color: #1e90ff90 !important
+		color: #1e90ff90 !important;
 	}
 
 	* {
@@ -4121,8 +4146,16 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	select,
 	code,
 	.checkbox {
-		background-image: -webkit-linear-gradient(top, #000000, #000000) !important;
-		background-image: linear-gradient(to bottom, #000000, #000000) !important;
+		background-image: -webkit-linear-gradient(
+			top,
+			#000000,
+			#000000
+		) !important;
+		background-image: linear-gradient(
+			to bottom,
+			#000000,
+			#000000
+		) !important;
 		background-color: black !important;
 		color: white !important;
 		fill: white !important;
@@ -4133,13 +4166,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 }
 
-
-@-moz-document url-prefix("https://winaero.com") {
+@-moz-document url-prefix("https://winaero.com")
+{
 	* {
 		font-family: "Fira Sans" !important;
 	}
 
-	body, .site {
+	body,
+	.site {
 		background: #1e1d2d !important;
 		color: white !important;
 	}
@@ -4162,17 +4196,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		font-family: "Fira Sans" !important;
 		text-justify: inter-word !important;
 		color: white !important;
-
 	}
 
 	.entry-title a:hover,
 	.entry-title a:focus {
 		font-family: "Fira Sans" !important;
 		color: #1e90ff !important;
-
 	}
 }
-
 
 /*
 #tabbrowser-tab-tooltip,
@@ -4216,10 +4247,8 @@ tooltip {
 	}
 }*/
 
-
 /* addon 2 columns */
 @-moz-document url("about:addons") {
-
 	:root {
 		overflow-x: hidden;
 		--in-content-border-hover: #1e90ff !important;
@@ -4229,17 +4258,14 @@ tooltip {
 		--in-content-item: #ffffff !important;
 		--in-content-border: 1px !important;
 		--card-outline-color: #1e90ff !important;
-		--card-shadow-hover: var(--card-shadow), 0 0 0 2px var(--card-outline-color) !important;
-		background-color: #1E1D2D !important;
+		--card-shadow-hover: var(--card-shadow),
+			0 0 0 2px var(--card-outline-color) !important;
+		background-color: #1e1d2d !important;
 		font-family: "Fira Sans" !important;
 		/*--message-bar-background-color: #1e90ff80 !important;
 		--message-bar-text-color: #ffffff !important;*/
 		/*--message-bar-icon-url: var(--info-icon-url);*/
-
-
 	}
-
-
 
 	/*
 	message-bar-stack> *{
@@ -4254,25 +4280,25 @@ tooltip {
 		border: 1px solid #1e90ff !important;
 	}
 
-	message-bar>button {
+	message-bar > button {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}
 
-	message-bar>button:hover {
+	message-bar > button:hover {
 		background-color: #1e90ff80 !important;
 		color: #ffffff !important;
 	}
 
 	html {
-		background: #1E1D2D !important;
-		background-color: #1E1D2D !important;
+		background: #1e1d2d !important;
+		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		font-family: Fira Sans !important;
 	}
 
 	.inline-options-stack {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
@@ -4310,22 +4336,21 @@ tooltip {
 
 	/* Remove this if it causes horizontal scrolling problems */
 
-	@media (min-width:720px) {
+	@media (min-width: 720px) {
 		#main {
 			max-width: unset !important;
 			padding-right: 28px !important;
 		}
 
-
-		addon-list>section,
+		addon-list > section,
 		recommended-addon-list {
 			padding: 1em !important;
 			display: grid !important;
-			grid-template-areas: "hd hd"
-			"cd cd" !important;
+			grid-template-areas:
+				"hd hd"
+				"cd cd" !important;
 			grid-template-columns: 1fr 1fr !important;
 			column-gap: 1em !important;
-
 		}
 
 		addon-card .card-contents {
@@ -4337,7 +4362,7 @@ tooltip {
 			max-width: calc(100% + 32px) !important;
 		}
 
-		section>h2 {
+		section > h2 {
 			grid-area: hd !important;
 		}
 
@@ -4355,14 +4380,12 @@ tooltip {
 			text-align: inherit !important;
 		}
 
-
 		.stack.inline-options-stack {
-			background-color: #1E1D2D !important;
+			background-color: #1e1d2d !important;
 			color: #ffffff !important;
 			font-size: 14px !important;
 			border: none !important;
 		}
-
 
 		addon-card .addon-description {
 			height: 3em !important;
@@ -4395,7 +4418,7 @@ tooltip {
 	}
 
 	#page-options panel-list {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		font-size: 14px !important;
 		border: none !important;
 		color: #ffffff !important;
@@ -4411,7 +4434,6 @@ tooltip {
 		color: #ffffff !important;
 	}
 
-
 	.addon-detail-row {
 		display: flex;
 		justify-content: space-between;
@@ -4423,7 +4445,7 @@ tooltip {
 	}
 
 	search-textbox {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		border: 1px solid #1e90ff !important;
 	}
 
@@ -4432,7 +4454,6 @@ tooltip {
 		fill: #ffffff !important;
 		background-image: url("chrome://global/skin/icons/heart.svg");
 		background-color: #1e90ff !important;
-
 	}
 
 	.addon-detail-contribute-button:hover {
@@ -4440,7 +4461,6 @@ tooltip {
 		fill: #ffffff !important;
 		background-image: url("chrome://global/skin/icons/heart.svg");
 		background-color: #1e90ff80 !important;
-
 	}
 
 	.category-name {
@@ -4453,15 +4473,15 @@ tooltip {
 		color: #1e90ff !important;
 	}
 
-	#categories>.category:hover {
+	#categories > .category:hover {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
 		border-radius: 4px !important;
 	}
 
-	button[role=menuitem]:focus,
-	button[role=menuitem]:enabled:hover {
+	button[role="menuitem"]:focus,
+	button[role="menuitem"]:enabled:hover {
 		background: #1e90ff !important;
 	}
 
@@ -4505,7 +4525,7 @@ tooltip {
 	}
 
 	.more-options-button menulist {
-		background: #1E1D2D !important;
+		background: #1e1d2d !important;
 		box-shadow: none !important;
 	}
 
@@ -4513,13 +4533,12 @@ tooltip {
 	.main-search,
 	.main-heading,
 	.main-page-content {
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	.addon-name-link {
 		color: #1e90ff !important;
 	}
-
 
 	.addon.card {
 		border-radius: 4px !important;
@@ -4540,12 +4559,10 @@ tooltip {
 
 	input[type="checkbox"].toggle-button:enabled:hover {
 		background: #1e90ff80 !important;
-
 	}
 
 	input[type="checkbox"].toggle-button {
 		background: #1e90ff !important;
-
 	}
 
 	input[type="radio"]:checked,
@@ -4563,7 +4580,7 @@ tooltip {
 	*.radio-check {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 	}
 
 	input[type="radio"]:hover,
@@ -4573,11 +4590,11 @@ tooltip {
 		background-color: #1e90ff50 !important;
 	}
 
-	radio:not([disabled="true"]):hover>.radio-check {
+	radio:not([disabled="true"]):hover > .radio-check {
 		border-color: #1e90ff !important;
 	}
 
-	radio:hover>.radio-check {
+	radio:hover > .radio-check {
 		fill: #1e90ff80 !important;
 	}
 
@@ -4586,7 +4603,6 @@ tooltip {
 	}
 
 	@media (prefers-contrast) {
-
 		button.tab-button[selected],
 		button.tab-button[selected]:hover {
 			color: #ffffff !important;
@@ -4598,7 +4614,8 @@ tooltip {
 		outline-offset: -1px !important;
 	}
 
-	.tab-group[last-input-type="mouse"]>button.tab-button:-moz-focusring {
+	.tab-group[last-input-type="mouse"]
+		> button.tab-button:-moz-focusring {
 		outline: none !important;
 		box-shadow: none !important;
 	}
@@ -4635,10 +4652,10 @@ tooltip {
 		padding: 4px 16px !important;
 	}
 
-	plugin-options>panel-list,
-	addon-options>panel-list {
+	plugin-options > panel-list,
+	addon-options > panel-list {
 		box-shadow: none !important;
-		background-color: #1E1D2D !important;
+		background-color: #1e1d2d !important;
 		outline: none !important;
 		border: none !important;
 		color: #ffffff !important;
@@ -4676,10 +4693,10 @@ tooltip {
 	}
 }
 
-
-@-moz-document url(about:blank), url(about:newtab){
-body {
-	background-color: #1e1d2d !important;
-	background: #1e1d2d !important;
-}
+@-moz-document url(about:blank), url(about:newtab), url(about:home) {
+	body {
+		background-color: #1e1d2d !important;
+		background: #1e1d2d !important;
+		color: white !important;
+	}
 }
