@@ -23,7 +23,7 @@ button::-moz-focus-inner,
 :-moz-focusring *,
 :focus *,
 :-moz-focusring:focus:not(:focus-visible),
-:-moz-focusring:focus:not(:focus-visible) > * {
+:-moz-focusring:focus:not(:focus-visible)>* {
 	outline: unset !important;
 	outline-offset: unset !important;
 	-moz-outline-radius: unset !important;
@@ -32,8 +32,8 @@ button::-moz-focus-inner,
 @-moz-document url(about:blank),
 url-prefix(about:newtab),
 url(about:config),
-url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
-{
+url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
+
 	#newtab-window,
 	#newtab-customize-overlay,
 	#toolbar {
@@ -92,22 +92,22 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 		color: #ffffff !important;
 	}
 */
-	#categories > .category:hover {
+	#categories>.category:hover {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 		border-radius: 2px !important;
 	}
 
-	checkbox:not([disabled="true"]):hover > .checkbox-check,
+	checkbox:not([disabled="true"]):hover>.checkbox-check,
 	input[type="checkbox"]:not(:disabled):hover {
 		border-color: #1e90ff !important;
 	}
 
-	radio:not([disabled="true"]):hover > .radio-check {
+	radio:not([disabled="true"]):hover>.radio-check {
 		border-color: #1e90ff !important;
 	}
 
-	radio:hover > .radio-check {
+	radio:hover>.radio-check {
 		fill: #1e90ff80 !important;
 	}
 
@@ -150,20 +150,17 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 		background-color: #1e90ff !important;
 	}
 */
-	#engineList > treechildren::-moz-tree-image(engineShown, checked),
-	#blocklistsTree
-		> treechildren::-moz-tree-image(selectionCol, checked) {
+	#engineList>treechildren::-moz-tree-image(engineShown, checked),
+	#blocklistsTree>treechildren::-moz-tree-image(selectionCol, checked) {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill, stroke;
 		fill: yellow !important;
 	}
 
-	#engineList
-		> treechildren::-moz-tree-row(engineShown, checked, selected, focus, active),
-	#blocklistsTree
-		> treechildren::-moz-tree-row(selectionCol, checked, selected, focus, active),
+	#engineList>treechildren::-moz-tree-row(engineShown, checked, selected, focus, active),
+	#blocklistsTree>treechildren::-moz-tree-row(selectionCol, checked, selected, focus, active),
 	#engineChildren::-moz-tree-row(engineShown, checked, selected, focus, active),
-	treechildren > #engineChildren {
+	treechildren>#engineChildren {
 		fill: #1e90ff !important;
 		stroke: #1e90ff !important;
 		background: #1e90ff !important;
@@ -171,9 +168,10 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 	}
 
 	@media (prefers-contrast) {
-		#engineList > treechildren::-moz-tree-row:hover,
-		#engineChildren > treechildren::-moz-tree-row:selected,
-		#blocklistsTree > treechildren::-moz-tree-row:hover {
+
+		#engineList>treechildren::-moz-tree-row:hover,
+		#engineChildren>treechildren::-moz-tree-row:selected,
+		#blocklistsTree>treechildren::-moz-tree-row:hover {
 			fill: #1e90ff !important;
 			stroke: #1e90ff !important;
 			background: #1e90ff !important;
@@ -181,8 +179,8 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 		}
 	}
 
-	#engineList > treechildren::-moz-tree-row,
-	#blocklistsTree > treechildren::-moz-tree-row {
+	#engineList>treechildren::-moz-tree-row,
+	#blocklistsTree>treechildren::-moz-tree-row {
 		min-height: 30px !important;
 	}
 
@@ -287,7 +285,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 		border-color: #1e90ff !important;
 	}
 
-	checkbox:not([disabled]):hover > .checkbox-check {
+	checkbox:not([disabled]):hover>.checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -295,23 +293,23 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked] > .checkbox-check {
+	checkbox[checked]>.checkbox-check {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill !important;
 		fill: #ffffff !important;
 		background-color: #1e90ff !important;
 	}
 
-	checkbox > .checkbox-check {
+	checkbox>.checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
 		border-radius: 2px !important;
 	}
 
-	#handlersView > richlistitem:active,
-	#handlersView > richlistitem[selected],
-	#handlersView > richlistitem:hover {
+	#handlersView>richlistitem:active,
+	#handlersView>richlistitem[selected],
+	#handlersView>richlistitem:hover {
 		color: #ffffff !important;
 		background: #1e90ff !important;
 	}
@@ -435,16 +433,15 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 		border: 1px solid dodgerblue !important;
 	}
 
-	.web-appearance-choice > .web-appearance-choice-image-container {
+	.web-appearance-choice>.web-appearance-choice-image-container {
 		background-color: #1e90ff40 !important;
 	}
 
-	.web-appearance-choice:hover
-		> .web-appearance-choice-image-container {
+	.web-appearance-choice:hover>.web-appearance-choice-image-container {
 		background-color: #1e90ff !important;
 	}
 
-	.subcategory:not([hidden]) ~ .subcategory {
+	.subcategory:not([hidden])~.subcategory {
 		border-top: 1px solid #1e90ff80 !important;
 	}
 
@@ -485,8 +482,7 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 	}
 }
 
-@-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/")
-{
+@-moz-document url-prefix("https://ftp.mozilla.org/pub/firefox/releases/") {
 	* {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
@@ -496,8 +492,8 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml")
 }
 
 /*-------------downloads sidebar webext tweaks dark ------------------*/
-@-moz-document url("moz-extension://8323b085-12c9-427f-af42-142a4a90bbb0/sidebar/panel.html")
-{
+@-moz-document url("moz-extension://8323b085-12c9-427f-af42-142a4a90bbb0/sidebar/panel.html") {
+
 	html,
 	body {
 		font-family: Fira Sans !important;
@@ -586,8 +582,7 @@ url(about:profiles) {
 	}
 }
 
-@-moz-document url("chrome://global/content/config.xhtml")
-{
+@-moz-document url("chrome://global/content/config.xhtml") {
 	:root {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
@@ -605,10 +600,10 @@ url(about:profiles) {
 
 	#newtab-search-text,
 	#searchSuggestionTable,
-	#searchSuggestionTable > tr,
-	#searchSuggestionTable > tr > td,
-	#searchSuggestionTable > table > tr > td,
-	#searchSuggestionTable > button {
+	#searchSuggestionTable>tr,
+	#searchSuggestionTable>tr>td,
+	#searchSuggestionTable>table>tr>td,
+	#searchSuggestionTable>button {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
@@ -639,8 +634,8 @@ url(about:profiles) {
 	}
 }
 
-@-moz-document url-prefix("chrome: //global/content/httpsonlyerror/errorpage.html")
-{
+@-moz-document url-prefix("chrome: //global/content/httpsonlyerror/errorpage.html") {
+
 	html,
 	body.container {
 		font-family: Fira Sans !important;
@@ -650,8 +645,8 @@ url(about:profiles) {
 }
 
 /*------ HTTPS EVERYWHERE ADDON ------*/
-@-moz-document url-prefix("moz-extension://c36e8fbe-ae73-46bc-aef1-79a6938f3366/")
-{
+@-moz-document url-prefix("moz-extension://c36e8fbe-ae73-46bc-aef1-79a6938f3366/") {
+
 	html,
 	body,
 	header {
@@ -840,8 +835,7 @@ url(about:profiles) {
 }
 
 /**************************-*/
-@-moz-document url-prefix("https://addons.mozilla.org")
-{
+@-moz-document url-prefix("https://addons.mozilla.org") {
 	:root {
 		--nordp-0: #2e3440;
 		--nordp-1: #3b4253;
@@ -913,9 +907,7 @@ url(about:profiles) {
 	}
 
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
-	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme)
-		.Card-contents
-		.AddonsCard-list,
+	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
 	.AddonsByAuthorsCard .Card-contents .AddonsCard-list,
 	.AddonsCard--horizontal .Card-contents,
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
@@ -982,9 +974,7 @@ url(about:profiles) {
 	.Footer a:hover,
 	.Footer-links-header a:link,
 	.GuidesAddonCard .AddonTitle a,
-	.GuidesAddonCard
-		.GuidesAddonCard-content-header-title
-		.AddonTitle-author,
+	.GuidesAddonCard .GuidesAddonCard-content-header-title .AddonTitle-author,
 	.Home-SubjectShelf-link:link,
 	.Home-SubjectShelf-link:visited,
 	.Home-SubjectShelf-subheading,
@@ -997,9 +987,7 @@ url(about:profiles) {
 	.Paginate .Button.Paginate-item:link:first-child,
 	.Paginate .Button.Paginate-item:link:last-child,
 	.Paginate .Button.Paginate-item:visited:first-child,
-	.Paginate
-		.Button.Paginate-item:visited:last-child
-		.Paginate-page-number,
+	.Paginate .Button.Paginate-item:visited:last-child .Paginate-page-number,
 	.PermissionsCard-subhead,
 	.ReportAbuseButton-show-more,
 	.SearchContextCard-header,
@@ -1041,7 +1029,7 @@ url(about:profiles) {
 	}
 
 	.addon-webext-perm-info,
-	.popup-notification-learnmore-link > text-link {
+	.popup-notification-learnmore-link>text-link {
 		color: #1e90ff !important;
 	}
 
@@ -1058,20 +1046,14 @@ url(about:profiles) {
 */
 	.AddonMeta .MetadataCard-content a,
 	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link,
-	.AddonMeta
-		.MetadataCard-content
-		a.AddonMeta-reviews-content-link:link,
-	.AddonMeta
-		.MetadataCard-content
-		a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:link,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:visited,
 	.AddonMeta .MetadataCard-content a:link,
 	.AddonMeta .MetadataCard-content a:visited,
 	.AddonMeta .MetadataCard-title a,
 	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link,
 	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:link,
-	.AddonMeta
-		.MetadataCard-title
-		a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:visited,
 	.AddonMeta .MetadataCard-title a:link,
 	.AddonMeta .MetadataCard-title a:visited,
 	.RatingsByStar-count a:active,
@@ -1084,10 +1066,8 @@ url(about:profiles) {
 	}
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(
-			rgba(255, 255, 255, 0),
-			#1b1924
-		) !important;
+		background: linear-gradient(rgba(255, 255, 255, 0),
+			#1b1924) !important;
 	}
 
 	.Addon-details .AddonDescription-contents a:link,
@@ -1134,9 +1114,7 @@ url(about:profiles) {
 
 	.SearchForm-query:focus {
 		box-shadow: 0 0 5px 0 var(--in-content-border-highlight) !important;
-		border-color: var(
-			--in-content-primary-button-background
-		) !important;
+		border-color: var(--in-content-primary-button-background) !important;
 	}
 
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
@@ -1180,12 +1158,8 @@ url(about:profiles) {
 		color: #1e90ff !important;
 	}
 
-	.AddonsCard--horizontal
-		ul.AddonsCard-list
-		.SearchResult-wrapper:focus,
-	.AddonsCard--horizontal
-		ul.AddonsCard-list
-		.SearchResult-wrapper:hover {
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:focus,
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:hover {
 		background: transparent !important;
 		color: dodgerblue !important;
 		/*border-radius: 9px !important;*/
@@ -1265,8 +1239,7 @@ url(about:profiles) {
 	}
 }
 
-@-moz-document url-prefix("https://addons.mozilla.org")
-{
+@-moz-document url-prefix("https://addons.mozilla.org") {
 	:root {
 		--pale-blue: #728cbb;
 		--custom-bg: #333333;
@@ -1355,9 +1328,7 @@ url(about:profiles) {
 		--in-content-box-background: var(--tone-7) !important;
 		--in-content-box-background-odd: #f3f6fa;
 		--in-content-box-background-hover: var(--tone-6) !important;
-		--in-content-box-background-active: var(
-			--tone-6
-		) !important;
+		--in-content-box-background-active: var(--tone-6) !important;
 		--in-content-box-border-color: var(--tone-5) !important;
 		--in-content-item-hover: rgba(0, 149, 221, 0.25);
 		--in-content-item-selected: var(--tone-8) !important;
@@ -1367,84 +1338,54 @@ url(about:profiles) {
 		--in-content-category-outline-focus: 1px dotted #0a84ff;
 		--in-content-category-text: var(--tone-2) !important;
 		--in-content-category-text-active: #0c0c0d;
-		--in-content-category-text-selected: var(
-			--accent-1
-		) !important;
+		--in-content-category-text-selected: var(--accent-1) !important;
 		--in-content-category-text-selected-active: #1e90ff;
-		--in-content-category-background-hover: rgba(
-			12,
-			12,
-			13,
-			0.1
-		);
-		--in-content-category-background-active: rgba(
-			12,
+		--in-content-category-background-hover: rgba(12,
 			12,
 			13,
-			0.15
-		);
-		--in-content-category-background-selected-hover: rgba(
-			12,
+			0.1);
+		--in-content-category-background-active: rgba(12,
 			12,
 			13,
-			0.15
-		);
-		--in-content-category-background-selected-active: rgba(
-			12,
+			0.15);
+		--in-content-category-background-selected-hover: rgba(12,
 			12,
 			13,
-			0.2
-		);
+			0.15);
+		--in-content-category-background-selected-active: rgba(12,
+			12,
+			13,
+			0.2);
 		--in-content-tab-color: #424f5a;
 		--in-content-link-color: #ffffff !important;
 		--in-content-link-color-hover: #1e90ff !important;
 		--in-content-link-color-active: white !important;
 		--in-content-link-color-visited: white !important;
-		--in-content-primary-button-background: var(
-			--accent-2
-		) !important;
-		--in-content-primary-button-background-hover: var(
-			--accent-3
-		) !important;
-		--in-content-primary-button-background-active: var(
-			--accent-3
-		) !important;
-		--in-content-table-border-dark-color: var(
-			--tone-7
-		) !important;
-		--in-content-table-header-background: var(
-			--accent-2
-		) !important;
+		--in-content-primary-button-background: var(--accent-2) !important;
+		--in-content-primary-button-background-hover: var(--accent-3) !important;
+		--in-content-primary-button-background-active: var(--accent-3) !important;
+		--in-content-table-border-dark-color: var(--tone-7) !important;
+		--in-content-table-header-background: var(--accent-2) !important;
 		--theme-selection-background: var(--accent-2) !important;
-		--theme-selection-background-hover: var(
-			--accent-1
-		) !important;
-		--in-content-category-header-background: var(
-			--tone-8
-		) !important;
+		--theme-selection-background-hover: var(--accent-1) !important;
+		--in-content-category-header-background: var(--tone-8) !important;
 		--selected-icon-fill-color: var(--tone-2) !important;
-		--in-content-dark-header-background: var(
-			--tone-9
-		) !important;
+		--in-content-dark-header-background: var(--tone-9) !important;
 		--tab-line-selected-color: var(--accent-2) !important;
 		--secure-connection-color: var(--accent-1);
 		--tab-background-color: var(--tone-9) !important;
 		--tab-color: var(--in-content-selected-text);
 		--theme-sidebar-background: #1b1b1d !important;
-		--card-outline-color: var(
-			--in-content-box-border-color
-		) !important;
+		--card-outline-color: var(--in-content-box-border-color) !important;
 		--cm-background: var(--tone-8) !important;
 		--cm-selection: #353b48 !important;
 		--cm-marker: #555 !important;
 		--cm-linenumber: #58575c !important;
 		--cm-cursor: #fff !important;
-		--cm-active-line-background: rgba(
-			185,
+		--cm-active-line-background: rgba(185,
 			215,
 			253,
-			0.15
-		) !important;
+			0.15) !important;
 		--cm-matching-bracket: rgba(255, 255, 255, 0.25) !important;
 		--cm-search-background: rgba(24, 29, 32, 1) !important;
 		--cm-red: #de7474 !important;
@@ -1465,9 +1406,7 @@ url(about:profiles) {
 	.Footer-wrapper,
 	.LanguageTools-header-row,
 	.amo {
-		background: var(
-			--in-content-category-header-background
-		) !important;
+		background: var(--in-content-category-header-background) !important;
 	}
 
 	h1,
@@ -1499,9 +1438,7 @@ url(about:profiles) {
 	}
 */
 	.Select {
-		background-color: var(
-			--in-content-page-background
-		) !important;
+		background-color: var(--in-content-page-background) !important;
 	}
 
 	.SearchForm-icon-magnifying-glass {
@@ -1514,9 +1451,7 @@ url(about:profiles) {
 	}
 
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
-	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme)
-		.Card-contents
-		.AddonsCard-list,
+	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
 	.AddonsByAuthorsCard .Card-contents .AddonsCard-list,
 	.AddonsCard--horizontal .Card-contents,
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
@@ -1572,9 +1507,7 @@ url(about:profiles) {
 	.Footer a:hover,
 	.Footer-links-header a:link,
 	.GuidesAddonCard .AddonTitle a,
-	.GuidesAddonCard
-		.GuidesAddonCard-content-header-title
-		.AddonTitle-author,
+	.GuidesAddonCard .GuidesAddonCard-content-header-title .AddonTitle-author,
 	.Home-SubjectShelf-link:link,
 	.Home-SubjectShelf-link:visited,
 	.Home-SubjectShelf-subheading,
@@ -1587,9 +1520,7 @@ url(about:profiles) {
 	.Paginate .Button.Paginate-item:link:first-child,
 	.Paginate .Button.Paginate-item:link:last-child,
 	.Paginate .Button.Paginate-item:visited:first-child,
-	.Paginate
-		.Button.Paginate-item:visited:last-child
-		.Paginate-page-number,
+	.Paginate .Button.Paginate-item:visited:last-child .Paginate-page-number,
 	.PermissionsCard-subhead,
 	.ReportAbuseButton-show-more,
 	.SearchContextCard-header,
@@ -1678,20 +1609,14 @@ url(about:profiles) {
 
 	.AddonMeta .MetadataCard-content a,
 	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link,
-	.AddonMeta
-		.MetadataCard-content
-		a.AddonMeta-reviews-content-link:link,
-	.AddonMeta
-		.MetadataCard-content
-		a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:link,
+	.AddonMeta .MetadataCard-content a.AddonMeta-reviews-content-link:visited,
 	.AddonMeta .MetadataCard-content a:link,
 	.AddonMeta .MetadataCard-content a:visited,
 	.AddonMeta .MetadataCard-title a,
 	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link,
 	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:link,
-	.AddonMeta
-		.MetadataCard-title
-		a.AddonMeta-reviews-content-link:visited,
+	.AddonMeta .MetadataCard-title a.AddonMeta-reviews-content-link:visited,
 	.AddonMeta .MetadataCard-title a:link,
 	.AddonMeta .MetadataCard-title a:visited,
 	.RatingsByStar-count a:active,
@@ -1704,10 +1629,8 @@ url(about:profiles) {
 	}
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(
-			rgba(255, 255, 255, 0),
-			#1b1924
-		) !important;
+		background: linear-gradient(rgba(255, 255, 255, 0),
+			#1b1924) !important;
 	}
 
 	.SecondaryHero-module {
@@ -1788,9 +1711,7 @@ url(about:profiles) {
 
 	.SearchForm-query:focus {
 		box-shadow: 0 0 5px 0 var(--in-content-border-highlight) !important;
-		border-color: var(
-			--in-content-primary-button-background
-		) !important;
+		border-color: var(--in-content-primary-button-background) !important;
 	}
 
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
@@ -1835,19 +1756,15 @@ url(about:profiles) {
 		color: #1e90ff !important;
 	}
 
-	.AddonsCard--horizontal
-		ul.AddonsCard-list
-		.SearchResult-wrapper:focus,
-	.AddonsCard--horizontal
-		ul.AddonsCard-list
-		.SearchResult-wrapper:hover {
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:focus,
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:hover {
 		background: transparent !important;
 		color: dodgerblue !important;
 		/*border-radius: 9px !important;*/
 	}
 
 	.addon-webext-perm-info,
-	.popup-notification-learnmore-lin > text-link {
+	.popup-notification-learnmore-lin>text-link {
 		color: #1e90ff !important;
 	}
 
@@ -1941,7 +1858,7 @@ url(about:profiles) {
 	}
 
 	.AddonSummaryCard-header-text a,
-	.Addon-Title > a,
+	.Addon-Title>a,
 	.AddonTitle-author a {
 		color: #1e90ff !important;
 		text-decoration: none !important;
@@ -1970,6 +1887,7 @@ url(about:profiles) {
 }
 
 @-moz-document url("about:memory") {
+
 	html,
 	body {
 		background-color: #1e1d2d !important;
@@ -2040,7 +1958,7 @@ browser[type="content"] {
 		transition: opacity 150ms, visibility 0s 2s !important;
 	}
 
-	.open > .dropdown-popup {
+	.open>.dropdown-popup {
 		opacity: 1 !important;
 		transition: opacity 150ms !important;
 	}
@@ -2057,7 +1975,7 @@ browser[type="content"] {
 		border: none !important;
 	}
 
-	.font-type-buttons > button > .description {
+	.font-type-buttons>button>.description {
 		color: #bebebe !important;
 	}
 }
@@ -2069,6 +1987,7 @@ browser[type="content"] {
 }
 
 @-moz-document url-prefix("about:logins") {
+
 	.fxaccounts-avatar-button,
 	.fxaccounts-avatar-button:hover:active {
 		background: transparent !important;
@@ -2229,7 +2148,7 @@ browser[type="content"] {
 		border-left: 2px solid #073642 !important;
 	}
 
-	pre > :first-child {
+	pre> :first-child {
 		padding-right: 1ch;
 	}
 
@@ -2277,9 +2196,7 @@ browser[type="content"] {
 	}
 
 	.highlight .error,
-	.highlight
-		.error
-		> :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
+	.highlight .error> :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
 		color: #002b36 !important;
 		background-color: #dc322f !important;
 	}
@@ -2287,12 +2204,10 @@ browser[type="content"] {
 
 @-moz-document url-prefix(about:) {
 	:root {
-		--in-content-border-hover: rgba(
-			30,
+		--in-content-border-hover: rgba(30,
 			144,
 			255,
-			0.5
-		) !important;
+			0.5) !important;
 		--in-content-border-active: #1e90ff !important;
 		--in-content-border-active-shadow: transparent !important;
 		color: #ffffff !important;
@@ -2354,8 +2269,7 @@ browser[type="content"] {
 }*/
 
 @-moz-document url('chrome://global/content/config.xhtml'),
-url('chrome://userchromejs/content/aboutconfig/config.xhtml')
-{
+url('chrome://userchromejs/content/aboutconfig/config.xhtml') {
 	:root {
 		font-family: Fira Sans !important;
 		font-size: 14px !important;
@@ -2382,10 +2296,10 @@ url('about:newtab') {
 
 	#newtab-search-text,
 	#searchSuggestionTable,
-	#searchSuggestionTable > tr,
-	#searchSuggestionTable > tr > td,
-	#searchSuggestionTable > table > tr > td,
-	#searchSuggestionTable > button {
+	#searchSuggestionTable>tr,
+	#searchSuggestionTable>tr>td,
+	#searchSuggestionTable>table>tr>td,
+	#searchSuggestionTable>button {
 		background-color: #1e1d2d !important;
 		color: #f8f8f2 !important;
 		fill: #f8f8f2 !important;
@@ -2422,8 +2336,8 @@ url('about:newtab') {
 }
 */
 @-moz-document url-prefix("about:"),
-@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html")
-{
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
+
 	window,
 	page,
 	html,
@@ -2493,7 +2407,9 @@ body::before {
 
 @-moz-document url-prefix(about:),
 url-prefix(chrome: //browser)
-{
+
+	{
+
 	browser[type="content"],
 	tabpanels {
 		/*background: #1e1d2d !important;*/
@@ -2507,6 +2423,7 @@ url-prefix(chrome: //browser)
 
 	menu,
 	menulist {
+
 		border: 0px !important;
 		outline: none !important;
 		box-shadow: none !important;
@@ -2514,6 +2431,7 @@ url-prefix(chrome: //browser)
 }
 
 @-moz-document url("about:memory") {
+
 	html,
 	body {
 		background-color: #1e1d2d !important;
@@ -2534,6 +2452,7 @@ url-prefix(chrome: //browser)
 /*
 /* Dark Mode page between loading */
 @-moz-document url("about:privatebrowsing") {
+
 	html:not(#ublock0-epicker),
 	html:not(#ublock0-epicker) body,
 	#newtab-customize-overlay {
@@ -2573,6 +2492,7 @@ url-prefix(chrome: //browser)
 @-moz-document url("about:home"),
 url("about:blank"),
 url("about:newtab") {
+
 	html:not(#ublock0-epicker),
 	html:not(#ublock0-epicker) body,
 	#newtab-customize-overlay {
@@ -2584,8 +2504,8 @@ url("about:newtab") {
 }
 
 /* free download manager */
-@-moz-document url-prefix("moz-extension://e82498ba-03f1-4c10-be0c-9441111ccc84/")
-{
+@-moz-document url-prefix("moz-extension://e82498ba-03f1-4c10-be0c-9441111ccc84/") {
+
 	html,
 	head,
 	body {
@@ -2619,8 +2539,7 @@ url("about:newtab") {
 }
 
 /* share backported */
-@-moz-document url-prefix("moz-extension://0c824817-ed87-462e-bbf5-aa77c08dc4db/")
-{
+@-moz-document url-prefix("moz-extension://0c824817-ed87-462e-bbf5-aa77c08dc4db/") {
 	body {
 		background: #1e1d2d !important;
 	}
@@ -2696,8 +2615,7 @@ url("about:newtab") {
 	}
 }
 
-@-moz-document url-prefix("https://www.youtube.com")
-{
+@-moz-document url-prefix("https://www.youtube.com") {
 	* {
 		font-family: Fira Sans !important;
 	}
@@ -2739,8 +2657,7 @@ url("about:newtab") {
 	}
 
 	/* VIDEO MENU BTN TEXT */
-	ytd-toggle-button-renderer.force-icon-button
-		a.ytd-toggle-button-renderer {
+	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer {
 		font-size: 15px !important;
 	}
 
@@ -2815,9 +2732,7 @@ url("about:newtab") {
 		width: 50px;
 	}
 
-	ytd-searchbox[mode="legacy"]
-		#search-icon-legacy.ytd-searchbox:hover
-		> yt-icon {
+	ytd-searchbox[mode="legacy"] #search-icon-legacy.ytd-searchbox:hover > yt-icon {
 		color: rgba(255, 255, 255, 0.8) !important;
 	}
 
@@ -2864,30 +2779,23 @@ url("about:newtab") {
 	#title-annotation.ytd-shelf-renderer,
 	paper-button.yt-next-continuation,
 	#description-text.ytd-video-renderer,
-	ytd-toggle-button-renderer.force-icon-button
-		a.ytd-toggle-button-renderer,
+	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer,
 	#subtitle.ytd-shelf-renderer,
 	#published-time-text.ytd-comment-renderer {
 		color: rgba(180, 190, 200, 0.8) !important;
 	}
 
 	/* LIKE BTN */
-	ytd-toggle-button-renderer.force-icon-button
-		a.ytd-toggle-button-renderer
-		.style-default-active {
+	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer .style-default-active {
 		color: #ffffff !important;
 	}
 
-	#top-level-buttons
-		ytd-toggle-button-renderer.style-default-active:first-child
-		yt-icon,
+	#top-level-buttons ytd-toggle-button-renderer.style-default-active:first-child yt-icon,
 	#like-button .style-default-active > yt-icon {
 		color: #1e90ff !important;
 	}
 
-	#top-level-buttons
-		ytd-toggle-button-renderer.style-default-active:nth-child(2)
-		yt-icon,
+	#top-level-buttons ytd-toggle-button-renderer.style-default-active:nth-child(2) yt-icon,
 	#dislike-button .style-default-active > yt-icon {
 		color: hsl(3, 100%, 66%) !important;
 	}
@@ -2907,8 +2815,7 @@ url("about:newtab") {
 	}
 
 	/* RED ICON */
-	ytd-guide-entry-renderer[active]
-		.guide-icon.ytd-guide-entry-renderer {
+	ytd-guide-entry-renderer[active] .guide-icon.ytd-guide-entry-renderer {
 		color: rgba(255, 78, 78, 0.83) !important;
 	}
 
@@ -2932,11 +2839,9 @@ url("about:newtab") {
 
 	/* SUBSCRIBE BTN */
 	paper-button.ytd-subscribe-button-renderer {
-		background: linear-gradient(
-			90deg,
+		background: linear-gradient(90deg,
 			#e11958,
-			hsl(3, 81.8%, 49.6%)
-		);
+			hsl(3, 81.8%, 49.6%));
 		transition: all 0.2s ease;
 	}
 
@@ -2979,8 +2884,7 @@ url("about:newtab") {
 	}
 }
 
-@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*")
-{
+@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*") {
 	* {
 		font-family: "Fira Sans" !important;
 	}
@@ -3051,6 +2955,7 @@ url("about:newtab") {
 }
 
 @-moz-document url(about:newtab) {
+
 	body,
 	#newtab-customize-overlay {
 		background-color: #1e1d2d !important;
@@ -3065,6 +2970,7 @@ url("about:newtab") {
 }
 
 @-moz-document domain("mail.google.com") {
+
 	/* ADD ROW HIGHLIGHTS */
 	table.zt tr.yO:hover {
 		background-color: #1e90ff80 !important;
@@ -3208,8 +3114,7 @@ url("about:newtab") {
 	}
 }
 */
-@-moz-document url-prefix("https://accounts.firefox.com")
-{
+@-moz-document url-prefix("https://accounts.firefox.com") {
 	* {
 		font-family: Fira Sans !important;
 	}
@@ -3409,8 +3314,7 @@ url("about:newtab") {
 	.input-row input[type="password"]:focus,
 	.input-row input[type="tel"]:focus,
 	.input-row input[type="text"]:focus {
-		box-shadow: 0 0 0 3px
-			color-mix(in srgb, #1e90ff 80%, transparent) !important;
+		box-shadow: 0 0 0 3px color-mix(in srgb, #1e90ff 80%, transparent) !important;
 	}
 
 	.drop-down-menu {
@@ -3461,6 +3365,7 @@ p::selection {
 }
 
 @-moz-document url-prefix("about:neterror") {
+
 	html,
 	body {
 		/*background-image: url("Animation.gif") !important;
@@ -3501,8 +3406,8 @@ p::selection {
 	outline: none !important;
 }
 */
-@-moz-document url("chrome://mozapps/content/handling/permissionDialog.xhtml")
-{
+@-moz-document url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
+
 	/*richlistitem[selected="true"] {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
@@ -3529,8 +3434,7 @@ p::selection {
 }
 
 @-moz-document url("chrome://mozapps/content/handling/appChooser.xhtml"),
-url("chrome://mozapps/content/handling/permissionDialog.xhtml")
-{
+url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	richlistitem[selected="true"] {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
@@ -3697,8 +3601,8 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml")
 /* see this to tweak : https://github.com/gorhill/uBlock/blob/master/src/css/cloud-ui.css*/
 /*---------------------------------UBLOCK ORIGIN ---------------------*/
 
-@-moz-document url-prefix("moz-extension://e4fdb54f-d559-4a7b-b967-bf80726855b8/")
-{
+@-moz-document url-prefix("moz-extension://e4fdb54f-d559-4a7b-b967-bf80726855b8/") {
+
 	body,
 	#sticky,
 	#main {
@@ -4072,8 +3976,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml")
 }
 
 /* imagus */
-@-moz-document url("moz-extension://fa0c04ad-ce95-4ccf-a163-badf1fc7f6f9/options.html")
-{
+@-moz-document url("moz-extension://fa0c04ad-ce95-4ccf-a163-badf1fc7f6f9/options.html") {
 	html {
 		background-color: #1e1d2d !important;
 	}
@@ -4098,35 +4001,27 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml")
 	}
 
 	#sieve_container > .selected > span {
-		background-image: linear-gradient(
-			to bottom,
+		background-image: linear-gradient(to bottom,
 			#1e90ff,
-			#1e90ff80 90%
-		) !important;
+			#1e90ff80 90%) !important;
 	}
 
 	#sieve_container > div:not(.opened) > span:hover {
-		background-image: linear-gradient(
-			to bottom,
+		background-image: linear-gradient(to bottom,
 			#1e90ff80,
-			#1e90ff 90%
-		) !important;
+			#1e90ff 90%) !important;
 	}
 
 	#sieve_container > div.opened {
-		background-image: linear-gradient(
-			to bottom,
+		background-image: linear-gradient(to bottom,
 			#1e90ff80,
-			#1e90ff 90%
-		) !important;
+			#1e90ff 90%) !important;
 	}
 
 	#sieve_container > .opened > span {
-		background-image: linear-gradient(
-			to bottom,
+		background-image: linear-gradient(to bottom,
 			#1e90ff80,
-			#1e90ff 90%
-		) !important;
+			#1e90ff 90%) !important;
 	}
 
 	*|*:any-link:not(svg) {
@@ -4146,16 +4041,12 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml")
 	select,
 	code,
 	.checkbox {
-		background-image: -webkit-linear-gradient(
-			top,
+		background-image: -webkit-linear-gradient(top,
 			#000000,
-			#000000
-		) !important;
-		background-image: linear-gradient(
-			to bottom,
+			#000000) !important;
+		background-image: linear-gradient(to bottom,
 			#000000,
-			#000000
-		) !important;
+			#000000) !important;
 		background-color: black !important;
 		color: white !important;
 		fill: white !important;
@@ -4166,8 +4057,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml")
 	}
 }
 
-@-moz-document url-prefix("https://winaero.com")
-{
+@-moz-document url-prefix("https://winaero.com") {
 	* {
 		font-family: "Fira Sans" !important;
 	}
@@ -4603,6 +4493,7 @@ tooltip {
 	}
 
 	@media (prefers-contrast) {
+
 		button.tab-button[selected],
 		button.tab-button[selected]:hover {
 			color: #ffffff !important;
@@ -4614,8 +4505,7 @@ tooltip {
 		outline-offset: -1px !important;
 	}
 
-	.tab-group[last-input-type="mouse"]
-		> button.tab-button:-moz-focusring {
+	.tab-group[last-input-type="mouse"] > button.tab-button:-moz-focusring {
 		outline: none !important;
 		box-shadow: none !important;
 	}
@@ -4692,11 +4582,11 @@ tooltip {
 		color: #ffffff !important;
 	}
 }
-
+/*
 @-moz-document url(about:blank), url(about:newtab), url(about:home) {
-	body {
+	body, html {
 		background-color: #1e1d2d !important;
 		background: #1e1d2d !important;
 		color: white !important;
 	}
-}
+}*/
