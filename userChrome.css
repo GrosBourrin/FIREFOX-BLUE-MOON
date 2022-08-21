@@ -1763,6 +1763,7 @@ spacer,
 * {
 	scrollbar-color: #1e90ff black !important;
 	scrollbar-width: thin !important;
+	
 }
 
 /* icons for 2 internal pages */
@@ -5549,3 +5550,4 @@ and by default removes the tab secondary line
 #contentAreaContextMenu menuseparator:last-of-type {
 	display: none !important;
 }
+
