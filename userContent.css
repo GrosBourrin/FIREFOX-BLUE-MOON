@@ -2,6 +2,7 @@
 @import url("devtools.css");
 @import url("reddit0.css");
 @import url("aboutconfig.css");
+@import url("facebook.css");
 
 :root {
 	--in-content-border-hover: #1e90ff80 !important;
@@ -411,7 +412,12 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		padding: 4px !important;
 		border: 0px !important;
 	}
-
+	#addonsButton:hover,
+	#helpButton:hover { 
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+}
 	/*
 	button:not(.button-link):not(.close-icon):not(#contentBlockingToggle) {
 		padding: 0px !important;
@@ -2406,28 +2412,26 @@ body::before {
 }
 
 @-moz-document url-prefix(about:),
-url-prefix(chrome: //browser)
+url-prefix(chrome: //browser)	{
 
-	{
+browser[type="content"],
+tabpanels {
+	/*background: #1e1d2d !important;*/
+	background-color: #1e1d2d !important;
+	color: #ffffff !important;
+}
 
-	browser[type="content"],
-	tabpanels {
-		/*background: #1e1d2d !important;*/
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-	}
+.panel-list {
+	box-shadow: none !important;
+}
 
-	.panel-list {
-		box-shadow: none !important;
-	}
+menu,
+menulist {
 
-	menu,
-	menulist {
-
-		border: 0px !important;
-		outline: none !important;
-		box-shadow: none !important;
-	}
+	border: 0px !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
 }
 
 @-moz-document url("about:memory") {
@@ -2449,7 +2453,7 @@ url-prefix(chrome: //browser)
 	color: #ffffff !important;
 }
 
-/*
+
 /* Dark Mode page between loading */
 @-moz-document url("about:privatebrowsing") {
 
@@ -2520,7 +2524,7 @@ url("about:newtab") {
 	}
 
 	body {
-		width: auto !important;
+		width: 335px !important;
 		background-color: #1e1d2d !important;
 		margin: 0 !important;
 		margin-top: 10px !important;
@@ -2963,11 +2967,7 @@ url("about:newtab") {
 	}
 }
 
-@-moz-document domain(facebook.com) {
-	* {
-		font-family: "Fira Sans" !important;
-	}
-}
+
 
 @-moz-document domain("mail.google.com") {
 
@@ -3321,6 +3321,30 @@ url("about:newtab") {
 		--darkreader-bg--bg-opacity: 1;
 		background-color: #1e1d2d !important;
 		/*box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;*/
+	}
+
+	.bg-white {
+		background-color: #1e1d2d !important;
+	}
+
+	.cta-caution {
+		border-color: #1e90ff !important;
+		background-color: #1e90ff !important;
+		color: white !important;
+	}
+
+	.cta-caution:hover:not(:disabled):not(:active) {
+		border-color: #1e90ff80 !important;
+		background-color: #1e90ff80 !important;
+		color: white !important;
+	}
+
+	.w-10 {
+		filter: invert(50%) !important;
+	}
+
+	.h-10 {
+		filter: invert(0%) !important;
 	}
 }
 
@@ -4236,8 +4260,7 @@ tooltip {
 		recommended-addon-list {
 			padding: 1em !important;
 			display: grid !important;
-			grid-template-areas:
-				"hd hd"
+			grid-template-areas: "hd hd"
 				"cd cd" !important;
 			grid-template-columns: 1fr 1fr !important;
 			column-gap: 1em !important;
@@ -4581,7 +4604,13 @@ tooltip {
 		background: #1e90ff !important;
 		color: #ffffff !important;
 	}
+	#preferencesButton:hover,
+	#help-button:hover { 
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
 }
+
 /*
 @-moz-document url(about:blank), url(about:newtab), url(about:home) {
 	body, html {
