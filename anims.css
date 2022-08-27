@@ -1,0 +1,97 @@
+/* anims */
+button,
+toolbarbutton,
+stack,
+vbox,
+.toolbarbutton-icon,
+#tabs-newtab-button>.toolbarbutton-icon {
+	transition: background-color 1s var(--animation-easing-function) !important;
+}
+
+button:hover,
+toolbarbutton:hover,
+stack:hover,
+vbox:hover,
+.toolbarbutton-icon:hover,
+#tabs-newtab-button:hover>.toolbarbutton-icon {
+	transition: background-color 0.25s var(--animation-easing-function) !important;
+}
+
+
+.tabbrowser-tab:is([visuallyselected], [multiselected], [selected]) .tab-background:not(:-moz-lwtheme) {
+	transition: background-image 0.25s var(--animation-easing-function) !important;
+}
+
+
+.subviewbutton {
+	transition: background-color 0.5s var(--animation-easing-function) !important;
+}
+
+.subviewbutton:hover {
+	transition: background-color 0.1s var(--animation-easing-function) !important;
+}
+
+/*- URL / Search Bar -------------------------------------------------------*/
+#urlbar-background,
+#searchbar {
+	transition: border-color 1s var(--animation-easing-function), background-color 1.5s var(--animation-easing-function) !important;
+}
+
+#urlbar-background:hover,
+#searchbar:hover {
+	transition: border-color 0.5s var(--animation-easing-function), background-color 1s var(--animation-easing-function) !important;
+}
+
+/* Buttons in URL bar */
+#tracking-protection-icon-container,
+#identity-icon-box,
+#identity-permission-box,
+#notification-popup-box,
+#page-action-buttons>.urlbar-page-action {
+	transition: background-color 2.5s var(--animation-easing-function) !important;
+}
+
+#tracking-protection-icon-container:hover,
+#identity-icon-box:hover,
+#identity-permission-box:hover,
+#notification-popup-box:hover,
+#page-action-buttons>.urlbar-page-action:hover {
+	transition: background-color 1.25s var(--animation-easing-function) !important;
+}
+
+/*- Border - Other Fields --------------------------------------------------*/
+#search-box:hover,
+xul|search-textbox.tabsFilter:hover,
+#editBMPanel_namePicker:hover,
+#editBMPanel_tagsField:hover,
+.findbar-container .findbar-textbox:hover {
+	transition: border-color 1s var(--animation-easing-function) !important;
+}
+
+#search-box:hover,
+xul|search-textbox.tabsFilter:hover,
+#editBMPanel_namePicker:hover,
+#editBMPanel_tagsField:hover,
+.findbar-container .findbar-textbox:hover {
+	transition: border-color 0.5s var(--animation-easing-function) !important;
+}
+
+/*- Sidebar ----------------------------------------------------------------*/
+#sidebar-box {
+	/* like #sidebar-box > #sidebar */
+	min-width: 14em;
+	width: 18em;
+	max-width: 36em;
+
+	/* Animation */
+	transition: margin-inline-start 0.25s var(--animation-easing-function), opacity 0.25s ease-in-out,
+		visibility 0s linear !important;
+}
+
+#sidebar-box[hidden="true"] {
+	display: -moz-box !important;
+	margin-inline-start: -18em;
+	opacity: 0;
+	visibility: collapse;
+	transition-delay: 0s, 0s, 0.25s !important;
+}
