@@ -546,48 +546,48 @@ input[type="checkbox"]:checked {
 
 /* about:support*/
 @-moz-document url(about:support),
-url(about:profiles){
-body.wide-container {
-	background-color: #1e1d2d !important;
-	color: #ffffff !important;
-}
+url(about:profiles) {
+	body.wide-container {
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+	}
 
-th.column,
-button {
-	background: #1e90ff !important;
-	color: white !important;
-}
+	th.column,
+	button {
+		background: #1e90ff !important;
+		color: white !important;
+	}
 
-button:hover {
-	background: #1e90ff80 !important;
-}
+	button:hover {
+		background: #1e90ff80 !important;
+	}
 
-a {
-	color: #1e90ff !important;
-}
+	a {
+		color: #1e90ff !important;
+	}
 
-a:hover {
-	color: #1e90ff90 !important;
-}
+	a:hover {
+		color: #1e90ff90 !important;
+	}
 
-th {
-	background-color: dodgerblue !important;
-}
+	th {
+		background-color: dodgerblue !important;
+	}
 
-.action-box {
-	background-color: #1e1d2d !important;
-	border: 1px solid #1e90ff !important;
-}
+	.action-box {
+		background-color: #1e1d2d !important;
+		border: 1px solid #1e90ff !important;
+	}
 
-table {
-	background-color: #1e1d2d !important;
+	table {
+		background-color: #1e1d2d !important;
 
-	border: 1px solid #1e90ff !important;
-}
+		border: 1px solid #1e90ff !important;
+	}
 
-td {
-	border: 1px solid #1e90ff40 !important;
-}
+	td {
+		border: 1px solid #1e90ff40 !important;
+	}
 }
 
 @-moz-document url("chrome://global/content/config.xhtml") {
@@ -1075,7 +1075,7 @@ td {
 
 	.ShowMoreCard-contents::after {
 		background: linear-gradient(rgba(255, 255, 255, 0),
-				#1b1924) !important;
+			#1b1924) !important;
 	}
 
 	.Addon-details .AddonDescription-contents a:link,
@@ -1349,21 +1349,21 @@ td {
 		--in-content-category-text-selected: var(--accent-1) !important;
 		--in-content-category-text-selected-active: #1e90ff;
 		--in-content-category-background-hover: rgba(12,
-				12,
-				13,
-				0.1);
+			12,
+			13,
+			0.1);
 		--in-content-category-background-active: rgba(12,
-				12,
-				13,
-				0.15);
+			12,
+			13,
+			0.15);
 		--in-content-category-background-selected-hover: rgba(12,
-				12,
-				13,
-				0.15);
+			12,
+			13,
+			0.15);
 		--in-content-category-background-selected-active: rgba(12,
-				12,
-				13,
-				0.2);
+			12,
+			13,
+			0.2);
 		--in-content-tab-color: #424f5a;
 		--in-content-link-color: #ffffff !important;
 		--in-content-link-color-hover: #1e90ff !important;
@@ -1391,9 +1391,9 @@ td {
 		--cm-linenumber: #58575c !important;
 		--cm-cursor: #fff !important;
 		--cm-active-line-background: rgba(185,
-				215,
-				253,
-				0.15) !important;
+			215,
+			253,
+			0.15) !important;
 		--cm-matching-bracket: rgba(255, 255, 255, 0.25) !important;
 		--cm-search-background: rgba(24, 29, 32, 1) !important;
 		--cm-red: #de7474 !important;
@@ -1638,7 +1638,7 @@ td {
 
 	.ShowMoreCard-contents::after {
 		background: linear-gradient(rgba(255, 255, 255, 0),
-				#1b1924) !important;
+			#1b1924) !important;
 	}
 
 	.SecondaryHero-module {
@@ -2213,9 +2213,9 @@ browser[type="content"] {
 @-moz-document url-prefix(about:) {
 	:root {
 		--in-content-border-hover: rgba(30,
-				144,
-				255,
-				0.5) !important;
+			144,
+			255,
+			0.5) !important;
 		--in-content-border-active: #1e90ff !important;
 		--in-content-border-active-shadow: transparent !important;
 		color: #ffffff !important;
@@ -2237,10 +2237,10 @@ browser[type="content"] {
 }
 
 /* about:support*/
-@-moz-document url(about:support){
-body.wide-container {
-	background-color: #1e1d2d !important;
-}
+@-moz-document url(about:support) {
+	body.wide-container {
+		background-color: #1e1d2d !important;
+	}
 }
 
 /* Changes colors on the page 
@@ -2416,24 +2416,24 @@ body::before {
 @-moz-document url-prefix(about:),
 url-prefix(chrome: //browser)	{
 
-	browser[type="content"],
-	tabpanels {
-		/*background: #1e1d2d !important;*/
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-	}
+browser[type="content"],
+tabpanels {
+	/*background: #1e1d2d !important;*/
+	background-color: #1e1d2d !important;
+	color: #ffffff !important;
+}
 
-	.panel-list {
-		box-shadow: none !important;
-	}
+.panel-list {
+	box-shadow: none !important;
+}
 
-	menu,
-	menulist {
+menu,
+menulist {
 
-		border: 0px !important;
-		outline: none !important;
-		box-shadow: none !important;
-	}
+	border: 0px !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
 }
 
 @-moz-document url("about:memory") {
@@ -2506,6 +2506,36 @@ url("about:newtab") {
 		color: white !important;
 
 		/*#232324*/
+	}
+}
+
+/* instagram */
+@-moz-document url-prefix("moz-extension://c91c2f32-fb25-4f4f-9084-779758261af1/settings/settings.html") {
+	* {
+		font-family: Fira Sans !important;
+		font-weight: 300 !important;
+	}
+
+	html, body {
+
+
+		background: #1e1d2d !important;
+		color: #ffffff !important;
+	}
+}
+
+/* addon notifier */
+@-moz-document url-prefix("moz-extension://8e548868-86c6-4b07-88c4-adc040daad74/") {
+	* {
+		font-family: Fira Sans !important;
+		font-weight: 300 !important;
+	}
+
+	html, body {
+
+
+		background: #1e1d2d !important;
+		color: #ffffff !important;
 	}
 }
 
@@ -2960,13 +2990,13 @@ url("about:newtab") {
 	color: white !important;
 }
 
-@-moz-document url(about:newtab){
+@-moz-document url(about:newtab) {
 
-body,
-#newtab-customize-overlay {
-	background-color: #1e1d2d !important;
-	color: #ffffff !important;
-}
+	body,
+	#newtab-customize-overlay {
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+	}
 }
 
 
@@ -4175,7 +4205,7 @@ tooltip {
 		--in-content-border: 1px !important;
 		--card-outline-color: #1e90ff !important;
 		--card-shadow-hover: var(--card-shadow),
-		0 0 0 2px var(--card-outline-color) !important;
+			0 0 0 2px var(--card-outline-color) !important;
 		background-color: #1e1d2d !important;
 		font-family: "Fira Sans" !important;
 		/*--message-bar-background-color: #1e90ff80 !important;
@@ -4263,7 +4293,7 @@ tooltip {
 			padding: 1em !important;
 			display: grid !important;
 			grid-template-areas: "hd hd"
-			"cd cd" !important;
+				"cd cd" !important;
 			grid-template-columns: 1fr 1fr !important;
 			column-gap: 1em !important;
 		}
