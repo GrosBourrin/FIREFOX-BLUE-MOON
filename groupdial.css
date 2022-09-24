@@ -1,0 +1,60 @@
+* {
+	font-family: Fira Sans;
+}
+
+.group_name {
+	color: dodgerblue;
+	font-family: Fira Sans;
+	background: none !important;
+
+}
+
+#groups>a,
+.group_link {
+
+	background: none !important;
+
+}
+
+#groups>a:hover,
+.group_link:hover {
+
+	background: none !important;
+
+}
+
+.group_name:hover {
+	color: white !important;
+	font-family: Fira Sans;
+	background: none !important;
+}
+
+.dials .dial_head {
+	background: none !important;
+	border-radius: 4px !important;
+}
+
+.dials .dial_name {
+	padding-right: 2px !important;
+	margin-top: 1px !important;
+	font-family: Fira Sans;
+	font-weight: 400 !important;
+	font-size: 14px;
+	text-align: center !important;
+	align-items: center !important;
+}
+
+.dials {
+	background: transparent !important;
+}
+
+a.home-version {
+	color: white !important;
+	font-family: Fira Sans;
+	font-weight: bold !important;
+	margin-top: 5px !important;
+}
+
+body {
+	background-size: cover !important;
+}
