@@ -368,6 +368,8 @@ menubar>menu[open] {
 	padding-left: 11px !important;
 	margin-top: 7px !important;
 	padding-bottom: 0px !important;
+	stroke: none !important;
+
 }
 
 menulist:-moz-focusring>menupopup>menuitem[_moz-menuactive="true"] {
@@ -1625,7 +1627,9 @@ treechildren::-moz-tree-image(query) {
 #forward-button {
 	margin-left: -6px !important;
 }
-
+#context-navigation > menuitem > .menu-iconic-left > .menu-iconic-icon{
+  background: none !important;
+}
 /* add shadow around tab icon */
 .tab-icon-image,
 #bookmarks-toolbar-placeholder>.toolbarbutton-icon,
@@ -3129,11 +3133,7 @@ treechildren {
 	padding-inline: 0 !important;
 }
 
-/*
-.tab-label,
-.tab-text {
-	padding-right: 4px !important;
-}*/
+
 
 #tabbrowser-tabs .tabbrowser-tab:hover .tab-close-button {
 	transform: rotate(-90deg) !important;
@@ -3721,6 +3721,8 @@ toolbar #fullscreen-button {
 }
 
 #context-bookmarkpage:hover {
+	appearance: none !important;
+	background: #1e90ff !important;
 	color: yellow !important;
 }
 
@@ -5587,3 +5589,13 @@ html|p#preview-unavailable {
 		transition-duration: 0s !important;
 	}
 }*/
+
+.urlbarView-row:first-child {
+	display: none !important;
+}
+
+
+/* firefox 106
+#firefox-view-button, #wrapper-firefox-view-button, #alltabs-button { display: none !important; }
+#firefox-view-button, #wrapper-firefox-view-button, #tabbrowser-tabs { border: 0px hidden transparent !important; padding-inline-start: 0 !important; margin-inline-start: 0 !important; }
+*/
