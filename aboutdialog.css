@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                                About firefox                               */
 /* -------------------------------------------------------------------------- */
-/*--------------181a21----181c25--#1b1924-#131620--*/
+/*--------------181a21----181c25--#1b1924-#131620-----------------------------*/
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	#leftBox {
 		background-image: url("renardeau.gif") !important;
@@ -48,7 +48,7 @@
 
 	#updateBox {
 		margin-left: -3px !important;
-		
+
 	}
 
 	#updateButton,
@@ -96,26 +96,8 @@
 	.text-blurb {
 		margin-left: 0px !important;
 	}
-	
-	.update-throbber {
-		width: 16px;
-  		min-height: 16px;
-  		margin-inline-end: 3px;
-	}
 
-	html|img.update-throbber {
-  		vertical-align: middle;
-	}
 
-	image.update-throbber {
-  		list-style-image: url("chrome://global/skin/icons/loading.png");
-	}
-
-	@media (min-resolution: 1.1dppx) {
-  		.update-throbber {
-    			list-style-image: url("chrome://global/skin/icons/loading@2x.png");
-  		}
-	}
 }
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
@@ -255,4 +237,3 @@ description > .text-link {
   fill: white;
 }
 */
-
