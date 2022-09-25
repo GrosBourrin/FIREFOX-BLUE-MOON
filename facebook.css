@@ -6,9 +6,8 @@
 	/*FOND*/
 	._5vb_,
 	/*gnrl ext*/
-	._5vb_ #contentCol
+	._5vb_ #contentCol,
 	/*gnrl int > & MESSAGES*/
-	,
 	._4-u5
 
 	/*Log, page*/
@@ -27,12 +26,12 @@
 
 	/*gnrl*/
 	body {
-		background: #1A1A1A !important;
+		background: #101010 !important;
 		color: #d6dee2 !important;
 	}
 
 	._585r {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	#contentCurve {
@@ -50,7 +49,7 @@
 
 	/*log*/
 	.fbIndex .gradient {
-		background: linear-gradient(#1a1a1a, black) !important;
+		background: linear-gradient(#101010, black) !important;
 	}
 
 	.fbIndex,
@@ -102,7 +101,7 @@
 	select,
 	._62uo,
 	._erp {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	textarea {
@@ -117,10 +116,8 @@
 	._4jy1,
 	._ohf ._4jy2:not(._k0a):not(._64m2),
 	._xag,
-	._xah
-
+	._xah,
 	/*page*/
-	,
 	#pagesTimelineLayout ._517h {
 		background-color: #171f35 !important;
 		border-color: #171f35 !important;
@@ -185,15 +182,15 @@
 	._1rf5>span::before,
 	._1rf5>span::after,
 	._yl8 {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._1gbd {
-		box-shadow: 0 0 0 1px #1d1e22 !important;
+		box-shadow: 0 0 0 1px #1d1e2d !important;
 	}
 
 	._1gbd:hover {
-		box-shadow: 0 1px 8px 5px #1d1e22 !important;
+		box-shadow: 0 1px 8px 5px #1d1e2d !important;
 	}
 
 	/*LIENS*/
@@ -210,8 +207,8 @@
 	._517h,
 	._59pe:focus,
 	._59pe:hover {
-		background-color: #1a1a1a;
-		border-color: #1d1e22 !important;
+		background-color: #101010;
+		border-color: #1d1e2d !important;
 		color: #9b9ba6 !important;
 	}
 
@@ -235,9 +232,9 @@
 	._56bt,
 	._56bt ._58gn,
 	a._56bt {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		color: #a9b0b4 !important;
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	.uiBoxYellow .uiIconText i.img {
@@ -268,7 +265,7 @@
 	/*Barre Rch H Fond*/
 	._1l-e ._229b ._2qix._229c,
 	._585- {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._585- ._4w98,
@@ -332,12 +329,12 @@
 	/*Header Fond*/
 	,
 	._50c9 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._3uch::before,
 	._14au::before {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._2yer,
@@ -346,7 +343,7 @@
 	._35i9,
 	._35n5,
 	._3su {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	.uiTypeaheadView li,
@@ -388,7 +385,7 @@
 	div.uiTypeaheadView li.calltoaction,
 	div.uiTypeaheadView li.browseUpsell,
 	div.uiTypeaheadView li.calltoactionV2 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	.uiTypeaheadView .search.updatedSuggestionRows .splitpics,
@@ -397,7 +394,7 @@
 	.uiTypeaheadView .search .splitpics,
 	.uiTypeaheadView .search .group .photo,
 	.uiTypeaheadView .search img {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._21f img.img,
@@ -473,7 +470,7 @@
 
 	/*Header*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-bottom: solid 1px #111216 !important;
 	}
 
@@ -489,8 +486,8 @@
 
 	/*Btn +*/
 		{
-		background-color: #1a1a1a !important;
-		border-top: 1px solid #1d1e22 !important;
+		background-color: #101010 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	.friendBrowserPhotoCrop {
@@ -553,7 +550,7 @@
 	/*hover*/
 	._1y2l li a.messagesContent:hover,
 	._1sdi {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	/*NTF New Fond*/
@@ -574,7 +571,7 @@
 	._33c,
 	.uiHeaderBottomBorder,
 	._fyy {
-		border-bottom: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	._33e
@@ -589,7 +586,7 @@
 	._33c ._33e:focus,
 	._ors ._33c,
 	._33c {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	.__tw .jewelFooter a:hover,
@@ -615,7 +612,7 @@
 
 	/*Btn +*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-top: 1px solid #3a3a3a !important;
 	}
 
@@ -630,7 +627,7 @@
 
 	/*Int hover*/
 	._9ot:hover {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	/*Int Txt*/
@@ -680,7 +677,7 @@
 	._3bzc,
 	._1pig,
 	._2x8x {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._1pih,
@@ -748,7 +745,7 @@
 	._83k,
 	._b-o:hover,
 	._1y80 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._5xk5,
@@ -765,7 +762,7 @@
 	}
 
 	._1o7w {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	/*Profil G Txt*/
@@ -775,20 +772,20 @@
 	}
 
 	.fbxWelcomeBoxSmall .fbxWelcomeBoxSmallRow:hover {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	/*NEW*/
 	.faceliftWelcomeBox .fbxWelcomeBoxSmallRow:hover::after {
-		background-color: #1d1e22 !important;
-		border: 1px solid #1d1e22 !important;
+		background-color: #1d1e2d !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	/*NEW*/
 	._3m75 .selectedItem ._5afe::after,
 	._3m75 .sideNavItem:hover ._5afe::after {
-		background-color: #1d1e22 !important;
-		border: 1px solid #1d1e22 !important;
+		background-color: #1d1e2d !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	/*NEW*/
@@ -801,8 +798,8 @@
 	._3m75 ._55yu>a,
 	._3m75 .sideNavItem .uiSideNavEditButton a,
 	._3m75 .sideNavItem ._5afe::after {
-		background-color: #1d1e22 !important;
-		border-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*NEW*/
@@ -817,7 +814,7 @@
 	._55y4 ._bui .selectedItem ._5afe:hover,
 	._55y4 .uiSideNavAux:hover~._5afe,
 	._55y4 .openToggler.uiSideNavAux+._5afe {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	/*Navig G Txt*/
@@ -860,13 +857,13 @@
 	._5vb_ ._55y4 ._bui ._5afe:focus,
 	._5vb_ ._55y4 ._bui ._5afe:active,
 	._5vb_ ._55y4 ._bui ._5afd ._5afe {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._55y4 ._bui ._5afe:hover,
 	._55y4 ._bui ._5afd ._5afe,
 	._55y4 ._bui ._5afe:hover ._2jgb {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		text-decoration: none !important;
 	}
 
@@ -879,7 +876,7 @@
 
 	/*notif*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._4yup ._4sg9,
@@ -911,11 +908,11 @@
 	}
 
 	._2j79 {
-		box-shadow: inset 0 0 0 1px #1d1e22, 0 0 4px 0 rgba(0, 0, 0, .15) !important;
+		box-shadow: inset 0 0 0 1px #1d1e2d, 0 0 4px 0 rgba(0, 0, 0, .15) !important;
 	}
 
 	._2vw6 {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*joindre*/
@@ -925,7 +922,7 @@
 	._5esl td._5esm:first-child,
 	._5esl td._5esw,
 	._5esx ._58ak {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._m_1 ._2aha {
@@ -938,7 +935,7 @@
 	._16ve,
 	/*ntf*/
 	._2-gy {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._3wvs,
@@ -946,8 +943,8 @@
 
 	/*ntf*/
 		{
-		background: #1a1a1a !important;
-		border-color: #1d1e22 !important;
+		background: #101010 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._5nig,
@@ -976,7 +973,7 @@
 	._1cx1 ._ei_,
 	._ei_,
 	._2dck {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._5778 ._577f
@@ -1040,7 +1037,7 @@
 	,
 	._1p8m,
 	._-0d {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._b37,
@@ -1064,7 +1061,7 @@
 	._ric,
 	._4mnq {
 		background-color: #0f1014 !important;
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	.pagelet i.img {
@@ -1082,11 +1079,11 @@
 	.ego_unit+.ego_unit,
 	.ego_unit+.ego_appended_units .ego_unit,
 	.ego_appended_units+.ego_unit {
-		border-top: 1px solid #1a1a1a !important;
+		border-top: 1px solid #101010 !important;
 	}
 
 	div.p_9kktqa0pp .uiSideHeader {
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	.n_9kktqa0pe .m_9kktqa0pf,
@@ -1107,7 +1104,7 @@
 
 	/*menu options hover*/
 	._569t ._54ng {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 1px solid #0f1014 !important;
 	}
 
@@ -1121,12 +1118,12 @@
 	}
 
 	._569t ._54ak {
-		border-bottom: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	.timelineUnitContainer .timelineAudienceSelector .uiSelectorButton:hover {
 		background-image: none !important;
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	.uiButton {
@@ -1144,7 +1141,7 @@
 	/*Input box*/
 	.uiTypeahead,
 	.uiTypeahead .wrap {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 0px solid #0f1014;
 	}
 
@@ -1164,7 +1161,7 @@
 
 	/*Ptg cite*/
 	._5pcm {
-		border-left: 2px solid #1d1e22 !important;
+		border-left: 2px solid #1d1e2d !important;
 	}
 
 	._4fzb ._5pco,
@@ -1260,7 +1257,7 @@
 	._5v3q .y_9kktq56ep,
 	.y_9kktq56ep,
 	._5v3q * {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	/*Article*/
@@ -1291,25 +1288,25 @@
 
 	/*popup*/
 		{
-		background-color: #1a1a1a !important;
-		border-bottom: 1px solid #1a1a1a !important;
+		background-color: #101010 !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	._4lmi,
 	._31qh,
 	._31qi,
 	._2ebi {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._5v3q ._5r69 ._4_j6 {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*bord*/
 	._a7s,
 	._22jv {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	._5vsj .UFIRow._4204 {
@@ -1529,8 +1526,8 @@
 
 	/*pub boost*/
 		{
-		background-color: #1a1a1a !important;
-		border-color: #1a1a1a !important;
+		background-color: #101010 !important;
+		border-color: #101010 !important;
 		color: #a9acb7 !important;
 	}
 
@@ -1543,12 +1540,12 @@
 	/*X apparait*/
 	._5v3q ._5mxv,
 	._5mxv {
-		border-top-color: #1a1a1a !important;
+		border-top-color: #101010 !important;
 	}
 
 	/*X a commenté*/
 	._5g-l {
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	/*SVN*/
@@ -1622,7 +1619,7 @@
 
 	._5wpt,
 	.UFITranslatedText {
-		border-left: 2px solid #1d1e22 !important;
+		border-left: 2px solid #1d1e2d !important;
 	}
 
 	._4upo,
@@ -1634,7 +1631,7 @@
 
 	/*ttr album*/
 		{
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	.sp_nj3KHHD_jkN {
@@ -1644,7 +1641,7 @@
 	/*Shop*/
 	._5ra,
 	._2wtx {
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	._6m2:hover ._275z,
@@ -1696,15 +1693,15 @@
 
 	/*ttr album*/
 		{
-		background: #1a1a1a !important;
-		border-top: 1px solid #1d1e22 !important;
+		background: #101010 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._21x_ ._48p5,
 	._21x_ ._1j3c ._1j3d,
 	._1evy,
 	._1evw {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*map*/
@@ -1718,7 +1715,7 @@
 	._3n00._2kir,
 	._3m__,
 	._3n00 {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	/*Anv*/
@@ -1764,7 +1761,7 @@
 	._57uu ._5jkw,
 	._1hh8,
 	._34jx._34jx {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	/*load*/
@@ -1789,7 +1786,7 @@
 	._2iwq::before,
 	._wxj *,
 	._4147::before {
-		background-image: linear-gradient(to right, #1a1a1a 0%, #111216 20%, #1a1a1a 40%, #1a1a1a 100%) !important;
+		background-image: linear-gradient(to right, #101010 0%, #111216 20%, #101010 40%, #101010 100%) !important;
 	}
 
 	._4142,
@@ -1926,7 +1923,7 @@
 	,
 	._fmi ._2xww {
 		background-color: #030305 !important;
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 		color: #a9acb7;
 		opacity: .6;
 	}
@@ -2013,7 +2010,7 @@
 	._4d3w._u77 .fbPhotosSnowboxFeedbackInput .UFIRow,
 	._3eqz,
 	._3w53 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._3dlg+._3dli,
@@ -2025,7 +2022,7 @@
 
 	._5vsj .UFIAddComment .ReactLegacyMentionsInput .uiTypeahead,
 	._5vsj .UFIAddComment .ReactLegacyMentionsInput .uiTypeahead .wrap {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._5vsj.UFIContainer .UFIReplyList ._4oep,
@@ -2160,7 +2157,7 @@
 	/*page*/
 	._4idm,
 	._4idn {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._43q8._49c8,
@@ -2216,7 +2213,7 @@
 	._18s5,
 	._5-8p,
 	._5_xt {
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	._5kyp .action a
@@ -2233,7 +2230,7 @@
 	._1mv9 ._3el6,
 	._4idn,
 	._cvy {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 		color: #a9acb7 !important;
 	}
 
@@ -2259,12 +2256,12 @@
 	._3-e2,
 	._3-e2 ._4yjk,
 	._2vaw {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._4yjk,
 	._18z5 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._r-g,
@@ -2299,7 +2296,7 @@
 	}
 
 	._4xbk ._40jq+._40jq {
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	._iyc,
@@ -2344,7 +2341,7 @@
 
 	/*ID options hover*/
 	.uiMenu {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	.uiMenuSeparator {
@@ -2404,7 +2401,7 @@
 	._6864,
 	._6853,
 	._558b ._54ne ._54nc {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._1u4r {
@@ -2426,7 +2423,7 @@
 	._1xcu,
 	._3v2n ._104r,
 	._4lvz {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	.imageLoading .stage {
@@ -2506,8 +2503,8 @@
 
 	/*header*/
 		{
-		background-color: #1a1a1a !important;
-		border-bottom: 1px solid #1a1a1a !important;
+		background-color: #101010 !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	._42fu,
@@ -2520,7 +2517,7 @@
 	._3n92,
 	._3qyo,
 	._3n93 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-color: #2b2f31 !important;
 	}
 
@@ -2536,7 +2533,7 @@
 	/*don*/
 	,
 	._2dw0 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._5lnf,
@@ -2544,14 +2541,14 @@
 	._3qin,
 	._kej,
 	._1st {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._t
 
 	/*lang popup*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._13,
@@ -2605,18 +2602,18 @@
 	._4i7u,
 	._69cz,
 	._1k62::before {
-		background-color: #1a1a1a !important;
-		border-color: #1d1e22 !important;
+		background-color: #101010 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._2-kn ._k-a {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._2-kn ._k-9,
 	._2jxc li,
 	._2jxc li:first-child {
-		border-bottom: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	._2jx8 ._2jx9 {
@@ -2634,7 +2631,7 @@
 	}
 
 	._5h8b ._5dwa {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	img._44_t.img,
@@ -2651,7 +2648,7 @@
 	}
 
 	.userSuggestionList .userSuggestionRow {
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	.sp_dAKJ-IYhvKr,
@@ -2670,7 +2667,7 @@
 
 	._bui ._5afe,
 	._bui .subitem {
-		border-bottom: 0 solid #1a1a1a !important;
+		border-bottom: 0 solid #101010 !important;
 	}
 
 	/*Recherche*/
@@ -2708,7 +2705,7 @@
 	._1zjl,
 	._5w9d,
 	._19_p {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._kt,
@@ -2732,7 +2729,7 @@
 
 	/*cadre*/
 		{
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	._2wma
@@ -2803,8 +2800,8 @@
 	._4wbg,
 	._hij,
 	._kyy {
-		background-color: #1a1a1a !important;
-		border-color: #1d1e22 !important;
+		background-color: #101010 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._2l03,
@@ -2927,7 +2924,7 @@
 	/*invit*/
 	._2eg_,
 	._64dw {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-color: #1c1d1e !important;
 	}
 
@@ -2941,7 +2938,7 @@
 	._3gr,
 	._6kf_,
 	._5ghu {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._3gr ._5283,
@@ -2949,8 +2946,8 @@
 	._6n1z._59pe:focus,
 	._6n1z._59pe:hover,
 	._3kin {
-		background-color: #1a1a1a !important;
-		border-color: #1d1e22 !important;
+		background-color: #101010 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._50nd ._50nc,
@@ -2978,7 +2975,7 @@
 
 	/*PRP ment*/
 		{
-		border-bottom: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	._tun,
@@ -2993,8 +2990,8 @@
 
 	/*head*/
 		{
-		background: #1a1a1a !important;
-		border: 1px solid #1d1e22 !important;
+		background: #101010 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	.selected ._tus,
@@ -3009,19 +3006,19 @@
 
 	/*PRP ment*/
 		{
-		border-left: 1px #1d1e22 solid !important;
+		border-left: 1px #1d1e2d solid !important;
 	}
 
 	/*Photos*/
 	._3etu,
 	._3etw {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 		border: solid 1px #1c1d1e !important;
 	}
 
 	/*Vidéos*/
 	._20h0 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._4-u2>._4-u3,
@@ -3054,13 +3051,13 @@
 	,
 	._4adh,
 	._p6e {
-		background: #1a1a1a !important;
-		border-color: #1a1a1a !important;
+		background: #101010 !important;
+		border-color: #101010 !important;
 	}
 
 	._27nv {
-		background: #1a1a1a !important;
-		border-bottom: 1px solid #1a1a1a !important;
+		background: #101010 !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	._4dmk,
@@ -3075,7 +3072,7 @@
 	._4dmd+._4dmd,
 	._p6f,
 	._p6a {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	._30n- a,
@@ -3094,8 +3091,8 @@
 
 	/*popup*/
 		{
-		background: #1a1a1a !important;
-		border-bottom: 1px solid #1d1e22 !important;
+		background: #101010 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	/*Article*/
@@ -3114,7 +3111,7 @@
 
 	._3yjv,
 	._5k3v blockquote {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*Avis*/
@@ -3127,7 +3124,7 @@
 
 	._4uyg,
 	._1eu- {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._4uyj {
@@ -3182,7 +3179,7 @@
 	._3nj ._gl,
 	._3ni ._gl._498,
 	._4qa._4lt::after {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._3nl,
@@ -3226,7 +3223,7 @@
 	._4c1b:hover,
 	._azu,
 	._1po3 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-color: transparent !important;
 	}
 
@@ -3327,7 +3324,7 @@
 	._nlp,
 	._3zzl[style],
 	.selectedCheckable+.selectedCheckable {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._4vhi textarea,
@@ -3397,7 +3394,7 @@
 	}
 
 	._3ok2:hover {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-color: #252829 !important;
 	}
 
@@ -3415,7 +3412,7 @@
 	}
 
 	._4d6h {
-		border-bottom: 0 solid #1a1a1a !important;
+		border-bottom: 0 solid #101010 !important;
 	}
 
 	._5xvh
@@ -3430,7 +3427,7 @@
 	}
 
 	._3m1_ ._3m20 ._3m1y {
-		border-right: 0 solid #1a1a1a !important;
+		border-right: 0 solid #101010 !important;
 	}
 
 	._3m1z,
@@ -3445,7 +3442,7 @@
 	}
 
 	._3m1z:hover {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._1w50:hover
@@ -3467,7 +3464,7 @@
 
 	/*stats*/
 	._79q {
-		border-left: 2px solid #1d1e22 !important;
+		border-left: 2px solid #1d1e2d !important;
 	}
 
 	._3-8z div[style],
@@ -3487,18 +3484,18 @@
 	._55ii,
 	._sig,
 	._3uh- {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._sig {
-		border-bottom: 0 solid #1a1a1a !important;
+		border-bottom: 0 solid #101010 !important;
 		color: #d6dee2 !important;
 	}
 
 	._55k0,
 	._3uh-,
 	._3uh- ._3uhz {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._5fbu::before {
@@ -3509,7 +3506,7 @@
 	._57e6:hover,
 	._cd2,
 	._29d1 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._57e6,
@@ -3557,11 +3554,11 @@
 	}
 
 	._26a7 {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._23d6 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._26a7 ._26a8:hover,
@@ -3804,7 +3801,7 @@
 	.b .gf,
 	.gl.gm,
 	.gl.gm .gn>table {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._2ip_ ._15kk::before,
@@ -3915,7 +3912,7 @@
 	.gm,
 	.gl.gm .gn>table,
 	.gm .gw {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	._2oof,
@@ -4022,7 +4019,7 @@
 	/*Offres*/
 	._25xc,
 	._642 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-color: #111216 !important;
 	}
 
@@ -4043,7 +4040,7 @@
 	}
 
 	._5hue>a:hover {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._1_e_
@@ -4055,7 +4052,7 @@
 
 	/*Gnr hover*/
 	.fbSettingsList a.fbSettingsListLink:hover {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	/*Gérer onglets*/
@@ -4067,7 +4064,7 @@
 	._17m2,
 	._5yhn,
 	._53uz {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._1da9 {
@@ -4103,12 +4100,12 @@
 	,
 	._3jk0,
 	._17m5 {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._rio,
 	._3jk0 {
-		border-bottom: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	.uiButton.uiButtonConfirm {
@@ -4125,7 +4122,7 @@
 
 	/*Ntf*/
 	.uiBoxWhite {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 0 solid #333 !important;
 	}
 
@@ -4143,7 +4140,7 @@
 	/*Rôles*/
 	._29__,
 	._4uq4 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	form.async_saving ._4jy1,
@@ -4177,7 +4174,7 @@
 
 	/*tableau*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 1px solid #333 !important;
 	}
 
@@ -4185,7 +4182,7 @@
 	._4-ss>tbody>._1isx:nth-child(2n):hover>th,
 	._4-ss>tbody>tr:nth-child(2n)>td,
 	._4-ss>tbody>tr:nth-child(2n)>th {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._4-ss>tbody>tr:hover>td,
@@ -4200,7 +4197,7 @@
 
 	/*head*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		text-shadow: none !important;
 		color: #a9acb7 !important;
 	}
@@ -4215,12 +4212,12 @@
 	._4x6j,
 	._19yt,
 	._5w0x {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._438u,
 	._5w0y ._58ak {
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	._438x ._58ak {
@@ -4280,7 +4277,7 @@
 	._5w24:hover,
 	._5w1d,
 	._5gs5 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._hpf._hpr,
@@ -4296,7 +4293,7 @@
 	._6pd,
 	._50me,
 	._50mc {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		color: #a9acb7 !important;
 	}
 
@@ -4369,7 +4366,7 @@
 	/*slct popup*/
 	._hpl,
 	._599r {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		box-shadow: 0 1px 3px #222;
 	}
 
@@ -4391,7 +4388,7 @@
 	/*App*/
 	.uiHeaderSection,
 	.uiSideHeader {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-top: solid 1px #111216 !important;
 	}
 
@@ -4409,7 +4406,7 @@
 
 	/*Btn add*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 1px solid #252829 !important;
 	}
 
@@ -4465,7 +4462,7 @@
 	.pop_content .dialog_buttons,
 	/*form input[type="text"],*/
 	._x90 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	.app_settings_tab {
@@ -4511,7 +4508,7 @@
 	/*Pers*/
 	._5ndr,
 	._55ju {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	/*HIST PERS*/
@@ -4519,7 +4516,7 @@
 
 	/*head*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border: 1px solid #252829 !important;
 	}
 
@@ -4528,14 +4525,14 @@
 
 	/*ongl*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-bottom: 1px solid #252829 !important;
 		border-top: 1px solid #252829 !important;
 	}
 
 	._6z- .uiSideNav .item:hover,
 	._6z- .uiSideNav .subitem:hover {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._6z- .uiSideNav .item,
@@ -4558,7 +4555,7 @@
 
 	/*élemt*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 1px solid #252829 !important;
 	}
 
@@ -4600,7 +4597,7 @@
 	._32-_,
 	._3stw,
 	._1a_0 {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._3i2n ._58ak {
@@ -4608,7 +4605,7 @@
 	}
 
 	.__1d {
-		border-top-color: #1d1e22 !important;
+		border-top-color: #1d1e2d !important;
 	}
 
 	._-7c,
@@ -4643,7 +4640,7 @@
 	._3uy4,
 	._5id1,
 	._oan {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._30p_,
@@ -4673,7 +4670,7 @@
 
 	/*hdr*/
 		{
-		border-bottom: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	._33v4,
@@ -4696,7 +4693,7 @@
 	._frp._frp,
 	._sr8,
 	._3mdp {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._jqu {
@@ -4715,7 +4712,7 @@
 	._2v5c,
 	._33v1,
 	._avo {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	img._3-91.img[src] {
@@ -4726,7 +4723,7 @@
 	/*__STATS__*/
 	._58do,
 	._46cs {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border: 1px solid #252829 !important;
 	}
 
@@ -4751,7 +4748,7 @@
 	}
 
 	._5fez {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border-bottom: 1px solid #252829 !important;
 	}
 
@@ -4775,12 +4772,12 @@
 
 	._5k47,
 	._58do ._58dq {
-		background: linear-gradient(black, #1a1a1a) !important;
+		background: linear-gradient(black, #101010) !important;
 	}
 
 	._5k4a,
 	._4q26 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._5k49 {
@@ -4802,7 +4799,7 @@
 
 	/*Btn +*/
 		{
-		background: linear-gradient(#0c0c0f, #1a1a1a) !important;
+		background: linear-gradient(#0c0c0f, #101010) !important;
 		border-top: 1px solid #111216 !important;
 		color: #a9acb7 !important;
 	}
@@ -4823,18 +4820,18 @@
 	._hj7,
 	._hj9,
 	._4u2l {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*Mentions*/
 	._5nw8 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border: 1px solid #252829 !important;
 	}
 
 	._5c6j ._3smp,
 	._5nw6 {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 		color: #8098c9 !important;
 	}
 
@@ -4843,7 +4840,7 @@
 
 	/*CALENDRIER*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border-bottom: 1px solid #252829 !important;
 	}
 
@@ -4851,8 +4848,8 @@
 
 	/*ajd*/
 		{
-		background-color: #1d1e22 !important;
-		border-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._5hpx ._5hq1 {
@@ -4863,7 +4860,7 @@
 
 	/*M*/
 		{
-		border-right: 1px solid #1a1a1a !important;
+		border-right: 1px solid #101010 !important;
 	}
 
 	._5npl,
@@ -4876,7 +4873,7 @@
 	}
 
 	._5lt6 {
-		border-top: 3px solid #1a1a1a !important;
+		border-top: 3px solid #101010 !important;
 	}
 
 	._3qw ._3ixn
@@ -4888,7 +4885,7 @@
 	}
 
 	.uiOverlayContent {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	i.img._5cmh {
@@ -4901,7 +4898,7 @@
 
 	/*Hdr*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border-bottom: 1px solid #111216 !important;
 	}
 
@@ -4921,8 +4918,8 @@
 	}
 
 	._5cmi {
-		background-color: #1a1a1a !important;
-		border-bottom: 1px solid #1a1a1a !important;
+		background-color: #101010 !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	/*Prt*/
@@ -4938,26 +4935,26 @@
 
 	/*Vues*/
 	._1-e0 {
-		background: #1a1a1a !important;
-		border: 1px solid #1d1e22 !important;
+		background: #101010 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	._2yaq
 
 	/*Hdr*/
 		{
-		background: #1a1a1a !important;
-		border-bottom: 1px solid #1d1e22 !important;
+		background: #101010 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	/*Publis*/
 	._5nzo {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border: 1px solid #252829 !important;
 	}
 
 	body ._5nwp {
-		border-left: 1px solid #1d1e22 !important;
+		border-left: 1px solid #1d1e2d !important;
 	}
 
 	._5baw,
@@ -4974,7 +4971,7 @@
 
 	._5bay,
 	._553h ._5nzr {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	.sp_1wRzFqpWf1A {
@@ -5001,7 +4998,7 @@
 	/*vid :*/
 	._2dmn,
 	._4iqg {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._28nm,
@@ -5038,7 +5035,7 @@
 	._abs,
 	._abr,
 	._61al {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*Shop CALENDRIER*/
@@ -5065,7 +5062,7 @@
 	}
 
 	._owy ._oxb ._oxc:hover {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 		color: #d6dee2 !important;
 	}
 
@@ -5077,11 +5074,11 @@
 	._610a,
 	._55k0,
 	._3uh- {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	._4sol ._5dwa {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._3xem:hover,
@@ -5090,7 +5087,7 @@
 	._1v6t ._1mie ._4lo:hover,
 	._1v6t ._1mie ._m3c ._4h2m:hover,
 	._5t_y ._1dsq:hover {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._1v6t ._1mie ._1mib ._4h2m,
@@ -5125,12 +5122,12 @@
 
 	/*modif*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._4kzo {
 		color: #d6dee2 !important;
-		border-right: #1d1e22 solid 1px !important;
+		border-right: #1d1e2d solid 1px !important;
 	}
 
 	._4kzr:hover,
@@ -5157,7 +5154,7 @@
 	._1mib,
 	._1mib ._4h2m,
 	._2k5d {
-		background-image: linear-gradient(#1a1a1a, #111216) !important;
+		background-image: linear-gradient(#101010, #111216) !important;
 	}
 
 	._1v6t,
@@ -5165,7 +5162,7 @@
 
 	/*modif*/
 		{
-		border-top: 1px solid #1a1a1a !important;
+		border-top: 1px solid #101010 !important;
 	}
 
 	._1mib,
@@ -5173,11 +5170,11 @@
 	._4h2m,
 	._4kbi div[style],
 	._1v6t ._1mie ._3c7k {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	._1v6t ._1mie {
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	._3b4b
@@ -5216,7 +5213,7 @@
 	td._4kfz[style] ._4o01,
 	td._4kfz[style],
 	tr._37hy[style] {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._36lv._36lw ._36my,
@@ -5252,7 +5249,7 @@
 	}
 
 	._2833 {
-		box-shadow: 8px 0 16px 8px #1a1a1a !important;
+		box-shadow: 8px 0 16px 8px #101010 !important;
 	}
 
 	table._5jjd[style] {
@@ -5274,7 +5271,7 @@
 	/*menu abn*/
 	,
 	._5k7c {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	html ._6-d .fbTimelineSection {
@@ -5294,15 +5291,15 @@
 	,
 	._3fbr>._30f,
 	.fbTimelineStickyHeader .stickyHeaderWrap {
-		background-color: #1a1a1a !important;
-		border: 1px solid #1a1a1a !important;
+		background-color: #101010 !important;
+		border: 1px solid #101010 !important;
 	}
 
 	/*Cadre img*/
 	#fbTimelineHeadline .profilePic,
 	#fbTimelineHeadline .newProfilePic {
-		border: 4px solid #1d1e22 !important;
-		background-color: #1a1a1a !important;
+		border: 4px solid #1d1e2d !important;
+		background-color: #101010 !important;
 	}
 
 	/*Onglets*/
@@ -5356,7 +5353,7 @@
 
 	/*Info, ? */
 	._70l {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border-bottom: 1px solid #111216 !important;
 	}
 
@@ -5368,7 +5365,7 @@
 	._3bzd,
 	._22cj,
 	._1nv3 ._11kf {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._54xt,
@@ -5392,20 +5389,20 @@
 	._2xbx,
 	._18c-,
 	._65nu {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._4xda,
 	._5njd,
 	._22ck {
-		background: #1a1a1a !important;
-		border-top: 1px solid #1d1e22 !important;
+		background: #101010 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	/*Sects G*/
 	._4nk5,
 	._1jf6 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 1px solid #111216 !important;
 	}
 
@@ -5453,17 +5450,17 @@
 
 	/*msg info*/
 	._5kxe {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._5kxd {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 		background: transparent !important;
 	}
 
 	/*Publi*/
 	._s7h ._4-h7 {
-		border-left: 1px solid #1d1e22 !important;
+		border-left: 1px solid #1d1e2d !important;
 	}
 
 	/*+*/
@@ -5486,7 +5483,7 @@
 
 	/*popup edit*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border-bottom: 1px solid #252829 !important;
 	}
 
@@ -5520,15 +5517,15 @@
 	._5y02:hover,
 	._j-q,
 	._j-r {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._53d9
 
 	/*edit*/
 		{
-		border-top: 1px solid #1d1e22 !important;
-		border-bottom: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	._5hzi,
@@ -5543,7 +5540,7 @@
 	.mleFooter,
 	/*evnt slct*/
 	.mleMenu .categoryLabel {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._3egg._3egg,
@@ -5561,11 +5558,11 @@
 	._5itl:focus,
 	._1_cb,
 	._52bu ._3ow- {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	.mleMenu .mleTypes {
-		border-left: 1px solid #1a1a1a !important;
+		border-left: 1px solid #101010 !important;
 	}
 
 	._41mp,
@@ -5579,7 +5576,7 @@
 	._33hy,
 	.fbTimelineMapBorder,
 	.fbTimelineMapCalloutHeader {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	img[src="/images/blank-profilepic.png"] {
@@ -5612,13 +5609,13 @@
 	.fbAggregatedMapTooltipText,
 	.fbMapCalloutMain,
 	.fbTimelineMapAggregateCallout .fbTimelineMapCalloutHeader {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._5rsw,
 	select,
 	._59_m {
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	._59_o
@@ -5626,7 +5623,7 @@
 	/*em slctd*/
 		{
 		background-color: #111216 !important;
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 		color: #d6dee2 !important;
 	}
 
@@ -5639,7 +5636,7 @@
 	,
 	._5itl:hover,
 	._5itl:focus {
-		border-bottom: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	._173e .fcg {
@@ -5678,7 +5675,7 @@
 	/*Photos*/
 	.fbStarGrid .uiMediaThumb::before,
 	html ._53f2 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	/*Amis*/
@@ -5700,7 +5697,7 @@
 
 	/*Btn +*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border-top: 1px solid #252829 !important;
 	}
 
@@ -5730,7 +5727,7 @@
 
 	._1eds,
 	._gx8 .img {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	/*Ment likes*/
@@ -5742,7 +5739,7 @@
 
 	._3s1a,
 	._3s18:hover ._3s19 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._3s18 ._3c_:hover {
@@ -5756,7 +5753,7 @@
 
 	/*Exrcc*/
 	._52r6 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._52r5,
@@ -5771,7 +5768,7 @@
 
 	/*grp*/
 		{
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 		outline: none;
 	}
 
@@ -5794,7 +5791,7 @@
 	}
 
 	.editNoteWrapperInput {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._4-rr img.img._5371 {
@@ -5811,13 +5808,13 @@
 	/*Popup gérer*/
 	._6ws,
 	._2o49 {
-		background-color: #1a1a1a !important;
-		border-bottom: 1px solid #1a1a1a !important;
+		background-color: #101010 !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	._d3b,
 	._6wq {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._6wt {
@@ -5855,7 +5852,7 @@
 
 	/*input box*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border: 1px solid #252829 !important;
 	}
 
@@ -5881,8 +5878,8 @@
 	#fbTimelineHeadline .leftPic,
 	#fbTimelineHeadline .rightPic,
 	._2o49 {
-		background-color: #1a1a1a !important;
-		border-color: #1d1e22 !important;
+		background-color: #101010 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	#fbTimelineHeadline h2 a {
@@ -5903,7 +5900,7 @@
 	._4ym2,
 	._4ap3,
 	._1xhn {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._4ym2,
@@ -5941,7 +5938,7 @@
 	._1tuw,
 	._5hy2 ._43dh,
 	.section {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._1wfr,
@@ -6109,7 +6106,7 @@
 	}
 
 	._2nb {
-		border-left: 1px solid #1a1a1a !important;
+		border-left: 1px solid #101010 !important;
 	}
 
 	._1rs,
@@ -6122,7 +6119,7 @@
 	/*audio*/
 	._1miz,
 	._454y ._1mj0 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 1px solid #222 !important;
 	}
 
@@ -6156,7 +6153,7 @@
 	}
 
 	.uiButton {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	.openToggler ._1n,
@@ -6232,7 +6229,7 @@
 	._4rtl,
 	._638s {
 		background-color: #111216 !important;
-		outline-color: #1d1e22 !important;
+		outline-color: #1d1e2d !important;
 	}
 
 	._k01 {
@@ -6247,7 +6244,7 @@
 	._5-nk,
 	._4kn0,
 	._1lil {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._5-nk,
@@ -6261,7 +6258,7 @@
 	}
 
 	._-cj {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._3ffs {
@@ -6325,7 +6322,7 @@
 	._2s60 ._357t,
 	._611j,
 	._611k {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	.fbCalendar.fbGroupCalendar,
@@ -6370,8 +6367,8 @@
 	._dut,
 	/*new evt date*/
 	._416u ._4ixr ._3smp {
-		background: #1a1a1a !important;
-		border: 1px solid #1d1e22 !important;
+		background: #101010 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	.generic_dialog_modal,
@@ -6384,8 +6381,8 @@
 	.groups_rhc ._4mr7 ._4mr8 span,
 	._4-u3 .uiHeaderTopBorder,
 	._3s4w::before {
-		border-color: #1d1e22 !important;
-		box-shadow: 0 0 4px 0 #1a1a1a !important;
+		border-color: #1d1e2d !important;
+		box-shadow: 0 0 4px 0 #101010 !important;
 	}
 
 	._3tmz,
@@ -6415,7 +6412,7 @@
 	._3_99,
 	._3k4n,
 	._55xm {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._36nj::before
@@ -6532,7 +6529,7 @@
 	._-ex,
 	._34n6,
 	._63jc {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._ab4 ._3yv8._5aer ._5aeo {
@@ -6639,7 +6636,7 @@
 
 	/*contenu*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._gu1 ._3tr a
@@ -6744,7 +6741,7 @@
 
 	/*heads*/
 		{
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	._5vl5 ._3slj,
@@ -6759,7 +6756,7 @@
 	._cgx+._1asl,
 	._2xr0,
 	._2xqu {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	._4b6._4b7,
@@ -6797,7 +6794,7 @@
 
 	._4b5>._4b6+._4b6,
 	._1tm3 {
-		border-left: 1px solid #1a1a1a !important;
+		border-left: 1px solid #101010 !important;
 	}
 
 	._32fv,
@@ -6850,7 +6847,7 @@
 	._5lbp,
 	._3u-1::before,
 	._2ru-::before {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._2apd,
@@ -6991,12 +6988,12 @@
 	}
 
 	.fbCalendarGrid .fbCalendarGridRow {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	.fbCalendarGridRoot .fbCalendarBox,
 	._5w40.fbEventHeader {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border: 1px solid #252829 !important;
 	}
 
@@ -7015,7 +7012,7 @@
 	.fbCalendarGrid .fbCalendarDayItem,
 	._1-vv+._1lp_,
 	._ayb {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	.fbCalendarGrid .fbCalendarGridCell.fbCalendarGridToday .fbCalendarDayItem
@@ -7024,7 +7021,7 @@
 	,
 	.fbCalendarGrid .fbCalendarDayItem:hover,
 	.fbCalendarGrid .fbCalendarGridToday .fbCalendarDayItem:hover {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._5kyi,
@@ -7041,13 +7038,13 @@
 
 	/*past*/
 	._4ag3 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	.fbEventsDashboardSection+.fbEventsDashboardSection>.fbEventsDashboardSection>._4ag3,
 	.fbEventsDashboardSection+.fbEventsDashboardSection>._4ag3,
 	._4cbb+._4ag3 {
-		border-top: 1px solid #1a1a1a !important;
+		border-top: 1px solid #101010 !important;
 	}
 
 	.fbEventsDashboardSection+.fbEventsDashboardSection>._4cbb,
@@ -7098,7 +7095,7 @@
 	._1y48+._1y48>._1y4a,
 	._3e7x,
 	._3ji8 {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*POLL*/
@@ -7108,20 +7105,20 @@
 
 	._3coj,
 	._43q8._49cb {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._3col,
 	._4sjs,
 	/*ptg à*/
 	._2apd {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._31qf,
 	._3col,
 	._4sjs {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._3con {
@@ -7139,7 +7136,7 @@
 	._5u_6._5wcf,
 	._5voi._5wcf,
 	._5xmz._5wcf {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._5xmz._5wcf {
@@ -7148,7 +7145,7 @@
 
 	._5wcf,
 	._3vqv {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._3vqw .uiSearchInput {
@@ -7171,12 +7168,12 @@
 	/*___RETRV___*/
 	._30d,
 	._5i-7 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._30d,
 	._5ewg ._5m65 {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	h1,
@@ -7193,26 +7190,26 @@
 
 	._3-z,
 	._30d ._3-z~._3-z {
-		border-top: 1px solid #1a1a1a !important;
+		border-top: 1px solid #101010 !important;
 	}
 
 	.uiHeaderTopAndBottomBorder,
 	._5ewi ._5mtx {
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	/*___STATS___*/
 	._rb3 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._rb3:hover {
-		border: 1px solid #1d1e22 !important;
+		border: 1px solid #1d1e2d !important;
 	}
 
 	/*___CE JOUR (SVN)___*/
 	._1ncy {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	.sp_Tafe4lv43MC,
@@ -7230,7 +7227,7 @@
 	}
 
 	._syg {
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	hr
@@ -7250,7 +7247,7 @@
 
 	/*+date*/
 		{
-		border-top: 1px solid #1a1a1a !important;
+		border-top: 1px solid #101010 !important;
 	}
 
 	/*________________VIDEO DIRECT________________*/
@@ -7267,7 +7264,7 @@
 	.mapboxgl-ctrl-group,
 	._2eso,
 	._68r3 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._7sr,
@@ -7357,7 +7354,7 @@
 	._bes,
 	._30xv,
 	._30_0 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._3d_z,
@@ -7414,7 +7411,7 @@
 
 	/*___Offres___*/
 	._3w-8 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._4llw:hover,
@@ -7482,7 +7479,7 @@
 	}
 
 	._4f2f {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	/*___Pokes___*/
@@ -7508,7 +7505,7 @@
 
 	/*___Sugg Modifs___*/
 	._5ml_ {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 		border-left: 1px solid #222 !important;
 		border-right: 1px solid #222 !important;
 	}
@@ -7516,7 +7513,7 @@
 	._5w0m:hover,
 	._4n65,
 	._5tjv:hover {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._5mm1,
@@ -7527,7 +7524,7 @@
 
 	._5w0m,
 	._5tjv {
-		border-right: 1px solid #1a1a1a !important;
+		border-right: 1px solid #101010 !important;
 	}
 
 	._3jvu,
@@ -7570,7 +7567,7 @@
 	._36t1,
 	._38tk,
 	._2on- {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._5-rl a:hover,
@@ -7640,17 +7637,17 @@
 
 	/*Ctr Intr*/
 	._5vb_ ._bui ._5afe ._2jgb {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	/*Notes*/
 	._39k2,
 	._39k5 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._1gtx {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-top: 1px solid #1c1d1e !important;
 	}
 
@@ -7696,7 +7693,7 @@
 	._da3,
 	._5_h3,
 	._54t9 {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._3uh4._21yg ._3uh8:hover,
@@ -7803,11 +7800,11 @@
 	._59tx,
 	._5dwm,
 	._4qzj ._5i04:not(:last-child) {
-		border-bottom: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
 	}
 
 	._5jm3::before {
-		background-image: linear-gradient(to right, #1d1e22, rgba(0, 0, 0, .05));
+		background-image: linear-gradient(to right, #1d1e2d, rgba(0, 0, 0, .05));
 	}
 
 	._2jfb,
@@ -7881,7 +7878,7 @@
 
 	._4kab,
 	._4g7g {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._4kac::before,
@@ -7892,7 +7889,7 @@
 	._3vkm,
 	._3vkj,
 	._jk5 {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._3-95 th[style],
@@ -7976,7 +7973,7 @@
 	._3cg3,
 	._y1p,
 	._1yyq {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._1awm li._4gg:last-child {
@@ -7984,7 +7981,7 @@
 	}
 
 	._5hd7.__sw {
-		border-left-color: #1d1e22 !important;
+		border-left-color: #1d1e2d !important;
 	}
 
 	a._5xx9,
@@ -8162,7 +8159,7 @@
 	._3q73,
 	._5hto,
 	.uiWashLayoutGrayWash {
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	.fbSettingsList .fbSettingsListItemLabel {
@@ -8240,7 +8237,7 @@
 	._a7w,
 	._29jk,
 	._29jy:not(:last-child)::before {
-		border-bottom: 1px solid #1a1a1a !important;
+		border-bottom: 1px solid #101010 !important;
 	}
 
 	._4na3,
@@ -8263,7 +8260,7 @@
 	._17wd,
 	._13u3,
 	._5rw6 {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._d4t,
@@ -8413,7 +8410,7 @@
 	._1d_r,
 	._2pvy,
 	._3o5o {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._4jdr._1t0v,
@@ -8519,7 +8516,7 @@
 	}
 
 	._j-f::after {
-		background-image: linear-gradient(to right, #1a1a1a 0%, #111216 20%, #1a1a1a 40%, #1a1a1a 100%);
+		background-image: linear-gradient(to right, #101010 0%, #111216 20%, #101010 40%, #101010 100%);
 	}
 
 	.selected .sp_Ywok-PjUHCj.sx_99f724 {
@@ -8530,7 +8527,7 @@
 	/*Jobs*/
 	._5140,
 	._3rnu {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._5141 ._5144::after,
@@ -8570,7 +8567,7 @@
 	.pagesTimelineLayout ._3sod,
 	._6nw ._3sod,
 	._3sod {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border: 1px solid #111216 !important;
 	}
 
@@ -8655,7 +8652,7 @@
 
 	._3x-2 ._5r69._1hvl,
 	._15vt {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	/*hover*/
@@ -8670,7 +8667,7 @@
 	._5pr2 .fbFeedTicker .tickerStoryActive,
 	._5pr2 .fbFeedTicker .tickerStoryClickable:hover,
 	._3te {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	/*hover bords*/
@@ -8728,7 +8725,7 @@
 	,
 	._5vb_ .home_right_column .fbFeedTicker .tickerStoryActive,
 	._5vb_ .home_right_column .fbFeedTicker .tickerStoryClickable:hover {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._5vsj ._1g5v+._4arz,
@@ -8736,7 +8733,7 @@
 
 	/*evnt*/
 		{
-		background: #1a1a1a !important;
+		background: #101010 !important;
 	}
 
 	._1g5v+._4arz {
@@ -8754,7 +8751,7 @@
 
 	/*Com B*/
 		{
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	/*Masq*/
@@ -8792,7 +8789,7 @@
 	}
 
 	._5iwm ._58ak {
-		border-top: 0 solid #1d1e22 !important;
+		border-top: 0 solid #1d1e2d !important;
 		border-left-width: 0 !important;
 	}
 
@@ -8865,7 +8862,7 @@
 
 	/*MSG B*/
 	.fbChatSidebarMessage {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 		border-top: 1px solid #252829 !important;
 		box-shadow: none !important;
 	}
@@ -8885,7 +8882,7 @@
 
 	/*hover*/
 		{
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 		box-shadow: 1px 0 0 #252829 inset !important;
 	}
 
@@ -8969,7 +8966,7 @@
 	._4kf5,
 	._2-x5,
 	._6ff6._2pi2[style] li:hover {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._1nc7 ._3e7u ._1ekr,
@@ -8978,7 +8975,7 @@
 	._2l1j>div,
 	._2-0o,
 	._2ikx .openToggler ._2ja9 {
-		border-color: #1a1a1a !important;
+		border-color: #101010 !important;
 	}
 
 	._1ekr ._29ey,
@@ -9071,8 +9068,8 @@
 
 	/*file*/
 		{
-		border-bottom: 1px solid #1d1e22 !important;
-		border-top: 1px solid #1d1e22 !important;
+		border-bottom: 1px solid #1d1e2d !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	.fbNub._50mz .chatAttachmentShelf,
@@ -9100,13 +9097,13 @@
 	._eb3::before,
 	._1uwz,
 	._1og- {
-		background-color: #1d1e22 !important;
+		background-color: #1d1e2d !important;
 	}
 
 	._5r86,
 	._5r8e,
 	._1og- {
-		border-color: #1d1e22 !important;
+		border-color: #1d1e2d !important;
 	}
 
 	._5r8l .uiScrollableArea.contentAfter::after,
@@ -9135,8 +9132,8 @@
 
 	/*COMPACT*/
 	.fbNubButton {
-		background: #1a1a1a !important;
-		border: 1px solid #1d1e22 !important;
+		background: #101010 !important;
+		border: 1px solid #1d1e2d !important;
 		color: #a9acb7 !important;
 	}
 
@@ -9154,11 +9151,11 @@
 	._4mq3 .uiScrollableArea,
 	._4mq3 ._55ln,
 	._4g6x {
-		background-color: #1a1a1a !important;
+		background-color: #101010 !important;
 	}
 
 	._4mq3 .fbChatTypeahead {
-		border-top: 1px solid #1d1e22 !important;
+		border-top: 1px solid #1d1e2d !important;
 	}
 
 	._3ed4 ._gbr
