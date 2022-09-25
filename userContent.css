@@ -2212,10 +2212,7 @@ browser[type="content"] {
 
 @-moz-document url-prefix(about:) {
 	:root {
-		--in-content-border-hover: rgba(30,
-			144,
-			255,
-			0.5) !important;
+		--in-content-border-hover: rgba(30, 144, 255, 0.5) !important;
 		--in-content-border-active: #1e90ff !important;
 		--in-content-border-active-shadow: transparent !important;
 		color: #ffffff !important;
