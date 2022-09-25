@@ -116,7 +116,7 @@
 	input,
 	textarea,
 	[contenteditable] {
-		background: black !important;
+		background-color: black !important;
 		margin-top: 1px !important;
 	}
 
@@ -178,9 +178,11 @@
 	._1Sy9NCNbLA9uJZj-qgUrMG {
 		background: #1e90ff10 !important;
 	}
+
 	._24UNt1hkbrZxLzs5vkvuDh {
 		background: none !important;
 	}
+
 	._24UNt1hkbrZxLzs5vkvuDh:hover {
 		background: #1e90ff !important;
 	}
