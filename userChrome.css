@@ -270,7 +270,7 @@ menuitem {
 .menupopup-arrowscrollbox {
 	background-color: #1e1d2d !important;
 	border-radius: 6px !important;
-	margin-top: 5px !important;
+	margin-top: 10px !important;
 	padding-bottom: 7px !important;
 	padding-left: 4px !important;
 	padding-right: 4px !important;
@@ -1506,6 +1506,11 @@ hbox#sidebar-search-container textbox#search-box {
 	outline: none !important;
 }
 
+#sidebar-switcher-target {
+	border: 0px !important;
+	outline: none !important;
+}
+
 :is(menupopup, panel)[type="arrow"] {
 	--panel-background: #1e1d2d !important;
 	--panel-color: #ffffff !important;
@@ -1627,9 +1632,11 @@ treechildren::-moz-tree-image(query) {
 #forward-button {
 	margin-left: -6px !important;
 }
-#context-navigation > menuitem > .menu-iconic-left > .menu-iconic-icon{
-  background: none !important;
+
+#context-navigation>menuitem>.menu-iconic-left>.menu-iconic-icon {
+	background: none !important;
 }
+
 /* add shadow around tab icon */
 .tab-icon-image,
 #bookmarks-toolbar-placeholder>.toolbarbutton-icon,
@@ -3019,7 +3026,7 @@ treechildren {
 }
 
 .titlebar-buttonbox-container {
-	-moz-appearance: none !important;
+	appearance: none !important;
 	margin-left: 21px !important;
 	margin-right: 5px !important;
 	padding-top: -1px !important;
