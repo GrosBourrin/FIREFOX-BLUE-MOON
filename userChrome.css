@@ -174,53 +174,6 @@ tooltip .uc-tooltip-box {
 	padding-top: 4px !important;
 }
 
-/* ------------------------------ status panel ------------------------------ */
-#statuspanel {
-	bottom: -11px !important;
-	margin-left: 50% !important;
-	max-width: 45% !important;
-	transition: bottom 0.25s ease-in !important;
-}
-
-#statuspanel-inner {
-	-moz-box-align: start !important;
-	margin-left: -50% !important;
-}
-
-#statuspanel #statuspanel-label {
-	appearance: none !important;
-	background-color: #1e1d2d !important;
-	font-family: "Fira Sans" !important;
-	font-size: 14px !important;
-	color: #ffff00 !important;
-	border: 2px solid #1e1d2d !important;
-	border-radius: 0px !important;
-	text-align: center !important;
-	transition: color linear 0.5s !important;
-	margin-inline: 0 !important;
-	vertical-align: middle !important;
-}
-
-#statuspanel:not([inactive]) {
-	transition: bottom 0.25s ease-out !important;
-}
-
-#statuspanel[mirror] {
-	inset-inline-start: auto;
-	inset-inline-end: 0;
-}
-
-#statuspanel {
-	transition: bottom 0.25s ease-in !important;
-}
-
-#statuspanel:not([inactive]) {
-	transition: bottom 0.25s ease-out !important;
-}
-
-#statuspanel #statuspanel-label {
-	transition: color linear 0.5s !important;
-}
 
 /* -----------------------------Police Fira partout-------------------------- */
 * {
@@ -5606,3 +5559,216 @@ html|p#preview-unavailable {
 #firefox-view-button, #wrapper-firefox-view-button, #alltabs-button { display: none !important; }
 #firefox-view-button, #wrapper-firefox-view-button, #tabbrowser-tabs { border: 0px hidden transparent !important; padding-inline-start: 0 !important; margin-inline-start: 0 !important; }
 */
+/*
+#tabbrowser-tabpanels .browserContainer {
+	-moz-box-direction: reverse !important;
+}
+
+#tabbrowser-tabpanels .browserContainer>notificationbox {
+	-moz-box-ordinal-group: 2 !important
+}
+*/
+/* ------------------------------ status panel ------------------------------ */
+/* ------------------------------ status panel ------------------------------ 
+#statuspanel {
+	bottom: -6px !important;
+	margin-left: 35% !important;
+	max-width: 45% !important;
+	transition: bottom 0.25s ease-in !important;
+}
+
+#statuspanel-inner {
+	-moz-box-align: center !important;
+	margin-left: -35% !important;
+}
+
+#statuspanel #statuspanel-label {
+	appearance: none !important;
+	background-color: #1e1d2d !important;
+	font-family: "Fira Sans" !important;
+	font-size: 14px !important;
+	color: #ffff00 !important;
+	border: 2px solid #1e1d2d !important;
+	border-radius: 0px !important;
+	text-align: center !important;
+	transition: color linear 0.5s !important;
+	margin-inline: 0 !important;
+	vertical-align: middle !important;
+}
+
+#statuspanel:not([inactive]) {
+	transition: bottom 0.25s ease-out !important;
+}
+
+#statuspanel[mirror] {
+	inset-inline-start: auto !important;
+	inset-inline-end: auto !important;
+}
+
+#statuspanel {
+	transition: bottom 0.25s ease-in !important;
+}
+
+#statuspanel:not([inactive]) {
+	transition: bottom 0.25s ease-out !important;
+}
+
+#statuspanel #statuspanel-label {
+	transition: color linear 0.5s !important;
+}
+
+
+
+
+
+
+*/
+/*/*right: 190px !important;
+	left: auto !important;*/
+/*
+#statuspanel {
+	appearance: none !important;
+	align-items: center !important;
+	margin: 0 !important;
+	bottom: 0px !important;
+	
+	box-align: center !important;
+	z-index: 2 !important;
+	min-width: 140px !important;
+	max-width: 500px !important;
+}
+
+#statuspanel-inner {
+	box-align: center !important;
+	align-items: center !important;
+
+}
+
+#statuspanel-label {
+	background-color: #1e1d2d !important;
+	font-family: "Fira Sans" !important;
+	font-size: 14px !important;
+	color: #ffff00 !important;
+	border: 2px solid #1e1d2d !important;
+	border-radius: 0px !important;
+	text-align: center !important;
+	transition: color linear 0.5s !important;
+	margin-inline: 0 !important;
+	vertical-align: middle !important;
+	margin-top: 0px !important;
+}
+*/
+/*
+#statuspanel[type="status"]:after {
+	display: block;
+	content: "Loading...";
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 2147483647;
+	pointer-events: none;
+	background: #1e1d2d !important;
+	font-size: 14px;
+	padding: 6px 12px;
+	border-radius: 3px;
+
+	font-family: "Fira Sans" !important;
+	font-size: 14px !important;
+	color: #ffff00 !important;
+	border: 2px solid #1e1d2d !important;
+	border-radius: 0px !important;
+	text-align: center !important;
+	transition: color linear 0.5s !important;
+	margin-inline: 0 !important;
+
+
+}
+
+#statuspanel[type="status"] #statuspanel-label {
+	padding-inline-start: 24px !important;
+	background-position: 4px center !important;
+	padding-block: 5px !important;
+	background-repeat: no-repeat !important;
+	-moz-context-properties: fill, fill-opacity !important;
+	fill: yellow !important;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="context-fill" fill-opacity="context-fill-opacity" viewBox="0 0 16 16" style="animation:spinLoadingIcon .5s steps(12,end) infinite"><style>@keyframes spinLoadingIcon{to{transform:rotate(360deg)}}</style><path d="M7 3V1s0-1 1-1 1 1 1 1v2s0 1-1 1-1-1-1-1z"/><path d="M4.63 4.1l-1-1.73S3.13 1.5 4 1c.87-.5 1.37.37 1.37.37l1 1.73s.5.87-.37 1.37c-.87.57-1.37-.37-1.37-.37z" opacity=".93"/><path d="M3.1 6.37l-1.73-1S.5 4.87 1 4c.5-.87 1.37-.37 1.37-.37l1.73 1s.87.5.37 1.37c-.5.87-1.37.37-1.37.37z" opacity=".86"/><path d="M3 9H1S0 9 0 8s1-1 1-1h2s1 0 1 1-1 1-1 1z" opacity=".79"/><path d="M4.1 11.37l-1.73 1S1.5 12.87 1 12c-.5-.87.37-1.37.37-1.37l1.73-1s.87-.5 1.37.37c.5.87-.37 1.37-.37 1.37z" opacity=".72"/><path d="M3.63 13.56l1-1.73s.5-.87 1.37-.37c.87.5.37 1.37.37 1.37l-1 1.73s-.5.87-1.37.37c-.87-.5-.37-1.37-.37-1.37z" opacity=".65"/><path d="M7 15v-2s0-1 1-1 1 1 1 1v2s0 1-1 1-1-1-1-1z" opacity=".58"/><path d="M10.63 14.56l-1-1.73s-.5-.87.37-1.37c.87-.5 1.37.37 1.37.37l1 1.73s.5.87-.37 1.37c-.87.5-1.37-.37-1.37-.37z" opacity=".51"/><path d="M13.56 12.37l-1.73-1s-.87-.5-.37-1.37c.5-.87 1.37-.37 1.37-.37l1.73 1s.87.5.37 1.37c-.5.87-1.37.37-1.37.37z" opacity=".44"/><path d="M15 9h-2s-1 0-1-1 1-1 1-1h2s1 0 1 1-1 1-1 1z" opacity=".37"/><path d="M14.56 5.37l-1.73 1s-.87.5-1.37-.37c-.5-.87.37-1.37.37-1.37l1.73-1s.87-.5 1.37.37c.5.87-.37 1.37-.37 1.37z" opacity=".3"/><path d="M9.64 3.1l.98-1.66s.5-.874 1.37-.37c.87.5.37 1.37.37 1.37l-1 1.73s-.5.87-1.37.37c-.87-.5-.37-1.37-.37-1.37z" opacity=".23"/></svg>') !important;
+
+}
+
+#statuspanel-label,
+#statuspanel[type="overLink"] #statuspanel-label {
+	background: #1e1d2d !important;
+	font-size: 14px !important;
+	padding: 6px 12px !important;
+	border-radius: 3px !important;
+	font-family: "Fira Sans" !important;
+	font-size: 14px !important;
+	color: #ffff00 !important;
+	border: 2px solid #1e1d2d !important;
+	border-radius: 0px !important;
+	text-align: center !important;
+	transition: color linear 0.5s !important;
+	margin-inline: 0 !important;
+	padding-inline-start: 24px !important;
+	background-position: 4px center !important;
+	padding-block: 5px !important;
+	background-repeat: no-repeat;
+	-moz-context-properties: fill, fill-opacity !important;
+	fill: yellow !important;
+	background-image: url(chrome://browser/skin/link.svg) !important;
+}
+*/
+
+/* ------------------------------ status panel ------------------------------ */
+#statuspanel {
+	bottom: 2px !important;
+	left: 40% !important;
+	right: 40% !important;
+	margin-left: 8px;
+	margin-right: 0px;
+	border-radius: 1px !important;
+	text-align: center !important;
+	font-size: 14px !important;
+
+	/*transition: bottom 0.25s ease-in !important;*/
+}
+
+#statuspanel-inner {
+	-moz-box-align: start !important;
+	margin-left: -50% !important;
+}
+
+#statuspanel #statuspanel-label {
+	appearance: none !important;
+	background-color: #1e1d2d !important;
+	font-family: "Fira Sans" !important;
+	font-size: 14px !important;
+	color: #ffff00 !important;
+	border: 2px solid #1e1d2d !important;
+	border-radius: 0px !important;
+	text-align: center !important;
+	transition: color linear 0.5s !important;
+	margin-inline: 0 !important;
+	vertical-align: middle !important;
+}
+
+#statuspanel:not([inactive]) {
+	transition: bottom 0.25s ease-out !important;
+}
+
+#statuspanel[mirror] {
+	inset-inline-start: auto;
+	inset-inline-end: 0;
+}
+
+#statuspanel {
+	transition: bottom 0.25s ease-in !important;
+}
+
+#statuspanel:not([inactive]) {
+	transition: bottom 0.25s ease-out !important;
+}
+
+#statuspanel #statuspanel-label {
+	transition: color linear 0.5s !important;
+}
