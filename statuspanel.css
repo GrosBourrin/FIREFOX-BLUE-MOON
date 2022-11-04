@@ -1,8 +1,25 @@
 /* ------------------------------ status panel ------------------------------ */
 #statuspanel {
-	bottom: -16px !important;
-	margin-left: 50% !important;
-	max-width: 45% !important;
+	transition: bottom 0.25s ease-in !important;
+}
+
+#statuspanel:not([inactive]) {
+	transition: bottom 0.25s ease-out !important;
+}
+
+#statuspanel #statuspanel-label {
+	transition: color linear 0.5s !important;
+}
+
+
+#statuspanel {
+	bottom: 0px !important;
+	left: 40% !important;
+	right: 40% !important;
+	margin-left: 8px;
+	margin-right: 0px;
+	border-radius: 1px !important;
+	text-align: center !important;
 }
 
 #statuspanel-inner {
@@ -20,4 +37,3 @@
 	border-radius: 0px !important;
 	text-align: center !important;
 }
-/* -------------------------------------------------------------------------- */
