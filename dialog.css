@@ -1,0 +1,121 @@
+.dialog,
+.dialogBox,
+.dialog-content-box,
+.dialogFrame {
+	background: #1e1d2d !important;
+	color: #ffffff !important;
+	border: 0px solid transparent !important;
+	border-radius: 8px !important;
+	font-family: Fira Sans !important;
+	--in-content-page-background: #1e1d2d !important;
+	--in-content-page-color: #1e1d2d !important;
+	--in-content-text-color: inherit !important;
+	--in-content-deemphasized-text: #888888 !important;
+
+	--in-content-box-background: #1e1d2d !important;
+	--in-content-box-border-color: #1e1d2d !important;
+	--in-content-box-background-odd: #1e1d5d !important;
+	--in-content-box-info-background: #1e1d2d !important;
+	--in-content-border-color: #1e90ff !important;
+	--in-content-border-hover: #1e90ff80 !important;
+
+	--in-content-icon-color: inherit !important;
+	--in-content-table-background: #1e1d2d !important;
+
+	--in-content-link-color: #1e90ff !important;
+	--in-content-link-color-hover: #1e90ff80 !important;
+	--in-content-link-color-active: #1e90ff !important;
+	--in-content-link-color-visited: #1e90ff90 !important;
+
+	--in-content-button-background: #1e90ff !important;
+	--in-content-button-text-color: white !important;
+	--in-content-button-background-hover: #1e90ff50 !important;
+	--in-content-button-background-active: #1e90ff !important;
+	--in-content-button-text-color-hover: white !important;
+	--in-content-button-text-color-active: white !important;
+	/*--in-content-button-border-color: Transparent !important;
+	--in-content-button-border-color-hover: Transparent !important;
+	--in-content-button-border-color-active: Transparent !important;*/
+	--in-content-primary-button-text-color: white !important;
+	--in-content-primary-button-background: #1e90ff80 !important;
+	--in-content-primary-button-background-hover: #1e90ff !important;
+	--in-content-primary-button-background-active: #1e90ff !important;
+	--in-content-primary-button-text-color-hover: white !important;
+	--in-content-primary-button-border-color: Transparent !important;
+	--in-content-primary-button-border-hover: Transparent !important;
+
+	--in-content-danger-button-background: #1e90ff !important;
+	--in-content-danger-button-background-hover: #1e90ff80 !important;
+	--in-content-danger-button-background-active: #1e90ff !important;
+
+	--in-content-border-invalid: Transparent !important;
+	--in-content-error-text-color: yellow !important;
+	--dialog-warning-text-color: yellow !important;
+	--in-content-item-hover: #1e90ff !important;
+	--in-content-item-hover-text: white !important;
+	--in-content-item-selected: #1e90ff !important;
+	--in-content-item-selected-text: white !important;
+	--in-content-accent-color: #1e90ff !important;
+	--in-content-accent-color-active: #1e90ff !important;
+	--in-content-focus-outline-color: Transparent !important;
+	--in-content-focus-outline: 0px solid #1e90ff !important;
+	--in-content-focus-outline-width: 0px !important;
+	--in-content-focus-outline-offset: 0 !important;
+	--in-content-focus-outline-inset: 0 !important;
+	--in-content-table-border-color: Transparent !important;
+	--in-content-table-header-background: #1e1d2d !important;
+	--in-content-table-header-color: white !important;
+
+	/*
+	--checkbox-checked-bgcolor: SelectedItem !important;
+	--checkbox-checked-color: SelectedItemText !important;
+	--checkbox-checked-hover-bgcolor: color-mix(in srgb, SelectedItem 80%, SelectedItemText) !important;
+	--checkbox-checked-active-bgcolor: SelectedItem !important;
+	--checkbox-checked-border-color: SelectedItem !important;
+	--checkbox-border-color: Menu !important;
+	--checkbox-unchecked-bgcolor: Menu !important;
+	--checkbox-unchecked-hover-bgcolor: color-mix(in srgb, Menu 80%, MenuText) !important;
+	--checkbox-unchecked-active-bgcolor: color-mix(in srgb, Menu 90%, MenuText) !important;*/
+
+
+}
+
+
+.dialog-button-box {
+	background: #1e1d2d !important;
+	--in-content-button-background: #1e90ff !important;
+	--in-content-button-text-color: white !important;
+	--in-content-button-background-hover: #1e90ff50 !important;
+	--in-content-button-background-active: #1e90ff !important;
+	--in-content-button-text-color-hover: white !important;
+	--in-content-button-text-color-active: white !important;
+	/*--in-content-button-border-color: Transparent !important;
+		--in-content-button-border-color-hover: Transparent !important;
+		--in-content-button-border-color-active: Transparent !important;*/
+	--in-content-primary-button-text-color: white !important;
+	--in-content-primary-button-background: #1e90ff80 !important;
+	--in-content-primary-button-background-hover: #1e90ff !important;
+	--in-content-primary-button-background-active: #1e90ff !important;
+	--in-content-primary-button-text-color-hover: white !important;
+	--in-content-primary-button-border-color: Transparent !important;
+	--in-content-primary-button-border-hover: Transparent !important;
+
+	--in-content-danger-button-background: #1e90ff !important;
+	--in-content-danger-button-background-hover: #1e90ff80 !important;
+	--in-content-danger-button-background-active: #1e90ff !important;
+}
+
+.dialogFrame,
+.dialogBox,
+.dialog,
+.dialog-content-box,
+#PermissionsDialog,
+#SiteDataSettingsDialog {
+	background-color: #1e1d2d !important;
+	background: #1e1d2d !important;
+	color: #ffffff !important;
+	border: 0px solid #1e90ff !important;
+	border-radius: 0px !important;
+	font-family: Fira Sans !important;
+	outline: none !important;
+}
