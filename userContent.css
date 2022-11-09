@@ -3,6 +3,8 @@
 @import url("reddit0.css");
 @import url("aboutconfig.css");
 @import url("facebook.css");
+@import url("youtube.css");
+@import url("dialog.css");
 
 :root {
 	--in-content-border-hover: #1e90ff80 !important;
@@ -220,18 +222,22 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 	}
 
 	.dialogBox,
+	.dialog,
+	.dialog-content-box,
 	#PermissionsDialog,
-	box-inherit.dialog-content-box {
+	#SiteDataSettingsDialog {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
-		border: 1px solid transparent !important;
+		border: 0px solid transparent !important;
 		border-radius: 8px !important;
 		font-family: Fira Sans !important;
 	}
 
+
+
 	button {
-		appearance: none !important;
-		color: inherit !important;
+		/*appearance: none !important;*/
+		color: white !important;
 		background-color: #1e90ff !important;
 		border: 0px !important;
 	}
@@ -546,48 +552,48 @@ input[type="checkbox"]:checked {
 
 /* about:support*/
 @-moz-document url(about:support),
-url(about:profiles) {
-	body.wide-container {
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-	}
+url(about:profiles){
+body.wide-container {
+	background-color: #1e1d2d !important;
+	color: #ffffff !important;
+}
 
-	th.column,
-	button {
-		background: #1e90ff !important;
-		color: white !important;
-	}
+th.column,
+button {
+	background: #1e90ff !important;
+	color: white !important;
+}
 
-	button:hover {
-		background: #1e90ff80 !important;
-	}
+button:hover {
+	background: #1e90ff80 !important;
+}
 
-	a {
-		color: #1e90ff !important;
-	}
+a {
+	color: #1e90ff !important;
+}
 
-	a:hover {
-		color: #1e90ff90 !important;
-	}
+a:hover {
+	color: #1e90ff90 !important;
+}
 
-	th {
-		background-color: dodgerblue !important;
-	}
+th {
+	background-color: dodgerblue !important;
+}
 
-	.action-box {
-		background-color: #1e1d2d !important;
-		border: 1px solid #1e90ff !important;
-	}
+.action-box {
+	background-color: #1e1d2d !important;
+	border: 1px solid #1e90ff !important;
+}
 
-	table {
-		background-color: #1e1d2d !important;
+table {
+	background-color: #1e1d2d !important;
 
-		border: 1px solid #1e90ff !important;
-	}
+	border: 1px solid #1e90ff !important;
+}
 
-	td {
-		border: 1px solid #1e90ff40 !important;
-	}
+td {
+	border: 1px solid #1e90ff40 !important;
+}
 }
 
 @-moz-document url("chrome://global/content/config.xhtml") {
@@ -1075,7 +1081,7 @@ url(about:profiles) {
 
 	.ShowMoreCard-contents::after {
 		background: linear-gradient(rgba(255, 255, 255, 0),
-			#1b1924) !important;
+				#1b1924) !important;
 	}
 
 	.Addon-details .AddonDescription-contents a:link,
@@ -1349,21 +1355,21 @@ url(about:profiles) {
 		--in-content-category-text-selected: var(--accent-1) !important;
 		--in-content-category-text-selected-active: #1e90ff;
 		--in-content-category-background-hover: rgba(12,
-			12,
-			13,
-			0.1);
+				12,
+				13,
+				0.1);
 		--in-content-category-background-active: rgba(12,
-			12,
-			13,
-			0.15);
+				12,
+				13,
+				0.15);
 		--in-content-category-background-selected-hover: rgba(12,
-			12,
-			13,
-			0.15);
+				12,
+				13,
+				0.15);
 		--in-content-category-background-selected-active: rgba(12,
-			12,
-			13,
-			0.2);
+				12,
+				13,
+				0.2);
 		--in-content-tab-color: #424f5a;
 		--in-content-link-color: #ffffff !important;
 		--in-content-link-color-hover: #1e90ff !important;
@@ -1391,9 +1397,9 @@ url(about:profiles) {
 		--cm-linenumber: #58575c !important;
 		--cm-cursor: #fff !important;
 		--cm-active-line-background: rgba(185,
-			215,
-			253,
-			0.15) !important;
+				215,
+				253,
+				0.15) !important;
 		--cm-matching-bracket: rgba(255, 255, 255, 0.25) !important;
 		--cm-search-background: rgba(24, 29, 32, 1) !important;
 		--cm-red: #de7474 !important;
@@ -1638,7 +1644,7 @@ url(about:profiles) {
 
 	.ShowMoreCard-contents::after {
 		background: linear-gradient(rgba(255, 255, 255, 0),
-			#1b1924) !important;
+				#1b1924) !important;
 	}
 
 	.SecondaryHero-module {
@@ -2234,7 +2240,7 @@ browser[type="content"] {
 }
 
 /* about:support*/
-@-moz-document url(about:support) {
+@-moz-document url("about:support") {
 	body.wide-container {
 		background-color: #1e1d2d !important;
 	}
@@ -2406,31 +2412,32 @@ html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#t
 	content: "(Actually, it's the server)" !important;
 }
 */
+/*
 body::before {
 	display: none !important;
 }
+*/
+@-moz-document url-prefix("about:"),
+url-prefix("chrome: //browser") {
 
-@-moz-document url-prefix(about:),
-url-prefix(chrome: //browser)	{
+	browser[type="content"],
+	tabpanels {
+		/*background: #1e1d2d !important;*/
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+	}
 
-browser[type="content"],
-tabpanels {
-	/*background: #1e1d2d !important;*/
-	background-color: #1e1d2d !important;
-	color: #ffffff !important;
-}
+	.panel-list {
+		box-shadow: none !important;
+	}
 
-.panel-list {
-	box-shadow: none !important;
-}
+	menu,
+	menulist {
 
-menu,
-menulist {
-
-	border: 0px !important;
-	outline: none !important;
-	box-shadow: none !important;
-}
+		border: 0px !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
 }
 
 @-moz-document url("about:memory") {
@@ -2475,10 +2482,10 @@ menulist {
 		color: #ffffff !important;
 	}
 
-	#search-handoff-button:active > .fake-textbox,
-	#search-handoff-button:hover > .fake-textbox,
-	#search-handoff-button:focus > .fake-textbox,
-	#search-handoff-button:focus-within > .fake-textbox {
+	#search-handoff-button:active>.fake-textbox,
+	#search-handoff-button:hover>.fake-textbox,
+	#search-handoff-button:focus>.fake-textbox,
+	#search-handoff-button:focus-within>.fake-textbox {
 		color: #ffffff !important;
 		opacity: 0.8 !important;
 	}
@@ -2513,7 +2520,8 @@ url("about:newtab") {
 		font-weight: 300 !important;
 	}
 
-	html, body {
+	html,
+	body {
 
 
 		background: #1e1d2d !important;
@@ -2528,7 +2536,8 @@ url("about:newtab") {
 		font-weight: 300 !important;
 	}
 
-	html, body {
+	html,
+	body {
 
 
 		background: #1e1d2d !important;
@@ -2537,7 +2546,7 @@ url("about:newtab") {
 }
 
 /* free download manager */
-@-moz-document url-prefix("moz-extension://e82498ba-03f1-4c10-be0c-9441111ccc84/") {
+@-moz-document url-prefix("moz-extension://bbc43ecb-50d5-4a6a-9fe4-e7565ff7c3ea/") {
 
 	html,
 	head,
@@ -2545,11 +2554,6 @@ url("about:newtab") {
 		background-color: #1e1d2d !important;
 		background: #1e1d2d !important;
 		color: #ffffff !important;
-	}
-
-	panel-arrowcontainer {
-		background-color: yellow !important;
-		background: red !important;
 	}
 
 	body {
@@ -2648,303 +2652,8 @@ url("about:newtab") {
 	}
 }
 
-@-moz-document url-prefix("https://www.youtube.com") {
-	* {
-		font-family: Fira Sans !important;
-	}
 
-	/* imo, Roboto is too narrow, this spaces it more nicely */
-	html,
-	body,
-	ytd-page-manager > *.ytd-page-manager {
-		letter-spacing: 0.2px !important;
-		background-color: #1e1d2d !important;
-	}
-
-	/* VIDEO TITLE */
-	.title.ytd-video-primary-info-renderer {
-		color: #ffffff !important;
-		font-size: 22px !important;
-	}
-
-	#video-title.yt-simple-endpoint.ytd-grid-video-renderer {
-		color: #ffffff;
-	}
-
-	.title.ytd-guide-entry-renderer {
-		color: #ffffff !important;
-	}
-
-	/* VIDEO DESC */
-	.content.ytd-video-secondary-info-renderer {
-		color: #cbd1dd !important;
-	}
-
-	.count-text.ytd-comments-header-renderer {
-		color: #cbd1dd !important;
-	}
-
-	#owner-name.ytd-video-owner-renderer {
-		font-size: 1.6rem !important;
-		margin-bottom: 4px !important;
-	}
-
-	/* VIDEO MENU BTN TEXT */
-	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer {
-		font-size: 15px !important;
-	}
-
-	/* COMMENT TEXT, RELATED VIDS TITLE TEXT */
-	#content-text.ytd-comment-renderer,
-	#video-title {
-		color: #cbd1dd !important;
-		font-size: 14px !important;
-	}
-
-	/* COMMENT USERNAME, MORE/LESS BTN */
-	#author-text.yt-simple-endpoint.ytd-comment-renderer,
-	.more-button.ytd-comment-renderer,
-	.less-button.ytd-comment-renderer {
-		color: rgba(140, 202, 255, 0.9);
-		font-size: 13px !important;
-	}
-
-	/* COMMENT USERNAME (OP) */
-	ytd-author-comment-badge-renderer.creator {
-		background-color: rgb(30, 144, 255) !important;
-	}
-
-	ytd-author-comment-badge-renderer.creator yt-formatted-string {
-		color: #ffffff !important;
-	}
-
-	/* NAVBAR, CHANNEL HEADER, NOTIFICATIONS BOX */
-	#chips.ytd-feed-filter-chip-bar-renderer,
-	.ytd-guide-section-renderer #container.ytd-masthead,
-	#masthead,
-	#channel-header.ytd-c4-tabbed-header-renderer,
-	#tabs-inner-container.ytd-c4-tabbed-header-renderer,
-	ytd-multi-page-menu-renderer {
-		background: #1e1d2d !important;
-		/*box-shadow: 0 6px 50px rgba(0, 0, 0, 0.3) !important;*/
-	}
-
-	/* POPOVERS */
-	paper-menu {
-		background-color: rgba(21, 25, 36, 0.94);
-		border-radius: 4px !important;
-	}
-
-	.dropdown-content.paper-menu-button {
-		background-color: transparent !important;
-	}
-
-	/* THUMBNAILS */
-	ytd-thumbnail.ytd-compact-video-renderer,
-	ytd-thumbnail.ytd-video-renderer {
-		box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.4) !important;
-	}
-
-	ytd-thumbnail.ytd-compact-video-renderer img,
-	ytd-thumbnail.ytd-video-renderer img {
-		border-radius: 2px !important;
-	}
-
-	/* SEARCH */
-	ytd-searchbox[mode="legacy"] #container.ytd-searchbox {
-		background-color: rgba(255, 255, 255, 0.1) !important;
-		border: 1px solid transparent !important;
-		box-shadow: none !important;
-		border-radius: 2px !important;
-	}
-
-	#search-icon-legacy.ytd-searchbox {
-		background-color: transparent;
-		border: none;
-		border-radius: 3px;
-		width: 50px;
-	}
-
-	ytd-searchbox[mode="legacy"] #search-icon-legacy.ytd-searchbox:hover > yt-icon {
-		color: rgba(255, 255, 255, 0.8) !important;
-	}
-
-	ytd-searchbox[mode="legacy"] #search-icon-legacy.ytd-searchbox:hover {
-		background-color: transparent;
-	}
-
-	/* SIDEBBAR */
-	ytd-guide-renderer.ytd-app,
-	app-drawer.ytd-app:not([persistent]) #header.ytd-app {
-		background-color: #1e1d2d !important;
-	}
-
-	#endpoint.yt-simple-endpoint.ytd-guide-entry-renderer:hover {
-		background-color: #1e90ff80 !important;
-	}
-
-	ytd-guide-entry-renderer[activated],
-	ytd-guide-entry-renderer[selected],
-	ytd-guide-entry-renderer[active] {
-		background-color: #1e90ff !important;
-	}
-
-	/* MINOR TEXT (off- #ffffff) */
-	#published-time-text.ytd-comment-renderer [is="yt-endpoint"],
-	ytd-button-renderer #button.ytd-button-renderer,
-	yt-icon,
-	#metadata-line.ytd-grid-video-renderer,
-	.more-button.ytd-comment-replies-renderer,
-	.less-button.ytd-comment-replies-renderer,
-	.more-button.ytd-video-secondary-info-renderer,
-	.less-button.ytd-video-secondary-info-renderer,
-	.date.ytd-video-secondary-info-renderer,
-	#metadata.ytd-video-meta-block,
-	.view-count,
-	#title.ytd-metadata-row-renderer,
-	#byline.ytd-video-meta-block,
-	#metadata-line.ytd-video-meta-block,
-	#label.ytd-pinned-comment-badge-renderer,
-	paper-tab:not(.iron-selected) > .tab-content.paper-tab,
-	#footer.ytd-guide-renderer #guide-links-primary a,
-	#footer.ytd-guide-renderer #guide-links-secondary a,
-	#autoplay.ytd-compact-autoplay-renderer,
-	#title-annotation.ytd-shelf-renderer,
-	paper-button.yt-next-continuation,
-	#description-text.ytd-video-renderer,
-	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer,
-	#subtitle.ytd-shelf-renderer,
-	#published-time-text.ytd-comment-renderer {
-		color: rgba(180, 190, 200, 0.8) !important;
-	}
-
-	/* LIKE BTN */
-	ytd-toggle-button-renderer.force-icon-button a.ytd-toggle-button-renderer .style-default-active {
-		color: #ffffff !important;
-	}
-
-	#top-level-buttons ytd-toggle-button-renderer.style-default-active:first-child yt-icon,
-	#like-button .style-default-active > yt-icon {
-		color: #1e90ff !important;
-	}
-
-	#top-level-buttons ytd-toggle-button-renderer.style-default-active:nth-child(2) yt-icon,
-	#dislike-button .style-default-active > yt-icon {
-		color: hsl(3, 100%, 66%) !important;
-	}
-
-	/* COMMENT BTN */
-	ytd-button-renderer #button.ytd-button-renderer.style-primary {
-		color: #ffffff !important;
-	}
-
-	paper-button {
-		background-color: transparent !important;
-	}
-
-	/* VIEWS */
-	.view-count {
-		font-size: 18px !important;
-	}
-
-	/* RED ICON */
-	ytd-guide-entry-renderer[active] .guide-icon.ytd-guide-entry-renderer {
-		color: rgba(255, 78, 78, 0.83) !important;
-	}
-
-	/* RED 'NEW' ICON */
-	.badge-style-type-simple.ytd-badge-supported-renderer {
-		background-color: rgba(96, 100, 118, 0.83);
-		color: rgba(255, 255, 255, 0.78);
-	}
-
-	/* LINKS */
-	[is="yt-endpoint"],
-	.yt-simple-endpoint,
-	paper-tab:not(.iron-selected):hover > .tab-content {
-		color: rgba(140, 202, 255, 0.9);
-	}
-
-	[is="yt-endpoint"]:hover,
-	.yt-simple-endpoint:hover {
-		color: rgba(180, 230, 255, 1);
-	}
-
-	/* SUBSCRIBE BTN */
-	paper-button.ytd-subscribe-button-renderer {
-		background: linear-gradient(90deg,
-			#e11958,
-			hsl(3, 81.8%, 49.6%));
-		transition: all 0.2s ease;
-	}
-
-	paper-button.ytd-subscribe-button-renderer:hover {
-		filter: brightness(1.25);
-	}
-
-	paper-button[subscribed].ytd-subscribe-button-renderer {
-		background: hsl(0, 0%, 93.3%);
-	}
-
-	/* VOTE COUNT (on comments) */
-	#vote-count.ytd-comment-action-buttons-renderer {
-		color: #5fd9b1 !important;
-	}
-
-	/* LIKE BAR */
-	#sentiment.ytd-video-primary-info-renderer {
-		width: 255px;
-		height: 3px;
-		margin-top: 6px;
-	}
-
-	#like-bar.ytd-sentiment-bar-renderer {
-		height: 3px;
-	}
-
-	ytd-app {
-		--app-drawer-content-container-background-color: #1e1d2d !important;
-		background: #1e1d2d !important;
-	}
-
-	ytd-settings-sidebar-renderer {
-		background-color: #1e1d2d !important;
-	}
-
-	yt-icon,
-	.yt-icon-container.yt-icon {
-		fill: white !important;
-	}
-}
-
-@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*") {
-	* {
-		font-family: "Fira Sans" !important;
-	}
-
-	a:link {
-		color: #1e90ff !important;
-	}
-
-	a:visited {
-		color: #1e90ff50 !important;
-	}
-
-	a:hover {
-		color: #1e90ff80 !important;
-	}
-
-	a:active {
-		color: #1e90ff !important;
-	}
-}
-
-@-moz-document domain("mail.google.com") {
-	* {
-		font-family: "Fira Sans" !important;
-	}
-}
-
+/*
 .pip-wrapper {
 	color: white !important;
 	background-color: transparent !important;
@@ -2960,6 +2669,7 @@ url("about:newtab") {
 	box-shadow: none !important;
 	border-radius: 0px !important;
 }
+*/
 
 @-moz-document url-prefix("about:httpsonlyerror") {
 	body {
@@ -2987,7 +2697,7 @@ url("about:newtab") {
 	color: white !important;
 }
 
-@-moz-document url(about:newtab) {
+@-moz-document url("about:newtab") {
 
 	body,
 	#newtab-customize-overlay {
@@ -2995,8 +2705,6 @@ url("about:newtab") {
 		color: #ffffff !important;
 	}
 }
-
-
 
 @-moz-document domain("mail.google.com") {
 
@@ -3088,7 +2796,7 @@ textbox {
 	outline: none !important;
 }
 
-.checkbox:not([disabled]):hover > .checkbox-check {
+.checkbox:not([disabled]):hover>.checkbox-check {
 	border-color: #1e90ff !important;
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
@@ -3096,14 +2804,14 @@ textbox {
 	fill: #ffffff !important;
 }
 
-.checkbox[checked] > .checkbox-check {
+.checkbox[checked]>.checkbox-check {
 	list-style-image: url("chrome://global/skin/icons/check.svg");
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
 	background-color: #1e90ff !important;
 }
 
-.checkbox > .checkbox-check {
+.checkbox>.checkbox-check {
 	background-color: #1e90ff !important;
 	color: #ffffff !important;
 	border-color: #1e90ff !important;
@@ -3122,18 +2830,6 @@ textbox {
 	--download-progress-flare-color: rgba(255, 255, 255, 0.75);
 }
 */
-
-@-moz-document domain(google.fr) {
-	:root {
-		font-family: Fira Sans !important;
-	}
-
-	/*
-	html, body {
-		background-color: inherit !important;
-		background: inherit !important;
-	}*/
-}
 
 /*
 @-moz-document url("about:home"),
@@ -3228,7 +2924,7 @@ url("about:newtab") {
 	.input-row input[type="tel"],
 	.input-row input[type="text"],
 	.input-row input::placeholder,
-	.firefox-family-services > ul > .firefox-service,
+	.firefox-family-services>ul>.firefox-service,
 	.faint,
 	.faint a,
 	.text-grey-400 {
@@ -3407,12 +3103,12 @@ p::selection {
 	color: #ffffff !important;
 }
 
-#netErrorButtonContainer > .try-again {
+#netErrorButtonContainer>.try-again {
 	background: #1e90ff !important;
 	color: #ffffff !important;
 }
 
-#netErrorButtonContainer > .try-again:hover {
+#netErrorButtonContainer>.try-again:hover {
 	background: #1e90ff80 !important;
 	color: #ffffff !important;
 }
@@ -3465,7 +3161,7 @@ p::selection {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}*/
-	checkbox:not([disabled]):hover > .checkbox-check {
+	checkbox:not([disabled]):hover>.checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -3473,12 +3169,12 @@ p::selection {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked] > .checkbox-check {
+	checkbox[checked]>.checkbox-check {
 		color: #ffffff !important;
 		background: #1e90ff !important;
 	}
 
-	checkbox > .checkbox-check {
+	checkbox>.checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
@@ -3549,17 +3245,17 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	/* avoid double inline margins when #description is nested: */
-	#description-box > #description {
+	#description-box>#description {
 		margin-inline: 0;
 	}
 
 	/* Parent selector to win on specificity against common.css */
-	#rememberContainer > .toggle-container-with-text {
+	#rememberContainer>.toggle-container-with-text {
 		align-items: baseline;
 		color: var(--in-content-deemphasized-text);
 	}
 
-	.toggle-container-with-text > html|input[type="checkbox"] {
+	.toggle-container-with-text>html|input[type="checkbox"] {
 		margin-inline-end: 8px;
 		/* Ensure the checkbox is properly aligned with the text: */
 		translate: 0 calc(1px + max(60% - 0.6em, 0px));
@@ -3599,7 +3295,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	checkbox:not([disabled]):hover > .checkbox-check {
+	checkbox:not([disabled]):hover>.checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -3607,14 +3303,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked] > .checkbox-check {
+	checkbox[checked]>.checkbox-check {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill !important;
 		fill: #ffffff !important;
 		background-color: #1e90ff !important;
 	}
 
-	checkbox > .checkbox-check {
+	checkbox>.checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
@@ -3773,20 +3469,20 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background: #1e1d2d !important;
 	}
 
-	#firewall > div {
+	#firewall>div {
 		background-color: #333 !important;
 	}
 
-	#firewall > div:hover {
+	#firewall>div:hover {
 		background-color: #444 !important;
 	}
 
-	#firewall > div > span {
+	#firewall>div>span {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
-	#firewall > div > span:first-of-type ~ span {
+	#firewall>div>span:first-of-type~span {
 		border-left: 1px solid #111 !important;
 	}
 
@@ -3794,7 +3490,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-color: #1e1d2d !important;
 	}
 
-	#extraTools > span:hover {
+	#extraTools>span:hover {
 		fill: #1e90ff !important;
 	}
 
@@ -3845,8 +3541,8 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	#loggerSettingsDialog,
 	#modalOverlayContainer,
 	#netFilteringDialog,
-	#netFilteringDialog > .panes > .details > div,
-	#netFilteringDialog > div.panes > .dynamic .row {
+	#netFilteringDialog>.panes>.details>div,
+	#netFilteringDialog>div.panes>.dynamic .row {
 		background-color: #1e1d2d !important;
 		border-color: grey !important;
 	}
@@ -3870,7 +3566,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#cloudWidget > span {
+	#cloudWidget>span {
 		background: #1e1d2d !important;
 		color: #ffffff !important;
 	}
@@ -3880,19 +3576,19 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#fa-icon > svg,
-	#fa-icon > .fa-icon_cog,
-	.fa-icon > .fa-icon_clock-o,
-	.fa-icon > .fa-icon_floppy-o,
-	.fa-icon > .fa-icon_info-circle,
-	.fa-icon > .fa-icon_pause-circle-o,
-	.fa-icon > .fa-icon_play-circle-o,
-	.fa-icon > .fa-icon_power-off,
-	.fa-icon > .fa-icon_question-circle,
-	.fa-icon > .fa-icon_refresh,
-	.fa-icon > .fa-icon_save,
-	.fa-icon > .fa-icon_sliders,
-	.fa-icon > .fa-icon_undo {
+	#fa-icon>svg,
+	#fa-icon>.fa-icon_cog,
+	.fa-icon>.fa-icon_clock-o,
+	.fa-icon>.fa-icon_floppy-o,
+	.fa-icon>.fa-icon_info-circle,
+	.fa-icon>.fa-icon_pause-circle-o,
+	.fa-icon>.fa-icon_play-circle-o,
+	.fa-icon>.fa-icon_power-off,
+	.fa-icon>.fa-icon_question-circle,
+	.fa-icon>.fa-icon_refresh,
+	.fa-icon>.fa-icon_save,
+	.fa-icon>.fa-icon_sliders,
+	.fa-icon>.fa-icon_undo {
 		background: transparent !important;
 	}
 
@@ -4010,12 +3706,12 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		--checkbox-ink: #ffffff !important;
 	}
 
-	.checkbox > input[type="checkbox"] + svg {
+	.checkbox>input[type="checkbox"]+svg {
 		background-color: transparent !important;
 		border: 1px solid white !important;
 	}
 
-	.checkbox > input[type="checkbox"]:checked + svg {
+	.checkbox>input[type="checkbox"]:checked+svg {
 		background-color: #1e90ff !important;
 		border-color: white !important;
 
@@ -4023,7 +3719,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	.checkbox[disabled],
-	.checkbox[disabled] ~ span {
+	.checkbox[disabled]~span {
 		filter: var(--checkbox-disabled-filter) !important;
 	}
 }
@@ -4048,33 +3744,33 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#sieve_container > .disabled > span {
+	#sieve_container>.disabled>span {
 		text-shadow: 0 0 5px #000000 !important;
 		color: #ff5050 !important;
 	}
 
-	#sieve_container > .selected > span {
+	#sieve_container>.selected>span {
 		background-image: linear-gradient(to bottom,
-			#1e90ff,
-			#1e90ff80 90%) !important;
+				#1e90ff,
+				#1e90ff80 90%) !important;
 	}
 
-	#sieve_container > div:not(.opened) > span:hover {
+	#sieve_container>div:not(.opened)>span:hover {
 		background-image: linear-gradient(to bottom,
-			#1e90ff80,
-			#1e90ff 90%) !important;
+				#1e90ff80,
+				#1e90ff 90%) !important;
 	}
 
-	#sieve_container > div.opened {
+	#sieve_container>div.opened {
 		background-image: linear-gradient(to bottom,
-			#1e90ff80,
-			#1e90ff 90%) !important;
+				#1e90ff80,
+				#1e90ff 90%) !important;
 	}
 
-	#sieve_container > .opened > span {
+	#sieve_container>.opened>span {
 		background-image: linear-gradient(to bottom,
-			#1e90ff80,
-			#1e90ff 90%) !important;
+				#1e90ff80,
+				#1e90ff 90%) !important;
 	}
 
 	*|*:any-link:not(svg) {
@@ -4095,11 +3791,11 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	code,
 	.checkbox {
 		background-image: -webkit-linear-gradient(top,
-			#000000,
-			#000000) !important;
+				#000000,
+				#000000) !important;
 		background-image: linear-gradient(to bottom,
-			#000000,
-			#000000) !important;
+				#000000,
+				#000000) !important;
 		background-color: black !important;
 		color: white !important;
 		fill: white !important;
@@ -4223,12 +3919,12 @@ tooltip {
 		border: 1px solid #1e90ff !important;
 	}
 
-	message-bar > button {
+	message-bar>button {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}
 
-	message-bar > button:hover {
+	message-bar>button:hover {
 		background-color: #1e90ff80 !important;
 		color: #ffffff !important;
 	}
@@ -4285,7 +3981,7 @@ tooltip {
 			padding-right: 28px !important;
 		}
 
-		addon-list > section,
+		addon-list>section,
 		recommended-addon-list {
 			padding: 1em !important;
 			display: grid !important;
@@ -4304,7 +4000,7 @@ tooltip {
 			max-width: calc(100% + 32px) !important;
 		}
 
-		section > h2 {
+		section>h2 {
 			grid-area: hd !important;
 		}
 
@@ -4415,7 +4111,7 @@ tooltip {
 		color: #1e90ff !important;
 	}
 
-	#categories > .category:hover {
+	#categories>.category:hover {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
@@ -4532,11 +4228,11 @@ tooltip {
 		background-color: #1e90ff50 !important;
 	}
 
-	radio:not([disabled="true"]):hover > .radio-check {
+	radio:not([disabled="true"]):hover>.radio-check {
 		border-color: #1e90ff !important;
 	}
 
-	radio:hover > .radio-check {
+	radio:hover>.radio-check {
 		fill: #1e90ff80 !important;
 	}
 
@@ -4557,7 +4253,7 @@ tooltip {
 		outline-offset: -1px !important;
 	}
 
-	.tab-group[last-input-type="mouse"] > button.tab-button:-moz-focusring {
+	.tab-group[last-input-type="mouse"]>button.tab-button:-moz-focusring {
 		outline: none !important;
 		box-shadow: none !important;
 	}
@@ -4594,8 +4290,8 @@ tooltip {
 		padding: 4px 16px !important;
 	}
 
-	plugin-options > panel-list,
-	addon-options > panel-list {
+	plugin-options>panel-list,
+	addon-options>panel-list {
 		box-shadow: none !important;
 		background-color: #1e1d2d !important;
 		outline: none !important;
