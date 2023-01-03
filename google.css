@@ -1,5 +1,4 @@
-@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*")
-{
+@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*") {
 	* {
 		font-family: "Fira Sans" !important;
 	}
@@ -19,6 +18,12 @@
 	a:active {
 		color: #1e90ff !important;
 	}
+
+	.material-icons {
+		font-family: Material Icons !important;
+	}
+
+
 }
 
 @-moz-document domain("mail.google.com") {
@@ -40,18 +45,41 @@
 	:root {
 		font-family: Fira Sans !important;
 	}
+}
 
-	/*
-	html, body {
-		background-color: inherit !important;
-		background: inherit !important;
-	}*/
+@-moz-document domain(universfreebox.com) {
+
+	.g-container,
+	.platform-content,
+	.g-block,
+	#g-page-surround,
+	#g-mainbar,
+	#g-sidebar {
+		background: #1f1f1f !important;
+	}
+
+	a,
+	p.spip>a,
+	a.module_link_uf.mb-3 {
+		color: dodgerblue !important;
+	}
+
+	a:hover,
+	p.spip>a:hover,
+	a.module_link_uf.mb-3:hover {
+		color: #1e90ff80 !important;
+	}
 }
 
 @-moz-document domain(news.google.com) {
+
 	html,
 	body {
 		background: #1e1d2d !important;
+	}
+
+	* {
+		font-family: Fira Sans !important;
 	}
 
 	/*
@@ -72,7 +100,18 @@
 	}*/
 
 	.pjBVq,
-	div,
+	.Ly25Ed,
+	.sQBzPb,
+	.Z2kkN,
+	.isdDAc,
+	.i0Zvib,
+	.ryo59b,
+	.ndIcDe,
+	.nTN4Wc,
+	.LpIL4e,
+	.QVEiob,
+	.TELE6d,
+	.XtTJ,
 	article,
 	footer,
 	.FKF6mc,
@@ -109,12 +148,14 @@
 		box-shadow: none !important;
 	}
 
-	.gb_Re {
+	.gb_Re,
+	.gb_Qd {
 		background: #1e1d2d !important;
 		border: none !important;
 	}
 
-	.gb_Te {
+	.gb_Te,
+	.gb_Fc .gb_Xe {
 		background-color: #000000 !important;
 	}
 
@@ -283,6 +324,7 @@
 	}
 
 	/*.IFHyqb:hover *,*/
+	.ddlw3d,
 	.m5k28:hover *,
 	.B6pJDd:hover * {
 		color: dodgerblue !important;
@@ -301,7 +343,7 @@
 
 	hr *,
 	.n0uym {
-		background: dodgerblue !important;
+		background: #1e90ff !important;
 	}
 
 	.dSBEqc {
@@ -315,9 +357,96 @@
 		border: none !important;
 	}
 
-	.brSCsc[selected="true"] * {
-		fill: #1e90ff !important;
+	.dm7YTc .EctEBd.KKjvXb .brSCsc::after {
+		background: #1e90ff !important;
 	}
+
+	.dm7YTc .EctEBd.KKjvXb .brSCsc {
+		color: #1e90ff !important;
+	}
+
+	.IYXtd.EA71Tc:not(.NLP41e),
+	.IYXtd.mImKeb {
+		border-color: #1e90ff !important;
+	}
+
+	.HKt8rc {
+		background: #1e1d2d !important;
+	}
+
+	.IYXtd,
+	.IYXtd.mImKeb {
+
+		border: 1px solid #1e90ff !important;
+		background: #1e1d2d !important;
+	}
+
+	.RF3lAd {
+		background: #1e1d2d !important;
+		border: 1px solid #1e90ff !important;
+		box-shadow: 0px 2px 5px black !important;
+	}
+
+	.RF3lAd:hover {
+		background: #1e90ffa0 !important;
+
+	}
+
+	.boy4he {
+		/*background: transparent !important;*/
+		background-color: transparent !important;
+	}
+
+	.KDoq1,
+	.KfaKvb {
+		border-color: #1e90ff !important;
+	}
+
+	.uzxPR {
+		border-bottom-color: #1e90ff !important;
+		/*background: #202124;*/
+	}
+
+	.ddlw3d {
+		color: #1e90ff !important;
+		font-family: Fira Sans !important;
+	}
+
+	.Ax3bC {
+		border-bottom-color: #1e90ff !important;
+	}
+
+	.aBRa1c,
+	.XVTXP,
+	.q07ucb,
+	.pePNgf::before {
+		background: #1e90ff !important;
+	}
+
+	.aqvwYd {
+		font-family: "Fira Sans" !important;
+		color: #1e90ff !important;
+	}
+
+	.aqvwYd:hover {
+		font-family: "Fira Sans" !important;
+		color: #1e90ff80 !important;
+	}
+	
+	.ghN9W {
+	        color: #ffffff !important;
+		text-decoration: none !important;
+		background: #1e90ff80 !important;
+	}
+		
+	.ghN9W .P0PLXc {	
+	       color: white !important;
+	       text-decoration: none !important;
+	}
+	.ghN9W .P0PLXc:hover {
+               color: #1e90ff !important;
+               text-decoration: none !important;
+         }
 }
 
 @-moz-document domain(github.com) {
@@ -385,16 +514,21 @@
 		color: white !important;
 	}*/
 
-	.diff-table tr:hover > pre,
+	.diff-table tr:hover>pre,
 	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
 	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
 	.highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
 		background-color: #1e90ff80 !important;
 	}
-	
-	.js-navigation-open.Link--primary {
+
+	/*.js-navigation-open.Link--primary {
 		font-family:  Fira Code !important;
 	}
+
+	.flex-auto.min-width-0.p-2.pr-3.pr-md-2 *{
+		font-family:  Fira Sans !important;
+	}*/
+
 	/*.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
 	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
 		background: #103810 !important;
@@ -805,4 +939,14 @@
 	}
 }
 
-/* mdn dark */
+@-moz-document domain("google.fr") {
+	:root {
+		font-family: Fira Sans !important;
+	}
+
+	/*
+	html, body {
+		background-color: inherit !important;
+		background: inherit !important;
+	}*/
+}
