@@ -4,11 +4,13 @@
 @import url("ctrltab1.css");
 @import url("autohidebookmarksbar.css");
 @import url("soundplaying.css");
+@import url("menubartitle.css");
+
 /*@import url("sidebarhover.css");*/
 /*@import url("devtoolsrtm.css");*/
 /*@import url("nofocusring.css");*/
 /*@import url("responsive.css");*/
-/*@import url("sidebar hover.css");*/
+
 
 /* -------------------------------------------------------------------------- */
 :-moz-focusring,
@@ -312,7 +314,6 @@ menubar>menu[open] {
 }
 */
 /* Hide close button when not hovering over the tab
-
 .tabbrowser-tab .tab-close-button {
 	opacity: 0 !important;
 }
@@ -650,6 +651,11 @@ treechildren::-moz-tree-image(query) {
 	display: visible !important;
 	margin: 4px 8px 4px 8px !important;
 	border-color: #4f4f4f !important;
+}
+
+#appMenu-popup panelview {
+	width: 24.5em !important;
+	/* can modify panel width, Original: 22.5em */
 }
 
 /*
@@ -1569,7 +1575,9 @@ treechildren::-moz-tree-image(query) {
 	padding: 16 16 !important;
 	transform: scale(1.25) !important;
 }
-
+#fxa-toolbar-menu-button {
+        margin-top: 1px !important;
+}
 /*-------------------------nav button----------------------------*/
 #back-button,
 #context-back {
@@ -1596,46 +1604,7 @@ treechildren::-moz-tree-image(query) {
 	filter: drop-shadow(0px 0px 1px #000000) !important;
 }
 
-/* Shows window title in menubar */
-/* Enable menubar for correct behavior */
-@-moz-document url("chrome://browser/content/browser.xhtml") {
-	:root:not([sizemode="fullscreen"])>head {
-		display: block;
-		position: fixed;
-		right: 140px;
-		width: calc(100vw - 855px);
-		text-align: left;
-		z-index: 1;
-		pointer-events: none;
-	}
 
-	head>* {
-		display: none;
-	}
-
-	head>title {
-		display: -moz-box;
-		padding-top: 6px;
-		margin-top: 6px;
-		max-width: 58vw;
-		overflow-x: -moz-hidden-unscrollable;
-		text-overflow: ellipsis;
-		-moz-box-pack: left;
-		font-family: Fira Sans !important;
-		font-size: 14px !important;
-		font-weight: bold !important;
-		color: #1e90ff !important;
-	}
-
-	@media (-moz-platform: windows),
-	(-moz-os-version: windows-win7),
-	(-moz-os-version: windows-win10) {
-		:root[sizemode="maximized"]>head>title {
-			margin-top: 6px;
-			/*padding-top: 6px !important;*/
-		}
-	}
-}
 
 #PlacesToolbar,
 #titlebar,
@@ -1966,7 +1935,7 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 
 .tab-label-container {
 	text-align: center !important;
-	/*padding-inline: 7px !important;*/
+	padding-inline: 5px !important;
 }
 
 /*
@@ -2978,66 +2947,69 @@ input:not(#urlbar-input) {
 	min-height: 16px !important;
 	width: 16px !important;
 	min-width: 16px !important;
+	background-color: #1e1d2d !important;
 }
 
 .titlebar-button {
 	padding-left: 7px !important;
 	padding-right: 8px !important;
+	background-color: #1e1d2d !important;
 }
 
 .titlebar-buttonbox-container {
 	appearance: none !important;
 	margin-left: 21px !important;
-	margin-right: 5px !important;
+	margin-right: 1px !important;
 	padding-top: -1px !important;
+	background-color: #1e1d2d !important;
 }
 
 .titlebar-min {
 	list-style-image: url("KnobOrange.ico") !important;
-	background-color: none !important;
+	background-color: #1e1d2d !important;
 }
 
 .titlebar-min:hover {
 	list-style-image: url("KnobRemove.ico") !important;
-	background-color: transparent !important;
+	background-color: #1e1d2d !important;
 	transition: all 0.3s ease !important;
-	filter: drop-shadow(0px 0px 2px white) !important;
+
 }
 
 .titlebar-restore {
 	list-style-image: url("KnobGreen.ico") !important;
-	background-color: none !important;
+	background-color: #1e1d2d !important;
 }
 
 .titlebar-restore:hover {
 	list-style-image: url("KnobAdd.ico") !important;
-	background-color: transparent !important;
+	background-color: #1e1d2d !important;
 	transition: all 0.3s ease !important;
-	filter: drop-shadow(0px 0px 2px white) !important;
+
 }
 
 .titlebar-max {
 	list-style-image: url("KnobGreen.ico") !important;
-	background-color: none !important;
+	background-color: #1e1d2d !important;
 }
 
 .titlebar-max:hover {
 	list-style-image: url("KnobAdd.ico") !important;
-	background-color: transparent !important;
+	background-color: #1e1d2d !important;
 	transition: all 0.3s ease !important;
-	filter: drop-shadow(0px 0px 2px white) !important;
+
 }
 
 .titlebar-close {
 	list-style-image: url("KnobRed.ico") !important;
-	background-color: none !important;
+	background-color: #1e1d2d !important;
 }
 
 .titlebar-close:hover {
 	list-style-image: url("KnobCancel.ico") !important;
-	background-color: transparent !important;
+	background-color: #1e1d2d !important;
 	transition: all 0.3s ease !important;
-	filter: drop-shadow(0px 0px 2px white) !important;
+
 }
 
 /*
@@ -4096,7 +4068,7 @@ button.panel-button {
 	color: #ffffff !important;
 }
 
-dialog,
+/*dialog,*/
 #commonDialog {
 	background: #1e1d2d !important;
 	color: #ffffff !important;
@@ -4231,30 +4203,7 @@ checkbox>.checkbox-check {
 }
 */
 
-/*----------------autohide personal bar---------------------------
-#nav-bar {
-	z-index: 2 !important;
-}
-#PersonalToolbar {
-	position: relative !important;
-	z-index: 0 !important;
-	margin-top: -28px !important;
-	transition-delay: 0.2s !important;
-	transition: margin 200ms linear !important;
-	transition: all 800ms var(--animation-easing-function) !important;
-}
-#navigator-toolbox:active #PersonalToolbar,
-#nav-bar:hover+#PersonalToolbar,
-#PersonalToolbar:hover {
-	z-index: 1 !important;
-	margin-top: 0px !important;
-	margin-bottom: -28px !important;
-	transition-delay: 0.2s !important;
-	transition: margin 200ms linear !important;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) !important;
-	transition: all 800ms var(--animation-easing-function) !important;
-}
-*/
+
 #PlacesToolbarItems>.bookmark-item {
 	margin-inline: -2px !important;
 }
@@ -4375,18 +4324,6 @@ menupopup>menu {
 	-moz-box-ordinal-group: 0 !important;
 }
 
-
-
-
-
-/*When hovering the mouse pointer over the item, instead of the normal message we display a more detailed one. For blocked downloads the entire area shows the hover message, for other downloads only the main area does.*/
-
-/*
-.downloadTypeIcon image {
-	background-size: cover !important;
-}
-*/
-
 #webextension-popup-browser,
 #webextension-popup-stack,
 .browser-extension-panel {
@@ -4398,14 +4335,6 @@ menupopup>menu {
 	box-shadow: none !important;
 	outline-offset: unset !important;
 }
-
-/*
-menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
-	-moz-context-properties: fill !important;
-	fill: #FFFFFF !important;
-	color: #FFFFFF !important;
-}
-*/
 
 .tab-label-container {
 	display: grid !important;
@@ -4426,18 +4355,18 @@ menu#_c5867acc-54c9-4074-9574-04d8818d53e8_-menuitem-10.menu-iconic image {
 }
 
 #tab-content {
-	max-height: 32px !important;
+	max-height: 30px !important;
 	vertical-align: middle !important;
 	text-align: center !important;
 }
 
 #tab-background {
-	max-height: 32px !important;
+	max-height: 30px !important;
 }
 
 :root {
-	--tab-min-height: 32px !important;
-	--tab-max-height: 32px !important;
+	--tab-min-height: 30px !important;
+	--tab-max-height: 30px !important;
 }
 
 /*
@@ -4506,16 +4435,6 @@ menupopup>menu {
 	--panel-padding: 8px !important;
 }
 
-/*
-#main-window:not([uidensity=compact]):not([uidensity=touch]) #nav-bar #back-button + #forward-button {
-	margin-inline-start: -4px !important;
-}
-#main-window[uidensity=compact] #nav-bar #back-button + #forward-button {
-	margin-inline-start: -6px !important;
-}
-#main-window[uidensity=touch] #nav-bar #back-button + #forward-button {
-	margin-inline-start: -4px !important;
-}*/
 #BMB_bookmarksPopup,
 panel[type="arrow"] {
 	transition-duration: 0.35ms !important;
@@ -4720,18 +4639,6 @@ menu[label="Livemarks"]>.menu-iconic-left {
 	display: inline-block;
 }
 
-/*
-#PanelUI-menu-button>stack>.toolbarbutton-icon,
-#PanelUI-menu-button>.toolbarbutton-icon {
-	-moz-binding: url("data:text/xml,<bindings xmlns='http://www.mozilla.org/xbl' xmlns:xul='http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul' xmlns:xbl='http://www.mozilla.org/xbl'><binding id='name'><implementation><field name='button'>document.getElementById('PanelUI-menu-button');</field><constructor><![CDATA[ var Cc = Components.classes, Ci = Components.interfaces, cpd; try { cpd = Cc['@mozilla.org/file/directory_service;1'].getService(Ci.nsIProperties).get('ProfD', Ci.nsIFile); } catch (e) {} if (!cpd) return; var itr = Cc['@mozilla.org/toolkit/profile-service;1'].createInstance(Ci.nsIToolkitProfileService).profiles; while (itr.hasMoreElements()) { var profile = itr.getNext().QueryInterface(Ci.nsIToolkitProfile); if (profile.rootDir.path == cpd.path) { this.button.label = profile.name; break; } } ]]></constructor></implementation></binding></bindings>#name") !important;
-}
-#PanelUI-menu-button>.toolbarbutton-text {
-	display: -moz-box !important;
-	-moz-box-ordinal-group: 0 !important;
-}
-*/
-/*#context-viewinfo,*/
-/*#context-sep-sendlinktodevice,*/
 #context-savelinktopocket {
 	display: none !important;
 }
@@ -4785,25 +4692,7 @@ and by default removes the tab secondary line
 }
 */
 
-/*
-:root {
-	--urlbar-toolbar-height: 30.00px !important;
-}*/
 
-/*
-.tab-stack {
-	transition: transform 20ms linear
-}
-.tabbrowser-tab:hover .tab-stack {
-	transform: scale(1.1);
-}*/
-/*@-moz-document url("about:downloads") {
-	richlistbox>richlistitem[selected] {
-		background-color: rgb(128, 128, 128) !important;
-	}
-}
-*/
-/* #1e90ff */
 #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon {
 	fill: #1e90ff !important;
 	fill-opacity: 1 !important;
@@ -4902,12 +4791,12 @@ and by default removes the tab secondary line
 	padding-left: 25px !important;
 }
 
-/*? slide in animation when clicking on urlbar */
+/* slide in animation when clicking on urlbar */
 #urlbar[breakout-extend] .urlbarView {
 	animation-name: urlbarExtend;
 	animation-duration: 0.5s;
 	animation-iteration-count: 0.9;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in;
 }
 
 @keyframes urlbarExtend {
@@ -5042,7 +4931,7 @@ and by default removes the tab secondary line
 	content: "";
 	background: url(chrome://global/skin/icons/open-in-new.svg) no-repeat center;
 	background-size: auto !important;
-	background-size: 14px !important;
+	font-size: 14px !important;
 	-moz-context-properties: fill !important;
 	fill: dodgerblue !important;
 	width: 14px !important;
@@ -5119,18 +5008,14 @@ and by default removes the tab secondary line
 menu.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 .bookmark-item[image*="page-icon:https://github.com/"]::before {
-	/*content: "" !important;
-	
+	/*content: "" !important;	
 	width: 16px !important;
 	height: 16px !important;
 	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDQzOC41NDkgNDM4LjU0OSIgd2lkdGg9IjQzOC41NDlwdCIgaGVpZ2h0PSI0MzguNTQ5cHQiPjxkZWZzPjxjbGlwUGF0aCBpZD0iX2NsaXBQYXRoXzg3QXhvTjhPanFCRmEzQ3dVTlAwTzMxZ1U1Z2JteUNwIj48cmVjdCB3aWR0aD0iNDM4LjU0OSIgaGVpZ2h0PSI0MzguNTQ5Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF84N0F4b044T2pxQkZhM0N3VU5QME8zMWdVNWdibXlDcCkiPjxwYXRoIGQ9IiBNIDQwOS4xMzIgMTE0LjU3MyBDIDM4OS41MjQgODAuOTc3IDM2Mi45MjcgNTQuMzc5IDMyOS4zMzQgMzQuNzczIEMgMjk1LjczNiAxNS4xNjYgMjU5LjA1NyA1LjM2NSAyMTkuMjcxIDUuMzY1IEMgMTc5LjQ5IDUuMzY1IDE0Mi43OTkgMTUuMTY5IDEwOS4yMDggMzQuNzczIEMgNzUuNjEyIDU0LjM3OCA0OS4wMTYgODAuOTc3IDI5LjQwOCAxMTQuNTczIEMgOS44MDMgMTQ4LjE2OCAwIDE4NC44NTQgMCAyMjQuNjMgQyAwIDI3Mi40MSAxMy45NCAzMTUuMzc1IDQxLjgyNyAzNTMuNTM2IEMgNjkuNzExIDM5MS43IDEwNS43MzMgNDE4LjEwOCAxNDkuODkgNDMyLjc2MyBDIDE1NS4wMyA0MzMuNzE3IDE1OC44MzUgNDMzLjA0NiAxNjEuMzA5IDQzMC43NjcgQyAxNjMuNzg0IDQyOC40ODUgMTY1LjAyIDQyNS42MjcgMTY1LjAyIDQyMi4yMDUgQyAxNjUuMDIgNDIxLjYzNCAxNjQuOTcxIDQxNi40OTcgMTY0Ljg3NiA0MDYuNzg4IEMgMTY0Ljc3OCAzOTcuMDc5IDE2NC43MzIgMzg4LjYwOSAxNjQuNzMyIDM4MS4zODIgTCAxNTguMTY1IDM4Mi41MTggQyAxNTMuOTc4IDM4My4yODUgMTQ4LjY5NiAzODMuNjEgMTQyLjMxOSAzODMuNTE4IEMgMTM1Ljk0NSAzODMuNDI5IDEyOS4zMjggMzgyLjc2MSAxMjIuNDc3IDM4MS41MTkgQyAxMTUuNjIzIDM4MC4yODggMTA5LjI0OCAzNzcuNDMzIDEwMy4zNDcgMzcyLjk2IEMgOTcuNDQ5IDM2OC40ODcgOTMuMjYyIDM2Mi42MzIgOTAuNzg3IDM1NS40MDQgTCA4Ny45MzIgMzQ4LjgzNCBDIDg2LjAyOSAzNDQuNDYgODMuMDMzIDMzOS42MDEgNzguOTQgMzM0LjI3NSBDIDc0Ljg0NyAzMjguOTQ0IDcwLjcwOCAzMjUuMzMgNjYuNTIxIDMyMy40MjcgTCA2NC41MjIgMzIxLjk5NiBDIDYzLjE5IDMyMS4wNDUgNjEuOTU0IDMxOS44OTggNjAuODExIDMxOC41NjcgQyA1OS42NjkgMzE3LjIzNiA1OC44MTQgMzE1LjkwNCA1OC4yNDMgMzE0LjU3IEMgNTcuNjcxIDMxMy4yMzUgNTguMTQ1IDMxMi4xNCA1OS42NyAzMTEuMjgxIEMgNjEuMTk1IDMxMC40MjIgNjMuOTUxIDMxMC4wMDUgNjcuOTUgMzEwLjAwNSBMIDczLjY1OCAzMTAuODU4IEMgNzcuNDY1IDMxMS42MjEgODIuMTc0IDMxMy45IDg3Ljc5MSAzMTcuNzA5IEMgOTMuNDA1IDMyMS41MTUgOTguMDIgMzI2LjQ2MyAxMDEuNjM3IDMzMi41NTEgQyAxMDYuMDE3IDM0MC4zNTcgMTExLjI5NCAzNDYuMzA1IDExNy40ODMgMzUwLjM5OCBDIDEyMy42NjcgMzU0LjQ5MSAxMjkuOTAyIDM1Ni41MzQgMTM2LjE4MiAzNTYuNTM0IEMgMTQyLjQ2MiAzNTYuNTM0IDE0Ny44ODYgMzU2LjA1OCAxNTIuNDU2IDM1NS4xMTEgQyAxNTcuMDIxIDM1NC4xNTkgMTYxLjMwNCAzNTIuNzI4IDE2NS4zMDMgMzUwLjgyNiBDIDE2Ny4wMTYgMzM4LjA2OCAxNzEuNjggMzI4LjI2NyAxNzkuMjkxIDMyMS40MTYgQyAxNjguNDQzIDMyMC4yNzYgMTU4LjY5IDMxOC41NTkgMTUwLjAyNyAzMTYuMjc2IEMgMTQxLjM2OSAzMTMuOTkgMTMyLjQyMiAzMTAuMjggMTIzLjE5MiAzMDUuMTM2IEMgMTEzLjk1NyAyOTkuOTk5IDEwNi4yOTYgMjkzLjYyIDEwMC4yMDcgMjg2LjAxIEMgOTQuMTE3IDI3OC4zOTYgODkuMTE5IDI2OC40IDg1LjIyIDI1Ni4wMzEgQyA4MS4zMTkgMjQzLjY1NyA3OS4zNjggMjI5LjM4MyA3OS4zNjggMjEzLjIwNSBDIDc5LjM2OCAxOTAuMTcgODYuODg4IDE3MC41NjggMTAxLjkyNSAxNTQuMzg4IEMgOTQuODgxIDEzNy4wNyA5NS41NDYgMTE3LjY1NiAxMDMuOTIyIDk2LjE0OCBDIDEwOS40NDIgOTQuNDMzIDExNy42MjggOTUuNzIgMTI4LjQ3NiAxMDAuMDAxIEMgMTM5LjMyNiAxMDQuMjg0IDE0Ny4yNyAxMDcuOTUzIDE1Mi4zMTYgMTEwLjk5NSBDIDE1Ny4zNjIgMTE0LjAzNiAxNjEuNDA1IDExNi42MTMgMTY0LjQ1MSAxMTguNzAzIEMgMTgyLjE1NiAxMTMuNzU2IDIwMC40MjcgMTExLjI4MiAyMTkuMjY5IDExMS4yODIgQyAyMzguMTExIDExMS4yODIgMjU2LjM4NiAxMTMuNzU2IDI3NC4wOTIgMTE4LjcwMyBMIDI4NC45NDEgMTExLjg1NCBDIDI5Mi4zNiAxMDcuMjg0IDMwMS4xMjEgMTAzLjA5NiAzMTEuMjAzIDk5LjI4OSBDIDMyMS4yOTEgOTUuNDg0IDMyOS4wMDUgOTQuNDM2IDMzNC4zMzcgOTYuMTUxIEMgMzQyLjg5OSAxMTcuNjYgMzQzLjY2MiAxMzcuMDczIDMzNi42MTYgMTU0LjM5MSBDIDM1MS42NTIgMTcwLjU3MSAzNTkuMTc1IDE5MC4xNzggMzU5LjE3NSAyMTMuMjA4IEMgMzU5LjE3NSAyMjkuMzg2IDM1Ny4yMTcgMjQzLjcwNSAzNTMuMzIyIDI1Ni4xNzQgQyAzNDkuNDIyIDI2OC42NDUgMzQ0LjM4MSAyNzguNjMxIDMzOC4xOTcgMjg2LjE1MyBDIDMzMi4wMDYgMjkzLjY3NCAzMjQuMjk2IDMwMC4wMDMgMzE1LjA2NiAzMDUuMTM5IEMgMzA1LjgzNCAzMTAuMjc5IDI5Ni44ODQgMzEzLjk4OSAyODguMjI2IDMxNi4yNzUgQyAyNzkuNTY0IDMxOC41NjEgMjY5LjgxMSAzMjAuMjc5IDI1OC45NjMgMzIxLjQyMSBDIDI2OC44NTcgMzI5Ljk4MyAyNzMuODA1IDM0My40OTggMjczLjgwNSAzNjEuOTYgTCAyNzMuODA1IDQyMi4xOTcgQyAyNzMuODA1IDQyNS42MTkgMjc0Ljk5NSA0MjguNDc2IDI3Ny4zNzcgNDMwLjc1OSBDIDI3OS43NTYgNDMzLjAzOCAyODMuNTEzIDQzMy43MDkgMjg4LjY1MyA0MzIuNzU0IEMgMzMyLjgxNiA0MTguMTAxIDM2OC44MzggMzkxLjY5MiAzOTYuNzIxIDM1My41MjggQyA0MjQuNjAxIDMxNS4zNjcgNDM4LjU0NiAyNzIuNDAyIDQzOC41NDYgMjI0LjYyMiBDIDQzOC41MzYgMTg0Ljg1MSA0MjguNzI4IDE0OC4xNjggNDA5LjEzMiAxMTQuNTczIFogIiBmaWxsPSJyZ2IoMjU1LDI1NSwyNTUpIi8+PC9nPjwvc3ZnPg==") !important;
 	background-size: 16px !important;
 	margin-right: 0px !important;*/
 	filter: drop-shadow(0px 0px 1px white) !important;
-
-
 }
-
 
 .bookmark-item[image*="page-icon:https://github.com/"]>.menu-iconic-left {
 	/*display: none !important;*/
@@ -5219,7 +5104,7 @@ html|p#preview-unavailable {
 	-moz-box-ordinal-group: 2 !important
 }
 */
-*/
+
 /* ------------------------------ status panel ------------------------------ */
 /* ------------------------------ status panel ------------------------------ 
 #statuspanel {
@@ -5388,27 +5273,22 @@ html|p#preview-unavailable {
 	inset-inline-end: 0;
 }*/
 
-#statuspanel {
-	transition: bottom 0.25s ease-in !important;
-}
+
+
+/* ------------------------------ status panel ------------------------------ */
 
 #statuspanel:not([inactive]) {
 	transition: bottom 0.25s ease-out !important;
 	transition: color .25s .15s ease-out !important;
 }
 
-#statuspanel #statuspanel-label {
-	transition: color linear 0.5s !important;
-}
-
-/* ------------------------------ status panel ------------------------------ */
 #statuspanel {
 	bottom: 0px !important;
 	left: 40% !important;
 	right: 40% !important;
 	margin-left: 8px;
 	margin-right: 0px;
-	border-radius: 1px !important;
+	border-radius: 2px !important;
 	text-align: center !important;
 	transition: bottom .25s ease-in !important;
 }
@@ -5425,9 +5305,9 @@ html|p#preview-unavailable {
 	font-size: 14px !important;
 	color: #ffff00 !important;
 	border: 2px solid #1E1D2D !important;
-	border-radius: 0px !important;
+	border-radius: 2px !important;
 	text-align: center !important;
-	transition: color linear .5s !important;
+	transition: color linear 0.5s !important;
 }
 
 /* -----------full screen box--------------------------------------------------------------- */
@@ -5449,10 +5329,61 @@ html|p#preview-unavailable {
 	color: #ffffff !important;
 	text-shadow: none !important;
 }
+
 /*-------------------------------------------------*/
 :autofill {
 	filter: unset !important;
 	background-image: unset !important;
+}
+
+/*--------------------------------------------------*/
+.container.infobar {
+	background: #1e1d2d !important;
+	border: none !important;
+}
+
+.notificationbox-stack {
+	background-color: #1e1d2d !important;
+	border: none !important;
+
+}
+
+.notification-message {
+	margin-top: 5px !important;
+	min-height: 32px with block padding !important;
+	padding-block: 0px !important;
+	margin-inline-end: 6px !important;
+	font-family: Fira Sans !important;
+	font-weight: bold !important;
+}
+
+.notification-button-container,
+.notification-message {
+	vertical-align: middle !important;
+}
+
+:host([type="info"]) .icon {
+	color: #1e90ff !important;
+	margin-bottom: 3px !important;
+}
+
+.container.infobar::before {
+	/*content: "";*/
+	display: none !important;
+	/*width: 2px;
+	position: absolute;
+	background-image: linear-gradient(0, #9059ff 0%, #ff4aa2 52.08%, #ffbd4f 100%);
+	top: 0;
+	inset-inline-start: 0;
+	height: 100%;
+	border-start-start-radius: 4px;
+	border-end-start-radius: 4px;*/
+}
+
+.notification-button.small-button label {
+	color: #ffffff !important;
+	margin-top: 1px !important;
+	font-weight: 400 !important;
 }
 
 
