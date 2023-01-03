@@ -9,7 +9,7 @@
 	font-family: Fira Sans !important;
 	--in-content-page-background: #1e1d2d !important;
 	--in-content-page-color: #1e1d2d !important;
-	--in-content-text-color: inherit !important;
+	--in-content-text-color: white !important;
 	--in-content-deemphasized-text: #888888 !important;
 
 	--in-content-box-background: #1e1d2d !important;
@@ -22,20 +22,21 @@
 	--in-content-icon-color: inherit !important;
 	--in-content-table-background: #1e1d2d !important;
 
-	--in-content-link-color: #1e90ff !important;
+	--in-content-link-color: white !important;
 	--in-content-link-color-hover: #1e90ff80 !important;
 	--in-content-link-color-active: #1e90ff !important;
 	--in-content-link-color-visited: #1e90ff90 !important;
 
 	--in-content-button-background: #1e90ff !important;
+
 	--in-content-button-text-color: white !important;
 	--in-content-button-background-hover: #1e90ff50 !important;
 	--in-content-button-background-active: #1e90ff !important;
 	--in-content-button-text-color-hover: white !important;
 	--in-content-button-text-color-active: white !important;
-	/*--in-content-button-border-color: Transparent !important;
-	--in-content-button-border-color-hover: Transparent !important;
-	--in-content-button-border-color-active: Transparent !important;*/
+	--in-content-button-border-color: #1e90ff !important;
+	--in-content-button-border-color-hover: #1e90ff80 !important;
+	--in-content-button-border-color-active: white !important;
 	--in-content-primary-button-text-color: white !important;
 	--in-content-primary-button-background: #1e90ff80 !important;
 	--in-content-primary-button-background-hover: #1e90ff !important;
@@ -44,7 +45,7 @@
 	--in-content-primary-button-border-color: Transparent !important;
 	--in-content-primary-button-border-hover: Transparent !important;
 
-	--in-content-danger-button-background: #1e90ff !important;
+	--in-content-danger-button-background: #1e1d2d !important;
 	--in-content-danger-button-background-hover: #1e90ff80 !important;
 	--in-content-danger-button-background-active: #1e90ff !important;
 
@@ -67,13 +68,13 @@
 	--in-content-table-header-color: white !important;
 
 	/*
-	--checkbox-checked-bgcolor: SelectedItem !important;
+	--checkbox-checked-bgcolor: yellow !important;
 	--checkbox-checked-color: SelectedItemText !important;
-	--checkbox-checked-hover-bgcolor: color-mix(in srgb, SelectedItem 80%, SelectedItemText) !important;
-	--checkbox-checked-active-bgcolor: SelectedItem !important;
-	--checkbox-checked-border-color: SelectedItem !important;
-	--checkbox-border-color: Menu !important;
-	--checkbox-unchecked-bgcolor: Menu !important;
+	--checkbox-checked-hover-bgcolor: color-mix(in srgb, dodgerblue 80%, white) !important;
+	--checkbox-checked-active-bgcolor: green !important;
+	--checkbox-checked-border-color: green !important;
+	--checkbox-border-color: white !important;
+	--checkbox-unchecked-bgcolor: dodgerblue !important;
 	--checkbox-unchecked-hover-bgcolor: color-mix(in srgb, Menu 80%, MenuText) !important;
 	--checkbox-unchecked-active-bgcolor: color-mix(in srgb, Menu 90%, MenuText) !important;*/
 
@@ -89,9 +90,9 @@
 	--in-content-button-background-active: #1e90ff !important;
 	--in-content-button-text-color-hover: white !important;
 	--in-content-button-text-color-active: white !important;
-	/*--in-content-button-border-color: Transparent !important;
-		--in-content-button-border-color-hover: Transparent !important;
-		--in-content-button-border-color-active: Transparent !important;*/
+	--in-content-button-border-color: #1e90ff !important;
+	--in-content-button-border-color-hover: #1e90ff80 !important;
+	--in-content-button-border-color-active: white !important;
 	--in-content-primary-button-text-color: white !important;
 	--in-content-primary-button-background: #1e90ff80 !important;
 	--in-content-primary-button-background-hover: #1e90ff !important;
@@ -118,4 +119,28 @@
 	border-radius: 0px !important;
 	font-family: Fira Sans !important;
 	outline: none !important;
+}
+
+input[type="radio"]:checked,
+*.radio-check[selected] {
+	-moz-context-properties: fill;
+	fill: #ffffff;
+	color: #ffffff !important;
+	background-color: #1e90ff !important;
+	/*background-image: url("chrome://global/skin/icons/radio.svg");*/
+	border-color: white !important;
+	/*print-color-adjust: exact !important;*/
+}
+
+input[type="radio"],
+*.radio-check {
+	appearance: none !important;
+	border: 1px solid #1e90ff !important;
+	background-color: #1e1d2d !important;
+}
+
+*.radio-check:hover {
+	appearance: none !important;
+	border: 1px solid #1e90ff !important;
+	background-color: #1e90ff50 !important;
 }
