@@ -1,0 +1,91 @@
+/* Shows window title in menubar */
+/* Enable menubar for correct behavior */
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+	:root:not([sizemode="fullscreen"])>head {
+
+		display: block;
+		position: fixed;
+		top: 13px;
+		right: 140px;
+		/* Space for window controls */
+		width: calc(100vw - 855px);
+		/* Window width - window control width - menuitem (English) width */
+		text-align: left;
+		z-index: 1;
+		pointer-events: none;
+		text-overflow: ellipsis;
+
+	}
+
+	head>* {
+		display: none;
+
+	}
+
+	head>title {
+		display: contents;
+		top: 5px !important;
+		overflow-x: -moz-hidden-unscrollable;
+		/*margin-top: 6px;*/
+		max-width: 100vw;
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		font-weight: bold !important;
+		color: #1e90ff !important;
+		white-space: nowrap;
+	}
+}
+
+/*
+@media (-moz-platform: windows),
+(-moz-os-version: windows-win7),
+(-moz-os-version: windows-win10) {
+	:root[sizemode="maximized"]>head>title {
+		margin-top: 6px;
+		
+	}
+}
+*/
+/*
+@-moz-document url(chrome://browser/content/browser.xhtml){
+:root:not([sizemode="fullscreen"])>head {
+	display: block;
+	position: fixed;
+	right: 140px;
+	width: calc(100vw - 855px);
+	text-align: left;
+	z-index: 1;
+	pointer-events: none;
+}
+
+head>* {
+	display: none;
+
+}
+
+head>title {
+	display: contents;
+	padding-top: 6px;
+	margin-top: 6px;
+	width: 100vw;
+	overflow-x: -moz-hidden-unscrollable;
+	text-overflow: clip;
+	-moz-box-pack: left;
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	color: #1e90ff !important;
+	white-space: nowrap;
+}
+
+@media (-moz-platform: windows),
+(-moz-os-version: windows-win7),
+(-moz-os-version: windows-win10) {
+	:root[sizemode="maximized"]>head>title {
+		margin-top: 6px;
+		/*padding-top: 6px !important;*/
+}
+}
+}
+
+*/
