@@ -149,8 +149,9 @@
 		display: none !important;
 	}
 
-	#placesList treechildren::-moz-tree-row(hover),
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+	
+	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover),
+	#placesList>treechildren::-moz-tree-row(hover) {
 		/*appearance: none !important;*/
 		/*-moz-font-smoothing-background-color: none !important;*/
 		border: none !important;
@@ -163,7 +164,7 @@
 	}
 
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
-	#placesList treechildren::-moz-tree-row(selected) {
+	#placesList>treechildren::-moz-tree-row(selected) {
 		/*appearance: none !important;*/
 		/*-moz-font-smoothing-background-color: none !important;*/
 		border: none !important;
@@ -176,7 +177,7 @@
 	}
 
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(active),
-	#placesList treechildren::-moz-tree-row(active) {
+	#placesList>treechildren::-moz-tree-row(active) {
 		appearance: none !important;
 		/*-moz-font-smoothing-background-color: none !important;*/
 		border: none !important;
