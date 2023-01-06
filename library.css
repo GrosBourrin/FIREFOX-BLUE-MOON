@@ -1,0 +1,380 @@
+/*---------------------------------library ----------------------------------*/
+
+@-moz-document url("chrome://browser/content/places/places.xhtml") {
+	* {
+		font-family: Fira Sans !important;
+		font-weight: inherit !important;
+		font-size: 14px !important;
+		color: #ffffff !important;
+		--organizer-border-color: #4f4f4f !important;
+		--organizer-separator-color: #4f4f4f !important;
+	}
+
+	toolbar {
+		appearance: none !important;
+		background-color: #1e1d2d !important;
+		border: 0px !important;
+	}
+
+	listbox,
+	textbox {
+		appearance: none !important;
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+		min-height: 20px !important;
+		padding: 0 0 0 4px !important;
+		border: 1px solid !important;
+		border-color: #4f4f4f !important;
+		border-radius: 0px !important;
+	}
+
+	#editBMPanel_rows>row>hbox>textbox,
+	#editBMPanel_rows>row>textbox,
+	#editBMPanel_tagsSelector {
+		background: #1e1d2d !important;
+		border: none !important;
+	}
+
+	#placesToolbar>toolbarbutton {
+		margin: 6px 4px 5px !important;
+		appearance: none !important;
+		background: #1e90ff !important;
+		border-radius: 0px !important;
+		/*filter: invert(100%) !important;*/
+		border: none !important;
+	}
+
+	#placesList {
+		appearance: none !important;
+		color: #ffffff !important;
+		background-color: #1e1d2d !important;
+	}
+
+	#placesView>splitter {
+		border-color: #4f4f4f !important;
+	}
+
+	#editBMPanel_locationField,
+	#editBMPanel_tagsField,
+	#editBMPanel_keywordField,
+	#editBMPanel_tagsSelector {
+		appearance: none !important;
+		background: #000000 !important;
+		color: #ffffff !important;
+		height: 24px !important;
+		/*outline: 1px ridge #1E90FF50 !important;*/
+		border-radius: 0px !important;
+	}
+
+	#editBookmarkPanelRows>vbox>input,
+	#editBookmarkPanelRows>vbox>hbox>input {
+		border-radius: 3px !important;
+		background: #000000 !important;
+	}
+
+	#editBookmarkPanelRows .expander-up .button-icon {
+		transform: rotate(180deg) !important;
+		max-height: 24px !important;
+	}
+
+	#editBMPanel_tagsSelectorExpander {
+		max-height: 24px !important;
+	}
+
+	#editBMPanel_keywordRow,
+	#editBMPanel_locationRow,
+	#editBMPanel_tagsRow,
+	#editBMPanel_tagsSelectorRow {
+		background: #1e1d2d !important;
+		color: #ffffff !important;
+		border: none !important;
+	}
+
+	#searchFilter {
+		appearance: none !important;
+		background-color: #000000 !important;
+		color: #ffffff !important;
+		
+	}
+
+	#places #downloadsRichListBox {
+		appearance: none !important;
+		color: #ffffff !important;
+		background: #1e1d2d !important;
+	}
+
+	#detailsDeck {
+		/*border: none !important;*/
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+	}
+
+	#detailsPane {
+		/*border: none !important;*/
+		border-top: 1px solid #4f4f4f !important;
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+	}
+
+	
+
+	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
+		color: #ffffff !important;
+	}
+
+	treechildren::-moz-tree-separator {
+		/*height: 1px !important;*/
+		border-color: #4f4f4f !important;
+	}
+
+	treechildren::-moz-tree-separator(hover) {
+		border-color: #4f4f4f !important;
+	}
+
+	treechildren::-moz-tree-separator(selected) {
+		border-color: #4f4f4f !important;
+	}
+
+	#placeContentColumns .separator {
+		color: #4f4f4f !important;
+		fill: #4f4f4f !important;
+		border: 1px #4f4f4f !important;
+	}
+
+	#places treechildren::-moz-tree-twisty {
+		margin-bottom: 3px !important;
+	}
+
+	menuseparator:last-of-type {
+		display: none !important;
+	}
+
+	#placesList treechildren::-moz-tree-row(hover),
+	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+		/*appearance: none !important;*/
+		/*-moz-font-smoothing-background-color: none !important;*/
+		border: none !important;
+		background-color: #1e90ff80 !important;
+		border-radius: 2px !important;
+		color: #ffffff !important;
+		outline: none !important;
+		margin-left: 4px !important;
+		margin-right: 4px !important;
+	}
+
+	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
+	#placesList treechildren::-moz-tree-row(selected) {
+		/*appearance: none !important;*/
+		/*-moz-font-smoothing-background-color: none !important;*/
+		border: none !important;
+		background: #1e90ff !important;
+		border-radius: 2px !important;
+		color: #ffffff !important;
+		outline: none !important;
+		margin-left: 4px !important;
+		margin-right: 4px !important;
+	}
+
+	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(active),
+	#placesList treechildren::-moz-tree-row(active) {
+		appearance: none !important;
+		/*-moz-font-smoothing-background-color: none !important;*/
+		border: none !important;
+		background: #1e90ff !important;
+		border-radius: 2px !important;
+		color: #ffffff !important;
+		outline: none !important;
+		margin-left: 4px !important;
+		margin-right: 4px !important;
+	}
+
+	#places treechildren::-moz-tree-row {
+		background-color: transparent !important;
+	}
+
+	#places treechildren::-moz-tree-image {
+		color: #ffffff !important;
+		fill: #ffffff !important;
+	}
+
+	#places treechildren::-moz-tree-image(selected) {
+		fill: #ffffff !important;
+	}
+
+	#placeContent>treechildren::-moz-tree-cell,
+	#placeContent>treechildren::-moz-tree-column {
+		border: 1px #4f4f4f !important;
+	}
+
+	#placesView treechildren::-moz-tree-row {
+		min-height: 24px !important;
+	}
+
+	#contentView treecol {
+		appearance: none !important;
+		border: 1px #4f4f4f !important;
+		background: #1e1d2d !important;
+		color: #4f4f4f !important;
+		border-left: 1px solid !important;
+		box-shadow: inset 0 -1px #4f4f4f !important;
+	}
+
+	/* menus */
+	#placesMenu {
+		margin-inline-start: 6px !important;
+		outline: none !important;
+	}
+
+	#placesMenu>menu {
+		appearance: none !important;
+		color: #ffffff !important;
+		border-radius: 2px !important;
+		padding-block: 5px !important;
+		padding-inline-start: 5px !important;
+		margin-inline-end: 4px !important;
+		outline: none !important;
+		border: none !important;
+	}
+
+	#placesMenu>menu:hover {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	#placesMenu>menu:hover:active,
+	#placesMenu>menu[open] {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		outline: none !important;
+	}
+
+	#placesMenu>menu>.menubar-text {
+		margin-block: 0 !important;
+		/* override menu.css */
+		padding-inline-end: 8px !important;
+		/*background: url(chrome://global/skin/icons/arrow-down-12.svg) right center no-repeat;
+	background-size: 6px;*/
+	}
+
+	#placesMenu>menu>.menubar-text:-moz-locale-dir(rtl) {
+		background-position-x: left !important;
+	}
+
+	#placesView treechildren .separator {
+		border: 1px #4f4f4f !important;
+	}
+
+	tree {
+		background-color: #1e1d2d !important;
+	}
+
+	#main-menubar {
+		background-color: #1e1d2d !important;
+	}
+
+	#main-menubar>* {
+		color: #ffffff !important;
+	}
+
+	menupopup {
+		appearance: none !important;
+		border: none !important;
+		border-radius: 4px !important;
+		--panel-border-radius: 4px !important;
+		--panel-background-color: #1e1d2d !important;
+		--panel-border-color: none !important;
+		outline: none !important;
+	}
+
+	
+	arrowscrollbox {
+		/*background: #1E1D2D !important;*/
+		padding-block: 4px !important;
+	}
+
+	#contentView treecol {
+		box-shadow: inset 0 -1px #4f4f4f !important;
+	}
+
+	#main-menubar> :hover,
+	menubar>menu[_moz-menuactive="true"][open="true"] {
+		appearance: none !important;
+		background: #1e1d2d !important;
+		border: none !important;
+		outline: none !important;
+	}
+
+	@media screen and (-moz-windows-theme),
+	screen and (-moz-windows-classic),
+	screen and (-moz-windows-default-theme),
+	screen and (-moz-os-version: windows-win7),
+	screen and (-moz-os-version: windows-win8),
+	screen and (-moz-os-version: windows-win10) {
+
+		#metaTagsCaption,
+		#security-identity,
+		#security-identity-groupbox,
+		#security-privacy,
+		#security-privacy-groupbox,
+		#security-technical,
+		#security-technical-groupbox {
+			appearance: none !important;
+			background-color: #1e1d2d !important;
+			border: none !important;
+			color: #ffffff !important;
+		}
+
+		#placesMenu>menu {
+			color: #ffffff !important;
+			outline: none !important;
+			--organizer-outline-color: none !important;
+		}
+
+		#security-identity-groupbox,
+		#security-privacy-groupbox,
+		#security-technical-groupbox {
+			appearance: none !important;
+			background-color: #1e1d2d !important;
+		}
+
+		#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover):not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
+			background: 0 0 !important;
+			/*-moz-border-top-colors: transparent !important;
+			-moz-border-right-colors: transparent !important;
+			-moz-border-left-colors: transparent !important;
+			-moz-border-bottom-colors: transparent !important;*/
+			border-color: transparent !important;
+			color: white !important;
+		}
+
+		treechildren {
+			--treechildren-border-color: #4f4f4f !important;
+		}
+	}
+
+	#placesToolbar>toolbarbutton#back-button,
+	#placesToolbar>toolbarbutton#forward-button {
+		width: 24px !important;
+		height: 24px !important;
+		background: transparent !important;
+	}
+
+	treechildren {
+		--treechildren-outline: none !important;
+		color: white !important;
+	}
+
+	/* Remove tiny spacing in separators appearing after the twisty column */
+
+	.menu-iconic-icon {
+		fill: currentColor !important;
+		-moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
+		margin-inline-start: 0 !important;
+		margin-inline-end: 16px !important;
+		width: 24px !important;
+		height: 24px !important;
+		padding: 4px !important;
+	}
+
+	
+}
