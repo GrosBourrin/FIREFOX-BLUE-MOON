@@ -1,0 +1,61 @@
+/* -------------------------------------------------------------------------- */
+/* -------------------------------- tooltips -------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#btTooltip,
+#bhTooltip,
+#un-toolbar-tooltip,
+#tooltip,
+.tooltip,
+#aHTMLTooltip,
+#urlTooltip,
+tooltip,
+.places-tooltip {
+	appearance: none !important;
+	font-family: Fira Sans !important;
+	font-size: 13px !important;
+	border: 1px solid #1e1d2d !important;
+	padding: 3px 5px 3px 5px !important;
+	max-width: auto !important;
+	max-height: auto !important;
+	background-color: #1e1d2d !important;
+	color: yellow !important;
+	border-radius: 3px !important;
+	/*font-weight: 450 !important;*/
+	/*vertical-align: middle !important;*/
+}
+
+
+tooltip:not([position]) {
+	margin-top: 21px !important;
+}
+
+#tab-nav-popup {
+	--tooltip-border-radius: 3px !important;
+	--tooltip-border: 1px !important;
+}
+
+
+.places-tooltip-box,
+tooltip .uc-tooltip-box {
+	--uc-tooltip-inner-padding: 5px 5px 5px 5px !important;
+}
+
+.places-tooltip description:not([value], [id]):empty,
+.places-tooltip description[value=""]:not([id]):empty {
+	display: none !important;
+}
+
+.places-tooltip-box>hbox {
+	display: flex !important;
+	align-items: center !important;
+}
+
+.tooltip-title,
+.places-tooltip-title {
+	font-weight: 600 !important;
+	font-size: 15px !important;
+	max-height: auto !important;
+	overflow-y: clip !important;
+	max-width: auto !important;
+}
