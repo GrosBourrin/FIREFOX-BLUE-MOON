@@ -1,0 +1,35 @@
+
+/* ------------------------------ status panel ------------------------------ */
+
+#statuspanel:not([inactive]) {
+	transition: bottom 0.25s ease-out !important;
+	transition: color .25s .15s ease-out !important;
+}
+
+#statuspanel {
+	bottom: 0px !important;
+	left: 40% !important;
+	right: 40% !important;
+	margin-left: 8px;
+	margin-right: 0px;
+	border-radius: 2px !important;
+	text-align: center !important;
+	transition: bottom .25s ease-in !important;
+}
+
+#statuspanel-inner {
+	-moz-box-align: start !important;
+	margin-left: -50% !important;
+}
+
+#statuspanel #statuspanel-label {
+	appearance: none !important;
+	background-color: #1E1D2D !important;
+	font-family: "Fira Sans" !important;
+	font-size: 14px !important;
+	color: #ffff00 !important;
+	border: 2px solid #1E1D2D !important;
+	border-radius: 2px !important;
+	text-align: center !important;
+	transition: color linear 0.5s !important;
+}
