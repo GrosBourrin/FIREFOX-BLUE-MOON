@@ -24,7 +24,7 @@
 */
 #PersonalToolbar:not([customizing]) {
 	position: relative;
-	margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+	margin-bottom: calc(-1px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
 	transform: rotateX(90deg);
 	transform-origin: top;
 	transition: transform 140ms ease var(--uc-autohide-toolbar-delay) !important;
@@ -38,7 +38,7 @@
 	background-position-y: top, top, var(--uc-bg-y), var(--uc-bg-y),
 		var(--uc-bg-y) !important;
 	transition-delay: 140ms !important;
-	background-color: #161a27 !important;
+	background-color: #1e1d2d !important;
 }
 
 #PlacesToolbarItems>.bookmark-item,
@@ -61,7 +61,7 @@
 
 #navigator-toolbox:hover>#nav-bar:focus-within+#PersonalToolbar {
 	transition-delay: 140ms !important;
-	transform: rotateX(0);
+	transform: rotateX(0) !important;
 }
 
 /* Uncomment to enable compatibility for multi-row_bookmarks.css */
