@@ -3,10 +3,17 @@
 		font-family: "Fira Sans" !important;
 	}
 
+	body,
+	html {
+		background: #1e1d2d !important;
+		--pseudo-before-background: #1e1d2d;
+	}
+
 	.icon {
 		color: #1e90ff !important;
 		fill: #1e90ff !important;
 	}
+
 
 	/*.icon:hover, .icon:focus {
 				/
@@ -44,6 +51,7 @@
 				margin-top: 0px;
 			}*/
 	/*._2rszc84L136gWQrkwH6IaM,*/
+
 	.wBtTDilkW_rtT2k5x3eie,
 	._2jJNpBqXMbbyOiGCElTYxZ,
 	.uI_hDmU5GSiudtABRz_37,
@@ -56,15 +64,28 @@
 		background-color: #1e1d2d !important;
 		border: 1px solid #1e1d2d !important;
 	}
+        /*.uI_hDmU5GSiudtABRz_37 {       width: 760px !important;
+        }     */
+         
+        ._2vH__bwuub4wzWRqcvhh3m {
+		background-color: #1e1d2d !important;
+		border-bottom: 1px solid #1e90ff80 !important;
+	}
+
+	i._3B-ny-D97ZKwdUyXAaWF19.icon.icon-close {
+		margin-bottom: 5px !important;
+	}
 
 	._2w8adx4kIBGPEESCyEmToa.r7zyyy152ZTdiHhea0cIj,
 	._22Te0a5VxZnLITkTavQh95,
 	._3cWzf-usAKfGV1Ay7h2zM_,
+	._3Im6OD67aKo33nql4FpSp_,
 	._1Zj2sAyYL2zB-kzZQcWiW {
 		background-color: #1e1d2d !important;
 	}
 
-	._3w_665DK_NH7yIsRMuZkqB ._2gF7CwFWoUrsLhPqOxCc6F {
+	._3w_665DK_NH7yIsRMuZkqB,
+	._2gF7CwFWoUrsLhPqOxCc6F {
 		width: 340px !important;
 	}
 
@@ -84,16 +105,31 @@
 	figure._3BxRNDoASi9FbGX01ewiLg,
 	._2otRz3OtuWajw1RleFDJ5P,
 	._3w_665DK_NH7yIsRMuZkqB,
-	._1lhlKOukuHHzZKIlnXcHmQ {
+	._1lhlKOukuHHzZKIlnXcHmQ,
+	._1ump7uMrSA43cqok14tPrG {
+
+		background: #1e1d2d !important;
+		border-color: none !important;
+
+	}
+
+
+	._1ump7uMrSA43cqok14tPrG::before {
 		background-color: #1e1d2d !important;
-		border-color: transparent !important;
+	}
+
+	#overlayScrollContainer {
+		background: #1e1d2d70 !important;
 	}
 
 	._34q3PgLsx9zIU5BiSOjFoM,
 	._3GnarIQX9tD_qsgXkfSDz1 {
 		background-color: #000000 !important;
 		font-family: Fira Code !important;
-		font-size: 12px !important;
+		font-size: 13px !important;
+		font-weight: 300 !important;
+
+
 		/*line-height:initial !important;*/
 	}
 
@@ -103,16 +139,22 @@
 	._1K7ubH9z5v9E6C19j2fjQU,
 	.h-jI8r2f9ozTNqu_2TBeY,
 	.header-subreddit-filter,
-	._37tmRmxaFMjRRrvwcY2JmY * {
+	._37tmRmxaFMjRRrvwcY2JmY *{
 		background: #000000 !important;
 		color: #ffffff !important;
 		border-radius: 6px important;
 		border: none !important;
 	}
 
+	.VBa-xDMEbFi3vsO4id4OC,
 	._2ED-O3JtIcOqp8iIL1G5cg {
 		background: #000000 !important;
+		border: transparent !important;
+	}
+
+	._2LoNYeXgOQfq1adQ3jWSbi {
 		border: none !important;
+
 	}
 
 	._3wl1bRnSzxHkKJfvqakrNI,
@@ -133,8 +175,9 @@
 	input,
 	textarea,
 	[contenteditable] {
-		background-color: black !important;
+		background: black !important;
 		margin-top: 1px !important;
+                outline: none !important;
 	}
 
 	#ListingSort--Overflow,
@@ -221,8 +264,14 @@
 		text-decoration: none !important;
 	}
 
+	._2aqH0n-kSzFY7HZZ5GL-Jb {
+		color: white !important;
+		font-weight: 650 !important;
+	}
+
 	._1qeIAgB0cPwnLhDF9XSiJM {
-		color: whitesmoke !important;
+		color: white !important;
+		font-weight: 350 !important;
 	}
 
 	/*------------------------------------------------*/
@@ -276,6 +325,7 @@
 		display: flex !important;
 	}
 
+	.hpxKmfWP2ZiwdKaWpefMn,
 	._3gBRFDB5C34UWyxEe_U6mD {
 		display: none !important;
 	}
@@ -325,5 +375,122 @@
 	._3QOPLw8PZipW3i8kDxod81 {
 		width: 100% !important;
 	}
+
+	._36AIN2ppxy_z-XSDxTvYj5>.threadline {
+		border-right: 2px solid #1e90ff80 !important;
+	}
+
+	/*._36AIN2ppxy_z-XSDxTvYj5>.threadline:hover {
+		border-right: 2px solid #1e90ff !important;
+	}      */
+
+	.DjcdNGtVXPcxG0yiFXIoZ.DjcdNGtVXPcxG0yiFXIoZ {
+		font-size: 14px !important;
+		font-weight: 700 !important;
+		color: white !important;
+	}
+
+	.DjcdNGtVXPcxG0yiFXIoZ.DjcdNGtVXPcxG0yiFXIoZ:hover {
+		text-decoration: none !important;
+		color: dodgerblue !important;
+	}
+
+
+	a._23wugcdiaj44hdfugIAlnX,
+	._3dAMO_XZMVp2K1JSO53ohA,
+	._3LRBCA71BwLLXBNsSlY7HW {
+		text-decoration: none !important;
+		color: dodgerblue !important;
+	}
+
+	a._23wugcdiaj44hdfugIAlnX:hover,
+	._3dAMO_XZMVp2K1JSO53ohA:hover,
+	._3LRBCA71BwLLXBNsSlY7HW:hover {
+		text-decoration: none !important;
+		color: #1e90ff80 !important;
+	}
+
+
+	._38EcSQ9jzVrdtzkXO1cydX {
+		margin-top: 4px !important;
+		margin-left: -45px !important;
+	}
+
+	.SDzveG4fJf98RLE5vll2w {
+		margin-left: -14px important;
+	}
+
+	._1UoeAeSRhOKSNdY_h3iS1O {
+		font-family: Fira Sans !important;
+		text-align: center !important;
+		color: white !important;
+		font-weight: 400 !important;
+	}
+
+	._2-cXnP74241WI7fpcpfPmg,
+	._6_44iTtZoeY6_XChKt5b0,
+	._2-cXnP74241WI7fpcpfPmg {
+		font-family: Fira Sans !important;
+		color: white !important;
+		font-weight: 400 !important;
+	}
+
+	._2ED-O3JtIcOqp8iIL1G5cg,
+	.P8SGAKMtRxNwlmLz1zdJu._2ym9uYDdCxu8P4UFCLNCgE {
+		background: #1e1d2d !important;
+	}
+
+	._22S4OsoDdOqiM-hPTeOURa {
+		background: #1e90ff !important;
+		filter: grayscale(0) !important;
+		font-family: Fira Sans !important;
+		color: white !important;
+		font-weight: 400 !important;
+	}
+
+	._22S4OsoDdOqiM-hPTeOURa:hover {
+		background: #1e90ff80 !important;
+		/*filter: grayscale(0) !important;*/
+		font-family: Fira Sans !important;
+		color: white !important;
+		font-weight: 400 !important;
+	}
+
+
+	/*._1npCwF50X2J7Wt82SZi6J0, */
+	/*._1gVVmSnHZpkUgVShsn7-ua,    */
+	/*.qYj03fU5CXf5t2Fc5iSvg,
+	.MSTY2ZpsdupobywLEfx9u,   */
+
+
+	/*.ListingLayout-backgroundContainer,
+	.ListingLayout-outerContainer,     */
+	/*._2wxsLGNmMLx6sEMLJyn2o9*/
+	._3ozFtOe6WpJEMUtxDOIvtU {
+		background: #252438 !important;
+	}
+
+	._1gVVmSnHZpkUgVShsn7-ua {
+		background: #252438 !important;
+	}
+
+	._3JDs8KEQIXSMn1bTF2ZqJ_ {
+		background: none !important;
+	}
+
+	._2jhbZV6mVCM5Ma7Z376DW2::before {
+		border-left: 2px solid #1e90ff80 !important;
+	}
+         .wBtTDilkW_rtT2k5x3eie,
+         ._2jJNpBqXMbbyOiGCElTYxZ, ._1G4yU68P50vRZ4USXfaceV._2QeqBqfT5UbHBoViZUt-wX, ._3WqRAmto46uhALFWnn8-Pa,
+        ._1RYN-7H8gYctjOQeL8p2Q7  {
+                box-shadow: #00000040 0px 54px 55px, #0000001f 0px -12px 30px, #0000001f 0px 4px 6px, #0000002b 0px 12px 13px, #00000017 0px -3px 5px !important;
+        }
+
+ 	._2vkeRJojnV7cb9pMlPHy7d.a35Fm2MurU14xdNybLiZp {
+                border: none !important;
+	}
+
+
 
 }
