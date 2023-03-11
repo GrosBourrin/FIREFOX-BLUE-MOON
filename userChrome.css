@@ -5,14 +5,13 @@
 @import url("autohidebookmarksbar.css");
 @import url("soundplaying.css");
 @import url("menubartitle.css");
+@import url("library.css");
+@import url("findbarfinal.css");
+@import url("tooltip.css");
+@import url("CenteredStatuspanel.css");
 
-/*@import url("sidebarhover.css");*/
-/*@import url("devtoolsrtm.css");*/
-/*@import url("nofocusring.css");*/
-/*@import url("responsive.css");*/
+/* 231A23 */
 
-
-/* -------------------------------------------------------------------------- */
 :-moz-focusring,
 :focus,
 button::-moz-focus-inner,
@@ -24,6 +23,7 @@ button::-moz-focus-inner,
 	outline: unset !important;
 	outline-offset: unset !important;
 	-moz-outline-radius: unset !important;
+	outline-color: none !important;
 }
 
 .printpreview-pagination {
@@ -38,9 +38,9 @@ button::-moz-focus-inner,
 	--tab-corner-rounding: 3px !important;
 	--button-corner-rounding: 3px !important;
 	/*--menu-corner-rounding: 11px;*/
-	/*--toolbarbutton-hover-background: #1E90FF80 !important;*/
+	--toolbarbutton-hover-background: transparent !important;
 	--focus-outline: 0px !important;
-	--arrowpanel-background-color: transparent !important;
+	--arrowpanel-background-color: #1e1d2d !important;
 	--arrowpanel-border-color: transparent !important;
 	--arrowpanel-color: #1e1d2d !important;
 	--arrowpanel-border-radius: 8px !important;
@@ -50,12 +50,15 @@ button::-moz-focus-inner,
 	--toolbarbutton-border-radius: 2px !important;
 	/* Urlbar (less round) */
 	--tab-border-radius: 3px !important;
+	--default-focusring: 0 !important;
 	/* no outlines */
 	--toolbar-field-focus-border-color: transparent !important;
 	--default-focusring: 0 !important;
 	--default-search-identity-icon: url("Google.svg") !important;
 	outline: none !important;
 	caret-color: #1e90ff !important;
+	/*font-smoothing: grayscale !important;*/
+
 }
 
 /* -------------------------------------------------------------------------- */
@@ -113,64 +116,7 @@ scrollbox[orient="horizontal"] {
 	-moz-box-pack: center !important;
 }
 */
-/* -------------------------------------------------------------------------- */
-/* -------------------------------- tooltips -------------------------------- */
-/* -------------------------------------------------------------------------- */
 
-#btTooltip,
-#bhTooltip,
-#un-toolbar-tooltip,
-#tooltip,
-.tooltip,
-#aHTMLTooltip,
-#urlTooltip,
-tooltip,
-.places-tooltip {
-	font-family: Fira Sans !important;
-	font-size: 13px !important;
-	border: 2px solid #1e1d2d !important;
-	padding: 5px 5px 5px 5px !important;
-	max-width: auto !important;
-	max-height: auto !important;
-	background-color: #1e1d2d !important;
-	color: yellow !important;
-	border-radius: 3px !important;
-	/*font-weight: 450 !important;*/
-	vertical-align: middle !important;
-}
-
-tooltip:not([position]) {
-	margin-top: 21px !important;
-}
-
-#tab-nav-popup {
-	--tooltip-border-radius: 0px !important;
-	--tooltip-border: 0p
-}
-
-.places-tooltip-box,
-tooltip .uc-tooltip-box {
-	--uc-tooltip-inner-padding: 5px 5px 5px 5px !important;
-}
-
-.places-tooltip description:not([value], [id]):empty,
-.places-tooltip description[value=""]:not([id]):empty {
-	display: none !important;
-}
-
-.places-tooltip-box>hbox {
-	display: flex !important;
-	align-items: center !important;
-}
-
-.tooltip-title,
-.places-tooltip-title {
-	font-weight: 600 !important;
-	font-size: 15px !important;
-	max-height: auto !important;
-	overflow-y: clip !important;
-	max-width: auto !important;
-}
 
 /* -------------------------------------------------------------------------- */
 #protections-popup-mainView-panel-header,
@@ -187,7 +133,6 @@ tooltip .uc-tooltip-box {
 * {
 	font-family: Fira Sans !important;
 }
-
 /* -------------------------------------------------------------------------- */
 /* ---------------------------------- menus --------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -229,8 +174,9 @@ menuitem {
 
 #backForwardMenu-arrowscrollbox,
 .menupopup-arrowscrollbox {
+	background: none !important;
 	background-color: #1e1d2d !important;
-	border-radius: 6px !important;
+	border-radius: 8px !important;
 	margin-top: 10px !important;
 	padding-bottom: 7px !important;
 	padding-left: 4px !important;
@@ -422,7 +368,7 @@ menuitem[type="radio"][checked="true"] > .menu-iconic-left {
 		border-radius: 4px !important;
 		padding: 8px !important;
 		background-clip: padding-box !important;
-		box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.32) !important;
+
 	}
 
 	menupopup {
@@ -461,9 +407,10 @@ menuitem[type="radio"][checked="true"] > .menu-iconic-left {
 	}
 
 	#alertImage {
-		background: transparent !important;
-		transform: scale(0.8) !important;
+		background-color: transparent !important;
 		margin-left: -1px !important;
+		width: 48px !important;
+		height: 48px !important;
 	}
 }
 
@@ -622,7 +569,7 @@ treechildren::-moz-tree-image(query) {
 #appMenu-zoomEnlarge-button2,
 #appMenu-fullscreen-button2 {
 	border-color: transparent !important;
-	background: transparent !important;
+	background-color: transparent !important;
 	color: #1e90ff !important;
 	stroke: none !important;
 	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
@@ -636,14 +583,16 @@ treechildren::-moz-tree-image(query) {
 #appMenu-zoomReduce-button2:hover,
 #appMenu-zoomEnlarge-button2:hover,
 #appMenu-fullscreen-button2:hover {
-	background: #1e90ff !important;
+	background-color: #1e90ff !important;
 	color: #ffffff !important;
+	stroke: none !important;
+	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 }
 
 #appMenu-zoomReduce-button2>.toolbarbutton-icon,
 #appMenu-fullscreen-button2>.toolbarbutton-icon,
 #appMenu-zoomEnlarge-button2>.toolbarbutton-icon {
-	background: transparent !important;
+	background-color: transparent !important;
 	stroke: none !important;
 }
 
@@ -796,7 +745,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	background: #4f4f4f !important;
 }
 
-/* hide separators arounf preview image */
+/* hide separators around preview image */
 #editBookmarkPanel>#editBookmarkHeaderSeparator,
 #editBookmarkPanel>.panel-subview-body>#editBookmarkSeparator {
 	display: none !important;
@@ -808,7 +757,7 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	appearance: none !important;
 	background-color: #000000 !important;
 	color: #ffffff !important;
-	height: 26px !important;
+	height: 18px !important;
 	border: none !important;
 	outline: 0 !important;
 	font-family: Fira Sans !important;
@@ -822,11 +771,11 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	background: #000000 !important;
 	color: #ffffff !important;
 	border: none !important;
-	min-height: 24px !important;
+	height: 18px !important;
 }
 
 #editBMPanel_tagsField {
-	height: 24px !important;
+	height: 18px !important;
 	border: none !important;
 	font-family: Fira Sans !important;
 	background: #000000 !important;
@@ -838,32 +787,33 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	background: #000000 !important;
 	border: 0px !important;
 	outline: 0 !important;
-	height: 24px !important;
+	height: 16px !important;
 }
 
 #editBMPanel_keywordField {
 	background: #000000 !important;
 	border: 0px !important;
 	outline: 0 !important;
-	height: 24px !important;
+	height: 18px !important;
 }
 
 #editBMPanel_tagsSelectorRow {
-	height: 24px !important;
+	height: 18px !important;
 	font-family: Fira Sans !important;
 }
+
 
 /*	#FFFFFF text in star menu */
 #editBMPanel_folderMenuList {
 	appearance: none !important;
-	background: #1e1d2d !important;
+	background: #000000 !important;
 	color: #ffffff !important;
 	border: none !important;
 	font-family: Fira Sans !important;
-	background: #1e1d2d !important;
-	padding-block: 2px !important;
+	padding-block: 1px !important;
 	margin-top: 2px !important;
 	margin-bottom: 2px !important;
+	height: 32px !important;
 }
 
 #editBMPanel_folderMenuList menuitem {
@@ -882,15 +832,17 @@ panelmultiview .toolbaritem-combined-buttons>label {
 	fill: #1e1d2d !important;
 	background-color: transparent !important;
 	color: #ffffff !important;
+	box-shadow: none !important;
 }
 
 #editBookmarkPanel .expander-up,
 #editBookmarkPanel .expander-down {
-	/*min-width: 16px !important;
-	max-height: 16px !important;*/
-	transform: scale(0.8) !important;
+	min-width: 16px !important;
+	max-height: 16px !important;
+	transform: scale(90%, 70%) !important;
 	border-radius: 2px !important;
 }
+
 
 #editBMPanel_keywordRow,
 #editBMPanel_locationRow {
@@ -903,7 +855,7 @@ panel #editBookmarkPanel,
 	opacity: 1 !important;
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
-	background-color: #1e1d2d !important;
+	background: #1e1d2d !important;
 }
 
 #editBookmarkPanel {
@@ -1091,7 +1043,7 @@ checkbox[disabled]>.checkbox-check {
 	color: #ffffff !important;
 	border: none !important;
 	transition: height 0.28s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-	transition-delay: 800ms !important;
+	/*transition-delay: 800ms !important;*/
 }
 
 #editBookmarkPanelRemoveButton {
@@ -1480,7 +1432,7 @@ hbox#sidebar-search-container textbox#search-box {
 	--panel-background: #1e1d2d !important;
 	--panel-color: #ffffff !important;
 	--panel-border-color: none !important;
-	--panel-border-radius: 8px !important;
+	--panel-border-radius: 6px !important;
 	/*--panel-padding: var(--arrowpanel-padding) !important;*/
 }
 
@@ -1575,9 +1527,11 @@ treechildren::-moz-tree-image(query) {
 	padding: 16 16 !important;
 	transform: scale(1.25) !important;
 }
+
 #fxa-toolbar-menu-button {
-        margin-top: 1px !important;
+	margin-top: 1px !important;
 }
+
 /*-------------------------nav button----------------------------*/
 #back-button,
 #context-back {
@@ -1709,6 +1663,10 @@ spacer,
 	-moz-image-region: auto !important;
 }
 
+.bookmark-item[label="Visual Code Editor"] image {
+	filter: invert(100%) !important;
+}
+
 .bookmark-item[label="Mots entre Amis"] image {
 	width: 0 !important;
 	height: 0 !important;
@@ -1738,6 +1696,14 @@ spacer,
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJiYWNrdXAiIHZpZXdCb3g9IjAgMCA3NjkgNzY5IiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIKICBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgdGV4dC1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgdmVyc2lvbj0iMS4xIj4KICA8c3R5bGUgaWQ9InNwaW4iPgogICAgQGtleWZyYW1lcyBhcnJvd19hbmltYXRpb25fZ3JvdXBfX3RyIHsKCiAgICAgIDAlLAogICAgICB0byB7CiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMzgzLjU1MTM1M3B4LCAzODUuNDM1OTc0cHgpIHJvdGF0ZSgwZGVnKQogICAgICB9CgogICAgICAxMDAlIHsKICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgzODMuNTUxMzUzcHgsIDM4NS40MzU5NzRweCkgcm90YXRlKC0xNDQwZGVnKQogICAgICB9CiAgICB9CgogICAgI2Fycm93X2FuaW1hdGlvbl9ncm91cCB7CiAgICAgIGFuaW1hdGlvbjogYXJyb3dfYW5pbWF0aW9uX2dyb3VwX190ciA4MDAwbXMgbGluZWFyIGluZmluaXRlIG5vcm1hbCBmb3J3YXJkcwogICAgfQogIDwvc3R5bGU+CiAgPGcgaWQ9ImJhY2tncm91bmQiIHRyYW5zZm9ybT0ibWF0cml4KDQgMCAwIDQgLTg5Ny4yNCAtMjM2MS4zNjYpIj4KICAgIDxwYXRoIGlkPSJzcXVhcmUiCiAgICAgIGQ9Ik00MTYuMDkgNjg2LjcydjcyLjE5YzAgMTEuMDMtOC4zMiAyMS4xMS0xOS4xOCAyMy4xOC0xLjYxLjMxLTMuMjcuNDgtNC45LjQ4LTQ3Ljk3LjAzLTk1LjkzLjAyLTE0My45LjAyLTExLjc2IDAtMjIuMDItOS4wMi0yMy41Ni0yMC43MmEyMy4yNyAyMy4yNyAwIDAxLS4yMy0zLjEyYy0uMDEtNDguMDktLjAxLTk2LjE4LS4wMS0xNDQuMjYgMC0xMS4wMyA4LjMyLTIxLjEyIDE5LjE4LTIzLjE4IDEuNjEtLjMxIDMuMjctLjQ4IDQuOS0uNDggNDguMDEtLjAyIDk2LjAyLS4wMiAxNDQuMDItLjAyIDExLjAzIDAgMjEuMTMgOC4zMyAyMy4xOCAxOS4xOC4zIDEuNjEuNDggMy4yNy40OCA0LjkuMDMgMjMuOTUuMDIgNDcuODkuMDIgNzEuODN6IgogICAgICBmaWxsPSJ0cmFuc3BhcmVudCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjAiIC8+CiAgPC9nPgogIDxnIGlkPSJhcnJvd19hbmltYXRpb25fZ3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM4My41NTEgMzg1LjQzNikiPgogICAgPGcgaWQ9ImFycm93X2NlbnRlciIgdHJhbnNmb3JtPSJtYXRyaXgoNCAwIDAgNCAtMTI4MC43NTYgLTI3NDYuOCkiPgogICAgICA8ZyBpZD0iYXJyb3dfZ3JvdXAiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIwIj4KICAgICAgICA8cGF0aCBpZD0iYXJyb3cxIgogICAgICAgICAgZD0iTTI4Ni41MSA2NzguNDZjLS4yNCAwLS40OC0uMDEtLjczLS4wMi0zLjkyLS4xNy04LjE3LS4yNS0xMy4zOS0uMjUtMy4xMyAwLTYuMjUuMDMtOS4zOC4wNS0zLjE0LjAzLTYuMjkuMDUtOS40My4wNWgtMi4xMmMtOS42NC0uMDQtMTUuNjQtNi4xNS0xNS42NS0xNS45My0uMDItMTEuMzUtLjAyLTIyLjcxIDAtMzQuMDYuMDEtOC45NCA2LjA1LTE1LjcyIDE0LjM2LTE2LjEzLjI1LS4wMS41LS4wMi43NS0uMDIgNi43MiAwIDEyLjE0IDQuNTQgMTQuMDEgMTEuMzkgOC44Ny03Ljc1IDE4LjU5LTEzLjM5IDI5LjU2LTE3LjE3IDguNjYtMi45OCAxNy43NC00LjQ5IDI3LTQuNDkgMzQuMjYgMCA2NS43OCAyMC41NyA3OC40MyA1MS4xOSAxLjggNC4zNSAxLjkgOC44My4yOCAxMi42MS0xLjQ5IDMuNDktNC40MSA2LjIzLTguMjEgNy43MS0xLjg3LjczLTMuNzYgMS4wOS01LjY0IDEuMDktNS44NyAwLTExLTMuNjMtMTMuNzQtOS43MS01Ljk0LTEzLjItMTUuMjQtMjIuNTMtMjguNDMtMjguNTMtNi42My0zLjAxLTE0LjIzLTQuNjEtMjEuOTYtNC42MS0xNiAwLTMxLjA5IDYuNDgtNDAuNzUgMTcuMjEgMCAwIDMuMjYgMCA0LjU5LS4wMSA5LjU4IDAgMTUuOSA1LjcxIDE2LjE3IDE0LjU0LjExIDMuNzctMS4zNCA3LjQxLTQuMDggMTAuMjMtMi45OSAzLjEtNy4yMyA0Ljg2LTExLjY0IDQuODZ6IiAvPgogICAgICAgIDxwYXRoIGlkPSJhcnJvdzIiCiAgICAgICAgICBkPSJNMzIxLjkzIDc3MS41MmMtMzMuOTIgMC02NS40Mi0yMC42Ny03OC4zOS01MS40NC0zLjEyLTcuNDEtLjg2LTE1LjA0IDUuNjQtMTkuMDEgMi4zNS0xLjQ0IDUuMDQtMi4xOSA3Ljc2LTIuMTkgNC41IDAgOC43IDIuMDMgMTEuNTMgNS41NyAxIDEuMjUgMS42NyAyLjY2IDIuMjYgMy45LjE2LjM1LjMzLjY5LjUgMS4wMyAxMC40NSAyMC44NiAyNy4yNiAzMS43NCA0OS45NSAzMi4zNS41My4wMSAxLjA3LjAyIDEuNTkuMDIgMTQuNCAwIDI3LjA1LTUuMjcgMzcuNjctMTUuNjloLTIuMjhjLTEuNyAwLTMuMzgtLjAxLTUuMDctLjAzLTguNy0uMTItMTQuOTgtNi40NC0xNC45Mi0xNS4wMy4wNi04LjE0IDYuMzctMTQuMzMgMTQuNjgtMTQuMzkgNi40LS4wNSAxMi45Ny0uMDggMTkuNTQtLjA4IDUuNzcgMCAxMS41My4wMiAxNy4zLjA2IDguNTYuMDUgMTQuOCA2LjQ0IDE0Ljg1IDE1LjE4LjA3IDEyLjI2LjA0IDI0LjYzLjAxIDM1LjI2LS4wMyA4LjU0LTUuNTkgMTQuODQtMTMuODMgMTUuNjgtLjQ1LjA1LS45LjA3LTEuMzUuMDctNi4wNSAwLTExLjMxLTQuMDItMTMuNTUtMTAuMDctMS4zNi44My0yLjcxIDEuNjYtNC4wNCAyLjQ5LTUuMjggMy4yNy0xMC43NCA2LjY2LTE2LjU0IDkuMjUtMTAuNDggNC42OS0yMS42OSA3LjA3LTMzLjMxIDcuMDd6IiAvPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K") !important;
 	background-size: cover !important;
 }
+
+/*
+.bookmark-item image[src="page-icon:about:restartrequired"] {
+  box-sizing: border-box !important;
+  padding-inline-start: 16px !important;
+  overflow: hidden !important;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJiYWNrdXAiIHZpZXdCb3g9IjAgMCA3NjkgNzY5IiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIKICBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgdGV4dC1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgdmVyc2lvbj0iMS4xIj4KICA8c3R5bGUgaWQ9InNwaW4iPgogICAgQGtleWZyYW1lcyBhcnJvd19hbmltYXRpb25fZ3JvdXBfX3RyIHsKCiAgICAgIDAlLAogICAgICB0byB7CiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMzgzLjU1MTM1M3B4LCAzODUuNDM1OTc0cHgpIHJvdGF0ZSgwZGVnKQogICAgICB9CgogICAgICAxMDAlIHsKICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgzODMuNTUxMzUzcHgsIDM4NS40MzU5NzRweCkgcm90YXRlKC0xNDQwZGVnKQogICAgICB9CiAgICB9CgogICAgI2Fycm93X2FuaW1hdGlvbl9ncm91cCB7CiAgICAgIGFuaW1hdGlvbjogYXJyb3dfYW5pbWF0aW9uX2dyb3VwX190ciA4MDAwbXMgbGluZWFyIGluZmluaXRlIG5vcm1hbCBmb3J3YXJkcwogICAgfQogIDwvc3R5bGU+CiAgPGcgaWQ9ImJhY2tncm91bmQiIHRyYW5zZm9ybT0ibWF0cml4KDQgMCAwIDQgLTg5Ny4yNCAtMjM2MS4zNjYpIj4KICAgIDxwYXRoIGlkPSJzcXVhcmUiCiAgICAgIGQ9Ik00MTYuMDkgNjg2LjcydjcyLjE5YzAgMTEuMDMtOC4zMiAyMS4xMS0xOS4xOCAyMy4xOC0xLjYxLjMxLTMuMjcuNDgtNC45LjQ4LTQ3Ljk3LjAzLTk1LjkzLjAyLTE0My45LjAyLTExLjc2IDAtMjIuMDItOS4wMi0yMy41Ni0yMC43MmEyMy4yNyAyMy4yNyAwIDAxLS4yMy0zLjEyYy0uMDEtNDguMDktLjAxLTk2LjE4LS4wMS0xNDQuMjYgMC0xMS4wMyA4LjMyLTIxLjEyIDE5LjE4LTIzLjE4IDEuNjEtLjMxIDMuMjctLjQ4IDQuOS0uNDggNDguMDEtLjAyIDk2LjAyLS4wMiAxNDQuMDItLjAyIDExLjAzIDAgMjEuMTMgOC4zMyAyMy4xOCAxOS4xOC4zIDEuNjEuNDggMy4yNy40OCA0LjkuMDMgMjMuOTUuMDIgNDcuODkuMDIgNzEuODN6IgogICAgICBmaWxsPSJ0cmFuc3BhcmVudCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjAiIC8+CiAgPC9nPgogIDxnIGlkPSJhcnJvd19hbmltYXRpb25fZ3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM4My41NTEgMzg1LjQzNikiPgogICAgPGcgaWQ9ImFycm93X2NlbnRlciIgdHJhbnNmb3JtPSJtYXRyaXgoNCAwIDAgNCAtMTI4MC43NTYgLTI3NDYuOCkiPgogICAgICA8ZyBpZD0iYXJyb3dfZ3JvdXAiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIwIj4KICAgICAgICA8cGF0aCBpZD0iYXJyb3cxIgogICAgICAgICAgZD0iTTI4Ni41MSA2NzguNDZjLS4yNCAwLS40OC0uMDEtLjczLS4wMi0zLjkyLS4xNy04LjE3LS4yNS0xMy4zOS0uMjUtMy4xMyAwLTYuMjUuMDMtOS4zOC4wNS0zLjE0LjAzLTYuMjkuMDUtOS40My4wNWgtMi4xMmMtOS42NC0uMDQtMTUuNjQtNi4xNS0xNS42NS0xNS45My0uMDItMTEuMzUtLjAyLTIyLjcxIDAtMzQuMDYuMDEtOC45NCA2LjA1LTE1LjcyIDE0LjM2LTE2LjEzLjI1LS4wMS41LS4wMi43NS0uMDIgNi43MiAwIDEyLjE0IDQuNTQgMTQuMDEgMTEuMzkgOC44Ny03Ljc1IDE4LjU5LTEzLjM5IDI5LjU2LTE3LjE3IDguNjYtMi45OCAxNy43NC00LjQ5IDI3LTQuNDkgMzQuMjYgMCA2NS43OCAyMC41NyA3OC40MyA1MS4xOSAxLjggNC4zNSAxLjkgOC44My4yOCAxMi42MS0xLjQ5IDMuNDktNC40MSA2LjIzLTguMjEgNy43MS0xLjg3LjczLTMuNzYgMS4wOS01LjY0IDEuMDktNS44NyAwLTExLTMuNjMtMTMuNzQtOS43MS01Ljk0LTEzLjItMTUuMjQtMjIuNTMtMjguNDMtMjguNTMtNi42My0zLjAxLTE0LjIzLTQuNjEtMjEuOTYtNC42MS0xNiAwLTMxLjA5IDYuNDgtNDAuNzUgMTcuMjEgMCAwIDMuMjYgMCA0LjU5LS4wMSA5LjU4IDAgMTUuOSA1LjcxIDE2LjE3IDE0LjU0LjExIDMuNzctMS4zNCA3LjQxLTQuMDggMTAuMjMtMi45OSAzLjEtNy4yMyA0Ljg2LTExLjY0IDQuODZ6IiAvPgogICAgICAgIDxwYXRoIGlkPSJhcnJvdzIiCiAgICAgICAgICBkPSJNMzIxLjkzIDc3MS41MmMtMzMuOTIgMC02NS40Mi0yMC42Ny03OC4zOS01MS40NC0zLjEyLTcuNDEtLjg2LTE1LjA0IDUuNjQtMTkuMDEgMi4zNS0xLjQ0IDUuMDQtMi4xOSA3Ljc2LTIuMTkgNC41IDAgOC43IDIuMDMgMTEuNTMgNS41NyAxIDEuMjUgMS42NyAyLjY2IDIuMjYgMy45LjE2LjM1LjMzLjY5LjUgMS4wMyAxMC40NSAyMC44NiAyNy4yNiAzMS43NCA0OS45NSAzMi4zNS41My4wMSAxLjA3LjAyIDEuNTkuMDIgMTQuNCAwIDI3LjA1LTUuMjcgMzcuNjctMTUuNjloLTIuMjhjLTEuNyAwLTMuMzgtLjAxLTUuMDctLjAzLTguNy0uMTItMTQuOTgtNi40NC0xNC45Mi0xNS4wMy4wNi04LjE0IDYuMzctMTQuMzMgMTQuNjgtMTQuMzkgNi40LS4wNSAxMi45Ny0uMDggMTkuNTQtLjA4IDUuNzcgMCAxMS41My4wMiAxNy4zLjA2IDguNTYuMDUgMTQuOCA2LjQ0IDE0Ljg1IDE1LjE4LjA3IDEyLjI2LjA0IDI0LjYzLjAxIDM1LjI2LS4wMyA4LjU0LTUuNTkgMTQuODQtMTMuODMgMTUuNjgtLjQ1LjA1LS45LjA3LTEuMzUuMDctNi4wNSAwLTExLjMxLTQuMDItMTMuNTUtMTAuMDctMS4zNi44My0yLjcxIDEuNjYtNC4wNCAyLjQ5LTUuMjggMy4yNy0xMC43NCA2LjY2LTE2LjU0IDkuMjUtMTAuNDggNC42OS0yMS42OSA3LjA3LTMzLjMxIDcuMDd6IiAvPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K") center/contain no-repeat !important;
+}*/
 
 .bookmark-item[label="Messenger"] image {
 	width: 0px !important;
@@ -1783,11 +1749,12 @@ spacer,
 	border-radius: 3px !important;
 	background-clip: none !important;
 	color: #ffffff !important;
-	text-shadow: 1px 1px 1px #1e1d2d !important;
+	font-weight: bold !important;
+	/*text-shadow: 1px 1px 1px #1e1d2d !important;*/
 }
 
 tab:not([selected]):hover .tab-background {
-	background: #1e90ff85 !important;
+	background: #1e90ff55 !important;
 	border-radius: 3px !important;
 }
 
@@ -2063,11 +2030,10 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	background-color: transparent !important;
 	border-color: none !important;
 	margin-inline: -2px !important;
-
 }
 
 #nav-bar {
-	height: 34px !important;
+	height: 24px !important;
 }
 
 /*
@@ -2332,425 +2298,6 @@ input:not(#urlbar-input) {
 	display: none !important;
 }
 
-/*---------------------------------library ----------------------------------*/
-
-@-moz-document url("chrome://browser/content/places/places.xhtml") {
-	* {
-		font-family: Fira Sans !important;
-		font-weight: inherit !important;
-		font-size: 14px !important;
-		color: #ffffff !important;
-		--organizer-border-color: #4f4f4f !important;
-		--organizer-separator-color: #4f4f4f !important;
-	}
-
-	toolbar {
-		appearance: none !important;
-		background-color: #1e1d2d !important;
-		border: 0px !important;
-	}
-
-	listbox,
-	textbox {
-		appearance: none !important;
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-		min-height: 20px !important;
-		padding: 0 0 0 4px !important;
-		border: 1px solid !important;
-		border-color: #4f4f4f !important;
-		border-radius: 0px !important;
-	}
-
-	#editBMPanel_rows>row>hbox>textbox,
-	#editBMPanel_rows>row>textbox,
-	#editBMPanel_tagsSelector {
-		background: #1e1d2d !important;
-		border: none !important;
-	}
-
-	/*
-	#placesToolbox {
-		border: none !important;
-	}*/
-
-	#placesToolbar>toolbarbutton {
-		margin: 6px 4px 5px !important;
-		appearance: none !important;
-		background: #1e90ff !important;
-		border-radius: 0px !important;
-		/*filter: invert(100%) !important;*/
-		border: none !important;
-	}
-
-	#placesList {
-		appearance: none !important;
-		color: #ffffff !important;
-		background-color: #1e1d2d !important;
-	}
-
-	#placesView>splitter {
-		border-color: #4f4f4f !important;
-	}
-
-	#editBMPanel_locationField,
-	#editBMPanel_tagsField,
-	#editBMPanel_keywordField,
-	#editBMPanel_tagsSelector {
-		appearance: none !important;
-		background: #000000 !important;
-		color: #ffffff !important;
-		height: 24px !important;
-		/*outline: 1px ridge #1E90FF50 !important;*/
-		border-radius: 0px !important;
-	}
-
-	#editBookmarkPanelRows>vbox>input,
-	#editBookmarkPanelRows>vbox>hbox>input {
-		border-radius: 3px !important;
-		background: #000000 !important;
-	}
-
-	#editBookmarkPanelRows .expander-up .button-icon {
-		transform: rotate(180deg) !important;
-		max-height: 24px !important;
-	}
-
-	#editBMPanel_tagsSelectorExpander {
-		max-height: 24px !important;
-	}
-
-	#editBMPanel_keywordRow,
-	#editBMPanel_locationRow,
-	#editBMPanel_tagsRow,
-	#editBMPanel_tagsSelectorRow {
-		background: #1e1d2d !important;
-		color: #ffffff !important;
-		border: none !important;
-	}
-
-	#searchFilter {
-		appearance: none !important;
-		background-color: #000000 !important;
-		color: #ffffff !important;
-		/*border: 1px solid var(--organizer-toolbar-field-border-color);
-		border-radius: 4px;
-		margin: 0;
-		padding-block: 2px;
-		min-height: 24px;*/
-	}
-
-	/*
-	#editBookmarkPanelRows>vbox>html|input,
-	#editBookmarkPanelRows>vbox>hbox>html|input {
-		padding: 8px !important;
-		border-radius: 4px !important;
-		border: 0 !important;
-		outline: 1px solid var(--input-border-color, ThreeDShadow);
-		outline-offset: -1px !important;
-		background: #000000 !important;
-		color: #000000 !important;
-		margin: 0 !important;
-	}*/
-
-	#places #downloadsRichListBox {
-		appearance: none !important;
-		color: #ffffff !important;
-		background: #1e1d2d !important;
-	}
-
-	#detailsDeck {
-		/*border: none !important;*/
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-	}
-
-	#detailsPane {
-		/*border: none !important;*/
-		border-top: 1px solid #4f4f4f !important;
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-	}
-
-	/*	arrowscrollbox {
-		border: none !important;
-		outline: none !important;
-		background-color: #1E1D2D !important;
-		border-radius: 4px !important;
-	}*/
-
-	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
-		color: #ffffff !important;
-	}
-
-	treechildren::-moz-tree-separator {
-		/*height: 1px !important;*/
-		border-color: #4f4f4f !important;
-	}
-
-	treechildren::-moz-tree-separator(hover) {
-		border-color: #4f4f4f !important;
-	}
-
-	treechildren::-moz-tree-separator(selected) {
-		border-color: #4f4f4f !important;
-	}
-
-	#placeContentColumns .separator {
-		color: #4f4f4f !important;
-		fill: #4f4f4f !important;
-		border: 1px #4f4f4f !important;
-	}
-
-	#places treechildren::-moz-tree-twisty {
-		margin-bottom: 3px !important;
-	}
-
-	menuseparator:last-of-type {
-		display: none !important;
-	}
-
-	#placesList>treechildren::-moz-tree-row(hover),
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-		appearance: none !important;
-		/*-moz-font-smoothing-background-color: none !important;*/
-		border: none !important;
-		background-color: #1e90ff80 !important;
-		border-radius: 2px !important;
-		color: #ffffff !important;
-		outline: none !important;
-		margin-left: 4px !important;
-		margin-right: 4px !important;
-	}
-
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
-	#placesList>treechildren::-moz-tree-row(selected) {
-		appearance: none !important;
-		/*-moz-font-smoothing-background-color: none !important;*/
-		border: none !important;
-		background: #1e90ff !important;
-		border-radius: 2px !important;
-		color: #ffffff !important;
-		outline: none !important;
-		margin-left: 4px !important;
-		margin-right: 4px !important;
-	}
-
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(active),
-	#placesList>treechildren::-moz-tree-row(active) {
-		appearance: none !important;
-		/*-moz-font-smoothing-background-color: none !important;*/
-		border: none !important;
-		background: #1e90ff !important;
-		border-radius: 2px !important;
-		color: #ffffff !important;
-		outline: none !important;
-		margin-left: 4px !important;
-		margin-right: 4px !important;
-	}
-
-	#places treechildren::-moz-tree-row {
-		background-color: transparent !important;
-	}
-
-	#places treechildren::-moz-tree-image {
-		color: #ffffff !important;
-		fill: #ffffff !important;
-	}
-
-	#places treechildren::-moz-tree-image(selected) {
-		fill: #ffffff !important;
-	}
-
-	#placeContent>treechildren::-moz-tree-cell,
-	#placeContent>treechildren::-moz-tree-column {
-		border: 1px #4f4f4f !important;
-	}
-
-	#placesView treechildren::-moz-tree-row {
-		min-height: 24px !important;
-	}
-
-	#contentView treecol {
-		appearance: none !important;
-		border: 1px #4f4f4f !important;
-		background: #1e1d2d !important;
-		color: #4f4f4f !important;
-		border-left: 1px solid !important;
-		box-shadow: inset 0 -1px #4f4f4f !important;
-	}
-
-	/* menus */
-	#placesMenu {
-		margin-inline-start: 6px !important;
-		outline: none !important;
-	}
-
-	#placesMenu>menu {
-		appearance: none !important;
-		color: #ffffff !important;
-		border-radius: 2px !important;
-		padding-block: 5px !important;
-		padding-inline-start: 5px !important;
-		margin-inline-end: 4px !important;
-		outline: none !important;
-		border: none !important;
-	}
-
-	#placesMenu>menu:hover {
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	#placesMenu>menu:hover:active,
-	#placesMenu>menu[open] {
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-		outline: none !important;
-	}
-
-	#placesMenu>menu>.menubar-text {
-		margin-block: 0 !important;
-		/* override menu.css */
-		padding-inline-end: 8px !important;
-		/*background: url(chrome://global/skin/icons/arrow-down-12.svg) right center no-repeat;
-	background-size: 6px;*/
-	}
-
-	#placesMenu>menu>.menubar-text:-moz-locale-dir(rtl) {
-		background-position-x: left !important;
-	}
-
-	#placesView treechildren .separator {
-		border: 1px #4f4f4f !important;
-	}
-
-	tree {
-		background-color: #1e1d2d !important;
-	}
-
-	#main-menubar {
-		background-color: #1e1d2d !important;
-	}
-
-	#main-menubar>* {
-		color: #ffffff !important;
-	}
-
-	menupopup {
-		appearance: none !important;
-		border: none !important;
-		border-radius: 4px !important;
-		--panel-border-radius: 4px !important;
-		--panel-background-color: #1e1d2d !important;
-		--panel-border-color: none !important;
-		outline: none !important;
-	}
-
-	/*
-	#placesMenu>menu {
-		color: #FFFFFF !important;
-		background: blue !important;
-		--organizer-outline-color: none !important;
-	}
-*/
-	arrowscrollbox {
-		/*background: #1E1D2D !important;*/
-		padding-block: 4px !important;
-	}
-
-	#contentView treecol {
-		box-shadow: inset 0 -1px #4f4f4f !important;
-	}
-
-	#main-menubar> :hover,
-	menubar>menu[_moz-menuactive="true"][open="true"] {
-		appearance: none !important;
-		background: #1e1d2d !important;
-		border: none !important;
-		outline: none !important;
-	}
-
-	@media screen and (-moz-windows-theme),
-	screen and (-moz-windows-classic),
-	screen and (-moz-windows-default-theme),
-	screen and (-moz-os-version: windows-win7),
-	screen and (-moz-os-version: windows-win8),
-	screen and (-moz-os-version: windows-win10) {
-
-		#metaTagsCaption,
-		#security-identity,
-		#security-identity-groupbox,
-		#security-privacy,
-		#security-privacy-groupbox,
-		#security-technical,
-		#security-technical-groupbox {
-			appearance: none !important;
-			background-color: #1e1d2d !important;
-			border: none !important;
-			color: #ffffff !important;
-		}
-
-		#placesMenu>menu {
-			color: #ffffff !important;
-			outline: none !important;
-			--organizer-outline-color: none !important;
-		}
-
-		#security-identity-groupbox,
-		#security-privacy-groupbox,
-		#security-technical-groupbox {
-			appearance: none !important;
-			background-color: #1e1d2d !important;
-		}
-
-		#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover):not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
-			background: 0 0 !important;
-			/*-moz-border-top-colors: transparent !important;
-			-moz-border-right-colors: transparent !important;
-			-moz-border-left-colors: transparent !important;
-			-moz-border-bottom-colors: transparent !important;*/
-			border-color: transparent !important;
-		}
-
-		treechildren {
-			--treechildren-border-color: #4f4f4f !important;
-		}
-	}
-
-	#placesToolbar>toolbarbutton#back-button,
-	#placesToolbar>toolbarbutton#forward-button {
-		width: 24px !important;
-		height: 24px !important;
-		background: transparent !important;
-	}
-
-	treechildren {
-		--treechildren-outline: none !important;
-	}
-
-	/* Remove tiny spacing in separators appearing after the twisty column */
-
-	.menu-iconic-icon {
-		fill: currentColor !important;
-		-moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
-		margin-inline-start: 0 !important;
-		margin-inline-end: 16px !important;
-		width: 24px !important;
-		height: 24px !important;
-		padding: 4px !important;
-	}
-
-	/*
-	#organizeButton {
-		max-width: 124px !important;
-	}
-	#placesMenu>menu>.menubar-text {
-		text-align: left !important;
-		background: url(chrome://global/skin/icons/arrow-down-12.svg) 105% center no-repeat !important;
-		background-size: 12px !important;}*/
-}
-
 #reader-mode-button>.urlbar-icon {
 	margin-left: 0px !important;
 	transform: scale(1) !important;
@@ -2839,8 +2386,8 @@ input:not(#urlbar-input) {
 /* Make Tab Name Shadowed When Selected */
 .tab-text[selected] {
 	color: #ffffff !important;
-	text-shadow: 1px 1px 1px #000000, 0 0 2px #000000, 0 0 2px #000000 !important;
-	/*font-weight: bold !important;*/
+	text-shadow: 0px 0px 1px #000000, 0 0 2px #000000, 0 0 2px #000000 !important;
+	font-weight: 550 !important;
 	vertical-align: middle !important;
 	/*text-align: center !important;*/
 }
@@ -3229,12 +2776,14 @@ menupopup {
 #customizationui-widget-multiview toolbarbutton:hover,
 #widget-overflow-list toolbarbutton:hover {
 	background: #1e90ff !important;
+	color: #ffffff !important;
 }
 
 #appMenu-mainView toolbarbutton,
 #customizationui-widget-multiview toolbarbutton,
 #widget-overflow-list toolbarbutton {
 	color: #ffffff !important;
+	background: #1e1d2d !important;
 }
 
 panelview .toolbarbutton-1:-moz-any(:hover, :focus),
@@ -3321,7 +2870,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 }
 
 /*.menupopup-arrowscrollbox,*/
-#customization-content-container,
+
 #customization-panel-container,
 #customization-panelDescription,
 #customize-mode-overflow-list-description,
@@ -3332,11 +2881,15 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	background: #1e1d2d !important;
 	background-color: #1e1d2d !important;
 	color: #ffffff !important;
-	border: 0px !important;
+	border: none !important;
 	font-family: Fira Sans !important;
 	outline: none !important;
-	--arrowscollbox: none !important;
-	/*--arrowpanel-container: none !important;*/
+	--arrowscrollbox: none !important;
+	--arrowpanel-container: none !important;
+}
+
+#customization-palette-container {
+	background: #1e1d2d !important;
 }
 
 #customization-panelWrapper>.panel-arrowbox>.panel-arrow[side="top"] {
@@ -3397,11 +2950,14 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 #content,
 .tabbrowser-tabpanel,
 browser,
+browser.dialogFrame,
+/*dialog,*/
 #browser,
 #tabbrowser-tabpanels,
 browser[type="content-primary"],
 browser[type="content"]>html {
 	background-color: #1e1d2d !important;
+	color: white !important;
 }
 
 /* new tab button icon */
@@ -3417,95 +2973,12 @@ browser[type="content"]>html {
 	vertical-align: middle !important;
 }
 
-/* findbar tweaks */
-findbar {
-	-moz-box-ordinal-group: 0;
-	margin-bottom: -33px;
-	position: relative;
-	border-top: none !important;
-	padding: 0 !important;
-	transition: transform 82ms linear, opacity 82ms linear 32ms !important;
-	background: none !important;
-	pointer-events: none;
-	z-index: 1;
-}
-
-.findbar-container>.findbar-find-fast {
-	padding: var(--toolbarbutton-inner-padding) 1px;
-	margin: 0 !important;
-}
-
-findbar[hidden] {
-	transform: translateY(-30px);
-}
-
-findbar>.findbar-container,
-findbar>.close-icon {
-	border: 1px solid var(--chrome-content-separator-color);
-	border-width: 0 0 1px 0px;
-	background: var(--uc-light-bkgnd-color, #1e1d2d) !important;
-	pointer-events: auto;
-}
-
-findbar>.findbar-container {
-	-moz-box-direction: reverse !important;
-	border-left-width: 1px !important;
-	border-bottom-left-radius: 4px !important;
-	background: #1e1d2d !important;
-}
-
-.findbar-find-status {
-	display: -moz-box;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-moz-box-flex: 1;
-}
-
-.findbar-closebutton {
-	margin: 0 !important;
-	border-radius: 0 !important;
-	padding: 5px !important;
-}
-
-.findbar-closebutton>image {
-	padding: 3px !important;
-}
-
-.findbar-closebutton:hover>image {
-	background: #1e90ff !important;
-	border-radius: 4px !important;
-}
-
-findbar>.findbar-container>hbox {
-	margin: 0 5px;
-}
-
-findbar::before {
-	content: "";
-	display: -moz-box;
-	-moz-box-flex: 100;
-}
-
-.findbar-textbox::placeholder,
-.findbar-highlight,
-.findbar-case-sensitive,
-.findbar-match-diacritics,
-.findbar-entire-word,
-.findbar-label {
-	font-family: Fira Sans !important;
-	/*color: #FFFFFF !important;*/
-}
-
-.findbar-textbox {
-	background-color: black !important;
-	color: white !important;
-}
-
-/* most radiuses */
 
 /* "Do you really want to close all tabs?" dialogue */
 .dialogBox {
 	border-radius: 8px !important;
+	border: none !important;
+	box-shadow: none !important;
 }
 
 /*
@@ -3514,11 +2987,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 	padding-inline: 3px !important;
 }*/
 /* ################################################################################################# */
-/* TAB ANIMATION: LOADING PROGRESS LINE INDICATOR */
+/*                        TAB ANIMATION: LOADING PROGRESS LINE INDICATOR                             */
 /* ################################################################################################# */
 
 .tabbrowser-tab .tab-loading-burst {
-	background-image: linear-gradient(90deg, #1e1d2d80, #1e90ff) !important;
+	background-image: linear-gradient(90deg, #1e1d2d90, #1e90ff) !important;
 	background-repeat: no-repeat !important;
 	transition: background-size 0.5s ease-out !important;
 	opacity: 0.7s linear !important;
@@ -3601,24 +3074,6 @@ toolbar #fullscreen-button {
 	margin-bottom: 1px !important;
 }
 
-#bookmarkpropertiesdialog {
-	background: #1e1d2d !important;
-}
-
-.titleIcon {
-	background-image: url("star.svg") !important;
-	fill: yellow !important;
-	background-color: #1e1d2d !important;
-}
-
-.dialog-button-box>button {
-	background: #1e90ff !important;
-}
-
-.dialog-button-box>button:hover {
-	background: #1e90ff80 !important;
-}
-
 :root {
 	--in-content-button-background: #1e90ff !important;
 	--in-content-button-background-hover: #1e90ff80 !important;
@@ -3671,11 +3126,8 @@ toolbar #fullscreen-button {
 
 	button {
 		appearance: none !important;
-
 		background-color: #1e1d2d !important;
-
 		color: #ffffff !important;
-
 		border: 1px solid #1e90ff !important;
 		border-radius: 0px !important;
 	}
@@ -3687,15 +3139,39 @@ toolbar #fullscreen-button {
 	}
 
 	#openHandler {
-		background: #1e90ff !important;
+		background: transparentant;
 		color: #ffffff !important;
-		border: 1px solid #77758a !important;
+		border: 1px solid #1e90ff !important;
 		border-radius: 0px !important;
 	}
 
 	#openHandler:hover {
 		border: 1px solid #1e90ff !important;
+		color: white !important;
 		background: #1e90ff !important;
+	}
+
+	#label-box,
+	#label {
+		background: #1e1d2d !important;
+		color: #ffffff !important;
+	}
+
+	dropmarker {
+		color: white !important;
+	}
+
+	#openHandlerBox {
+		background: transparent !important;
+		color: #ffffff !important;
+		border: 1px solid #1e90ff !important;
+		border-radius: 0px !important;
+	}
+
+	#openHandlerBox.deck-selected {
+		background: transparent !important;
+		color: #ffffff !important;
+		border-radius: 0px !important;
 	}
 
 	.downloadTypeIcon {
@@ -3710,6 +3186,20 @@ toolbar #fullscreen-button {
 		background-clip: none !important;
 		background-image: none !important;
 	}
+
+}
+
+.popup-notification-learnmore-link {
+	color: #1e90ff !important;
+}
+
+#commonDialogWindow {
+	background: transparent !important;
+	border: none !important;
+}
+
+.checkbox-label {
+	color: #ffffff !important;
 }
 
 @-moz-document url("chrome://global/content/appPicker.xhtml") {
@@ -3758,9 +3248,6 @@ PersonalToolbar {
 #PersonalToolbar toolbarbutton.bookmark-item {
 	padding: 4px !important;
 	margin-right: -1px !important;
-	/*background-color: var(--moonlight-gray-4);
-	border: 1px solid var(--moonlight-gray-1) !important;*/
-	/*color: var(--moonlight-gray-10) !important;*/
 	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 	border-radius: 2px !important;
 }
@@ -3776,7 +3263,7 @@ PersonalToolbar {
 /* Makes Hovering Over Inactive Tabs Have A Small Fade In */
 /* Thanks u/poorman3333 */
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"]) {
-	transition: 500ms !important;
+	transition: 20ms !important;
 }
 
 /* Toolbar Button Fade In Animations */
@@ -3795,13 +3282,13 @@ toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active)>.too
 #PersonalToolbar toolbarbutton.bookmark-item:hover,
 #PersonalToolbar toolbarbutton.bookmark-item[open=true],
 .search-go-button:not([disabled="true"], [checked], [open], :active) {
-	transition: background linear 250ms !important;
+	transition: background linear 150ms !important;
 }
 
 /* Pin / Un-Pin Tab Animation	 */
 /* Thanks u/It_Was_The_Other_Guy */
 .tabbrowser-tab[fadein] {
-	transition: min-width 250ms linear, max-width 250ms linear !important;
+	transition: min-width 150ms linear, max-width 150ms linear !important;
 }
 
 .downloadIconShow .button-icon {
@@ -4024,22 +3511,6 @@ button.panel-button {
 	--uc-tabs-scrollbutton-border: 2px !important;
 }
 
-/*
-#scrollbutton-up {
-	position: relative !important;
-	z-index: 1 !important;
-}
-#scrollbutton-up,
-#scrollbutton-down,
-#scrollbutton-up~spacer {
-	visibility: var(--uc-scroll-visibility, visible) !important;
-}
-*/
-/*
-.scrollbox-clip {
-	margin-inline: var(--uc-scrollbox-margin, 0) !important;
-}
-*/
 
 .urlbarView-row:hover>.urlbarView-row-inner {
 	background-color: #1e90ff !important;
@@ -4068,7 +3539,9 @@ button.panel-button {
 	color: #ffffff !important;
 }
 
+
 /*dialog,*/
+
 #commonDialog {
 	background: #1e1d2d !important;
 	color: #ffffff !important;
@@ -4092,13 +3565,13 @@ button.panel-button {
 	white-space: nowrap !important;
 	background-color: #1e90ff !important;
 	font-family: Fira Sans !important;
-	font-size: 10px !important;
+	font-size: 11px !important;
 	padding: 1px 2px !important;
 	color: #000000 !important;
 	text-shadow: none !important;
 	border-radius: 2px !important;
 	box-shadow: 0 1px 0 hsla(0, 100%, 100%, 0.2) inset, 0 -1px 0 hsla(0, 0%, 0%, 0.1) inset, 0 1px 0 hsla(206, 50%, 10%, 0.2) !important;
-	margin: -5px 0 0 !important;
+	margin: 0px 0 0 !important;
 	margin-inline-end: -4px !important;
 	min-width: 14px !important;
 	max-width: 20px !important;
@@ -4317,18 +3790,22 @@ menupopup>menu {
 */
 
 /* ---------------------------------------------------------------------------- */
-/*change l'odre du reload dans l'onglet 				*/
+/*              change l'odre du reload dans l'onglet 				*/
 /* ---------------------------------------------------------------------------- */
 #tabContextMenu #context_reloadTab,
 #tabContextMenu #context_reloadSelectedTabs {
 	-moz-box-ordinal-group: 0 !important;
 }
 
+/*------------------------------------------------------------------------------*/
+
 #webextension-popup-browser,
 #webextension-popup-stack,
+#customizationui-widget-panel,
+/*#customization-palette-container,*/
 .browser-extension-panel {
-	border-radius: inherit !important;
-	background: #1e1d2d !important;
+	border-radius: 8px !important;
+	background: transparent !important;
 	font-family: Fira Sans !important;
 	color: #ffffff !important;
 	outline: none !important;
@@ -4437,7 +3914,7 @@ menupopup>menu {
 
 #BMB_bookmarksPopup,
 panel[type="arrow"] {
-	transition-duration: 0.35ms !important;
+	transition-duration: 0.15ms !important;
 }
 
 /*
@@ -4700,7 +4177,7 @@ and by default removes the tab secondary line
 }
 
 #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
-	fill: #1e90ff !important;
+	fill: #1e90ff80 !important;
 	fill-opacity: 1 !important;
 	transition: 100ms linear !important;
 }
@@ -4773,25 +4250,12 @@ and by default removes the tab secondary line
 	display: none !important;
 }
 */
-/*
-#nav-bar {
-	--navbar-margin: -40px;
-	margin-top: var(--navbar-margin);
-	margin-bottom: 0;
-	z-index: 10;
-	transition: all 0.25s ease !important;
-}
-#navigator-toolbox:focus-within>#nav-bar,
-#navigator-toolbox:hover>#nav-bar {
-	margin-top: 0;
-	margin-bottom: var(--navbar-margin);
-}
-*/
+
 #appMenu-zoom-controls2>.toolbarbutton-text {
 	padding-left: 25px !important;
 }
 
-/* slide in animation when clicking on urlbar */
+/* slide in animation when clicking on urlbar 
 #urlbar[breakout-extend] .urlbarView {
 	animation-name: urlbarExtend;
 	animation-duration: 0.5s;
@@ -4815,7 +4279,7 @@ and by default removes the tab secondary line
 		opacity: 1;
 	}
 }
-
+*/
 @-moz-document url-prefix("chrome://global/content/print.html") {
 	:root {
 		--checkmark: #ffffff !important;
@@ -4887,7 +4351,7 @@ and by default removes the tab secondary line
 	}
 
 	input[type="radio"]:checked,
-	*.radio-check[selected] {
+	.radio-check[selected] {
 		-moz-context-properties: fill;
 		fill: #ffffff !important;
 		color: #ffffff !important;
@@ -4897,7 +4361,7 @@ and by default removes the tab secondary line
 	}
 
 	input[type="radio"],
-	*.radio-check {
+	.radio-check {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
 		background-color: #1e1d2d !important;
@@ -5032,22 +4496,10 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 	display: none !important;
 }
 
-/*
-html|canvas#screen {
-	border-style: solid !important;
-	border-width: 12px 11px !important;
-	border-image: url("chrome://browser/skin/monitor-border.png") 12 11 stretch !important;
-}
-#monitor-base {
-	list-style-image: url("chrome://browser/skin/monitor-base.png") !important;
-}
-html|p#preview-unavailable {
-	margin: 12px 11px !important;
-	text-align: center;
-	color: #9B2423;
-	font-weight: bold;
-}
-*/
+
+
+
+
 
 /*
 @media not (prefers-reduced-motion) {
@@ -5275,40 +4727,6 @@ html|p#preview-unavailable {
 
 
 
-/* ------------------------------ status panel ------------------------------ */
-
-#statuspanel:not([inactive]) {
-	transition: bottom 0.25s ease-out !important;
-	transition: color .25s .15s ease-out !important;
-}
-
-#statuspanel {
-	bottom: 0px !important;
-	left: 40% !important;
-	right: 40% !important;
-	margin-left: 8px;
-	margin-right: 0px;
-	border-radius: 2px !important;
-	text-align: center !important;
-	transition: bottom .25s ease-in !important;
-}
-
-#statuspanel-inner {
-	-moz-box-align: start !important;
-	margin-left: -50% !important;
-}
-
-#statuspanel #statuspanel-label {
-	appearance: none !important;
-	background-color: #1E1D2D !important;
-	font-family: "Fira Sans" !important;
-	font-size: 14px !important;
-	color: #ffff00 !important;
-	border: 2px solid #1E1D2D !important;
-	border-radius: 2px !important;
-	text-align: center !important;
-	transition: color linear 0.5s !important;
-}
 
 /* -----------full screen box--------------------------------------------------------------- */
 #fullscreen-warning {
@@ -5316,7 +4734,7 @@ html|p#preview-unavailable {
 	border: 2px solid #1e90ff !important;
 	max-width: auto !important;
 	max-height: auto !important;
-	border-radius: 6px !important;
+	border-radius: 8px !important;
 	font-size: 14px !important;
 	color: #ffffff !important;
 	font-family: Fira Sans !important;
@@ -5335,6 +4753,7 @@ html|p#preview-unavailable {
 	filter: unset !important;
 	background-image: unset !important;
 }
+
 
 /*--------------------------------------------------*/
 .container.infobar {
@@ -5355,10 +4774,13 @@ html|p#preview-unavailable {
 	margin-inline-end: 6px !important;
 	font-family: Fira Sans !important;
 	font-weight: bold !important;
+	color: white !important;
+	vertical-align: middle !important;
 }
 
 .notification-button-container,
 .notification-message {
+	color: white !important;
 	vertical-align: middle !important;
 }
 
@@ -5368,9 +4790,9 @@ html|p#preview-unavailable {
 }
 
 .container.infobar::before {
-	/*content: "";*/
 	display: none !important;
-	/*width: 2px;
+	/*content: "";	
+	width: 2px;
 	position: absolute;
 	background-image: linear-gradient(0, #9059ff 0%, #ff4aa2 52.08%, #ffbd4f 100%);
 	top: 0;
@@ -5387,3 +4809,235 @@ html|p#preview-unavailable {
 }
 
 
+
+toolbar .toolbarbutton-1,
+toolbar .toolbarbutton-1:hover {
+	fill: #ffffff !important;
+	fill-opacity: 1 !important;
+	color: white !important;
+	opacity: 1 !important;
+	background: transparent !important;
+}
+
+/* -----------------------add bookmarks window--------------------------------- */
+#bookmarkpropertiesdialog,
+#tags-field-info,
+#keyword-field-info {
+	background: #1e1d2d !important;
+	color: white !important;
+	box-shadow: none !important;
+}
+
+#editBMPanel_keywordField>label {
+	margin-bottom: 4px !important;
+}
+
+.titleIcon {
+	background-image: url("star.svg") !important;
+	fill: yellow !important;
+	background-color: #1e1d2d !important;
+}
+
+.dialog-button-box>button {
+	background: #1e90ff !important;
+	color: white !important;
+}
+
+.dialog-button-box>button:hover {
+	background: #1e90ff80 !important;
+	color: white !important;
+}
+
+/*-------------------------------------------------------------------------- */
+
+#PlacesToolbar menupopup,
+#BMB_bookmarksPopup menupopup,
+:is(panel, menupopup)[type="arrow"] {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+/*
+@media (-moz-windows-non-native-menus) {
+menupopup { background-color: transparent !important; }
+}
+
+#openHandler {
+	background: #1e1d2d !important;
+	color: #ffffff !important;
+	border: 1px solid #1e90ff !important;
+	border-radius: 0px !important;
+}
+
+#openHandler:hover {
+	border: 1px solid #1e90ff !important;
+	color: white !important;
+	background: #1e90ff !important;
+}
+
+#label-box,
+#label {
+	background: #1e1d2d !important;
+	color: #ffffff !important;
+}
+
+dropmarker {
+	fill: white !important;
+}
+
+#openHandlerBox {
+	background: #1e1d2d !important;
+	color: #ffffff !important;
+	border: 1px solid #1e90ff !important;
+	border-radius: 0px !important;
+}
+*/
+#SetDesktopBackgroundDialog {
+	background-color: #1e1d2d !important;
+	color: white !important;
+}
+
+/*
+html|canvas#screen {
+	border-style: solid !important;
+	border-width: 12px 11px !important;
+	border-image: url("chrome://browser/skin/monitor-border.png") 12 11 stretch !important;
+}
+
+#monitor-base {
+	list-style-image: url("chrome://browser/skin/monitor-base.png") !important;
+}
+
+html|p#preview-unavailable {
+	margin: 12px 11px !important;
+	text-align: center !important;
+	color: #9B2423 !important;
+	font-weight: bold !important;
+}
+*/
+label#label,
+menulist#menuPosition {
+	background: transparent !important;
+	color: white !important;
+	border: none !important
+}
+
+/*  Clean and tight extensions menu 
+#unified-extensions-view .panel-header,
+#unified-extensions-view .panel-header+toolbarseparator,
+#unified-extensions-view .panel-subview-body+toolbarseparator,*/
+#unified-extensions-view,
+#unified-extensions-view #unified-extensions-manage-extensions {
+	background: #1e1d2d !important;
+}
+#unified-extensions-view #unified-extensions-manage-extensions:hover {
+        background: #1e90ff !important;
+}
+/*
+#unified-extensions-view .unified-extensions-item-menu-button.subviewbutton {
+	display: none !important;
+
+}
+
+#unified-extensions-view .panel-subview-body {
+	padding-top: 8px !important;
+	padding-bottom: 6px !important;
+}
+
+#unified-extensions-view .unified-extensions-item-icon,
+#unified-extensions-view .unified-extensions-item[unified-extensions="true"] .webextension-browser-action>.toolbarbutton-badge-stack>.toolbarbutton-icon {
+	height: 24px !important;
+	width: 24px !important;
+	opacity: 1 !important;
+}
+
+#unified-extensions-view .unified-extensions-item-action-button .unified-extensions-item-contents {
+	display: none !important;
+}
+
+#unified-extensions-view .unified-extensions-item-icon,
+#unified-extensions-view .unified-extensions-item[unified-extensions="true"] .webextension-browser-action>.toolbarbutton-badge-stack {
+	margin-inline-end: 0px !important;
+}
+
+#unified-extensions-view .panel-subview-body {
+	max-width: 226px !important;
+	display: flex !important;
+	flex-wrap: wrap !important;
+}
+
+#unified-extensions-view #overflowed-extensions-list {
+	display: flex !important;
+	flex-wrap: wrap !important;
+}
+
+#unified-extensions-view #unified-extensions-area {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	border-bottom: 1px solid #aeaeae33 !important;
+}
+
+#unified-extensions-view .unified-extensions-list {
+	display: flex !important;
+	flex-wrap: wrap !important;
+}
+
+*/
+
+.unified-extensions-item-action-button.subviewbutton:hover {
+    color: white!important;
+    font-weight: bold !important;
+    background-color: #1e90ff!important;
+    border-radius: 4px !important;
+}
+.unified-extensions-item-action-button.subviewbutton {
+    color: white!important;    
+    background-color: #1e1d2d !important;
+    
+}
+#unified-extensions-panel toolbarseparator { display:none !important; } 
+#unified-extensions-panel { background: none !important;}]
+#unified-extensions-manage-extensions, #unified-extensions-view{ background: #1e1d2d !important;}
+
+#PersonalToolbar .toolbarbutton-1 {
+	--toolbarbutton-inner-padding: 8px !important;
+	--toolbarbutton-outer-padding: 2px !important;
+}
+
+:root[uidensity="compact"] #PersonalToolbar .toolbarbutton-1 {
+	--toolbarbutton-inner-padding: 6px !important;
+	--toolbarbutton-outer-padding: 3px !important;
+}
+
+.tab[selected="true"] {
+	visibility: visible !important;
+}
+
+.tabbrowser-tab {
+	visibility: visible !important;
+	/*margin-bottom: 4px !important;*/
+}
+
+.tabbrowser-tab[visuallyselected="true"] {
+	visibility: visible !important;
+}
+
+
+/*#unified-extensions-button{
+  width: 0.1px;
+  padding-inline: 0 !important
+}
+#unified-extensions-button > .toolbarbutton-icon{
+  width: 0 !important;
+}*/
+#appcontent>#tabbrowser-tabbox>#tabbrowser-tabpanels>.deck-selected>.browserContainer>.browserStack>browser {
+	border-radius: 0px !important;
+}
+
+/*
+#identity-popup-security-expander {
+	fill: dodgerblue !important;
+}*/
+#nav-bar-customization-target {
+	height: 24px;
+}
