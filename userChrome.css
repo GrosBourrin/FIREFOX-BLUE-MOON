@@ -133,6 +133,7 @@ scrollbox[orient="horizontal"] {
 * {
 	font-family: Fira Sans !important;
 }
+
 /* -------------------------------------------------------------------------- */
 /* ---------------------------------- menus --------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -4930,27 +4931,25 @@ menulist#menuPosition {
 #unified-extensions-view #unified-extensions-manage-extensions {
 	background: #1e1d2d !important;
 }
+
 #unified-extensions-view #unified-extensions-manage-extensions:hover {
-        background: #1e90ff !important;
+	background: #1e90ff !important;
 }
+
 /*
 #unified-extensions-view .unified-extensions-item-menu-button.subviewbutton {
 	display: none !important;
-
 }
-
 #unified-extensions-view .panel-subview-body {
 	padding-top: 8px !important;
 	padding-bottom: 6px !important;
 }
-
 #unified-extensions-view .unified-extensions-item-icon,
 #unified-extensions-view .unified-extensions-item[unified-extensions="true"] .webextension-browser-action>.toolbarbutton-badge-stack>.toolbarbutton-icon {
 	height: 24px !important;
 	width: 24px !important;
 	opacity: 1 !important;
 }
-
 #unified-extensions-view .unified-extensions-item-action-button .unified-extensions-item-contents {
 	display: none !important;
 }
@@ -4959,45 +4958,58 @@ menulist#menuPosition {
 #unified-extensions-view .unified-extensions-item[unified-extensions="true"] .webextension-browser-action>.toolbarbutton-badge-stack {
 	margin-inline-end: 0px !important;
 }
-
 #unified-extensions-view .panel-subview-body {
 	max-width: 226px !important;
 	display: flex !important;
 	flex-wrap: wrap !important;
 }
-
 #unified-extensions-view #overflowed-extensions-list {
 	display: flex !important;
 	flex-wrap: wrap !important;
 }
-
 #unified-extensions-view #unified-extensions-area {
 	display: flex !important;
 	flex-wrap: wrap !important;
 	border-bottom: 1px solid #aeaeae33 !important;
 }
-
 #unified-extensions-view .unified-extensions-list {
 	display: flex !important;
 	flex-wrap: wrap !important;
 }
 
 */
-
+/* unified extensions menu */
 .unified-extensions-item-action-button.subviewbutton:hover {
-    color: white!important;
-    font-weight: bold !important;
-    background-color: #1e90ff!important;
-    border-radius: 4px !important;
+	color: white !important;
+	font-weight: bold !important;
+	background-color: #1e90ff !important;
+	border-radius: 4px !important;
 }
+
 .unified-extensions-item-action-button.subviewbutton {
-    color: white!important;    
-    background-color: #1e1d2d !important;
-    
+	color: white !important;
+	background-color: #1e1d2d !important;
+
 }
-#unified-extensions-panel toolbarseparator { display:none !important; } 
-#unified-extensions-panel { background: none !important;}]
-#unified-extensions-manage-extensions, #unified-extensions-view{ background: #1e1d2d !important;}
+
+#unified-extensions-panel toolbarseparator {
+	display: none !important;
+}
+
+#unified-extensions-panel {
+	background: none !important;
+}
+
+#unified-extensions-manage-extensions,
+#unified-extensions-view {
+	background: #1e1d2d !important;
+}
+
+.unified-extensions-item-action-button[disabled] .unified-extensions-item-icon {
+	opacity: 1.0 !important;
+}
+
+/*-------------------------------------------------------------------------------*/
 
 #PersonalToolbar .toolbarbutton-1 {
 	--toolbarbutton-inner-padding: 8px !important;
@@ -5039,5 +5051,5 @@ menulist#menuPosition {
 	fill: dodgerblue !important;
 }*/
 #nav-bar-customization-target {
-	height: 24px;
+	height: 24px !important;
 }
