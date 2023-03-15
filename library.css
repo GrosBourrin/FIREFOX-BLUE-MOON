@@ -35,6 +35,11 @@
 		border: none !important;
 	}
 
+	/*
+	#placesToolbox {
+		border: none !important;
+	}*/
+
 	#placesToolbar>toolbarbutton {
 		margin: 6px 4px 5px !important;
 		appearance: none !important;
@@ -74,11 +79,14 @@
 
 	#editBookmarkPanelRows .expander-up .button-icon {
 		transform: rotate(180deg) !important;
-		max-height: 24px !important;
+		height: 24px !important;
+		width: 24px !important;		
 	}
 
 	#editBMPanel_tagsSelectorExpander {
-		max-height: 24px !important;
+		height: 24px !important;
+		width: 24px !important;
+		transform: scale(70%,90%) !important;
 	}
 
 	#editBMPanel_keywordRow,
@@ -88,13 +96,25 @@
 		background: #1e1d2d !important;
 		color: #ffffff !important;
 		border: none !important;
+		
+	}
+/*** Reveal URL box in Add/Edit Bookmark drop-down **
+#editBMPanel_locationRow[collapsed="true"]{
+visibility: visible !important;
+}*/
+	#editBMPanel_tagsSelector>richlistitem,
+	#editBMPanel_tagsSelector>richlistitem:hover,
+	#editBMPanel_tagsSelector>richlistitem:active,
+	#editBMPanel_tagsSelector>richlistitem:focus {
+		background: #000000 !important;
+		color: #ffffff !important;
+
 	}
 
 	#searchFilter {
 		appearance: none !important;
 		background-color: #000000 !important;
 		color: #ffffff !important;
-		
 	}
 
 	#places #downloadsRichListBox {
@@ -115,8 +135,6 @@
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
-
-	
 
 	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
 		color: #ffffff !important;
@@ -143,16 +161,17 @@
 
 	#places treechildren::-moz-tree-twisty {
 		margin-bottom: 3px !important;
+		color: white !important;
+		fill: white !important;
 	}
 
 	menuseparator:last-of-type {
 		display: none !important;
 	}
 
-	
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover),
-	#placesList>treechildren::-moz-tree-row(hover) {
-		/*appearance: none !important;*/
+	#placesList>treechildren::-moz-tree-row(hover),
+	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+		appearance: none !important;
 		/*-moz-font-smoothing-background-color: none !important;*/
 		border: none !important;
 		background-color: #1e90ff80 !important;
@@ -165,7 +184,7 @@
 
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
 	#placesList>treechildren::-moz-tree-row(selected) {
-		/*appearance: none !important;*/
+		appearance: none !important;
 		/*-moz-font-smoothing-background-color: none !important;*/
 		border: none !important;
 		background: #1e90ff !important;
@@ -191,6 +210,10 @@
 
 	#places treechildren::-moz-tree-row {
 		background-color: transparent !important;
+	}
+
+	#placesList>treechildren::-moz-tree-cell-text {
+		color: white !important;
 	}
 
 	#places treechildren::-moz-tree-image {
@@ -287,7 +310,13 @@
 		outline: none !important;
 	}
 
-	
+	/*
+	#placesMenu>menu {
+		color: #FFFFFF !important;
+		background: blue !important;
+		--organizer-outline-color: none !important;
+	}
+*/
 	arrowscrollbox {
 		/*background: #1E1D2D !important;*/
 		padding-block: 4px !important;
@@ -377,5 +406,13 @@
 		padding: 4px !important;
 	}
 
-	
+	/*
+	#organizeButton {
+		max-width: 124px !important;
+	}
+	#placesMenu>menu>.menubar-text {
+		text-align: left !important;
+		background: url(chrome://global/skin/icons/arrow-down-12.svg) 105% center no-repeat !important;
+		background-size: 12px !important;}*/
 }
+
