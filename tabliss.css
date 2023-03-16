@@ -15,26 +15,26 @@
 	color: #ffffff60;
 }
 .Time hr {  
-  border-top: 1px solid #ffffff !important;
+	border-top: 1px solid #ffffff !important;
 }
 .Search > input {
- backdrop-filter: blur(8px) !important;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+	backdrop-filter: blur(8px) !important;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
 }
 .Suggestions {
- backdrop-filter: blur(8px) !important; }
+	backdrop-filter: blur(8px) !important;
+}
 .search {
 	font-size: 12px;
 	font-family: Fira Sans !important;
-
 }
+
 .Search input { 
-  text-align: center;
-  font: 400 1.1rem 'Fira Sans';
-  transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+	text-align: center;
+	font: 400 1.1rem 'Fira Sans';
+	transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
-
 /*.Quote { 
  font-size: 12px;
  padding: 3rem;
@@ -42,11 +42,12 @@
 
 input {
 	background-color: black;
-
 }
+
 .Links a {
 	text-decoration: none;
 }
+
 .Links a:hover {
 	color: dodgerblue;
 }
@@ -69,6 +70,7 @@ h3 {
 	padding: 7px;
 	font-size: 16px;
 }
+
 .Weather .summary:hover {
 	background: transparent;
 }
@@ -291,6 +293,5 @@ select.primary {
 button,
 ::file-selector-button {
 	fill: black !important;
-margin-right: 14px !important;
-
+	margin-right: 14px !important;
 }
