@@ -1,164 +1,170 @@
+.Logo svg {
+	fill: dodgerblue !important;
+}
 .credit {
 	display: none !important;
 }
 .Overlay svg {
 	display: none;
 }
-
 .Overlay:hover svg {
 	display: initial !important;
+	color: dodgerblue;
 }
-
 .Time {
 	color: #ffffff60;
 }
-
+.Time hr {  
+  border-top: 1px solid #ffffff !important;
+}
+.Search > input {
+ backdrop-filter: blur(8px) !important;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.Suggestions {
+ backdrop-filter: blur(8px) !important; }
 .search {
 	font-size: 12px;
-	font-family: Fira Sans;
+	font-family: Fira Sans !important;
+
+}
+.Search input { 
+  text-align: center;
+  font: 400 1.1rem 'Fira Sans';
+  transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
-.Quote {
-	font-size: 16pt;
-	padding: 3rem;
-}
+/*.Quote { 
+ font-size: 12px;
+ padding: 3rem;
+}*/
 
+input {
+	background-color: black;
+
+}
 .Links a {
 	text-decoration: none;
 }
-
 .Links a:hover {
 	color: dodgerblue;
 }
-
-* {
-	font-family: Fira Sans;
-}
-
 /*
-.Weather .summary {
-	text-shadow: 0px 0px 12px rgba(39, 39, 48, 100%);
-	transition: background 0.3s;
-	padding: 10px;
-	font-size: 25px;
-}
-
-.Weather .summary:hover {
-	background: rgba(30, 144, 255, 20%);
-}
-
-.Weather .details {
-	text-shadow: 0px 0px 12px rgba(39, 39, 48, 100%);
-	transition: background 0.3s;
-	padding: 5px;
-	font-size: 17.5px;
-}
-
-.Weather .details:hover {
-	background: rgba(30, 144, 255, 20%);
-}
-
-.Weather {
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	user-select: none;
-}
-
-.Search>input {
-	text-shadow: 0px 0px 10px rgba(39, 39, 48, 90%);
-	background: rgba(39, 39, 48, 22%);
-	transform: translateX(-20%) translateY(-30%);
-	width: 170%;
-	transition: border 1s, background 0.4s linear, box-shadow 0.8s ease;
-	transform: translate(-20%, -20px) scale(1.19, 1.19);
-	border-bottom: 1px solid #fff;
-}
-
-.Search>input::-moz-selection {
-	background: rgba(30, 144, 255, 20%);
-	color: rgb(10, 11, 13);
-}
-
-.Search>input::-webkit-selection {
-	background: rgba(30, 144, 255, 20%);
-	color: rgb(10, 11, 13);
-}
-
-.Search>input::selection {
-	background: rgba(30, 144, 255, 20%);
-	color: rgb(10, 11, 13)
-}
-
-.Search>input:hover {
-	transform: translate(-20%, -40%) scale(1.27, 1.27);
-	transition: transform 0.3s cubic-bezier(.34, 1.75, .37, .8), filter 0.3s;
-	border-bottom: 1.5px solid rgba(0, 0, 0, 0);
-	border-left: 1.5px solid rgba(0, 0, 0, 0);
-	border-right: 1.5px solid rgba(0, 0, 0, 0);
-	border-top: 1.5px solid rgba(0, 0, 0, 0);
-	background: rgba(30, 144, 255, 20%);
-	box-shadow: 0px 0px 40px rgba(25, 25, 31, 0.774);
-	animation: opacidadanimama 2s infinite ease-in;
-}
-
-@keyframes opacidadanimama {
-	0% {
-		border-bottom: 1px solid rgb(255, 255, 255);
-		border-left: 1px solid rgba(0, 0, 0, 0);
-		border-right: 1px solid rgba(255, 255, 255, 0.384);
-		border-top: 1px solid rgba(0, 0, 0, 0);
-	}
-
-	25% {
-		border-bottom: 1px solid rgba(255, 255, 255, 0.384);
-		border-left: 1px solid rgb(255, 255, 255);
-		border-right: 1px solid rgba(0, 0, 0, 0);
-		border-top: 1px solid rgba(0, 0, 0, 0);
-	}
-
-	50% {
-		border-bottom: 1px solid rgba(0, 0, 0, 0);
-		border-left: 1px solid rgba(255, 255, 255, 0.384);
-		border-right: 1px solid rgba(0, 0, 0, 0);
-		border-top: 1px solid rgb(255, 255, 255);
-	}
-
-	75% {
-		border-bottom: 1px solid rgba(0, 0, 0, 0);
-		border-left: 1px solid rgba(0, 0, 0, 0);
-		border-right: 1px solid rgb(255, 255, 255);
-		border-top: 1px solid rgba(255, 255, 255, 0.384);
-	}
-
-	100% {
-		border-bottom: 1px solid rgba(0, 0, 0, 0);
-		border-left: 1px solid rgba(0, 0, 0, 0);
-		border-right: 1px solid rgba(255, 255, 255, 0.384);
-		border-top: 1px solid rgba(0, 0, 0, 0);
-	}
+*{
+ font-family: Fira Sans ;
 }
 */
+/* 
+ Custom CSS por 448L Para la Extension
+ TabLiss (Firefox - Chromiun)
+*/
+h3 {
+      font-size: 48px !important;
+}
+
+.Weather .summary {
+	text-shadow: 0px 0px 12px #1e1d2d;
+	transition: background 0.3s;
+	padding: 7px;
+	font-size: 16px;
+}
+.Weather .summary:hover {
+	background: transparent;
+}
+.Weather .details {
+	padding: 7px;
+	font-size: 16px;
+}
+.Weather .details:hover {
+	background: transparent;
+}
+/*.Weather{
+   -moz-user-select:none;
+   -webkit-user-select:none;
+   user-select:none;
+}*/
+.Search>input {
+	font-family: Fira Sans;
+	font-size: 14px;
+}
+.Suggestions input {
+	color: inherit;
+	font-size: 14px;
+}
+/*.Search > input::-moz-selection{
+   background:rgba(30,144,255,20%);
+   color:rgb(10,11,13);
+}
+.Search > input::-webkit-selection{
+   background:rgba(30,144,255,20%);
+   color:rgb(10,11,13);
+}
+.Search > input::selection{
+   background:rgba(30,144,255,20%);
+   color:rgb(10,11,13)
+}
+.Search > input:hover{
+   transform:translate(-20%,-40%) scale(1.27,1.27);
+   transition:transform 0.3s cubic-bezier(.34,1.75,.37,.8),filter 0.3s;
+   border-bottom:1.5px solid rgba(0, 0, 0, 0);
+   border-left:1.5px solid rgba(0, 0, 0, 0);
+   border-right:1.5px solid rgba(0, 0, 0, 0);
+   border-top:1.5px solid rgba(0, 0, 0, 0);
+   background:rgba(30,144,255,20%);
+   box-shadow:0px 0px 40px rgba(25, 25, 31, 0.774);
+   animation:opacidadanimama 2s infinite ease-in;
+}
+@keyframes opacidadanimama{
+   0%{
+       border-bottom:1px solid rgb(255, 255, 255);
+       border-left:1px solid rgba(0, 0, 0, 0);
+       border-right:1px solid rgba(255, 255, 255, 0.384);
+       border-top:1px solid rgba(0, 0, 0, 0);
+   }
+   25%{
+       border-bottom:1px solid rgba(255, 255, 255, 0.384);
+       border-left:1px solid rgb(255, 255, 255);
+       border-right:1px solid rgba(0, 0, 0, 0);
+       border-top:1px solid rgba(0, 0, 0, 0);
+   }
+   50%{
+       border-bottom:1px solid rgba(0, 0, 0, 0);
+       border-left:1px solid rgba(255, 255, 255, 0.384);
+       border-right:1px solid rgba(0, 0, 0, 0);
+       border-top:1px solid rgb(255, 255, 255);
+   }
+   75%{
+       border-bottom:1px solid rgba(0, 0, 0, 0);
+       border-left:1px solid rgba(0, 0, 0, 0);
+       border-right:1px solid rgb(255, 255, 255);
+       border-top:1px solid rgba(255, 255, 255, 0.384);
+   }
+   100%{
+       border-bottom:1px solid rgba(0, 0, 0, 0);
+       border-left:1px solid rgba(0, 0, 0, 0);
+       border-right:1px solid rgba(255, 255, 255, 0.384);
+       border-top:1px solid rgba(0, 0, 0, 0);
+   }
+}*/
 .Widgets h1,
 .Widgets h2,
 .Widgets h3,
 .Widgets h4 {
-	text-shadow: 1px 3px 10px rgba(39, 39, 48, 53%);
+	/*text-shadow:1px 3px 10px rgba(39,39,48,53%);*/
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
 	transition: text-shadow 0.4s cubic-bezier(.34, 1.75, .37, .8);
 	font-size: 3em;
 }
-
 .Overlay svg {
-	box-shadow: 0px 0px 10px rgba(39, 39, 48, 30%);
 	border-radius: 50%;
-	background: rgba(39, 39, 48, 40%);
+	background: #1e1d2d40;
 	padding: 4px;
 	width: 25px;
 	height: 25px;
 }
-
 .ImageSettings .grid .preview button {
 	padding: 4px;
 	width: 40px;
@@ -166,53 +172,48 @@
 	border-radius: 50%;
 	transition: transform 0.4s ease, opacity 0.5s;
 }
-
 .ImageSettings .grid .preview button:hover {
 	transform: translate(-50%, -50%) scale(1.17, 1.17);
 }
-
 .Settings .plane {
-	background: #161a27;
-	/*rgba(28, 32, 37, 0.0);*/
-	text-shadow: 0 0 20px rgba(124, 124, 124, 0.3);
-	box-shadow: 0 0 20px rgba(15, 15, 15, 0.7);
+	background: #1e1d2d !important;
+	/* text-shadow:0 0 20px rgba(124, 124, 124, 0.3);
+   box-shadow:0 0 20px rgba(15,15,15,0.7);
+*/
 	transition: all 1s;
 	padding-left: 5px;
 	padding-right: 0px;
 	width: 50%;
 	max-width: 500px;
-
 }
-
 @media only screen and (max-width: 1000px) {
 	.Settings .plane {
+		background: #1e1d2d !important;
 		padding-left: 0px;
 		padding-right: 20px;
 		width: 100%;
 		max-width: none;
 	}
-
 	.ImageSettings .grid .preview:hover {
 		transform: scale(1.1, 1.1);
 	}
 }
-
 .Settings .Widget {
-	background: #161a27;
+	background: #1e1d2d !important;
 	color: rgb(255, 255, 255);
 }
-
+span, p {
+  color: white !important;
+}
 .Settings h2,
 .Settings h3,
 .Settings h4 {
 	color: rgb(255, 255, 255);
 }
-
 span,
 p {
 	color: rgb(163, 163, 163);
 }
-
 .Settings input[type="email"],
 .Settings input[type="file"],
 .Settings input[type="number"],
@@ -220,32 +221,76 @@ p {
 .Settings input[type="url"],
 .Settings textarea,
 .Settings select {
+	border: none;
 	color: rgb(24, 24, 24);
 }
-
 .Settings .Widget .title--buttons button {
+	color: white;
+	background: transparent;
 	transition: transform 0.5s;
 }
-
 .Settings .Widget .title--buttons button:hover {
 	transform: scale(1.2, 1.2);
+	color: white;
+	background: rgba(30, 144, 255, 0.8) !important;
 }
-
 .ImageSettings .grid .preview {
 	transition: transform 0.5s;
 }
-
 .ImageSettings .grid .preview:hover {
 	transform: scale(1.2, 1.2);
 	z-index: 1000;
 }
-
 .Settings input[type="email"],
 .Settings input[type="file"],
 .Settings input[type="number"],
 .Settings input[type="text"],
 .Settings input[type="url"],
 .Settings textarea,
-.Settings select {
-	color: rgb(126, 126, 126);
+.Settings select,
+select,
+#primary,
+.primary,
+select.primary {
+	background-color: black;
+	border: transparent !important;
+	color: white;
+padding-right: 4px !important;
+ 
+}
+.Settings input[type="email"].primary,
+.Settings input[type="file"].primary,
+.Settings input[type="number"].primary,
+.Settings input[type="text"].primary,
+.Settings input[type="time"].primary,
+.Settings input[type="url"].primary,
+.Settings textarea.primary,
+.Settings select.primary {
+	background-color: black;
+	outline: none;
+	border: transparent !important;
+	/*border: 0.25em solid #ecf0f1;*/
+       
+}
+select.primary {
+	background: black;
+	border: 0.25em solid #ecf0f1;
+        width: 98%;
+        border-radius: 4px;
+}
+
+.Widgets h3 {
+	font-size: 70px;
+}
+.Settings .plane {
+	background: #1e1d2d !important;
+}
+.Widgets {
+	font-size: 70px;
+}
+button,
+::file-selector-button {
+	fill: black !important;
+margin-right: 14px !important;
+
 }
