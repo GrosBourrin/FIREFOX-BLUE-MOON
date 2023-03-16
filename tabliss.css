@@ -18,10 +18,11 @@
 	border-top: 1px solid #ffffff !important;
 }
 .Search > input {
-	backdrop-filter: blur(8px) !important;
+	/*backdrop-filter: blur(8px) !important;*/
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 }
+.IpInfo{ background: #000000bb !important; }
 .Suggestions {
 	backdrop-filter: blur(8px) !important;
 }
@@ -274,6 +275,7 @@ padding-right: 4px !important;
 	/*border: 0.25em solid #ecf0f1;*/
        
 }
+.Settings textarea, .Settings select,
 select.primary {
 	background: black;
 	border: 0.25em solid #ecf0f1;
@@ -284,14 +286,18 @@ select.primary {
 .Widgets h3 {
 	font-size: 70px;
 }
+
 .Settings .plane {
 	background: #1e1d2d !important;
 }
+
 .Widgets {
 	font-size: 70px;
 }
+
 button,
 ::file-selector-button {
 	fill: black !important;
 	margin-right: 14px !important;
 }
+
