@@ -6,23 +6,20 @@
 	color: dodgerblue;
 	font-family: Fira Sans;
 	background: none !important;
-
+	
 }
-
 #groups>a,
 .group_link {
 
 	background: none !important;
 
 }
-
 #groups>a:hover,
 .group_link:hover {
-
+	
 	background: none !important;
-
+	
 }
-
 .group_name:hover {
 	color: white !important;
 	font-family: Fira Sans;
@@ -57,4 +54,8 @@ a.home-version {
 
 body {
 	background-size: cover !important;
+}
+
+#quick-options, #groups {  
+  margin-top: 15px !important;
 }
