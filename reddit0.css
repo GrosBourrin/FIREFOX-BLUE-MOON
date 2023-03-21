@@ -88,10 +88,10 @@
 		background-color: #1e1d2d !important;
 	}
 
-	._3w_665DK_NH7yIsRMuZkqB,
+	/*._3w_665DK_NH7yIsRMuZkqB,
 	._2gF7CwFWoUrsLhPqOxCc6F {
 		width: 340px !important;
-	}
+	}*/
 
 	._ZhON3a3vplThB8NFwuJn,
 	._2M2wOqmeoPVvcSsJ6Po9-V,
@@ -179,8 +179,11 @@
 
 	input,
 	textarea,
-	[contenteditable] {
-		background: black !important;
+	[contenteditable],
+	._37tmRmxaFMjRRrvwcY2JmY,
+	#header-subreddit-filter {
+		appearance: none !important;
+		background-color: #000000 !important;
 		margin-top: 1px !important;
 		outline: none !important;
 	}
@@ -439,7 +442,7 @@
 		color: white !important;
 		font-weight: 400 !important;
 	}
-
+        ._2eawLPCtwzvTZhWKtaUgZQ._3LyKu57c-QkPvlFvAgWop5,
 	._2ED-O3JtIcOqp8iIL1G5cg,
 	.P8SGAKMtRxNwlmLz1zdJu._2ym9uYDdCxu8P4UFCLNCgE {
 		background: #1e1d2d !important;
@@ -493,15 +496,17 @@
 	._2jhbZV6mVCM5Ma7Z376DW2::before {
 		border-left: 2px solid #1e90ff80 !important;
 	}
-
+                    ._1lhlKOukuHHzZKIlnXcHmQ._1C2mkyHj-MAuIndy8vJIU5 { border-color: transparent  !important;}
 	.uI_hDmU5GSiudtABRz_37,
 	.wBtTDilkW_rtT2k5x3eie,
 	._2jJNpBqXMbbyOiGCElTYxZ,
 	._1G4yU68P50vRZ4USXfaceV._2QeqBqfT5UbHBoViZUt-wX,
 	._3WqRAmto46uhALFWnn8-Pa,
 	._3kIjxjzGVq5UfR6Bjiovd,
-	._1RYN-7H8gYctjOQeL8p2Q7 {
+	._1RYN-7H8gYctjOQeL8p2Q7,
+        ._1lhlKOukuHHzZKIlnXcHmQ._1C2mkyHj-MAuIndy8vJIU5 {
 		box-shadow: #00000040 0px 5px 10px, #0000001f 0px -12px 30px, #0000001f 0px 4px 6px, #0000002b 0px 12px 13px, #00000017 0px -3px 5px !important;
+
 	}
 
 	._2vkeRJojnV7cb9pMlPHy7d.a35Fm2MurU14xdNybLiZp {
@@ -557,10 +562,10 @@
 	}
 
 }
-/*
+
 @-moz-document url("https://www.reddit.com/login/") {
 	body {
-		color: white !important;
+		color: white
 	}
 
 	input#password.AnimatedForm_textinput {
@@ -568,4 +573,4 @@
 		color: #ffffff !important;
 
 	}
-}*/
+}
