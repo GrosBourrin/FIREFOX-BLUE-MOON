@@ -4276,20 +4276,29 @@ dialog,
 	}
 }
 @-moz-document url-prefix("moz-extension://e8f34abe-1871-4fd7-9285-f70fd26ba4b5/") {
-      #footerButtons, .listView, button.fullWidth.newNoteBtn, a.btn.fullWidth.newNoteBtn, li, .btn.fullWidth.borderBottom, ul {
-		background:#1e1d2d !important;
-      }
 
-      .btn.fullWidth.borderBottom:hover {
+	#footerButtons,
+	.listView,
+	button.fullWidth.newNoteBtn,
+	a.btn.fullWidth.newNoteBtn,
+	li,
+	.btn.fullWidth.borderBottom,
+	ul {
+		background: #1e1d2d !important;
+	}
+
+	.btn.fullWidth.borderBottom:hover {
 		background: #1e90ff80 !important;
-      }
+	}
 
-      .photon-menu .wrapper ul li button {       
+	.photon-menu .wrapper ul li button {
+
 		color: white !important;
-      }
+	}
 
-      .photon-menu .wrapper ul li button:hover{
-              	background-color: dodgerblue !important;
-              	color: white !important;
-      }
- }
+	.photon-menu .wrapper ul li button:hover {
+		background-color: dodgerblue !important;
+		color: white !important;
+	}
+}
+
