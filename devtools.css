@@ -189,6 +189,10 @@ url-prefix("chrome://devtools/content/") {
 			--theme-code-font-size: 12px !important;
 		}
 
+		* {
+			font-family: Fira Sans !important;
+		}
+
 		.devtools-tab,
 		.toolbox-tabs {
 			font-family: Fira Sans !important;
@@ -196,7 +200,6 @@ url-prefix("chrome://devtools/content/") {
 
 		.devtools-monospace * {
 			font-family: Fira Code !important;
-			
 		}
 
 		li.menuitem:hover {
@@ -207,6 +210,7 @@ url-prefix("chrome://devtools/content/") {
 
 		li.menuitem {
 			font-family: Fira Sans !important;
+                        background: transparent!important;
 		}
 
 		.ruleview-rule.unmatched,
@@ -220,6 +224,7 @@ url-prefix("chrome://devtools/content/") {
 		.ruleview-expandable-header {
 			background-color: #1e90ff20 !important;
 			color: white !important;
+			font-family: Fira Sans !important;
 		}
 
 		.ruleview-expandable-header:hover {
@@ -230,6 +235,7 @@ url-prefix("chrome://devtools/content/") {
 		.ruleview-header {
 			background-color: #1e90ff20 !important;
 			color: white !important;
+			font-family: Fira Sans !important;
 		}
 
 		:root[platform="win"] .ruleview-enableproperty,
@@ -239,7 +245,7 @@ url-prefix("chrome://devtools/content/") {
 			filter: grayscale(100%) !important;
 			-moz-context-properties: fill, stroke;
 			fill: #aaaaaa !important;
-			/*stroke: transparent;*/
+			stroke: transparent;
 		}
 
 		#command-button-pick {
@@ -256,7 +262,48 @@ url-prefix("chrome://devtools/content/") {
 			width: 400px !important;
 		}
 
-		
+		.chrome-debug-toolbar {
+			display: none !important;
+		}
+
+		.chrome-debug-toolbar__modes label {
+			border: none !important;
+		}
+
+		.mode__sublabel {
+			display: none !important;
+		}
+
+		.chrome-debug-toolbar__modes label:where(:hover, :focus-within) {
+			background-color: transparent !important;
+		}
+
+		.chrome-debug-toolbar section>h3,
+		.mode__label {
+			color: #b1b1b3 !important;
+		}
+
+		#triggers-page-refresh-label {
+			color: white !important;
+		}
+
+		.options-vertical-pane fieldset {
+			color: white !important;
+			font-family: Fira Sans !important;
+			font-size: 12px !important;
+			font-weight: 400 !important;
+		}
+
+		select {
+			appearance: none !important;
+			background-color: #1e1d2d !important;
+			color: white !important;
+			font-family: Fira Sans !important;
+			font-size: 12px !important;
+			border: 1px solid dodgerblue !important
+		}
 
 	}
+
+
 }
