@@ -14,7 +14,7 @@
 @author         Ragab Hesham
 @homepageURL    https://www.ragabhesham.ml/
 ==/UserStyle== */
-@-moz-document url-prefix("https://www.instagram") {
+@-moz-document domain("instagram.com") {
 	* {
 		font-family: Fira Sans !important;
 	}
@@ -50,7 +50,7 @@
 		--ig-secondary-button: 200, 200, 200;
 		--ig-secondary-text: 180, 180, 180;
 		--ig-separator: 36, 37, 38;
-		;
+
 		--ig-stroke: 219, 219, 219;
 		--ig-subscribers-only: 118, 56, 250;
 		--ig-success: 88, 195, 34;
@@ -169,7 +169,30 @@
 		color: var(--text-secondary)
 	}
 
+	.xd10rxx,
+	._acat,
+	a._acat {
+		border: none;
+		color: white !important;
+		background-color: transparent !important;
+	}
 
+	.xd10rxx:hover,
+	._acat:hover,
+	a._acat:hover {
+		color: #1e90ff !important;
+                opacity:  1 !important;
+	}
+
+	._acao,
+	a._acao {
+		background: transparent !important;
+	}
+
+	._acao:hover,
+	a._acao:hover {
+		background: dodgerblue !important;
+	}
 
 	/* logo */
 	.sp_jY02qVAhKr8.sx_98e64d,
@@ -266,43 +289,5 @@
 		padding-top: 0 !important;
 	}
 
-	/*
-	._aak3,
-	._aak6 {
-		position: relative !important;
-		top: calc(30px + var(--desktop-nav-height));
-
-	}*/
-
-	/* Dark Scrollbar
-	::-webkit-scrollbar,
-	::-webkit-scrollbar-corner,
-	::-webkit-scrollbar,
-	::-webkit-scrollbar-corner {
-		background: #1c1e21 !important;
-		width: 8px
-	}
-	::-webkit-scrollbar-button,
-	::-webkit-scrollbar-button {
-		display: none !important;
-	}
-	::-webkit-scrollbar-thumb,
-	::-webkit-scrollbar-thumb {
-		background: #999 !important;
-		width: 8px !important;
-		border-radius: 10px;
-		transition: .1s !important;
-	}
-	::-webkit-scrollbar-thumb:not(:active):hover,
-	::-webkit-scrollbar-thumb:not(:active):hover {
-		background: #777 !important;
-		transition: .1s !important;
-	}
-	::-webkit-scrollbar-thumb:active,
-	::-webkit-scrollbar-thumb:hover:active,
-	::-webkit-scrollbar-thumb:active,
-	::-webkit-scrollbar-thumb:hover:active {
-		background: #5c5c5c !important;
-		transition: .1s !important;
-	}*/
+	
 }
