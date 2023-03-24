@@ -421,6 +421,7 @@
 		background: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
+		border-width: 2px !important;
 	}
 
 	menulist {
@@ -514,9 +515,23 @@
 		fill: #1e90ff !important;
 		fill-opacity: 1 !important;
 	}
-
+	
+        #default-fxMobile.text-link,
 	a[is="moz-support-link"] {
 		font-weight: bold !important;
 	}
+        .qr-code-box {
+        	background: #1e90ff60 !important;
+        }
+        .qr-code-box-image {
+
+          width: 110px !important;
+
+        }
+        .searchBarImage { 
+          -moz-context-properties: fill, stroke;
+          fill: #1e90ff20 !important;
+          stroke: #1e90ff !important;
+        }
 
 }
