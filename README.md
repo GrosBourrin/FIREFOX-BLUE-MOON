@@ -1,4 +1,7 @@
 # FIREFOX-BLUE-MOON
+
+https://img.shields.io/endpoint?color=%231E90FF&label=FIREFOX&logo=FIREFOX&logoColor=%231E90FF&style=for-the-badge
+
 [![Badge License]][License]
 [![Badge Mozilla]][Mozilla]
 
