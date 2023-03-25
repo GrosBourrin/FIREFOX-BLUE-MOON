@@ -1,5 +1,6 @@
 # FIREFOX-BLUE-MOON
-
+[![Badge License]][License]
+[![Badge Mozilla]][Mozilla]
 
 - Put all the files in the chrome folder of your profile then restart firefox
 
