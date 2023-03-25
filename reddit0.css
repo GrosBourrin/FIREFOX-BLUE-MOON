@@ -442,7 +442,9 @@
 		color: white !important;
 		font-weight: 400 !important;
 	}
-        ._2eawLPCtwzvTZhWKtaUgZQ._3LyKu57c-QkPvlFvAgWop5,
+
+	.DpriHZnFiOfa0afZpg8vf,
+	._2eawLPCtwzvTZhWKtaUgZQ._3LyKu57c-QkPvlFvAgWop5,
 	._2ED-O3JtIcOqp8iIL1G5cg,
 	.P8SGAKMtRxNwlmLz1zdJu._2ym9uYDdCxu8P4UFCLNCgE {
 		background: #1e1d2d !important;
@@ -456,14 +458,31 @@
 		font-weight: 400 !important;
 	}
 
-	._22S4OsoDdOqiM-hPTeOURa:hover {
+	._1UoeAeSRhOKSNdY_h3iS1O:hover,
+	._1UoeAeSRhOKSNdY_h3iS1O:focus,
+	.kU8ebCMnbXfjCWfqn0WPb:focus,
+	.kU8ebCMnbXfjCWfqn0WPb:hover,
+	._1Hw7tY9pMr-T1F4P1C-xNU:hover,
+	._1Hw7tY9pMr-T1F4P1C-xNU:focus,
+	._22S4OsoDdOqiM-hPTeOURa:hover,
+	._22S4OsoDdOqiM-hPTeOURa:focus {
 		background: #1e90ff80 !important;
 		/*filter: grayscale(0) !important;*/
 		font-family: Fira Sans !important;
 		color: white !important;
 		font-weight: 400 !important;
+		border-radius: 2px !important;
 	}
 
+	button.cmR5BF4NpBUm3DBMZCmJS,
+	button._1LHxa-yaHJwrPK8kuyv_Y4 {
+		background: #1e90ff80 !important;
+	}
+
+	button.cmR5BF4NpBUm3DBMZCmJS:hover,
+	button._1LHxa-yaHJwrPK8kuyv_Y4:hover {
+		background: #1e90ff !important;
+	}
 
 	/*._1npCwF50X2J7Wt82SZi6J0, */
 	/*._1gVVmSnHZpkUgVShsn7-ua,    */
@@ -474,6 +493,7 @@
 	/*.ListingLayout-backgroundContainer,
 	.ListingLayout-outerContainer,     */
 	/*._2wxsLGNmMLx6sEMLJyn2o9*/
+
 	._3ozFtOe6WpJEMUtxDOIvtU {
 		background: #252438 !important;
 	}
@@ -496,7 +516,11 @@
 	._2jhbZV6mVCM5Ma7Z376DW2::before {
 		border-left: 2px solid #1e90ff80 !important;
 	}
-                    ._1lhlKOukuHHzZKIlnXcHmQ._1C2mkyHj-MAuIndy8vJIU5 { border-color: transparent  !important;}
+
+	._1lhlKOukuHHzZKIlnXcHmQ._1C2mkyHj-MAuIndy8vJIU5 {
+		border-color: transparent !important;
+	}
+
 	.uI_hDmU5GSiudtABRz_37,
 	.wBtTDilkW_rtT2k5x3eie,
 	._2jJNpBqXMbbyOiGCElTYxZ,
@@ -504,7 +528,7 @@
 	._3WqRAmto46uhALFWnn8-Pa,
 	._3kIjxjzGVq5UfR6Bjiovd,
 	._1RYN-7H8gYctjOQeL8p2Q7,
-        ._1lhlKOukuHHzZKIlnXcHmQ._1C2mkyHj-MAuIndy8vJIU5 {
+	._1lhlKOukuHHzZKIlnXcHmQ._1C2mkyHj-MAuIndy8vJIU5 {
 		box-shadow: #00000040 0px 5px 10px, #0000001f 0px -12px 30px, #0000001f 0px 4px 6px, #0000002b 0px 12px 13px, #00000017 0px -3px 5px !important;
 
 	}
@@ -536,10 +560,13 @@
 		border-radius: 4px !important;
 	}
 
+	._2_tDEnGMLxpM6uOa2kaDB3,
 	.RaDn8d65cHW3dCPgTkSRN,
 	._2WUlLsFSOnLb33dNA9kf50,
 	._3X4hbg4asgVvLaVYU6dUzs,
-	._3kIjxjzGVq5UfR6Bjiovd {
+	._3kIjxjzGVq5UfR6Bjiovd,
+	#header,    ._249eIqU0mX7GU1qrI9k3F3, ._3k0sISq1Sewv-7h_jA7Nhh,._1ybOoJLXdiKZz_P7hQ0NrO,
+	.menuarea {
 		background: #1e1d2d !important;
 	}
 
@@ -561,11 +588,30 @@
 		background: #25243850 !important;
 	}
 
+	.embedded-page .entry,
+	.embedded-page .message {
+		background: #252438 !important;
+	}
+
+	._326PJFFRv8chYfOlaEYmGt {
+		background: #1e90ff80 !important;
+		color: white !important;
+	}
+	
+        ._3mRkaGP5f0vxRe_U_Gy02A:hover {
+        	             background: #1e90ff30 !important;
+                             
+        }
+	._326PJFFRv8chYfOlaEYmGt:hover {
+		background: #1e90ff !important;
+		color: white !important;
+	}
+
 }
 
 @-moz-document url("https://www.reddit.com/login/") {
 	body {
-		color: white
+		color: white !important;
 	}
 
 	input#password.AnimatedForm_textinput {
