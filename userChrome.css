@@ -190,11 +190,14 @@ menuitem {
 }
 
 menu:hover,
+menu:focus,
 menulist:hover,
+menulist:focus,
 menuitem:hover,
+menuitem:active,
+menuitem:focus,
 menu[open="true"],
-menuitem[_moz-menuactive="true"],
-menuitem:active {
+menuitem[_moz-menuactive="true"] {
 	appearance: none !important;
 	border: 0px !important;
 	background-color: #1e90ff !important;
@@ -227,7 +230,7 @@ menupopup:not(.in-menulist)>menu {
 
 menupopup>menuitem,
 menupopup>menu {
-	padding-block: 2px !important;
+	padding-block: 4px !important;
 	min-height: 7px !important;
 	border: none !important;
 	outline: none !important;
@@ -238,12 +241,7 @@ menupopup>menu {
 	--arrowpanel-menuitem-padding-block: 2px !important;
 }
 
-/*
-menulist {
-	max-width: auto !important;
-	min-width: auto !important;
-}
-*/
+
 menugroup {
 	background-color: #1e1d2d !important;
 	color: #ffffff !important;
@@ -309,6 +307,7 @@ menuitem .menu-accel {
 .menu-iconic-left {
 	margin-bottom: 1px !important;
 }
+
 /*menu separators */
 menuseparator {
 	appearance: none !important;
@@ -2238,7 +2237,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 }*/
 
 .urlbarView-row {
-	padding: 0px 2px !important;
+	padding: 1px !important;
 }
 
 .popup-notification-body .menulist-label-box {
@@ -2257,12 +2256,17 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	background-color: transparent !important;
 	border-radius: 3px !important;
 }
-
+.urlbarView-row,
+.urlbarView-row {        
+        margin-right: 2px !important;
+        margin-left: 3px !important;
+}
 .urlbarView-row[selected],
 .urlbarView-row:hover {
 	background-color: #1e90ff !important;
-	border-radius: 3px !important;
-	margin-right: 4px !important;
+	border-radius: 6px !important;
+	margin-right: 2px !important;
+	margin-left: 3px !important;
 }
 
 #urlbar {
@@ -2281,7 +2285,7 @@ input:not(#urlbar-input) {
 }
 */
 .autocomplete-richlistitem[selected="true"] {
-	background-color: #1e90ff !important;
+	background: #1e90ff !important;
 	border-radius: 3px !important;
 }
 
@@ -4961,3 +4965,21 @@ menulist#menuPosition {
 #nav-bar-customization-target {
 	height: 24px !important;
 }
+
+/* Bring back tab separator lines that were removed in Proton 
+
+.tabbrowser-tab {
+	border-inline-start: 1px solid transparent !important;
+	border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, currentColor 20%, transparent) 20%, color-mix(in srgb, currentColor 20%, transparent) 80%, transparent 80%) !important;
+}
+
+.tabbrowser-tab:hover,
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:hover+.tabbrowser-tab:not([first-visible-unpinned-tab]),
+.tabbrowser-tab:first-child,
+.tabbrowser-tab[selected],
+.tabbrowser-tab[multiselected],
+#tabbrowser-arrowscrollbox[overflowing]>.tabbrowser-tab[first-visible-unpinned-tab],
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[multiselected]+.tabbrowser-tab,
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[selected]+.tabbrowser-tab {
+	border-image: none !important;
+}*/
