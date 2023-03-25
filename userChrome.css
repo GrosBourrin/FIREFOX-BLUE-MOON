@@ -230,7 +230,7 @@ menupopup:not(.in-menulist)>menu {
 
 menupopup>menuitem,
 menupopup>menu {
-	padding-block: 4px !important;
+	padding-block: 3px !important;
 	min-height: 7px !important;
 	border: none !important;
 	outline: none !important;
@@ -2316,7 +2316,9 @@ input:not(#urlbar-input) {
 #urlbar-input {
 	margin-top: 1px !important;
 }
-
+.urlbarView-row-inner {
+  padding-block: 2px !important;
+}
 :root {
 	--lwt-toolbar-field-highlight: #1e90ff !important;
 	--lwt-toolbar-field-highlight-text: white !important;
@@ -4983,4 +4985,3 @@ menulist#menuPosition {
 #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[selected]+.tabbrowser-tab {
 	border-image: none !important;
 }*/
-
