@@ -1,9 +1,8 @@
 # FIREFOX-BLUE-MOON
 
-![https://img.shields.io/endpoint?color=%231E90FF&label=FIREFOX&logo=FIREFOX&logoColor=%231E90FF&style=for-the-badge
-
-[![Badge License]][License]
-[![Badge Mozilla]][Mozilla]
+![image](https://user-images.githubusercontent.com/40931468/227821754-e56f8803-f164-44a5-a50e-6d6817fdd1c1.png)
+![image](https://user-images.githubusercontent.com/40931468/227821668-3afce98b-520a-4a1c-85a5-3eefd1680671.png)
+![image](https://user-images.githubusercontent.com/40931468/227821822-75ec5bcf-6758-4da7-abbc-17352a4b349e.png)
 
 - Put all the files in the chrome folder of your profile then restart firefox
 
