@@ -1,4 +1,5 @@
 # FIREFOX-BLUE-MOON
+![Firefox-Bluemoon-#1e90ff](https://user-images.githubusercontent.com/40931468/227825967-4d3d033d-78ac-4772-b408-5973c0e133ca.svg)
 
 ![image](https://user-images.githubusercontent.com/40931468/227821754-e56f8803-f164-44a5-a50e-6d6817fdd1c1.png)
 ![image](https://user-images.githubusercontent.com/40931468/227821668-3afce98b-520a-4a1c-85a5-3eefd1680671.png)
