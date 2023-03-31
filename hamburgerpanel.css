@@ -313,11 +313,8 @@ menuitem.subviewbutton[_moz-menuactive],
         display: inline-block;
 }
 #appMenu-zoom-controls2::before, /* Legacy v104 */
-  #appMenu-zoom-controls::before {
-    content: url("screenshot2.svg") !important;
-    filter:invert(100%) !important;
+#appMenu-zoom-controls::before {
+        content: url("screenshot2.svg") !important;
+        filter:invert(100%) !important;
  }
- #appMenu-zoom-controls2 label {
-     
-     filter:invert(100%) !important;
-  }
+ 
