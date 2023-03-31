@@ -1,0 +1,323 @@
+
+/* panel ui */
+#PanelUI-menu-button {
+        list-style-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDEzNSAxNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZiI+CiAgICA8cmVjdCB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMjA7MTEwOzEwMDs5MDs4MDs3MDs2MDs1MDs0MDsxNDA7MTIwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieSIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEyMDsxMTA7MTAwOzkwOzgwOzcwOzYwOzUwOzQwOzE0MDsxMjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IgogICAgICAgICAgICAgYmVnaW49IjAuMjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSI2MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0MCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjkwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjEyMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTA7MTU7MjA7MjU7MzA7MzU7NDA7NDU7NTA7MDsxMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgPC9yZWN0Pgo8L3N2Zz4K") !important;
+}
+
+@media (min-resolution: 4dppx) {
+        #PanelUI-menu-button {
+                list-style-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDEzNSAxNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZiI+CiAgICA8cmVjdCB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMjA7MTEwOzEwMDs5MDs4MDs3MDs2MDs1MDs0MDsxNDA7MTIwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieSIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEyMDsxMTA7MTAwOzkwOzgwOzcwOzYwOzUwOzQwOzE0MDsxMjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IgogICAgICAgICAgICAgYmVnaW49IjAuMjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSI2MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0MCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjkwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjEyMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTA7MTU7MjA7MjU7MzA7MzU7NDA7NDU7NTA7MDsxMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgPC9yZWN0Pgo8L3N2Zz4K") !important;
+                opacity: 1 !important;
+        }
+}
+
+.panel-subview-body {
+        color: #ffffff !important;
+        background: #1e1d2d !important;
+}
+
+.PanelUI-subView .subviewbutton-nav::after {
+        -moz-context-properties: fill !important;
+        fill: #ffffff !important;
+        opacity: 1 !important;
+        filter: brightness(100%) !important;
+}
+
+.subviewbutton.panel-subview-footer {
+        background-color: #1e1d2d !important;
+        border-top: 0px solid !important;
+}
+
+.panel-header {
+        border-bottom: 1px solid #1e1d2d !important;
+        background: #1e1d2d !important;
+}
+
+.panel-subview-footer,
+[class^="PanelUI-"] {
+        color: #ffffff !important;
+        background: #1e1d2d !important;
+        border-radius: 8px !important;
+}
+
+.PanelUI-subView toolbarseparator {
+        display: visible !important;
+        margin: 6px 8px 4px 8px !important;
+        border-color: #4f4f4f !important;
+}
+
+/* Use account-button icon for signed in sync item */
+#appMenu-fxa-status2[fxastatus]>toolbarbutton::before {
+        display: -moz-box !important;
+        content: "";
+        width: 16px !important;
+        height: 16px !important;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: var(--avatar-image-url);
+        border-radius: 99px !important;
+        /*url("https://firefoxusercontent.com/a873192d18d42c51b77a1943d1e3ed7b") !important;*/
+}
+
+/* Add somewhat hacky separator to zoom controls so it looks consistent */
+#appMenu-protonMainView>.panel-subview-body::after {
+        content: "";
+        display: -moz-box;
+        border-bottom: 1px solid #4f4f4f !important;
+        margin: 6px 8px 4px 8px !important;
+        /*var(--panel-separator-margin) !important;*/
+}
+
+#appMenu-find-button2~* {
+        -moz-box-ordinal-group: 2 !important;
+}
+
+#appMenu-zoomReset-button2,
+#appMenu-zoomReduce-button2,
+#appMenu-zoomEnlarge-button2,
+#appMenu-fullscreen-button2 {
+        border-color: transparent !important;
+        background: transparent !important;
+        color: #1e90ff !important;
+        stroke: transparent !important;
+        transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+
+#appMenu-zoomReset-button2 {
+        border: 1px solid #1e90ff !important;
+}
+
+#appMenu-zoomReset-button2:hover,
+#appMenu-zoomReduce-button2:hover,
+#appMenu-zoomEnlarge-button2:hover,
+#appMenu-fullscreen-button2:hover {
+        background-color: #1e90ff !important;
+        color: #ffffff !important;
+        stroke: #1e90ff !important;
+        transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+
+#appMenu-zoomReduce-button2>.toolbarbutton-icon,
+#appMenu-fullscreen-button2>.toolbarbutton-icon,
+#appMenu-zoomEnlarge-button2>.toolbarbutton-icon {
+        background-color: transparent !important;
+        stroke: transparent !important;
+}
+
+#appMenu-tp-separator {
+        display: visible !important;
+        margin: 4px 8px 4px 8px !important;
+        border-color: #4f4f4f !important;
+}
+
+#appMenu-popup panelview {
+        width: 24.5em !important;
+        /* can modify panel width, Original: 22.5em */
+}
+
+/*
+#appMenu-zoomReduce-button2>.toolbarbutton-icon,
+#appMenu-zoomEnlarge-button2>.toolbarbutton-icon {
+        stroke: var(--zoom-controls-bgcolor, var(--button-bgcolor, ButtonFace)) !important;
+        -moz-context-properties: fill, stroke !important;
+}
+#appMenu-zoomReduce-button2:not([disabled], [open], :active):is(:hover)>.toolbarbutton-icon,
+#appMenu-zoomEnlarge-button2:not([disabled], [open], :active):is(:hover)>.toolbarbutton-icon {
+        stroke: var(--button-hover-bgcolor) !important;
+}
+*/
+.subviewbutton[shortcut]::after {
+        font-family: Fira Sans !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        color: #1e90ff !important;
+        filter: drop-shadow(0px 0px 4px #1e1d2d) !important;
+}
+
+.subviewbutton-nav::after {
+        fill: #ffffff !important;
+}
+
+#appMenu-popup .subviewbutton .toolbarbutton-text,
+#appMenu-popup .panel-arrowcontent {
+        font-family: Fira Sans !important;
+        font-size: 14px !important;
+        margin-left: 6px !important;
+}
+
+#appMenu-popup .subviewbutton .toolbarbutton-text:hover,
+#appMenu-popup .panel-arrowcontent:hover {
+        background: #1e90ff !important;
+        border-radius: 3px !important;
+}
+
+#appMenu-popup {
+        margin-top: 4px !important;
+}
+
+panelmultiview .toolbaritem-combined-buttons>label {
+        font-family: Fira Sans !important;
+        font-size: 14px !important;
+        margin-left: 0px !important;
+}
+
+#PanelUI-fxa-menu,
+#PanelUI-fxa-menu menupopup {
+        font-family: Fira Sans !important;
+}
+
+#appMenu-fxa-label2,
+.panel-header {
+        font-family: Fira Sans !important;
+        font-size: 14px !important;
+}
+
+.subview-subheader,
+#fxa-menu-header-description {
+        color: #1e90ff !important;
+}
+
+/* no zoom + - text */
+.PanelUI-subView .toolbaritem-combined-buttons>.subviewbutton-iconic>.toolbarbutton-text {
+        display: none !important;
+}
+
+/* no what's new gift packet icon */
+#appMenu-whatsnew-button {
+        display: none !important;
+}
+
+
+#appMenu-popup toolbarbutton.subviewbutton:is(:hover) {
+        background-color: #1e90ff !important;
+        border-radius: 3px !important;
+}
+
+/*
+panel,
+menupopup {
+        --windows-panel-box-shadow: 0 0 0px rgba(24, 26, 27, 0.904) !important;
+}*/
+
+#appMenu-mainView toolbarbutton:hover,
+#customizationui-widget-multiview toolbarbutton:hover,
+#widget-overflow-list toolbarbutton:hover {
+        background: #1e90ff !important;
+        color: #ffffff !important;
+}
+
+#appMenu-mainView toolbarbutton,
+#customizationui-widget-multiview toolbarbutton,
+#widget-overflow-list toolbarbutton {
+        color: #ffffff !important;
+        background: #1e1d2d !important;
+}
+
+panelview .toolbarbutton-1:-moz-any(:hover, :focus),
+toolbarbutton.subviewbutton:-moz-any(:hover, :focus),
+menu.subviewbutton[_moz-menuactive]:-moz-any([disabled], :active),
+menuitem.subviewbutton[_moz-menuactive],
+.widget-overflow-list .toolbarbutton-1:-moz-any(:hover, :focus),
+.toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem="true"])>toolbarbutton:-moz-any(:hover, :focus) {
+        background-color: #1e90ff !important;
+        border-radius: 2px !important;
+        color: #ffffff !important;
+}
+
+/* Adds icons to main menu items which were removed in Proton */
+#appMenu-fxa-status2[fxastatus]>toolbarbutton::before {
+        margin-inline: 0 8px !important;
+}
+
+#appMenu-protonMainView>.panel-subview-body>toolbarbutton>image {
+        fill: #ffffff !important;
+        -moz-context-properties: fill !important;
+        margin-inline: 0 8px !important;
+}
+
+#appMenu-new-tab-button2 {
+        list-style-image: url("chrome://browser/skin/new-tab.svg");
+}
+
+#appMenu-new-window-button2 {
+        list-style-image: url("chrome://browser/skin/window.svg");
+}
+
+#appMenu-new-private-window-button2 {
+        list-style-image: url("chrome://browser/skin/privateBrowsing.svg");
+}
+
+#appMenu-bookmarks-button {
+        list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
+}
+
+#appMenu-history-button {
+        list-style-image: url("chrome://browser/skin/history.svg");
+}
+
+#appMenu-downloads-button {
+        list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
+}
+
+#appMenu-passwords-button {
+        list-style-image: url("chrome://browser/skin/login.svg");
+}
+
+#appMenu-extensions-themes-button {
+        list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
+}
+
+#appMenu-print-button2 {
+        list-style-image: url("chrome://global/skin/icons/print.svg");
+}
+
+#appMenu-save-file-button2 {
+        list-style-image: url("chrome://browser/skin/save.svg") !important;
+}
+
+#appMenu-find-button2 {
+        list-style-image: url("chrome://global/skin/icons/search-glass.svg") !important;
+}
+
+#appMenu-settings-button {
+        list-style-image: url("chrome://global/skin/icons/settings.svg") !important;
+}
+
+#appMenu-more-button2 {
+        list-style-image: url("chrome://global/skin/icons/developer.svg") !important;
+}
+
+#appMenu-help-button2 {
+        list-style-image: url("chrome://global/skin/icons/info.svg") !important;
+}
+
+#appMenu-quit-button2 {
+        list-style-image: url("quit2.svg") !important;
+}
+
+#appMenu-fxa-separator {
+        appearance: none !important;
+        /*--panel-separator-zap-gradient: linear-gradient(90deg, #1E1D2D50 0%, #9059FF 45%, #1f90ff 60%, #ffff00 80%, #FFFFFF 100%) !important;*/
+        --panel-separator-zap-gradient: linear-gradient(90deg, #9059ff 0%, #ff4aa2 52.08%, #ff0 75%, #ffbd4f 80%, #ffffff 100%);
+}
+
+
+#appMenu-header-description,
+#fxa-menu-header-description {
+        display: none;
+}
+
+#appMenu-fxa-label2 vbox::before,
+#fxa-manage-account-button vbox::after {
+        content: "Difool";
+        display: inline-block;
+}
+#appMenu-zoom-controls2::before, /* Legacy v104 */
+  #appMenu-zoom-controls::before {
+    content: url("screenshot2.svg") !important;
+    filter:invert(100%) !important;
+ }
+ #appMenu-zoom-controls2 label {
+     
+     filter:invert(100%) !important;
+  }
