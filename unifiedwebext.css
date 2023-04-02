@@ -10,6 +10,11 @@ toolbaritem:hover {
 
 }
 */
+#unified-extensions-button {
+
+        list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHA6Ly9tb3ppbGxhLm9yZy9NUEwvMi4wLy4gLS0+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9ImNvbnRleHQtZmlsbCIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSI+DQogIDxwYXRoIGQ9Ik0yLjYgOCA0IDhjMS4xMDMgMCAyIC44OTcgMiAycy0uODk3IDItMiAybC0xLjQgMC0uNi42IDAgMS43NzVDMiAxNS4yNzEgMi43MjkgMTYgMy42MjUgMTZsOS43NSAwYy44OTYgMCAxLjYyNS0uNzI5IDEuNjI1LTEuNjI1bDAtOC43NUMxNSA0LjcyOSAxNC4yNzEgNCAxMy4zNzUgNEwxMSA0bDAtMmMwLTEuMTAzLS44OTctMi0yLTJTNyAuODk3IDcgMmwwIDItMy4zNzUgMEMyLjcyOSA0IDIgNC43MjkgMiA1LjYyNUwyIDcuNGwuNi42eiIvPg0KPC9zdmc+") !important;
+}
+
 .unified-extensions-item:hover {
         color: white !important;
         font-weight: bold !important;
@@ -29,7 +34,7 @@ toolbaritem:hover {
 }
 
 #unified-extensions-panel {
-        padding-top: 11px !important;
+        padding-top: 7px !important;
         background: none !important;
 }
 
@@ -69,16 +74,6 @@ toolbaritem:hover {
         background-color: #1e1d2d !important;
 }
 
-
-
-#unified-extensions-button {
-
-        list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHA6Ly9tb3ppbGxhLm9yZy9NUEwvMi4wLy4gLS0+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9ImNvbnRleHQtZmlsbCIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSI+DQogIDxwYXRoIGQ9Ik0yLjYgOCA0IDhjMS4xMDMgMCAyIC44OTcgMiAycy0uODk3IDItMiAybC0xLjQgMC0uNi42IDAgMS43NzVDMiAxNS4yNzEgMi43MjkgMTYgMy42MjUgMTZsOS43NSAwYy44OTYgMCAxLjYyNS0uNzI5IDEuNjI1LTEuNjI1bDAtOC43NUMxNSA0LjcyOSAxNC4yNzEgNCAxMy4zNzUgNEwxMSA0bDAtMmMwLTEuMTAzLS44OTctMi0yLTJTNyAuODk3IDcgMmwwIDItMy4zNzUgMEMyLjcyOSA0IDIgNC43MjkgMiA1LjYyNUwyIDcuNGwuNi42eiIvPg0KPC9zdmc+") !important;
-
-
-}
-
-
 /*New Extension panel
 #unified-extensions-panel toolbaritem.unified-extensions-item {
         max-width: max-content !important;
@@ -89,7 +84,7 @@ deck.unified-extensions-item-message-deck {
         display: none !important;
 }
 
-/*  Clean and tight extensions menu*/
+
 #unified-extensions-view .panel-header,
 #unified-extensions-view .panel-header+toolbarseparator,
 #unified-extensions-view .panel-subview-body+toolbarseparator,
@@ -110,7 +105,7 @@ deck.unified-extensions-item-message-deck {
 }
 
 #unified-extensions-item.unified-extensions-item:hover {
-        border-radius: 6px !important;
+        border-radius: 4px !important;
 }
 
 /*#unified-extensions-button {
