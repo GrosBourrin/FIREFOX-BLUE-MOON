@@ -10,6 +10,7 @@
 @import url("tooltip.css");
 @import url("CenteredStatuspanel.css");
 @import url("unifiedwebext.css");
+@import url("hamburgerpanel.css");
 
 /* 231A23 */
 
@@ -37,7 +38,7 @@ button::-moz-focus-inner,
 /* -------------------------------------------------------------------------- */
 :root {
 	--tab-corner-rounding: 3px !important;
-	--button-corner-rounding: 3px !important;
+	--button-corner-rounding: 4px !important;
 	/*--menu-corner-rounding: 11px;*/
 	--toolbarbutton-hover-background: transparent !important;
 	--focus-outline: 0px !important;
@@ -184,9 +185,8 @@ menuitem {
 	padding-left: 4px !important;
 	padding-right: 4px !important;
 	outline: none !important;
-	border: none !important;
-	box-shadow: none !important;
-	/*box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.5) !important;*/
+	border: none !important;	
+	/*box-shadow: 0 0 6px hsla(0,0%,0%,.8) !important;*/
 }
 
 menu:hover,
@@ -226,6 +226,7 @@ menupopup:not(.in-menulist)>menu {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
+	
 }
 
 menupopup>menuitem,
@@ -235,10 +236,11 @@ menupopup>menu {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
+	
 }
 
 :root {
-	--arrowpanel-menuitem-padding-block: 2px !important;
+	--arrowpanel-menuitem-padding-block: 1px !important;
 }
 
 
@@ -246,7 +248,7 @@ menugroup {
 	background-color: #1e1d2d !important;
 	color: #ffffff !important;
 	outline: none !important;
-	box-shadow: none !important;
+	/*box-shadow: none !important;*/
 }
 
 .menu-right {
@@ -308,7 +310,7 @@ menuitem .menu-accel {
 	margin-bottom: 1px !important;
 }
 
-/*menu separators */
+/*----------menu separators --------------------*/
 menuseparator {
 	appearance: none !important;
 	border: none !important;
@@ -490,194 +492,6 @@ treechildren::-moz-tree-image(query) {
 
 #PlacesToolbar menupopup[placespopup="true"] menuseparator {
 	background-color: #4f4f4f !important;
-}
-
-/* panel ui */
-#PanelUI-menu-button {
-	list-style-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDEzNSAxNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZiI+CiAgICA8cmVjdCB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMjA7MTEwOzEwMDs5MDs4MDs3MDs2MDs1MDs0MDsxNDA7MTIwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieSIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEyMDsxMTA7MTAwOzkwOzgwOzcwOzYwOzUwOzQwOzE0MDsxMjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IgogICAgICAgICAgICAgYmVnaW49IjAuMjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSI2MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0MCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjkwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjEyMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTA7MTU7MjA7MjU7MzA7MzU7NDA7NDU7NTA7MDsxMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgPC9yZWN0Pgo8L3N2Zz4K") !important;
-}
-
-@media (min-resolution: 4dppx) {
-	#PanelUI-menu-button {
-		list-style-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDEzNSAxNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZiI+CiAgICA8cmVjdCB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMjA7MTEwOzEwMDs5MDs4MDs3MDs2MDs1MDs0MDsxNDA7MTIwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ieSIKICAgICAgICAgICAgIGJlZ2luPSIwLjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEyMDsxMTA7MTAwOzkwOzgwOzcwOzYwOzUwOzQwOzE0MDsxMjAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IgogICAgICAgICAgICAgYmVnaW49IjAuMjVzIiBkdXI9IjFzIgogICAgICAgICAgICAgdmFsdWVzPSIxMDsxNTsyMDsyNTszMDszNTs0MDs0NTs1MDswOzEwIiBjYWxjTW9kZT0ibGluZWFyIgogICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSI2MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE0MCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwcyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMHMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjkwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyMCIgcng9IjYiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIKICAgICAgICAgICAgIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC4yNXMiIGR1cj0iMXMiCiAgICAgICAgICAgICB2YWx1ZXM9IjEwOzE1OzIwOzI1OzMwOzM1OzQwOzQ1OzUwOzA7MTAiIGNhbGNNb2RlPSJsaW5lYXIiCiAgICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9IjEyMCIgeT0iMTAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSI2Ij4KICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTIwOzExMDsxMDA7OTA7ODA7NzA7NjA7NTA7NDA7MTQwOzEyMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiCiAgICAgICAgICAgICBiZWdpbj0iMC41cyIgZHVyPSIxcyIKICAgICAgICAgICAgIHZhbHVlcz0iMTA7MTU7MjA7MjU7MzA7MzU7NDA7NDU7NTA7MDsxMCIgY2FsY01vZGU9ImxpbmVhciIKICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgPC9yZWN0Pgo8L3N2Zz4K") !important;
-		opacity: 1 !important;
-	}
-}
-
-.panel-subview-body {
-	color: #ffffff !important;
-	background: #1e1d2d !important;
-}
-
-.PanelUI-subView .subviewbutton-nav::after {
-	-moz-context-properties: fill !important;
-	fill: #ffffff !important;
-	opacity: 1 !important;
-	filter: brightness(100%) !important;
-}
-
-.subviewbutton.panel-subview-footer {
-	background-color: #1e1d2d !important;
-	border-top: 0px solid !important;
-}
-
-.panel-header {
-	border-bottom: 1px solid #1e1d2d !important;
-	background: #1e1d2d !important;
-}
-
-.panel-subview-footer,
-[class^="PanelUI-"] {
-	color: #ffffff !important;
-	background: #1e1d2d !important;
-	border-radius: 8px !important;
-}
-
-.PanelUI-subView toolbarseparator {
-	display: visible !important;
-	margin: 6px 8px 4px 8px !important;
-	border-color: #4f4f4f !important;
-}
-
-/* Use account-button icon for signed in sync item */
-#appMenu-fxa-status2[fxastatus]>toolbarbutton::before {
-	display: -moz-box !important;
-	content: "";
-	width: 16px !important;
-	height: 16px !important;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-image: var(--avatar-image-url);
-	border-radius: 99px !important;
-	/*url("https://firefoxusercontent.com/a873192d18d42c51b77a1943d1e3ed7b") !important;*/
-}
-
-/* Add somewhat hacky separator to zoom controls so it looks consistent */
-#appMenu-protonMainView>.panel-subview-body::after {
-	content: "";
-	display: -moz-box;
-	border-bottom: 1px solid #4f4f4f !important;
-	margin: 6px 8px 4px 8px !important;
-	/*var(--panel-separator-margin) !important;*/
-}
-
-#appMenu-find-button2~* {
-	-moz-box-ordinal-group: 2 !important;
-}
-
-#appMenu-zoomReset-button2,
-#appMenu-zoomReduce-button2,
-#appMenu-zoomEnlarge-button2,
-#appMenu-fullscreen-button2 {
-	border-color: transparent !important;
-	background: transparent !important;
-	color: #1e90ff !important;
-	stroke: transparent !important;
-	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-}
-
-#appMenu-zoomReset-button2 {
-	border: 1px solid #1e90ff !important;
-}
-
-#appMenu-zoomReset-button2:hover,
-#appMenu-zoomReduce-button2:hover,
-#appMenu-zoomEnlarge-button2:hover,
-#appMenu-fullscreen-button2:hover {
-	background-color: #1e90ff !important;
-	color: #ffffff !important;
-	stroke: #1e90ff !important;
-	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-}
-
-#appMenu-zoomReduce-button2>.toolbarbutton-icon,
-#appMenu-fullscreen-button2>.toolbarbutton-icon,
-#appMenu-zoomEnlarge-button2>.toolbarbutton-icon {
-	background-color: transparent !important;
-	stroke: transparent !important;
-}
-
-#appMenu-tp-separator {
-	display: visible !important;
-	margin: 4px 8px 4px 8px !important;
-	border-color: #4f4f4f !important;
-}
-
-#appMenu-popup panelview {
-	width: 24.5em !important;
-	/* can modify panel width, Original: 22.5em */
-}
-
-/*
-#appMenu-zoomReduce-button2>.toolbarbutton-icon,
-#appMenu-zoomEnlarge-button2>.toolbarbutton-icon {
-	stroke: var(--zoom-controls-bgcolor, var(--button-bgcolor, ButtonFace)) !important;
-	-moz-context-properties: fill, stroke !important;
-}
-#appMenu-zoomReduce-button2:not([disabled], [open], :active):is(:hover)>.toolbarbutton-icon,
-#appMenu-zoomEnlarge-button2:not([disabled], [open], :active):is(:hover)>.toolbarbutton-icon {
-	stroke: var(--button-hover-bgcolor) !important;
-}
-*/
-.subviewbutton[shortcut]::after {
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	font-weight: bold !important;
-	color: #1e90ff !important;
-	filter: drop-shadow(0px 0px 4px #1e1d2d) !important;
-}
-
-.subviewbutton-nav::after {
-	fill: #ffffff !important;
-}
-
-#appMenu-popup .subviewbutton .toolbarbutton-text,
-#appMenu-popup .panel-arrowcontent {
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	margin-left: 4px !important;
-}
-
-#appMenu-popup .subviewbutton .toolbarbutton-text:hover,
-#appMenu-popup .panel-arrowcontent:hover {
-	background: #1e90ff !important;
-	border-radius: 3px !important;
-}
-
-#appMenu-popup {
-	margin-top: 4px !important;
-}
-
-panelmultiview .toolbaritem-combined-buttons>label {
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	margin-left: 0px !important;
-}
-
-#PanelUI-fxa-menu,
-#PanelUI-fxa-menu menupopup {
-	font-family: Fira Sans !important;
-}
-
-#appMenu-fxa-label2,
-.panel-header {
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-}
-
-.subview-subheader,
-#fxa-menu-header-description {
-	color: #1e90ff !important;
-}
-
-/* no zoom text */
-.PanelUI-subView .toolbaritem-combined-buttons>.subviewbutton-iconic>.toolbarbutton-text {
-	display: none !important;
-}
-
-/* no what's new gift packet icon */
-#appMenu-whatsnew-button {
-	display: none !important;
 }
 
 /* Bookmark panel */
@@ -1685,7 +1499,7 @@ spacer,
 	-moz-image-region: auto !important;
 }
 
-.bookmark-item[label="Gravit Designer"] image,
+
 .bookmark-item[label="Gmail"] image {
 	transform: scale(1.2) !important;
 }
@@ -1793,14 +1607,14 @@ tab:hover::after {
 	outline: unset !important;
 }
 
-/* hide fade text on tab
+/* hide fade text on tab*/
 .tab-label-container[textoverflow]:not([pinned]) {
-	mask-image: unset !important;
+	mask-image: 35px !important;
 }
-*/
+
 
 .tabbrowser-tab {
-	--tab-label-mask-size: 2em !important;
+	--tab-label-mask-size: 35px !important;
 }
 
 /* Effect */
@@ -2256,11 +2070,13 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	background-color: transparent !important;
 	border-radius: 3px !important;
 }
+
 .urlbarView-row,
-.urlbarView-row {        
-        margin-right: 2px !important;
-        margin-left: 3px !important;
+.urlbarView-row {
+	margin-right: 2px !important;
+	margin-left: 3px !important;
 }
+
 .urlbarView-row[selected],
 .urlbarView-row:hover {
 	background-color: #1e90ff !important;
@@ -2316,9 +2132,11 @@ input:not(#urlbar-input) {
 #urlbar-input {
 	margin-top: 1px !important;
 }
+
 .urlbarView-row-inner {
-  padding-block: 2px !important;
+	padding-block: 2px !important;
 }
+
 :root {
 	--lwt-toolbar-field-highlight: #1e90ff !important;
 	--lwt-toolbar-field-highlight-text: white !important;
@@ -2768,42 +2586,6 @@ tabPreview-canvas element {
 	padding: 2px !important;
 }
 */
-
-#appMenu-popup toolbarbutton.subviewbutton:is(:hover) {
-	background-color: #1e90ff !important;
-	border-radius: 3px !important;
-}
-
-/*
-panel,
-menupopup {
-	--windows-panel-box-shadow: 0 0 0px rgba(24, 26, 27, 0.904) !important;
-}*/
-
-#appMenu-mainView toolbarbutton:hover,
-#customizationui-widget-multiview toolbarbutton:hover,
-#widget-overflow-list toolbarbutton:hover {
-	background: #1e90ff !important;
-	color: #ffffff !important;
-}
-
-#appMenu-mainView toolbarbutton,
-#customizationui-widget-multiview toolbarbutton,
-#widget-overflow-list toolbarbutton {
-	color: #ffffff !important;
-	background: #1e1d2d !important;
-}
-
-panelview .toolbarbutton-1:-moz-any(:hover, :focus),
-toolbarbutton.subviewbutton:-moz-any(:hover, :focus),
-menu.subviewbutton[_moz-menuactive]:-moz-any([disabled], :active),
-menuitem.subviewbutton[_moz-menuactive],
-.widget-overflow-list .toolbarbutton-1:-moz-any(:hover, :focus),
-.toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem="true"])>toolbarbutton:-moz-any(:hover, :focus) {
-	background-color: #1e90ff !important;
-	border-radius: 2px !important;
-	color: #ffffff !important;
-}
 
 /*
 panelview .toolbarbutton-1:-moz-any(:hover, :focus):not(:-moz-any([disabled], [open], :active)),
@@ -3311,76 +3093,6 @@ toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active)>.too
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/iconized_main_menu.css made available under Mozilla Public License v. 2.0
 See the above repository for updates as well as full license text. */
 
-/* Adds icons to main menu items which were removed in Proton */
-#appMenu-fxa-status2[fxastatus]>toolbarbutton::before {
-	margin-inline: 0 8px !important;
-}
-
-#appMenu-protonMainView>.panel-subview-body>toolbarbutton>image {
-	fill: #ffffff !important;
-	-moz-context-properties: fill !important;
-	margin-inline: 0 8px !important;
-}
-
-#appMenu-new-tab-button2 {
-	list-style-image: url("chrome://browser/skin/new-tab.svg");
-}
-
-#appMenu-new-window-button2 {
-	list-style-image: url("chrome://browser/skin/window.svg");
-}
-
-#appMenu-new-private-window-button2 {
-	list-style-image: url("chrome://browser/skin/privateBrowsing.svg");
-}
-
-#appMenu-bookmarks-button {
-	list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg");
-}
-
-#appMenu-history-button {
-	list-style-image: url("chrome://browser/skin/history.svg");
-}
-
-#appMenu-downloads-button {
-	list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
-}
-
-#appMenu-passwords-button {
-	list-style-image: url("chrome://browser/skin/login.svg");
-}
-
-#appMenu-extensions-themes-button {
-	list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
-}
-
-#appMenu-print-button2 {
-	list-style-image: url("chrome://global/skin/icons/print.svg");
-}
-
-#appMenu-save-file-button2 {
-	list-style-image: url("chrome://browser/skin/save.svg") !important;
-}
-
-#appMenu-find-button2 {
-	list-style-image: url("chrome://global/skin/icons/search-glass.svg") !important;
-}
-
-#appMenu-settings-button {
-	list-style-image: url("chrome://global/skin/icons/settings.svg") !important;
-}
-
-#appMenu-more-button2 {
-	list-style-image: url("chrome://global/skin/icons/developer.svg") !important;
-}
-
-#appMenu-help-button2 {
-	list-style-image: url("chrome://global/skin/icons/info.svg") !important;
-}
-
-#appMenu-quit-button2 {
-	list-style-image: url("quit2.svg") !important;
-}
 
 /* download progress color */
 .downloadProgress::-moz-progress-bar {
@@ -3696,11 +3408,6 @@ checkbox>.checkbox-check {
 	/*padding: 1px !important;*/
 }
 
-#appMenu-fxa-separator {
-	appearance: none !important;
-	/*--panel-separator-zap-gradient: linear-gradient(90deg, #1E1D2D50 0%, #9059FF 45%, #1f90ff 60%, #ffff00 80%, #FFFFFF 100%) !important;*/
-	--panel-separator-zap-gradient: linear-gradient(90deg, #9059ff 0%, #ff4aa2 52.08%, #ff0 75%, #ffbd4f 80%, #ffffff 100%);
-}
 
 :root {
 	--toolbarseparator-color: #1e90ff !important;
@@ -3743,7 +3450,7 @@ p::selection {
 }
 */
 
-/* v92.0 - for padding below 4px 
+/* v92.0 - for padding below 4px
 :root {
 	--arrowpanel-menuitem-padding: 4px 8px !important;
 }*/
@@ -4113,16 +3820,6 @@ menu[label="Livemarks"]>.menu-iconic-left {
 	filter: invert(100%) !important;
 }
 
-#appMenu-header-description,
-#fxa-menu-header-description {
-	display: none;
-}
-
-#appMenu-fxa-label2 vbox::before,
-#fxa-manage-account-button vbox::after {
-	content: "Difool";
-	display: inline-block;
-}
 
 #context-savelinktopocket {
 	display: none !important;
@@ -4259,11 +3956,9 @@ and by default removes the tab secondary line
 }
 */
 
-#appMenu-zoom-controls2>.toolbarbutton-text {
-	padding-left: 25px !important;
-}
 
-/* slide in animation when clicking on urlbar 
+
+/* slide in animation when clicking on urlbar
 #urlbar[breakout-extend] .urlbarView {
 	animation-name: urlbarExtend;
 	animation-duration: 0.5s;
@@ -4480,7 +4175,7 @@ and by default removes the tab secondary line
 menu.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 .bookmark-item[image*="page-icon:https://github.com/"]::before {
-	/*content: "" !important;	
+	/*content: "" !important;
 	width: 16px !important;
 	height: 16px !important;
 	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDQzOC41NDkgNDM4LjU0OSIgd2lkdGg9IjQzOC41NDlwdCIgaGVpZ2h0PSI0MzguNTQ5cHQiPjxkZWZzPjxjbGlwUGF0aCBpZD0iX2NsaXBQYXRoXzg3QXhvTjhPanFCRmEzQ3dVTlAwTzMxZ1U1Z2JteUNwIj48cmVjdCB3aWR0aD0iNDM4LjU0OSIgaGVpZ2h0PSI0MzguNTQ5Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF84N0F4b044T2pxQkZhM0N3VU5QME8zMWdVNWdibXlDcCkiPjxwYXRoIGQ9IiBNIDQwOS4xMzIgMTE0LjU3MyBDIDM4OS41MjQgODAuOTc3IDM2Mi45MjcgNTQuMzc5IDMyOS4zMzQgMzQuNzczIEMgMjk1LjczNiAxNS4xNjYgMjU5LjA1NyA1LjM2NSAyMTkuMjcxIDUuMzY1IEMgMTc5LjQ5IDUuMzY1IDE0Mi43OTkgMTUuMTY5IDEwOS4yMDggMzQuNzczIEMgNzUuNjEyIDU0LjM3OCA0OS4wMTYgODAuOTc3IDI5LjQwOCAxMTQuNTczIEMgOS44MDMgMTQ4LjE2OCAwIDE4NC44NTQgMCAyMjQuNjMgQyAwIDI3Mi40MSAxMy45NCAzMTUuMzc1IDQxLjgyNyAzNTMuNTM2IEMgNjkuNzExIDM5MS43IDEwNS43MzMgNDE4LjEwOCAxNDkuODkgNDMyLjc2MyBDIDE1NS4wMyA0MzMuNzE3IDE1OC44MzUgNDMzLjA0NiAxNjEuMzA5IDQzMC43NjcgQyAxNjMuNzg0IDQyOC40ODUgMTY1LjAyIDQyNS42MjcgMTY1LjAyIDQyMi4yMDUgQyAxNjUuMDIgNDIxLjYzNCAxNjQuOTcxIDQxNi40OTcgMTY0Ljg3NiA0MDYuNzg4IEMgMTY0Ljc3OCAzOTcuMDc5IDE2NC43MzIgMzg4LjYwOSAxNjQuNzMyIDM4MS4zODIgTCAxNTguMTY1IDM4Mi41MTggQyAxNTMuOTc4IDM4My4yODUgMTQ4LjY5NiAzODMuNjEgMTQyLjMxOSAzODMuNTE4IEMgMTM1Ljk0NSAzODMuNDI5IDEyOS4zMjggMzgyLjc2MSAxMjIuNDc3IDM4MS41MTkgQyAxMTUuNjIzIDM4MC4yODggMTA5LjI0OCAzNzcuNDMzIDEwMy4zNDcgMzcyLjk2IEMgOTcuNDQ5IDM2OC40ODcgOTMuMjYyIDM2Mi42MzIgOTAuNzg3IDM1NS40MDQgTCA4Ny45MzIgMzQ4LjgzNCBDIDg2LjAyOSAzNDQuNDYgODMuMDMzIDMzOS42MDEgNzguOTQgMzM0LjI3NSBDIDc0Ljg0NyAzMjguOTQ0IDcwLjcwOCAzMjUuMzMgNjYuNTIxIDMyMy40MjcgTCA2NC41MjIgMzIxLjk5NiBDIDYzLjE5IDMyMS4wNDUgNjEuOTU0IDMxOS44OTggNjAuODExIDMxOC41NjcgQyA1OS42NjkgMzE3LjIzNiA1OC44MTQgMzE1LjkwNCA1OC4yNDMgMzE0LjU3IEMgNTcuNjcxIDMxMy4yMzUgNTguMTQ1IDMxMi4xNCA1OS42NyAzMTEuMjgxIEMgNjEuMTk1IDMxMC40MjIgNjMuOTUxIDMxMC4wMDUgNjcuOTUgMzEwLjAwNSBMIDczLjY1OCAzMTAuODU4IEMgNzcuNDY1IDMxMS42MjEgODIuMTc0IDMxMy45IDg3Ljc5MSAzMTcuNzA5IEMgOTMuNDA1IDMyMS41MTUgOTguMDIgMzI2LjQ2MyAxMDEuNjM3IDMzMi41NTEgQyAxMDYuMDE3IDM0MC4zNTcgMTExLjI5NCAzNDYuMzA1IDExNy40ODMgMzUwLjM5OCBDIDEyMy42NjcgMzU0LjQ5MSAxMjkuOTAyIDM1Ni41MzQgMTM2LjE4MiAzNTYuNTM0IEMgMTQyLjQ2MiAzNTYuNTM0IDE0Ny44ODYgMzU2LjA1OCAxNTIuNDU2IDM1NS4xMTEgQyAxNTcuMDIxIDM1NC4xNTkgMTYxLjMwNCAzNTIuNzI4IDE2NS4zMDMgMzUwLjgyNiBDIDE2Ny4wMTYgMzM4LjA2OCAxNzEuNjggMzI4LjI2NyAxNzkuMjkxIDMyMS40MTYgQyAxNjguNDQzIDMyMC4yNzYgMTU4LjY5IDMxOC41NTkgMTUwLjAyNyAzMTYuMjc2IEMgMTQxLjM2OSAzMTMuOTkgMTMyLjQyMiAzMTAuMjggMTIzLjE5MiAzMDUuMTM2IEMgMTEzLjk1NyAyOTkuOTk5IDEwNi4yOTYgMjkzLjYyIDEwMC4yMDcgMjg2LjAxIEMgOTQuMTE3IDI3OC4zOTYgODkuMTE5IDI2OC40IDg1LjIyIDI1Ni4wMzEgQyA4MS4zMTkgMjQzLjY1NyA3OS4zNjggMjI5LjM4MyA3OS4zNjggMjEzLjIwNSBDIDc5LjM2OCAxOTAuMTcgODYuODg4IDE3MC41NjggMTAxLjkyNSAxNTQuMzg4IEMgOTQuODgxIDEzNy4wNyA5NS41NDYgMTE3LjY1NiAxMDMuOTIyIDk2LjE0OCBDIDEwOS40NDIgOTQuNDMzIDExNy42MjggOTUuNzIgMTI4LjQ3NiAxMDAuMDAxIEMgMTM5LjMyNiAxMDQuMjg0IDE0Ny4yNyAxMDcuOTUzIDE1Mi4zMTYgMTEwLjk5NSBDIDE1Ny4zNjIgMTE0LjAzNiAxNjEuNDA1IDExNi42MTMgMTY0LjQ1MSAxMTguNzAzIEMgMTgyLjE1NiAxMTMuNzU2IDIwMC40MjcgMTExLjI4MiAyMTkuMjY5IDExMS4yODIgQyAyMzguMTExIDExMS4yODIgMjU2LjM4NiAxMTMuNzU2IDI3NC4wOTIgMTE4LjcwMyBMIDI4NC45NDEgMTExLjg1NCBDIDI5Mi4zNiAxMDcuMjg0IDMwMS4xMjEgMTAzLjA5NiAzMTEuMjAzIDk5LjI4OSBDIDMyMS4yOTEgOTUuNDg0IDMyOS4wMDUgOTQuNDM2IDMzNC4zMzcgOTYuMTUxIEMgMzQyLjg5OSAxMTcuNjYgMzQzLjY2MiAxMzcuMDczIDMzNi42MTYgMTU0LjM5MSBDIDM1MS42NTIgMTcwLjU3MSAzNTkuMTc1IDE5MC4xNzggMzU5LjE3NSAyMTMuMjA4IEMgMzU5LjE3NSAyMjkuMzg2IDM1Ny4yMTcgMjQzLjcwNSAzNTMuMzIyIDI1Ni4xNzQgQyAzNDkuNDIyIDI2OC42NDUgMzQ0LjM4MSAyNzguNjMxIDMzOC4xOTcgMjg2LjE1MyBDIDMzMi4wMDYgMjkzLjY3NCAzMjQuMjk2IDMwMC4wMDMgMzE1LjA2NiAzMDUuMTM5IEMgMzA1LjgzNCAzMTAuMjc5IDI5Ni44ODQgMzEzLjk4OSAyODguMjI2IDMxNi4yNzUgQyAyNzkuNTY0IDMxOC41NjEgMjY5LjgxMSAzMjAuMjc5IDI1OC45NjMgMzIxLjQyMSBDIDI2OC44NTcgMzI5Ljk4MyAyNzMuODA1IDM0My40OTggMjczLjgwNSAzNjEuOTYgTCAyNzMuODA1IDQyMi4xOTcgQyAyNzMuODA1IDQyNS42MTkgMjc0Ljk5NSA0MjguNDc2IDI3Ny4zNzcgNDMwLjc1OSBDIDI3OS43NTYgNDMzLjAzOCAyODMuNTEzIDQzMy43MDkgMjg4LjY1MyA0MzIuNzU0IEMgMzMyLjgxNiA0MTguMTAxIDM2OC44MzggMzkxLjY5MiAzOTYuNzIxIDM1My41MjggQyA0MjQuNjAxIDMxNS4zNjcgNDM4LjU0NiAyNzIuNDAyIDQzOC41NDYgMjI0LjYyMiBDIDQzOC41MzYgMTg0Ljg1MSA0MjguNzI4IDE0OC4xNjggNDA5LjEzMiAxMTQuNTczIFogIiBmaWxsPSJyZ2IoMjU1LDI1NSwyNTUpIi8+PC9nPjwvc3ZnPg==") !important;
@@ -4566,7 +4261,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 */
 
 /* ------------------------------ status panel ------------------------------ */
-/* ------------------------------ status panel ------------------------------ 
+/* ------------------------------ status panel ------------------------------
 #statuspanel {
 	bottom: -6px !important;
 	margin-left: 35% !important;
@@ -4615,7 +4310,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 	align-items: center !important;
 	margin: 0 !important;
 	bottom: 0px !important;
-	
+
 	box-align: center !important;
 	z-index: 2 !important;
 	min-width: 140px !important;
@@ -4694,7 +4389,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 }
 */
 
-/* ------------------------------ status panel ------------------------------ 
+/* ------------------------------ status panel ------------------------------
 #statuspanel {
 	bottom: 0px !important;
 	left: 40% !important;
@@ -4704,15 +4399,15 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 	border-radius: 3px !important;
 	text-align: center !important;
 	font-size: 14px !important;
-	
+
 }
 #statuspanel-inner {
-	
+
 	-moz-box-align: center !important;
 	margin-left: -50% !important;
 }
 #statuspanel #statuspanel-label {
-	
+
 	background-color: #1e1d2d !important;
 	font-family: "Fira Sans" !important;
 	font-size: 14px !important;
@@ -4721,7 +4416,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 	border-radius: 0px !important;
 	text-align: center !important;
 	transition: color linear 0.5s !important;
-	
+
 	vertical-align: middle !important;
 }
 #statuspanel:not([inactive]) {
@@ -4799,7 +4494,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 
 .container.infobar::before {
 	display: none !important;
-	/*content: "";	
+	/*content: "";
 	width: 2px;
 	position: absolute;
 	background-image: linear-gradient(0, #9059ff 0%, #ff4aa2 52.08%, #ffbd4f 100%);
@@ -4968,7 +4663,7 @@ menulist#menuPosition {
 	height: 24px !important;
 }
 
-/* Bring back tab separator lines that were removed in Proton 
+/* Bring back tab separator lines that were removed in Proton
 
 .tabbrowser-tab {
 	border-inline-start: 1px solid transparent !important;
@@ -4985,3 +4680,36 @@ menulist#menuPosition {
 #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[selected]+.tabbrowser-tab {
 	border-image: none !important;
 }*/
+/*
+#ContentSelectDropdown, .ContentSelectDropdown-item-0,
+#ContentSelectDropdownPopup {
+	background: #1e1d2d !important;
+}*/
+
+#ContentSelectDropdown .ContentSelectDropdown-item-0:not([_moz-menuactive="true"]) {
+	color: #FFFFFF !important;
+	background-color: #1e1d2d !important;
+}
+
+
+
+
+
+/* History swipe animation custom color Firefox 111+ */
+
+#historySwipeAnimationPreviousArrow,
+#historySwipeAnimationNextArrow {
+	--swipe-nav-icon-primary-color: #0060DF !important;
+	--swipe-nav-icon-accent-color: #FFFFFF !important;
+}
+
+@media (-moz-content-prefers-color-scheme: dark) {
+
+	#historySwipeAnimationPreviousArrow,
+	#historySwipeAnimationNextArrow {
+		--swipe-nav-icon-primary-color: #00DDFF !important;
+		--swipe-nav-icon-accent-color: #000000 !important;
+	}
+}
+
+
