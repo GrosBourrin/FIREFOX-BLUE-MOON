@@ -1,0 +1,62 @@
+
+@-moz-document url-prefix("about:reader") {
+	body {
+		background-color: #1e1d2d !important;
+	}
+
+	/* Unstick the toolbar so it can scroll */
+	/*#toolbar {
+		position: static !important;
+	}*/
+
+	/* Put the toolbar back at the left */
+	.reader-toolbar {
+		margin-left: 16px !important;
+	}
+
+	.toolbar {
+		border: none !important;
+		background-color: #1e1d2d !important;
+		width: 40px !important;
+	}
+
+	button {
+		fill: #ffffff !important;
+		background-color: #1e90ff !important;
+		border: none !important;
+	}
+
+	button:hover {
+		background-color: #1e90ff80 !important;
+	}
+
+	.dropdown-popup {
+		background-color: #1e1d2d !important;
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5) !important;
+		border-radius: 0px !important;
+		border: none !important;
+		opacity: 0 !important;
+		transition: opacity 150ms, visibility 0s 2s !important;
+	}
+
+	.open>.dropdown-popup {
+		opacity: 1 !important;
+		transition: opacity 150ms !important;
+	}
+
+	.dropdown-arrow {
+		display: none !important;
+	}
+
+	.dropdown.open {
+		background-color: #1e90ff !important;
+	}
+
+	.narrate-row:not(:first-child) {
+		border: none !important;
+	}
+
+	.font-type-buttons>button>.description {
+		color: #bebebe !important;
+	}
+}
