@@ -5,6 +5,28 @@
 ![image](https://user-images.githubusercontent.com/40931468/227821668-3afce98b-520a-4a1c-85a5-3eefd1680671.png)
 ![image](https://user-images.githubusercontent.com/40931468/227821822-75ec5bcf-6758-4da7-abbc-17352a4b349e.png)
 
+## Hi there 👋
+
+I'm using CSS, to make Firefox and websites more fun. 🕺🏽
+
+**I love working with**
+
+<div display="flex">
+  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS"/>
+</div>
+
+### 🔭 I’m working on
+
+- Theming Firefox and some websites for fun.
+
+### 🤔 I’m looking for help to learn more
+
+### ⚡ Fun fact
+
+I'm definitely not an alien.
+
+
+
 - Put all the files in the chrome folder of your profile then restart firefox
 
 **Note: it's a work in progress not a final theme, just for my using and fun**
