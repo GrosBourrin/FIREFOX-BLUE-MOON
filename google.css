@@ -15,7 +15,53 @@
 		font-family: Fira Sans !important;
 		color: white !important;
 	}
-        #rhs { margin-left: 176px !important; }
+
+	#rhs {
+		margin-left: 176px !important;
+	}
+
+	span.REySof:hover {
+		appearance: none;
+		background: #1e90ff50 !important;
+		font-family: Fira Sans !important;
+		color: white !important;
+	}
+
+	.material-icons {
+		font-family: Material Icons !important;
+	}
+
+	.GCSyeb {
+		background: none !important;
+	}
+
+	div.Z26q7c.UK95Uc.Sth6v {
+		margin-right: 100px !important;
+	}
+}
+
+@-moz-document domain("google.com") {
+	* {
+		font-family: Fira Sans !important;
+		--center-abs-margin: 180px;
+		--center-width: 652px;
+		--rhs-margin: 176px !important;
+		--rhs-width: 372px;
+		--grid-gutter-width: 20px;
+		--grid-column-width: 36px;
+	}
+
+	span.REySof {
+		appearance: none;
+		background: #1e90ff !important;
+		font-family: Fira Sans !important;
+		color: white !important;
+	}
+
+	#rhs {
+		margin-left: 176px !important;
+	}
+
 	span.REySof:hover {
 		appearance: none;
 		background: #1e90ff50 !important;
@@ -36,45 +82,6 @@
 		margin-right: 100px !important;
 	}
 }
-
- @-moz-document domain("google.com") {
-         * {
-                 font-family: Fira Sans !important;
-                 --center-abs-margin: 180px;
-                 --center-width: 652px;
-                 --rhs-margin: 176px !important;
-                 --rhs-width: 372px;
-                 --grid-gutter-width: 20px;
-                 --grid-column-width: 36px;
-         }
- 
-         span.REySof {
-                 appearance: none;
-                 background: #1e90ff !important;
-                 font-family: Fira Sans !important;
-                 color: white !important;
-         }
-          #rhs { margin-left: 176px !important; }
-         span.REySof:hover {
-                 appearance: none;
-                 background: #1e90ff50 !important;
-                 font-family: Fira Sans !important;
-                 color: white !important;
- 
-         }
- 
-         .material-icons {
-                 font-family: Material Icons !important;
-         }
- 
-         .GCSyeb {
-                 background: none !important;
-         }
- 
-         div.Z26q7c.UK95Uc.Sth6v {
-                 margin-right: 100px !important;
-         }
- }
 
 @-moz-document domain(universfreebox.com) {
 
@@ -1020,6 +1027,7 @@
 ==/UserStyle== */
 @-moz-document domain("github.com"),
 domain("gist.github.com") {
+
 	.blob-code-inner,
 	.markdown-body pre>code,
 	.markdown-body .highlight>pre {
