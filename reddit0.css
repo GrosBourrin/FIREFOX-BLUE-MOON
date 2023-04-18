@@ -708,7 +708,123 @@
 	}
 }
 
+/* ==UserStyle==
+@name         Reddit sidebar autohide
+@version      20221116.06.37
+@namespace    userstyles.world/user/oren64
+@description  Auto hides the Reddit sidebar.
 
+When the sidebar it's hovered, is will expand to full width.
+
+When the sidebar it's not hovered, it will contract, and show only the icons.  
+@author       oren64
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("reddit.com") {
+/* Removing the left padding when the side bar is open */
+._1nxEQl5D2Bx2jxDILRHemb._3x1dyL19KnZ4kI6i9TlRp4 { padding-left:0px}
+/* Side bar is not hoverd */
+._1nxEQl5D2Bx2jxDILRHemb .zoWOQnp55WuhEugRSwfw1{
+ width:50px;
+ transition:200ms;
+ transition-delay: 200ms;
+}
+/* Side bar is hoverd */
+._1nxEQl5D2Bx2jxDILRHemb > .zoWOQnp55WuhEugRSwfw1:hover{
+ width:270px;
+ transition:200ms;
+ transition-delay: 200ms;
+}
+/* Auto hide text */
+._1Ok0AiXwAeYl2SsUBaxgPC{ opacity:0 }
+div._1Ok0AiXwAeYl2SsUBaxgPC:nth-child(3) { display: none }
+._2XRPX11qL4-HxWPuHAzOW5 { padding:0 }
+._1Ok0AiXwAeYl2SsUBaxgPC {
+  line-height:0px;
+  transition:100ms;
+}
+._1nxEQl5D2Bx2jxDILRHemb > .zoWOQnp55WuhEugRSwfw1:hover > div > ._2XRPX11qL4-HxWPuHAzOW5{ padding: 16px 24px 8px }
+._1nxEQl5D2Bx2jxDILRHemb > .zoWOQnp55WuhEugRSwfw1:hover > div > ._1Ok0AiXwAeYl2SsUBaxgPC { 
+ opacity:1;
+ line-height:16px;
+ animation-timing-function:ease-out;
+ transition:100ms;
+ transition-delay: 200ms;
+}
+/* subreddit padding left */
+._2MgAHlPDdKvXiG-Qbz5cbC {
+ padding:8px 12px;
+}
+/* margin top for the X button*/
+._37tmRmxaFMjRRrvwcY2JmY {
+ margin:10px 16px 4px;
+}
+/* X button */
+._2oY_N7NWiAv9m_mFIRdwVX {
+ padding:0px;
+ margin-top:-4px;
+ margin-right:-4px;
+ padding-bottom:4px;
+}
+/* fix screen alignment massages, setting, profile*/
+.e8fTXufFydLy7wHBm6rHP {
+ left: 0 !important;
+}
+.aq7Z-V1l4XpWUOsbbPQed {
+ padding-left: 52px;
+}
+.qQD1kUtHq2K4gyBqJrEnF {
+ left:170px;
+}
+._1OVBBWLtHoSPfGCRaPzpTf {
+ width:66%;
+}
+._1_TJAX-8zAT3vVN1Iz7cys {
+ padding:0 66px;
+}
+._2L5G9B5yaoqW3IegiYN-FL ._2RkQc9Gtsq3cPQNZLYv4zc {
+ padding-left: 66px;
+}
+/* margin between icon and text*/
+._2Efd4uMAp4YawdvL9Zhdhv,
+._2aqH0n-kSzFY7HZZ5GL-Jb {
+ margin-left:16px;
+}
+/* scrollbar thin for firefox*/
+._1nxEQl5D2Bx2jxDILRHemb .zoWOQnp55WuhEugRSwfw1 {
+ scrollbar-width: thin;
+}
+/*  scrollbar thin for chrome */
+._3k3RwDkEsbX50bb-DBvuWj::-webkit-scrollbar {
+ width: 4px; 
+ height:0;
+}
+._3k3RwDkEsbX50bb-DBvuWj::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+/* min icon width */
+.ENGeNwSHzwN-SV2KTH2s7, ._3HTtcITrR-crvsRovLrijl, .icon.t2A0mgkgGzc8cAahJsR7a {
+  min-width: 20px;
+  max-width: 20px;
+}
+
+/* sub name and star opacity when hover */
+/*._1nxEQl5D2Bx2jxDILRHemb > .zoWOQnp55WuhEugRSwfw1:hover > div >._2MgAHlPDdKvXiG-Qbz5cbC > div > .icon.t2A0mgkgGzc8cAahJsR7a,
+._1nxEQl5D2Bx2jxDILRHemb > .zoWOQnp55WuhEugRSwfw1:hover > div >._2MgAHlPDdKvXiG-Qbz5cbC > ._2aqH0n-kSzFY7HZZ5GL-Jb {
+ opacity: 1;
+}
+.icon.t2A0mgkgGzc8cAahJsR7a {
+ opacity: 0;
+ transition:100ms;
+ transition-delay: 200ms;
+}
+._2aqH0n-kSzFY7HZZ5GL-Jb {
+ opacity: 0;
+ transition:200ms;
+ transition-delay: 200ms;
+}*/
+}
 @-moz-document url("https://www.reddit.com/login/") {
 	body {
 		color: white !important;
