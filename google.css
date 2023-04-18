@@ -1,37 +1,3 @@
-/*@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*") {
-	* {
-		font-family: "Fira Sans" !important;
-	}
-
-	a:link {
-		color: #1e90ff !important;
-	}
-
-	a:visited {
-		color: #1e90ff50 !important;
-	}
-
-	a:hover {
-		color: #1e90ff80 !important;
-	}
-
-	a:active {
-		color: #1e90ff !important;
-	}
-
-	.material-icons {
-		font-family: Material Icons !important;
-	}
-	span.REySof {
-               background-color: #1e90ff !important;
-         }
-         span.REySof:hover {
-                       background-color: #1e90ff50 !important;
-
-         }
-
-
-}   */
 @-moz-document domain("google.fr") {
 	* {
 		font-family: Fira Sans !important;
