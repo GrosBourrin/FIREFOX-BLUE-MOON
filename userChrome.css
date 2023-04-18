@@ -185,14 +185,16 @@ menuitem {
 	padding-left: 4px !important;
 	padding-right: 4px !important;
 	outline: none !important;
-	border: none !important;	
+	border: none !important;
 	/*box-shadow: 0 0 6px hsla(0,0%,0%,.8) !important;*/
 }
 
 menu:hover,
 menu:focus,
+menu:active,
 menulist:hover,
 menulist:focus,
+menulist:active,
 menuitem:hover,
 menuitem:active,
 menuitem:focus,
@@ -226,7 +228,7 @@ menupopup:not(.in-menulist)>menu {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
-	
+
 }
 
 menupopup>menuitem,
@@ -236,7 +238,7 @@ menupopup>menu {
 	border: none !important;
 	outline: none !important;
 	box-shadow: none !important;
-	
+
 }
 
 :root {
@@ -438,7 +440,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 }
 
 .toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text {
-	display: -moz-box !important;
+	display: flex !important;
 }
 
 /* Standard folder icons */
@@ -901,7 +903,7 @@ checkbox[disabled]>.checkbox-check {
 /*--------------------------------------------------*/
 toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text,
 toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
-	display: -moz-box !important;
+	display: flex !important;
 	/*padding: 1px !important;*/
 }
 
@@ -962,7 +964,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 }
 */
 .toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text {
-	display: -moz-box !important;
+	display: flex !important;
 }
 
 /* sidebar */
@@ -1338,7 +1340,7 @@ treechildren::-moz-tree-image(query) {
 }
 
 #fxa-avatar-image {
-	margin-top: 1px !important;
+	margin-top: 2px !important;
 	padding: 16 16 !important;
 	transform: scale(1.25) !important;
 }
@@ -1370,7 +1372,8 @@ treechildren::-moz-tree-image(query) {
 .tab-icon-image,
 #bookmarks-toolbar-placeholder>.toolbarbutton-icon,
 #PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon {
-	filter: drop-shadow(0px 0px 1px #000000) !important;
+	filter: drop-shadow(0px 0px 2px #000000) !important;
+
 }
 
 
@@ -1717,7 +1720,7 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 
 .tab-label-container {
 	text-align: center !important;
-	padding-inline: 5px !important;
+	/*padding-inline: 5px !important;*/
 }
 
 /*
@@ -2752,9 +2755,10 @@ browser[type="content"]>html {
 
 /* new tab button icon */
 #new-tab-button {
-	display: -moz-box !important;
+	display: flex !important;
 	margin-right: 3px !important;
 	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAzMCAzMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIj48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF80VVBqSUZIbkFHaTVNc2lsa25OUE1INTdYeUlBUm53SyI+PHJlY3Qgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIi8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF80VVBqSUZIbkFHaTVNc2lsa25OUE1INTdYeUlBUm53SykiPjxnIGlkPSJHcm91cCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAsMCkiIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMCwwKSIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9IiBNIDAgMTUgQyAwIDYuNzIxIDYuNzIxIDAgMTUgMCBDIDIzLjI3OSAwIDMwIDYuNzIxIDMwIDE1IEMgMzAgMjMuMjc5IDIzLjI3OSAzMCAxNSAzMCBDIDYuNzIxIDMwIDAgMjMuMjc5IDAgMTUgWiAgTSAxMy41OTUgMTMuNTk1IEwgNy45OTggMTMuNTk1IEwgNy4yMjQgMTMuNTk1IEwgNy4yMjQgMTYuNDA3IEwgNy45OTggMTYuNDA3IEwgMTMuNTk1IDE2LjQwNyBMIDEzLjU5NSAyMi4wMzMgTCAxMy41OTUgMjIuODEgTCAxNi40MDcgMjIuODEgTCAxNi40MDcgMjIuMDMzIEwgMTYuNDA3IDE2LjQwNyBMIDIyLjAwNSAxNi40MDcgTCAyMi43NzggMTYuNDA3IEwgMjIuNzc4IDEzLjU5NSBMIDIyLjAwNSAxMy41OTUgTCAxNi40MDcgMTMuNTk1IEwgMTYuNDA3IDcuOTcgTCAxNi40MDcgNy4xOTMgTCAxMy41OTUgNy4xOTMgTCAxMy41OTUgNy45NyBMIDEzLjU5NSAxMy41OTUgWiAiIGZpbGw9InJnYigyMDAsMjAwLDApIi8+PC9nPjwvZz48L3N2Zz4=") !important;
+	margin-top: 3px !important;
 }
 
 .tab-label:-moz-window-inactive,
@@ -3509,7 +3513,7 @@ menupopup>menu {
 /* ---------------------------------------------------------------------------- */
 #tabContextMenu #context_reloadTab,
 #tabContextMenu #context_reloadSelectedTabs {
-	-moz-box-ordinal-group: 0 !important;
+	order: -1 !important;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -3529,8 +3533,8 @@ menupopup>menu {
 }
 
 .tab-label-container {
-	display: grid !important;
-	justify-content: safe center !important;
+	display: grid;
+	/*justify-content: safe center;*/
 	text-align: center !important;
 }
 
@@ -3541,7 +3545,7 @@ menupopup>menu {
 .tab-label,
 .tab-text {
 	padding-top: 5.1px !important;
-	position: center !important;
+	/*position: center !important;*/
 	overflow: hidden !important;
 	text-align: center !important;
 }
@@ -4199,7 +4203,9 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 	display: none !important;
 }
 
-
+.urlbarView-row:first-child {
+	display: none !important;
+}
 
 
 
@@ -4234,9 +4240,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 	}
 }*/
 
-.urlbarView-row:first-child {
-	display: none !important;
-}
+
 
 
 /* firefox 106
@@ -4259,174 +4263,6 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 	-moz-box-ordinal-group: 2 !important
 }
 */
-
-/* ------------------------------ status panel ------------------------------ */
-/* ------------------------------ status panel ------------------------------
-#statuspanel {
-	bottom: -6px !important;
-	margin-left: 35% !important;
-	max-width: 45% !important;
-	transition: bottom 0.25s ease-in !important;
-}
-#statuspanel-inner {
-	-moz-box-align: center !important;
-	margin-left: -35% !important;
-}
-#statuspanel #statuspanel-label {
-	appearance: none !important;
-	background-color: #1e1d2d !important;
-	font-family: "Fira Sans" !important;
-	font-size: 14px !important;
-	color: #ffff00 !important;
-	border: 2px solid #1e1d2d !important;
-	border-radius: 0px !important;
-	text-align: center !important;
-	transition: color linear 0.5s !important;
-	margin-inline: 0 !important;
-	vertical-align: middle !important;
-}
-#statuspanel:not([inactive]) {
-	transition: bottom 0.25s ease-out !important;
-}
-#statuspanel[mirror] {
-	inset-inline-start: auto !important;
-	inset-inline-end: auto !important;
-}
-#statuspanel {
-	transition: bottom 0.25s ease-in !important;
-}
-#statuspanel:not([inactive]) {
-	transition: bottom 0.25s ease-out !important;
-}
-#statuspanel #statuspanel-label {
-	transition: color linear 0.5s !important;
-}
-*/
-/*/*right: 190px !important;
-	left: auto !important;*/
-/*
-#statuspanel {
-	appearance: none !important;
-	align-items: center !important;
-	margin: 0 !important;
-	bottom: 0px !important;
-
-	box-align: center !important;
-	z-index: 2 !important;
-	min-width: 140px !important;
-	max-width: 500px !important;
-}
-#statuspanel-inner {
-	box-align: center !important;
-	align-items: center !important;
-}
-#statuspanel-label {
-	background-color: #1e1d2d !important;
-	font-family: "Fira Sans" !important;
-	font-size: 14px !important;
-	color: #ffff00 !important;
-	border: 2px solid #1e1d2d !important;
-	border-radius: 0px !important;
-	text-align: center !important;
-	transition: color linear 0.5s !important;
-	margin-inline: 0 !important;
-	vertical-align: middle !important;
-	margin-top: 0px !important;
-}
-*/
-/*
-#statuspanel[type="status"]:after {
-	display: block;
-	content: "Loading...";
-	position: fixed;
-	right: 20px;
-	bottom: 20px;
-	z-index: 2147483647;
-	pointer-events: none;
-	background: #1e1d2d !important;
-	font-size: 14px;
-	padding: 6px 12px;
-	border-radius: 3px;
-	font-family: "Fira Sans" !important;
-	font-size: 14px !important;
-	color: #ffff00 !important;
-	border: 2px solid #1e1d2d !important;
-	border-radius: 0px !important;
-	text-align: center !important;
-	transition: color linear 0.5s !important;
-	margin-inline: 0 !important;
-}
-#statuspanel[type="status"] #statuspanel-label {
-	padding-inline-start: 24px !important;
-	background-position: 4px center !important;
-	padding-block: 5px !important;
-	background-repeat: no-repeat !important;
-	-moz-context-properties: fill, fill-opacity !important;
-	fill: yellow !important;
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="context-fill" fill-opacity="context-fill-opacity" viewBox="0 0 16 16" style="animation:spinLoadingIcon .5s steps(12,end) infinite"><style>@keyframes spinLoadingIcon{to{transform:rotate(360deg)}}</style><path d="M7 3V1s0-1 1-1 1 1 1 1v2s0 1-1 1-1-1-1-1z"/><path d="M4.63 4.1l-1-1.73S3.13 1.5 4 1c.87-.5 1.37.37 1.37.37l1 1.73s.5.87-.37 1.37c-.87.57-1.37-.37-1.37-.37z" opacity=".93"/><path d="M3.1 6.37l-1.73-1S.5 4.87 1 4c.5-.87 1.37-.37 1.37-.37l1.73 1s.87.5.37 1.37c-.5.87-1.37.37-1.37.37z" opacity=".86"/><path d="M3 9H1S0 9 0 8s1-1 1-1h2s1 0 1 1-1 1-1 1z" opacity=".79"/><path d="M4.1 11.37l-1.73 1S1.5 12.87 1 12c-.5-.87.37-1.37.37-1.37l1.73-1s.87-.5 1.37.37c.5.87-.37 1.37-.37 1.37z" opacity=".72"/><path d="M3.63 13.56l1-1.73s.5-.87 1.37-.37c.87.5.37 1.37.37 1.37l-1 1.73s-.5.87-1.37.37c-.87-.5-.37-1.37-.37-1.37z" opacity=".65"/><path d="M7 15v-2s0-1 1-1 1 1 1 1v2s0 1-1 1-1-1-1-1z" opacity=".58"/><path d="M10.63 14.56l-1-1.73s-.5-.87.37-1.37c.87-.5 1.37.37 1.37.37l1 1.73s.5.87-.37 1.37c-.87.5-1.37-.37-1.37-.37z" opacity=".51"/><path d="M13.56 12.37l-1.73-1s-.87-.5-.37-1.37c.5-.87 1.37-.37 1.37-.37l1.73 1s.87.5.37 1.37c-.5.87-1.37.37-1.37.37z" opacity=".44"/><path d="M15 9h-2s-1 0-1-1 1-1 1-1h2s1 0 1 1-1 1-1 1z" opacity=".37"/><path d="M14.56 5.37l-1.73 1s-.87.5-1.37-.37c-.5-.87.37-1.37.37-1.37l1.73-1s.87-.5 1.37.37c.5.87-.37 1.37-.37 1.37z" opacity=".3"/><path d="M9.64 3.1l.98-1.66s.5-.874 1.37-.37c.87.5.37 1.37.37 1.37l-1 1.73s-.5.87-1.37.37c-.87-.5-.37-1.37-.37-1.37z" opacity=".23"/></svg>') !important;
-}
-#statuspanel-label,
-#statuspanel[type="overLink"] #statuspanel-label {
-	background: #1e1d2d !important;
-	font-size: 14px !important;
-	padding: 6px 12px !important;
-	border-radius: 3px !important;
-	font-family: "Fira Sans" !important;
-	font-size: 14px !important;
-	color: #ffff00 !important;
-	border: 2px solid #1e1d2d !important;
-	border-radius: 0px !important;
-	text-align: center !important;
-	transition: color linear 0.5s !important;
-	margin-inline: 0 !important;
-	padding-inline-start: 24px !important;
-	background-position: 4px center !important;
-	padding-block: 5px !important;
-	background-repeat: no-repeat;
-	-moz-context-properties: fill, fill-opacity !important;
-	fill: yellow !important;
-	background-image: url(chrome://browser/skin/link.svg) !important;
-}
-*/
-
-/* ------------------------------ status panel ------------------------------
-#statuspanel {
-	bottom: 0px !important;
-	left: 40% !important;
-	right: 40% !important;
-	margin-left: 8px !important;
-	margin-right: 0px !important;
-	border-radius: 3px !important;
-	text-align: center !important;
-	font-size: 14px !important;
-
-}
-#statuspanel-inner {
-
-	-moz-box-align: center !important;
-	margin-left: -50% !important;
-}
-#statuspanel #statuspanel-label {
-
-	background-color: #1e1d2d !important;
-	font-family: "Fira Sans" !important;
-	font-size: 14px !important;
-	color: #ffff00 !important;
-	border: 2px solid #1e1d2d !important;
-	border-radius: 0px !important;
-	text-align: center !important;
-	transition: color linear 0.5s !important;
-
-	vertical-align: middle !important;
-}
-#statuspanel:not([inactive]) {
-	transition: bottom 0.25s ease-out !important;
-}
-/*
-#statuspanel[mirror] {
-	inset-inline-start: auto;
-	inset-inline-end: 0;
-}*/
 
 
 
@@ -4622,7 +4458,7 @@ label#label,
 menulist#menuPosition {
 	background: transparent !important;
 	color: white !important;
-	border: none !important
+	border: none !important;
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -4691,7 +4527,14 @@ menulist#menuPosition {
 	background-color: #1e1d2d !important;
 }
 
-/* History swipe animation custom color Firefox 111+ */
+.dialogBox {
+	--in-content-page-background: #1e1d2d !important;
+}
+
+
+
+
+/* History swipe animation custom color Firefox 111+
 
 #historySwipeAnimationPreviousArrow,
 #historySwipeAnimationNextArrow {
@@ -4708,4 +4551,147 @@ menulist#menuPosition {
 	}
 }
 
+*/
+/* Tab Preview On Hover supporting CSS theme */
 
+/* Move this file to profile folder -> chrome, or append to existing userChrome.css */
+
+/* Version 0.0.1 */
+
+#navigator-toolbox:-moz-lwtheme {
+
+	background-image: none !important;
+
+}
+
+.tabbrowser-tab::after {
+
+	--preview-delay: 1s;
+	/* Delay of tab preview when the cursor move onto a tab from outside of tab bar */
+	--preview-delay-tolerance: 0.75s;
+	/* Max time period of cursor not hovering on tab bar before preview delay re-engages */
+
+}
+
+.tabbrowser-tab::after {
+
+	box-shadow: 0 0 50px black;
+	outline: 0.5px solid black;
+	pointer-events: none;
+	content: "";
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	top: 50px;
+	width: 200px;
+	height: 150px;
+	background-color: var(--lwt-accent-color);
+	background-image: var(--lwt-additional-images);
+	background-repeat: no-repeat;
+	border: 1px solid var(--arrowpanel-border-color);
+	border-radius: 6px;
+
+}
+
+#tabbrowser-arrowscrollbox:not(:hover) .tabbrowser-tab::after {
+
+	transition: opacity 0.5s, filter 0s var(--preview-delay-tolerance);
+	filter: opacity(0);
+
+}
+
+#tabbrowser-arrowscrollbox:hover .tabbrowser-tab::after {
+
+	transition: opacity 0.5s, filter 0.5s var(--preview-delay);
+	filter: opacity(1);
+
+}
+
+.tabbrowser-tab:not(:hover)::after {
+
+	opacity: 0;
+
+}
+
+.tabbrowser-tab:hover::after {
+
+	opacity: 1;
+
+}
+
+.tabbrowser-tab[selected]:hover::after {
+
+	opacity: 0;
+	transition-duration: 0.25s !important;
+
+}
+
+.tabbrowser-tab:nth-of-type(1)::after {
+
+	display: block;
+	background-size: cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(2)::after {
+
+	display: block;
+	background-size: 0, cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(3)::after {
+
+	display: block;
+	background-size: 0, 0, cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(4)::after {
+
+	display: block;
+	background-size: 0, 0, 0, cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(5)::after {
+
+	display: block;
+	background-size: 0, 0, 0, 0, cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(6)::after {
+
+	display: block;
+	background-size: 0, 0, 0, 0, 0, cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(7)::after {
+
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(8)::after {
+
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(9)::after {
+
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, 0, cover;
+
+}
+
+.tabbrowser-tab:nth-of-type(10)::after {
+
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, 0, 0, cover;
+
+}
