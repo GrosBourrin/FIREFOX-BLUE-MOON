@@ -1,87 +1,86 @@
-/* unified extensions menu
-.unified-extensions-item-action-button.subviewbutton:hover {
-        color: white !important;
-        font-weight: bold !important;
-        background: #1e90ff !important;
-        border-radius: 4px !important;
-}
-toolbaritem:hover {
-        background: yellow !important;
 
-}
-*/
 #unified-extensions-button {
-
-        list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHA6Ly9tb3ppbGxhLm9yZy9NUEwvMi4wLy4gLS0+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9ImNvbnRleHQtZmlsbCIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSI+DQogIDxwYXRoIGQ9Ik0yLjYgOCA0IDhjMS4xMDMgMCAyIC44OTcgMiAycy0uODk3IDItMiAybC0xLjQgMC0uNi42IDAgMS43NzVDMiAxNS4yNzEgMi43MjkgMTYgMy42MjUgMTZsOS43NSAwYy44OTYgMCAxLjYyNS0uNzI5IDEuNjI1LTEuNjI1bDAtOC43NUMxNSA0LjcyOSAxNC4yNzEgNCAxMy4zNzUgNEwxMSA0bDAtMmMwLTEuMTAzLS44OTctMi0yLTJTNyAuODk3IDcgMmwwIDItMy4zNzUgMEMyLjcyOSA0IDIgNC43MjkgMiA1LjYyNUwyIDcuNGwuNi42eiIvPg0KPC9zdmc+") !important;
+	list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHA6Ly9tb3ppbGxhLm9yZy9NUEwvMi4wLy4gLS0+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9ImNvbnRleHQtZmlsbCIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSI+DQogIDxwYXRoIGQ9Ik0yLjYgOCA0IDhjMS4xMDMgMCAyIC44OTcgMiAycy0uODk3IDItMiAybC0xLjQgMC0uNi42IDAgMS43NzVDMiAxNS4yNzEgMi43MjkgMTYgMy42MjUgMTZsOS43NSAwYy44OTYgMCAxLjYyNS0uNzI5IDEuNjI1LTEuNjI1bDAtOC43NUMxNSA0LjcyOSAxNC4yNzEgNCAxMy4zNzUgNEwxMSA0bDAtMmMwLTEuMTAzLS44OTctMi0yLTJTNyAuODk3IDcgMmwwIDItMy4zNzUgMEMyLjcyOSA0IDIgNC43MjkgMiA1LjYyNUwyIDcuNGwuNi42eiIvPg0KPC9zdmc+") !important;
 }
 
-.unified-extensions-item:hover {
-        color: white !important;
-        font-weight: bold !important;
-        border-radius: 6px !important;
+#unified-extensions-panel .unified-extensions-item {
+	background: #1e1d2d !important;
+	color: white !important;
+	opacity: 1 !important;
+	font-weight: normal !important;
 }
+
+#unified-extensions-panel .unified-extensions-item:hover {
+	background: #1e90ff !important;
+	border-radius: 4px !important;
+	color: white !important;
+	font-weight: bold !important;
+}
+
 
 .unified-extensions-item-action-button.subviewbutton {
-        color: white !important;
-        background-color: #1e1d2d !important;
+	color: white !important;
+
 }
 
 
 
 /*-------------------------------------------------------*/
 #unified-extensions-panel toolbarseparator {
-        display: none !important;
+	display: none !important;
 }
 
 #unified-extensions-panel {
-        padding-top: 7px !important;
-        background: none !important;
+	padding-top: 7px !important;
+	background: none !important;
 }
+
 
 #unified-extensions-manage-extensions,
 #unified-extensions-view {
-        background: #1e1d2d !important;
+	background: #1e1d2d !important;
 }
 
 .unified-extensions-item-action-button[disabled] .unified-extensions-item-icon {
-        opacity: 1.0 !important;
-        fill: white !important;
+	opacity: 1.0 !important;
+	fill: white !important;
 }
 
 /*  Extension menu option button mod*/
 #unified-extensions-view .unified-extensions-item-menu-button.subviewbutton {
-        visibility: hidden !important;
-        transition: 300ms !important;
-        -moz-margin-end: -3.6em !important;
+	visibility: hidden !important;
+	transition: 300ms !important;
+	-moz-margin-end: -3.6em !important;
 }
 
 #unified-extensions-view:hover .unified-extensions-item-menu-button.subviewbutton {
-        visibility: visible !important;
-        transition: 300ms !important;
-        -moz-margin-end: initial !important;
+	visibility: visible !important;
+	transition: 300ms !important;
+	-moz-margin-end: initial !important;
 }
 
 
 #unified-extensions-view .unified-extensions-item-name,
 #unified-extensions-view .unified-extensions-item-message {
-        padding-inline-start: 0.5em !important;
-        width: 21em !important;
-        font-size: 14px !important;
+	padding-inline-start: 0.5em !important;
+	width: 21em !important;
+	font-size: 14px !important;
 }
 
+/*
 .unified-extensions-item-menu-button.subviewbutton:hover {
-        color: #1e90ff !important;
-        background-color: #1e1d2d !important;
+	color: #1e90ff !important;
+	background-color: #1e1d2d !important;
 }
-
+*/
 /*New Extension panel
 #unified-extensions-panel toolbaritem.unified-extensions-item {
-        max-width: max-content !important;
-        height: 60px;
+	max-width: max-content !important;
+	height: 60px;
 }*/
 
 deck.unified-extensions-item-message-deck {
-        display: none !important;
+	display: none !important;
 }
 
 
@@ -90,68 +89,90 @@ deck.unified-extensions-item-message-deck {
 #unified-extensions-view .panel-subview-body+toolbarseparator,
 #unified-extensions-view,
 #unified-extensions-view #unified-extensions-manage-extensions {
-        background: #1e1d2d !important;
+	background: #1e1d2d !important;
 
 }
 
 
 #unified-extensions-view #unified-extensions-manage-extensions:hover {
-        background-color: #1e90ff !important;
-        border-radius: 4px !important;
+	background-color: #1e90ff !important;
+	border-radius: 4px !important;
 }
 
 #unified-extensions-manage-extensions label {
-        text-align: center !important;
+	text-align: center !important;
 }
 
+/*
 #unified-extensions-item.unified-extensions-item:hover {
-        border-radius: 4px !important;
+	border-radius: 4px !important;
 }
-
+*/
 /*#unified-extensions-button {
 -moz-box-ordinal-group:  999 !important;
 }*/
 
 
 #unified-extensions-view {
-        --uei-icon-size: 16px !important;
+	--uei-icon-size: 16px !important;
 }
 
 
 .unified-extensions-item-menu-button.subviewbutton {
-        padding: 2px !important;
+	padding: 2px !important;
 }
 
 unified-extensions-item-message-deck {
-        display: none !important;
+	display: none !important;
 }
 
 #unified-extensions-view>vbox>vbox>.unified-extensions-item {
-        padding-block: 0px !important;
+	padding-block: 0px !important;
 }
 
 .unified-extensions-item-menu-button {
-        margin-inline-end: 0 !important;
+	margin-inline-end: 0 !important;
 }
 
 .unified-extensions-list .unified-extensions-item-menu-button {
-        margin-inline-end: 8px !important;
+	margin-inline-end: 8px !important;
 }
 
 unified-extensions-item.unified-extensions-item {
-        display: visible !important;
+	display: visible !important;
 }
 
 .unified-extensions-item-action[disabled] {
-        visibility: visible !important;
+	visibility: visible !important;
 }
 
 /*
 .unified-extensions-item-action-button[disabled] {
-        display: -moz-box !important;
-        height: var(--uei-icon-size) !important;
-        width: var(--uei-icon-size) !important;
-        -moz-context-properties: fill;
-        fill: currentColor;
+	display: -moz-box !important;
+	height: var(--uei-icon-size) !important;
+	width: var(--uei-icon-size) !important;
+	-moz-context-properties: fill;
+	fill: currentColor;
 }
 */
+/*
+  #unified-extensions-panel :is(
+    .unified-extensions-item-action-button:not([disabled]).subviewbutton,
+    .unified-extensions-item-menu-button.subviewbutton,
+    toolbaritem.unified-extensions-item .unified-extensions-item-action-button:not([disabled]).subviewbutton,
+    toolbaritem.unified-extensions-item .unified-extensions-item-menu-button.subviewbutton
+  ):hover:not(:active) {
+    background-color: #1e90ff !important;
+    color: white !important;
+    border-color: var(--uei-button-hover-bgcolor);
+  }
+
+  #unified-extensions-panel :is(
+    .unified-extensions-item-action-button:not([disabled]).subviewbutton,
+    .unified-extensions-item-menu-button.subviewbutton,
+    toolbaritem.unified-extensions-item .unified-extensions-item-action-button:not([disabled]).subviewbutton,
+    toolbaritem.unified-extensions-item .unified-extensions-item-menu-button.subviewbutton
+  ):hover:active {
+    background-color: #1e90ff !important;
+    color: white !important;
+  }*/
