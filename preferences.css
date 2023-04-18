@@ -515,23 +515,71 @@
 		fill: #1e90ff !important;
 		fill-opacity: 1 !important;
 	}
-	
-        #default-fxMobile.text-link,
+
+	#default-fxMobile.text-link,
 	a[is="moz-support-link"] {
 		font-weight: bold !important;
 	}
-        .qr-code-box {
-        	background: #1e90ff60 !important;
-        }
-        .qr-code-box-image {
 
-          width: 110px !important;
+	.qr-code-box {
+		background: #1e90ff60 !important;
+	}
 
-        }
-        .searchBarImage { 
-          -moz-context-properties: fill, stroke;
-          fill: #1e90ff20 !important;
-          stroke: #1e90ff !important;
-        }
+	.qr-code-box-image {
+		width: 140px !important;
+	}
 
+	.searchBarImage {
+		-moz-context-properties: fill, stroke;
+		fill: #1e90ff20 !important;
+		stroke: #1e90ff !important;
+	}
+
+
+	dialogBox,
+	#FontsDialog {
+		appearance: none !important;
+		background-color: #1e1d2d !important;
+	}
+
+	box.inherit {
+		color: white !important;
+		background: #1e1d2d !important;
+	}
+
+	window,
+	dialog,
+	window>dialog#history {
+		appearance: none;
+		color: white !important;
+		background-color: #1e1d2d !important;
+		--in-content-box-background: #1e1d2d !important;
+	}
+
+	input,
+	textarea {
+		appearance: none !important;
+		background: #1e1d2d !important;
+		color: #ffffff !important;
+		fill: white !important;
+	}
+
+	.dialogOverlay[topmost="true"] {
+		background-color: #1e1d2d !important;
+	}
+
+	#historyItems {
+		color: white !important;
+		background: #1e1d2d !important;
+	}
+
+	#historyItems:hover {
+		color: white !important;
+		background: #1e90ff90 !important;
+	}
+
+	#historyItems:active {
+		color: white !important;
+		background: #1e90ff !important;
+	}
 }
