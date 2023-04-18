@@ -9,6 +9,7 @@
 @import url("stackoverflow.css");
 @import url("twitter.css");
 @import url("preferences.css");
+/*@import url("Stylus.css"); */
 
 
 :root {
@@ -24,8 +25,6 @@
 	--toolbar-field-focus-border-color: transparent !important;
 	caret-color: #1e90ff !important;
 }
-
-
 
 :-moz-focusring,
 :focus,
@@ -757,19 +756,19 @@ url("about:profiles") {
 	a,
 	a:link {
 		color: #1e90ff !important;
-		
+
 	}
 	a:hover,
 	a:link:hover {
 		color: #0057ad !important;
-		
+
 	}
 	a:link:visited,
 	a:link:active,
 	a:active,
 	a:visited {
 		color: #0057ad !important;
-		
+
 	}
 */
 	.Card-footer-link {
@@ -1009,7 +1008,7 @@ url("about:profiles") {
 
 	/*
 	.Addon-icon-image,
-	.SearchResult-icon {		
+	.SearchResult-icon {
 	}
 */
 	.Select {
@@ -1378,19 +1377,19 @@ url("about:profiles") {
 	a,
 	a:link {
 		color: #1e90ff !important;
-		
+
 	}
 	a:hover,
 	a:link:hover {
 		color: #1e90ff80 !important;
-		
+
 	}
 	a:link:visited,
 	a:link:active,
 	a:active,
 	a:visited {
 		color: #0057ad !important;
-		
+
 	}
 */
 	.Card-footer-link {
@@ -1699,6 +1698,21 @@ browser[type="content"] {
 	.text-link:hover {
 		color: #1e90ff80 !important;
 	}
+
+	.vulnerable-alert {
+		background: #1e1d2d !important;
+		border-color: #1e90ff !important;
+	}
+
+	#login-sort {
+		background: #1e90ff !important;
+		text-align: center !important;
+	}
+
+	#login-sort label {
+		text-align: center !important;
+		margin: 0px !important;
+	}
 }
 
 @-moz-document url-prefix(view-source:) {
@@ -1820,12 +1834,12 @@ browser[type="content"] {
 	}
 }
 
-/* Changes colors on the page 
+/* Changes colors on the page
 :root {
 	--in-content-page-color: #009bd4 !important;
-	
+
 	--in-content-page-background: #1a1a1a !important;
-	
+
 	-in-content-text-color: #009bd4 !important;
 	--in-content-category-text-selected: #009bd4 !important;
 	--in-content-border-color: #009bd4 !important;
@@ -1837,7 +1851,7 @@ browser[type="content"] {
 }
 	html|h1 {
 		color: #009bd4 !important;
-	} 
+	}
 }
 */
 /*@-moz-document url("chrome://devtools/content/webconsole/index.html")
@@ -2966,7 +2980,12 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	a {
-		color: #888 !important;
+		color: #1e90ff !important;
+	}
+
+	a:hover {
+		color: #1e90ff90 !important;
+		text-decoration: none !important;
 	}
 
 	.fa-icon {
@@ -3057,9 +3076,16 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-color: #1e1d2d !important;
 	}
 
+	textarea,
 	#tooltip {
 		background-color: #000000 !important;
 		border: 1px solid #000000 !important;
+		color: #ffffff !important;
+	}
+
+	.cm-search-widget-input input {
+		background: #000000 !important;
+		border: 0px !important;
 		color: #ffffff !important;
 	}
 
@@ -3094,25 +3120,33 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	#dashboard-nav {
 		background-color: #1e1d2d !important;
-		border-bottom: 1px solid #777 !important;
+		border-bottom: 0px solid #1e90ff !important;
 	}
 
 	#dashboard-nav-widgets {
 		background-color: #1e1d2d !important;
-		border-bottom: 1px solid #777 !important;
+		border-bottom: 0px solid #1e90ff !important;
 	}
 
 	.tabButton {
 		background-color: #1e1d2d !important;
-		border: 0px solid #1b192480 !important;
-		border-bottom: 0px solid #777 !important;
+		border: 0px !important;
+
 		color: #ffffff !important;
+	}
+
+	.tabButton:hover {
+		background-color: #1e90ff80 !important;
+		border-radius: 3px !important;
+		color: #ffffff !important;
+
 	}
 
 	.tabButton.selected {
 		background-color: #1e90ff !important;
+		border-radius: 3px !important;
 		color: #ffffff !important;
-		border-bottom: 0px solid #222 !important;
+
 	}
 
 	#diff li {
@@ -3124,7 +3158,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	#diff textarea {
-		background-color: #333 !important;
+		background-color: #000000 !important;
 		color: #ffffff !important;
 	}
 
@@ -3147,6 +3181,12 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	#domTree {
 		color: #ffffff !important;
+	}
+
+	.cm-search-widget,
+	#ruleFilter {
+		background-color: #1e90ff30 !important;
+
 	}
 
 	#ruleFilter input,
@@ -3195,9 +3235,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		--checkbox-checked-ink: #1e90ff !important;
 	}
 
+	button {
+		background: #1e90ff50 !important;
+		color: white !important;
+	}
+
 	button:hover {
-		background-color: #1e1d2d !important;
-		fill: #1e90ff80 !important;
+		background: #1e90ff !important;
+		color: white !important;
 	}
 
 	button#cloudPush,
@@ -3214,6 +3259,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	span.counts {
 		color: #1e90ff !important;
+	}
+
+	span[data-url] {
+		color: #1e90ff !important;
+	}
+
+	span[data-url]:hover {
+		color: #1e90ff90 !important;
 	}
 
 	#actions {
@@ -3266,6 +3319,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #000000 !important;
 	}
 */
+	/*
 	#exportUserFiltersToFile {
 		background: #1e90ff !important;
 	}
@@ -3273,7 +3327,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	#exportUserFiltersToFile:hover {
 		background: #1e90ff80 !important;
 	}
-
+	*/
 	::selection * {
 		background: #1f90ff !important;
 		background-color: #1e90ff !important;
@@ -3322,8 +3376,8 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 }
 
-/* imagus */
-@-moz-document url("moz-extension://bceff70b-7762-49a5-98d4-06f376d9711d/options.html") {
+/* imagus mod*/
+@-moz-document url("moz-extension://fa0c04ad-ce95-4ccf-a163-badf1fc7f6f9/options.html") {
 	html {
 		background-color: #1e1d2d !important;
 	}
@@ -3386,6 +3440,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-color: black !important;
 		color: white !important;
 		fill: white !important;
+		border-color: #1e90ff !important;
 	}
 
 	#hz_css {
@@ -3412,7 +3467,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: dodgerblue !important;
 	}
 
-	.checkbox {
+	/*.checkbox {
 		background-image: -webkit-linear-gradient(top, #1e1d2d, #1e1d2d);
 		background-image: linear-gradient(to bottom, #1e1d2d, #1e1d2d);
 		background-color: #1e1d2d20 !important;
@@ -3422,6 +3477,34 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-image: -webkit-linear-gradient(top, #1e1d2d, #1e1d2d);
 		background-image: linear-gradient(to bottom, #1e1d2d, #1e1d2d);
 		background-color: #1e1d2d20 !important;
+	}  */
+
+	input[type="checkbox"]+.checkbox {
+		background: #1e1d2d !important;
+
+	}
+
+	input[type="checkbox"]:checked+.checkbox {
+		background: #1e90ff !important;
+		color: #FFFFFF !important;
+
+	}
+
+	button {
+		background: #1e90ff !important;
+		color: white !important;
+		border: none !important;
+	}
+
+	button#export {
+		fill: #1e90ff !important;
+		color: black !important;
+	}
+
+	button:hover {
+		background: #1e90ff90 !important;
+		color: white !important;
+		border: none !important;
 	}
 }
 
@@ -3481,11 +3564,11 @@ tooltip,
 	border: 1px solid #1E1D2D !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
-	opacity: 1 !important;	
-	border-radius: 4px !important;	
+	opacity: 1 !important;
+	border-radius: 4px !important;
 	margin-top: 5px !important;
 
-	
+
 }
 
 tooltip {
@@ -3494,9 +3577,9 @@ tooltip {
 	background: #1E1D2D !important;
 	border: 1px solid #1E1D2D !important;
 	font-family: Fira Sans !important;
-	font-size: 14px !important;	
+	font-size: 14px !important;
 	border-radius: 4px !important;
-	
+
 }
 @-moz-document url("moz-extension://3a5c43e9-6aa7-42c5-a74d-fbf9daab418c/options.html") {
 	body {
@@ -3843,7 +3926,7 @@ tooltip {
 	/*
 	.toggle-button:checked:hover {
 		background: #1e90ff80 !important;
-		
+
 	}
 
 	.toggle-button:enabled:hover {
@@ -4159,18 +4242,18 @@ dialog,
          outline: unset !important;
 }
 #PlacesToolbar menupopup,
- #BMB_bookmarksPopup menupopup, 
+ #BMB_bookmarksPopup menupopup,
  :is(panel, menupopup)[type="arrow"] {
- 
+
   background-color: transparent !important;
   border: none !important;
-  
+
 }
 .cui-widget-panel {
   background-color: none !important;
-           border: none !important;
-           outline: unset !important;
-           box-shadow: none !important;
+	 border: none !important;
+	 outline: unset !important;
+	 box-shadow: none !important;
 }*/
 
 #webextension-popup-browser,
@@ -4275,6 +4358,7 @@ dialog,
 		font-size: 12px !important;
 	}
 }
+
 @-moz-document url-prefix("moz-extension://e8f34abe-1871-4fd7-9285-f70fd26ba4b5/") {
 
 	#footerButtons,
@@ -4302,3 +4386,221 @@ dialog,
 	}
 }
 
+
+
+@-moz-document regexp(".+\.pdf$") {
+	:root {
+		font-family: Fira Sans !important;
+		--body-bg-color: #1e1d2d !important;
+		--highlight-selected-bg-color: #1e90ff !important;
+		--highlight-bg-color: dodgerblue !important;
+	}
+
+	#toolbarViewer,
+	menupopup-arrowscrollbox,
+	#ContentSelectDropdownPopup,
+	#toolbarSidebar,
+	#scaleSelectContainer {
+		background: #1e1d2d !important;
+	}
+
+
+	#secondaryToolbar {
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		color: white !important;
+		background: #1e1d2d !important;
+		border: 0px !important;
+	}
+
+	.secondaryToolbarButton:hover,
+	.secondaryToolbarButton:focus-visible {
+		background-color: #1e90ff !important;
+		color: white !important;
+		border-radius: 4px !important;
+	}
+
+	.secondaryToolbarButton,
+	.secondaryToolbarButton:focus-visible {
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		color: white !important;
+		background: #1e1d2d !important;
+		border: 0px !important;
+	}
+
+	.doorHanger::after,
+	.doorHanger::before,
+	.doorHangerRight::after,
+	.doorHangerRight::before {
+		border: 0px !important;
+		opacity: 0 !important;
+	}
+
+	.dropdownToolbarButton,
+	#scaleSelect {
+		background: #1e1d2d !important;
+	}
+
+	#pageNumber {
+		background: #1e1d2d !important;
+	}
+
+}
+
+@-moz-document url-prefix("chrome://browser/content/") {
+
+	dialog,
+	:root[dialogroot] {
+		--in-content-page-background: #1e1d2d !important;
+
+	}
+
+	richlistbox {
+		background: #1e1d2d !important;
+		color: white !important;
+		border: 1px solid #1e90ff !important;
+	}
+
+	richlistitem[selected="true"] {
+		background: #1e90ff !important;
+		color: white !important;
+	}
+
+	richlistitem:hover {
+		background: #1e90ff80 !important;
+		color: white !important;
+	}
+
+	richlistitem:focus {
+		background: #1e90ff80 !important;
+		color: white !important;
+	}
+
+	button {
+		background: #1e90ff70 !important;
+		border: none !important;
+	}
+
+	button:hover {
+		background: #1e90ff !important;
+		border: none !important;
+	}
+
+	button:active {
+		background: #1e90ff !important;
+		border: none !important;
+	}
+
+	menulist[open="true"] {
+		border: 0px !important;
+		background: #1e90ff !important;
+		border-radius: 3px !important;
+		outline: none !important;
+		outline-offset: none !important;
+	}
+
+	menulist {
+		background: #1e1d2d !important;
+	}
+
+	menulist:hover,
+	menulist:focus,
+	menulist:active,
+	menuitem:hover,
+	menuitem:active,
+	menuitem:focus,
+	menu[open="true"],
+	menuitem[_moz-menuactive="true"] {
+		appearance: none !important;
+		border: 0px !important;
+		background-color: #1e90ff !important;
+		border-radius: 3px !important;
+		outline: none !important;
+		outline-offset: none !important;
+	}
+
+	menupopup {
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+		outline: none !important;
+		/*box-shadow: none !important;*/
+	}
+
+	menupopup,
+	panel {
+		--panel-background: #1e1d2d !important;
+		--panel-color: white !important;
+		--panel-border-color: #1e90ff !important;
+		border: 1px solid #1e90ff !important;
+	}
+
+	arrowscrollbox.menupopup-arrowscrollbox {
+		border: none !important;
+	}
+
+	menuitem:not([disabled="true"])[selected="true"] {
+		color: white !important;
+		background-color: #1e90ff !important;
+	}
+
+	window,
+	dialog,
+	window>dialog#history {
+		appearance: none !important;
+		color: white !important;
+		background-color: #1e1d2d !important;
+		--in-content-box-background: #1e1d2d !important;
+
+	}
+
+	input,
+	textarea {
+		border: 1px solid #1e90ff !important;
+		outline: none !important;
+		background: #1e1d2d !important;
+		color: #fff !important;
+	}
+
+	input[type="radio"]:checked,
+	.radio-check[selected] {
+		-moz-context-properties: fill;
+		fill: #ffffff;
+		color: #ffffff !important;
+		background-color: #1e90ff !important;
+		/*background-image: url("chrome://global/skin/icons/radio.svg");*/
+		border-color: white !important;
+		/*print-color-adjust: exact !important;*/
+	}
+
+	input[type="radio"],
+	.radio-check {
+		appearance: none !important;
+		border: 1px solid #1e90ff !important;
+		background-color: #1e1d2d !important;
+	}
+
+
+	.dialogOverlay[topmost="true"] {
+		background-color: #1e1d2d !important;
+	}
+
+	#historyItems {
+		color: white !important;
+		background: #1e1d2d !important;
+	}
+
+	#historyItems:hover {
+		color: white !important;
+		background: #1e90ff90 !important;
+	}
+
+	#historyItems:active {
+		color: white !important;
+		background: #1e90ff !important;
+	}
+
+	.dialogBox {
+		--in-content-page-background: #1e1d2d !important;
+	}
+}
