@@ -1,4 +1,4 @@
-@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*") {
+/*@-moz-document regexp("https?://(www|images).google.(com|co.[a-z]{2}|com.[a-z]{2}|[a-z]{2}).*") {
 	* {
 		font-family: "Fira Sans" !important;
 	}
@@ -22,30 +22,93 @@
 	.material-icons {
 		font-family: Material Icons !important;
 	}
+	span.REySof {
+               background-color: #1e90ff !important;
+         }
+         span.REySof:hover {
+                       background-color: #1e90ff50 !important;
+
+         }
 
 
-}
-
-@-moz-document domain("mail.google.com") {
+}   */
+@-moz-document domain("google.fr") {
 	* {
-		font-family: "Fira Sans" !important;
-	}
-
-	/* ADD ROW HIGHLIGHTS */
-	table.zt tr.yO:hover {
-		background-color: #1e90ff80 !important;
-	}
-
-	table.zt tr.zE:hover {
-		background-color: #1e90ff80 !important;
-	}
-}
-
-@-moz-document domain(google.fr) {
-	:root {
 		font-family: Fira Sans !important;
+		--center-abs-margin: 180px;
+		--center-width: 652px;
+		--rhs-margin: 176px !important;
+		--rhs-width: 372px;
+		--grid-gutter-width: 20px;
+		--grid-column-width: 36px;
+	}
+
+	span.REySof {
+		appearance: none;
+		background: #1e90ff !important;
+		font-family: Fira Sans !important;
+		color: white !important;
+	}
+         #rhs { margin-left: 176px !important; }
+	span.REySof:hover {
+		appearance: none;
+		background: #1e90ff50 !important;
+		font-family: Fira Sans !important;
+		color: white !important;
+
+	}
+
+	.material-icons {
+		font-family: Material Icons !important;
+	}
+
+	.GCSyeb {
+		background: none !important;
+	}
+
+	div.Z26q7c.UK95Uc.Sth6v {
+		margin-right: 100px !important;
 	}
 }
+
+ @-moz-document domain("google.com") {
+         * {
+                 font-family: Fira Sans !important;
+                 --center-abs-margin: 180px;
+                 --center-width: 652px;
+                 --rhs-margin: 176px !important;
+                 --rhs-width: 372px;
+                 --grid-gutter-width: 20px;
+                 --grid-column-width: 36px;
+         }
+ 
+         span.REySof {
+                 appearance: none;
+                 background: #1e90ff !important;
+                 font-family: Fira Sans !important;
+                 color: white !important;
+         }
+          #rhs { margin-left: 176px !important; }
+         span.REySof:hover {
+                 appearance: none;
+                 background: #1e90ff50 !important;
+                 font-family: Fira Sans !important;
+                 color: white !important;
+ 
+         }
+ 
+         .material-icons {
+                 font-family: Material Icons !important;
+         }
+ 
+         .GCSyeb {
+                 background: none !important;
+         }
+ 
+         div.Z26q7c.UK95Uc.Sth6v {
+                 margin-right: 100px !important;
+         }
+ }
 
 @-moz-document domain(universfreebox.com) {
 
@@ -80,6 +143,10 @@
 
 	* {
 		font-family: Fira Sans !important;
+	}
+
+	.gb_Fa:not(.gb_Ha) .gb_Td {
+		padding: 0px !important;
 	}
 
 	/*
@@ -142,18 +209,26 @@
 	.gb_Fd,
 	.gb_Jd,
 	.gb_Qe,
-	.gb_Se {
+	.gb_Se,
+	.gb_Sd {
 		background-color: #1e1d2d !important;
 		color: white !important;
 		box-shadow: none !important;
 	}
 
+	.gb_ye,
+	.gb_Cd,
+	.gb_6a,
+	.gb_rd,
 	.gb_Re,
 	.gb_Qd {
 		background: #1e1d2d !important;
 		border: none !important;
 	}
 
+	.gb_ze,
+	.gb_3e,
+	.gb_ye.gb_7e.VISqTe,
 	.gb_Te,
 	.gb_Fc .gb_Xe {
 		background-color: #000000 !important;
@@ -432,26 +507,44 @@
 		font-family: "Fira Sans" !important;
 		color: #1e90ff80 !important;
 	}
-	
+
 	.ghN9W {
-	        color: #ffffff !important;
+		color: #ffffff !important;
 		text-decoration: none !important;
 		background: #1e90ff80 !important;
 	}
-		
-	.ghN9W .P0PLXc {	
-	       color: white !important;
-	       text-decoration: none !important;
+
+	.ghN9W .P0PLXc {
+		color: white !important;
+		text-decoration: none !important;
 	}
+
 	.ghN9W .P0PLXc:hover {
-               color: #1e90ff !important;
-               text-decoration: none !important;
-         }
+		color: #1e90ff !important;
+		text-decoration: none !important;
+	}
+
+	.pGxpHc .VISqTe {
+		background: #1e1d2d !important;
+	}
+
+	.UwIKyb {
+		color: white !important;
+	}
+
+	.gb_Rd {
+		background: #1e1d2d !important;
+	}
 }
 
 @-moz-document domain(github.com) {
 	* {
 		font-family: Fira Sans !important;
+	}
+
+	tbody {
+		background: #141414 !important;
+		color: white !important;
 	}
 
 	a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block {
@@ -937,16 +1030,49 @@
 		color: white !important;
 		opacity: 1 !important;
 	}
-}
 
-@-moz-document domain("google.fr") {
-	:root {
-		font-family: Fira Sans !important;
+	#text {
+		color: white !important;
 	}
 
-	/*
-	html, body {
-		background-color: inherit !important;
-		background: inherit !important;
-	}*/
+	.css-truncate-target {
+		color: #1e90ff !important;
+	}
+
+}
+
+/* ==UserStyle==
+@name         GitHub Code Wrap
+@version      1.0.10
+@description  Userstyle to wrap long code lines on GitHub
+@namespace    StylishThemes
+@author       StylishThemes
+@homepageURL  https://github.com/StylishThemes/GitHub-code-wrap
+@supportURL   https://github.com/StylishThemes/GitHub-code-wrap/issues
+@license      CC-BY-SA-4.0
+@preprocessor uso
+==/UserStyle== */
+@-moz-document domain("github.com"),
+domain("gist.github.com") {
+	.blob-code-inner,
+	.markdown-body pre>code,
+	.markdown-body .highlight>pre {
+		white-space: pre-wrap !important;
+		word-break: break-all !important;
+		overflow-wrap: break-word !important;
+	}
+
+	/* GitHub Bug: Enable wrapping of long code lines */
+	body:not(.nowrap) .blob-code-inner,
+	body:not(.nowrap) .markdown-body pre>code,
+	body:not(.nowrap) .markdown-body .highlight>pre {
+		white-space: pre-wrap !important;
+		word-break: break-all !important;
+		overflow-wrap: break-word !important;
+		display: block !important;
+	}
+
+	body:not(.nowrap) td.blob-code-inner {
+		display: table-cell !important;
+	}
 }
