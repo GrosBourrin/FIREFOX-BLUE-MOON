@@ -42,8 +42,8 @@
 		--ig-highlight-background: 30, 144, 255;
 		--ig-link: 0, 110, 214;
 		--ig-live-badge: 255, 1, 105;
-		--ig-banner-background: 36, 37, 38;
-		--ig-primary-background: 36, 37, 38;
+		--ig-banner-background: 30, 29, 45;
+		--ig-primary-background: 30, 29, 45;
 		--ig-primary-button: 0, 149, 246;
 		--ig-primary-text: 200, 200, 200;
 		--ig-secondary-background: 24, 25, 26;
@@ -289,5 +289,85 @@
 		padding-top: 0 !important;
 	}
 
+	/*
+	._aak3,
+	._aak6 {
+		position: relative !important;
+		top: calc(30px + var(--desktop-nav-height));
+
+	}*/
+
+	/* Dark Scrollbar
+	::-webkit-scrollbar,
+	::-webkit-scrollbar-corner,
+	::-webkit-scrollbar,
+	::-webkit-scrollbar-corner {
+		background: #1c1e21 !important;
+		width: 8px
+	}
+	::-webkit-scrollbar-button,
+	::-webkit-scrollbar-button {
+		display: none !important;
+	}
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		background: #999 !important;
+		width: 8px !important;
+		border-radius: 10px;
+		transition: .1s !important;
+	}
+	::-webkit-scrollbar-thumb:not(:active):hover,
+	::-webkit-scrollbar-thumb:not(:active):hover {
+		background: #777 !important;
+		transition: .1s !important;
+	}
+	::-webkit-scrollbar-thumb:active,
+	::-webkit-scrollbar-thumb:hover:active,
+	::-webkit-scrollbar-thumb:active,
+	::-webkit-scrollbar-thumb:hover:active {
+		background: #5c5c5c !important;
+		transition: .1s !important;
+	}*/
 	
+         
+         ._aak9 {
+                 left: 0vw !important;
+                 position: relative !important;
+         }
+         ._akek {
+                 min-width: 30vw !important;
+                 left: -6vw !important
+         }
+         ._ab9s {
+                 max-width: none!important;
+         }
+         ._aa_y {
+                 max-width: none !important;
+                 width: 70vw !important;
+         }
+         div.xh8yej3 {
+                 max-width: 100% !important
+         }
+         div.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x6s0dn4.x1oa3qoh.x1nhvcw1 {
+                 max-width: 100vw !important;
+         }
+         article._aa6a._aatb._aate._aatg._aati {
+                 margin-left: 10vw !important
+         }
+ 
+         div._aam1._akej._akmr {
+                 width: 40vw!important;
+         }
+         :root {
+                 --feed-width-wide-story: 40vw !important;
+         }
+         div.x9f619.xjbqb8w.x78zum5.x5ur3kl.xopu45v.x1bs97v6.xmo9t06.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x178xt8z.xm81vs4.xso031l.xy80clv.x1lcm9me.x1yr5g0i.xrt01vj.x10y3i5r.x1n2onr6.x6ikm8r.x10wlt62.x1iyjqo2.x2lwn1j.xeuugli.x1q0g3np.xqjyukv.x1qjc9v5.x1oa3qoh.xl56j7k {
+                 max-width: none !important
+         }
+         ._aauo {
+ 
+                 height: 100px !important;
+         }
+ 
+
 }
