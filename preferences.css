@@ -1,5 +1,5 @@
 /* about:preferences */
-@-moz-document url-prefix("about:preferences") {
+@-moz-document url("about:preferences") {
 	.sticky-container {
 		background-color: #1e1d2d !important;
 	}
@@ -335,13 +335,7 @@
 		background: #1e90ff !important;
 	}
 
-	/* treechildren*
-	#handlersView richlistitem,
-	#engineList treechildren::-moz-tree-row,
-	#blocklistsTree treechildren::-moz-tree-row {
-		min-height: 28px !important;
-	}
-*/
+
 	#engineList treechildren::-moz-tree-row(hover) {
 		color: #ffffff !important;
 		background: #1e90ff !important;
@@ -353,12 +347,7 @@
 		border: 0px !important;
 	}
 
-	/*
-	treecols,
-	treecol {
-		min-height: unset !important;
-		height: 28px !important;
-	}*/
+
 
 	treecols:hover,
 	treecol:hover {
@@ -366,12 +355,7 @@
 		color: white !important;
 	}
 
-	/*
-	.autocomplete-tree treecols,
-	.autocomplete-tree treecol {
-		height: unset !important;
-	}
-*/
+
 	search-textbox {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
@@ -440,23 +424,6 @@
 		color: #ffffff !important;
 	}
 
-
-	/*
-	button:not(.button-link):not(.close-icon):not(#contentBlockingToggle) {
-		padding: 0px !important;
-	}
-*/
-
-	/*
-	button:not(.button-link):not(.close-icon):not(.spinbuttons-button) {
-		appearance: button !important;
-	}
-*/
-	/*
-	menulist {
-		appearance: menulist !important;
-	}
-*/
 	/* menulist popup */
 	.web-appearance-choice {
 		border: 1px solid dodgerblue !important;
@@ -547,13 +514,16 @@
 		background: #1e1d2d !important;
 	}
 
+	.groupbox-body,
 	window,
 	dialog,
-	window>dialog#history {
-		appearance: none;
+	dialog#history,
+	.dialogFrame {
+		appearance: none !important;
 		color: white !important;
-		background-color: #1e1d2d !important;
+		background: #1e1d2d !important;
 		--in-content-box-background: #1e1d2d !important;
+
 	}
 
 	input,
@@ -566,20 +536,5 @@
 
 	.dialogOverlay[topmost="true"] {
 		background-color: #1e1d2d !important;
-	}
-
-	#historyItems {
-		color: white !important;
-		background: #1e1d2d !important;
-	}
-
-	#historyItems:hover {
-		color: white !important;
-		background: #1e90ff90 !important;
-	}
-
-	#historyItems:active {
-		color: white !important;
-		background: #1e90ff !important;
 	}
 }
