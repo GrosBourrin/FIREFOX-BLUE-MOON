@@ -11,6 +11,7 @@
 @import url("CenteredStatuspanel.css");
 @import url("unifiedwebext.css");
 @import url("hamburgerpanel.css");
+/*@import url("anims.css");*/
 
 /* 231A23 */
 
@@ -31,6 +32,13 @@ button::-moz-focus-inner,
 .printpreview-pagination {
 	--shadow-30: 0 0 15px 0 #1e1d2d80 !important;
 	--border-active-shadow: #1e90ff !important;
+}
+
+.tabbrowser-tabpanel,
+browser.dialogFrame,
+dialog {
+	background: #1e1d2d !important;
+	color: white !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -645,6 +653,10 @@ treechildren::-moz-tree-image(query) {
 	background: black !important;
 }
 
+dropmarker {
+	transform: scale(0.6) !important;
+}
+
 .panel-arrow {
 	fill: #1e1d2d !important;
 	background-color: transparent !important;
@@ -1065,9 +1077,8 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 
 #sidebar-close.close-icon.tabbable {
 	appearance: none !important;
-	list-style-image: url("KnobCancel.ico") !important;
+	list-style-image: url("closeicon.png") !important;
 	background-color: transparent !important;
-	transform: scale(1.1, 0.6) !important;
 }
 
 .sidebar-placesTreechildren::-moz-tree-cell-text(selected) {
@@ -2458,137 +2469,6 @@ input:not(#urlbar-input) {
 	padding-inline: 0px !important;
 }*/
 
-/* Ctrl-Tab *
-#ctrlTab-panel {
-	appearance: none !important;
-	-moz-window-shadow: none !important;
-	--panel-background: transparent !important;
-	--panel-color: #FFFFFF !important;
-	--panel-border-color: transparent !important;
-	--panel-padding: 20px 10px 10px !important;
-	font-weight: bold !important;
-	background: transparent !important;
-	color: #FFFFFF !important;
-	border-style: none !important;
-	padding: 20px 10px 10px !important;
-	font-family: Fira Sans !important;
-	text-align: center !important;
-	text-shadow: none !important;
-}
-#ctrlTab-panel:hover {
-	appearance: none !important;
-	-moz-window-shadow: none !important;
-	--panel-background: transparent !important;
-	--panel-color: #FFFFFF !important;
-	--panel-border-color: transparent !important;
-	background: transparent !important;
-	background-color: transparent !important;
-}
-.ctrlTab-preview,
-#ctrlTab-showAll {
-	appearance: none !important;
-	color: inherit !important;
-	outline: none !important;
-	margin: 0 !important;
-	text-shadow: 0 0 2px rgb(31, 31, 31), 0 0 2px rgb(31, 31, 31) !important;
-	background: none !important;
-}
-.ctrlTab-preview:hover {
-	background-color: none !important;
-	background: none !important;
-}
-.ctrlTab-preview>.button-box {
-	display: none !important;
-	background: none !important;
-}
-.ctrlTab-canvas>html|img,
-.ctrlTab-canvas>html|canvas {
-	min-width: inherit !important;
-	max-width: inherit !important;
-	min-height: inherit !important;
-	max-height: inherit !important;
-}
-.ctrlTab-favicon-container {
-	position: relative !important;
-	-moz-box-pack: end !important;
-}
-.ctrlTab-favicon[src] {
-	max-width: 32px !important;
-	max-height: 32px !important;
-	margin-top: -44px !important;
-	margin-bottom: 2px !important;
-	margin-inline-end: -6px !important;
-	padding: 5px !important;
-	background: none !important;
-	border-radius: 2px !important;
-	box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1) !important;
-}
-.ctrlTab-canvas {
-	box-shadow: 1px 1px 2px #1E1D2D !important;
-	margin-bottom: 8px !important;
-}
-.ctrlTab-preview-inner,
-#ctrlTab-showAll {
-	padding: 8px !important;
-	border: 2px solid transparent !important;
-	border-radius: 0.5em !important;
-}
-.ctrlTab-preview-inner {
-	margin-top: -10px !important;
-}
-#ctrlTab-showAll {
-	background-color: rgba(255, 255, 255, 0.2) !important;
-	margin-top: 0.5em !important;
-}
-.ctrlTab-preview:focus>.ctrlTab-preview-inner,
-#ctrlTab-showAll:focus {
-	background-color: rgba(0, 0, 0, 0.75) !important;
-	text-shadow: none !important;
-	border-color: white !important;
-}
-.ctrlTab-label {
-	text-align: center !important;
-}
-/*
-#ctrlTab-previews {
-	border-radius: 0% !important;
-}
-#ctrlTab-panel {
-	appearance: none !important;
-	color: #FFFFFF !important;
-	border-style: none !important;
-	padding: 20px 10px 10px !important;
-	font-family: Fira Sans !important;
-	font-weight: bold !important;
-	background: #191C26b0 !important;
-	text-align: center !important;
-	text-shadow: none !important;
-}
-.ctrlTab-preview:not(#ctrlTab-showAll)>*>.ctrlTab-preview-inner {
-	margin: -10px -10px 0 !important;
-}
-.ctrlTab-preview-inner {
-	padding: 8px !important;
-	border: 2px solid transparent !important;
-	border-radius: 0px !important;
-}
-tabPreview-canvas element {
-	max-width: 272px !important;
-	min-width: 272px !important;
-	max-height: 153px !important;
-	min-height: 153px !important;
-}
-.ctrlTab-favicon-container {
-	-moz-box-align: start !important;
-	-moz-box-pack: start !important;
-}
-.ctrlTab-favicon[src] {
-	background-color: transparent !important;
-	width: 25px !important;
-	height: 25px !important;
-	padding: 2px !important;
-}
-*/
 
 /*
 panelview .toolbarbutton-1:-moz-any(:hover, :focus):not(:-moz-any([disabled], [open], :active)),
@@ -2744,12 +2624,12 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 .tabbrowser-tabpanel,
 browser,
 browser.dialogFrame,
-/*dialog,*/
+dialog,
 #browser,
 #tabbrowser-tabpanels,
 browser[type="content-primary"],
 browser[type="content"]>html {
-	background-color: #1e1d2d !important;
+	background: #1e1d2d !important;
 	color: white !important;
 }
 
@@ -2987,11 +2867,12 @@ toolbar #fullscreen-button {
 	color: #1e90ff !important;
 }
 
+/*
 #commonDialogWindow {
 	background: transparent !important;
 	border: none !important;
 }
-
+*/
 .checkbox-label {
 	color: #ffffff !important;
 }
@@ -4527,12 +4408,25 @@ menulist#menuPosition {
 	background-color: #1e1d2d !important;
 }
 
-.dialogBox {
-	--in-content-page-background: #1e1d2d !important;
+
+@-moz-document url-prefix("about:preferences") {
+	.dialogBox {
+		--in-content-page-background: #1e1d2d !important;
+	}
+
+	window,
+	dialog,
+	window>dialog#history {
+		color: white !important;
+		background-color: #1e1d2d !important;
+		--in-content-box-background: #1e1d2d !important;
+	}
+
+	.dialogFrame {
+		background: #1e1d2d !important;
+		border-color: #1e90ff !important;
+	}
 }
-
-
-
 
 /* History swipe animation custom color Firefox 111+
 
@@ -4550,113 +4444,9 @@ menulist#menuPosition {
 		--swipe-nav-icon-accent-color: #000000 !important;
 	}
 }
-
 */
-
-
-
-/* Tab Preview On Hover supporting CSS theme */
-/* Move this file to profile folder -> chrome, or append to existing userChrome.css */
-/* Version 0.0.1 */
-
-#navigator-toolbox:-moz-lwtheme {
-	background-image: none !important;
-}
-
-.tabbrowser-tab::after {
-	--preview-delay: 1s;
-	/* Delay of tab preview when the cursor move onto a tab from outside of tab bar */
-	--preview-delay-tolerance: 0.75s;
-	/* Max time period of cursor not hovering on tab bar before preview delay re-engages */
-}
-
-.tabbrowser-tab::after {
-	box-shadow: 0 0 50px black;
-	outline: 0.5px solid black;
-	pointer-events: none;
-	content: "";
-	display: none;
-	position: absolute;
-	z-index: 10000;
-	top: 50px;
-	width: 200px;
-	height: 150px;
-	background-color: var(--lwt-accent-color);
-	background-image: var(--lwt-additional-images);
-	background-repeat: no-repeat;
-	border: 1px solid var(--arrowpanel-border-color);
-	border-radius: 6px;
-}
-
-#tabbrowser-arrowscrollbox:not(:hover) .tabbrowser-tab::after {
-	transition: opacity 0.5s, filter 0s var(--preview-delay-tolerance);
-	filter: opacity(0);
-}
-
-#tabbrowser-arrowscrollbox:hover .tabbrowser-tab::after {
-	transition: opacity 0.5s, filter 0.5s var(--preview-delay);
-	filter: opacity(1);
-}
-
-.tabbrowser-tab:not(:hover)::after {
-	opacity: 0;
-}
-
-.tabbrowser-tab:hover::after {
-	opacity: 1;
-}
-
-.tabbrowser-tab[selected]:hover::after {
-	opacity: 0;
-	transition-duration: 0.25s !important;
-}
-
-.tabbrowser-tab:nth-of-type(1)::after {
-	display: block;
-	background-size: cover;
-}
-
-.tabbrowser-tab:nth-of-type(2)::after {
-	display: block;
-	background-size: 0, cover;
-}
-
-.tabbrowser-tab:nth-of-type(3)::after {
-	display: block;
-	background-size: 0, 0, cover;
-}
-
-.tabbrowser-tab:nth-of-type(4)::after {
-	display: block;
-	background-size: 0, 0, 0, cover;
-}
-
-.tabbrowser-tab:nth-of-type(5)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, cover;
-}
-
-.tabbrowser-tab:nth-of-type(6)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, cover;
-}
-
-.tabbrowser-tab:nth-of-type(7)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, 0, cover;
-}
-
-.tabbrowser-tab:nth-of-type(8)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, 0, 0, cover;
-}
-
-.tabbrowser-tab:nth-of-type(9)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, 0, 0, 0, cover;
-}
-
-.tabbrowser-tab:nth-of-type(10)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, 0, 0, 0, 0, cover;
+#window-modal-dialog,
+.dialogTemplate {
+	margin-top: 10px !important;
+	background: none !important;
 }
