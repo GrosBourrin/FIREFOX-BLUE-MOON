@@ -2,14 +2,14 @@
 @import url("devtools.css");
 @import url("reddit0.css");
 @import url("aboutconfig.css");
-@import url("facebook2.css");
+@import url("facebook3.css");
 @import url("youtube.css");
 @import url("dialog.css");
 @import url("instagram.css");
 @import url("stackoverflow.css");
 @import url("twitter.css");
 @import url("preferences.css");
-/*@import url("Stylus.css"); */
+/*@import url("gmail1.css");  */
 
 
 :root {
@@ -38,9 +38,9 @@ button::-moz-focus-inner,
 	-moz-outline-radius: unset !important;
 }
 
-@-moz-document url(about:blank),
-url-prefix(about:newtab),
-url(about:config),
+@-moz-document url("about:blank"),
+url-prefix("about:newtab"),
+url("about:config"),
 url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 
 	#newtab-window,
@@ -51,6 +51,15 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		fill: #ffffff !important;
 		font-family: Fira Sans !important;
 	}
+}
+
+
+
+.tabbrowser-tabpanel,
+browser.dialogFrame,
+dialog {
+	background: #1e1d2d !important;
+	color: white !important;
 }
 
 
@@ -141,7 +150,6 @@ url("about:profiles") {
 
 	table {
 		background-color: #1e1d2d !important;
-
 		border: 1px solid #1e90ff !important;
 	}
 
@@ -635,8 +643,7 @@ url("about:profiles") {
 	}
 
 	.ShowMoreCard-contents::after {
-		background: linear-gradient(rgba(255, 255, 255, 0),
-				#1b1924) !important;
+		background: linear-gradient(rgba(255, 255, 255, 0), #1b1924) !important;
 	}
 
 	.Addon-details .AddonDescription-contents a:link,
@@ -752,25 +759,6 @@ url("about:profiles") {
 		fill: #1f90ff !important;
 	}
 
-	/*
-	a,
-	a:link {
-		color: #1e90ff !important;
-
-	}
-	a:hover,
-	a:link:hover {
-		color: #0057ad !important;
-
-	}
-	a:link:visited,
-	a:link:active,
-	a:active,
-	a:visited {
-		color: #0057ad !important;
-
-	}
-*/
 	.Card-footer-link {
 		padding: 5px 36px !important;
 		padding-top: 5px !important;
@@ -915,22 +903,10 @@ url("about:profiles") {
 		--in-content-category-text-active: #0c0c0d;
 		--in-content-category-text-selected: var(--accent-1) !important;
 		--in-content-category-text-selected-active: #1e90ff;
-		--in-content-category-background-hover: rgba(12,
-				12,
-				13,
-				0.1);
-		--in-content-category-background-active: rgba(12,
-				12,
-				13,
-				0.15);
-		--in-content-category-background-selected-hover: rgba(12,
-				12,
-				13,
-				0.15);
-		--in-content-category-background-selected-active: rgba(12,
-				12,
-				13,
-				0.2);
+		--in-content-category-background-hover: rgba(12, 12, 13, 0.1);
+		--in-content-category-background-active: rgba(12, 12, 13, 0.15);
+		--in-content-category-background-selected-hover: rgba(12, 12, 13, 0.15);
+		--in-content-category-background-selected-active: rgba(12, 12, 13, 0.2);
 		--in-content-tab-color: #424f5a;
 		--in-content-link-color: #ffffff !important;
 		--in-content-link-color-hover: #1e90ff !important;
@@ -1161,24 +1137,6 @@ url("about:profiles") {
 		color: dodgerblue !important;
 	}
 
-	/*.SearchResult {
-		color: #ffffff !important;
-		font-size: 13px !important;
-		background-color: #1e1d2d !important;
-		border: 0px !important;
-		outline: none !important;
-		box-shadow: none !important;
-	}
-	.SearchResult:hover {
-		color: #ffffff !important;
-		font-size: 13px !important;
-		background-color: #1e90ff !important;
-		border-radius: 4px !important;
-		border: 0px !important;
-		outline: none !important;
-		box-shadow: none !important;
-	}*/
-
 	.Card-header {
 		color: white !important;
 	}
@@ -1373,25 +1331,7 @@ url("about:profiles") {
 		border: none !important;
 	}
 
-	/*
-	a,
-	a:link {
-		color: #1e90ff !important;
 
-	}
-	a:hover,
-	a:link:hover {
-		color: #1e90ff80 !important;
-
-	}
-	a:link:visited,
-	a:link:active,
-	a:active,
-	a:visited {
-		color: #0057ad !important;
-
-	}
-*/
 	.Card-footer-link {
 		color: white !important;
 		padding: 5px 36px !important;
@@ -1493,17 +1433,7 @@ url("about:privatebrowsing") {
 	}
 }
 
-/*
-#tabbrowser-tabbox,
-#tabbrowser-tabpanels,
-browser[type="content-primary"],
-browser[type="content"] {
-	background: #1e1d2d !important;
-	background-color: #1e1d2d !important;
-	color: #ffffff !important;
-	outline: none !important;
-}
-*/
+
 
 @-moz-document url-prefix("about:reader") {
 	body {
@@ -1834,38 +1764,6 @@ browser[type="content"] {
 	}
 }
 
-/* Changes colors on the page
-:root {
-	--in-content-page-color: #009bd4 !important;
-
-	--in-content-page-background: #1a1a1a !important;
-
-	-in-content-text-color: #009bd4 !important;
-	--in-content-category-text-selected: #009bd4 !important;
-	--in-content-border-color: #009bd4 !important;
-	--in-content-link-color: #009bd4 !important;
-	--in-content-border-active: none !important;
-	--in-content-border-active-shadow: none !important;
-	--in-content-category-text-selected-active: #009bd4 !important;
-	--in-content-category-background-hover: #000000 !important;
-}
-	html|h1 {
-		color: #009bd4 !important;
-	}
-}
-*/
-/*@-moz-document url("chrome://devtools/content/webconsole/index.html")
-@-moz-document url-prefix("about:devtools-toolbox") {
-	.devtools-tabbar {
-		background-color: #1e1d2d!important;
-	}
-	* {
-		font-family: Fira Sans !important;
-	}
-	.theme-body {
-		background-color: #1e1d2d!important;
-	}
-}*/
 
 @-moz-document url('chrome://global/content/config.xhtml'),
 url('chrome://userchromejs/content/aboutconfig/config.xhtml') {
@@ -1928,15 +1826,8 @@ url('about:newtab') {
 	}
 }
 
-/*
-@-moz-document url("http://www.w3.org/1999/xhtml") {
-	html|input.urlbar-scheme {
-		display: none !important;
-	}
-}
-*/
 @-moz-document url-prefix("about:"),
-@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
+url-prefix("chrome://mozapps/content/extensions/aboutaddons.html") {
 
 	window,
 	page,
@@ -1985,29 +1876,8 @@ url('about:newtab') {
 	}
 }
 
-/*
-.netTimeout #errorPageContainer {
-	background-image: url("sonicfoottap.webp") !important;
-}
-html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div.title h1.title-text {
-	font-size: 20px !important;
-}
-html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div.title h1.title-text::before {
-	font-size: 32px !important;
-	content: "You're too slow!" !important;
-}
-html body.illustrated.netTimeout.neterror div#errorPageContainer.container div#text-container div#errorLongContent div#errorShortDesc::before {
-	font-size: 15px !important;
-	content: "(Actually, it's the server)" !important;
-}
-*/
-/*
-body::before {
-	display: none !important;
-}
-*/
 @-moz-document url-prefix("about:"),
-url-prefix("chrome: //browser") {
+url-prefix("chrome://browser") {
 
 	browser[type="content"],
 	tabpanels {
@@ -2102,19 +1972,8 @@ url("about:newtab") {
 	}
 }
 
-/* instagram */
-@-moz-document url-prefix("moz-extension://48ac79b9-ebb5-4331-99b2-4e9c87ab9128/settings/settings.html") {
-	* {
-		font-family: Fira Sans !important;
-		font-weight: 300 !important;
-	}
 
-	html,
-	body {
-		background: #1e1d2d !important;
-		color: #ffffff !important;
-	}
-}
+
 
 /* addon notifier */
 @-moz-document url-prefix("moz-extension://8e548868-86c6-4b07-88c4-adc040daad74/") {
@@ -2328,17 +2187,7 @@ url("about:newtab") {
 	}
 }
 
-@-moz-document domain("mail.google.com") {
 
-	/* ADD ROW HIGHLIGHTS */
-	table.zt tr.yO:hover {
-		background-color: #1e90ff80 !important;
-	}
-
-	table.zt tr.zE:hover {
-		background-color: #1e90ff80 !important;
-	}
-}
 
 :where(textarea, input[type="text"], input[type="search"], input[type="password"], input[type="url"]) {
 	/*appearance: none !important;  */
@@ -2442,27 +2291,7 @@ textbox {
 	border-radius: 2px !important;
 }
 
-/*
-:root {
-	--downloads-item-height: 5.5em;
-	--downloads-item-font-size-factor: 0.9;
-	--downloads-item-details-opacity: 0.6;
-}
-:root {
-	--download-progress-fill-color: #1e90ff !important;
-	--download-progress-paused-color: #1e90ff80 !important;
-	--download-progress-flare-color: rgba(255, 255, 255, 0.75);
-}
-*/
 
-/*
-@-moz-document url("about:home"),
-url("about:newtab") {
-	.outer-wrapper {
-		background-color: #1e1d2d !important;
-	}
-}
-*/
 @-moz-document url-prefix("https://accounts.firefox.com") {
 	* {
 		font-family: Fira Sans !important;
@@ -2770,21 +2599,9 @@ p::selection {
 	}
 }
 
-/*
-#widget-overflow #PanelUI-webext-addon_darkreader_org-browser-action-view {
-	min-width: 276px !important;
-	max-width: 276px !important;
-	box-shadow: none !important;
-	border: none !important;
-	outline: none !important;
-}
-*/
+
 @-moz-document url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
-	/*richlistitem[selected="true"] {
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-	}*/
 	checkbox:not([disabled]):hover>.checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
@@ -2818,27 +2635,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	/*
-	checkbox:not([disabled]):hover>.checkbox-check {
-		border-color: #1e90ff !important;
-		background-color: #1e90ff !important;
-		border-radius: 3px !important;
-		color: #ffffff !important;
-		fill: #ffffff !important;
-	}
-	checkbox[checked]>.checkbox-check {
-		list-style-image: url("chrome://global/skin/icons/check.svg");
-		-moz-context-properties: fill !important;
-		fill: #ffffff !important;
-		background-color: #1e90ff !important;
-	}
-	checkbox>.checkbox-check {
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-		border-color: #1e90ff !important;
-		border-radius: 2px !important;
-	}
-        */
+
 
 	#description {
 		font-weight: bold;
@@ -3546,47 +3343,6 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 }
 
-/*
-#tabbrowser-tab-tooltip,
-#places-tooltip-insecure-icon,
-#btTooltip,
-#bhTooltip,
-#un-toolbar-tooltip,
-#tooltip,
-.tooltip,
-#aHTMLTooltip,
-#urlTooltip,
-tooltip,
-.places-tooltip {
-	appearance: none !important;
-	color: yellow !important;
-	background: #1E1D2D !important;
-	border: 1px solid #1E1D2D !important;
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	opacity: 1 !important;
-	border-radius: 4px !important;
-	margin-top: 5px !important;
-
-
-}
-
-tooltip {
-	appearance:  none !important;
-	color: yellow !important;
-	background: #1E1D2D !important;
-	border: 1px solid #1E1D2D !important;
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	border-radius: 4px !important;
-
-}
-@-moz-document url("moz-extension://3a5c43e9-6aa7-42c5-a74d-fbf9daab418c/options.html") {
-	body {
-		color: white !important;
-		font-family: Fira Sans !important;
-	}
-}*/
 
 /* addon 2 columns */
 @-moz-document url("about:addons") {
@@ -3873,14 +3629,6 @@ tooltip {
 		background: #1e90ff !important;
 	}
 
-	/*
-	button {
-		background: #1e90ff !important;
-	}
-	button:hover {
-		background: #1e90ff80 !important;
-	}
-*/
 	panel-item-separator {
 		background-color: #454545 !important;
 		margin-inline: 5px !important;
@@ -3918,25 +3666,6 @@ tooltip {
 		color: #ffffff !important;
 	}
 
-	/*
-	.addon.card:hover {
-		outline: 1px !important;
-		border: 1px !important;
-	}*/
-	/*
-	.toggle-button:checked:hover {
-		background: #1e90ff80 !important;
-
-	}
-
-	.toggle-button:enabled:hover {
-		background: #1e90ff80 !important;
-	}
-
-	.toggle-button {
-		background: #1e90ff !important;
-
-	} */
 	.toggle-button {
 		--button-height: 16px;
 		--button-half-height: 8px;
@@ -4158,9 +3887,14 @@ tooltip {
 		font-family: Fira Sans !important;
 	}
 
+	html,
+	body {
+		background: #1e1d2d !important;
+	}
+
 	body {
 		--newtab-background-color: #1e1d2d !important;
-		max-width: 80rem !important;
+
 	}
 
 	.card {
@@ -4170,22 +3904,17 @@ tooltip {
 		box-shadow: none !important;
 	}
 
-	.zap-card::before {
+	/*.zap-card::before {
 
 		border: 1px solid transparent;
-
 		background-origin: border-box;
 		background-image: none !important;
 
-	}
+	}*/
 
 	.placeholder-content {
 		background-color: #1e90ff70 !important;
 		border-color: #1e90ff !important;
-	}
-
-	body>main {
-		grid-template-columns: 1fr !important;
 	}
 
 	main aside.content-container {
@@ -4267,6 +3996,7 @@ dialog,
 	outline: none !important;
 	box-shadow: none !important;
 	outline-offset: unset !important;
+	background: #1e1d2d !important;
 }
 
 .cui-widget-panel {
@@ -4404,6 +4134,9 @@ dialog,
 		background: #1e1d2d !important;
 	}
 
+	button:hover {
+		background: #1e90ff90 !important;
+	}
 
 	#secondaryToolbar {
 		font-family: Fira Sans !important;
@@ -4585,22 +4318,34 @@ dialog,
 		background-color: #1e1d2d !important;
 	}
 
-	#historyItems {
-		color: white !important;
+	.dialogBox {
 		background: #1e1d2d !important;
 	}
+}
 
-	#historyItems:hover {
-		color: white !important;
-		background: #1e90ff90 !important;
-	}
+/*
+@-moz-document domain("majorgeeks.com") {
+         table, tr, td, strong{
+	        color: inherit !important;
+	        border: none !important;
+         }
+} */
 
-	#historyItems:active {
-		color: white !important;
-		background: #1e90ff !important;
-	}
+#historyItems .update {
+	color: white !important;
+	background-color: #1e1d2d !important;
+}
 
-	.dialogBox {
-		--in-content-page-background: #1e1d2d !important;
-	}
+#historyItems .update:hover {
+	color: white !important;
+	background-color: #1e90ff80 !important;
+}
+
+#historyItems .update[selected="true"] {
+	color: white !important;
+	background-color: #1e90ff !important;
+}
+
+#historyItems {
+	border: 1px solid #1e90ff !important;
 }
