@@ -300,7 +300,7 @@ menuitem.subviewbutton[_moz-menuactive],
 }*/
 #appMenu-fxa-separator {
         appearance: none !important;
-        /*--panel-separator-zap-gradient: linear-gradient(90deg, #1E1D2D50 0%, #9059FF 45%, #1f90ff 60%, #ffff00 80%, #FFFFFF 100%) !important;*/
+       
         --panel-separator-zap-gradient: linear-gradient(90deg, #9059ff 0%, #ff4aa2 52.08%, #ff0 75%, #ffbd4f 80%, #ffffff 100%);
 }
 
