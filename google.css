@@ -1,4 +1,4 @@
-@-moz-document domain("google.fr"), domain("google.com") { {
+@-moz-document domain("google.fr"), domain("google.com")  {
 	* {
 		font-family: Fira Sans !important;
 		/*--center-abs-margin: 180px;
