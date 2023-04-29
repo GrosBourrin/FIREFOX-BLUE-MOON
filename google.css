@@ -566,12 +566,12 @@
 	samp,
 	tt,
 	td,
-	pre *,
-	.highlight *,
+	pre ,
+	.highlight ,
 	.diff-table *,
 	.tab-size *,
 	.input-monospace *,
-	.text-mono * {
+	.text-mono  {
 		font-family: "Fira Code" !important;
 		line-height: 1.7em !important;
 		/*font-weight: 100 !important;*/
