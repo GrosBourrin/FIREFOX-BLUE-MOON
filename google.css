@@ -44,7 +44,7 @@
 }
 
 @-moz-document domain("google.com") {
-	* {
+	:root {
 		font-family: Fira Sans !important;
 		/*--center-abs-margin: 180px;
 		--center-width: 652px;*/
@@ -61,9 +61,9 @@
 		color: white !important;
 	}
 
-	#rhs {
+	/*#rhs {
 		margin-left: 176px !important;
-	}
+	}*/
 
 	span.REySof:hover {
 		appearance: none;
