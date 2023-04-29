@@ -1,4 +1,4 @@
-@-moz-document domain("google.fr"), domain("google.com") {
+@-moz-document domain("google.fr"), domain("google.com") { {
 	* {
 		font-family: Fira Sans !important;
 		/*--center-abs-margin: 180px;
@@ -7,8 +7,9 @@
 		--rhs-width: 372px;
 		/*--grid-gutter-width: 20px;
 		--grid-column-width: 36px;*/
+
 	}
-	
+
 
 	span.REySof {
 		appearance: none;
@@ -40,7 +41,6 @@
 		margin-right: 100px !important;
 	}*/
 }
-
 
 
 @-moz-document domain("universfreebox.com") {
@@ -316,7 +316,7 @@
 		font-size: 14px !important;
 	}
 
-	*
+	
 	/**|*:any-link:not(svg|a) {
 		text-decoration: none !important;
 		font-family: Fira Sans !important;
@@ -329,15 +329,15 @@
 
 	.IFHyqb,
 	.m5k28,
-	.B6pJDd * {
+	.B6pJDd  {
 		font-family: Fira Sans !important;
 		color: white !important;
 	}
 
 	/*.IFHyqb:hover *,*/
 	.ddlw3d,
-	.m5k28:hover *,
-	.B6pJDd:hover * {
+	.m5k28:hover ,
+	.B6pJDd:hover  {
 		color: dodgerblue !important;
 		text-decoration: none !important;
 	}
@@ -352,7 +352,7 @@
 		font-family: Fira Sans !important;
 	}
 
-	hr *,
+	hr ,
 	.n0uym {
 		background: #1e90ff !important;
 	}
@@ -473,17 +473,18 @@
 	}
 }
 
+
 @-moz-document domain("github.com") {
-	* {
+	*{
 		font-family: Fira Sans !important;
 	}
 
-	tbody {
+	/*tbody {
 		background: #141414 !important;
 		color: white !important;
 	}
-
-	a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block {
+*/
+	/*a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block {
 		font-weight: bold !important;
 		color: #1e90ff !important;
 		font-size: 16px !important;
@@ -493,7 +494,7 @@
 		font-weight: bold !important;
 		color: #1e90ff80 !important;
 		font-size: 16px !important;
-	}
+	}*/
 
 	.branch-name,
 	.commit-ref,
@@ -518,37 +519,39 @@
 	.CodeMirror-dialog input *,
 	.cm-s-github-light .CodeMirror-lines *,
 	.file-editor-textarea,
-	.blob-code *,
-	code *,
+	.blob-code,
+	code,
 	pre,
 	samp,
 	tt,
 	td,
-	pre ,
-	.highlight ,
-	.diff-table *,
-	.tab-size *,
-	.input-monospace *,
-	.text-mono  {
-		font-family: "Fira Code" !important;
-		line-height: 1.7em !important;
-		/*font-weight: 100 !important;*/
-		font-size: 13.5px !important;
+	pre,
+	.highlight,
+	.diff-table,
+	.tab-size,
+	.input-monospace,
+	.text-mono, .react-line-number,
+             .react-code-text,
+             .react-blob-print-hide,
+             .commit-ref, .react-code-text *{
+		font-family: "Fira Code" !important;		
+		font-size: 14px !important;
 		opacity: 1 !important;
 	}
+	
 
 	/*
 	span:hover {
 		background-color: #1e90ff !important;
 		color: white !important;
-	}*/
+	}
 
 	.diff-table tr:hover>pre,
 	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
 	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
 	.highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
 		background-color: #1e90ff80 !important;
-	}
+	}*/
 
 	/*.js-navigation-open.Link--primary {
 		font-family:  Fira Code !important;
@@ -566,402 +569,12 @@
 	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
 	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
 		background: #481010 !important;
-	}*/
+	}
+	*/
 	/*td {
 		background: #121212 !important;
-	}*/
-	/*
+	}	
 
-	.pl-c,
-	.pl-c span {
-		color: #808080 !important;
-	}
-
-	.pl-c1 {
-		color: #D5DDA4 !important
-	}
-
-	.pl-cce {
-		color: #cf6a4c !important;
-		font-weight: 400 !important
-	}
-
-	.pl-cn {
-		color: #cf6a4c !important
-	}
-
-	.pl-coc {
-		color: #cf6a4c !important
-	}
-
-	.pl-cos {
-		color: #8f9d6a !important
-	}
-
-	.pl-e {
-		color: #ac885b !important
-	}
-
-	.pl-ef {
-		color: #ac885b !important
-	}
-
-	.pl-en {
-		color: #E6D1B6 !important;
-	}
-
-	.pl-enc {
-		color: #cf6a4c !important
-	}
-
-	.pl-enf {
-		color: #ac885b !important
-	}
-
-	.pl-enm {
-		color: #ac885b !important
-	}
-
-	.pl-ens {
-		color: #cf6a4c !important
-	}
-
-	.pl-ent {
-		color: #cda869 !important
-	}
-
-	.pl-entc {
-		color: #ac885b !important
-	}
-
-	.pl-enti {
-		color: #ac885b !important;
-		font-weight: 700 !important
-	}
-
-	.pl-entm {
-		color: #7587a6 !important
-	}
-
-	.pl-eoa {
-		color: #cda869 !important
-	}
-
-	.pl-eoac {
-		color: #7587a6 !important;
-	}
-
-	.pl-eoac .pl-pde {
-		color: #7587a6 !important;
-	}
-
-	.pl-eoai {
-		color: #cda869 !important;
-	}
-
-	.pl-eoai .pl-pde {
-		color: #cda869 !important;
-	}
-
-	.pl-eoi {
-		color: #ac885b !important;
-	}
-
-	.pl-k {
-		color: #4286f4 !important
-	}
-
-	.pl-ko {
-		color: #cda869 !important
-	}
-
-	.pl-kolp {
-		color: #cda869 !important
-	}
-
-	.pl-kos {
-		color: #cf6a4c !important
-	}
-
-	.pl-kou {
-		color: #cf6a4c !important
-	}
-
-	.pl-mai .pl-sf {
-		color: #7587a6 !important
-	}
-
-	.pl-mb {
-		color: #8f9d6a !important;
-		font-weight: 700 !important
-	}
-
-	.pl-mc {
-		color: #cda869 !important
-	}
-
-	.pl-mh {
-		color: #cf6a4c !important;
-		font-weight: 400 !important
-	}
-
-	.pl-mh .pl-pdh {
-		color: #cf6a4c !important
-	}
-
-	.pl-mi {
-		color: #cda869 !important;
-		font-style: italic !important
-	}
-
-	.pl-ml {
-		color: #8f9d6a !important
-	}
-
-	.pl-mm {
-		color: #7587a6 !important
-	}
-
-	.pl-mp {
-		color: #c5af75 !important
-	}
-
-	.pl-mp1 .pl-sf {
-		color: #dad085 !important
-	}
-
-	.pl-mq {
-		color: #cf6a4c !important
-	}
-
-	.pl-mr {
-		color: #cda869 !important
-	}
-
-	.pl-ms {
-		color: #cda869 !important
-	}
-
-	.pl-pdb {
-		color: #8f9d6a !important;
-		font-weight: 700 !important
-	}
-
-	.pl-pdc {
-		color: #5f5a60 !important;
-		font-style: italic !important
-	}
-
-	.pl-pdc1 {
-		color: #cf6a4c !important
-	}
-
-	.pl-pde {
-		color: #cf6a4c !important
-	}
-
-	.pl-pdi {
-		color: #cda869 !important;
-		font-style: italic !important
-	}
-
-	.pl-pds {
-		color: #CE7E61 !important
-	}
-
-	.pl-pdv {
-		color: #7587a6 !important
-	}
-
-	.pl-pse {
-		color: #cf6a4c !important
-	}
-
-	.pl-pse .pl-s2 {
-		color: #cf6a4c !important
-	}
-
-	.pl-s {
-		color: #CE7E61 !important
-	}
-
-	.pl-s1 {
-		color: #00CDAF !important
-	}
-
-	.pl-s2 {
-		color: #ccc !important
-	}
-
-	.pl-mp .pl-s3 {
-		color: #cda869 !important
-	}
-
-	.pl-s3 {
-		color: #dad085 !important
-	}
-
-	.pl-sc {
-		color: #dad085 !important
-	}
-
-	.pl-scp {
-		color: #cf6a4c !important
-	}
-
-	.pl-sf {
-		color: #dad085 !important
-	}
-
-	.pl-smc {
-		color: #ac885b !important
-	}
-
-	.pl-smi {
-		color: #52DFFF !important;
-	}
-
-	.pl-smp {
-		color: #ccc !important
-	}
-
-	.pl-sok {
-		color: #cda869 !important
-	}
-
-	.pl-sol {
-		color: #8f9d6a !important
-	}
-
-	.pl-som {
-		color: #7587a6 !important
-	}
-
-	.pl-sr {
-		color: #7587a6 !important
-	}
-
-	.pl-sra {
-		color: #cda869 !important
-	}
-
-	.pl-src {
-		color: #cda869 !important
-	}
-
-	.pl-sre {
-		color: #cda869 !important
-	}
-
-	.pl-st {
-		color: #cda869 !important
-	}
-
-	.pl-stj {
-		color: #7587a6 !important
-	}
-
-	.pl-stp {
-		color: #9b859d !important
-	}
-
-	.pl-sv {
-		color: #9b859d !important
-	}
-
-	.pl-v {
-		color: #00CDAF !important
-	}
-
-	.pl-vi {
-		color: #cf6a4c !important
-	}
-
-	.pl-vo {
-		color: #ac885b !important
-	}
-
-	.pl-vpf {
-		color: #7587a6 !important
-	}
-
-	.pl-mi1 {
-		color: #55a532 !important;
-		background: #020 !important
-	}
-
-	.pl-mdht {
-		color: #55a532 !important;
-		background: #020 !important
-	}
-
-	.pl-md {
-		color: #bd2c00 !important;
-		background: #200 !important
-	}
-
-	.pl-mdhf {
-		color: #bd2c00 !important;
-		background: #200 !important
-	}
-
-	.pl-mdr {
-		color: #cf6a4c !important;
-		font-weight: 400 !important
-	}
-
-	.pl-mdh {
-		color: #7587a6 !important;
-		font-weight: 400 !important
-	}
-
-	.pl-mdi {
-		color: #7587a6 !important;
-		font-weight: 400 !important
-	}
-
-	.pl-ib {
-		background-color: #f93 !important
-	}
-
-	.pl-id {
-		background-color: #a31515 !important;
-		color: #fff !important
-	}
-
-	.pl-ii,
-	.pl-ii .pl-cce {
-		background-color: #df5000 !important;
-		color: #fff !important
-	}
-
-	.pl-iu {
-		background-color: #b4b7b4 !important
-	}
-
-	.pl-mo {
-		color: #969896 !important
-	}
-
-	.pl-mri {
-		color: teal !important
-	}
-
-	.pl-ms1 {
-		background-color: #f5f5f5 !important
-	}
-
-	.pl-va {
-		color: teal !important
-	}
-
-	.pl-vpu {
-		color: teal !important
-	}
-
-	.pl-entl {
-		color: #ccc !important
-	}*/
 	.text-bold {
 		color: white !important;
 		opacity: 1 !important;
@@ -969,7 +582,7 @@
 
 	#text {
 		color: white !important;
-	}
+	}*/
 
 	.css-truncate-target {
 		color: #1e90ff !important;
@@ -977,39 +590,4 @@
 
 }
 
-/* ==UserStyle==
-@name         GitHub Code Wrap
-@version      1.0.10
-@description  Userstyle to wrap long code lines on GitHub
-@namespace    StylishThemes
-@author       StylishThemes
-@homepageURL  https://github.com/StylishThemes/GitHub-code-wrap
-@supportURL   https://github.com/StylishThemes/GitHub-code-wrap/issues
-@license      CC-BY-SA-4.0
-@preprocessor uso
-==/UserStyle== */
-@-moz-document domain("github.com"),
-domain("gist.github.com") {
 
-	.blob-code-inner,
-	.markdown-body pre>code,
-	.markdown-body .highlight>pre {
-		white-space: pre-wrap !important;
-		word-break: break-all !important;
-		overflow-wrap: break-word !important;
-	}
-
-	/* GitHub Bug: Enable wrapping of long code lines */
-	body:not(.nowrap) .blob-code-inner,
-	body:not(.nowrap) .markdown-body pre>code,
-	body:not(.nowrap) .markdown-body .highlight>pre {
-		white-space: pre-wrap !important;
-		word-break: break-all !important;
-		overflow-wrap: break-word !important;
-		display: block !important;
-	}
-
-	body:not(.nowrap) td.blob-code-inner {
-		display: table-cell !important;
-	}
-}
