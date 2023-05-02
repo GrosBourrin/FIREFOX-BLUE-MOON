@@ -95,6 +95,10 @@ i use also reddit enhancer webextension to spread the feed : https://addons.mozi
 ![firefox_s99DmDnvZk](https://user-images.githubusercontent.com/40931468/235714652-4d7b2a76-4ff0-4159-9a95-036e02a530a8.jpg)
 ![CwafpiiYJ6](https://user-images.githubusercontent.com/40931468/235714883-c877643d-8fc3-4c80-b425-dfe7b4e2dd4b.jpg)
 
+**Instagram wide feed **
+![firefox_XEJhBC4xvz](https://user-images.githubusercontent.com/40931468/235715660-681d32ea-d60b-4d5d-b60d-bac1d484597a.jpg)
+
+
   
 
 
