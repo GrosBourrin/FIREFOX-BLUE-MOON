@@ -1,4 +1,4 @@
-@-moz-document domain(reddit.com) {
+@-moz-document domain("reddit.com") {
 	* {
 		font-family: "Fira Sans" !important;
 	}
@@ -15,12 +15,7 @@
 	}
 
 
-	/*.icon:hover, .icon:focus {
-				/
-				color: white !important;
-				fill: white !important;
-				background:  #1e90ff !important;
-			}*/
+
 	._3dZnYgFFpifT-M_Vs2FAq6:focus,
 	._3dZnYgFFpifT-M_Vs2FAq6:hover,
 	._1x6pySZ2CoUnAfsFhGe7J1:focus,
@@ -30,7 +25,7 @@
 	._2I12Htze2UzJmmfnrgYJOn._1dBtowHdRHcGyLbVEaOL8t ._24UNt1hkbrZxLzs5vkvuDh:hover {
 		background-color: #1e90ffc0 !important;
 		border-radius: 50px !important;
-		outline: none;
+		outline: none !important;
 	}
 
 	.icon._1xvdfUtOPDANqHjxzxKX5b._1TI6C7sqGL9TRdsq1jRks {
@@ -134,8 +129,6 @@
 		font-size: 13px !important;
 		font-weight: 300 !important;
 
-
-		/*line-height:initial !important;*/
 	}
 
 	._1r4smTyOEZFO91uFIdWW6T .public-DraftEditor-content,
@@ -145,7 +138,7 @@
 	.h-jI8r2f9ozTNqu_2TBeY,
 	.header-subreddit-filter,
 	._37tmRmxaFMjRRrvwcY2JmY,
-	input#password.AnimatedForm_textinput * {
+	input#password.AnimatedForm_textinput {
 		background: #000000 !important;
 		color: #ffffff !important;
 		border-radius: 6px important;
@@ -286,7 +279,7 @@
 	/*------------------------------------------------*/
 	.Chtkt3BCZQruf0LtmFg2c {
 		max-height: unset !important;
-		-webkit-mask-image: unset !important;
+		/*-webkit-mask-image: unset !important; */
 		mask-image: unset !important;
 		overflow: auto !important;
 	}
@@ -298,7 +291,7 @@
 		max-height: unset !important;
 	}
 
-	._1apobczT0TzIKMWpza0OhL>* {
+	._1apobczT0TzIKMWpza0OhL {
 		grid-row-start: 1 !important;
 		grid-column-start: 1 !important;
 		position: relative !important;
@@ -378,7 +371,7 @@
 	/* embedded youtube */
 	iframe {
 		min-height: 45vh !important;
-	}
+	}  
 
 	/* video */
 	._3QOPLw8PZipW3i8kDxod81 {
@@ -543,7 +536,7 @@
 
 	._2uYY-KeuYHKiwl-9aF0UiL {
 		border: 0px solid var(--newCommunityTheme-line) !important;
-		border-radius: 4px;
+		border-radius: 4px !important;
 		box-shadow: 0 2px 4px 0 #000000 !important;
 		/*color: var(--newCommunityTheme-bodyText); */
 		/*overflow: hidden; */
@@ -569,7 +562,7 @@
 	._2WUlLsFSOnLb33dNA9kf50,
 	._3X4hbg4asgVvLaVYU6dUzs,
 	._3kIjxjzGVq5UfR6Bjiovd,
-	#header,
+	header,
 	._249eIqU0mX7GU1qrI9k3F3,
 	._3k0sISq1Sewv-7h_jA7Nhh,
 	._1ybOoJLXdiKZz_P7hQ0NrO,
@@ -623,10 +616,10 @@
 
 	._2p14AQvJBvTrEEa4csiW9v {
 		transform: scale(0.75) !important;
-		padding-left: 0px;
+		padding-left: 0px !important;
 		padding-right: -40px;
 		padding-bottom: 0px;
-		margin-left: -22px;
+		margin-left: -22px ;
 		margin-right: 3px;
 		left: -12px;
 
@@ -644,12 +637,7 @@
 		width: 169.017px !important;
 	}
 
-	._2X6EB3ZhEeXCh1eIVA64XM {
-		padding-left: -1px !important;
-		padding-right: 0px !important;
-		margin-right: -6px !important;
-	}
-
+	
 
 	._2_QqG5dG916znjlVV8ZCbw,
 	._1XJXnCAngvZLEeLpB3oa4L {
@@ -662,18 +650,17 @@
 
 	._13ScjOmi6dGdJw0JAonQEr,
 	._eYtD2XCVieq6emjKBH3m {
-		margin-left: 15px !important;
+		margin-left: 0px !important;
 	}
 
 	._1te2cn6lvn-YtGSv-hrM7g,
 	._1z4A5-p2XgzMTJUEq3GaXu,
 	._1cvAFWcyUe8hsdIpCmJP0W {
-		/*height: 100% !important;
-		width: 100% !important;  */
-
+		height: 100% !important;
+		width: 100% !important;
 		border: none !important;
 		outline: none !important;
-		/*object-fit: cover !important;   */
+		object-fit: cover !important;
 	}
 
 	.-z42jjKOFdAdFhdJ8mmI4 {
@@ -684,21 +671,47 @@
 		border-radius: 20px !important;
 		width: 142px !important;
 		padding-bottom: 4px !important;
-		margin-bottom: -4px !important;
+		margin-bottom: -6px !important;
 	}
 
-	._2X6EB3ZhEeXCh1eIVA64XM {
+	.aJrgrewN9C8x1Fusdx4hh {
 		text-align: center !important;
+		padding-bottom: 0px !important;
 	}
+	 /*
+        ._2X6EB3ZhEeXCh1eIVA64XM._2hSecp_zkPm_s5ddV2htoj._2VqfzH0dZ9dIl3XWNxs42y._1wj6zoMi6hRP5YhJ8nXWXE._3b9QdopIknN9AuNvj2kI9X*/
+        ._1wj6zoMi6hRP5YhJ8nXWXE {
+          font-size: 14px !important;
+          padding-right: 4px !important;
+          padding-left: 8px !important;
+          margin-right: 14px !important;
+
+          margin-bottom: -7px !important;
+          padding-bottom: 5px !important;
+          /*padding-top: 11px !important;    */
+            /*padding-right: 20px;
+            padding-bottom: 6px;   */
+		text-align: center !important;			
+	}
+	
+
 
 	input#password.AnimatedForm_textinput {
 		background: #000000 !important;
 		color: #ffffff !important;
 	}
 
-
 	._38x4rPvvkwQ6NMJG2ex7X {
 		background: #1e1d2d !important;
 		border: none !important;
 	}
+
+	/*._1OVBBWLtHoSPfGCRaPzpTf._2udhMC-jldHp_EpAuBeSR1.PaJBYLqPf_Gie2aZntVQ7,
+	.Dx3UxiK86VcfkFQVHNXNi,
+	._3tw__eCCe7j-epNCKGXUKk,
+	._3xX726aBn29LDbsDtzr_6E {
+		max-width: 1250px !important
+	}*/
 }
+
+
