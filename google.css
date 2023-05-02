@@ -519,7 +519,7 @@
 	.CodeMirror-dialog input *,
 	.cm-s-github-light .CodeMirror-lines *,
 	.file-editor-textarea,
-	.blob-code,
+	.blob-code, .blob-code-inner.blob-code-marker.js-code-nav-pass,  
 	code,
 	pre,
 	samp,
@@ -530,7 +530,7 @@
 	.diff-table,
 	.tab-size,
 	.input-monospace,
-	.text-mono, .react-line-number,
+	.text-mono, .react-line-number, text,
              .react-code-text,
              .react-blob-print-hide,
              .commit-ref, .react-code-text *{
