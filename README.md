@@ -84,7 +84,7 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 ![ImmoPSntN0](https://user-images.githubusercontent.com/40931468/235697136-4969642e-18b3-43ec-be3f-19732280eabb.jpg)
 
 **Reddit**
-i sue also reddit enhancer webextension to spread the feed
+i use also reddit enhancer webextension to spread the feed : https://addons.mozilla.org/fr/firefox/addon/reddit-enhancer/
 
 ![EhP4Y6ftiN](https://user-images.githubusercontent.com/40931468/235699890-160d9805-5661-41e6-87aa-e8c3194ffcec.jpg)
 
