@@ -8,13 +8,34 @@
 @import url("library.css");
 @import url("findbarfinal.css");
 @import url("tooltip.css");
-@import url("CenteredStatuspanel.css");
 @import url("unifiedwebext.css");
 @import url("hamburgerpanel.css");
+@import url("dialog.css");
 /*@import url("anims.css");*/
 
 /* 231A23 */
 
+/* centered statuspanel */
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/centered_top_statuspanel.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+#statuspanel:not([hidden]){
+  display: flex !important;
+  width: 100%;
+  max-width: 100% !important;
+  padding-bottom: 0 !important;
+  inset-block: auto 0 !important;
+  inset-inline: auto !important;
+}
+#statuspanel-label{
+background: #1E1D2D !important;
+         font-family: "Fira Sans" !important;
+         font-size: 14px !important;
+         color: #ffff00 !important;
+         border: 2px solid #1E1D2D !important;
+         border-radius: 2px !important;     
+         margin-inline: auto !important;
+}
+/*--------------------------------------------------*/
 :-moz-focusring,
 :focus,
 button::-moz-focus-inner,
@@ -1898,7 +1919,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 
 
 .tab-icon-image[src] {
-	display: -moz-block !important;
+	display: flex !important;
 }
 
 
@@ -2618,7 +2639,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	background: #1e90ff !important;
 }
 
-/* white load flash */
+/* white load flash
 #browser vbox#appcontent tabbrowser,
 #content,
 .tabbrowser-tabpanel,
@@ -2631,7 +2652,7 @@ browser[type="content-primary"],
 browser[type="content"]>html {
 	background: #1e1d2d !important;
 	color: white !important;
-}
+}*/
 
 /* new tab button icon */
 #new-tab-button {
@@ -2641,11 +2662,11 @@ browser[type="content"]>html {
 	margin-top: 3px !important;
 }
 
-.tab-label:-moz-window-inactive,
+/***.tab-label:-moz-window-inactive,
 .tab-text:-moz-window-inactive {
 	opacity: 1 !important;
 	vertical-align: middle !important;
-}
+}*/
 
 
 /* "Do you really want to close all tabs?" dialogue */
@@ -2704,7 +2725,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 .bookmark-item>.toolbarbutton-icon {
 	margin-inline-end: 0px !important;
 }
-
+/*--------------------------------------------------------*/
 /* zoom buttons */
 #zoom-reset-button label {
 	padding-top: 7px !important;
