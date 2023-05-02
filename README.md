@@ -90,6 +90,10 @@ i use also reddit enhancer webextension to spread the feed : https://addons.mozi
 
 ![firefox_K6n0bQcEM6](https://user-images.githubusercontent.com/40931468/235699902-48265e2f-143c-4d7f-97e8-1e7f22adc863.jpg)
 
+**Gmail**
+
+![firefox_s99DmDnvZk](https://user-images.githubusercontent.com/40931468/235714652-4d7b2a76-4ff0-4159-9a95-036e02a530a8.jpg)
+![CwafpiiYJ6](https://user-images.githubusercontent.com/40931468/235714883-c877643d-8fc3-4c80-b425-dfe7b4e2dd4b.jpg)
 
   
 
