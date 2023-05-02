@@ -86,13 +86,10 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 **Reddit**
 i sue also reddit enhancer webextension to spread the feed
 
+![EhP4Y6ftiN](https://user-images.githubusercontent.com/40931468/235699890-160d9805-5661-41e6-87aa-e8c3194ffcec.jpg)
 
-![firefox_xSlnNl00hq![firefox_K6n0bQcEM6](https://user-images.githubusercontent.com/40931468/235699206-dee7d0f6-b494-473b-8791-8aa403456c23.jpg)
-](https://user-images.githubusercontent.com/40931468/235697148-554b1900-bd7c-4e1f-b79a-32131ef3818f.jpg)
-![EhP4Y6ftiN](https://user-images.githubusercontent.com/40931468/235699236-e0caeecb-b29f-405d-a191-9f7f78a031aa.jpg)
+![firefox_K6n0bQcEM6](https://user-images.githubusercontent.com/40931468/235699902-48265e2f-143c-4d7f-97e8-1e7f22adc863.jpg)
 
-      
-      
 
   
 
