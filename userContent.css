@@ -2,14 +2,11 @@
 @import url("devtools.css");
 @import url("reddit0.css");
 @import url("aboutconfig.css");
-@import url("facebook3.css");
-@import url("youtube.css");
+/*@import url("youtube.css");    */
 @import url("dialog.css");
-@import url("instagram.css");
-@import url("stackoverflow.css");
-@import url("twitter.css");
 @import url("preferences.css");
-/*@import url("gmail1.css");  */
+@import url("gmail1.css");
+@import url("instagram.css");
 
 
 :root {
@@ -1645,7 +1642,7 @@ url("about:privatebrowsing") {
 	}
 }
 
-@-moz-document url-prefix(view-source:) {
+@-moz-document url-prefix("view-source:") {
 	:root {
 		background: none !important;
 	}
@@ -1752,11 +1749,12 @@ url("about:privatebrowsing") {
 	background-color: #1e1d2d !important;
 }
 
+/*
 .pdfViewer .page {
 	margin: 1px auto -3px auto !important;
 	border: 1px dashed transparent !important;
 }
-
+   */
 /* about:support*/
 @-moz-document url("about:support") {
 	body.wide-container {
@@ -1919,7 +1917,7 @@ url-prefix("chrome://browser") {
 }
 
 
-/* Dark Mode page between loading */
+
 @-moz-document url("about:privatebrowsing") {
 
 	html:not(#ublock0-epicker),
@@ -1984,8 +1982,6 @@ url("about:newtab") {
 
 	html,
 	body {
-
-
 		background: #1e1d2d !important;
 		color: #ffffff !important;
 	}
@@ -2873,15 +2869,19 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-color: #1e1d2d !important;
 	}
 
+	input,
 	textarea,
 	#tooltip {
-		background-color: #000000 !important;
+		appearance: none !important;
+		background: #000000 !important;
 		border: 1px solid #000000 !important;
 		color: #ffffff !important;
 	}
 
+
 	.cm-search-widget-input input {
-		background: #000000 !important;
+		appearance: none !important;
+		background-color: #000000 !important;
 		border: 0px !important;
 		color: #ffffff !important;
 	}
@@ -3174,7 +3174,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 }
 
 /* imagus mod*/
-@-moz-document url("moz-extension://fa0c04ad-ce95-4ccf-a163-badf1fc7f6f9/options.html") {
+@-moz-document url("moz-extension://bceff70b-7762-49a5-98d4-06f376d9711d/options.html") {
 	html {
 		background-color: #1e1d2d !important;
 	}
@@ -3251,7 +3251,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	#importlbl {
 		color: dodgerblue !important;
-		;
+
 	}
 
 	#importlbl:hover {
@@ -3870,17 +3870,6 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 }
 
-/*
-@-moz-document url(about:blank), url(about:newtab), url(about:home) {
-	body, html {
-		background-color: #1e1d2d !important;
-		background: #1e1d2d !important;
-		color: white !important;
-	}
-}
-*/
-
-
 
 @-moz-document url("about:firefoxview") {
 	:root {
@@ -4116,7 +4105,47 @@ dialog,
 	}
 }
 
+/*pdf page */
+#ContentSelectDropdownPopup,
+#toolbarSidebar,
+#scaleSelectContainer,
+#toolbarViewer,
+#thumbnailView {
+	background: #1e1d2d !important;
+}
 
+#secondaryToolbar {
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	color: white !important;
+	background: #1e1d2d !important;
+	border: 0px !important;
+}
+
+.secondaryToolbarButton:hover,
+.secondaryToolbarButton:focus-visible {
+	background-color: #1e90ff !important;
+	color: white !important;
+	border-radius: 4px !important;
+}
+
+.secondaryToolbarButton,
+.secondaryToolbarButton:focus-visible {
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	color: white !important;
+	background: #1e1d2d !important;
+	border: 0px !important;
+}
+
+.dropdownToolbarButton,
+#scaleSelect {
+	background: #1e1d2d !important;
+}
+
+#pageNumber {
+	background: #1e1d2d !important;
+}
 
 @-moz-document regexp(".+\.pdf$") {
 	:root {
@@ -4126,6 +4155,7 @@ dialog,
 		--highlight-bg-color: dodgerblue !important;
 	}
 
+	#thumbnailView,
 	#toolbarViewer,
 	menupopup-arrowscrollbox,
 	#ContentSelectDropdownPopup,
@@ -4280,11 +4310,10 @@ dialog,
 	window,
 	dialog,
 	window>dialog#history {
-		appearance: none !important;
+		/*appearance: none !important;  */
 		color: white !important;
 		background-color: #1e1d2d !important;
 		--in-content-box-background: #1e1d2d !important;
-
 	}
 
 	input,
@@ -4348,4 +4377,46 @@ dialog,
 
 #historyItems {
 	border: 1px solid #1e90ff !important;
+}
+
+/*-------------Livemarks ------------------*/
+@-moz-document url("moz-extension://f6a1d203-19c2-4e88-95ec-22e258f8cead/pages/settings/settings.html") {
+
+        html,
+        body {
+                font-family: Fira Sans !important;
+                background-color: #1e1d2d !important;
+                color: #ffffff !important;
+        }
+        .card {
+        	background: #1e90ff70!important;
+        	border-radius: 4px !important;
+        }
+        .card:hover {
+                        background: #1e90ffaa!important;
+        }
+        a.button.dialog-cancel,
+        button#settings-toggle {
+        	background: #1e90ff30 !important;
+        }
+         a.button.dialog-cancel:hover,
+        select,
+        button#settings-toggle:hover {
+                        background: #1e90ff !important;
+        }
+        #edit-livemark-dialog{
+                background: #1e1d2d !important;
+        }
+        .feed-title {
+        	color: white !important;
+        	font-weight: bolder !important;
+        }
+        .feed-url {
+        	color: white!important;
+        	font-size: 12px !important;
+        }
+        input {
+        	 background: black !important;
+        	 color: white !important;
+        }
 }
