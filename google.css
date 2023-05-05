@@ -1011,11 +1011,26 @@
 	
         
 	.js-social-form.BtnGroup-parent.flex-auto.width-full {
-	        margin-right: 20px !important;	
-        }  
-	
+	        margin-right:20px !important;	
+        }
+  
+	@media (min-width: 1400px) {
+  	        .feed-left-sidebar {
+                        min-width: 400px !important;
+                }
+        }
         .px-4 {
-               padding-right: 4px !important; 
+               padding-right: 4px !important;
+                       
+  
+        }
+        .color-fg-default {
+                     font-weight: bold !important;
+                     color: white !important; 
+        }
+        .color-fg-default:hover {
+               color: #1e90ff !important;
+               text-decoration: none !important;
         }
 
                             
