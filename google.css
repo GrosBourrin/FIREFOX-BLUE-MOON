@@ -9,6 +9,7 @@
 		--grid-column-width: 36px;*/
 
 	}
+	
 
 
 	span.REySof {
@@ -478,134 +479,8 @@
 	*{
 		font-family: Fira Sans !important;
 	}
-
-	/*tbody {
-		background: #141414 !important;
-		color: white !important;
-	}
-*/
-	/*a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block {
-		font-weight: bold !important;
-		color: #1e90ff !important;
-		font-size: 16px !important;
-	}
-
-	a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block:hover {
-		font-weight: bold !important;
-		color: #1e90ff80 !important;
-		font-size: 16px !important;
-	}*/
-
-	.branch-name,
-	.commit-ref,
-	.commit .sha,
-	.commit .sha-block,
-	.commit-desc pre,
-	.commit-tease-sha,
-	.blob-num,
-	.blob-code-inner *,
-	kbd,
-	.credit-card .cvv,
-	.credit-card .text,
-	.CommunityTemplate-highlight,
-	.file-info,
-	.hook-delivery-guid,
-	.hook-delivery-response-status,
-	.news .alert .branch-link,
-	.export-phrase pre,
-	.oauth-app-info-container dl.keys dd *,
-	.two-factor-recovery-codes *,
-	.CodeMirror *,
-	.CodeMirror-dialog input *,
-	.cm-s-github-light .CodeMirror-lines *,
-	.file-editor-textarea,
-	.blob-code, .blob-code-inner.blob-code-marker.js-code-nav-pass,  
-	code,
-	pre,
-	samp,
-	tt,
-	td,
-	pre,
-	.highlight,
-	.diff-table,
-	.tab-size,
-	.input-monospace,
-	.text-mono, .react-line-number, text,
-             .react-code-text,
-             .react-blob-print-hide,
-             .commit-ref, .react-code-text *{
-		font-family: "Fira Code" !important;		
-		font-size: 14px !important;
-		opacity: 1 !important;
-	}
 	
-
-	/*
-	span:hover {
-		background-color: #1e90ff !important;
-		color: white !important;
-	}
-
-	.diff-table tr:hover>pre,
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
-	.highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
-		background-color: #1e90ff80 !important;
-	}*/
-
-	/*.js-navigation-open.Link--primary {
-		font-family:  Fira Code !important;
-	}
-
-	.flex-auto.min-width-0.p-2.pr-3.pr-md-2 *{
-		font-family:  Fira Sans !important;
-	}*/
-
-	/*.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
-		background: #103810 !important;
-	}
-
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
-		background: #481010 !important;
-	}
-	*/
-	/*td {
-		background: #121212 !important;
-	}	
-
-	.text-bold {
-		color: white !important;
-		opacity: 1 !important;
-	}
-
-	#text {
-		color: white !important;
-	}*/
-
-	.css-truncate-target {
-		color: #1e90ff !important;
-	}
-}
-
-
-/* ==UserStyle==
-@name         Github Catppuccin
-@version      20220213.18.29
-@namespace    userstyles.world/user/arcofee
-@description  Soothing pastel theme for GitHub
-@author       arcofee
-@license      MIT
-==/UserStyle== */
-
-        /* name: Catppuccin */
-        /* author: Pocco81 (https://github.com/Pocco81)
-           Andreas Grafen (https://github.com/andreasgrafen) */
-        /* license: MIT */
-        /* upstream: https://github.com/catppuccin/github */
-        /* blurb: Soothing pastel theme for the high-spirited! */
-@-moz-document domain("github.com") {
+        
         :root {
                 /* Give H, S, L values */
                 /* rainbow ?? */
@@ -636,9 +511,7 @@
                 --gray1: 274, 11%, 59%;
                 --gray2: 285, 10%, 75%;
                 --white: 220, 38%, 89%;
-        }
-
-        :root {
+                        
                 /* INTERNAL VARS */
                 --__black0: hsl(var(--black0));
                 --__black1: hsl(var(--black1));
@@ -1025,4 +898,125 @@
         .unstarred.BtnGroup-parent:not(:first-child) > .BtnGroup-item:not(:focus):not(:hover) {
                 border-left-color: var(--color-btn-border) !important;
         }
+	/*tbody {
+		background: #141414 !important;
+		color: white !important;
+	}
+*/
+	/*a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block {
+		font-weight: bold !important;
+		color: #1e90ff !important;
+		font-size: 16px !important;
+	}
+
+	a.f6.text-bold.Link--primary.d-flex.no-underline.wb-break-all.d-inline-block:hover {
+		font-weight: bold !important;
+		color: #1e90ff80 !important;
+		font-size: 16px !important;
+	}*/
+
+	.branch-name,
+	.commit-ref,
+	.commit .sha,
+	.commit .sha-block,
+	.commit-desc pre,
+	.commit-tease-sha,
+	.blob-num,
+	.blob-code-inner *,
+	kbd,
+	.credit-card .cvv,
+	.credit-card .text,
+	.CommunityTemplate-highlight,
+	.file-info,
+	.hook-delivery-guid,
+	.hook-delivery-response-status,
+	.news .alert .branch-link,
+	.export-phrase pre,
+	.oauth-app-info-container dl.keys dd *,
+	.two-factor-recovery-codes *,
+	.CodeMirror *,
+	.CodeMirror-dialog input *,
+	.cm-s-github-light .CodeMirror-lines *,
+	.file-editor-textarea,
+	.blob-code, .blob-code-inner.blob-code-marker.js-code-nav-pass,  
+	code,
+	pre,
+	samp,
+	tt,
+	td,
+	pre,
+	.highlight,
+	.diff-table,
+	.tab-size,
+	.input-monospace,
+	.text-mono, .react-line-number, text,
+             .react-code-text,
+             .react-blob-print-hide,
+             .commit-ref, .react-code-text *{
+		font-family: "Fira Code" !important;		
+		font-size: 14px !important;
+		opacity: 1 !important;
+		white-space: pre-wrap !important;
+		overflow-wrap: anywhere !important;                          
+	}
+
+
+	/*
+	span:hover {
+		background-color: #1e90ff !important;
+		color: white !important;
+	}
+
+	.diff-table tr:hover>pre,
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
+	.highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
+		background-color: #1e90ff80 !important;
+	}*/
+
+	/*.js-navigation-open.Link--primary {
+		font-family:  Fira Code !important;
+	}
+
+	.flex-auto.min-width-0.p-2.pr-3.pr-md-2 *{
+		font-family:  Fira Sans !important;
+	}*/
+
+	/*.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
+		background: #103810 !important;
+	}
+
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
+	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
+		background: #481010 !important;
+	}
+	*/
+	/*td {
+		background: #121212 !important;
+	}	
+
+	.text-bold {
+		color: white !important;
+		opacity: 1 !important;
+	}
+
+	#text {
+		color: white !important;
+	}*/
+
+	.css-truncate-target {
+		color: #1e90ff !important;
+	}
+	
+        
+	.js-social-form.BtnGroup-parent.flex-auto.width-full {
+	        margin-right: 20px !important;	
+        }  
+	
+        .px-4 {
+               padding-right: 4px !important; 
+        }
+
+                            
 }
