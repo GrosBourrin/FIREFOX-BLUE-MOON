@@ -1032,6 +1032,11 @@
                color: #1e90ff !important;
                text-decoration: none !important;
         }
-
+	
+	.markdown-body code, .markdown-body tt {
+  		background-color: #1e90ff80 !important;
+		color: white !important;
+		font-family: Fira Code !important;
+	}
                             
 }
