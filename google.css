@@ -1033,10 +1033,26 @@
                text-decoration: none !important;
         }
 	
-	.markdown-body code, .markdown-body tt {
+	 .feed-right-sidebar {
+           padding-left: 40px !important;
+           max-width: 430px !important;
+         }
+         a:hover {
+           text-decoration: none !important;
+           color: #1e90ff !important;
+         }
+         .pl-c1, .pl-s .pl-v {
+           font-family: Fira Code !important;
+         }
+         
+         .pl-token:hover, .pl-token.active {
+           color: black !important;
+           background: #1e90ff !important;
+         }  
+         .markdown-body code, .markdown-body tt {
   		background-color: #1e90ff80 !important;
 		color: white !important;
 		font-family: Fira Code !important;
-	}
+	}            
                             
 }
