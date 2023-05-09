@@ -1,5 +1,5 @@
 findbar {
-	-moz-box-ordinal-group: 0;
+	order: -1 !important;
 	margin-bottom: -33px !important;
 	position: relative;
 	border-top: none !important;
@@ -11,7 +11,7 @@ findbar {
 }
 
 .findbar-container>.findbar-find-fast {
-	padding: var(--toolbarbutton-inner-padding) 0px;
+	padding: var(--toolbarbutton-inner-padding) 1px;
 	margin: 0 !important;
 }
 
@@ -19,27 +19,30 @@ findbar[hidden] {
 	transform: translateY(-30px);
 }
 
+
 findbar>.findbar-container,
 findbar>.close-icon {
-	border: 1px solid var(--chrome-content-separator-color);
-	border-width: 0 0 1px 0px;
-	background: var(--uc-light-bkgnd-color, #1e1d2d) !important;
+	border: 1px solid #1e1d2d !important;
+	border-width: 0 0 1px 0px !important;
+	background: #1e1d2d !important;
+	/*background-image: linear-gradient(#1e1d2d, #1e1d2d);*/
 	pointer-events: auto;
 }
 
 findbar>.findbar-container {
-	-moz-box-direction: reverse;
-	border-left-width: 1px;
-	border-bottom-left-radius: 4px;
+	flex-direction: row-reverse;
+	border-bottom-right-radius: 4px;
+	border-right-width: 1px;
 	height: initial !important;
-	background: #1e1d2d !important;
+	margin-inline: 0px !important;
+	overflow-inline: visible !important;
 }
 
 .findbar-find-status {
-	display: -moz-box;
+	display: flex;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	-moz-box-flex: 1;
+	flex-grow: 1;
 }
 
 .findbar-closebutton {
@@ -47,6 +50,7 @@ findbar>.findbar-container {
 	border-radius: 0 !important;
 	padding: 5px !important;
 	width: initial !important;
+
 }
 
 .findbar-closebutton>image {
@@ -64,8 +68,8 @@ findbar>.findbar-container>hbox {
 
 findbar::before {
 	content: "";
-	display: -moz-box;
-	-moz-box-flex: 100;
+	display: flex;
+	flex-grow: 1 00;
 }
 
 .findbar-textbox::placeholder,
@@ -75,7 +79,7 @@ findbar::before {
 .findbar-entire-word,
 .findbar-label {
 	font-family: Fira Sans !important;
-	/*color: #FFFFFF !important;*/
+	color: white !important;
 }
 
 .findbar-textbox {
@@ -87,6 +91,12 @@ findbar::before {
 Move findbar so it isn't over the scrollbar
 Delete if you want findbar to begin from right window edge
 */
+
+
+/*
+  Move findbar so it isn't over the scrollbar
+  Delete if you want findbar to begin from right window edge
+  */
 findbar {
 	margin-right: 16px;
 	border-right: 1px solid var(--chrome-content-separator-color);
