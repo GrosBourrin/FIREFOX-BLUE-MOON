@@ -490,51 +490,6 @@
 		overflow-wrap: anywhere !important;
 	}
 
-
-	/*
-	span:hover {
-		background-color: #1e90ff !important;
-		color: white !important;
-	}
-
-	.diff-table tr:hover>pre,
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
-	.highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
-		background-color: #1e90ff80 !important;
-	}*/
-
-	/*.js-navigation-open.Link--primary {
-		font-family:  Fira Code !important;
-	}
-
-	.flex-auto.min-width-0.p-2.pr-3.pr-md-2 *{
-		font-family:  Fira Sans !important;
-	}*/
-
-	/*.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
-		background: #103810 !important;
-	}
-
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
-	.highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
-		background: #481010 !important;
-	}
-	*/
-	/*td {
-		background: #121212 !important;
-	}
-
-	.text-bold {
-		color: white !important;
-		opacity: 1 !important;
-	}
-
-	#text {
-		color: white !important;
-	}*/
-
 	.css-truncate-target {
 		color: #1e90ff !important;
 	}
