@@ -586,6 +586,7 @@
 
 	.pl-c1,
 	.pl-s .pl-v {
+		color: white !important;
 		font-family: Fira Code !important;
 	}
 
