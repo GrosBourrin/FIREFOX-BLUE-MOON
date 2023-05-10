@@ -3530,3 +3530,12 @@ See the above repository for updates as well as full license text.*/
 	border-radius: 0px !important;
 	margin-inline: auto !important;
 }
+/* Set this pref to true in about:config to make statuspanel show at bottom instead */
+@supports -moz-bool-pref("userchrome.centered-statuspanel.on-top.enabled"){
+  #statuspanel:not([hidden]){
+    inset-block: auto 0 !important;
+  }
+  /*#statuspanel-label{
+    border-width: 0 1px 1px 1px !important;
+  }*/
+}
