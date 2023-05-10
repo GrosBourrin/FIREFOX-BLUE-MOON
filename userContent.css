@@ -2,12 +2,12 @@
 @import url("devtools.css");
 @import url("reddit0.css");
 @import url("aboutconfig.css");
-/*@import url("youtube.css");    */
+@import url("youtube.css");
 @import url("dialog.css");
 @import url("preferences.css");
 @import url("gmail1.css");
 @import url("instagram.css");
-
+@import url("Github.css");
 
 :root {
 	--in-content-border-hover: #1e90ff80 !important;
@@ -49,8 +49,6 @@ url-prefix("chrome://userchromejs/content/aboutconfig/config.xhtml") {
 		font-family: Fira Sans !important;
 	}
 }
-
-
 
 .tabbrowser-tabpanel,
 browser.dialogFrame,
@@ -2129,7 +2127,7 @@ url("about:newtab") {
 }
 
 .pip-wrapper {
-	color: yellow !important;
+	color: #1e90ff !important;
 	background-color: transparent !important;
 	stroke: none !important;
 	top: inherit !important;
@@ -3173,10 +3171,45 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 }
 
+@-moz-document url("moz-extension://1fdfdfa4-d099-4051-b104-eba62bcc1906/settings/settings.html") {
+	* {
+		font-family: Fira Sans !important;
+	}
+
+	html,
+	body {
+
+		background-color: #1e1d2d !important;
+		color: white !important;
+	}
+
+	#imd_settings_filename_format_input,
+	#imd_settings_filename_saved_input,
+	#imd_settings_filename_tagged_input,
+	#imd_settings_filename_explore_input,
+	#imd_settings_filename_reels_input,
+	#imd_settings_filename_posts_input,
+	#imd_settings_filename_stories_input,
+	#imd_settings_filename_highlights_input,
+	#imd_settings_filename_feed_input {
+		appearance: none !important;
+		background-color: black !important;
+		color: white !important;
+		border: none !important;
+	}
+
+	#imd_settings_filename_format_description {
+		line-height: 30px !important;
+		width: 1000px !important;
+	}
+
+}
+
 /* imagus mod*/
 @-moz-document url("moz-extension://bceff70b-7762-49a5-98d4-06f376d9711d/options.html") {
 	html {
 		background-color: #1e1d2d !important;
+		color: white !important;
 	}
 
 	body,
@@ -3284,7 +3317,10 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	input[type="checkbox"]:checked+.checkbox {
 		background: #1e90ff !important;
 		color: #FFFFFF !important;
+	}
 
+	.advanced>label {
+		color: dodgerblue !important;
 	}
 
 	button {
@@ -3294,8 +3330,9 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	button#export {
+		appearance: none !important;
 		fill: #1e90ff !important;
-		color: black !important;
+		color: white !important;
 	}
 
 	button:hover {
@@ -4382,41 +4419,64 @@ dialog,
 /*-------------Livemarks ------------------*/
 @-moz-document url("moz-extension://f6a1d203-19c2-4e88-95ec-22e258f8cead/pages/settings/settings.html") {
 
-        html,
-        body {
-                font-family: Fira Sans !important;
-                background-color: #1e1d2d !important;
-                color: #ffffff !important;
-        }
-        .card {
-        	background: #1e90ff70!important;
-        	border-radius: 4px !important;
-        }
-        .card:hover {
-                        background: #1e90ffaa!important;
-        }
-        a.button.dialog-cancel,
-        button#settings-toggle {
-        	background: #1e90ff30 !important;
-        }
-         a.button.dialog-cancel:hover,
-        select,
-        button#settings-toggle:hover {
-                        background: #1e90ff !important;
-        }
-        #edit-livemark-dialog{
-                background: #1e1d2d !important;
-        }
-        .feed-title {
-        	color: white !important;
-        	font-weight: bolder !important;
-        }
-        .feed-url {
-        	color: white!important;
-        	font-size: 12px !important;
-        }
-        input {
-        	 background: black !important;
-        	 color: white !important;
-        }
+	html,
+	body {
+		font-family: Fira Sans !important;
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+	}
+
+	.card {
+		background: #1e90ff70 !important;
+		border-radius: 4px !important;
+	}
+
+	.card:hover {
+		background: #1e90ffaa !important;
+	}
+
+	a.button.dialog-cancel,
+	button#settings-toggle {
+		background: #1e90ff30 !important;
+	}
+
+	a.button.dialog-cancel:hover,
+	select,
+	button#settings-toggle:hover {
+		background: #1e90ff !important;
+	}
+
+	#settings-dialog.card.dialog,
+	#edit-livemark-dialog {
+		background: #1e1d2d !important;
+	}
+
+	.feed-title {
+		color: white !important;
+		font-weight: bolder !important;
+	}
+
+	.feed-url {
+		color: white !important;
+		font-size: 12px !important;
+	}
+
+	input {
+		background-color: black !important;
+		color: white !important;
+	}
+
+	input#darkIcon {
+		background-color: #1e1d2d !important;
+	}
+
+	.button,
+	button {
+		background: #1e90ff80 !important;
+	}
+
+	.button:hover,
+	button:hover {
+		background: #1e90ff !important;
+	}
 }
