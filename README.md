@@ -34,7 +34,9 @@ I'm definitely not an alien.
 
 I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) and folks of Reddit [https://www.reddit.com/r/FirefoxCSS/](https://www.reddit.com/r/FirefoxCSS/) for their help and inspiration
 
-**about Firefox box**
+
+**About Firefox box**
+
 ![firefox_7nuseyYEDg](https://user-images.githubusercontent.com/40931468/182013803-396c9607-bc57-485c-b754-4781cc87a966.gif)
 
 
