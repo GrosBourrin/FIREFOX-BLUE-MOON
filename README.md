@@ -84,11 +84,10 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 ![ImmoPSntN0](https://user-images.githubusercontent.com/40931468/235697136-4969642e-18b3-43ec-be3f-19732280eabb.jpg)
 
 **Reddit**
-i use also reddit enhancer webextension to spread the feed : https://addons.mozilla.org/fr/firefox/addon/reddit-enhancer/
+![p50vvHYGhA](https://github.com/GrosBourrin/FIREFOX-BLUE-MOON/assets/40931468/9b0d7d0c-c72c-4281-9365-e6c942308662)
 
-![EhP4Y6ftiN](https://user-images.githubusercontent.com/40931468/235699890-160d9805-5661-41e6-87aa-e8c3194ffcec.jpg)
+![firefox_9UxGwtT8um](https://github.com/GrosBourrin/FIREFOX-BLUE-MOON/assets/40931468/cefd9c07-2713-4a0e-b18f-0e2144e0f621)
 
-![firefox_K6n0bQcEM6](https://user-images.githubusercontent.com/40931468/235699902-48265e2f-143c-4d7f-97e8-1e7f22adc863.jpg)
 
 **Gmail**
 
