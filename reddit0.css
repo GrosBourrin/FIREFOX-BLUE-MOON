@@ -64,10 +64,20 @@
 		border: 1px solid #1e1d2d !important;
 	}
 
-	/*.uI_hDmU5GSiudtABRz_37 {
-         	margin-left: -75px !important;
-         	width: 815px !important;
-         }   */
+	.uI_hDmU5GSiudtABRz_37 {
+		margin-left: -75px !important;
+		width: 815px !important;
+	}
+
+	._1OVBBWLtHoSPfGCRaPzpTf._3nSp9cdBpqL13CqjdMr2L_ {
+		margin-left: -75px !important;
+		width: 815px !important;
+	}
+
+	/*
+         .QscnL9OySMkHhGudEvEya, ._1_TJAX-8zAT3vVN1Iz7cys {
+         	margin-left: -120px !important;
+         } */
 
 
 	._1RYN-7H8gYctjOQeL8p2Q7:hover {
@@ -342,7 +352,6 @@
 	}
 
 	.kcerW9lbT-se3SXd-wp2i {
-
 		background-color: #1e1d2d !important;
 	}
 
@@ -404,10 +413,11 @@
 	}
 
 	i.threadline {
-         border-right: 1px solid #1e90ff !important;
-         opacity: 1;
-         }
-        /*
+		border-right: 1px solid #1e90ff !important;
+		opacity: 1;
+	}
+
+	/*
 	._36AIN2ppxy_z-XSDxTvYj5> i.threadline:hover {
 		border-right: 2px solid #1e90ff !important;
 	}      */
@@ -779,19 +789,44 @@
 	#header-bottom-left {
 		background: #1e1d2d !important;
 	}
-	#INBOX--TOOLTIP._3uJguwDAW5Ra1r4aegBvBq._1TfMsQUAiVAqjXRo7s3R_t,
-	nav.F0hrtz76LlopbY9X0wtDo, a._1tpiOc0IxpDU113wUs4zi1, ._8INvnNiEMHRndJ0M-LiY {
 
-                background-color: #1e1d2d !important;
-                border: 1px solid #1e1d2d !important;
-        }
-        a._3doOacPPJ-LU-aBSoLl9TV {
-           background:#1e90ff80!important;
-          }
-          a._3doOacPPJ-LU-aBSoLl9TV:hover {
-                     background:#1e90ff!important;
-                    }
-                    a.X1WC7m4hrFQNzINreBRsv {
-                    	color: white!important;
-                    }
+	#INBOX--TOOLTIP._3uJguwDAW5Ra1r4aegBvBq._1TfMsQUAiVAqjXRo7s3R_t,
+	nav.F0hrtz76LlopbY9X0wtDo,
+	a._1tpiOc0IxpDU113wUs4zi1,
+	._8INvnNiEMHRndJ0M-LiY {
+		background-color: #1e1d2d !important;
+		border: 1px solid #1e1d2d !important;
+	}
+
+	a._3doOacPPJ-LU-aBSoLl9TV {
+		background: #1e90ff80 !important;
+	}
+
+	a._3doOacPPJ-LU-aBSoLl9TV:hover {
+		background: #1e90ff !important;
+	}
+
+	a.X1WC7m4hrFQNzINreBRsv {
+		color: white !important;
+	}
+
+	._38lwnrIpIyqxDfAF1iwhcV {
+		background-color: #1e90ff80 !important;
+	}
+
+
+	._1Wn5lpE9yF7YQX-XVL6AUI {
+		white-space: pre-wrap;
+		word-break: keep-all;
+		margin: 3px 0 !important;
+		min-width: 81px !important;
+	}
+
+	._2IirhjIkZ7hgWGtpr087xZ {
+		background-color: #1e1d2d !important;
+	}
+
+	._3Im6OD67aKo33nql4FpSp_ {
+		border: 1px solid #1e90ff80 !important;
+	}
 }
