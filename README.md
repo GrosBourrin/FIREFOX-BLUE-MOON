@@ -75,6 +75,7 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 
 
 **HTTPs Anywhere addon panel**
+
 ![2022-02-18_12h23_01](https://user-images.githubusercontent.com/40931468/154674266-7714e916-3b7f-4e84-a577-e330e8daaa36.png)
 
 
