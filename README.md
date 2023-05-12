@@ -83,7 +83,8 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 ![NW0cmaS0X9](https://user-images.githubusercontent.com/40931468/154704526-bd006d61-9787-46d7-8bf5-ba99716c7e8a.gif)
 
 
-**Imagus**
+**Imagus Mod**
+
 ![firefox_Ns0SFjTfIC](https://user-images.githubusercontent.com/40931468/161104347-72342da8-322f-4ea8-84c1-8254b4cb018d.png)
 
 ![firefox_Bqg5OPjOSc](https://user-images.githubusercontent.com/40931468/161104357-44054e0d-1cd3-461a-8f1d-a82085206924.png)
@@ -91,22 +92,26 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 ![firefox_XJIwRFo1OH](https://user-images.githubusercontent.com/40931468/161104373-51ed3849-4400-4256-b7a0-d06ae3c4d06a.png)
 
 
-**Github catpuccin**          
+**Github catpuccin**  
+
 ![firefox_6xTiY9rpFx](https://user-images.githubusercontent.com/40931468/235697111-548c6519-f3ac-43ad-a859-2cff2d589eed.jpg)
 ![ImmoPSntN0](https://user-images.githubusercontent.com/40931468/235697136-4969642e-18b3-43ec-be3f-19732280eabb.jpg)
 
 
 **Reddit**
+
 ![p50vvHYGhA](https://github.com/GrosBourrin/FIREFOX-BLUE-MOON/assets/40931468/9b0d7d0c-c72c-4281-9365-e6c942308662)
 ![firefox_9UxGwtT8um](https://github.com/GrosBourrin/FIREFOX-BLUE-MOON/assets/40931468/cefd9c07-2713-4a0e-b18f-0e2144e0f621)
 
 
 **Gmail**
+
 ![firefox_s99DmDnvZk](https://user-images.githubusercontent.com/40931468/235714652-4d7b2a76-4ff0-4159-9a95-036e02a530a8.jpg)
 ![CwafpiiYJ6](https://user-images.githubusercontent.com/40931468/235714883-c877643d-8fc3-4c80-b425-dfe7b4e2dd4b.jpg)
 
 
 **Instagram wide feed **
+
 ![firefox_XEJhBC4xvz](https://user-images.githubusercontent.com/40931468/235715660-681d32ea-d60b-4d5d-b60d-bac1d484597a.jpg)
 
 
