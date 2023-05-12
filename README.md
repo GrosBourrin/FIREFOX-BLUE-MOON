@@ -58,16 +58,19 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 
 
 **Preferences/option page**
+
 ![2022-02-18_12h19_35](https://user-images.githubusercontent.com/40931468/154674142-3bb87bea-f5a2-4664-a9ae-82e3ea8f3889.png)
 ![2022-02-18_12h19_49](https://user-images.githubusercontent.com/40931468/154674185-d8841841-8f80-4f7a-aa2a-86f50d50c83a.png)
 ![2022-02-18_12h20_01](https://user-images.githubusercontent.com/40931468/154674193-c130e5b9-b200-41ed-8784-ca8461063c70.png)
 
 
 **Addon page 2 columns**
+
 ![2022-02-18_12h20_29](https://user-images.githubusercontent.com/40931468/154674196-129c4d13-ceef-4797-bc0e-b9ba55fede26.png)
 
 
 **UblockOrigin Webextension**
+
 ![2022-02-18_12h23_54](https://user-images.githubusercontent.com/40931468/154674213-9c4349b9-ac57-44ed-8d29-6a2d1754383d.png)
 ![2022-02-18_12h21_29](https://user-images.githubusercontent.com/40931468/154674227-d29116bf-83f9-42f1-b641-a3bdcbd481ab.png)
 ![2022-02-18_12h21_57](https://user-images.githubusercontent.com/40931468/154674234-1b9e5987-8556-4345-b269-b04eb47b2ab0.png)
