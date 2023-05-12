@@ -114,7 +114,7 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 ![CwafpiiYJ6](https://user-images.githubusercontent.com/40931468/235714883-c877643d-8fc3-4c80-b425-dfe7b4e2dd4b.jpg)
 
 
-**Instagram wide feed **
+**Instagram wide feed**
 
 ![firefox_XEJhBC4xvz](https://user-images.githubusercontent.com/40931468/235715660-681d32ea-d60b-4d5d-b60d-bac1d484597a.jpg)
 
