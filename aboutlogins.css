@@ -1,0 +1,141 @@
+@-moz-document url-prefix("about:logins") {
+
+	.fxaccounts-avatar-button,
+	.fxaccounts-avatar-button:hover:active {
+		background: transparent !important;
+		border: none !important;
+	}
+
+	.meta-info {
+		font-weight: 400 !important;
+		font-size: initial !important;
+	}
+
+	.edit-button,
+	.delete-button {
+		background-position-x: 8px !important;
+		padding-left: 32px !important;
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.copy-button,
+	.create-login-button {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.edit-button:hover,
+	.delete-button:hover,
+	.copy-button:hover,
+	.create-login-button:hover {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	login-list,
+	div.meta {
+		background-color: #1e1d2d !important;
+	}
+
+	.login-list-item {
+		border: none !important;
+	}
+
+	.container[role="dialog"] {
+		background: #1e1d2d !important;
+		border: 1px solid #333333 !important;
+		border-radius: 0px !important;
+		color: #ffffff !important;
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.32) !important;
+	}
+
+	.login-list-item.selected {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	.login-list-item:hover {
+		background-color: #1e90ff80 !important;
+	}
+
+	.body,
+	header,
+	div.container {
+		background-color: #1e1d2d !important;
+		background: #1e1d2d !important;
+		color: #ffffff !important;
+	}
+
+	.menu-button {
+		background-color: #1e90ff !important;
+	}
+
+	.menu-button:hover {
+		background-color: #1e90ff80 !important;
+	}
+
+	.menu {
+		background-color: #1e1d2d !important;
+		border: 0px !important;
+		color: #ffffff !important;
+		font-size: 14px !important;
+		font-family: Fira Sans !important;
+	}
+
+	.menuitem-button:hover {
+		background: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.save-changes-button,
+	.cancel-button {
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+	}
+
+	.save-changes-button:hover,
+	.cancel-button:hover {
+		background-color: #1e90ff80 !important;
+		color: #ffffff !important;
+	}
+
+	input {
+		background-color: #1e1d2d !important;
+		outline: none !important;
+	}
+
+	.reveal-password-checkbox:hover {
+		fill: #1e90ff !important;
+		background-color: transparent !important;
+	}
+
+	.reveal-password-checkbox {
+		background-color: transparent !important;
+	}
+
+	a,
+	.text-link {
+		color: #1e90ff !important;
+	}
+
+	a:hover,
+	.text-link:hover {
+		color: #1e90ff80 !important;
+	}
+
+	.vulnerable-alert {
+		background: #1e1d2d !important;
+		border-color: #1e90ff !important;
+	}
+
+	#login-sort {
+		background: #1e90ff !important;
+		text-align: center !important;
+	}
+
+	#login-sort label {
+		text-align: center !important;
+		margin: 0px !important;
+	}
+}
