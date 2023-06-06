@@ -1,6 +1,19 @@
-
 #unified-extensions-button {
 	list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHA6Ly9tb3ppbGxhLm9yZy9NUEwvMi4wLy4gLS0+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9ImNvbnRleHQtZmlsbCIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSI+DQogIDxwYXRoIGQ9Ik0yLjYgOCA0IDhjMS4xMDMgMCAyIC44OTcgMiAycy0uODk3IDItMiAybC0xLjQgMC0uNi42IDAgMS43NzVDMiAxNS4yNzEgMi43MjkgMTYgMy42MjUgMTZsOS43NSAwYy44OTYgMCAxLjYyNS0uNzI5IDEuNjI1LTEuNjI1bDAtOC43NUMxNSA0LjcyOSAxNC4yNzEgNCAxMy4zNzUgNEwxMSA0bDAtMmMwLTEuMTAzLS44OTctMi0yLTJTNyAuODk3IDcgMmwwIDItMy4zNzUgMEMyLjcyOSA0IDIgNC43MjkgMiA1LjYyNUwyIDcuNGwuNi42eiIvPg0KPC9zdmc+") !important;
+}
+
+unified-extensions-item {
+	background: #1e1d2d !important;
+	color: white !important;
+	opacity: 1 !important;
+	font-weight: normal !important;
+}
+
+#unified-extensions-panel .unified-extensions-item {
+	-moz-context-properties: fill;
+	fill: white !important;
+	color: white !important;
+	opacity: 1.0 !important;
 }
 
 #unified-extensions-panel .unified-extensions-item {
@@ -8,6 +21,8 @@
 	color: white !important;
 	opacity: 1 !important;
 	font-weight: normal !important;
+	margin-left: 4px !important;
+	margin-right: 4px !important;
 }
 
 #unified-extensions-panel .unified-extensions-item:hover {
@@ -15,15 +30,15 @@
 	border-radius: 4px !important;
 	color: white !important;
 	font-weight: bold !important;
+	margin-left: 4px !important;
+	margin-right: 4px !important;
+	opacity: 1 !important;
 }
-
 
 .unified-extensions-item-action-button.subviewbutton {
 	color: white !important;
-
+	opacity: 1 !important;
 }
-
-
 
 /*-------------------------------------------------------*/
 #unified-extensions-panel toolbarseparator {
@@ -42,8 +57,12 @@
 }
 
 .unified-extensions-item-action-button[disabled] .unified-extensions-item-icon {
-	opacity: 1.0 !important;
+	opacity: 1 !important;
 	fill: white !important;
+}
+
+.unified-extensions-list {
+	opacity: 1 !important;
 }
 
 /*  Extension menu option button mod*/
@@ -65,6 +84,7 @@
 	padding-inline-start: 0.5em !important;
 	width: 21em !important;
 	font-size: 14px !important;
+	opacity: 1 !important;
 }
 
 /*
@@ -97,6 +117,8 @@ deck.unified-extensions-item-message-deck {
 #unified-extensions-view #unified-extensions-manage-extensions:hover {
 	background-color: #1e90ff !important;
 	border-radius: 4px !important;
+	opacity: 1 !important;
+	color: white !important;
 }
 
 #unified-extensions-manage-extensions label {
