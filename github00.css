@@ -467,14 +467,13 @@
 	code,
 	pre,
 	samp,
-	tt,
+	tt,	
 	pre,
 	.highlight,
 	.diff-table,
 	.tab-size,
 	.input-monospace,
 	.text-mono,
-
 	.commit-ref,
 	.pl-c,
 	.react-code-text,
@@ -488,7 +487,7 @@
 	}
 
 	.react-line-numbers {
-		width: 80px !important;
+		width: 75px !important;
 		font-family: "Fira Code" !important;
 		font-size: 14px !important;
 		opacity: 1 !important;
@@ -617,6 +616,6 @@
 
 	.iDBPDv,
 	.kKUpQe {
-		background: rgb(26, 24, 38) !important;
+		background: #1e1d2d !important;
 	}
 }
