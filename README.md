@@ -27,9 +27,17 @@ I'm using CSS, to make Firefox and websites more fun. 🕺🏽
 I'm definitely not an alien.
 
 
+## ⚙️ Installation
 
-- Put all the files in the chrome folder of your profile then restart firefox
-
+1. In the searchbar type `about:config`. A dialog will be shown to you. Press the **I accept the risk** button.
+2. Search for **`toolkit.legacyUserProfileCustomizations.stylesheets`**, **`layers.acceleration.force-enabled`**, **`gfx.webrender.all`**, and **`svg.context-properties.content.enabled`**. Change them to **True**
+3. Go to your Firefox profile:
+    - If you're on Linux: `$HOME/.mozilla/firefox/XXXXXXX.default-release/`
+    - If you're on Windows: `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`
+    - If you're on MacOS: `Users/<USERNAME>/Library/Application Support/Firefox/Profiles/XXXXXXX.default-XXXXXXX` 
+4. Move the `chrome` folder into the directory.
+5. Make all the customizations you want [here](#-customization).
+6. Enjoy!
 **Note: it's a work in progress not a final theme, just for my using and fun**
 
 I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) and folks of Reddit [https://www.reddit.com/r/FirefoxCSS/](https://www.reddit.com/r/FirefoxCSS/) for their help and inspiration
