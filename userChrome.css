@@ -5,15 +5,16 @@
 @import url("ctrltab1.css");
 @import url("autohidebookmarksbar.css");
 @import url("soundplaying.css");
-@import url("menubartitle.css");
 @import url("library.css");
 @import url("findbarfinal.css");
 @import url("tooltip.css");
 @import url("unifiedwebext.css");
 @import url("hamburgerpanel.css");
 @import url("dialog.css");
+@import url("print1.css");
 
-/* 231A23 */
+
+/* 231A23 *
 
 /*--------------------------------------------------*/
 :-moz-focusring,
@@ -69,9 +70,17 @@ dialog {
 	outline: none !important;
 	caret-color: #1e90ff !important;
 	/*font-smoothing: grayscale !important;*/
+
 }
 
 /* -------------------------------------------------------------------------- */
+.infobar {
+	box-shadow: 0 1px 2px #1e90ff;
+	background-color: #1e1d2d !important;
+	--message-bar-icon-close-url: url("KnobRed.ico") !important;
+
+}
+
 
 #protections-popup-tp-switch-breakage-link,
 #protections-popup-tp-switch-breakage-fixed-link,
@@ -483,11 +492,13 @@ treechildren::-moz-tree-image(query) {
 	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTZwdCIgaGVpZ2h0PSIxNnB0Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF9hR1hEWGdJS2p6eExkUUEwbUppWTRVU2p1ekFWSkVQcSI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF9hR1hEWGdJS2p6eExkUUEwbUppWTRVU2p1ekFWSkVQcSkiPjxnPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIiBmaWxsPSJub25lIi8+PGc+PHBhdGggZD0iIE0gMTAuNjA5IDguOTg4IEMgMTAuNjA5IDkuODA5IDEwLjAxMSAxMC40ODIgOS4yOCAxMC40ODIgTCAxLjQxNSAxMC40ODIgQyAwLjY4NCAxMC40ODIgMC4wODUgOS44MDkgMC4wODUgOC45ODggTCAwLjA4NSAzLjM2MSBDIDAuMDg1IDIuNTM5IDAuNjg0IDEuODY3IDEuNDE1IDEuODY3IEwgOS4yOCAxLjg2NyBDIDEwLjAxMSAxLjg2NyAxMC42MDkgMi41MzkgMTAuNjA5IDMuMzYxIEwgMTAuNjA5IDguOTg4IEwgMTAuNjA5IDguOTg4IFogIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9InJnYigyNDksMTcwLDQ1KSIvPjxwYXRoIGQ9IiBNIDEwLjYwOSA4LjMxOCBDIDEwLjYwOSA5LjE2NCAxMC4wMTEgOS44NTYgOS4yOCA5Ljg1NiBMIDEuNDE1IDkuODU2IEMgMC42ODQgOS44NTYgMC4wODUgOS4xNjQgMC4wODUgOC4zMTggTCAwLjA4NSAyLjUyNSBDIDAuMDg1IDEuNjggMC42ODQgMC45ODggMS40MTUgMC45ODggTCA5LjI4IDAuOTg4IEMgMTAuMDExIDAuOTg4IDEwLjYwOSAxLjY4IDEwLjYwOSAyLjUyNSBMIDEwLjYwOSA4LjMxOCBMIDEwLjYwOSA4LjMxOCBaICIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSJyZ2IoMjU1LDE2MCwwKSIvPjxwYXRoIGQ9IiBNIDAgMTIuODgxIEMgMCAxMy42ODQgMC42MTkgMTQuMzQ0IDEuMzczIDE0LjM0NCBMIDE0LjYyNiAxNC4zNDQgQyAxNS4zODEgMTQuMzQ0IDE2IDEzLjY4NCAxNiAxMi44ODEgTCAxNiAxLjgwNyBDIDE2IDEuMDAyIDE1LjM4MSAwLjM0NCAxNC42MjYgMC4zNDQgTCAxMC45NTYgMC4zNDQgQyAxMC4yMDEgMC4zNDQgOS4yMzUgMC44ODggOC44MDkgMS41NTIgTCA3LjYxOSAzLjQxMyBDIDcuMTkzIDQuMDc3IDYuMjI3IDQuNjIyIDUuNDcyIDQuNjIyIEwgMS4zNzMgNC42MjIgQyAwLjYxOSA0LjYyMiAwIDUuMjggMCA2LjA4MiBMIDAgMTIuODgxIFogIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9InJnYigyNTQsMjEzLDQ3KSIvPjwvZz48L2c+PC9nPjwvc3ZnPg==") !important;
 }
 
-/*----------------by folder name-----------------------------------------------*/
+/*----------------by folder------------------------*/
+/*-------------------name--------------------------*/
 .bookmark-item[container="true"] [label="Divers "],
 .bookmark-item[container="true"] [label="BD "],
 .bookmark-item[container="true"] [label="Perso "],
-.bookmark-item[container="true"] [label="Code "] {
+.bookmark-item[container="true"] [label="Code "],
+.bookmark-item[container="true"] [label="Utiles"] {
 	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTZwdCIgaGVpZ2h0PSIxNnB0Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF83QWxVd3p0ck1mcXJYMm9QMm5ucjlhZWdXUzhRR3FoViI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF83QWxVd3p0ck1mcXJYMm9QMm5ucjlhZWdXUzhRR3FoVikiPjxnPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIiBmaWxsPSJub25lIi8+PGc+PHBhdGggZD0iIE0gMTAuNjA5IDguOTg4IEMgMTAuNjA5IDkuODA5IDEwLjAxMSAxMC40ODIgOS4yOCAxMC40ODIgTCAxLjQxNSAxMC40ODIgQyAwLjY4NCAxMC40ODIgMC4wODUgOS44MDkgMC4wODUgOC45ODggTCAwLjA4NSAzLjM2MSBDIDAuMDg1IDIuNTM5IDAuNjg0IDEuODY3IDEuNDE1IDEuODY3IEwgOS4yOCAxLjg2NyBDIDEwLjAxMSAxLjg2NyAxMC42MDkgMi41MzkgMTAuNjA5IDMuMzYxIEwgMTAuNjA5IDguOTg4IEwgMTAuNjA5IDguOTg4IFogIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9InJnYigyNDksMTcwLDQ1KSIvPjxwYXRoIGQ9IiBNIDEwLjYwOSA4LjMxOCBDIDEwLjYwOSA5LjE2NCAxMC4wMTEgOS44NTYgOS4yOCA5Ljg1NiBMIDEuNDE1IDkuODU2IEMgMC42ODQgOS44NTYgMC4wODUgOS4xNjQgMC4wODUgOC4zMTggTCAwLjA4NSAyLjUyNSBDIDAuMDg1IDEuNjggMC42ODQgMC45ODggMS40MTUgMC45ODggTCA5LjI4IDAuOTg4IEMgMTAuMDExIDAuOTg4IDEwLjYwOSAxLjY4IDEwLjYwOSAyLjUyNSBMIDEwLjYwOSA4LjMxOCBMIDEwLjYwOSA4LjMxOCBaICIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSJyZ2IoNTksMTA5LDE4OSkiLz48cGF0aCBkPSIgTSAwIDEyLjg4MSBDIDAgMTMuNjg0IDAuNjE5IDE0LjM0NCAxLjM3MyAxNC4zNDQgTCAxNC42MjYgMTQuMzQ0IEMgMTUuMzgxIDE0LjM0NCAxNiAxMy42ODQgMTYgMTIuODgxIEwgMTYgMS44MDcgQyAxNiAxLjAwMiAxNS4zODEgMC4zNDQgMTQuNjI2IDAuMzQ0IEwgMTAuOTU2IDAuMzQ0IEMgMTAuMjAxIDAuMzQ0IDkuMjM1IDAuODg4IDguODA5IDEuNTUyIEwgNy42MTkgMy40MTMgQyA3LjE5MyA0LjA3NyA2LjIyNyA0LjYyMiA1LjQ3MiA0LjYyMiBMIDEuMzczIDQuNjIyIEMgMC42MTkgNC42MjIgMCA1LjI4IDAgNi4wODIgTCAwIDEyLjg4MSBaICIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSJyZ2IoMzAsMTQ0LDI1NSkiLz48L2c+PC9nPjwvZz48L3N2Zz4=") !important;
 }
 
@@ -1111,8 +1122,8 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	outline: none !important;
 }
 
-.sidebar-splitter {
-	opacity: 0 !important;
+#sidebar-splitter {
+	display: none !important;
 }
 
 #sidebar-search-container,
@@ -1526,20 +1537,32 @@ spacer,
 }
 
 /* https COLORing trickin https thingy urlbar*/
-#identity-box.verifiedDomain[pageproxystate="valid"]~.urlbar-searchmode-and-input-box-container::before {
+#identity-box.verifiedDomain[pageproxystate="valid"]~.urlbar-input-box::before {
 	content: "https://";
 	position: absolute !important;
 	display: block !important;
-	line-height: var(--urlbar-height) !important;
+	/* line-height: var(--urlbar-height) !important; */
 	z-index: 2 !important;
 	height: 100% !important;
 	color: #1e90ff !important;
 	text-shadow: 0 0 3px #000000 !important;
-	margin-top: -3px !important;
+	margin-top: 0px !important;
 	pointer-events: none !important;
 	font-family: Fira Sans !important;
 	font-weight: bold !important;
 }
+
+/*
+identity-box.verifiedDomain[pageproxystate="valid"]~.urlbar-input-box::before {
+	content: "https://";
+	position: absolute !important;
+	display: block !important;
+	line-height: var(--urlbar-height) !important;
+	z-index: 1 !important;
+	height: 100% !important;
+	color: #1e90ff !important;
+	text-shadow: 0 0 3px #000000 !important;
+}*/
 
 /*-------------------------------------------------*/
 #main-window,
@@ -1647,6 +1670,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	padding: calc(var(--toolbarbutton-inner-padding) + 1px) !important;
 	transition: padding 90ms linear !important;
 }
+
 
 #urlbar-input,
 #urlbar-scheme {
@@ -1840,7 +1864,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 }
 
 #nav-bar {
-	height: 24px !important;
+	height: 28px !important;
 }
 
 /*
@@ -2077,6 +2101,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 
 #urlbar {
 	margin-top: 4px !important;
+
 }
 
 /*
@@ -2301,15 +2326,15 @@ input:not(#urlbar-input) {
 .titlebar-button.titlebar-min:hover>.toolbarbutton-icon,
 .titlebar-button.titlebar-max:hover>.toolbarbutton-icon,
 .titlebar-button.titlebar-restore:hover>.toolbarbutton-icon,
-.titlebar-button.titlebar-close:hover>.toolbarbutton-icon {}
+.titlebar-button.titlebar-close:hover>.toolbarbutton-icon {
 */
 /*-min max close */
 
 .titlebar-button>.toolbarbutton-icon {
-	height: 14px !important;
-	min-height: 14px !important;
-	width: 14px !important;
-	min-width: 14px !important;
+	height: 16px !important;
+	min-height: 16px !important;
+	width: 16px !important;
+	min-width: 16px !important;
 	background-color: #1e1d2d !important;
 }
 
@@ -2334,6 +2359,7 @@ input:not(#urlbar-input) {
 
 .titlebar-min:hover {
 	list-style-image: url("KnobRemove.ico") !important;
+
 	background-color: #1e1d2d !important;
 	transition: all 0.3s ease !important;
 }
@@ -2356,6 +2382,7 @@ input:not(#urlbar-input) {
 
 .titlebar-max:hover {
 	list-style-image: url("KnobAdd.ico") !important;
+
 	background-color: #1e1d2d !important;
 	transition: all 0.3s ease !important;
 }
@@ -2369,6 +2396,30 @@ input:not(#urlbar-input) {
 	list-style-image: url("KnobCancel.ico") !important;
 	background-color: #1e1d2d !important;
 	transition: all 0.3s ease !important;
+}
+
+@media (-moz-platform: windows) {
+
+	/* revert to old titlebar buttons */
+	.titlebar-button {
+		&>.toolbarbutton-icon {
+			display: inline-flex !important;
+		}
+	}
+
+	/* discard new titlebar buttons */
+	.titlebar-button {
+		&::before {
+			display: none !important;
+		}
+	}
+}
+
+.titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+	&>.toolbarbutton-icon {
+		width: 12px !important;
+		height: 12px !important;
+	}
 }
 
 /*
@@ -2609,7 +2660,7 @@ browser[type="content"]>html {
 	display: flex !important;
 	margin-right: 3px !important;
 	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhLS0gR2VuZXJhdG9yOiBHcmF2aXQuaW8gLS0+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0iaXNvbGF0aW9uOmlzb2xhdGUiIHZpZXdCb3g9IjAgMCAzMCAzMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIj48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF80VVBqSUZIbkFHaTVNc2lsa25OUE1INTdYeUlBUm53SyI+PHJlY3Qgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIi8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF80VVBqSUZIbkFHaTVNc2lsa25OUE1INTdYeUlBUm53SykiPjxnIGlkPSJHcm91cCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAsMCkiIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMCwwKSIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9IiBNIDAgMTUgQyAwIDYuNzIxIDYuNzIxIDAgMTUgMCBDIDIzLjI3OSAwIDMwIDYuNzIxIDMwIDE1IEMgMzAgMjMuMjc5IDIzLjI3OSAzMCAxNSAzMCBDIDYuNzIxIDMwIDAgMjMuMjc5IDAgMTUgWiAgTSAxMy41OTUgMTMuNTk1IEwgNy45OTggMTMuNTk1IEwgNy4yMjQgMTMuNTk1IEwgNy4yMjQgMTYuNDA3IEwgNy45OTggMTYuNDA3IEwgMTMuNTk1IDE2LjQwNyBMIDEzLjU5NSAyMi4wMzMgTCAxMy41OTUgMjIuODEgTCAxNi40MDcgMjIuODEgTCAxNi40MDcgMjIuMDMzIEwgMTYuNDA3IDE2LjQwNyBMIDIyLjAwNSAxNi40MDcgTCAyMi43NzggMTYuNDA3IEwgMjIuNzc4IDEzLjU5NSBMIDIyLjAwNSAxMy41OTUgTCAxNi40MDcgMTMuNTk1IEwgMTYuNDA3IDcuOTcgTCAxNi40MDcgNy4xOTMgTCAxMy41OTUgNy4xOTMgTCAxMy41OTUgNy45NyBMIDEzLjU5NSAxMy41OTUgWiAiIGZpbGw9InJnYigyMDAsMjAwLDApIi8+PC9nPjwvZz48L3N2Zz4=") !important;
-	margin-top: 3px !important;
+	margin-top: 2px !important;
 }
 
 /*-------------------------------------------*/
@@ -3013,20 +3064,20 @@ checkbox[disabled]>.checkbox-check {
 */
 /*Buttons*/
 /* This only applies to natively-ish styled buttons, not the buttons in toolbars */
-
+/*
 button {
 	appearance: none !important;
 	color: inherit !important;
 	background-color: #1e90ff !important;
 	border: 0px !important;
-}
-
+}*/
+/*
 button[disabled] {
 	opacity: 0.8 !important;
 }
 
 button:not([disabled]):hover {
-	/*border-color: highlight;*/
+	
 	background-color: #1e90ff80 !important;
 	box-shadow: none !important;
 }
@@ -3039,7 +3090,7 @@ button:not([disabled]):active {
 button.searchbar-engine-one-off-item,
 .panel-footer>button {
 	border-width: 1px 0 0 0 !important;
-}
+}*/
 
 /*
 button.panel-button {
@@ -3057,6 +3108,7 @@ button.panel-button {
 .popup-notification-primary-button,
 .popup-notification-secondary-button {
 	appearance: none !important;
+	color: white !important;
 	background-color: #1e90ff !important;
 	border: 0px !important;
 }
@@ -4225,6 +4277,7 @@ menulist#menuPosition {
 
 #appcontent>#tabbrowser-tabbox>#tabbrowser-tabpanels>.deck-selected>.browserContainer>.browserStack>browser {
 	border-radius: 0px !important;
+	background: transparent !important;
 }
 
 /*
@@ -4232,7 +4285,7 @@ menulist#menuPosition {
 	fill: dodgerblue !important;
 }*/
 #nav-bar-customization-target {
-	height: 24px !important;
+	height: 20px !important;
 }
 
 /* Bring back tab separator lines that were removed in Proton
@@ -4263,24 +4316,6 @@ menulist#menuPosition {
 	background-color: #1e1d2d !important;
 }
 
-@-moz-document url-prefix("about:preferences") {
-	.dialogBox {
-		--in-content-page-background: #1e1d2d !important;
-	}
-
-	window,
-	dialog,
-	window>dialog#history {
-		color: white !important;
-		background-color: #1e1d2d !important;
-		--in-content-box-background: #1e1d2d !important;
-	}
-
-	.dialogFrame {
-		background: #1e1d2d !important;
-		border-color: #1e90ff !important;
-	}
-}
 
 /* History swipe animation custom color Firefox 111+*/
 
@@ -4305,10 +4340,35 @@ menulist#menuPosition {
 	background: none !important;
 }
 
+button-group.tools-and-extensions,
 #vertical-tabs,
-sidebar-main,
-.wrapper {
-	background-color: #1d1d2d !important;
+#sidebar-main,
+.wrapper, moz-button {
+
+	background-color: #1e1d2d !important;
+}
+
+/*
+span.button-background {
+	background-image: url("KnobCancel.ico") !important;
+
+}*/
+
+span.button-background:hover {
+	opacity: 0.5 !important;
+	background-size: 50% !important;
+	background-color: transparent !important;
+
+}
+
+button.notification-button.small-button.footer-button {
+	color: #fff !important;
+	background-color: #1e90ff !important;
+}
+
+button.notification-button.small-button.footer-button:hover {
+	color: #fff !important;
+	background-color: #1e90ff80 !important;
 }
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
@@ -4316,8 +4376,8 @@ sidebar-main,
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #tab-preview-panel {
-	--panel-width: 280px;
-	--panel-padding: 0;
+	--panel-width: 280px !important;
+	--panel-padding: 0 !important;
 	pointer-events: none;
 }
 
@@ -4371,5 +4431,323 @@ sidebar-main,
 
 	to {
 		opacity: 100;
+	}
+}
+
+
+
+
+
+/* Shows window title in menubar */
+/* Enable menubar for correct behavior 
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+	:root:not([sizemode="fullscreen"])>head {
+
+		display: block;
+		position: fixed !important;
+		top: 13px !important;
+		right: 140px !important;
+		
+		width: calc(100vw - 440px) !important;
+
+		text-align: center !important;
+		z-index: 1;
+		pointer-events: none;
+		text-overflow: ellipsis !important;
+		overflow-x: hidden;
+		color: #1e90ff !important;
+
+	}
+
+
+	head>* {
+		display: none;
+	}
+
+	head>title {
+		display: contents;
+		top: 4px !important;
+		overflow-x: -moz-hidden-unscrollable;
+		margin-top: 6px !important;
+		max-width: 50vw !important;
+		font-family: Fira Sans !important;
+		font-size: 14px !important;
+		font-weight: bold !important;
+		color: #1e90ff !important;
+		white-space: nowrap !important;
+	}
+}
+*/
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+	:root:not([sizemode="fullscreen"])>head {
+		display: block !important;
+		position: fixed !important;
+		top: 2px !important;
+		right: 140px !important;
+		/* Space for window controls */
+		width: calc(100vw - 440px) !important;
+		/* Window width - window control width - menuitem (English) width */
+		text-align: right !important;
+		z-index: 1;
+		pointer-events: none !important;
+		text-overflow: ellipsis !important;
+		overflow-x: hidden !important;
+	}
+
+	head>* {
+		display: none !important;
+	}
+
+	head>title {
+		display: contents !important;
+		max-width: 50vw !important;
+		white-space: nowrap !important;
+	}
+}
+
+.tab-audio-button {
+	display: none !important;
+}
+
+#urlbar-searchmode-switcher {
+	display: none !important;
+}
+
+
+
+
+moz-card {
+	background: #1e1d2d !important;
+	border-color: #1e90ff !important;
+}
+
+.search-container {
+	background: black !important;
+	border-radius: 8px !important;
+	border-color: #1e90ff !important;
+}
+
+fxview-search-textbox {
+	&::part(container) {
+		border-color: #1e90ff !important;
+
+	}
+}
+
+.button-background *, .outer-wrapper.onboardingContainer.proton.transition- {
+	background: #1e1d2d !important;
+
+}
+
+.button-background:active,
+.button-background:focus,
+.button-background[selected] {
+	background-color: #1e90ff !important;
+
+}
+
+.button-background:hover {
+	background-color: #1e90ff90 !important;
+
+}
+
+
+.fxview-tab-row-main {
+	font-size: 14px !important;
+
+	&:hover,
+	&:hover:active {
+		background-color: dodgerblue !important;
+	}
+}
+
+/*
+button-group.tools-and-extensions.actions-list,
+.wrapper, .bottom-actions.actions-list, .button, box#sidebar-main *, tabstrip {
+	--button-icon-fill: #ffffff !important;
+	background-color: #1e1d2d !important;
+}
+
+.actions-list {
+	&>moz-button {
+		--button-icon-fill: #ffffff !important;
+		background-color: #1e1d2d !important;
+	}
+
+
+}
+
+moz-button:not([type~="ghost"]):not(:hover) {
+	&::part(button) {
+		background-color: #1e1d2d !important;
+	}
+}
+
+:root {
+	--sidebar-background-color: #1e1d2d;
+}
+
+.actions-list {
+	&>moz-button:not(.tools-overflow) {
+		background: none !important;
+	}
+}
+*/
+menupopup {
+	@media (-moz-windows-mica-popups) {
+		appearance: none;
+		background-color: none !important;
+		border: none !important;
+	}
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/scrollable_urlbar_popup.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Makes the bookmarks toolbar scrollable via mouse scroll or scrollbar */
+
+/* Enable scroll */
+
+/* allow scrolling */
+#PlacesToolbarItems {
+	overflow: auto !important;
+}
+
+/* restore visibility of hidden bookmarks */
+.bookmark-item {
+	visibility: initial !important;
+}
+
+/* hide overflow menu */
+#PlacesToolbar #PlacesChevron {
+	visibility: collapse !important;
+}
+
+/*
+      When the Browser Window reaches a smaller enough width or the amount of Bookmarks overlap the browsers width, overlapping bookmark items are:
+      1. set as hidden. 
+      2. duplicated into the overflow menu.
+      
+      This style is a simple to implement and easily maintained by:
+      1. enabling scrolling on the toolbar
+      2. restoring visibility of hidden bookmarks.
+      
+      You can have both the scrollable toolbar and the overflow menu by removing Line 16-18
+*/
+@media not (prefers-contrast) {
+
+	:host(.infobar),
+	.notificationbox-stack {
+		background: #1e90ff80 !important;
+	}
+}
+
+* {
+	@media not print {
+		head+body>img:first-child.transparent[src][alt] {
+			background: none !important;
+		}
+	}
+
+}
+
+/*
+:root {
+	--toolbarbutton-border-radius: 4px !important;
+	--toolbarbutton-inner-padding: 7px !important;
+	--fp-toolbarbutton-inner-inline-padding: 8px !important;
+	--tabs-navbar-shadow-size: 0 !important;
+}
+
+#nav-bar .toolbarbutton-1>.toolbarbutton-icon {
+	width: calc(2 * var(--fp-toolbarbutton-inner-inline-padding) + 16px) !important;
+}
+
+#nav-bar .toolbarbutton-1>.toolbarbutton-icon,
+#nav-bar .toolbarbutton-1>.toolbarbutton-text,
+#nav-bar .toolbarbutton-1>.toolbarbutton-badge-stack {
+	padding-inline: var(--fp-toolbarbutton-inner-inline-padding) !important;
+}*/
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/compact_urlbar_megabar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Make urlbar appear more compact */
+#urlbar[breakout][breakout-extend] {
+	margin-left: 0 !important;
+	width: var(--urlbar-width) !important;
+	/*margin-top: calc((var(--urlbar-container-height) - var(--urlbar-height)) / 2) !important;*/
+	background-color: #1e1d2d !important;
+}
+
+:where(#urlbar)>.urlbarView {
+	margin-inline: 0 !important;
+	width: auto !important;
+}
+
+.urlbarView-row {
+	padding: 0 2px !important;
+}
+
+.urlbarView-row-inner {
+	padding-inline-start: 4px !important;
+}
+
+:where(#urlbar)>.urlbar-background,
+#urlbar-background {
+	animation: none !important;
+	max-height: 28px !important;
+}
+
+:where(#urlbar)>.urlbar-input-container {
+	padding: var(--urlbar-container-padding, 0) 1px !important;
+	height: 28px !important;
+	background-color: #1e1d2d !important;
+}
+
+#identity-icon {
+	margin-block: var(--urlbar-icon-padding) !important;
+}
+
+:where(#urlbar)>.urlbarView>.search-one-offs:not([hidden]) {
+	padding-block: 0px !important;
+}
+
+.urlbar-background {
+	box-shadow: none !important;
+}
+
+#tabbrowser-tabbox {
+	border-top-left-radius: 0px !important;
+	overflow: hidden;
+}
+
+/*
+#appMenu-empty-profiles-button {
+	display: none !important;
+}*/
+#profiles-menu {
+	display: none !important;
+}
+
+
+
+.menu-icon {
+	menuitem:where([image])>&, menu:where(.menu-iconic)>& {
+		&:where(:not([srcset])) {
+			content: url("Folderflat1.svg") !important;
+		}
+	}
+}
+
+.urlbar-input-box {
+	margin-top: 4px !important;
+}
+
+#tabbrowser-tabpanels {
+	&[splitview] {
+		& .split-view-splitter {
+			display: none !important;
+			border: none !important;
+		}
 	}
 }
