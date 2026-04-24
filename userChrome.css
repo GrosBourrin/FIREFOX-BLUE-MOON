@@ -14,6 +14,7 @@
 @import url("print1.css");
 
 
+
 /* 231A23 *
 
 /*--------------------------------------------------*/
@@ -23,7 +24,7 @@ button::-moz-focus-inner,
 :-moz-focusring *,
 :focus *,
 :-moz-focusring:focus:not(:focus-visible),
-:-moz-focusring:focus:not(:focus-visible)>* {
+:-moz-focusring:focus:not(:focus-visible) > * {
 	border: none !important;
 	outline: unset !important;
 	outline-offset: unset !important;
@@ -71,7 +72,7 @@ dialog {
 	--toolbar-field-focus-border-color: transparent !important;
 	--default-focusring: 0 !important;
 	--default-search-identity-icon: url("Google.svg") !important;
-	outline: none !important;
+	outline: unset !important;
 	caret-color: #1e90ff !important;
 	/*font-smoothing: grayscale !important;*/
 
@@ -79,7 +80,7 @@ dialog {
 
 /* -------------------------------------------------------------------------- */
 .infobar {
-	box-shadow: 0 1px 2px #1e90ff;
+	box-shadow: 0 1px 2px #1e90ff !important;
 	background-color: #1e1d2d !important;
 	--message-bar-icon-close-url: url("KnobRed.ico") !important;
 
@@ -107,9 +108,9 @@ dialog {
 .protections-popup-footer-button:focus-visible,
 .protections-popup-footer-button:hover,
 #protections-popup-not-blocking-section-why:hover,
-#protections-popup-show-report-stack:hover>.protections-popup-footer-button {
+#protections-popup-show-report-stack:hover > .protections-popup-footer-button {
 	background-color: #1e90ff !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 #protections-popup-blocking-section-header,
@@ -122,7 +123,7 @@ dialog {
 	background-color: #1e1d2d !important;
 	background: #1e1d2d !important;
 	border: none !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 .install-icon {
@@ -140,7 +141,7 @@ scrollbox[orient="horizontal"] {
 }
 */
 
-/* -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
 #protections-popup-mainView-panel-header,
 #protections-popup-tp-switch-section,
 #tracking-protection-container,
@@ -150,14 +151,14 @@ scrollbox[orient="horizontal"] {
 	padding-top: 4px !important;
 }
 
-/* -----------------------------Police Fira partout-------------------------- */
+/* ------------------------Police Fira partout-------------------------- */
 * {
 	font-family: Fira Sans !important;
 }
 
-/* -------------------------------------------------------------------------- */
-/* ---------------------------------- menus --------------------------------- */
-/* -------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------- menus ----------------------------- */
+/* ---------------------------------------------------------------------- */
 #file-menu,
 #edit-menu,
 #toolbar-menubar,
@@ -204,7 +205,7 @@ menuitem {
 	padding-bottom: 7px !important;
 	padding-left: 4px !important;
 	padding-right: 4px !important;
-	outline: none !important;
+	outline: unset !important;
 	border: none !important;
 	/*box-shadow: 0 0 6px hsla(0,0%,0%,.8) !important;*/
 }
@@ -224,38 +225,38 @@ menuitem[_moz-menuactive="true"] {
 	border: 0px !important;
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
-	outline: none !important;
-	outline-offset: none !important;
+	outline: unset !important;
+	outline-offset: unset !important;
 }
 
 menulist[open="true"] {
 	border: 0px !important;
 	background: #1e90ff !important;
 	border-radius: 3px !important;
-	outline: none !important;
-	outline-offset: none !important;
+	outline: unset !important;
+	outline-offset: unset !important;
 }
 
 menuitem[disabled="true"],
-menuitem[disabled="true"]>.menu-text {
+menuitem[disabled="true"] > .menu-text {
 	appearance: none !important;
 	color: #9f9f9f !important;
 	filter: drop-shadow(0px 0px 2px #1e1d2d) !important;
 }
 
-menupopup:not(.in-menulist)>menuitem,
-menupopup:not(.in-menulist)>menu {
+menupopup:not(.in-menulist) > menuitem,
+menupopup:not(.in-menulist) > menu {
 	border: none !important;
-	outline: none !important;
+	outline: unset !important;
 	box-shadow: none !important;
 }
 
-menupopup>menuitem,
-menupopup>menu {
+menupopup > menuitem,
+menupopup > menu {
 	padding-block: 3px !important;
 	min-height: 7px !important;
 	border: none !important;
-	outline: none !important;
+	outline: unset !important;
 	box-shadow: none !important;
 }
 
@@ -266,7 +267,7 @@ menupopup>menu {
 menugroup {
 	background-color: #1e1d2d !important;
 	color: #ffffff !important;
-	outline: none !important;
+	outline: unset !important;
 	/*box-shadow: none !important;*/
 }
 
@@ -289,7 +290,7 @@ menubar>menu[open] {
 }*/
 /*---------------------------*/
 
-#context-navigation>.menuitem-iconic {
+#context-navigation > .menuitem-iconic {
 	margin-bottom: 0px !important;
 	padding-right: 11px !important;
 	padding-left: 11px !important;
@@ -298,17 +299,17 @@ menubar>menu[open] {
 	stroke: none !important;
 }
 
-menulist:-moz-focusring>menupopup>menuitem[_moz-menuactive="true"] {
+menulist:-moz-focusring > menupopup > menuitem[_moz-menuactive="true"] {
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 /* push submenus to right side with a little gutter */
-menupopup>menu>menupopup {
+menupopup > menu > menupopup {
 	margin-inline-start: 3px !important;
 }
 
-#PlacesToolbarItems menupopup>menu>menupopup {
+#PlacesToolbarItems menupopup > menu > menupopup {
 	margin-inline-start: 4px !important;
 }
 
@@ -413,8 +414,8 @@ menuitem[type="radio"][checked="true"] > .menu-iconic-left {
 		background-color: transparent !important;
 	}
 
-	.close-icon:hover>.toolbarbutton-icon,
-	#alertSettings:is(:hover, [open])>.button-box>.box-inherit {
+	.close-icon:hover > .toolbarbutton-icon,
+	#alertSettings:is(:hover, [open]) > .button-box > .box-inherit {
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
 		/*transform: scale(0.8) !important;*/
@@ -447,6 +448,18 @@ menuitem[type="radio"][checked="true"] > .menu-iconic-left {
 	opacity: 0 !important;
 }
 
+/*
+#PersonalToolbar {
+	--toolbarbutton-inner-padding: 4px;
+	--toolbarbutton-outer-padding: 2px;
+}
+
+#PersonalToolbar {
+	:root[uidensity="compact"] & {
+		--toolbarbutton-outer-padding: 1px;
+	}
+}
+*/
 /* only favicons */
 toolbarbutton.bookmark-item .toolbarbutton-text {
 	display: none !important;
@@ -456,8 +469,8 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	margin-left: 2px !important;
 }
 
-#bookmarks-toolbar-placeholder>.toolbarbutton-icon,
-#PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon[label]:not([label=""]) {
+#bookmarks-toolbar-placeholder > .toolbarbutton-icon,
+#PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]) {
 	margin-inline-end: 2px !important;
 }
 
@@ -506,7 +519,7 @@ treechildren::-moz-tree-image(query) {
 	list-style-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCEtLSBHZW5lcmF0b3I6IEdyYXZpdC5pbyAtLT48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSIgdmlld0JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTZwdCIgaGVpZ2h0PSIxNnB0Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Il9jbGlwUGF0aF83QWxVd3p0ck1mcXJYMm9QMm5ucjlhZWdXUzhRR3FoViI+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwUGF0aF83QWxVd3p0ck1mcXJYMm9QMm5ucjlhZWdXUzhRR3FoVikiPjxnPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIiBmaWxsPSJub25lIi8+PGc+PHBhdGggZD0iIE0gMTAuNjA5IDguOTg4IEMgMTAuNjA5IDkuODA5IDEwLjAxMSAxMC40ODIgOS4yOCAxMC40ODIgTCAxLjQxNSAxMC40ODIgQyAwLjY4NCAxMC40ODIgMC4wODUgOS44MDkgMC4wODUgOC45ODggTCAwLjA4NSAzLjM2MSBDIDAuMDg1IDIuNTM5IDAuNjg0IDEuODY3IDEuNDE1IDEuODY3IEwgOS4yOCAxLjg2NyBDIDEwLjAxMSAxLjg2NyAxMC42MDkgMi41MzkgMTAuNjA5IDMuMzYxIEwgMTAuNjA5IDguOTg4IEwgMTAuNjA5IDguOTg4IFogIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9InJnYigyNDksMTcwLDQ1KSIvPjxwYXRoIGQ9IiBNIDEwLjYwOSA4LjMxOCBDIDEwLjYwOSA5LjE2NCAxMC4wMTEgOS44NTYgOS4yOCA5Ljg1NiBMIDEuNDE1IDkuODU2IEMgMC42ODQgOS44NTYgMC4wODUgOS4xNjQgMC4wODUgOC4zMTggTCAwLjA4NSAyLjUyNSBDIDAuMDg1IDEuNjggMC42ODQgMC45ODggMS40MTUgMC45ODggTCA5LjI4IDAuOTg4IEMgMTAuMDExIDAuOTg4IDEwLjYwOSAxLjY4IDEwLjYwOSAyLjUyNSBMIDEwLjYwOSA4LjMxOCBMIDEwLjYwOSA4LjMxOCBaICIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSJyZ2IoNTksMTA5LDE4OSkiLz48cGF0aCBkPSIgTSAwIDEyLjg4MSBDIDAgMTMuNjg0IDAuNjE5IDE0LjM0NCAxLjM3MyAxNC4zNDQgTCAxNC42MjYgMTQuMzQ0IEMgMTUuMzgxIDE0LjM0NCAxNiAxMy42ODQgMTYgMTIuODgxIEwgMTYgMS44MDcgQyAxNiAxLjAwMiAxNS4zODEgMC4zNDQgMTQuNjI2IDAuMzQ0IEwgMTAuOTU2IDAuMzQ0IEMgMTAuMjAxIDAuMzQ0IDkuMjM1IDAuODg4IDguODA5IDEuNTUyIEwgNy42MTkgMy40MTMgQyA3LjE5MyA0LjA3NyA2LjIyNyA0LjYyMiA1LjQ3MiA0LjYyMiBMIDEuMzczIDQuNjIyIEMgMC42MTkgNC42MjIgMCA1LjI4IDAgNi4wODIgTCAwIDEyLjg4MSBaICIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSJyZ2IoMzAsMTQ0LDI1NSkiLz48L2c+PC9nPjwvZz48L3N2Zz4=") !important;
 }
 
-#PlacesToolbarItems>.bookmark-item[container]>.toolbarbutton-icon,
+#PlacesToolbarItems > .bookmark-item[container] > .toolbarbutton-icon,
 .toolbarbutton-icon {
 	margin-top: 1px !important;
 }
@@ -598,8 +611,8 @@ treechildren::-moz-tree-image(query) {
 }
 
 /* hide separators around preview image */
-#editBookmarkPanel>#editBookmarkHeaderSeparator,
-#editBookmarkPanel>.panel-subview-body>#editBookmarkSeparator {
+#editBookmarkPanel > #editBookmarkHeaderSeparator,
+#editBookmarkPanel > .panel-subview-body > #editBookmarkSeparator {
 	display: none !important;
 }
 
@@ -718,9 +731,9 @@ panel #editBookmarkPanel,
 
 }
 
-#editBMPanel_tagsSelector>richlistitem>image,
-radio>.radio-check,
-checkbox>.checkbox-check {
+#editBMPanel_tagsSelector > richlistitem > image,
+radio > .radio-check,
+checkbox > .checkbox-check {
 	appearance: none !important;
 	border: 1px solid #4f4f4f !important;
 	border-radius: 3px !important;
@@ -730,16 +743,16 @@ checkbox>.checkbox-check {
 	color: #ffffff !important;
 }
 
-#editBMPanel_tagsSelector>richlistitem>image {
+#editBMPanel_tagsSelector > richlistitem > image {
 	/*background-color: var(--toolbar-bgcolor, rgb(50, 50, 52)) !important;*/
 	margin: 1px !important;
 	border-color: #4f4f4f !important;
 	border-radius: 3px !important;
 }
 
-#editBMPanel_tagsSelector>richlistitem:not([disabled]):hover>image,
-radio:not([disabled]):hover>.radio-check,
-checkbox:not([disabled]):hover>.checkbox-check {
+#editBMPanel_tagsSelector > richlistitem:not([disabled]):hover > image,
+radio:not([disabled]):hover > .radio-check,
+checkbox:not([disabled]):hover > .checkbox-check {
 	border-color: #1e90ff !important;
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
@@ -747,32 +760,32 @@ checkbox:not([disabled]):hover>.checkbox-check {
 	fill: #ffffff !important;
 }
 
-#editBMPanel_tagsSelector>richlistitem[checked]>image,
-radio[selected]>.radio-check,
-checkbox[checked]>.checkbox-check {
+#editBMPanel_tagsSelector > richlistitem[checked] > image,
+radio[selected] > .radio-check,
+checkbox[checked] > .checkbox-check {
 	list-style-image: url("chrome://global/skin/icons/check.svg");
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
 	background: #1e90ff !important;
 }
 
-#editBMPanel_tagsSelector>richlistitem[checked]>image,
-radio>.radio-check,
-checkbox>.checkbox-check {
+#editBMPanel_tagsSelector > richlistitem[checked] > image,
+radio > .radio-check,
+checkbox > .checkbox-check {
 	background-color: #1e1d2d !important;
 	color: #ffffff !important;
 	border-color: #1e90ff !important;
 	border-radius: 2px !important;
 }
 
-radio[selected]>.radio-check {
+radio[selected] > .radio-check {
 	list-style-image: url("chrome://global/skin/in-content/radio.svg");
 	fill: #1e90ff !important;
 }
 
-#editBMPanel_tagsSelector>richlistitem[disabled]>image,
-radio[disabled]>.radio-check,
-checkbox[disabled]>.checkbox-check {
+#editBMPanel_tagsSelector > richlistitem[disabled] > image,
+radio[disabled] > .radio-check,
+checkbox[disabled] > .checkbox-check {
 	fill: #1e1d2d !important;
 	color: #ffffff !important;
 }
@@ -806,7 +819,7 @@ checkbox[disabled]>.checkbox-check {
 	/*fill:  #FFFFFF !important;*/
 	border: none !important;
 	font-family: Fira Sans !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 #editBookmarkPanel button:hover {
@@ -818,7 +831,7 @@ checkbox[disabled]>.checkbox-check {
 	padding: 4px !important;
 	font-family: Fira Sans !important;
 	color: #ffffff !important;
-	outline: none !important;
+	outline: unset !important;
 	border: none !important;
 }
 
@@ -836,7 +849,7 @@ checkbox[disabled]>.checkbox-check {
 	color: #ffffff !important;
 	border: none !important;
 	font-family: Fira Sans !important;
-	outline: none !important;
+	outline: unset !important;
 	font-size: 14px !important;
 }
 
@@ -849,7 +862,7 @@ checkbox[disabled]>.checkbox-check {
 */
 #editBMPanel_folderTree treechildren::-moz-tree-cell-text {
 	font-family: Fira Sans !important;
-	outline: none !important;
+	outline: unset !important;
 	font-size: 14px !important;
 }
 
@@ -929,8 +942,8 @@ checkbox[disabled]>.checkbox-check {
 	display: none !important;
 }
 
-#editBookmarkPanelRows>vbox>html|input:focus-visible,
-#editBookmarkPanelRows>vbox>hbox>html|input:focus-visible {
+#editBookmarkPanelRows > vbox > html|input:focus-visible,
+#editBookmarkPanelRows > vbox > hbox > html|input:focus-visible {
 	outline: 0px !important;
 	color: #ffffff !important;
 	background: #000000 !important;
@@ -945,7 +958,7 @@ toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
 }
 
 /* ---------- Compact bookmark folder selector */
-#editBMPanel_folderTree>treechildren::-moz-tree-row {
+#editBMPanel_folderTree > treechildren::-moz-tree-row {
 	min-height: 23px !important;
 }
 
@@ -968,7 +981,7 @@ toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
 	/*text-align: left !important;*/
 }
 
-#PlacesToolbar menu>.menu-right {
+#PlacesToolbar menu > .menu-right {
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
 	opacity: 1 !important;
@@ -990,16 +1003,13 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	margin-left: 0px !important;
 }
 
-/*
-#PlacesToolbarItems>.bookmark-item {
+
+#PlacesToolbarItems > .bookmark-item {
 	padding-block: 0px !important;
-}*/
-/*
-#bookmarks-toolbar-placeholder>.toolbarbutton-icon,
-#PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon[label]:not([label=""]) {
-	margin-inline-end: 2px !important;
 }
-*/
+
+
+
 .toolbarbutton.subviewbutton.subviewbutton-iconic .toolbarbutton-text {
 	display: flex !important;
 }
@@ -1007,7 +1017,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 /* sidebar */
 /*-------------------sidebar panel--------------------*/
 #sidebar-box {
-	max-width: none !important;
+	max-width: 430px !important;
 	min-width: 0px !important;
 }
 
@@ -1049,7 +1059,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	font-family: Fira Sans !important;
 	font-size: 14px !important;
 	color: #ffffff !important;
-	outline: none !important;
+	outline: unset !important;
 	box-shadow: none !important;
 }
 
@@ -1087,7 +1097,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 .sidebar-placesTreechildren::-moz-tree-row(hover) {
@@ -1096,7 +1106,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 #sidebar-close.close-icon.tabbable {
@@ -1113,7 +1123,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 .sidebar-placesTreechildren::-moz-tree-cell-text(hover) {
@@ -1123,7 +1133,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 #sidebar-splitter {
@@ -1138,6 +1148,7 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	border: 0px !important;
 	background-color: #1e1d2d !important;
 	background: #1e1d2d !important;
+	outline: unset !important;
 }
 
 /*.sidebar-header*/
@@ -1160,7 +1171,6 @@ hbox#sidebar-search-container textbox#search-box {
 	min-height: 24px !important;
 	padding: 0px 0px 0px 0px !important;
 	border: 0px solid !important;
-	border-color: #1e1d2d !important;
 	border-radius: 2px !important;
 }
 
@@ -1175,11 +1185,13 @@ hbox#sidebar-search-container textbox#search-box {
 	background: #1e1d2d !important;
 }
 
+#sidebar-search-container,
 #sidebar-search-container #search-box {
 	appearance: none !important;
 	background-color: #1e1d2d !important;
 	background: #1e1d2d !important;
 	color: #ffffff !important;
+	border: none !important;
 }
 
 #sidebar,
@@ -1197,6 +1209,7 @@ hbox#sidebar-search-container textbox#search-box {
 #sidebar-box {
 	padding-top: 28px !important;
 	background: #1e1d2d !important;
+	width: 430px !important;
 }
 
 /*
@@ -1245,7 +1258,7 @@ hbox#sidebar-search-container textbox#search-box {
 	font-size: 14px !important;
 }
 
-#sidebarmenu>#sidebar-switcher-target>#sidebar-icon {
+#sidebarmenu > #sidebar-switcher-target > #sidebar-icon {
 	margin-bottom: 3px !important;
 }
 
@@ -1257,7 +1270,7 @@ hbox#sidebar-search-container textbox#search-box {
 	background: #1e90ff !important;
 	border-radius: 2px !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 :is(menupopup, panel)[type="arrow"] {
@@ -1282,7 +1295,7 @@ treechildren::-moz-tree-image(query) {
 	padding-right: 4px !important;
 	border-radius: 3px !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 .sidebar-placesTree treechildren::-moz-tree-row {
@@ -1291,12 +1304,12 @@ treechildren::-moz-tree-image(query) {
 	border-radius: 3px !important;
 	border: none !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
-#sidebar-box[sidebarcommand="viewBookmarksSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon,
-#sidebar-box[sidebarcommand="viewHistorySidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon,
-#sidebar-box[sidebarcommand="viewTabsSidebar"]>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon,
+#sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon,
+#sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
 	color: #1e90ff !important;
 	fill: #1e90ff !important;
 	opacity: 1 !important;
@@ -1304,11 +1317,11 @@ treechildren::-moz-tree-image(query) {
 	filter: drop-shadow(0px 0px 1px #000000) !important;
 }
 
-#sidebar-box>#sidebar-header>#sidebar-switcher-target>#sidebar-icon {
+#sidebar-box > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
 	margin-bottom: 3px !important;
 }
 
-#sidebar-switcher-target>#sidebar-icon {
+#sidebar-switcher-target > #sidebar-icon {
 	margin-bottom: 3px !important;
 }
 
@@ -1348,7 +1361,7 @@ treechildren::-moz-tree-image(query) {
 	background: transparent !important;
 	border-radius: 8px !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 	box-shadow: none !important;
 	margin-left: 2px !important;
 }
@@ -1378,19 +1391,19 @@ treechildren::-moz-tree-image(query) {
 	margin-left: -6px !important;
 }
 
-#context-navigation>menuitem>.menu-iconic-left>.menu-iconic-icon {
+#context-navigation > menuitem > .menu-iconic-left > .menu-iconic-icon {
 	background: none !important;
 }
 
 /* add shadow around tab icon */
 .tab-icon-image,
-#bookmarks-toolbar-placeholder>.toolbarbutton-icon,
-#PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon {
+#bookmarks-toolbar-placeholder > .toolbarbutton-icon,
+#PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon {
 	filter: drop-shadow(0px 0px 2px #000000) !important;
 }
 
-#PlacesToolbar,
 #titlebar,
+#PlacesToolbar,
 scrollbox,
 menubar,
 #main-menubar,
@@ -1399,7 +1412,7 @@ spacer,
 #toolbar-menubar {
 	background-color: #1e1d2d !important;
 	background: #1e1d2d !important;
-	outline: none !important;
+	outline: unset !important;
 	box-shadow: none !important;
 }
 
@@ -1409,9 +1422,11 @@ spacer,
 	display: none !important;
 }
 
-/*#identity-icon-label[value="Extension (uBlock Origin)"] {
+/*
+#identity-icon-label[value="Extension (uBlock Origin)"] {
 	display: none !important;
-}*/
+}
+*/
 #nav-bar,
 #PersonalToolbar,
 #PlacesToolbar {
@@ -1471,13 +1486,10 @@ spacer,
 	display: none !important;
 }
 
-/*
-*/
-
 /*scrollbar tweaks */
 * {
 	scrollbar-color: #1e90ff black !important;
-	scrollbar-width: thin !important;
+	scrollbar-width: auto !important;
 }
 
 /* icons for 2 internal pages */
@@ -1495,14 +1507,6 @@ spacer,
 	filter: invert(100%) !important;
 }
 
-.bookmark-item[label="Mots entre Amis"] image {
-	width: 0 !important;
-	height: 0 !important;
-	padding: 16px 16px 0 0 !important;
-	background-image: url("mots16.png") !important;
-	-moz-image-region: auto !important;
-	background-size: cover !important;
-}
 
 .bookmark-item[label="Google"] image {
 	width: 0 !important;
@@ -1524,13 +1528,6 @@ spacer,
 	background-size: cover !important;
 }
 
-/*
-.bookmark-item image[src="page-icon:about:restartrequired"] {
-  box-sizing: border-box !important;
-  padding-inline-start: 16px !important;
-  overflow: hidden !important;
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJiYWNrdXAiIHZpZXdCb3g9IjAgMCA3NjkgNzY5IiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIKICBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgdGV4dC1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgdmVyc2lvbj0iMS4xIj4KICA8c3R5bGUgaWQ9InNwaW4iPgogICAgQGtleWZyYW1lcyBhcnJvd19hbmltYXRpb25fZ3JvdXBfX3RyIHsKCiAgICAgIDAlLAogICAgICB0byB7CiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMzgzLjU1MTM1M3B4LCAzODUuNDM1OTc0cHgpIHJvdGF0ZSgwZGVnKQogICAgICB9CgogICAgICAxMDAlIHsKICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgzODMuNTUxMzUzcHgsIDM4NS40MzU5NzRweCkgcm90YXRlKC0xNDQwZGVnKQogICAgICB9CiAgICB9CgogICAgI2Fycm93X2FuaW1hdGlvbl9ncm91cCB7CiAgICAgIGFuaW1hdGlvbjogYXJyb3dfYW5pbWF0aW9uX2dyb3VwX190ciA4MDAwbXMgbGluZWFyIGluZmluaXRlIG5vcm1hbCBmb3J3YXJkcwogICAgfQogIDwvc3R5bGU+CiAgPGcgaWQ9ImJhY2tncm91bmQiIHRyYW5zZm9ybT0ibWF0cml4KDQgMCAwIDQgLTg5Ny4yNCAtMjM2MS4zNjYpIj4KICAgIDxwYXRoIGlkPSJzcXVhcmUiCiAgICAgIGQ9Ik00MTYuMDkgNjg2LjcydjcyLjE5YzAgMTEuMDMtOC4zMiAyMS4xMS0xOS4xOCAyMy4xOC0xLjYxLjMxLTMuMjcuNDgtNC45LjQ4LTQ3Ljk3LjAzLTk1LjkzLjAyLTE0My45LjAyLTExLjc2IDAtMjIuMDItOS4wMi0yMy41Ni0yMC43MmEyMy4yNyAyMy4yNyAwIDAxLS4yMy0zLjEyYy0uMDEtNDguMDktLjAxLTk2LjE4LS4wMS0xNDQuMjYgMC0xMS4wMyA4LjMyLTIxLjEyIDE5LjE4LTIzLjE4IDEuNjEtLjMxIDMuMjctLjQ4IDQuOS0uNDggNDguMDEtLjAyIDk2LjAyLS4wMiAxNDQuMDItLjAyIDExLjAzIDAgMjEuMTMgOC4zMyAyMy4xOCAxOS4xOC4zIDEuNjEuNDggMy4yNy40OCA0LjkuMDMgMjMuOTUuMDIgNDcuODkuMDIgNzEuODN6IgogICAgICBmaWxsPSJ0cmFuc3BhcmVudCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjAiIC8+CiAgPC9nPgogIDxnIGlkPSJhcnJvd19hbmltYXRpb25fZ3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM4My41NTEgMzg1LjQzNikiPgogICAgPGcgaWQ9ImFycm93X2NlbnRlciIgdHJhbnNmb3JtPSJtYXRyaXgoNCAwIDAgNCAtMTI4MC43NTYgLTI3NDYuOCkiPgogICAgICA8ZyBpZD0iYXJyb3dfZ3JvdXAiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIwIj4KICAgICAgICA8cGF0aCBpZD0iYXJyb3cxIgogICAgICAgICAgZD0iTTI4Ni41MSA2NzguNDZjLS4yNCAwLS40OC0uMDEtLjczLS4wMi0zLjkyLS4xNy04LjE3LS4yNS0xMy4zOS0uMjUtMy4xMyAwLTYuMjUuMDMtOS4zOC4wNS0zLjE0LjAzLTYuMjkuMDUtOS40My4wNWgtMi4xMmMtOS42NC0uMDQtMTUuNjQtNi4xNS0xNS42NS0xNS45My0uMDItMTEuMzUtLjAyLTIyLjcxIDAtMzQuMDYuMDEtOC45NCA2LjA1LTE1LjcyIDE0LjM2LTE2LjEzLjI1LS4wMS41LS4wMi43NS0uMDIgNi43MiAwIDEyLjE0IDQuNTQgMTQuMDEgMTEuMzkgOC44Ny03Ljc1IDE4LjU5LTEzLjM5IDI5LjU2LTE3LjE3IDguNjYtMi45OCAxNy43NC00LjQ5IDI3LTQuNDkgMzQuMjYgMCA2NS43OCAyMC41NyA3OC40MyA1MS4xOSAxLjggNC4zNSAxLjkgOC44My4yOCAxMi42MS0xLjQ5IDMuNDktNC40MSA2LjIzLTguMjEgNy43MS0xLjg3LjczLTMuNzYgMS4wOS01LjY0IDEuMDktNS44NyAwLTExLTMuNjMtMTMuNzQtOS43MS01Ljk0LTEzLjItMTUuMjQtMjIuNTMtMjguNDMtMjguNTMtNi42My0zLjAxLTE0LjIzLTQuNjEtMjEuOTYtNC42MS0xNiAwLTMxLjA5IDYuNDgtNDAuNzUgMTcuMjEgMCAwIDMuMjYgMCA0LjU5LS4wMSA5LjU4IDAgMTUuOSA1LjcxIDE2LjE3IDE0LjU0LjExIDMuNzctMS4zNCA3LjQxLTQuMDggMTAuMjMtMi45OSAzLjEtNy4yMyA0Ljg2LTExLjY0IDQuODZ6IiAvPgogICAgICAgIDxwYXRoIGlkPSJhcnJvdzIiCiAgICAgICAgICBkPSJNMzIxLjkzIDc3MS41MmMtMzMuOTIgMC02NS40Mi0yMC42Ny03OC4zOS01MS40NC0zLjEyLTcuNDEtLjg2LTE1LjA0IDUuNjQtMTkuMDEgMi4zNS0xLjQ0IDUuMDQtMi4xOSA3Ljc2LTIuMTkgNC41IDAgOC43IDIuMDMgMTEuNTMgNS41NyAxIDEuMjUgMS42NyAyLjY2IDIuMjYgMy45LjE2LjM1LjMzLjY5LjUgMS4wMyAxMC40NSAyMC44NiAyNy4yNiAzMS43NCA0OS45NSAzMi4zNS41My4wMSAxLjA3LjAyIDEuNTkuMDIgMTQuNCAwIDI3LjA1LTUuMjcgMzcuNjctMTUuNjloLTIuMjhjLTEuNyAwLTMuMzgtLjAxLTUuMDctLjAzLTguNy0uMTItMTQuOTgtNi40NC0xNC45Mi0xNS4wMy4wNi04LjE0IDYuMzctMTQuMzMgMTQuNjgtMTQuMzkgNi40LS4wNSAxMi45Ny0uMDggMTkuNTQtLjA4IDUuNzcgMCAxMS41My4wMiAxNy4zLjA2IDguNTYuMDUgMTQuOCA2LjQ0IDE0Ljg1IDE1LjE4LjA3IDEyLjI2LjA0IDI0LjYzLjAxIDM1LjI2LS4wMyA4LjU0LTUuNTkgMTQuODQtMTMuODMgMTUuNjgtLjQ1LjA1LS45LjA3LTEuMzUuMDctNi4wNSAwLTExLjMxLTQuMDItMTMuNTUtMTAuMDctMS4zNi44My0yLjcxIDEuNjYtNC4wNCAyLjQ5LTUuMjggMy4yNy0xMC43NCA2LjY2LTE2LjU0IDkuMjUtMTAuNDggNC42OS0yMS42OSA3LjA3LTMzLjMxIDcuMDd6IiAvPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K") center/contain no-repeat !important;
-}*/
 
 .bookmark-item[label="Messenger"] image {
 	width: 0px !important;
@@ -1541,7 +1538,7 @@ spacer,
 }
 
 /* https COLORing trickin https thingy urlbar*/
-#identity-box.verifiedDomain[pageproxystate="valid"]~.urlbar-input-box::before {
+#identity-box.verifiedDomain[pageproxystate="valid"] ~ .urlbar-input-box::before {
 	content: "https://";
 	position: absolute !important;
 	display: block !important;
@@ -1550,7 +1547,7 @@ spacer,
 	height: 100% !important;
 	color: #1e90ff !important;
 	text-shadow: 0 0 3px #000000 !important;
-	margin-top: 0px !important;
+	margin-top: 1px !important;
 	pointer-events: none !important;
 	font-family: Fira Sans !important;
 	font-weight: bold !important;
@@ -1581,7 +1578,7 @@ identity-box.verifiedDomain[pageproxystate="valid"]~.urlbar-input-box::before {
 
 .tab-background[selected],
 .tab-background[multiselected="true"] {
-	outline: none !important;
+	outline: unset !important;
 	border: 0px solid transparent !important;
 	box-shadow: none !important;
 	background: #1e90ff !important;
@@ -1640,7 +1637,7 @@ tab:hover::after {
 	--tab-label-mask-size: 35px !important;
 }
 
-/* Effect */
+/* Effect
 .urlbar-icon {
 	margin-top: 1px !important;
 	transform: scale(1.1) !important;
@@ -1652,36 +1649,36 @@ tab:hover::after {
 	transition: transform 90ms linear !important;
 }
 
-toolbar .toolbarbutton-1>.toolbarbutton-icon {
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 	transition: padding 90ms linear !important;
 }
 
-toolbarbutton#scrollbutton-up:active>.toolbarbutton-icon,
-toolbarbutton:not(.toolbarbutton-1):active>.toolbarbutton-icon,
-toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-badge-stack>.toolbarbutton-icon,
+toolbarbutton#scrollbutton-up:active > .toolbarbutton-icon,
+toolbarbutton:not(.toolbarbutton-1):active > .toolbarbutton-icon,
+toolbar .toolbarbutton-1:not([disabled]):active > .toolbarbutton-badge-stack > .toolbarbutton-icon,
 .menuitem-iconic:active .menu-iconic-icon,
-.urlbar-page-action:active>.urlbar-icon {
+.urlbar-page-action:active > .urlbar-icon {
 	transform: scale(0.5) !important;
 	transition: transform 90ms linear !important;
 }
 
-toolbarbutton#scrollbutton-down:active>.toolbarbutton-icon {
+toolbarbutton#scrollbutton-down:active > .toolbarbutton-icon {
 	transform: scale(-0.5) !important;
 	transition: transform 90ms linear !important;
 }
 
-toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
+toolbar .toolbarbutton-1:not([disabled]):active > .toolbarbutton-icon {
 	padding: calc(var(--toolbarbutton-inner-padding) + 1px) !important;
 	transition: padding 90ms linear !important;
-}
+}*/
 
 
 #urlbar-input,
 #urlbar-scheme {
-	margin-bottom: 4px !important;
+	margin-bottom: 2px !important;
 }
 
-/*---------------------------------------------------------------------------*/
+
 /*Move the three dots to the end (rightmost) of the PageActions*/
 #page-action-buttons {
 	order: -1 !important;
@@ -1692,6 +1689,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	/*paddingwidth: 28px !important;
 	height: 28px !important;*/
 }
+
 
 #pageActionButton {
 	order: 2 !important;
@@ -1706,7 +1704,7 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 }
 
 #page-action-buttons {
-	margin-bottom: 2px !important;
+	margin-bottom: -4px !important;
 	transform: scale(1) !important;
 }
 
@@ -1716,10 +1714,10 @@ toolbar .toolbarbutton-1:not([disabled]):active>.toolbarbutton-icon {
 	background: transparent !important;
 }
 
-toolbar .toolbarbutton-1>.toolbarbutton-icon,
-toolbar .toolbarbutton-1>.toolbarbutton-text,
-toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
-	/*padding: 2px;*/
+toolbar .toolbarbutton-1 > .toolbarbutton-icon,
+toolbar .toolbarbutton-1 > .toolbarbutton-text,
+toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
+	/*padding: -2px;*/
 	border-radius: 2px !important;
 }
 
@@ -1729,22 +1727,11 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 	caret-color: #1e90ff !important;
 }
 
-/* tab throbber
-.tab-throbber {
-	display: none !important;
-}
-*/
 
 .tab-label-container {
 	text-align: center !important;
 	/*padding-inline: 5px !important;*/
 }
-
-/*
-.tab-label,
-.tab-secondary-label {
-	overflow: hidden !important;
-}*/
 
 #alltabs-button {
 	display: none !important;
@@ -1855,20 +1842,20 @@ toolbar .toolbarbutton-1>.toolbarbutton-badge-stack {
 
 /* reduce space of navbar icons*/
 .titlebar-button,
-.findbar-textbox~toolbarbutton,
+.findbar-textbox ~ toolbarbutton,
 toolbarbutton.scrollbutton-down .urlbar-icon,
 .urlbar-icon-wrapper,
 toolbar .toolbarbutton-1,
 #tabbrowser-tabs toolbarbutton,
-toolbar toolbarbutton>.toolbarbutton-icon,
-toolbar toolbarbutton>.toolbarbutton-badge-stack {
+toolbar toolbarbutton > .toolbarbutton-icon,
+toolbar toolbarbutton > .toolbarbutton-badge-stack {
 	background-color: transparent !important;
 	border-color: none !important;
 	margin-inline: -2px !important;
 }
 
 #nav-bar {
-	height: 28px !important;
+	height: 27px !important;
 }
 
 /*
@@ -1919,7 +1906,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	margin-inline: 2px !important;
 }
 
-/***************url dropdown************************/
+/***********************url dropdown**********************/
 
 /* Font-sizes */
 #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
@@ -1990,7 +1977,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 }
 
 /* Ability to scroll in Fx57 */
-#PopupAutoCompleteRichResult .autocomplete-richlistbox>scrollbox {
+#PopupAutoCompleteRichResult .autocomplete-richlistbox > scrollbox {
 	overflow-y: auto !important;
 	padding-right: 4px !important;
 }
@@ -2044,7 +2031,7 @@ toolbar toolbarbutton>.toolbarbutton-badge-stack {
 	/*margin-top: 1px !important;*/
 }
 
-.urlbarView-title>urlbar-result-action-search-w-engine {
+.urlbarView-title > urlbar-result-action-search-w-engine {
 	display: none !important;
 }
 
@@ -2139,7 +2126,7 @@ input:not(#urlbar-input) {
 	display: none !important;
 }
 
-#reader-mode-button>.urlbar-icon {
+#reader-mode-button > .urlbar-icon {
 	margin-left: 0px !important;
 	transform: scale(1) !important;
 }
@@ -2149,7 +2136,7 @@ input:not(#urlbar-input) {
 }
 
 #urlbar-input {
-	margin-top: 1px !important;
+	margin-top: 0px !important;
 }
 
 .urlbarView-row-inner {
@@ -2161,7 +2148,7 @@ input:not(#urlbar-input) {
 	--lwt-toolbar-field-highlight-text: white !important;
 }
 
-#urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner {
+#urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
 	border-top: 0px !important;
 }
 
@@ -2185,7 +2172,7 @@ input:not(#urlbar-input) {
 */
 
 /*Reduce Spacing Between Pinned And Regular Tabs*/
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
 	margin-inline-start: initial !important;
 }
 
@@ -2305,7 +2292,7 @@ input:not(#urlbar-input) {
 	padding-right: 26px !important;
 }
 */
-.titlebar-button>.toolbarbutton-icon {
+.titlebar-button > .toolbarbutton-icon {
 	transition: all 0.3s ease !important;
 	/*list-style-image: none;
 	border-radius: 06px !important;*/
@@ -2334,7 +2321,7 @@ input:not(#urlbar-input) {
 */
 /*-min max close */
 
-.titlebar-button>.toolbarbutton-icon {
+.titlebar-button > .toolbarbutton-icon {
 	height: 16px !important;
 	min-height: 16px !important;
 	width: 16px !important;
@@ -2406,7 +2393,7 @@ input:not(#urlbar-input) {
 
 	/* revert to old titlebar buttons */
 	.titlebar-button {
-		&>.toolbarbutton-icon {
+		& > .toolbarbutton-icon {
 			display: inline-flex !important;
 		}
 	}
@@ -2419,8 +2406,11 @@ input:not(#urlbar-input) {
 	}
 }
 
-.titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
-	&>.toolbarbutton-icon {
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+	& > .toolbarbutton-icon {
 		width: 12px !important;
 		height: 12px !important;
 	}
@@ -2547,16 +2537,16 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 }*/
 
 /* customization page */
-#customization-panel-container>.panel-arrowcontent {
+#customization-panel-container > .panel-arrowcontent {
 	border-color: transparent !important;
 	/*border: 1px !important;*/
-	outline: none !important;
+	outline: unset !important;
 }
 
-#customization-panel-container>.panel-arrowcontainer {
+#customization-panel-container > .panel-arrowcontainer {
 	border-color: transparent !important;
 	/*border: 1px !important;*/
-	outline: none !important;
+	outline: unset !important;
 
 	background: #1e1d2d !important;
 	background-color: #1e1d2d !important;
@@ -2582,7 +2572,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	color: #ffffff !important;
 	border: none !important;
 	font-family: Fira Sans !important;
-	outline: none !important;
+	outline: unset !important;
 	--arrowscrollbox: none !important;
 	--arrowpanel-container: none !important;
 }
@@ -2591,7 +2581,7 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	background: #1e1d2d !important;
 }
 
-#customization-panelWrapper>.panel-arrowbox>.panel-arrow[side="top"] {
+#customization-panelWrapper > .panel-arrowbox > .panel-arrow[side="top"] {
 	display: none !important;
 }
 
@@ -2619,13 +2609,13 @@ menuitem.subviewbutton[_moz-menuactive]:not(:-moz-any([disabled], :active)),
 	border-right: 0px solid #222 !important;
 	/*background: linear-gradient(#555, #1E1D2D) !important;*/
 	color: #ffffff !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 .customization-lwtheme-menu-footeritem:hover {
 	/*background: linear-gradient(#1E1D2D, #555) !important;*/
 	color: #ffffff !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 .button-menu-dropmarker .dropmarker-icon {
@@ -2725,11 +2715,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .tab-loading-burst {
 	border: none !important;
-	outline: none !important;
+	outline: unset !important;
 	background-color: none !important;
 }
 
-.bookmark-item>.toolbarbutton-icon {
+.bookmark-item > .toolbarbutton-icon {
 	margin-inline-end: 0px !important;
 }
 
@@ -2769,7 +2759,7 @@ toolbar #fullscreen-button {
 	fill: #1e90ff !important;
 }
 
-.toolbaritem-combined-buttons>separator {
+.toolbaritem-combined-buttons > separator {
 	display: none !important;
 }
 
@@ -2883,8 +2873,8 @@ toolbar #fullscreen-button {
 		opacity: 1 !important;
 	}
 
-	#downloadsPanel[keyfocus] #downloadsListBox:focus>richlistitem[selected] {
-		outline: none !important;
+	#downloadsPanel[keyfocus] #downloadsListBox:focus > richlistitem[selected] {
+		outline: unset !important;
 		outline-offset: 0px !important;
 		background-clip: none !important;
 		background-image: none !important;
@@ -2945,12 +2935,12 @@ toolbar #fullscreen-button {
 */
 
 PersonalToolbar {
-	padding: 0px !important;
+	padding: 4px !important;
 }
 
 #PersonalToolbar toolbarbutton.bookmark-item {
-	padding: 4px !important;
-	margin-right: -1px !important;
+	/*padding: 4px !important;
+	margin-right: -1px !important;*/
 	transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 	border-radius: 2px !important;
 }
@@ -2965,7 +2955,7 @@ PersonalToolbar {
 
 /* Makes Hovering Over Inactive Tabs Have A Small Fade In */
 /* Thanks u/poorman3333 */
-.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"]) {
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
 	transition: 20ms !important;
 }
 
@@ -2978,7 +2968,7 @@ PersonalToolbar {
 /* Extentions & Menu Button */
 toolbar .toolbarbutton-badge-stack:not([disabled="true"], [checked], [open], :active),
 /* Back / Forward / Refresh */
-toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active)>.toolbarbutton-icon,
+toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active) > .toolbarbutton-icon,
 /* Star / Bookmark Button */
 .urlbar-page-action,
 #urlbar-go-button,
@@ -3081,7 +3071,7 @@ button[disabled] {
 }
 
 button:not([disabled]):hover {
-	
+
 	background-color: #1e90ff80 !important;
 	box-shadow: none !important;
 }
@@ -3122,7 +3112,7 @@ button.panel-button {
 	appearance: none !important;
 	background-color: #1e90ff80 !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
 /*
@@ -3144,7 +3134,7 @@ button.panel-button {
 	--uc-tabs-scrollbutton-border: 2px !important;
 }
 
-.urlbarView-row:hover>.urlbarView-row-inner {
+.urlbarView-row:hover > .urlbarView-row-inner {
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
 }
@@ -3259,7 +3249,7 @@ See the above repository for updates as well as full license text. */
 /* Hide the container line above tabs */
 /* .tab-context-line{ display: none } */
 
-checkbox:not([disabled]):hover>.checkbox-check {
+checkbox:not([disabled]):hover > .checkbox-check {
 	border-color: #1e90ff !important;
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
@@ -3267,14 +3257,14 @@ checkbox:not([disabled]):hover>.checkbox-check {
 	fill: #ffffff !important;
 }
 
-checkbox[checked]>.checkbox-check {
+checkbox[checked] > .checkbox-check {
 	list-style-image: url("chrome://global/skin/icons/check.svg");
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
 	background: #1e90ff !important;
 }
 
-checkbox>.checkbox-check {
+checkbox > .checkbox-check {
 	background-color: #1e1d2d !important;
 	color: #ffffff !important;
 	border-color: rgb(30, 144, 255) !important;
@@ -3308,14 +3298,14 @@ checkbox>.checkbox-check {
 }
 */
 
-#PlacesToolbarItems>.bookmark-item {
+#PlacesToolbarItems > .bookmark-item {
 	margin-inline: -2px !important;
 }
 
 #PlacesToolbar toolbarseparator {
 	appearance: none !important;
 	width: 4px !important;
-	margin: 6px 4px 6px -2px !important;
+	margin: 2px 4px 2px 0px !important;
 	/*padding: 1px !important;*/
 }
 
@@ -3401,8 +3391,8 @@ menupopup>menu {
 */
 
 /*** Tighten up vertical drop-down(bookmark)/context/popup menu spacing ****/
-menupopup>menuitem,
-menupopup>menu {
+menupopup > menuitem,
+menupopup > menu {
 	padding-block: 4px !important;
 }
 
@@ -3429,7 +3419,7 @@ menupopup>menu {
 	background: transparent !important;
 	font-family: Fira Sans !important;
 	color: #ffffff !important;
-	outline: none !important;
+	outline: unset !important;
 	box-shadow: none !important;
 	outline-offset: unset !important;
 }
@@ -3553,23 +3543,23 @@ scrollbox[orient="horizontal"] {
 /*---------------------------------------------------------------------*/
 
 /* Mixed content including neterror */
-#identity-box[pageproxystate="valid"].unknownIdentity~.urlbar-searchmode-and-input-box-container {
+#identity-box[pageproxystate="valid"].unknownIdentity ~ .urlbar-searchmode-and-input-box-container {
 	color: red !important;
 }
 
 /* http: and potentially some other insecure connections like ftp: */
-#identity-box[pageproxystate="valid"].notSecure~.urlbar-searchmode-and-input-box-container {
+#identity-box[pageproxystate="valid"].notSecure ~ .urlbar-searchmode-and-input-box-container {
 	color: orange !important;
 }
 
 /* Extension pages */
-#identity-box[pageproxystate="valid"].extensionPage~.urlbar-searchmode-and-input-box-container {
+#identity-box[pageproxystate="valid"].extensionPage ~ .urlbar-searchmode-and-input-box-container {
 	color: #555555 !important;
 }
 
 /* Internal about: and chrome:// urls (includes reader-view) */
-#identity-box[pageproxystate="valid"].localResource~.urlbar-searchmode-and-input-box-container,
-#identity-box[pageproxystate="valid"].chromeUI~.urlbar-searchmode-and-input-box-container {
+#identity-box[pageproxystate="valid"].localResource ~ .urlbar-searchmode-and-input-box-container,
+#identity-box[pageproxystate="valid"].chromeUI ~ .urlbar-searchmode-and-input-box-container {
 	color: #1e90ff !important;
 }
 
@@ -3623,12 +3613,12 @@ tab>.tab-stack>.tab-background {
 */
 menu.bookmark-item[src^="page-icon:https://github.com/*.*"] image,
 menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image,
-.menu-left>.menu-iconic-left[src^="page-icon:https://github.com/"] image,
+.menu-left > .menu-iconic-left[src^="page-icon:https://github.com/"] image,
 .menuitem-iconic.bookmark-item.menuitem-with-favicon[src^="page-icon:https://github.com/"] image,
 .toolbarbutton-icon[src^="page-icon:https://github.com.*"],
 .menuitem-iconic.bookmark-item.menuitem-with-favicon[label="GitHub"] image,
 .menuitem-iconic-icon[src^="page-icon:https://github.com/*.*"] image,
-.bookmark-item[label="GitHub"]>.toolbarbutton-icon {
+.bookmark-item[label="GitHub"] > .toolbarbutton-icon {
 	width: 0px !important;
 	height: 0px !important;
 	padding: 0 0 16px 16px !important;
@@ -3638,7 +3628,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image,
 
 menu.bookmark-item[src^="page-icon:https://github.com/*.*"] image,
 menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image,
-.bookmark-item[label="GitHub"]>.toolbarbutton-icon {
+.bookmark-item[label="GitHub"] > .toolbarbutton-icon {
 	margin-left: 2px !important;
 }
 
@@ -3660,7 +3650,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image,
 
 /*--------------------------------------------------------------------------*/
 
-menu[label="Livemarks"]>.menu-iconic-left {
+menu[label="Livemarks"] > .menu-iconic-left {
 	filter: invert(100%) !important;
 }
 
@@ -3716,7 +3706,7 @@ and by default removes the tab secondary line
 	animation: rotate-throbber 2s steps(128) infinite;
 }
 */
-
+/*
 #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon {
 	fill: #1e90ff !important;
 	fill-opacity: 1 !important;
@@ -3741,7 +3731,7 @@ and by default removes the tab secondary line
 	transition: 100ms linear !important;
 }
 
-/* Red */
+
 #identity-box[pageproxystate="valid"].notSecure #identity-icon {
 	fill: #de0000 !important;
 	fill-opacity: 1 !important;
@@ -3766,20 +3756,20 @@ and by default removes the tab secondary line
 	transition: 100ms linear !important;
 }
 
-/* Orange */
+
 #identity-box[pageproxystate="valid"].mixedDisplayContent #identity-icon {
 	fill: #ff9900 !important;
 	fill-opacity: 1 !important;
 	transition: 100ms linear !important;
 }
 
-#identity-popup[mixedcontent~="passive-loaded"][isbroken] .identity-popup-security-connection {
+#identity-popup[mixedcontent ~ ="passive-loaded"][isbroken].identity-popup-security-connection {
 	fill: #ff6000 !important;
 	fill-opacity: 1 !important;
 	transition: 100ms linear !important;
 }
 
-/* Yellow */
+
 #identity-box[pageproxystate="valid"].mixedDisplayContentLoadedActiveBlocked #identity-icon {
 	fill: #e60150 !important;
 	fill-opacity: 1 !important;
@@ -3790,7 +3780,7 @@ and by default removes the tab secondary line
 	fill: #ffe900 !important;
 	fill-opacity: 1 !important;
 	transition: 100ms linear !important;
-}
+}*/
 
 /*
 #identity-box.extensionPage label {
@@ -3805,8 +3795,6 @@ and by default removes the tab secondary line
 	animation-iteration-count: 0.9;
 	animation-timing-function: ease-in;
 	/*backdrop-filter: blur(16px) !important;*/
-
-
 }
 
 @keyframes urlbarExtend {
@@ -3874,7 +3862,7 @@ and by default removes the tab secondary line
 		color: #ffffff !important;
 	}
 
-	checkbox:not([disabled]):hover>.checkbox-check {
+	checkbox:not([disabled]):hover > .checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -3882,14 +3870,14 @@ and by default removes the tab secondary line
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked]>.checkbox-check {
+	checkbox[checked] > .checkbox-check {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill !important;
 		fill: #ffffff !important;
 		background-color: #1e90ff !important;
 	}
 
-	checkbox>.checkbox-check {
+	checkbox > .checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
@@ -4021,13 +4009,13 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 	filter: drop-shadow(0px 0px 1px white) !important;
 }
 
-.bookmark-item[image*="page-icon:https://github.com/"]>.menu-iconic-left {
+.bookmark-item[image*="page-icon:https://github.com/"] > .menu-iconic-left {
 	/*display: none !important;*/
 	/*filter: drop-shadow(0px 0px 1px white) !important;*/
 	filter: invert(100%) !important;
 }
 
-.bookmark-item[image*="page-icon:https://github.com/"]>.menu-iconic-text {
+.bookmark-item[image*="page-icon:https://github.com/"] > .menu-iconic-text {
 	margin-left: 0px !important;
 }
 
@@ -4097,7 +4085,7 @@ menuitem.bookmark-item[src^="page-icon:https://github.com/*.*"] image::before,
 }
 
 .notificationbox-stack {
-	background-color: #1e1d2d !important;
+	background-color: #1e90ff !important;
 	border: none !important;
 }
 
@@ -4163,7 +4151,7 @@ toolbar .toolbarbutton-1:hover {
 	box-shadow: none !important;
 }
 
-#editBMPanel_keywordField>label {
+#editBMPanel_keywordField > label {
 	margin-bottom: 4px !important;
 }
 
@@ -4173,12 +4161,12 @@ toolbar .toolbarbutton-1:hover {
 	background-color: #1e1d2d !important;
 }
 
-.dialog-button-box>button {
+.dialog-button-box > button {
 	background: #1e90ff !important;
 	color: white !important;
 }
 
-.dialog-button-box>button:hover {
+.dialog-button-box > button:hover {
 	background: #1e90ff80 !important;
 	color: white !important;
 }
@@ -4258,16 +4246,17 @@ menulist#menuPosition {
 }
 
 /*-------------------------------------------------------------------------------*/
-
+/*
 #PersonalToolbar .toolbarbutton-1 {
 	--toolbarbutton-inner-padding: 8px !important;
 	--toolbarbutton-outer-padding: 2px !important;
-}
+}*/
 
+/*
 :root[uidensity="compact"] #PersonalToolbar .toolbarbutton-1 {
 	--toolbarbutton-inner-padding: 6px !important;
 	--toolbarbutton-outer-padding: 3px !important;
-}
+}*/
 
 .tab[selected="true"] {
 	visibility: visible !important;
@@ -4282,7 +4271,7 @@ menulist#menuPosition {
 	visibility: visible !important;
 }
 
-#appcontent>#tabbrowser-tabbox>#tabbrowser-tabpanels>.deck-selected>.browserContainer>.browserStack>browser {
+#appcontent > #tabbrowser-tabbox > #tabbrowser-tabpanels > .deck-selected > .browserContainer > .browserStack > browser {
 	border-radius: 0px !important;
 	background: transparent !important;
 }
@@ -4350,22 +4339,14 @@ menulist#menuPosition {
 button-group.tools-and-extensions,
 #vertical-tabs,
 #sidebar-main,
-.wrapper, moz-button {
+.wrapper,
+moz-button {
 
 	background-color: #1e1d2d !important;
 }
 
-/*
-span.button-background {
-	background-image: url("KnobCancel.ico") !important;
-
-}*/
-
-span.button-background:hover {
-	opacity: 0.5 !important;
-	background-size: 50% !important;
-	background-color: transparent !important;
-
+button-group.tools-and-extensions:hover {
+	background-color: dodgerblue !important;
 }
 
 button.notification-button.small-button.footer-button {
@@ -4424,7 +4405,7 @@ button.notification-button.small-button.footer-button:hover {
 		display: none;
 	}
 
-	>canvas {
+	> canvas {
 		display: block;
 		width: 100% !important;
 		animation: tab-hover-preview-fadein 0.8s ease !important;
@@ -4446,7 +4427,7 @@ button.notification-button.small-button.footer-button:hover {
 
 
 /* Shows window title in menubar */
-/* Enable menubar for correct behavior 
+/* Enable menubar for correct behavior
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 	:root:not([sizemode="fullscreen"])>head {
 
@@ -4454,7 +4435,7 @@ button.notification-button.small-button.footer-button:hover {
 		position: fixed !important;
 		top: 13px !important;
 		right: 140px !important;
-		
+
 		width: calc(100vw - 440px) !important;
 
 		text-align: center !important;
@@ -4485,31 +4466,31 @@ button.notification-button.small-button.footer-button:hover {
 	}
 }
 */
-@-moz-document url(chrome://browser/content/browser.xhtml) {
-	:root:not([sizemode="fullscreen"])>head {
-		display: block !important;
-		position: fixed !important;
-		top: 2px !important;
-		right: 140px !important;
-		/* Space for window controls */
-		width: calc(100vw - 440px) !important;
-		/* Window width - window control width - menuitem (English) width */
-		text-align: right !important;
-		z-index: 1;
-		pointer-events: none !important;
-		text-overflow: ellipsis !important;
-		overflow-x: hidden !important;
-	}
+@-moz-document url(chrome://browser/content/browser.xhtml){
+:root:not([sizemode="fullscreen"]) > head {
+	display: block !important;
+	position: fixed !important;
+	top: 2px !important;
+	right: 140px !important;
+	/* Space for window controls */
+	width: calc(100vw - 440px) !important;
+	/* Window width - window control width - menuitem (English) width */
+	text-align: right !important;
+	z-index: 1;
+	pointer-events: none !important;
+	text-overflow: ellipsis !important;
+	overflow-x: hidden !important;
+}
 
-	head>* {
-		display: none !important;
-	}
+head > * {
+	display: none !important;
+}
 
-	head>title {
-		display: contents !important;
-		max-width: 50vw !important;
-		white-space: nowrap !important;
-	}
+head > title {
+	display: contents !important;
+	max-width: 50vw !important;
+	white-space: nowrap !important;
+}
 }
 
 .tab-audio-button {
@@ -4541,22 +4522,23 @@ fxview-search-textbox {
 	}
 }
 
-.button-background *, .outer-wrapper.onboardingContainer.proton.transition- {
+.button-background *,
+.outer-wrapper.onboardingContainer.proton.transition- {
 	background: #1e1d2d !important;
 
 }
 
 .button-background:active,
+.button-background:hover,
 .button-background:focus,
 .button-background[selected] {
 	background-color: #1e90ff !important;
 
 }
 
-.button-background:hover {
-	background-color: #1e90ff90 !important;
 
-}
+
+
 
 
 .fxview-tab-row-main {
@@ -4590,10 +4572,6 @@ moz-button:not([type~="ghost"]):not(:hover) {
 	}
 }
 
-:root {
-	--sidebar-background-color: #1e1d2d;
-}
-
 .actions-list {
 	&>moz-button:not(.tools-overflow) {
 		background: none !important;
@@ -4615,12 +4593,12 @@ See the above repository for updates as well as full license text. */
 
 /* Enable scroll */
 
-/* allow scrolling */
+/* allow scrolling*/
 #PlacesToolbarItems {
 	overflow: auto !important;
 }
 
-/* restore visibility of hidden bookmarks */
+/* restore visibility of hidden bookmarks*/
 .bookmark-item {
 	visibility: initial !important;
 }
@@ -4632,15 +4610,15 @@ See the above repository for updates as well as full license text. */
 
 /*
       When the Browser Window reaches a smaller enough width or the amount of Bookmarks overlap the browsers width, overlapping bookmark items are:
-      1. set as hidden. 
+      1. set as hidden.
       2. duplicated into the overflow menu.
-      
+
       This style is a simple to implement and easily maintained by:
       1. enabling scrolling on the toolbar
       2. restoring visibility of hidden bookmarks.
-      
+
       You can have both the scrollable toolbar and the overflow menu by removing Line 16-18
-*/
+
 @media not (prefers-contrast) {
 
 	:host(.infobar),
@@ -4651,13 +4629,13 @@ See the above repository for updates as well as full license text. */
 
 * {
 	@media not print {
-		head+body>img:first-child.transparent[src][alt] {
+		head + body > img:first-child.transparent[src][alt] {
 			background: none !important;
 		}
 	}
 
 }
-
+*/
 /*
 :root {
 	--toolbarbutton-border-radius: 4px !important;
@@ -4686,7 +4664,7 @@ See the above repository for updates as well as full license text. */
 	background-color: #1e1d2d !important;
 }
 
-:where(#urlbar)>.urlbarView {
+:where(#urlbar) > .urlbarView {
 	margin-inline: 0 !important;
 	width: auto !important;
 }
@@ -4699,13 +4677,13 @@ See the above repository for updates as well as full license text. */
 	padding-inline-start: 4px !important;
 }
 
-:where(#urlbar)>.urlbar-background,
+:where(#urlbar) > .urlbar-background,
 #urlbar-background {
 	animation: none !important;
 	max-height: 28px !important;
 }
 
-:where(#urlbar)>.urlbar-input-container {
+:where(#urlbar) > .urlbar-input-container {
 	padding: var(--urlbar-container-padding, 0) 1px !important;
 	height: 28px !important;
 	background-color: #1e1d2d !important;
@@ -4715,7 +4693,7 @@ See the above repository for updates as well as full license text. */
 	margin-block: var(--urlbar-icon-padding) !important;
 }
 
-:where(#urlbar)>.urlbarView>.search-one-offs:not([hidden]) {
+:where(#urlbar) > .urlbarView > .search-one-offs:not([hidden]) {
 	padding-block: 0px !important;
 }
 
@@ -4728,18 +4706,14 @@ See the above repository for updates as well as full license text. */
 	overflow: hidden;
 }
 
-/*
-#appMenu-empty-profiles-button {
-	display: none !important;
-}*/
 #profiles-menu {
 	display: none !important;
 }
 
-
-
 .menu-icon {
-	menuitem:where([image])>&, menu:where(.menu-iconic)>& {
+
+	menuitem:where([image]) > &,
+	menu:where(.menu-iconic) > & {
 		&:where(:not([srcset])) {
 			content: url("Folderflat1.svg") !important;
 		}
@@ -4761,10 +4735,10 @@ See the above repository for updates as well as full license text. */
 
 .bookmark-item[container="true"] [label=" Neowin "],
 .bookmark-item[container="true"] [label=" Downcrew "],
-.bookmark-item[container="true"] [label=" MajGeeks "],
+.bookmark-item[container="true"] [label=" MajGeek "],
 .bookmark-item[container="true"] [label=" FiHorse "],
 .bookmark-item[container="true"] [label=" AskVG "],
-.bookmark-item[container="true"] [label=" Libellules "],
+.bookmark-item[container="true"] [label=" Libellule "],
 .bookmark-item[container="true"] [label=" PCAstuces "] {
 	list-style-image: url("rss3.svg") !important;
 	-moz-image-region: rect(0, 16px, 16px, 0) !important;
@@ -4778,4 +4752,454 @@ See the above repository for updates as well as full license text. */
 .bookmark-item[container="true"] [label=" Gmail "] {
 	list-style-image: url("Gmail_Logo.svg") !important;
 	-moz-image-region: rect(0, 16px, 16px, 0) !important;
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hide_tabs_scrollbuttons.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* This should hide tabs scrollbuttons in a manner that preserves the ability to move tab strip when reordering tabs */
+
+:root {
+	--uc-tab-shadow-max-size: 6px;
+	/* Funny, but we let this to be overridden in ESR 128 which doesn't exist in Firefox 139 */
+	--tab-shadow-max-size: var(--uc-tab-shadow-max-size);
+}
+
+#tabbrowser-arrowscrollbox {
+	--uc-compat-scrollbutton-margin: 1px;
+	/* compatibility for non_floating_sharp_tabs.css */
+	--uc-scrollbutton-up-background: linear-gradient(-90deg, transparent, var(--lwt-accent-color, var(--toolbox-bgcolor)) 35%);
+	--uc-scrollbutton-down-background: linear-gradient(90deg, transparent, var(--lwt-accent-color, var(--toolbox-bgcolor)) 35%);
+}
+
+#tabbrowser-tabs:not([movingtab]) {
+	--uc-scroll-visibility: hidden;
+}
+
+#tabbrowser-tabs[overflow] {
+	--uc-scrollbox-base-margin: -31px;
+	--uc-scrollbox-margin: calc(var(--uc-scrollbox-base-margin) + var(--tab-shadow-max-size));
+}
+
+:root[uidensity="compact"] #tabbrowser-tabs[overflow] {
+	--uc-scrollbox-base-margin: -25px;
+}
+
+#tabbrowser-arrowscrollbox:not([scrolledtostart]) {
+	--uc-scrollbox-overflow-start-margin: -1px;
+}
+
+#scrollbutton-up ~ spacer {
+	visibility: visible !important;
+}
+
+
+spacer[part="overflow-start-indicator"] {
+	order: -1;
+	margin-inline-start: var(--uc-scrollbox-overflow-start-margin, -0.5px) !important;
+}
+
+spacer[part="overflow-end-indicator"] {
+	order: 2;
+}
+
+#scrollbutton-down:is([disabled=""], [disabled="true"]) > .toolbarbutton-icon,
+#scrollbutton-up:is([disabled=""], [disabled="true"]) > .toolbarbutton-icon {
+	opacity: 0.4;
+}
+
+#scrollbutton-up,
+#scrollbutton-down {
+	position: relative;
+	z-index: 1;
+	visibility: var(--uc-scroll-visibility, visible);
+	background-clip: border-box !important;
+	background-origin: initial !important;
+	background-repeat: no-repeat !important;
+	opacity: 1 !important;
+}
+
+#scrollbutton-up {
+	margin-inline-start: calc(0px - var(--tab-shadow-max-size, 0px)) !important;
+	background-image: var(--uc-scrollbutton-up-background);
+}
+
+#scrollbutton-down {
+	margin-inline-end: calc(0px - var(--tab-shadow-max-size, 0px)) !important;
+	background-image: var(--uc-scrollbutton-down-background);
+}
+
+scrollbox[orient="horizontal"],
+.scrollbox-clip {
+	margin-inline: var(--uc-scrollbox-margin, 0px);
+}
+
+.scrollbox-clip > scrollbox[orient="horizontal"] {
+	margin-inline: initial !important;
+}
+
+/* Need to reset some things for other scrollboxes */
+.menupopup-arrowscrollbox {
+	--tab-shadow-max-size: 0 !important;
+}
+
+
+
+
+#feature-callout {
+	--fc-background: #1e90ff !important;
+	--fc-color: white !important;
+	--fc-border: #1e90ff !important;
+	--fc-accent-color: white !important;
+	--fc-button-background: #1e90ff80;
+	--fc-button-color: white !important;
+	--fc-button-border: transparent !important;
+	--fc-button-background-hover: dodgerblue !important;
+	--fc-button-color-hover: white !important;
+	--fc-button-border-hover: transparent !important;
+	--fc-button-background-active: dodgerblue !important;
+	/*--fc-button-color-active: var(--fc-button-color-active-light, #15141a);
+	--fc-button-border-active: var(--fc-button-border-active-light, transparent);*/
+	--fc-primary-button-background: #1e90ff80 !important;
+	/*--fc-primary-button-color: var(--fc-primary-button-color-light, #fbfbfe);
+	--fc-primary-button-border: var(--fc-primary-button-border-light, transparent);*/
+	--fc-primary-button-background-hover: #1e90ff80 !important;
+	--fc-primary-button-color-hover: white !important;
+	--fc-primary-button-border-hover: transparent !important;
+	--fc-primary-button-background-active: dodgerblue !important;
+	--fc-primary-button-color-active: white !important;
+	--fc-primary-button-border-active: transparent !important;
+	--fc-step-color: dodgerblue !important;
+	--fc-link-color: dodgerblue !important;
+	--fc-link-color-hover: #1e90ff80 !important;
+	--fc-link-color-active: dodgerblue !important;
+	--fc-icon-success-color: #2AC3A2 !important;
+	--fc-dismiss-button-background: dodgerblue !important;
+	--fc-dismiss-button-background-hover: #1e90ff80 !important;
+	--fc-dismiss-button-background-active: #1e90ff20 !important;
+	--arrow-width: 33.9411px;
+	--arrow-square-size: calc(var(--arrow-width) / sqrt(2));
+	--extra-width-from-rotation: calc(var(--arrow-width) - var(--arrow-square-size));
+	--arrow-visible-height: calc(var(--arrow-width) / 2);
+	--arrow-visible-size: calc(var(--arrow-square-size) / 2);
+	--arrow-center-inset: calc(50% - var(--arrow-visible-size));
+	--arrow-offset: calc(1.5px - var(--arrow-visible-size));
+	--arrow-corner-distance: 12px;
+	--arrow-corner-inset: calc(var(--arrow-corner-distance) + (var(--extra-width-from-rotation) / 2));
+	--arrow-overlap-magnitude: 5px;
+	--button-min-height: 24px;
+	color: white;
+	accent-color: dodgerblue !important;
+}
+
+#feature-callout .arrow-box {
+	background-color: dodgerblue !important;
+}
+
+.onboardingContainer .main-content {
+	background-color: #1e90ff !important;
+	border: none !important;
+	box-shadow: 0 2px 14px 0 #1e90ff !important;
+	color: white !important;
+}
+
+
+#feature-callout .screen[pos="callout"] .section-main .main-content {
+	background: #1e90ff !important;
+}
+
+
+#trust-icon-container {
+	&:where(.insecure) {
+		background-color: #1e90ff !important;
+		border-radius: 8px !important;
+	}
+}
+
+
+
+
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/autohide_sidebar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Show sidebar only when the cursor is over it.
+   The border controlling sidebar width will be removed so you'll need to modify
+   these values to change width.
+   By default the internal layout of sidebar changes when hovered, but this can
+   be changed by setting pref "userchrome.autohide-sidebar.static-layout.enabled" to true
+ */
+
+/* Note: If you want only *some* sidebar to be auto-hidden, then you can use [sidebarcommand] attribute selector.
+   For example, to only affect Sidebery's sidebar replace all instances of #sidebar-box with
+   #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"].
+   To find the sidebarcommand value for any other sidebar, open that sidebar and use Browser Toolbox to inspect it.
+   See: https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html
+*/
+* {
+	--sidebar-box-border-color: #1e90ff;
+	--sidebar-box-border-width: 0.5px;
+	/*--sidebar-box-border: var(--sidebar-box-border-width) solid var(--sidebar-box-border-color);*/
+	--sidebar-box-background: #1e1d2d;
+	/*--sidebar-box-color: currentColor;
+	color: var(--sidebar-text-color);*/
+	--focus-outline: unset !important;
+}
+
+#multi-stage-message-root,
+.main-content-inner,
+.tiles-single-select-container {
+	background-color: #1e90ff !important;
+}
+
+sidebar-tab-row {
+	&:hover {
+		background-color: transparent !important;
+	}
+}
+
+.fxview-tab-row-main {
+	border-radius: 4px !important;
+}
+
+:root,
+panel,
+dialog,
+window {
+	--uc-checkbox-checked-bgcolor: #1e90ff80 !important;
+	--checkbox-checked-bgcolor: #1e90ff !important;
+
+}
+
+.button-background {
+	button:hover > & {
+		background-color: #1e1d2d !important;
+		border-color: #1e90ff !important;
+		border-radius: 4px !important;
+	}
+}
+
+.button-background {
+	button:active > & {
+		background-color: #1e1d2d !important;
+		border-color: #1e90ff !important;
+		border-radius: 4px !important;
+	}
+}
+
+/*
+span.button-background {
+	background-image: url("KnobCancel.ico") !important;
+
+}*/
+
+span.button-background:hover {
+	background-size: 50% !important;
+	background-color: none !important;
+
+}
+
+span.button-background {
+	background-color: transparent !important;
+	background-size: 0% !important;
+}
+
+@-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank).*"), url("about:blank") {
+	* {
+		--color-accent-primary: #1974cf !important;
+		--color-accent-primary-hover: #1e90ff !important;
+		--color-accent-primary-active: #1e90ff !important;
+		--link-color: #1e90ff !important;
+	}
+}
+
+#input {
+	&[type="search"] {
+		background-color: #1e1d2d !important;
+	}
+}
+
+#PersonalToolbar .bookmark-item > .toolbarbutton-icon[src*="https://github.com"],
+/* Toolbar */
+#PersonalToolbar menuitem.bookmark-item > .menu-icon[src*="https://github.com"],
+/* Toolbar folder */
+#urlbar .urlbarView .urlbarView-row .urlbarView-favicon[src*="https://github.com"],
+/* Search suggestions */
+#PanelUI-bookmarks .toolbarbutton-icon[src*="https://github.com"],
+/* Toolbar bookmarks */
+#PanelUI-history .toolbarbutton-icon[src*="https://github.com"],
+/* Toolbar history */
+/* Edit bookmark */
+#bookmarkproperties[style*="url(page-icon:https://github.com"] .titleIcon {
+
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNiAwQzcuMTYgMCAwIDcuMTYgMCAxNkMwIDIzLjA4IDQuNTggMjkuMDYgMTAuOTQgMzEuMThDMTEuNzQgMzEuMzIgMTIuMDQgMzAuODQgMTIuMDQgMzAuNDJDMTIuMDQgMzAuMDQgMTIuMDIgMjguNzggMTIuMDIgMjcuNDRDOCAyOC4xOCA2Ljk2IDI2LjQ2IDYuNjQgMjUuNTZDNi40NiAyNS4xIDUuNjggMjMuNjggNSAyMy4zQzQuNDQgMjMgMy42NCAyMi4yNiA0Ljk4IDIyLjI0QzYuMjQgMjIuMjIgNy4xNCAyMy40IDcuNDQgMjMuODhDOC44OCAyNi4zIDExLjE4IDI1LjYyIDEyLjEgMjUuMkMxMi4yNCAyNC4xNiAxMi42NiAyMy40NiAxMy4xMiAyMy4wNkM5LjU2IDIyLjY2IDUuODQgMjEuMjggNS44NCAxNS4xNkM1Ljg0IDEzLjQyIDYuNDYgMTEuOTggNy40OCAxMC44NkM3LjMyIDEwLjQ2IDYuNzYgOC44MiA3LjY0IDYuNjJDNy42NCA2LjYyIDguOTggNi4yIDEyLjA0IDguMjZDMTMuMzIgNy45IDE0LjY4IDcuNzIgMTYuMDQgNy43MkMxNy40IDcuNzIgMTguNzYgNy45IDIwLjA0IDguMjZDMjMuMSA2LjE4IDI0LjQ0IDYuNjIgMjQuNDQgNi42MkMyNS4zMiA4LjgyIDI0Ljc2IDEwLjQ2IDI0LjYgMTAuODZDMjUuNjIgMTEuOTggMjYuMjQgMTMuNCAyNi4yNCAxNS4xNkMyNi4yNCAyMS4zIDIyLjUgMjIuNjYgMTguOTQgMjMuMDZDMTkuNTIgMjMuNTYgMjAuMDIgMjQuNTIgMjAuMDIgMjYuMDJDMjAuMDIgMjguMTYgMjAgMjkuODggMjAgMzAuNDJDMjAgMzAuODQgMjAuMyAzMS4zNCAyMS4xIDMxLjE4QzI3LjQyIDI5LjA2IDMyIDIzLjA2IDMyIDE2QzMyIDcuMTYgMjQuODQgMCAxNiAwVjBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+	/*     content:url(page-icon:https://docs.github.com); */
+}
+
+/* Shield colouring---------------------------------------*/
+/* Green ✔ */
+.urlbar-input-container[pageproxystate="valid"]:has(#identity-box:is(.verifiedDomain, .verifiedIdentity)) #trust-icon-container {
+	fill: light-dark(#12bc00, #12bc00) !important;
+	fill-opacity: 1 !important;
+}
+
+/* Bright green	✔ */
+.urlbar-input-container[pageproxystate="valid"]:has(#identity-box.mixedActiveBlocked) #trust-icon-container:not(.inactive:not(.insecure)) {
+	list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHBzOi8vbW96aWxsYS5vcmcvTVBMLzIuMC8uIC0tPg0KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJjb250ZXh0LWZpbGwiIGZpbGwtb3BhY2l0eT0iY29udGV4dC1maWxsLW9wYWNpdHkiPg0KICA8cGF0aCBkPSJNOC4wMDAwNCAxNkM3LjU3MDA0IDE2IDcuMTQwMDQgMTUuODkgNi43NjAwNCAxNS42N0M1LjEyMDA0IDE0Ljc0IDMuNjEwMDQgMTMuMzEgMi41MDAwNCAxMS42NEMxLjkzMDA0IDEwLjc4IDEuNTMwMDQgOS43MyAxLjMxMDA0IDguNTNMMC43NTAwNDEgNS41MUMwLjU1MDA0MSA0LjQ0IDEuMDYwMDQgMy4zOCAyLjAyMDA0IDIuODZMNi43NTAwNCAwLjNDNy40OTAwNCAtMC4xIDguMzgwMDQgLTAuMSA5LjEyMDA0IDAuM0wxMy45NyAyLjkxQzE0LjkzIDMuNDMgMTUuNDQgNC40OSAxNS4yNCA1LjU3TDE0LjY5IDguNTRDMTQuNDcgOS43NCAxNC4wNyAxMC43OCAxMy41IDExLjY0QzEyLjQgMTMuMzEgMTAuODkgMTQuNzUgOS4yNDAwNCAxNS42OEM4Ljg2MDA0IDE1LjkgOC40MzAwNCAxNi4wMSA4LjAwMDA0IDE2LjAxVjE2Wk03Ljk0MDA0IDEuNUM3Ljc4MDA0IDEuNSA3LjYxMDA0IDEuNTQgNy40NjAwNCAxLjYyTDIuNzQwMDQgNC4xOEMyLjM2MDA0IDQuMzkgMi4xNTAwNCA0LjgxIDIuMjMwMDQgNS4yNEwyLjc5MDA0IDguMjZDMi45ODAwNCA5LjI2IDMuMzAwMDQgMTAuMTMgMy43NjAwNCAxMC44MkM0LjczMDA0IDEyLjMgNi4wNjAwNCAxMy41NiA3LjUwMDA0IDE0LjM3QzcuODEwMDQgMTQuNTQgOC4xOTAwNCAxNC41NCA4LjUwMDA0IDE0LjM3QzkuOTQwMDQgMTMuNTUgMTEuMjcgMTIuMjkgMTIuMjUgMTAuODFDMTIuNzEgMTAuMTIgMTMuMDMgOS4yNiAxMy4yMiA4LjI2TDEzLjc3IDUuMjlDMTMuODUgNC44NiAxMy42NSA0LjQzIDEzLjI2IDQuMjNMOC40MTAwNCAxLjYyQzguMjYwMDQgMS41NCA4LjEwMDA0IDEuNSA3Ljk0MDA0IDEuNVoiLz4NCiAgPHBhdGggZmlsbD0iIzRDRTY5OSIgZD0iTTcuNjM5OTQgMTAuMjIwMkM3LjQ0OTk0IDEwLjIyMDIgNy4yNTk5NCAxMC4xNTAyIDcuMTA5OTQgMTAuMDAwMkw0LjkzOTk0IDcuODMwMjFMNS45OTk5NCA2Ljc3MDIyTDcuNjM5OTQgOC40MTAyMUwxMC41Nzk5IDUuNDcwMjFMMTEuNjM5OSA2LjUzMDIyTDguMTY5OTQgMTAuMDAwMkM4LjAxOTk0IDEwLjE1MDIgNy44Mjk5NCAxMC4yMjAyIDcuNjM5OTQgMTAuMjIwMloiLz4NCjwvc3ZnPg==") !important;
+	fill: light-dark(#12bc00, #12bc00) !important;
+	fill-opacity: 1 !important;
+}
+
+/* Red */
+.urlbar-input-container[pageproxystate="valid"]:has(#identity-box.notSecure) #trust-icon-container {
+	fill: light-dark(#12bc00, #12bc00) !important;
+	fill-opacity: 1 !important;
+}
+
+/* Cyan	*/
+.urlbar-input-container[pageproxystate="valid"]:has(#identity-box.chromeUI) #trust-icon-container {
+	fill: #009acd !important;
+	fill-opacity: 1 !important;
+}
+
+/* Deepskyblue */
+.urlbar-input-container[pageproxystate="valid"]:has(#identity-box.localResource) #trust-icon-container:not(.file) {
+	fill: light-dark(deepskyblue, deepskyblue) !important;
+	fill-opacity: 1 !important;
+}
+
+#identity-box[pageproxystate="valid"].chromeUI #identity-icon,
+.site-information-popup[connection="chrome"] .identity-popup-security-connection {
+	list-style-image: url(chrome://devtools/skin/images/browsers/firefox.svg) !important;
+	fill: light-dark(rgba(0, 191, 255, .9), rgba(0, 191, 255, .9)) !important;
+	fill-opacity: 1 !important;
+}
+
+/* Blue-green */
+.urlbar-input-container[pageproxystate="valid"]:has(#identity-box.extensionPage) #trust-icon-container {
+	fill: light-dark(#14b9ac, #14b9ac) !important;
+	fill-opacity: 1 !important;
+}
+
+#identity-box[pageproxystate="valid"].extensionPage #identity-icon,
+.site-information-popup[connection="extension"] .identity-popup-security-connection {
+	list-style-image: url(chrome://mozapps/skin/extensions/extension.svg) !important;
+	fill: light-dark(#14b9ac, #14b9ac) !important;
+	fill-opacity: 1 !important;
+}
+
+/* Purple */
+#identity-icon {
+	list-style-image: url(chrome://global/skin/icons/info.svg) !important;
+	fill: light-dark(#cf1aff, #cf1aff) !important;
+	fill-opacity: 1 !important;
+}
+
+#identity-box[pageproxystate="invalid"] {
+	#identity-icon {
+		list-style-image: url(chrome://global/skin/icons/search-glass.svg) !important;
+		fill: unset !important;
+		fill-opacity: initial !important;
+	}
+}
+
+/* Gold	*/
+.urlbar-input-container[pageproxystate="valid"]:has(#identity-box:is(.weakCipher,
+		.mixedDisplayContent,
+		.mixedDisplayContentLoadedActiveBlocked,
+		.certUserOverridden,
+		.certErrorPage)) #trust-icon-container {
+	color: #e5c100 !important;
+	fill-opacity: 1 !important;
+}
+
+/* Ochre */
+.urlbar-input-container[pageproxystate="valid"]:has(#identity-box.unknownIdentity) #trust-icon-container {
+	fill: #cc7722 !important;
+	fill-opacity: 1 !important;
+}
+
+/* Yellow Orange ✔ (Trackers blocked) */
+.urlbar-input-container[pageproxystate="valid"]:has(#tracking-protection-icon-box:not([hasException])[active]) #trust-icon-container {
+	list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHBzOi8vbW96aWxsYS5vcmcvTVBMLzIuMC8uIC0tPg0KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJjb250ZXh0LWZpbGwiIGZpbGwtb3BhY2l0eT0iY29udGV4dC1maWxsLW9wYWNpdHkiPg0KICA8cGF0aCBkPSJNOC4wMDAwNCAxNkM3LjU3MDA0IDE2IDcuMTQwMDQgMTUuODkgNi43NjAwNCAxNS42N0M1LjEyMDA0IDE0Ljc0IDMuNjEwMDQgMTMuMzEgMi41MDAwNCAxMS42NEMxLjkzMDA0IDEwLjc4IDEuNTMwMDQgOS43MyAxLjMxMDA0IDguNTNMMC43NTAwNDEgNS41MUMwLjU1MDA0MSA0LjQ0IDEuMDYwMDQgMy4zOCAyLjAyMDA0IDIuODZMNi43NTAwNCAwLjNDNy40OTAwNCAtMC4xIDguMzgwMDQgLTAuMSA5LjEyMDA0IDAuM0wxMy45NyAyLjkxQzE0LjkzIDMuNDMgMTUuNDQgNC40OSAxNS4yNCA1LjU3TDE0LjY5IDguNTRDMTQuNDcgOS43NCAxNC4wNyAxMC43OCAxMy41IDExLjY0QzEyLjQgMTMuMzEgMTAuODkgMTQuNzUgOS4yNDAwNCAxNS42OEM4Ljg2MDA0IDE1LjkgOC40MzAwNCAxNi4wMSA4LjAwMDA0IDE2LjAxVjE2Wk03Ljk0MDA0IDEuNUM3Ljc4MDA0IDEuNSA3LjYxMDA0IDEuNTQgNy40NjAwNCAxLjYyTDIuNzQwMDQgNC4xOEMyLjM2MDA0IDQuMzkgMi4xNTAwNCA0LjgxIDIuMjMwMDQgNS4yNEwyLjc5MDA0IDguMjZDMi45ODAwNCA5LjI2IDMuMzAwMDQgMTAuMTMgMy43NjAwNCAxMC44MkM0LjczMDA0IDEyLjMgNi4wNjAwNCAxMy41NiA3LjUwMDA0IDE0LjM3QzcuODEwMDQgMTQuNTQgOC4xOTAwNCAxNC41NCA4LjUwMDA0IDE0LjM3QzkuOTQwMDQgMTMuNTUgMTEuMjcgMTIuMjkgMTIuMjUgMTAuODFDMTIuNzEgMTAuMTIgMTMuMDMgOS4yNiAxMy4yMiA4LjI2TDEzLjc3IDUuMjlDMTMuODUgNC44NiAxMy42NSA0LjQzIDEzLjI2IDQuMjNMOC40MTAwNCAxLjYyQzguMjYwMDQgMS41NCA4LjEwMDA0IDEuNSA3Ljk0MDA0IDEuNVoiLz4NCiAgPHBhdGggZmlsbD0iI2U2YjAwMCIgZD0iTTcuNjM5OTQgMTAuMjIwMkM3LjQ0OTk0IDEwLjIyMDIgNy4yNTk5NCAxMC4xNTAyIDcuMTA5OTQgMTAuMDAwMkw0LjkzOTk0IDcuODMwMjFMNS45OTk5NCA2Ljc3MDIyTDcuNjM5OTQgOC40MTAyMUwxMC41Nzk5IDUuNDcwMjFMMTEuNjM5OSA2LjUzMDIyTDguMTY5OTQgMTAuMDAwMkM4LjAxOTk0IDEwLjE1MDIgNy44Mjk5NCAxMC4yMjAyIDcuNjM5OTQgMTAuMjIwMloiLz4NCjwvc3ZnPg==") !important;
+	fill: light-dark(#12bc00, #12bc00) !important;
+	fill-opacity: 1 !important;
+}
+
+/* Red */
+#trust-icon-container {
+	&:where(.insecure) {
+		list-style-image: url(chrome://browser/skin/trust-icon-insecure.svg) !important;
+		/* fill: light-dark(#12bc00, #12bc00) !important; */
+		fill-opacity: 1 !important;
+	}
+
+	/* Green */
+	&.secure {
+		list-style-image: url(chrome://browser/skin/trust-icon-active.svg) !important;
+		/* fill: light-dark(#12bc00, #12bc00) !important; */
+		fill-opacity: 1 !important;
+	}
+
+	/* Orange x	(Tracking Protection is off) */
+	&.inactive:not(.insecure) {
+		/* list-style-image: url(chrome://browser/skin/trust-icon-disabled.svg); */
+		list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHBzOi8vbW96aWxsYS5vcmcvTVBMLzIuMC8uIC0tPg0KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJjb250ZXh0LWZpbGwiIGZpbGwtb3BhY2l0eT0iY29udGV4dC1maWxsLW9wYWNpdHkiPg0KICA8cGF0aCBmaWxsPSIjRkY1OTAwIiBkPSJNOC4wMDM3OCA2LjkzOTE1TDkuOTQ4MjkgNC45OTQ2M0wxMS4wMDkgNi4wNTUyOUw5LjA2NDQ0IDcuOTk5OEwxMS4wMDkgOS45NDQzMkw5Ljk0ODI5IDExLjAwNUw4LjAwMzc4IDkuMDYwNDdMNi4wNjYyOCAxMC45OThMNS4wMDU2MiA5LjkzNzNMNi45NDMxMiA3Ljk5OThMNS4wMDU2MiA2LjA2MjNMNi4wNjYyOCA1LjAwMTY0TDguMDAzNzggNi45MzkxNVoiLz4NCiAgPHBhdGggZD0iTTguMDAwMDQgMTZDNy41NzAwNCAxNiA3LjE0MDA0IDE1Ljg5IDYuNzYwMDQgMTUuNjdDNS4xMjAwNCAxNC43NCAzLjYxMDA0IDEzLjMxIDIuNTAwMDQgMTEuNjRDMS45MzAwNCAxMC43OCAxLjUzMDA0IDkuNzMgMS4zMTAwNCA4LjUzTDAuNzUwMDQxIDUuNTFDMC41NTAwNDEgNC40NCAxLjA2MDA0IDMuMzggMi4wMjAwNCAyLjg2TDYuNzUwMDQgMC4zQzcuNDkwMDQgLTAuMSA4LjM4MDA0IC0wLjEgOS4xMjAwNCAwLjNMMTMuOTcgMi45MUMxNC45MyAzLjQzIDE1LjQ0IDQuNDkgMTUuMjQgNS41N0wxNC42OSA4LjU0QzE0LjQ3IDkuNzQgMTQuMDcgMTAuNzggMTMuNSAxMS42NEMxMi40IDEzLjMxIDEwLjg5IDE0Ljc1IDkuMjQwMDQgMTUuNjhDOC44NjAwNCAxNS45IDguNDMwMDQgMTYuMDEgOC4wMDAwNCAxNi4wMVYxNlpNNy45NDAwNCAxLjVDNy43ODAwNCAxLjUgNy42MTAwNCAxLjU0IDcuNDYwMDQgMS42MkwyLjc0MDA0IDQuMThDMi4zNjAwNCA0LjM5IDIuMTUwMDQgNC44MSAyLjIzMDA0IDUuMjRMMi43OTAwNCA4LjI2QzIuOTgwMDQgOS4yNiAzLjMwMDA0IDEwLjEzIDMuNzYwMDQgMTAuODJDNC43MzAwNCAxMi4zIDYuMDYwMDQgMTMuNTYgNy41MDAwNCAxNC4zN0M3LjgxMDA0IDE0LjU0IDguMTkwMDQgMTQuNTQgOC41MDAwNCAxNC4zN0M5Ljk0MDA0IDEzLjU1IDExLjI3IDEyLjI5IDEyLjI1IDEwLjgxQzEyLjcxIDEwLjEyIDEzLjAzIDkuMjYgMTMuMjIgOC4yNkwxMy43NyA1LjI5QzEzLjg1IDQuODYgMTMuNjUgNC40MyAxMy4yNiA0LjIzTDguNDEwMDQgMS42MkM4LjI2MDA0IDEuNTQgOC4xMDAwNCAxLjUgNy45NDAwNCAxLjVaIi8+DQo8L3N2Zz4=") !important;
+		fill: light-dark(#12bc00, #12bc00) !important;
+		fill-opacity: 1 !important;
+	}
+
+	/* Orange !	*/
+	&.warning {
+		/* list-style-image: url(chrome://browser/skin/trust-icon-warning.svg) !important; */
+		list-style-image: url("data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljDQogICAtIExpY2Vuc2UsIHYuIDIuMC4gSWYgYSBjb3B5IG9mIHRoZSBNUEwgd2FzIG5vdCBkaXN0cmlidXRlZCB3aXRoIHRoaXMNCiAgIC0gZmlsZSwgWW91IGNhbiBvYnRhaW4gb25lIGF0IGh0dHBzOi8vbW96aWxsYS5vcmcvTVBMLzIuMC8uIC0tPg0KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJjb250ZXh0LWZpbGwiIGZpbGwtb3BhY2l0eT0iY29udGV4dC1maWxsLW9wYWNpdHkiPg0KICA8cGF0aCBkPSJNOC4wMDAwNCAxNkM3LjU3MDA0IDE2IDcuMTQwMDQgMTUuODkgNi43NjAwNCAxNS42N0M1LjEyMDA0IDE0Ljc0IDMuNjEwMDQgMTMuMzEgMi41MDAwNCAxMS42NEMxLjkzMDA0IDEwLjc4IDEuNTMwMDQgOS43MyAxLjMxMDA0IDguNTNMMC43NTAwNDEgNS41MUMwLjU1MDA0MSA0LjQ0IDEuMDYwMDQgMy4zOCAyLjAyMDA0IDIuODZMNi43NTAwNCAwLjNDNy40OTAwNCAtMC4xIDguMzgwMDQgLTAuMSA5LjEyMDA0IDAuM0wxMy45NyAyLjkxQzE0LjkzIDMuNDMgMTUuNDQgNC40OSAxNS4yNCA1LjU3TDE0LjY5IDguNTRDMTQuNDcgOS43NCAxNC4wNyAxMC43OCAxMy41IDExLjY0QzEyLjQgMTMuMzEgMTAuODkgMTQuNzUgOS4yNDAwNCAxNS42OEM4Ljg2MDA0IDE1LjkgOC40MzAwNCAxNi4wMSA4LjAwMDA0IDE2LjAxVjE2Wk03Ljk0MDA0IDEuNUM3Ljc4MDA0IDEuNSA3LjYxMDA0IDEuNTQgNy40NjAwNCAxLjYyTDIuNzQwMDQgNC4xOEMyLjM2MDA0IDQuMzkgMi4xNTAwNCA0LjgxIDIuMjMwMDQgNS4yNEwyLjc5MDA0IDguMjZDMi45ODAwNCA5LjI2IDMuMzAwMDQgMTAuMTMgMy43NjAwNCAxMC44MkM0LjczMDA0IDEyLjMgNi4wNjAwNCAxMy41NiA3LjUwMDA0IDE0LjM3QzcuODEwMDQgMTQuNTQgOC4xOTAwNCAxNC41NCA4LjUwMDA0IDE0LjM3QzkuOTQwMDQgMTMuNTUgMTEuMjcgMTIuMjkgMTIuMjUgMTAuODFDMTIuNzEgMTAuMTIgMTMuMDMgOS4yNiAxMy4yMiA4LjI2TDEzLjc3IDUuMjlDMTMuODUgNC44NiAxMy42NSA0LjQzIDEzLjI2IDQuMjNMOC40MTAwNCAxLjYyQzguMjYwMDQgMS41NCA4LjEwMDA0IDEuNSA3Ljk0MDA0IDEuNVoiLz4NCiAgPHBhdGggZmlsbD0iI0ZGNTkwMCIgZD0iTTcuMjUgNC41SDguNzVWOC41SDcuMjVWNC41WiIvPg0KICA8cGF0aCBmaWxsPSIjRkY1OTAwIiBkPSJNNy4yNSAxMEg4Ljc1VjExLjVINy4yNVYxMFoiLz4NCjwvc3ZnPg==") !important;
+		fill: light-dark(#12bc00, #12bc00) !important;
+		fill-opacity: 1 !important;
+	}
+
+	/* Blue-purple */
+	&.file {
+		list-style-image: url(chrome://global/skin/icons/page-portrait.svg) !important;
+		fill: light-dark(#3f00ff, #8b66ff) !important;
+		fill-opacity: 1 !important;
+	}
+}
+
+/* Remove unnecessarily long button labels to make them more compact */
+#identity-box > #identity-icon-box > #identity-icon-label {
+	display: none !important;
+}
+
+#identity-box > #identity-icon-box > #identity-icon {
+	margin-inline-start: -2px !important;
+	margin-inline-end: -2px !important;
+}
+
+#trust-icon-container > #trust-label {
+	display: none !important;
+}
+
+/* Set the button's	background color to match the address bar */
+.identity-box-button,
+#trust-icon-container,
+#tracking-protection-icon-container {
+	outline: var(--toolbarbutton-outline) !important;
+	outline-offset: var(--toolbarbutton-outline-offset) !important;
+	background-color: transparent !important;
+
+	&:hover:not([open="true"]) {
+		background-color: var(--urlbar-box-hover-bgcolor) !important;
+		outline-color: var(--toolbarbutton-hover-outline-color) !important;
+	}
+
+	&:hover:active,
+	&[open="true"] {
+		background-color: var(--urlbar-box-active-bgcolor) !important;
+		outline-color: var(--toolbarbutton-active-outline-color) !important;
+	}
+
+	&:focus-visible {
+		outline: var(--focus-outline) !important;
+		outline-offset: var(--focus-outline-inset) !important;
+	}
 }
