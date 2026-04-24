@@ -18,13 +18,14 @@
 	--in-content-border-active: #1e90ff !important;
 	--in-content-border-active-shadow: #1e90ff40 !important;
 	font-family: "Fira Sans" !important;
-	outline: none !important;
+	outline: unset !important;
 	--button-corner-rounding: 4px !important;
 	--toolbarbutton-hover-background: #1e90ff80 !important;
 	--focus-outline: 0px !important;
 	--default-focusring: 0 !important;
 	--toolbar-field-focus-border-color: transparent !important;
 	caret-color: #1e90ff !important;
+	--focus-outline-color: transparent;
 }
 
 
@@ -35,7 +36,7 @@ button::-moz-focus-inner,
 :-moz-focusring *,
 :focus *,
 :-moz-focusring:focus:not(:focus-visible),
-:-moz-focusring:focus:not(:focus-visible)>* {
+:-moz-focusring:focus:not(:focus-visible) > * {
 	outline: unset !important;
 	outline-offset: unset !important;
 	-moz-outline-radius: unset !important;
@@ -171,10 +172,10 @@ url("about:profiles") {
 
 	#newtab-search-text,
 	#searchSuggestionTable,
-	#searchSuggestionTable>tr,
-	#searchSuggestionTable>tr>td,
-	#searchSuggestionTable>table>tr>td,
-	#searchSuggestionTable>button {
+	#searchSuggestionTable > tr,
+	#searchSuggestionTable > tr > td,
+	#searchSuggestionTable > table > tr > td,
+	#searchSuggestionTable > button {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
@@ -601,7 +602,7 @@ url("about:profiles") {
 	}
 
 	.addon-webext-perm-info,
-	.popup-notification-learnmore-link>text-link {
+	.popup-notification-learnmore-link > text-link {
 		color: #1e90ff !important;
 	}
 
@@ -913,7 +914,7 @@ url("about:profiles") {
 		--in-content-border-highlight: var(--accent-1) !important;
 		--in-content-border-focus: var(--accent-1) !important;
 		--in-content-border-color: var(--tone-6) !important;
-		--in-content-category-outline-focus: 1px dotted #0a84ff;
+		--in-content-category-outline-focus: 1px solid #0a84ff;
 		--in-content-category-text: var(--tone-2) !important;
 		--in-content-category-text-active: #0c0c0d;
 		--in-content-category-text-selected: var(--accent-1) !important;
@@ -1145,7 +1146,7 @@ url("about:profiles") {
 		font-size: 14px !important;
 		background-color: #1e1d2d !important;
 		border: 0px !important;
-		outline: none !important;
+		outline: unset !important;
 		box-shadow: none !important;
 	}
 
@@ -1155,7 +1156,7 @@ url("about:profiles") {
 		background-color: #1e90ff !important;
 		border-radius: 0px !important;
 		border: 0px !important;
-		outline: none !important;
+		outline: unset !important;
 		box-shadow: none !important;
 	}
 
@@ -1169,7 +1170,7 @@ url("about:profiles") {
 		font-size: 13px !important;
 		background-color: #1e1d2d !important;
 		border: 0px !important;
-		outline: none !important;
+		outline: unset !important;
 		box-shadow: none !important;
 	}
 	.SearchResult:hover {
@@ -1178,7 +1179,7 @@ url("about:profiles") {
 		background-color: #1e90ff !important;
 		border-radius: 4px !important;
 		border: 0px !important;
-		outline: none !important;
+		outline: unset !important;
 		box-shadow: none !important;
 	}*/
 
@@ -1348,7 +1349,7 @@ url("about:profiles") {
 	}
 
 	.addon-webext-perm-info,
-	.popup-notification-learnmore-lin>text-link {
+	.popup-notification-learnmore-lin > text-link {
 		color: #1e90ff !important;
 	}
 
@@ -1442,7 +1443,7 @@ url("about:profiles") {
 	}
 
 	.AddonSummaryCard-header-text a,
-	.Addon-Title>a,
+	.Addon-Title > a,
 	.AddonTitle-author a {
 		color: #1e90ff !important;
 		text-decoration: none !important;
@@ -1504,7 +1505,7 @@ browser[type="content"] {
 	background: #1e1d2d !important;
 	background-color: #1e1d2d !important;
 	color: #ffffff !important;
-	outline: none !important;
+	outline: unset !important;
 }
 */
 
@@ -1548,7 +1549,7 @@ browser[type="content"] {
 		transition: opacity 150ms, visibility 0s 2s !important;
 	}
 
-	.open>.dropdown-popup {
+	.open > .dropdown-popup {
 		opacity: 1 !important;
 		transition: opacity 150ms !important;
 	}
@@ -1565,7 +1566,7 @@ browser[type="content"] {
 		border: none !important;
 	}
 
-	.font-type-buttons>button>.description {
+	.font-type-buttons > button > .description {
 		color: #bebebe !important;
 	}
 }
@@ -1680,7 +1681,7 @@ browser[type="content"] {
 
 	input {
 		background-color: #1e1d2d !important;
-		outline: none !important;
+		outline: unset !important;
 	}
 
 	.reveal-password-checkbox:hover {
@@ -1738,7 +1739,7 @@ browser[type="content"] {
 		border-left: 2px solid #073642 !important;
 	}
 
-	pre> :first-child {
+	pre > :first-child {
 		padding-right: 1ch;
 	}
 
@@ -1786,7 +1787,7 @@ browser[type="content"] {
 	}
 
 	.highlight .error,
-	.highlight .error> :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
+	.highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
 		color: #002b36 !important;
 		background-color: #dc322f !important;
 	}
@@ -1884,10 +1885,10 @@ url('about:newtab') {
 
 	#newtab-search-text,
 	#searchSuggestionTable,
-	#searchSuggestionTable>tr,
-	#searchSuggestionTable>tr>td,
-	#searchSuggestionTable>table>tr>td,
-	#searchSuggestionTable>button {
+	#searchSuggestionTable > tr,
+	#searchSuggestionTable > tr > td,
+	#searchSuggestionTable > table > tr > td,
+	#searchSuggestionTable > button {
 		background-color: #1e1d2d !important;
 		color: #f8f8f2 !important;
 		fill: #f8f8f2 !important;
@@ -1964,13 +1965,18 @@ url('about:newtab') {
 		background-color: #1e90ff !important;
 		border: none !important;
 		color: #ffffff !important;
+		outline: unset !important;
+		outline-offset: unset !important;
 	}
 
 	#restart:hover {
 		background-color: #1e90ff80 !important;
 		border: none !important;
 		color: #ffffff !important;
+		outline: unset !important;
+		outline-offset: unset !important;
 	}
+
 }
 
 /*
@@ -2012,12 +2018,12 @@ url-prefix("chrome: //browser") {
 	menulist {
 
 		border: 0px !important;
-		outline: none !important;
+		outline: unset !important;
 		box-shadow: none !important;
 	}
 }
 
-@-moz-document url("about:memory") {
+@-moz-document url("about:memory"), url("about:glean") {
 
 	html,
 	body {
@@ -2059,10 +2065,10 @@ url-prefix("chrome: //browser") {
 		color: #ffffff !important;
 	}
 
-	#search-handoff-button:active>.fake-textbox,
-	#search-handoff-button:hover>.fake-textbox,
-	#search-handoff-button:focus>.fake-textbox,
-	#search-handoff-button:focus-within>.fake-textbox {
+	#search-handoff-button:active > .fake-textbox,
+	#search-handoff-button:hover > .fake-textbox,
+	#search-handoff-button:focus > .fake-textbox,
+	#search-handoff-button:focus-within > .fake-textbox {
 		color: #ffffff !important;
 		opacity: 0.8 !important;
 	}
@@ -2177,7 +2183,7 @@ url("about:newtab") {
 
 		background-color: #1e1d2d !important;
 		height: 73px !important;
-		outline: none !important;
+		outline: unset !important;
 		box-shadow: none !important;
 		border: none !important;
 
@@ -2331,7 +2337,7 @@ url("about:newtab") {
 :where(textarea, input[type="text"], input[type="search"], input[type="password"], input[type="url"]) {
 	/*appearance: none !important;  */
 	/*border-style: solid ;*/
-	outline: none !important;
+	outline: unset !important;
 	box-shadow: none !important;
 	/* background: #1e1d2d !important;
 	color: white !important;    */
@@ -2405,10 +2411,10 @@ popup-notification-button:hover {
 textbox {
 	color: #ffffff !important;
 	border: 0px !important;
-	outline: none !important;
+	outline: unset !important;
 }
 
-.checkbox:not([disabled]):hover>.checkbox-check {
+.checkbox:not([disabled]):hover > .checkbox-check {
 	border-color: #1e90ff !important;
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
@@ -2416,14 +2422,14 @@ textbox {
 	fill: #ffffff !important;
 }
 
-.checkbox[checked]>.checkbox-check {
+.checkbox[checked] > .checkbox-check {
 	list-style-image: url("chrome://global/skin/icons/check.svg");
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
 	background-color: #1e90ff !important;
 }
 
-.checkbox>.checkbox-check {
+.checkbox > .checkbox-check {
 	background-color: #1e90ff !important;
 	color: #ffffff !important;
 	border-color: #1e90ff !important;
@@ -2536,7 +2542,7 @@ url("about:newtab") {
 	.input-row input[type="tel"],
 	.input-row input[type="text"],
 	.input-row input::placeholder,
-	.firefox-family-services>ul>.firefox-service,
+	.firefox-family-services > ul > .firefox-service,
 	.faint,
 	.faint a,
 	.text-grey-400 {
@@ -2715,12 +2721,12 @@ p::selection {
 	color: #ffffff !important;
 }
 
-#netErrorButtonContainer>.try-again {
+#netErrorButtonContainer > .try-again {
 	background: #1e90ff !important;
 	color: #ffffff !important;
 }
 
-#netErrorButtonContainer>.try-again:hover {
+#netErrorButtonContainer > .try-again:hover {
 	background: #1e90ff80 !important;
 	color: #ffffff !important;
 }
@@ -2764,7 +2770,7 @@ p::selection {
 	max-width: 276px !important;
 	box-shadow: none !important;
 	border: none !important;
-	outline: none !important;
+	outline: unset !important;
 }
 */
 @-moz-document url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
@@ -2773,7 +2779,7 @@ p::selection {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}*/
-	checkbox:not([disabled]):hover>.checkbox-check {
+	checkbox:not([disabled]):hover > .checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -2781,12 +2787,12 @@ p::selection {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked]>.checkbox-check {
+	checkbox[checked] > .checkbox-check {
 		color: #ffffff !important;
 		background: #1e90ff !important;
 	}
 
-	checkbox>.checkbox-check {
+	checkbox > .checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
@@ -2858,17 +2864,17 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	/* avoid double inline margins when #description is nested: */
-	#description-box>#description {
+	#description-box > #description {
 		margin-inline: 0;
 	}
 
 	/* Parent selector to win on specificity against common.css */
-	#rememberContainer>.toggle-container-with-text {
+	#rememberContainer > .toggle-container-with-text {
 		align-items: baseline;
 		color: var(--in-content-deemphasized-text);
 	}
 
-	.toggle-container-with-text>html|input[type="checkbox"] {
+	.toggle-container-with-text > html|input[type="checkbox"] {
 		margin-inline-end: 8px;
 		/* Ensure the checkbox is properly aligned with the text: */
 		translate: 0 calc(1px + max(60% - 0.6em, 0px));
@@ -2908,7 +2914,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	checkbox:not([disabled]):hover>.checkbox-check {
+	checkbox:not([disabled]):hover > .checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -2916,14 +2922,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked]>.checkbox-check {
+	checkbox[checked] > .checkbox-check {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill !important;
 		fill: #ffffff !important;
 		background-color: #1e90ff !important;
 	}
 
-	checkbox>.checkbox-check {
+	checkbox > .checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
@@ -3070,20 +3076,20 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background: #1e1d2d !important;
 	}
 
-	#firewall>div {
+	#firewall > div {
 		background-color: #333 !important;
 	}
 
-	#firewall>div:hover {
+	#firewall > div:hover {
 		background-color: #444 !important;
 	}
 
-	#firewall>div>span {
+	#firewall > div > span {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
-	#firewall>div>span:first-of-type~span {
+	#firewall > div > span:first-of-type ~ span {
 		border-left: 1px solid #111 !important;
 	}
 
@@ -3091,7 +3097,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-color: #1e1d2d !important;
 	}
 
-	#extraTools>span:hover {
+	#extraTools > span:hover {
 		fill: #1e90ff !important;
 	}
 
@@ -3142,8 +3148,8 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	#loggerSettingsDialog,
 	#modalOverlayContainer,
 	#netFilteringDialog,
-	#netFilteringDialog>.panes>.details>div,
-	#netFilteringDialog>div.panes>.dynamic .row {
+	#netFilteringDialog > .panes > .details > div,
+	#netFilteringDialog > div.panes > .dynamic .row {
 		background-color: #1e1d2d !important;
 		border-color: grey !important;
 	}
@@ -3167,7 +3173,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#cloudWidget>span {
+	#cloudWidget > span {
 		background: #1e1d2d !important;
 		color: #ffffff !important;
 	}
@@ -3177,19 +3183,19 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#fa-icon>svg,
-	#fa-icon>.fa-icon_cog,
-	.fa-icon>.fa-icon_clock-o,
-	.fa-icon>.fa-icon_floppy-o,
-	.fa-icon>.fa-icon_info-circle,
-	.fa-icon>.fa-icon_pause-circle-o,
-	.fa-icon>.fa-icon_play-circle-o,
-	.fa-icon>.fa-icon_power-off,
-	.fa-icon>.fa-icon_question-circle,
-	.fa-icon>.fa-icon_refresh,
-	.fa-icon>.fa-icon_save,
-	.fa-icon>.fa-icon_sliders,
-	.fa-icon>.fa-icon_undo {
+	#fa-icon > svg,
+	#fa-icon > .fa-icon_cog,
+	.fa-icon > .fa-icon_clock-o,
+	.fa-icon > .fa-icon_floppy-o,
+	.fa-icon > .fa-icon_info-circle,
+	.fa-icon > .fa-icon_pause-circle-o,
+	.fa-icon > .fa-icon_play-circle-o,
+	.fa-icon > .fa-icon_power-off,
+	.fa-icon > .fa-icon_question-circle,
+	.fa-icon > .fa-icon_refresh,
+	.fa-icon > .fa-icon_save,
+	.fa-icon > .fa-icon_sliders,
+	.fa-icon > .fa-icon_undo {
 		background: transparent !important;
 	}
 
@@ -3307,12 +3313,12 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		--checkbox-ink: #ffffff !important;
 	}
 
-	.checkbox>input[type="checkbox"]+svg {
+	.checkbox > input[type="checkbox"] + svg {
 		background-color: transparent !important;
 		border: 1px solid white !important;
 	}
 
-	.checkbox>input[type="checkbox"]:checked+svg {
+	.checkbox > input[type="checkbox"]:checked + svg {
 		background-color: #1e90ff !important;
 		border-color: white !important;
 
@@ -3320,7 +3326,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	.checkbox[disabled],
-	.checkbox[disabled]~span {
+	.checkbox[disabled] ~ span {
 		filter: var(--checkbox-disabled-filter) !important;
 	}
 }
@@ -3345,24 +3351,24 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#sieve_container>.disabled>span {
+	#sieve_container > .disabled > span {
 		text-shadow: 0 0 5px #000000 !important;
 		color: #ff5050 !important;
 	}
 
-	#sieve_container>.selected>span {
+	#sieve_container > .selected > span {
 		background-image: linear-gradient(to bottom, #1e90ff, #1e90ff80 90%) !important;
 	}
 
-	#sieve_container>div:not(.opened)>span:hover {
+	#sieve_container > div:not(.opened) > span:hover {
 		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
 	}
 
-	#sieve_container>div.opened {
+	#sieve_container > div.opened {
 		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
 	}
 
-	#sieve_container>.opened>span {
+	#sieve_container > .opened > span {
 		background-image: linear-gradient(to bottom,
 				#1e90ff80,
 				#1e90ff 90%) !important;
@@ -3394,6 +3400,11 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 
 	#hz_css {
 		font-family: Fira Code !important;
+	}
+
+	#sieve_count * {
+		padding-top: 5px !important;
+		border: none !important;
 	}
 }
 
@@ -3510,12 +3521,12 @@ tooltip {
 		border: 1px solid #1e90ff !important;
 	}
 
-	message-bar>button {
+	message-bar > button {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}
 
-	message-bar>button:hover {
+	message-bar > button:hover {
 		background-color: #1e90ff80 !important;
 		color: #ffffff !important;
 	}
@@ -3572,7 +3583,7 @@ tooltip {
 			padding-right: 28px !important;
 		}
 
-		addon-list>section,
+		addon-list > section,
 		recommended-addon-list {
 			padding: 1em !important;
 			display: grid !important;
@@ -3591,7 +3602,7 @@ tooltip {
 			max-width: calc(100% + 32px) !important;
 		}
 
-		section>h2 {
+		section > h2 {
 			grid-area: hd !important;
 		}
 
@@ -3654,7 +3665,7 @@ tooltip {
 		font-size: 14px !important;
 		border: none !important;
 		color: #ffffff !important;
-		outline: none !important;
+		outline: unset !important;
 		box-shadow: none !important;
 	}
 
@@ -3705,7 +3716,7 @@ tooltip {
 		color: #1e90ff !important;
 	}
 
-	#categories>.category:hover {
+	#categories > .category:hover {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
@@ -3802,8 +3813,16 @@ tooltip {
 	}
 
 	.addon.card {
+		border: none !important;
 		border-radius: 4px !important;
 		background-color: #1e90ff15 !important;
+		color: #ffffff !important;
+	}
+
+	.addon.card:hover {
+		border: none !important;
+		border-radius: 4px !important;
+		background-color: #1e90ff50 !important;
 		color: #ffffff !important;
 	}
 
@@ -3921,11 +3940,11 @@ tooltip {
 		background-color: #1e90ff50 !important;
 	}
 
-	radio:not([disabled="true"]):hover>.radio-check {
+	radio:not([disabled="true"]):hover > .radio-check {
 		border-color: #1e90ff !important;
 	}
 
-	radio:hover>.radio-check {
+	radio:hover > .radio-check {
 		fill: #1e90ff80 !important;
 	}
 
@@ -3946,8 +3965,8 @@ tooltip {
 		outline-offset: -1px !important;
 	}
 
-	.tab-group[last-input-type="mouse"]>button.tab-button:-moz-focusring {
-		outline: none !important;
+	.tab-group[last-input-type="mouse"] > button.tab-button:-moz-focusring {
+		outline: unset !important;
 		box-shadow: none !important;
 	}
 
@@ -3983,11 +4002,11 @@ tooltip {
 		padding: 4px 16px !important;
 	}
 
-	plugin-options>panel-list,
-	addon-options>panel-list {
+	plugin-options > panel-list,
+	addon-options > panel-list {
 		box-shadow: none !important;
 		background-color: #1e1d2d !important;
-		outline: none !important;
+		outline: unset !important;
 		border: none !important;
 		color: #ffffff !important;
 		/* Having a backdrop-filter leads to some unexpected layering issues */
@@ -4055,7 +4074,7 @@ tooltip {
 	.card {
 		background-color: #1e90ff90 !important;
 		border-color: #1e90ff !important;
-		outline: none !important;
+		outline: unset !important;
 		box-shadow: none !important;
 	}
 
@@ -4073,7 +4092,7 @@ tooltip {
 		border-color: #1e90ff !important;
 	}
 
-	body>main {
+	body > main {
 		grid-template-columns: 1fr !important;
 	}
 
@@ -4153,7 +4172,7 @@ dialog,
 #customizationui-widget-panel {
 	font-family: Fira Sans !important;
 	color: #ffffff !important;
-	outline: none !important;
+	outline: unset !important;
 	box-shadow: none !important;
 	outline-offset: unset !important;
 }
@@ -4162,15 +4181,20 @@ dialog,
 	border-radius: 8px !important;
 }
 
-#appcontent>#tabbrowser-tabbox>#tabbrowser-tabpanels>.deck-selected>.browserContainer>.browserStack>browser * {
+#appcontent > #tabbrowser-tabbox > #tabbrowser-tabpanels > .deck-selected > .browserContainer > .browserStack > browser * {
 	border-radius: 0px !important;
 }
 
 @-moz-document url-prefix("moz-extension://2793f723-d472-4593-acec-4e5bcd65bff8/pages/settings/settings.html") {
 
+	html,
+	body {
+		background: #1e1d2d !important;
+	}
 
 	.feed.card {
 		background-color: #1e90ff80 !important;
+		border-radius: 8px !important;
 	}
 
 	.feed.card:hover {
@@ -4260,7 +4284,7 @@ dialog,
 
 	}
 
-	.nav+.nav {
+	.nav + .nav {
 		border-top: 1px solid #1e1d2d !important;
 	}
 
@@ -4287,51 +4311,56 @@ dialog,
 	}
 }
 
-/*
-.checkbox-check:not([native]) {
-		appearance: none !important;
-		background-color: transparent !important;
-		border-radius: 2px !important;
-		border: 1px solid white !important;
 
-		&[checked] {
-
-			list-style-image: url("checkmark1.png") !important;
-			-moz-context-properties: fill !important;
-			fill: #ffffff !important;
-			border-color: white !important;
-			border-width: 1px !important;
-
-			background-color: light-dark(#4481f2, #1280fd) !important;
-
-			&:hover:active {
-				background-color: light-dark(#0a4eb8, #417bde) !important;
-			}
-		}
-	}
-
-	input[type="radio"], .radio-check {
-		appearance: none !important;
-		background-color: transparent !important;
-		border-radius: 50% !important;
-		border: 2px solid white !important;
-
-		&[selected], &:checked {
-			background-color: #1e90ff80 !important;
-			background-image: url("radio.svg") !important;
-			border: none !important;
-
-			&:hover:active {
-				background-color: light-dark(#0a4eb8, #417bde) !important;
-			}
-		}
-	}
-}*/
 * {
 	@media not print {
-		head+body>img:first-child.transparent[src][alt] {
+		head + body > img:first-child.transparent[src][alt] {
 			background: none !important;
 		}
 	}
 
+}
+
+@-moz-document domain("support.mozilla.org") {
+
+
+	* {
+		font-family: Fira Sans !important;
+	}
+
+	body,
+	html,
+	.shade-bg,
+	.card--callout,
+	#main-content {
+		background-color: #1e1d2d !important;
+	}
+
+	a *,
+	.toctext {
+		color: dodgerblue !important;
+	}
+
+	.note {
+		background-color: #1e90ff40 !important;
+	}
+}
+
+@-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank).*"), url("about:blank") {
+	* {
+		--color-accent-primary: #1974cf !important;
+		--color-accent-primary-hover: #1e90ff !important;
+		--color-accent-primary-active: #1e90ff !important;
+		--message-bar-background-color: transparent !important;
+		/*--message-bar-icon-color: darkgreen !important;*/
+		--message-bar-text-color: white !important;
+	}
+}
+
+@-moz-document regexp("^https?://((blog|gist|guides|help|raw|status|developer)\\.)?github\\.com/((?!generated_pages\\/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
+
+	svg.octicon.octicon-star,
+	svg.octicon-star-fill {
+		fill: dodgerblue !important;
+	}
 }
