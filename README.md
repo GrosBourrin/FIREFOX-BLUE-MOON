@@ -77,8 +77,6 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 Firefox addon page :
 <img width="1362" height="737" alt="eYvKnJ6RCX" src="https://github.com/user-attachments/assets/042258dc-b846-4cb8-be7c-2a36bb28bb5a" />
 
-![2022-02-18_12h20_29](https://user-images.githubusercontent.com/40931468/154674196-129c4d13-ceef-4797-bc0e-b9ba55fede26.png)
-
 
 **UblockOrigin Webextension**
 
