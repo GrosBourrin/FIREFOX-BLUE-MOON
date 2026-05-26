@@ -5,6 +5,9 @@
 ![image](https://user-images.githubusercontent.com/40931468/227821668-3afce98b-520a-4a1c-85a5-3eefd1680671.png)
 ![image](https://user-images.githubusercontent.com/40931468/227821822-75ec5bcf-6758-4da7-abbc-17352a4b349e.png)
 
+
+
+
 ## Hi there 👋
 
 I'm using CSS, to make Firefox and websites more fun. 🕺🏽
@@ -15,10 +18,10 @@ I'm using CSS, to make Firefox and websites more fun. 🕺🏽
   <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS"/>
 </div>
 
-### 🔭 I’m working on
+### 🔭 I’m working on some pages, as :
 
 - Goggle.css file : google.fr/.com + github + news.google + universfreebox site + gmail theming
-- Theming Firefox and some websites for fun.
+- Theming Firefox and some websites for fun as github.com, neowin site, MajorGeeks.com, Gmail, Reddit, ...
 
 ### 🤔 I’m looking for help to learn more
 
@@ -71,6 +74,8 @@ I want to thank [https://github.com/MrOtherGuy](https://github.com/MrOtherGuy) a
 
 
 **Addon page 2 columns**
+Firefox addon page :
+<img width="1362" height="737" alt="eYvKnJ6RCX" src="https://github.com/user-attachments/assets/042258dc-b846-4cb8-be7c-2a36bb28bb5a" />
 
 ![2022-02-18_12h20_29](https://user-images.githubusercontent.com/40931468/154674196-129c4d13-ceef-4797-bc0e-b9ba55fede26.png)
 
