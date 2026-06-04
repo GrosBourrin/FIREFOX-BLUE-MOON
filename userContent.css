@@ -2,7 +2,7 @@
 @import url("devtools.css");
 /*@import url("reddit0.css");*/
 @import url("aboutconfig.css");
-@import url("facebook2.css");
+/*@import url("facebook_dark_colorful_theme.css");*/
 @import url("youtube.css");
 @import url("dialog.css");
 @import url("github1.css");
@@ -10,6 +10,8 @@
 @import url("stackoverflow.css");
 @import url("twitter.css");
 @import url("preferences.css");
+@import url("Addonpage.css");
+
 
 
 
@@ -28,6 +30,11 @@
 	--focus-outline-color: transparent;
 }
 
+:where(textarea, input[type="text"], input[type="search"], input[type="password"], input[type="url"]) {
+	appearance: none;
+	border-style: solid;
+	outline: none;
+}
 
 
 :-moz-focusring,
@@ -36,7 +43,7 @@ button::-moz-focus-inner,
 :-moz-focusring *,
 :focus *,
 :-moz-focusring:focus:not(:focus-visible),
-:-moz-focusring:focus:not(:focus-visible) > * {
+:-moz-focusring:focus:not(:focus-visible)>* {
 	outline: unset !important;
 	outline-offset: unset !important;
 	-moz-outline-radius: unset !important;
@@ -172,10 +179,10 @@ url("about:profiles") {
 
 	#newtab-search-text,
 	#searchSuggestionTable,
-	#searchSuggestionTable > tr,
-	#searchSuggestionTable > tr > td,
-	#searchSuggestionTable > table > tr > td,
-	#searchSuggestionTable > button {
+	#searchSuggestionTable>tr,
+	#searchSuggestionTable>tr>td,
+	#searchSuggestionTable>table>tr>td,
+	#searchSuggestionTable>button {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		fill: #ffffff !important;
@@ -602,7 +609,7 @@ url("about:profiles") {
 	}
 
 	.addon-webext-perm-info,
-	.popup-notification-learnmore-link > text-link {
+	.popup-notification-learnmore-link>text-link {
 		color: #1e90ff !important;
 	}
 
@@ -1349,7 +1356,7 @@ url("about:profiles") {
 	}
 
 	.addon-webext-perm-info,
-	.popup-notification-learnmore-lin > text-link {
+	.popup-notification-learnmore-lin>text-link {
 		color: #1e90ff !important;
 	}
 
@@ -1443,7 +1450,7 @@ url("about:profiles") {
 	}
 
 	.AddonSummaryCard-header-text a,
-	.Addon-Title > a,
+	.Addon-Title>a,
 	.AddonTitle-author a {
 		color: #1e90ff !important;
 		text-decoration: none !important;
@@ -1549,7 +1556,7 @@ browser[type="content"] {
 		transition: opacity 150ms, visibility 0s 2s !important;
 	}
 
-	.open > .dropdown-popup {
+	.open>.dropdown-popup {
 		opacity: 1 !important;
 		transition: opacity 150ms !important;
 	}
@@ -1566,7 +1573,7 @@ browser[type="content"] {
 		border: none !important;
 	}
 
-	.font-type-buttons > button > .description {
+	.font-type-buttons>button>.description {
 		color: #bebebe !important;
 	}
 }
@@ -1739,7 +1746,7 @@ browser[type="content"] {
 		border-left: 2px solid #073642 !important;
 	}
 
-	pre > :first-child {
+	pre> :first-child {
 		padding-right: 1ch;
 	}
 
@@ -1787,7 +1794,7 @@ browser[type="content"] {
 	}
 
 	.highlight .error,
-	.highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
+	.highlight .error> :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
 		color: #002b36 !important;
 		background-color: #dc322f !important;
 	}
@@ -1885,10 +1892,10 @@ url('about:newtab') {
 
 	#newtab-search-text,
 	#searchSuggestionTable,
-	#searchSuggestionTable > tr,
-	#searchSuggestionTable > tr > td,
-	#searchSuggestionTable > table > tr > td,
-	#searchSuggestionTable > button {
+	#searchSuggestionTable>tr,
+	#searchSuggestionTable>tr>td,
+	#searchSuggestionTable>table>tr>td,
+	#searchSuggestionTable>button {
 		background-color: #1e1d2d !important;
 		color: #f8f8f2 !important;
 		fill: #f8f8f2 !important;
@@ -2065,10 +2072,10 @@ url-prefix("chrome: //browser") {
 		color: #ffffff !important;
 	}
 
-	#search-handoff-button:active > .fake-textbox,
-	#search-handoff-button:hover > .fake-textbox,
-	#search-handoff-button:focus > .fake-textbox,
-	#search-handoff-button:focus-within > .fake-textbox {
+	#search-handoff-button:active>.fake-textbox,
+	#search-handoff-button:hover>.fake-textbox,
+	#search-handoff-button:focus>.fake-textbox,
+	#search-handoff-button:focus-within>.fake-textbox {
 		color: #ffffff !important;
 		opacity: 0.8 !important;
 	}
@@ -2414,7 +2421,7 @@ textbox {
 	outline: unset !important;
 }
 
-.checkbox:not([disabled]):hover > .checkbox-check {
+.checkbox:not([disabled]):hover>.checkbox-check {
 	border-color: #1e90ff !important;
 	background-color: #1e90ff !important;
 	border-radius: 3px !important;
@@ -2422,14 +2429,14 @@ textbox {
 	fill: #ffffff !important;
 }
 
-.checkbox[checked] > .checkbox-check {
+.checkbox[checked]>.checkbox-check {
 	list-style-image: url("chrome://global/skin/icons/check.svg");
 	-moz-context-properties: fill !important;
 	fill: #ffffff !important;
 	background-color: #1e90ff !important;
 }
 
-.checkbox > .checkbox-check {
+.checkbox>.checkbox-check {
 	background-color: #1e90ff !important;
 	color: #ffffff !important;
 	border-color: #1e90ff !important;
@@ -2542,7 +2549,7 @@ url("about:newtab") {
 	.input-row input[type="tel"],
 	.input-row input[type="text"],
 	.input-row input::placeholder,
-	.firefox-family-services > ul > .firefox-service,
+	.firefox-family-services>ul>.firefox-service,
 	.faint,
 	.faint a,
 	.text-grey-400 {
@@ -2721,12 +2728,12 @@ p::selection {
 	color: #ffffff !important;
 }
 
-#netErrorButtonContainer > .try-again {
+#netErrorButtonContainer>.try-again {
 	background: #1e90ff !important;
 	color: #ffffff !important;
 }
 
-#netErrorButtonContainer > .try-again:hover {
+#netErrorButtonContainer>.try-again:hover {
 	background: #1e90ff80 !important;
 	color: #ffffff !important;
 }
@@ -2779,7 +2786,7 @@ p::selection {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 	}*/
-	checkbox:not([disabled]):hover > .checkbox-check {
+	checkbox:not([disabled]):hover>.checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -2787,12 +2794,12 @@ p::selection {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked] > .checkbox-check {
+	checkbox[checked]>.checkbox-check {
 		color: #ffffff !important;
 		background: #1e90ff !important;
 	}
 
-	checkbox > .checkbox-check {
+	checkbox>.checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
@@ -2864,17 +2871,17 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	/* avoid double inline margins when #description is nested: */
-	#description-box > #description {
+	#description-box>#description {
 		margin-inline: 0;
 	}
 
 	/* Parent selector to win on specificity against common.css */
-	#rememberContainer > .toggle-container-with-text {
+	#rememberContainer>.toggle-container-with-text {
 		align-items: baseline;
 		color: var(--in-content-deemphasized-text);
 	}
 
-	.toggle-container-with-text > html|input[type="checkbox"] {
+	.toggle-container-with-text>html|input[type="checkbox"] {
 		margin-inline-end: 8px;
 		/* Ensure the checkbox is properly aligned with the text: */
 		translate: 0 calc(1px + max(60% - 0.6em, 0px));
@@ -2914,7 +2921,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	checkbox:not([disabled]):hover > .checkbox-check {
+	checkbox:not([disabled]):hover>.checkbox-check {
 		border-color: #1e90ff !important;
 		background-color: #1e90ff !important;
 		border-radius: 3px !important;
@@ -2922,14 +2929,14 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		fill: #ffffff !important;
 	}
 
-	checkbox[checked] > .checkbox-check {
+	checkbox[checked]>.checkbox-check {
 		list-style-image: url("chrome://global/skin/icons/check.svg");
 		-moz-context-properties: fill !important;
 		fill: #ffffff !important;
 		background-color: #1e90ff !important;
 	}
 
-	checkbox > .checkbox-check {
+	checkbox>.checkbox-check {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
@@ -3076,20 +3083,20 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background: #1e1d2d !important;
 	}
 
-	#firewall > div {
+	#firewall>div {
 		background-color: #333 !important;
 	}
 
-	#firewall > div:hover {
+	#firewall>div:hover {
 		background-color: #444 !important;
 	}
 
-	#firewall > div > span {
+	#firewall>div>span {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 	}
 
-	#firewall > div > span:first-of-type ~ span {
+	#firewall>div>span:first-of-type~span {
 		border-left: 1px solid #111 !important;
 	}
 
@@ -3097,7 +3104,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		background-color: #1e1d2d !important;
 	}
 
-	#extraTools > span:hover {
+	#extraTools>span:hover {
 		fill: #1e90ff !important;
 	}
 
@@ -3148,8 +3155,8 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	#loggerSettingsDialog,
 	#modalOverlayContainer,
 	#netFilteringDialog,
-	#netFilteringDialog > .panes > .details > div,
-	#netFilteringDialog > div.panes > .dynamic .row {
+	#netFilteringDialog>.panes>.details>div,
+	#netFilteringDialog>div.panes>.dynamic .row {
 		background-color: #1e1d2d !important;
 		border-color: grey !important;
 	}
@@ -3173,7 +3180,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#cloudWidget > span {
+	#cloudWidget>span {
 		background: #1e1d2d !important;
 		color: #ffffff !important;
 	}
@@ -3183,19 +3190,19 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#fa-icon > svg,
-	#fa-icon > .fa-icon_cog,
-	.fa-icon > .fa-icon_clock-o,
-	.fa-icon > .fa-icon_floppy-o,
-	.fa-icon > .fa-icon_info-circle,
-	.fa-icon > .fa-icon_pause-circle-o,
-	.fa-icon > .fa-icon_play-circle-o,
-	.fa-icon > .fa-icon_power-off,
-	.fa-icon > .fa-icon_question-circle,
-	.fa-icon > .fa-icon_refresh,
-	.fa-icon > .fa-icon_save,
-	.fa-icon > .fa-icon_sliders,
-	.fa-icon > .fa-icon_undo {
+	#fa-icon>svg,
+	#fa-icon>.fa-icon_cog,
+	.fa-icon>.fa-icon_clock-o,
+	.fa-icon>.fa-icon_floppy-o,
+	.fa-icon>.fa-icon_info-circle,
+	.fa-icon>.fa-icon_pause-circle-o,
+	.fa-icon>.fa-icon_play-circle-o,
+	.fa-icon>.fa-icon_power-off,
+	.fa-icon>.fa-icon_question-circle,
+	.fa-icon>.fa-icon_refresh,
+	.fa-icon>.fa-icon_save,
+	.fa-icon>.fa-icon_sliders,
+	.fa-icon>.fa-icon_undo {
 		background: transparent !important;
 	}
 
@@ -3313,12 +3320,12 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		--checkbox-ink: #ffffff !important;
 	}
 
-	.checkbox > input[type="checkbox"] + svg {
+	.checkbox>input[type="checkbox"]+svg {
 		background-color: transparent !important;
 		border: 1px solid white !important;
 	}
 
-	.checkbox > input[type="checkbox"]:checked + svg {
+	.checkbox>input[type="checkbox"]:checked+svg {
 		background-color: #1e90ff !important;
 		border-color: white !important;
 
@@ -3326,7 +3333,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 
 	.checkbox[disabled],
-	.checkbox[disabled] ~ span {
+	.checkbox[disabled]~span {
 		filter: var(--checkbox-disabled-filter) !important;
 	}
 }
@@ -3351,35 +3358,52 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		color: #ffffff !important;
 	}
 
-	#sieve_container > .disabled > span {
+	#sieve_container>.disabled>span {
 		text-shadow: 0 0 5px #000000 !important;
 		color: #ff5050 !important;
 	}
 
-	#sieve_container > .selected > span {
+	#sieve_container>.selected>span {
 		background-image: linear-gradient(to bottom, #1e90ff, #1e90ff80 90%) !important;
 	}
 
-	#sieve_container > div:not(.opened) > span:hover {
+	#sieve_container>div:not(.opened)>span:hover {
 		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
 	}
 
-	#sieve_container > div.opened {
+	#sieve_container>div.opened {
 		background-image: linear-gradient(to bottom, #1e90ff80, #1e90ff 90%) !important;
 	}
 
-	#sieve_container > .opened > span {
+	#sieve_container>.opened>span {
 		background-image: linear-gradient(to bottom,
 				#1e90ff80,
 				#1e90ff 90%) !important;
 	}
+
 
 	*|*:any-link:not(svg) {
 		color: #1e90ff !important;
 	}
 
 	*|*:any-link:not(svg):visited {
-		color: #1e90ff90 !important;
+		color: #1e90ff !important;
+	}
+
+	.prow:hover label:not(.checkbox),
+	label:not(.checkbox):hover {
+		color: dodgerblue !important;
+	}
+
+	.prow>label {
+		color: white !important;
+	}
+
+	.tip:hover {
+		background: #1e90ff !important;
+		color: white !important;
+		border: none !important;
+		box-shadow: none !important;
 	}
 
 	* {
@@ -3402,9 +3426,9 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 		font-family: Fira Code !important;
 	}
 
-	#sieve_count * {
-		padding-top: 5px !important;
-		border: none !important;
+	#sieve_count {
+		padding-top: 15px !important;
+
 	}
 }
 
@@ -3446,7 +3470,7 @@ url("chrome://mozapps/content/handling/permissionDialog.xhtml") {
 	}
 }
 
-/*
+
 #tabbrowser-tab-tooltip,
 #places-tooltip-insecure-icon,
 #btTooltip,
@@ -3472,7 +3496,7 @@ tooltip,
 }
 
 tooltip {
-	appearance:  none !important;
+	appearance: none !important;
 	color: yellow !important;
 	background: #1E1D2D !important;
 	border: 1px solid #1E1D2D !important;
@@ -3481,573 +3505,14 @@ tooltip {
 	border-radius: 4px !important;
 
 }
+
 @-moz-document url("moz-extension://3a5c43e9-6aa7-42c5-a74d-fbf9daab418c/options.html") {
 	body {
 		color: white !important;
 		font-family: Fira Sans !important;
 	}
-}*/
-
-/* addon 2 columns */
-@-moz-document url("about:addons") {
-	:root {
-		overflow-x: hidden;
-		--in-content-border-hover: #1e90ff !important;
-		--card-outline-color: #1e90ff !important;
-		--in-content-item-hover: rgba(30, 144, 255, 0.5) !important;
-		--in-content-item-selected: #1e90ff !important;
-		--in-content-item: #ffffff !important;
-		--in-content-border: 1px !important;
-		--card-outline-color: #1e90ff !important;
-		--card-shadow-hover: var(--card-shadow),
-			0 0 0 2px var(--card-outline-color) !important;
-		background-color: #1e1d2d !important;
-		font-family: "Fira Sans" !important;
-		/*--message-bar-background-color: #1e90ff80 !important;
-		--message-bar-text-color: #ffffff !important;*/
-		/*--message-bar-icon-url: var(--info-icon-url);*/
-	}
-
-	/*
-	message-bar-stack> *{
-		background: #000000 !important;
-		border: 1px solid #1e90ff !important;
-		color: #ffffff !important;
-	}*/
-
-	.container {
-		background-color: #1e90ff30 !important;
-		color: #ffffff !important;
-		border: 1px solid #1e90ff !important;
-	}
-
-	message-bar > button {
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	message-bar > button:hover {
-		background-color: #1e90ff80 !important;
-		color: #ffffff !important;
-	}
-
-	html {
-		background: #1e1d2d !important;
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-		font-family: Fira Sans !important;
-	}
-
-	.inline-options-stack {
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-	}
-
-	#addons-inline-options {
-		color: #ffffff !important;
-	}
-
-	a {
-		color: #1e90ff !important;
-	}
-
-	.back-button,
-	.forward-button {
-		background-color: #1e90ff80 !important;
-	}
-
-	.back-button:hover,
-	.forward-button:hover {
-		background-color: #1e90ff !important;
-	}
-
-	addon-details {
-		color: #ffffff !important;
-	}
-
-	.button#updates-message {
-		background: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	.button#updates-message:hover {
-		background: #1e90ff80 !important;
-		color: #ffffff !important;
-	}
-
-	/* Remove this if it causes horizontal scrolling problems */
-
-	@media (min-width: 720px) {
-		#main {
-			max-width: unset !important;
-			padding-right: 28px !important;
-		}
-
-		addon-list > section,
-		recommended-addon-list {
-			padding: 1em !important;
-			display: grid !important;
-			grid-template-areas: "hd hd"
-				"cd cd" !important;
-			grid-template-columns: 1fr 1fr !important;
-			column-gap: 1em !important;
-		}
-
-		addon-card .card-contents {
-			width: unset !important;
-			white-space: initial !important;
-		}
-
-		.card-heading-image {
-			max-width: calc(100% + 32px) !important;
-		}
-
-		section > h2 {
-			grid-area: hd !important;
-		}
-
-		addon-card {
-			padding-bottom: 0px !important;
-			padding-top: 0px !important;
-			grid-area: auto !important;
-		}
-
-		addon-card .addon-description {
-			max-height: 3em !important;
-			scrollbar-color: #1e90ff #000000 !important;
-			scrollbar-width: thin !important;
-			color: #ffffff !important;
-			text-align: inherit !important;
-			font-weight: 300 !important;
-		}
-
-		.stack.inline-options-stack {
-			background-color: #1e1d2d !important;
-			color: #ffffff !important;
-			font-size: 14px !important;
-			border: none !important;
-		}
-
-		addon-card .addon-description {
-			height: 3em !important;
-			scrollbar-color: #1e90ff #000000 !important;
-			scrollbar-width: thin !important;
-		}
-
-
-	}
-
-	addon-updates-manual-updates-found {
-		background: #1e90ff !important;
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	addon-updates-manual-updates-found:hover {
-		background: #1e90ff80 !important;
-		background-color: #1e90ff80 !important;
-		color: #ffffff !important;
-	}
-
-	/*#updates-message {
-	display: flex;
-	align-items: center;
-	margin-inline-end: 8px;
-        }*/
-	.addon-badge-recommended,
-	.addon-badge-private-browsing-allowed {
-		transform: scale(0.85) !important;
-		margin-bottom: 0px !important;
-	}
-
-	#page-options panel-list {
-		background-color: #1e1d2d !important;
-		font-size: 14px !important;
-		border: none !important;
-		color: #ffffff !important;
-		outline: unset !important;
-		box-shadow: none !important;
-	}
-
-	.details-deck {
-		color: inherit !important;
-	}
-
-	.details-deck-button {
-		color: #ffffff !important;
-	}
-
-	.addon-detail-row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center !important;
-		border-top: 1px solid var(--in-content-border-color);
-		margin: 0 calc(var(--card-padding) * -1);
-		padding: var(--card-padding);
-		color: #ffffff !important;
-	}
-
-	search-textbox {
-		background-color: #1e1d2d !important;
-		border: 1px solid #1e90ff !important;
-	}
-
-	.addon-detail-contribute-button {
-		-moz-context-properties: fill;
-		fill: #ffffff !important;
-		background-image: url("chrome://global/skin/icons/heart.svg");
-		background-color: #1e90ff !important;
-	}
-
-	.addon-detail-contribute-button:hover {
-		-moz-context-properties: fill;
-		fill: #ffffff !important;
-		background-image: url("chrome://global/skin/icons/heart.svg");
-		background-color: #1e90ff80 !important;
-	}
-
-	.category-name {
-		margin-top: 4px !important;
-	}
-
-	/*.category.selected */
-	.category[selected] {
-		fill: #1e90ff !important;
-		color: #1e90ff !important;
-	}
-
-	#categories > .category:hover {
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-		fill: #ffffff !important;
-		border-radius: 4px !important;
-	}
-
-	#categories .category[name="search"],
-	#category-search .category-icon {
-		fill: #8aa8cc !important;
-	}
-
-	#categories .category[name="discover"],
-	#category-discover .category-icon {
-		fill: #8b8b8b !important;
-	}
-
-	#categories .category[name="extension"],
-	#category-extension .category-icon {
-		fill: green !important;
-	}
-
-	#categories .category[name="theme"],
-	#category-theme .category-icon {
-		fill: orange !important;
-	}
-
-	#categories .category[name="plugin"],
-	#category-plugin .category-icon {
-		fill: lightblue !important;
-	}
-
-	input {
-		margin-top: 1px !important;
-	}
-
-	button[role="menuitem"]:focus,
-	button[role="menuitem"]:enabled:hover {
-		background: #1e90ff !important;
-	}
-
-	.theme-enable-button {
-		background: #1e90ff80 !important;
-	}
-
-	.theme-enable-button:hover {
-		background: #1e90ff !important;
-	}
-
-	.disco-cta-button {
-		background: #1e90ff80 !important;
-	}
-
-	.disco-cta-button:hover {
-		background: #1e90ff !important;
-	}
-
-	/*
-	button {
-		background: #1e90ff !important;
-	}
-	button:hover {
-		background: #1e90ff80 !important;
-	}
-*/
-	panel-item-separator {
-		background-color: #454545 !important;
-		margin-inline: 5px !important;
-	}
-
-	.more-options-button {
-		background-color: #1e90ff80 !important;
-		color: #ffffff !important;
-	}
-
-	.more-options-button:hover {
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	.more-options-button menulist {
-		background: #1e1d2d !important;
-		box-shadow: none !important;
-	}
-
-	.sticky-container,
-	.main-search,
-	.main-heading,
-	.main-page-content {
-		background-color: #1e1d2d !important;
-	}
-
-	.addon-name-link {
-		color: #1e90ff !important;
-	}
-
-	.addon.card {
-		border: none !important;
-		border-radius: 4px !important;
-		background-color: #1e90ff15 !important;
-		color: #ffffff !important;
-	}
-
-	.addon.card:hover {
-		border: none !important;
-		border-radius: 4px !important;
-		background-color: #1e90ff50 !important;
-		color: #ffffff !important;
-	}
-
-	/*
-	.addon.card:hover {
-		outline: 1px !important;
-		border: 1px !important;
-	}*/
-	/*
-	.toggle-button:checked:hover {
-		background: #1e90ff80 !important;
-
-	}
-
-	.toggle-button:enabled:hover {
-		background: #1e90ff80 !important;
-	}
-
-	.toggle-button {
-		background: #1e90ff !important;
-
-	} */
-	.toggle-button {
-		--button-height: 16px;
-		--button-half-height: 8px;
-		--button-width: 32px;
-		--button-border-width: 1px;
-		/* dot-size = button-height - 2*dot-margin - 2*button-border-width */
-		--dot-size: 12px;
-		--dot-margin: 1px;
-		/* --dot-transform-x = button-width - 2*dot-margin - dot-size - 2*button-border-width */
-		--dot-transform-x: 16px;
-		--border-color: #ffffff !important;
-		border-radius: 50px !important;
-	}
-
-	.toggle-button {
-		appearance: none !important;
-		padding: 0;
-		margin: 0;
-		border: var(--button-border-width) solid var(--border-color) !important;
-		height: var(--button-height);
-		width: var(--button-width);
-		/*border-radius: var(--button-half-height);*/
-		background-color: #1e90ff50 !important;
-		box-sizing: border-box;
-	}
-
-	.toggle-button:focus-visible {
-		outline: var(--in-content-focus-outline-width) solid var(--in-content-focus-outline-color);
-		outline-offset: var(--in-content-focus-outline-offset);
-	}
-
-	.toggle-button:enabled:hover {
-		background-color: #1e90ff80 !important;
-		border-color: var(--border-color);
-	}
-
-	.toggle-button:enabled:active {
-		background-color: #1e90ff !important;
-		border-color: var(--border-color);
-	}
-
-	.toggle-button[aria-pressed="true"] {
-		background-color: #1e90ff !important;
-		border-color: transparent;
-	}
-
-	.toggle-button[aria-pressed="true"]:enabled:hover {
-		background-color: #1e90ff !important;
-		border-color: transparent;
-	}
-
-	.toggle-button[aria-pressed="true"]:enabled:active,
-	.toggle-button[aria-pressed="true"].toggle-button:checked:enabled:hover:active {
-		background-color: #1e90ff !important;
-		border-color: transparent;
-	}
-
-	.toggle-button::before {
-		display: block;
-		content: "";
-		background-color: #ffffff !important;
-		height: var(--dot-size);
-		width: var(--dot-size);
-		margin: var(--dot-margin);
-		border-radius: 100% !important;
-		outline: 1px solid transparent;
-		outline-offset: -1px;
-		translate: 0;
-	}
-
-	input[type="radio"]:checked,
-	.radio-check[selected] {
-		-moz-context-properties: fill;
-		fill: #ffffff;
-		color: #ffffff !important;
-		background-color: #1e90ff !important;
-		background-image: url("chrome://global/skin/icons/radio.svg");
-		border-color: white !important;
-		print-color-adjust: exact;
-	}
-
-	input[type="radio"],
-	.radio-check {
-		appearance: none !important;
-		border: 1px solid #1e90ff !important;
-		background-color: #1e1d2d !important;
-	}
-
-	input[type="radio"]:hover,
-	.radio-check:hover {
-		appearance: none !important;
-		border: 1px solid #1e90ff !important;
-		background-color: #1e90ff50 !important;
-	}
-
-	radio:not([disabled="true"]):hover > .radio-check {
-		border-color: #1e90ff !important;
-	}
-
-	radio:hover > .radio-check {
-		fill: #1e90ff80 !important;
-	}
-
-	radio:hover {
-		fill: #1e90ff80 !important;
-	}
-
-	@media (prefers-contrast) {
-
-		button.tab-button[selected],
-		button.tab-button[selected]:hover {
-			color: #ffffff !important;
-			background-color: #1e90ff !important;
-		}
-	}
-
-	button.tab-button:-moz-focusring {
-		outline-offset: -1px !important;
-	}
-
-	.tab-group[last-input-type="mouse"] > button.tab-button:-moz-focusring {
-		outline: unset !important;
-		box-shadow: none !important;
-	}
-
-	.ghost-button:not(.semi-transparent):enabled:hover {
-		background-color: #1e90ff80 !important;
-		color: #ffffff !important;
-	}
-
-	tab-button[selected],
-	.tab-button[selected]:hover,
-	.tab-button[selected] {
-		border-top-color: #ffffff !important;
-		color: #ffffff !important;
-		background-color: #1e90ff80 !important;
-	}
-
-	.tab-button:hover {
-		border-top-color: #1e90ff80 !important;
-		background-color: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	tab-button {
-		appearance: none !important;
-		border-inline: none !important;
-		border-block: 2px solid transparent !important;
-		border-radius: 2px !important;
-		background: transparent !important;
-		background-color: transparent !important;
-		font-size: 14px !important;
-		line-height: 20px !important;
-		margin: 0 !important;
-		padding: 4px 16px !important;
-	}
-
-	plugin-options > panel-list,
-	addon-options > panel-list {
-		box-shadow: none !important;
-		background-color: #1e1d2d !important;
-		outline: unset !important;
-		border: none !important;
-		color: #ffffff !important;
-		/* Having a backdrop-filter leads to some unexpected layering issues */
-	}
-
-	button.primary {
-		background: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	button.primary:hover {
-		background: #1e90ff80 !important;
-		color: #ffffff !important;
-	}
-
-	button.addon-updates-manual-updates-found {
-		background: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	button.addon-updates-manual-updates-found:hover {
-		background: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	button.install-postponed {
-		background: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	button.install-postponed:hover {
-		background: #1e90ff !important;
-		color: #ffffff !important;
-	}
-
-	#preferencesButton:hover,
-	#help-button:hover {
-		background: #1e90ff !important;
-		color: #ffffff !important;
-	}
 }
+
 
 /*
 @-moz-document url(about:blank), url(about:newtab), url(about:home) {
@@ -4092,7 +3557,7 @@ tooltip {
 		border-color: #1e90ff !important;
 	}
 
-	body > main {
+	body>main {
 		grid-template-columns: 1fr !important;
 	}
 
@@ -4181,19 +3646,24 @@ dialog,
 	border-radius: 8px !important;
 }
 
-#appcontent > #tabbrowser-tabbox > #tabbrowser-tabpanels > .deck-selected > .browserContainer > .browserStack > browser * {
+#appcontent>#tabbrowser-tabbox>#tabbrowser-tabpanels>.deck-selected>.browserContainer>.browserStack>browser * {
 	border-radius: 0px !important;
 }
 
 @-moz-document url-prefix("moz-extension://2793f723-d472-4593-acec-4e5bcd65bff8/pages/settings/settings.html") {
+	* {
+		font-family: Fira Sans !important;
+	}
 
 	html,
-	body {
+	body,
+	.dialog {
 		background: #1e1d2d !important;
 	}
 
 	.feed.card {
-		background-color: #1e90ff80 !important;
+		background-color: #1e90ff20 !important;
+		border-color: #1e90ff !important;
 		border-radius: 8px !important;
 	}
 
@@ -4266,6 +3736,10 @@ dialog,
 		background: black !important;
 	}
 
+	.dials>a.dial .border_target {
+		border-color: dodgerblue;
+	}
+
 	button {
 		background: #1e90ff !important;
 		color: white !important;
@@ -4284,7 +3758,7 @@ dialog,
 
 	}
 
-	.nav + .nav {
+	.nav+.nav {
 		border-top: 1px solid #1e1d2d !important;
 	}
 
@@ -4314,7 +3788,7 @@ dialog,
 
 * {
 	@media not print {
-		head + body > img:first-child.transparent[src][alt] {
+		head+body>img:first-child.transparent[src][alt] {
 			background: none !important;
 		}
 	}
@@ -4363,4 +3837,80 @@ dialog,
 	svg.octicon-star-fill {
 		fill: dodgerblue !important;
 	}
+}
+
+
+/* ============================================================
+   STYLES SUPPLÉMENTAIRES POUR LES PDFS AFFICHÉS EN EXTERNE
+   ============================================================ */
+
+@-moz-document url-prefix("file:///") {
+	body {
+		color-scheme: dark;
+		background-color: #1e1d2d !important;
+		color: #e0e0e0 !important;
+	}
+
+	#viewsManager {
+
+		--sidebar-bg-color: #1e1d2d !important;
+
+		--text-color: white !important;
+
+		/*--button-bg: light-dark(rgb(21 20 26 / 0.07), rgb(251 251 254 / 0.07));
+			--button-border-color: transparent;
+			--button-hover-bg: light-dark(rgb(21 20 26 / 0.14), rgb(251 251 254 / 0.14));
+			--button-hover-fg: var(--text-color);
+			--button-hover-border-color: var(--button-border-color);
+			--button-active-bg: light-dark(rgb(21 20 26 / 0.21), rgb(251 251 254 / 0.21));
+			--button-active-fg: var(--text-color);
+			--button-active-border-color: var(--button-border-color);
+			--button-focus-no-bg: color-mix(in srgb, var(--text-color), transparent 93%);
+			--button-focus-outline-color: light-dark(#0062fa, #00cadb);
+			--button-focus-border-color: light-dark(white, black);
+			--status-border-color: transparent;
+			--status-actions-bg: light-dark(rgb(21 20 26 / 0.03), rgb(251 251 254 / 0.03));
+			--status-undo-bg: light-dark(rgb(0 98 250 / 0.08), rgb(0 202 219 / 0.08));
+			--status-waiting-bg: var(--status-undo-bg);
+			--indicator-color: light-dark(#0062fa, #00cadb);
+			--status-warning-bg: light-dark(#ffe8ea, #6e001f);
+			--indicator-warning-color: light-dark(#b20037, #ffa0aa);
+			--header-shadow: 0 0.25px 0.75px -0.75px light-dark(rgb(0 0 0 / 0.05), rgb(0 0 0 / 0.2)), 0 2px 6px -6px light-dark(rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.4));
+			--header-bg: light-dark(rgb(255 255 255 / 0.92), #42414e);
+			--image-outline: none;
+			--image-border-width: 6px;
+			--image-border-color: light-dark(#cfcfd8, #3a3944);
+			--image-hover-border-color: #bfbfc9;
+			--image-current-border-color: var(--button-focus-outline-color);
+			--image-current-focused-outline-color: var(--image-hover-border-color);
+			--image-page-number-bg: light-dark(#f0f0f4, #42414d);
+			--image-page-number-fg: var(--text-color);
+			--image-page-number-border-color: transparent;
+			--image-hover-page-number-bg: var(--image-page-number-bg);
+			--image-hover-page-number-fg: var(--image-page-number-fg);
+			--image-current-page-number-bg: var(--image-current-border-color);
+			--image-current-page-number-fg: light-dark(#fff, #15141a);
+			--image-current-hover-page-number-bg: var(--image-current-page-number-bg);
+			--image-current-hover-page-number-fg: var(--image-current-page-number-fg);
+			--image-shadow: 0 0.375px 1.5px 0 light-dark(rgb(0 0 0 / 0.05), rgb(0 0 0 / 0.2)), 0 0 0 1px var(--image-border-color), 0 3px 12px 0 light-dark(rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.4));
+			--image-hover-shadow: 0 0.375px 1.5px 0 light-dark(rgb(0 0 0 / 0.05), rgb(0 0 0 / 0.2)), 0 0 0 1px light-dark(rgb(21 20 26 / 0.1), rgb(251 251 254 / 0.1)), 0 0 0 var(--image-border-width) var(--image-hover-border-color), 0 3px 12px 0 light-dark(rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.4));
+			--image-current-shadow: 0 0.375px 1.5px 0 light-dark(rgb(0 0 0 / 0.05), rgb(0 0 0 / 0.2)), 0 0 0 var(--image-border-width) var(--image-current-border-color), 0 3px 12px 0 light-dark(rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.4));
+			--image-dragging-placeholder-bg: light-dark(rgb(0 98 250 / 0.08), rgb(0 202 219 / 0.08));
+			--image-dragging-placeholder-border: var(--image-outline);
+			--multiple-dragging-bg: white;
+			--image-multiple-dragging-shadow: 0 0 0 var(--image-border-width) var(--image-current-border-color), var(--image-border-width) var(--image-border-width) 0 calc(var(--image-border-width) / 2) var(--multiple-dragging-bg), var(--image-border-width) var(--image-border-width) 0 calc(3 * var(--image-border-width) / 2) var(--image-current-border-color);
+			--image-dragging-shadow: 0 0 0 var(--image-border-width) var(--image-current-border-color);
+			--multiple-dragging-indicator-bg: var(--indicator-color);
+			--multiple-dragging-text-color: light-dark(#fbfbfe, #15141a);*/
+	}
+
+
+	& #viewsManagerTitle {
+		background-color: none !important;
+	}
+
+	#viewsManagerStatus {
+		background-color: none !important;
+	}
+
 }
