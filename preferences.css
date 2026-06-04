@@ -1,5 +1,73 @@
 /* about:preferences */
-@-moz-document url("about:preferences") {
+@-moz-document url-prefix("about:preferences") {
+	:root {
+		--in-content-page-color: white !important;
+		--in-content-text-color: rgb(210, 210, 210) important;
+		--in-content-page-background: #1e1d2d !important;
+		--in-content-deemphasized-text: white !important;
+		--checkbox-checked-bgcolor: #1e1d2d !important;
+		--checkbox-checked-hover-bgcolor: #1e90ff80 !important;
+		--checkbox-checked-active-bgcolor: #1e90ff !important;
+		--box-group-border: 1px solid #1e90ff !important;
+
+		--page-nav-border-color: transparent !important;
+
+	}
+
+	html,
+	body,
+	#search-container {
+		background: #1e1d2d !important;
+		color: #ffffff !important;
+		font-family: Fira Sans !important;
+	}
+
+	.checkbox-icon {
+		-moz-context-properties: fill;
+		fill: #ffffff !important;
+	}
+
+	.checkbox-check:not([native]) {
+		appearance: none !important;
+		background-color: transparent !important;
+		border-radius: 2px !important;
+		border: 1px solid white !important;
+
+		&[checked] {
+
+			list-style-image: url("checkmark1.png") !important;
+			-moz-context-properties: fill !important;
+			fill: #ffffff !important;
+			border-color: white !important;
+			border-width: 1px !important;
+
+			background-color: light-dark(#4481f2, #1280fd) !important;
+
+			&:hover:active {
+				background-color: light-dark(#0a4eb8, #417bde) !important;
+			}
+		}
+	}
+
+	input[type="radio"],
+	.radio-check {
+		appearance: none !important;
+		background-color: transparent !important;
+		border-radius: 50% !important;
+		border: 2px solid white !important;
+
+		&[selected],
+		&:checked {
+			background-color: #1e90ff80 !important;
+			background-image: url("radio.svg") !important;
+			border: none !important;
+
+			&:hover:active {
+				background-color: light-dark(#0a4eb8, #417bde) !important;
+			}
+		}
+	}
+
 	.sticky-container {
 		background-color: #1e1d2d !important;
 	}
@@ -14,7 +82,7 @@
 		max-width: 300px !important;
 	}
 
-	vbox hbox#newTabsOption menulist#newTabMode {
+	vbox.hbox#newTabsOption.menulist#newTabMode {
 		min-width: 300px !important;
 		max-width: 300px !important;
 		border: 0px !important;
@@ -32,65 +100,57 @@
 		text-decoration: none !important;
 	}
 
-	.category[selected],
-	.category.selected {
-		fill: #1e90ff !important;
-		color: #1e90ff !important;
-		border-radius: 4px !important;
-	}
 
-	/*
-	#categories>.category[selected],
-	#categories>.category.selected {
-		color: #1e90ff !important;
-		border-radius: 0px !important;
-		color: #ffffff !important;
-	}
-*/
 
-	#categories>.category:hover {
+	.category:hover {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 		border-radius: 4px !important;
-	}
-
-	checkbox:not([disabled="true"]):hover>.checkbox-check,
-	input[type="checkbox"]:not(:disabled):hover * {
-		border-color: #1e90ff !important;
-	}
-
-	radio:not([disabled="true"]):hover>.radio-check * {
-		border-color: #1e90ff !important;
-	}
-
-	radio:hover>.radio-check * {
-		fill: #1e90ff80 !important;
-	}
-
-	radio:hover * {
-		fill: #1e90ff80 !important;
 	}
 
 	.text-link {
 		color: #1e90ff !important;
 	}
 
-	button {
-		appearance: none !important;
-		background-color: #1e90ff !important;
+	button.button {
+		/*appearance: none !important;*/
+		background-color: #1e90ff80 !important;
 		border: 0px solid !important;
 		/*border-radius: 3px !important;    */
 		color: #ffffff !important;
 		/*border-color: #1e90ff !important;*/
 	}
 
-	button:hover {
-		background-color: #1e90ff50 !important;
+	button.button:hover {
+		background-color: #1e90ff !important;
 		/*border-color: #1e90ff50 !important;*/
+	}
+
+	button {
+		&::before {
+
+			display: none !important;
+
+		}
+	}
+
+	#syncChangeOptions {
+		border: 0px !important;
+		background-color: #1e90ff !important;
+		color: #ffffff !important;
+		border-radius: 4px !important;
+	}
+
+	#syncChangeOptions:hover {
+		border: 0px !important;
+		background-color: #1e90ff60 !important;
+		color: #ffffff !important;
+		border-radius: 4px !important;
 	}
 
 	.tree-bodybox,
 	stack,
+	groupbox,
 	#handlersView,
 	#engineChildren,
 	#engineList {
@@ -177,156 +237,96 @@
 	a#creditCardAutofillLearnMore {
 		/*margin-top: 18px !important;*/
 		display: none !important;
-
-
-
 	}
 
-	.dialogBox,
+	/*radiogroup#updateRadioGroup {
+		background: #1e90ff20 !important;
+	}*/
+
+
+
+	#ConnectionsDialog,
+	.dialogFrame,
 	.dialog,
+	dialog,
+	#preferences-body,
 	.dialog-content-box,
 	#PermissionsDialog,
 	#SiteDataSettingsDialog {
 		background-color: #1e1d2d !important;
 		color: #ffffff !important;
 		border: 0px solid transparent !important;
-		border-radius: 8px !important;
+		border-radius: 4px !important;
 		font-family: Fira Sans !important;
 	}
 
-	button {
-		/*appearance: none !important;*/
+	.dialogBox {
+		--in-content-page-background: #1e1d2d !important;
+	}
+
+	window,
+	dialog,
+	dialog#BrowserLangagesDialog,
+	window>dialog#history {
 		color: white !important;
-		background-color: #1e90ff !important;
-		border: 0px !important;
+		background: #1e1d2d !important;
+		--in-content-box-background: #1e1d2d !important;
 	}
 
-	button[disabled] {
-		opacity: 0.8 !important;
+	.dialogFrame {
+		background-color: #1e1d2d !important;
+		border-color: #1e90ff !important;
 	}
 
-	button:not([disabled]):hover {
-		background-color: #1e90ff80 !important;
-		box-shadow: none !important;
+
+	:root[dialogroot] {
+		--in-content-page-background: #1e1d2d !important;
 	}
 
-	button:not([disabled]):active {
-		box-shadow: none !important;
-	}
 
+	/*
+	button {
+		
+	color: white !important;
+	background-color: #1e90ff !important;
+	border: 0px !important;
+}
+
+button[disabled] {
+	opacity: 0.8 !important;
+}
+
+button:not([disabled]):hover {
+	background-color: #1e90ff80 !important;
+	box-shadow: none !important;
+}
+
+button:not([disabled]):active {
+	box-shadow: none !important;
+}
+
+*/
 	.toggle-button {
-		--button-height: 16px;
+
+		/*--button-height: 16px;
 		--button-half-height: 8px;
 		--button-width: 32px;
 		--button-border-width: 1px;
-		/* dot-size = button-height - 2*dot-margin - 2*button-border-width */
+
 		--dot-size: 12px;
 		--dot-margin: 1px;
-		/* --dot-transform-x = button-width - 2*dot-margin - dot-size - 2*button-border-width */
+
 		--dot-transform-x: 16px;
 		--border-color: #ffffff !important;
-		border-radius: 50px !important;
+		border-radius: 50px !important;*/
+
+		--toggle-background-color-pressed: #1e90ff !important;
+		--toggle-background-color-pressed-hover: #1e90ff80 !important;
+		--toggle-background-color-pressed-active: #1e90ff !important;
+		--toggle-dot-background-color-on-pressed: #fff !important;
 	}
 
-	.toggle-button {
-		appearance: none !important;
-		padding: 0;
-		margin: 0;
-		border: var(--button-border-width) solid var(--border-color) !important;
-		height: var(--button-height);
-		width: var(--button-width);
-		/*border-radius: var(--button-half-height);*/
-		background-color: #1e90ff50 !important;
-		box-sizing: border-box;
-	}
 
-	.toggle-button:focus-visible {
-		outline: var(--in-content-focus-outline-width) solid var(--in-content-focus-outline-color);
-		outline-offset: var(--in-content-focus-outline-offset);
-	}
-
-	.toggle-button:enabled:hover {
-		background-color: #1e90ff80 !important;
-		border-color: var(--border-color);
-	}
-
-	.toggle-button:enabled:active {
-		background-color: #1e90ff !important;
-		border-color: var(--border-color);
-	}
-
-	.toggle-button[aria-pressed="true"] {
-		background-color: #1e90ff !important;
-		border-color: transparent;
-	}
-
-	.toggle-button[aria-pressed="true"]:enabled:hover {
-		background-color: #1e90ff !important;
-		border-color: transparent;
-	}
-
-	.toggle-button[aria-pressed="true"]:enabled:active,
-	.toggle-button[aria-pressed="true"].toggle-button:checked:enabled:hover:active {
-		background-color: #1e90ff !important;
-		border-color: transparent;
-	}
-
-	.toggle-button::before {
-		display: block;
-		content: "";
-		background-color: #ffffff !important;
-		height: var(--dot-size);
-		width: var(--dot-size);
-		margin: var(--dot-margin);
-		border-radius: 100% !important;
-		outline: 1px solid transparent;
-		outline-offset: -1px;
-		translate: 0;
-	}
-
-	input[type="checkbox"]:enabled:checked {
-		/*background-image: url("chrome://global/skin/icons/check.svg") !important;
-		-moz-context-properties: fill !important;
-		fill: #000000 !important;
-		background-position: center !important;
-		background-repeat: no-repeat !important;*/
-		background-color: #1e90ff !important;
-
-		border-color: white !important;
-		color: #ffffff !important;
-	}
-
-	input[type="checkbox"]:hover {
-		background: #1e90ffa0 !important;
-		border-color: #1e90ff !important;
-	}
-
-	input[type="checkbox"] {
-		background: #1e1d2d !important;
-		border-color: #1e90ff !important;
-	}
-
-	checkbox:not([disabled]):hover>.checkbox-check {
-		border-color: #1e90ff !important;
-		background-color: #1e90ff !important;
-		border-radius: 3px !important;
-		color: #ffffff !important;
-		fill: #ffffff !important;
-	}
-
-	checkbox[checked]>.checkbox-check {
-		list-style-image: url("chrome://global/skin/icons/check.svg");
-		-moz-context-properties: fill !important;
-		fill: #ffffff !important;
-		background-color: #1e90ff !important;
-	}
-
-	checkbox>.checkbox-check {
-		background-color: #1e1d2d !important;
-		color: #ffffff !important;
-		border-color: #1e90ff !important;
-		border-radius: 2px !important;
-	}
 
 	#handlersView>richlistitem:active,
 	#handlersView>richlistitem[selected],
@@ -335,7 +335,13 @@
 		background: #1e90ff !important;
 	}
 
-
+	/* treechildren*
+	#handlersView richlistitem,
+	#engineList treechildren::-moz-tree-row,
+	#blocklistsTree treechildren::-moz-tree-row {
+		min-height: 28px !important;
+	}
+*/
 	#engineList treechildren::-moz-tree-row(hover) {
 		color: #ffffff !important;
 		background: #1e90ff !important;
@@ -347,7 +353,12 @@
 		border: 0px !important;
 	}
 
-
+	/*
+	treecols,
+	treecol {
+		min-height: unset !important;
+		height: 28px !important;
+	}*/
 
 	treecols:hover,
 	treecol:hover {
@@ -355,7 +366,12 @@
 		color: white !important;
 	}
 
-
+	/*
+	.autocomplete-tree treecols,
+	.autocomplete-tree treecol {
+		height: unset !important;
+	}
+*/
 	search-textbox {
 		appearance: none !important;
 		border: 1px solid #1e90ff !important;
@@ -364,6 +380,12 @@
 		background: #1e1d2d !important;
 		outline: 0px !important;
 		padding-top: 4px !important;
+	}
+
+	#input {
+		border-color: dodgerblue !important;
+		background-color: #1e1d2d !important;
+		color: white !important;
 	}
 
 	#listheader,
@@ -395,9 +417,9 @@
 
 	input[type="radio"],
 	.radio-check {
-		appearance: none !important;
+		/*appearance: none !important;*/
 		border: 1px solid #1e90ff !important;
-		background-color: #1e1d2d !important;
+		background: #1e1d2d !important;
 	}
 
 	#homePageUrl,
@@ -405,7 +427,6 @@
 		background: #1e1d2d !important;
 		color: #ffffff !important;
 		border-color: #1e90ff !important;
-		border-width: 2px !important;
 	}
 
 	menulist {
@@ -422,6 +443,35 @@
 	#helpButton:hover {
 		background: #1e90ff !important;
 		color: #ffffff !important;
+	}
+
+	#sidebar::after {
+		display: none !important;
+	}
+
+	/*
+	button:not(.button-link):not(.close-icon):not(#contentBlockingToggle) {
+		padding: 0px !important;
+	}
+*/
+
+	/*
+	button:not(.button-link):not(.close-icon):not(.spinbuttons-button) {
+		appearance: button !important;
+	}
+*/
+	/*
+	menulist {
+		appearance: menulist !important;
+	}
+*/
+
+	.container {
+		background: transparent !important;
+	}
+
+	#browserContainersbox moz-message-bar {
+		background: none !important;
 	}
 
 	/* menulist popup */
@@ -483,58 +533,92 @@
 		fill-opacity: 1 !important;
 	}
 
-	#default-fxMobile.text-link,
 	a[is="moz-support-link"] {
 		font-weight: bold !important;
 	}
 
+	#translations-manage-install-list {
+		background-color: #1e1d2d !important;
+		color: #ffffff !important;
+		border-color: #1e90ff !important;
+		font-family: Fira Sans !important;
+	}
+
 	.qr-code-box {
-		background: #1e90ff60 !important;
-	}
-
-	.qr-code-box-image {
-		width: 140px !important;
-	}
-
-	.searchBarImage {
-		-moz-context-properties: fill, stroke;
-		fill: #1e90ff20 !important;
-		stroke: #1e90ff !important;
-	}
-
-
-	dialogBox,
-	#FontsDialog {
-		appearance: none !important;
 		background-color: #1e1d2d !important;
 	}
 
-	box.inherit {
-		color: white !important;
+	.moz-card {
+		background: #1e90ff80 !important;
+		border-color: #1e90ff !important;
+		border-radius: 8px !important;
+	}
+
+	.dialogBox {
 		background: #1e1d2d !important;
 	}
 
-	.groupbox-body,
+
 	window,
 	dialog,
-	dialog#history,
-	.dialogFrame {
-		appearance: none !important;
+	window>dialog#history {
 		color: white !important;
-		background: #1e1d2d !important;
+		background-color: #1e1d2d !important;
 		--in-content-box-background: #1e1d2d !important;
-
 	}
 
-	input,
-	textarea {
-		appearance: none !important;
+	.dialogFrame {
 		background: #1e1d2d !important;
-		color: #ffffff !important;
+		border-color: #1e90ff !important;
+	}
+
+	.toggle-button[aria-pressed="true"]:enabled {
+		background: #1e90ff !important;
+		color: white !important;
+	}
+
+	.toggle-button[aria-pressed="true"]:enabled:hover {
+		background: #1e90ff80 !important;
+		color: white !important;
+	}
+
+	.checkbox-icon {
+		-moz-context-properties: fill;
 		fill: white !important;
 	}
 
-	.dialogOverlay[topmost="true"] {
+	.box-container {
+		border: none !important;
+	}
+
+	/*moz-page-nav-button :hover {
+		border: none !important;
+		background: dodgerblue !important;
+	}*/
+
+	/*a[href]:hover,*/
+	button:hover:not([selected]) {
+		color: white !important;
+		background-color: dodgerblue !important;
+	}
+
+	button {
+		color: white !important;
 		background-color: #1e1d2d !important;
 	}
+
+	button[selected] {
+		color: white !important;
+		background-color: dodgerblue !important;
+	}
+
+	#manageDataSettingsGroup {
+		border-color: #1e90ff !important;
+
+	}
+
+	#categories {
+		border-inline-end: none !important;
+	}
+
 }
