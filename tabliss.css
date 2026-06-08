@@ -1,3 +1,66 @@
+
+::selection {
+  background: #1f90ff !important;
+    background-color: rgb(31, 144, 255);
+  background-color: #1e90ff !important;
+  color: #fff !important;
+}
+::selection {
+  background: #1f90ff !important;
+  background-color: #1e90ff !important;
+  color: #fff !important;
+}
+element {
+  margin-top: 0.5em;
+}
+
+::selection {
+  background: #1f90ff !important;
+    background-color: rgb(31, 144, 255);
+  background-color: #1e90ff !important;
+  color: #fff !important;
+}
+::selection {
+  background: #1f90ff !important;
+  background-color: #1f90ff;
+  background-color: #1e90ff !important;
+  color: #fff !important;
+}
+::selection {
+  background: #1f90ff !important;
+  background-color: #1e90ff !important;
+  color: #fff !important;
+}
+::selection {
+  background: #1f90ff !important;
+  background-color: #1e90ff !important;
+  color: #fff !important;
+}
+
+.Settings input[type="radio"], input {
+  accent-color: black;
+  fill: #1e1d2d;
+}
+.multiselect:focus, .multiselect--open {
+  border-color: var(--accent-color);
+}
+.multiselect {
+  border: 1px solid dodgerblue;
+  background: #1e1d2d;
+  /*cursor: pointer;
+  border-radius: .2em;
+  outline: none;
+  align-items: center;
+  min-height: 36px;
+  padding: 2px 5px;
+  display: flex;
+  position: relative;*/
+}
+.multiselect__dropdown {
+  background: #1e1d2d;
+  border: 1px solid dodgerblue;
+  
+}
 .Logo svg {
 	fill: dodgerblue !important;
 }
@@ -14,18 +77,23 @@
 .Time {
 	color: #ffffff60;
 }
-.Time hr {  
+.Time hr, hr {  
 	border-top: 1px solid #ffffff !important;
 }
+
 .Search > input {
 	/*backdrop-filter: blur(8px) !important;*/
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 }
-.IpInfo{ background: #000000bb !important; }
+.IpInfo{
+        background: transparent !important; 
+}
+
 .Suggestions {
 	backdrop-filter: blur(8px) !important;
 }
+
 .search {
 	font-size: 12px;
 	font-family: Fira Sans !important;
@@ -52,11 +120,11 @@ input {
 .Links a:hover {
 	color: dodgerblue;
 }
-/*
+
 *{
  font-family: Fira Sans ;
 }
-*/
+
 /* 
  Custom CSS por 448L Para la Extension
  TabLiss (Firefox - Chromiun)
@@ -95,61 +163,7 @@ h3 {
 	color: inherit;
 	font-size: 14px;
 }
-/*.Search > input::-moz-selection{
-   background:rgba(30,144,255,20%);
-   color:rgb(10,11,13);
-}
-.Search > input::-webkit-selection{
-   background:rgba(30,144,255,20%);
-   color:rgb(10,11,13);
-}
-.Search > input::selection{
-   background:rgba(30,144,255,20%);
-   color:rgb(10,11,13)
-}
-.Search > input:hover{
-   transform:translate(-20%,-40%) scale(1.27,1.27);
-   transition:transform 0.3s cubic-bezier(.34,1.75,.37,.8),filter 0.3s;
-   border-bottom:1.5px solid rgba(0, 0, 0, 0);
-   border-left:1.5px solid rgba(0, 0, 0, 0);
-   border-right:1.5px solid rgba(0, 0, 0, 0);
-   border-top:1.5px solid rgba(0, 0, 0, 0);
-   background:rgba(30,144,255,20%);
-   box-shadow:0px 0px 40px rgba(25, 25, 31, 0.774);
-   animation:opacidadanimama 2s infinite ease-in;
-}
-@keyframes opacidadanimama{
-   0%{
-       border-bottom:1px solid rgb(255, 255, 255);
-       border-left:1px solid rgba(0, 0, 0, 0);
-       border-right:1px solid rgba(255, 255, 255, 0.384);
-       border-top:1px solid rgba(0, 0, 0, 0);
-   }
-   25%{
-       border-bottom:1px solid rgba(255, 255, 255, 0.384);
-       border-left:1px solid rgb(255, 255, 255);
-       border-right:1px solid rgba(0, 0, 0, 0);
-       border-top:1px solid rgba(0, 0, 0, 0);
-   }
-   50%{
-       border-bottom:1px solid rgba(0, 0, 0, 0);
-       border-left:1px solid rgba(255, 255, 255, 0.384);
-       border-right:1px solid rgba(0, 0, 0, 0);
-       border-top:1px solid rgb(255, 255, 255);
-   }
-   75%{
-       border-bottom:1px solid rgba(0, 0, 0, 0);
-       border-left:1px solid rgba(0, 0, 0, 0);
-       border-right:1px solid rgb(255, 255, 255);
-       border-top:1px solid rgba(255, 255, 255, 0.384);
-   }
-   100%{
-       border-bottom:1px solid rgba(0, 0, 0, 0);
-       border-left:1px solid rgba(0, 0, 0, 0);
-       border-right:1px solid rgba(255, 255, 255, 0.384);
-       border-top:1px solid rgba(0, 0, 0, 0);
-   }
-}*/
+  
 .Widgets h1,
 .Widgets h2,
 .Widgets h3,
@@ -161,7 +175,7 @@ h3 {
 	transition: text-shadow 0.4s cubic-bezier(.34, 1.75, .37, .8);
 	font-size: 3em;
 }
-.Overlay svg {
+.Overlay svg, Overlay {
 	border-radius: 50%;
 	background: #1e1d2d40;
 	padding: 4px;
@@ -180,9 +194,7 @@ h3 {
 }
 .Settings .plane {
 	background: #1e1d2d !important;
-	/* text-shadow:0 0 20px rgba(124, 124, 124, 0.3);
-   box-shadow:0 0 20px rgba(15,15,15,0.7);
-*/
+	
 	transition: all 1s;
 	padding-left: 5px;
 	padding-right: 0px;
@@ -301,3 +313,22 @@ button,
 	margin-right: 14px !important;
 }
 
+h1 {
+	font-family: Arial Black;
+}
+.Widgets h3 {
+	font-family: Fira Sans;
+}
+.Search.style-transparent-rounded > input {
+        text-align: center;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        background: #1e90ff50;
+        border: none;
+        border-bottom: none;
+        border-radius: 1.625rem;
+        height: 2.8rem;
+        padding: 0 3.5rem 0 1.5rem;
+        font-size: 1rem;
+        font-family: Fira Sans;
+}
