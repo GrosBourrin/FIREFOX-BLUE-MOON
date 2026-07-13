@@ -1,6 +1,6 @@
 /*---------------------------------library ----------------------------------*/
 
-@-moz-document url("chrome://browser/content/places/places.xhtml") {
+@-moz-document url(chrome://browser/content/places/places.xhtml){
 	* {
 		font-family: Fira Sans !important;
 		font-weight: inherit !important;
@@ -8,6 +8,8 @@
 		color: #ffffff !important;
 		--organizer-border-color: #4f4f4f !important;
 		--organizer-separator-color: #4f4f4f !important;
+
+
 	}
 
 	toolbar {
@@ -31,7 +33,7 @@
 	#editBMPanel_rows>row>hbox>textbox,
 	#editBMPanel_rows>row>textbox,
 	#editBMPanel_tagsSelector {
-		background: #1e1d2d !important;
+		background-color: #1e1d2d !important;
 		border: none !important;
 	}
 
@@ -43,7 +45,7 @@
 	#placesToolbar>toolbarbutton {
 		margin: 6px 4px 5px !important;
 		appearance: none !important;
-		background: #1e90ff !important;
+		background-color: #1e90ff !important;
 		border-radius: 0px !important;
 		/*filter: invert(100%) !important;*/
 		border: none !important;
@@ -64,7 +66,7 @@
 	#editBMPanel_keywordField,
 	#editBMPanel_tagsSelector {
 		appearance: none !important;
-		background: #000000 !important;
+		background-color: #000000 !important;
 		color: #ffffff !important;
 		height: 24px !important;
 		/*outline: 1px ridge #1E90FF50 !important;*/
@@ -74,19 +76,19 @@
 	#editBookmarkPanelRows>vbox>input,
 	#editBookmarkPanelRows>vbox>hbox>input {
 		border-radius: 3px !important;
-		background: #000000 !important;
+		background-color: #000000 !important;
 	}
 
 	#editBookmarkPanelRows .expander-up .button-icon {
 		transform: rotate(180deg) !important;
 		height: 24px !important;
-		width: 24px !important;		
+		width: 24px !important;
 	}
 
 	#editBMPanel_tagsSelectorExpander {
 		height: 24px !important;
 		width: 24px !important;
-		transform: scale(70%,90%) !important;
+		transform: scale(70%, 90%) !important;
 	}
 
 	#editBMPanel_keywordRow,
@@ -96,17 +98,15 @@
 		background: #1e1d2d !important;
 		color: #ffffff !important;
 		border: none !important;
-		
+
 	}
-/*** Reveal URL box in Add/Edit Bookmark drop-down **
-#editBMPanel_locationRow[collapsed="true"]{
-visibility: visible !important;
-}*/
+
+	
 	#editBMPanel_tagsSelector>richlistitem,
 	#editBMPanel_tagsSelector>richlistitem:hover,
 	#editBMPanel_tagsSelector>richlistitem:active,
 	#editBMPanel_tagsSelector>richlistitem:focus {
-		background: #000000 !important;
+		background-color: #000000 !important;
 		color: #ffffff !important;
 
 	}
@@ -120,7 +120,7 @@ visibility: visible !important;
 	#places #downloadsRichListBox {
 		appearance: none !important;
 		color: #ffffff !important;
-		background: #1e1d2d !important;
+		background-color: #1e1d2d !important;
 	}
 
 	#detailsDeck {
@@ -394,25 +394,22 @@ visibility: visible !important;
 		color: white !important;
 	}
 
-	/* Remove tiny spacing in separators appearing after the twisty column */
+	
 
-	.menu-iconic-icon {
-		fill: currentColor !important;
-		-moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
-		margin-inline-start: 0 !important;
-		margin-inline-end: 16px !important;
-		width: 24px !important;
-		height: 24px !important;
-		padding: 4px !important;
+	treechildren::-moz-tree-image(title, query, hostContainer) {
+		list-style-image: url("folder4.svg") !important;
 	}
 
-	/*
+
+}
+
+/*
 	#organizeButton {
 		max-width: 124px !important;
 	}
 	#placesMenu>menu>.menubar-text {
 		text-align: left !important;
 		background: url(chrome://global/skin/icons/arrow-down-12.svg) 105% center no-repeat !important;
-		background-size: 12px !important;}*/
+		background-size: 12px !important;}
 }
-
+*/
