@@ -13,9 +13,14 @@
 			0 0 0 2px var(--card-outline-color) !important;
 		background-color: #1e1d2d !important;
 		font-family: "Fira Sans" !important;
+
 		/*--message-bar-background-color: #1e90ff80 !important;
 		--message-bar-text-color: #ffffff !important;*/
 		/*--message-bar-icon-url: var(--info-icon-url);*/
+	}
+
+	* {
+		--page-nav-margin-inline-start: inset !important;
 	}
 
 
@@ -134,11 +139,11 @@
 			border: none !important;
 		}
 
-		addon-card .addon-description {
+		/*addon-card .addon-description {
 			height: 3em !important;
 			scrollbar-color: #1e90ff #000000 !important;
 			scrollbar-width: thin !important;
-		}
+		}*/
 
 
 	}
@@ -264,11 +269,19 @@
 	}
 
 	.theme-enable-button {
-		background: #1e90ff80 !important;
+		padding-inline: inherit !important;
+		background-color: #1e90ff80 !important;
+		background: transparent !important;
+		border-radius: 8px !important;
+
 	}
 
 	.theme-enable-button:hover {
-		background: #1e90ff !important;
+		padding-inline: inherit !important;
+		background-color: #1e90ff !important;
+		background: transparent !important;
+		border-radius: 8px !important;
+
 	}
 
 	.disco-cta-button {
@@ -279,13 +292,25 @@
 		background: #1e90ff !important;
 	}
 
+	/*.button-background {
+		color: white !important;
+		background-color: #1e90ff80 !important;
+		border-radius: 4px !important;
+	}
+
+	.button-background:hover {
+		color: white !important;
+		background-color: #1e90ff !important;
+	}*/
 
 	button {
-		background-color: #1e1d2d !important;
+		background: transparent !important;
+		border-radius: 8px !important;
 	}
 
 	button:hover {
 		background-color: #1e90ff80 !important;
+		border-radius: 8px !important;
 	}
 
 
@@ -293,13 +318,15 @@
 		background-color: #454545 !important;
 		margin-inline: 5px !important;
 	}
-
-	.page-options-menu>.more-options-button {
+/*
+	.page-options-menu>
+	.more-options-button {
 		background-image: url("chrome://global/skin/icons/settings.svg");
-		width: 32px;
-		height: 32px;
+		width: 16px !important;
+		height: 16px !important;
 		-moz-context-properties: fill;
 		fill: white !important;
+		background-size: cover !important;
 	}
 
 	.more-options-button {
@@ -307,13 +334,14 @@
 		color: #ffffff !important;
 		-moz-context-properties: fill;
 		fill: white !important;
-	}
+	}*/
 
 	.more-options-button:hover {
 		background-color: #1e90ff !important;
 		color: #ffffff !important;
 		-moz-context-properties: fill;
 		fill: white !important;
+		border-radius: 8px !important;
 	}
 
 	.more-options-button menulist {
@@ -570,6 +598,32 @@
 			font-family: Fira Sans !important;
 			font-size: 13px !important;
 			font-weight: normal !important;
+
+		}
+	}
+
+	#input {
+		border-color: #1e90ff !important;
+	}
+
+	input[type="search"] {
+		appearance: none;
+		background-color: black !important;
+		border: 1px solid #1e90ff !important;
+	}
+
+	.page-nav-heading-wrapper {
+		&>.logo {
+			/*display: inline-block;*/
+			height: 18px !important;
+			width: 18px !important;
+			/*background: image-set(url("chrome://branding/content/about-logo.png"), url("chrome://branding/content/about-logo@2x.png") 2x) no-repeat center;*/
+			/*background-size: auto;*/
+
+			background-size: cover !important;
+			/*var(--page-nav-heading-logo-size);
+					margin-inline-start: calc(var(--space-medium) - ((var(--page-nav-heading-logo-size) - var(--icon-size)) / 2));*/
 		}
 	}
 }
+
